@@ -1,0 +1,110 @@
+#summary This document contains the coding guidelines for the TeeBX Project
+#labels code,rules,contributors
+
+This document contains the coding guidelines for the TeeBX Project.
+== Introduction ==
+In order to keep the code consistent, contributors are pleased to use the following conventions.
+It is not a judgment call on your coding abilities, but more of a style and look call. Please try to follow these guidelines to ensure prettiness.
+
+*Basic rules:*
+
+ It is more important to be correct than to be fast.<br>
+ It is more important to be maintainable than to be fast.<br>
+ Fast code that is difficult to maintain is likely going to be looked down upon. 
+
+===Indentation:===
+
+- Use tabs, *NOT* spaces so anyone will be able to view indentation the way they like.<br>
+But be careful to use consistently, restricted to logical indentation, please do not use tabs for alignment.
+
+- Bracing.<br>
+Use Allman style, also referred to as "ANSI style".
+Indented code is clearly set apart from the containing statement by lines that are almost completely whitespace, improving readability, and the closing brace lines up in the same column as the opening brace, making it easy to find matching braces.
+{{{
+while (x < y)
+{
+  if (isset($this['index']))
+  {
+    $some .= $that . "$x\n";
+  {
+  $x++;
+}
+ 
+finalThings();
+}}}
+When defining a function, use the C style for brace placement, that means, use a new line for the brace.
+{{{
+function doSome($param)
+{
+  code
+  ...
+}
+}}}
+- Case statements.<br>
+Switch statements must have the case one tab inner the switch, also the code block inside a case must be a tab inner the case.
+{{{
+switch ($x)
+{
+  case 'a':
+    $result = $x;
+    break;
+  case 'b':
+    ...
+}
+}}}
+
+===Whitespaces:===
+Use spaces to enhance readability.
+{{{
+$location = 'tree';
+$format = 'There are now %d birds on the %s';
+for ($i = 1; $i <= 10; $i++)
+{
+  printf($format, $i, $location);
+}
+}}}
+
+Place spaces between control statements and their parentheses. 
+{{{
+if ($x)
+{
+  i++;
+}
+}}}
+Do not place spaces between a function and its parentheses, or between a parenthesis and its content.
+{{{
+$char = bin2hex(substr($str, $i, 1));
+$char = bin2hex (substr ($str, $i, 1)); // NO!!
+$char = bin2hex( substr( $str, $i, 1 ) ); // NO!!
+}}}
+===Line breaking:===
+- Each statement should get its own line.
+{{{
+x++; y++; // NO!!
+if ($a) echo 'abc'; // NO!!
+}}}
+This is ok...
+{{{
+x++;
+y++;
+if ($a)
+  echo 'abc';
+}}}
+===Operators:===
+Avoid using the "ternary operator" as a conditional operator whenever possible, it's concise but make code less readable and more prone to errors and unexpected results.<br>
+
+This one...
+{{{
+result = ($a>$b)?$x:$y; // Please NO!!
+}}}
+Can be easily rewritten as...
+{{{
+if ($a > $b)
+{
+  $result = $x;
+}
+else
+{
+  $result = $y;
+}
+}}}
