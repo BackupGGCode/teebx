@@ -36,9 +36,11 @@ This will force me to get rid also of most (if not all) of the new code. Nothing
 Simplicity has been always one of the strengths behind Askozia, unfortunately, this sometimes happens even at the expense of functionality.
 I'm not talking about some esoteric features, but the basic phone switch functionality set that are present in any legacy PBX. Bridging this gap is one of the key objectives.
 
-In addition, the Askozia code has become redundant, difficult to "read" and maintain, perhaps because some very old piece and the new code still live without being truly integrated or updated.
-I think it's a good challenge to ride.
+Also I'd like to move focus a bit more near to SMB target applications.
 
+In addition, the Askozia code has become redundant, difficult to "read" and maintain, perhaps because some very old piece and the new code still live without being truly integrated or updated.<br>
+I think it's a good challenge to ride.
+----
 Finally, someone might ask, why do this huge work for free?
   # I learned a lot thanks to the open source software, I want to share and give something back to the community.
   # I do not want to sell this software but please learn to distinguish: open source and free are not the same thing.
