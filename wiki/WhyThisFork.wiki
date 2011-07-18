@@ -1,0 +1,47 @@
+#labels askozia,fork,motivations,license
+#Why starting an Askozia fork?
+
+I immediately loved the concept of architectural simplicity that motivated the Askozia project.
+
+The key concepts, which I also intend to continue to pursue, are:
+
+  * Minimal and lightweight unix like OS that includes only services essential to the PBX.
+  * Fast system recovery or hardware swap.
+  * Core pbx software secured on a read-only file system.
+  * Simple and intuitive user interface.
+I like that. Since we had some common goals I have supported promoted and contributed happily to the project.
+
+But like all good fairy tales, at some point something went wrong.
+Askozia was derived from M0n0wall and was initially released under a BSD license, this essentially means that you can do whatever you want... I would say that is too much from my point of view!<br>
+So I started to contribute to the project, sharing ideas, code, debugging. Although the BSD license is not forced me to share anything, I thought it right to do so in the spirit of growing together.
+
+==#1 License issues==
+Unfortunately at the end of April 2010, the Askozia team added a third clause to the BSD license that prevents commercial redistribution of this software.
+{{{
+3. Redistribution in any form at a charge, that in whole or in part
+contains or is derived from the software, including but not limited to
+value added products, is prohibited without prior written consent of
+tecema (a.k.a IKT).
+}}}
+Do not worried me so much but I continued for a long time asking myself about the real implications of this clause.
+As an installer or as a consultant should not worry so much, however, limits my freedom and prevents me from making something different in the future.
+In fact, the worse was yet to come.<br>
+In June 2011 Askozia 2.1 was released, has not been a good surprise: a hybrid built from the core open source with proprietary code sold at a very affordable price.
+The bad surprise is not the price but the fact that I can not change it, still could contribute code, then when it will be released ... I have to pay to use it. Sounds a little bizarre.
+
+The reasons set out above by themselves are sufficient to start a fork freeing me from all the ties introduced after the clause added to the original license (starting from svn changeset 1515).
+This will force me to get rid also of most (if not all) of the new code. Nothing tragic, see #2.
+
+==#2 Different goals.==
+Simplicity has been always one of the strengths behind Askozia, unfortunately, this sometimes happens even at the expense of functionality.
+I'm not talking about some esoteric features, but the basic phone switch functionality set that are present in any legacy PBX. Bridging this gap is one of the key objectives.
+
+In addition, the Askozia code has become redundant, difficult to "read" and maintain, perhaps because some very old piece and the new code still live without being truly integrated or updated.
+I think it's a good challenge to ride.
+
+Finally, someone might ask, why do this huge work for free?
+  # I learned a lot thanks to the open source software, I want to share and give something back to the community.
+  # I do not want to sell this software but please learn to distinguish: open source and free are not the same thing.
+
+You can have this software for free, you can not have consultancy, custom coding or services for free.<br>
+Nothing prevents me from providing services or sell other software that works together with TeeBX to solve specific applications requirements.
