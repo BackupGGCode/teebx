@@ -1,0 +1,11 @@
+#summary Looking for code?
+#labels code,gui,preview
+
+=== Current status ===
+
+I'm working to complete my very basic requiquirements to differentiate this software from Askozia.<br>
+I hope to publish the code by the end of July.
+Meanwhile settle for a small preview screen.
+
+
+http://code.google.com/p/teebx/source/browse/wiki/TeeBX-preview-priv_svn94.png
