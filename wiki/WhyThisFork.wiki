@@ -9,7 +9,7 @@ The key concepts, which I also intend to continue to pursue, are:
   * Fast system recovery or hardware swap.
   * Core pbx software secured on a read-only file system.
   * Simple and intuitive user interface.
-I like that. Since we had some common goals I have supported promoted and contributed happily to the project.
+I like that. Since we had some common goals I have supported, promoted and contributed happily to the project.
 
 But like all good fairy tales, at some point something went wrong.
 Askozia was derived from M0n0wall and was initially released under a BSD license, this essentially means that you can do whatever you want... I would say that is too much from my point of view!<br>
