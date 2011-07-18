@@ -1,5 +1,5 @@
+#summary Why starting an Askozia fork?
 #labels askozia,fork,motivations,license
-#Why starting an Askozia fork?
 
 I immediately loved the concept of architectural simplicity that motivated the Askozia project.
 
