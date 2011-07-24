@@ -13,7 +13,7 @@ I like that. Since we had some common goals I have supported, promoted and contr
 
 But like all good fairy tales, at some point something went wrong.
 Askozia was derived from M0n0wall and was initially released under a BSD license, this essentially means that you can do whatever you want... I would say that is too much from my point of view!<br>
-So I started to contribute to the project, sharing ideas, code, debugging. Although the BSD license is not forced me to share anything, I thought it right to do so in the spirit of growing together.
+So I started to contribute to the project, sharing ideas, code, debugging. Although the BSD license has not forced me to share anything, I thought it was right to do so in the spirit of growing together.
 
 ==#1 License issues==
 Unfortunately at the end of April 2010, the AskoziaPBX team added a third clause to the BSD license that prevents commercial redistribution of this software.
@@ -23,11 +23,11 @@ contains or is derived from the software, including but not limited to
 value added products, is prohibited without prior written consent of
 tecema (a.k.a IKT).
 }}}
-Do not worried me so much but I continued for a long time asking myself about the real implications of this clause.
-As an installer or as a consultant should not worry so much, however, limits my freedom and prevents me from making something different in the future.
+I'm not worried so much but I continued for a long time wondering about the real implications of this clause.
+As an installer or as a consultant it should not worry me so much, however this clause limits my freedom and prevents me from making something different in the future.
 In fact, the worse was yet to come.<br>
 In June 2011 AskoziaPBX 2.1 was released, has not been a good surprise: a hybrid built from the core open source with proprietary code sold at a very affordable price.
-The bad surprise is not the price but the fact that I can not change it, still could contribute code, then when it will be released ... I have to pay to use it. Sounds a little bizarre.
+The bad surprise is not the price but the fact that I can not change it, still could contribute code, then when it will be released ... I have to pay to use it. Sounds a little bizarre, no?.
 
 The reasons set out above by themselves are sufficient to start a fork freeing me from all the ties introduced after the clause added to the original license (starting from svn changeset 1515).
 This will force me to get rid also of most (if not all) of the new code. Nothing tragic, see #2.
