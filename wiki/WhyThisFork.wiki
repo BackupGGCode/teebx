@@ -1,7 +1,7 @@
 #summary Why starting an AskoziaPBX fork?
 #labels askozia,fork,motivations,license,askoziaPBX
 
-I immediately loved the concept of architectural simplicity that motivated the Askozia project.
+I immediately loved the concept of architectural simplicity that motivated the AskoziaPBX project.
 
 The key concepts, which I also intend to continue to pursue, are:
 
