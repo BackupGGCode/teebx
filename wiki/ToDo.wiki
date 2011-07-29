@@ -1,0 +1,248 @@
+#summary TeeBX ToDo and work progress.
+#labels todo
+
+===This is the To Do list for TeeBX project===
+_Note that a higher priority doesn't mean that particular job will be done first_.
+
+<table border="1">
+  <tr>
+    <td>PRIority<br/>(0=None, 9=Top)</td>
+    <td>STAtus<br/>(0=None, 9=Done)</td>
+    <td>CAT<br/>(Feature, Software, Hardware support)</td>
+    <td>ToDo</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>8</td>
+    <td>S</td>
+    <td>Remove platforms we don't want to support (CP3000, etc...)</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>9</td>
+    <td>S</td>
+    <td>Update Php interpreter to version 5+</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>9</td>
+    <td>S</td>
+    <td>SQLite PHP support</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>0</td>
+    <td>S</td>
+    <td>SIP over TCP configuration options</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Encrypt sensitive configuration options</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Using GUID for context naming must be abandoned replacing it with something unique but better readable by humans</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>S</td>
+    <td>reload ast configuration after editing files via dev panel</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Replace xml configuration with an embedded sql engine (SQLite?), use xml only as a backup/restore format</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Trunk groups implementation for VoIP providers</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>DDI call handling with operator and unassigned numbers failover</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Call forward</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>COS</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Pickup groups</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Sequential and round-robin ring groups</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Ring time dial modifiers. E.g. dialling 200*9 rings extension 200 for 90 seconds.</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>System shutdown both from webUI and console</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Country settings (numbering plan, isdn, flash timers, cli...)</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>6</td>
+    <td>F</td>
+    <td>Real time Call logs (CDR)</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>6</td>
+    <td>S</td>
+    <td>Better system logs GUI</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Auto banning source ips via login failures monitoring (VoIP, webUI, ssh)</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>6</td>
+    <td>S</td>
+    <td>Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>0</td>
+    <td>S</td>
+    <td>System performance collection (candidate app.: collectd), monitoring and GUI.</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Alerts about connettivity and providers registrations failures</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>9</td>
+    <td>S</td>
+    <td>Centered widened web UI</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Inter-pbx trunking/networking</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Setup wizard for first time configuration</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0</td>
+    <td>S</td>
+    <td>ISDN PRI support</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0</td>
+    <td>H</td>
+    <td>Support Sangoma hardware</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Phones auto provisioning</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Personal VM greetings, use system greeting if a user doesn't record the personal one</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>H</td>
+    <td>Support mISDN as alternative ISDN driver/stack</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>6</td>
+    <td>S</td>
+    <td>Brand new web UI</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>F</td>
+    <td>IVR</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>F</td>
+    <td>System phonebook with private and public records</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>F</td>
+    <td>User portal</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>F</td>
+    <td>DB based Admin access and logout</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>F</td>
+    <td>Loadable XML config snippets (providers, gateways, applications, etc...)</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>H</td>
+    <td>Support to use spare disk space as r/w media storage partition when installed to hdd</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Standalone installable webUI</td>
+  </tr>
+</table>
