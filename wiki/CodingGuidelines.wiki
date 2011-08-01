@@ -10,6 +10,7 @@ It is not a judgment call on your coding abilities, but more of a style and look
 
  It is more important to be correct than to be fast.<br>
  It is more important to be maintainable than to be fast.<br>
+ Spending a minute now commenting code will save a lot tomorrow.<br>
  Fast code that is difficult to maintain is likely going to be looked down upon. 
 
 ===Indentation:===
@@ -108,3 +109,25 @@ else
   $result = $y;
 }
 }}}
+=== Code Comments:===
+Comment every significant code block, so others would easily understand it's function.<br>
+Every function and/or class method declaration *must be preceeded* by a comment clearly explaing it's purpose and calling parameters. PhpDocumentor format preferred.<br>
+{{{
+/**
+ * Shorthand to set options to be shown for an existing select html element.
+ *   The $items var sets one or more <option> tag using pipe separated list.
+ *   Each list element sets attributes for a specific option, separated by = sign:
+ *   value=display_value=selected_flag=option_group_label
+ *   the first two values are mandatory.
+ * Usage example:
+ *   $form->setSelectOpts('line', 'isdnbri=ISDN BRI=1=Technology|analog=POTS Line=0=Technology');
+ *
+ * @param string $id select tag unique identifier
+ * @param string $options pipe separated list of select options and attibutes
+ * @return integer (0: No errors, 10: id not found, 20: id not a select, 30: not enough attributes
+ */
+public function setSelectOpts($id, $options)
+{
+	if (!isset($this->tagsPool[$id]))
+}}}
+-
