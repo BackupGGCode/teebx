@@ -5,6 +5,8 @@
 
 I'm working to complete my very basic requiquirements to differentiate this software from Askozia.<br>
 I hope to publish the code by the end of July.<br>
-Meanwhile settle for a small preview screen.
-
+Meanwhile settle for a couple of screen captures.
+====Brand new table-less forms proof of concept.====
+http://teebx.googlecode.com/svn/wiki/TeeBX-form-proof-priv_svn103.png
+====Splitted logs.====
 http://teebx.googlecode.com/svn/wiki/TeeBX-preview-priv_svn94.png
