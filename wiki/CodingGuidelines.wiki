@@ -1,5 +1,5 @@
 #summary This document contains the coding guidelines for the TeeBX Project
-#labels code,rules,contributors
+#labels Phase-Implementation,rules,contributors,code
 
 This document contains the coding guidelines for the TeeBX Project.
 == Introduction ==
