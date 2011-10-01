@@ -1,5 +1,5 @@
 #summary Looking for code?
-#labels code,gui,preview
+#labels Featured,code,preview,gui,gui
 
 === Current status ===
 
