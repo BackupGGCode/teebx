@@ -1,0 +1,20 @@
+--- asterisk-1.6.1.11/main/asterisk.c.orig	2009-12-07 18:45:28.000000000 +0100
++++ asterisk-1.6.1.11/main/asterisk.c	2009-12-07 18:46:22.000000000 +0100
+@@ -1052,7 +1052,7 @@
+ 		}
+ 	}
+ 	if (!ast_opt_hide_connect) {
+-		ast_verb(3, "Remote UNIX connection disconnected\n");
++		/*ast_verb(3, "Remote UNIX connection disconnected\n");*/
+ 	}
+ 	close(con->fd);
+ 	close(con->p[0]);
+@@ -1115,8 +1115,8 @@
+ 					ast_log(LOG_WARNING, "No more connections allowed\n");
+ 					close(s);
+ 				} else if ((consoles[x].fd > -1) && (!ast_opt_hide_connect)) {
+-					ast_verb(3, "Remote UNIX connection\n");
++					/*ast_verb(3, "Remote UNIX connection\n");*/
+ 				}
+ 			}
+ 		}
