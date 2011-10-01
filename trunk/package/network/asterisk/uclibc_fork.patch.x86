@@ -1,0 +1,42 @@
+--- asterisk-1.4.25.1/configure.orig	2009-06-17 16:19:31.000000000 +0200
++++ asterisk-1.4.25.1/configure	2009-06-17 16:21:29.000000000 +0200
+@@ -12697,29 +12697,17 @@
+ $as_echo "$as_me: WARNING: result $ac_cv_func_vfork_works guessed because of cross compilation" >&2;}
+ fi
+ 
+-if test "x$ac_cv_func_vfork_works" = xyes; then
+-
+-cat >>confdefs.h <<\_ACEOF
+-#define HAVE_WORKING_VFORK 1
+-_ACEOF
+-
+-else
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define vfork fork
+ _ACEOF
+ 
+-fi
+-if test "x$ac_cv_func_fork_works" = xyes; then
+-
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_WORKING_FORK 1
+ _ACEOF
+ 
+   PBX_WORKING_FORK=1
+ 
+-fi
+-
+ { $as_echo "$as_me:$LINENO: checking for _LARGEFILE_SOURCE value needed for large files" >&5
+ $as_echo_n "checking for _LARGEFILE_SOURCE value needed for large files... " >&6; }
+ if test "${ac_cv_sys_largefile_source+set}" = set; then
+@@ -33017,7 +33005,8 @@
+ if test -n "$CONFIG_FILES"; then
+ 
+ 
+-ac_cr=''
++ac_cr='
++'
+ ac_cs_awk_cr=`$AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null`
+ if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
+   ac_cs_awk_cr='\\r'

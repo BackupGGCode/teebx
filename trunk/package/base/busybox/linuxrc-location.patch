@@ -1,0 +1,11 @@
+--- busybox-1.15.3/include/applets.h.orig
++++ busybox-1.15.3/include/applets.h
+@@ -228,7 +228,7 @@
+ IF_LESS(APPLET(less, _BB_DIR_USR_BIN, _BB_SUID_DROP))
+ IF_SETARCH(APPLET_ODDNAME(linux32, setarch, _BB_DIR_BIN, _BB_SUID_DROP, linux32))
+ IF_SETARCH(APPLET_ODDNAME(linux64, setarch, _BB_DIR_BIN, _BB_SUID_DROP, linux64))
+-IF_FEATURE_INITRD(APPLET_ODDNAME(linuxrc, init, _BB_DIR_ROOT, _BB_SUID_DROP, linuxrc))
++IF_FEATURE_INITRD(APPLET_ODDNAME(linuxrc, init, _BB_DIR_SBIN, _BB_SUID_DROP, linuxrc))
+ IF_LN(APPLET_NOEXEC(ln, ln, _BB_DIR_BIN, _BB_SUID_DROP, ln))
+ IF_LOAD_POLICY(APPLET(load_policy, _BB_DIR_USR_SBIN, _BB_SUID_DROP))
+ IF_LOADFONT(APPLET(loadfont, _BB_DIR_USR_SBIN, _BB_SUID_DROP))
