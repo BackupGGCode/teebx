@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# $Id: rc.firmware 88 2007-05-14 14:07:11Z michael.iedema $
-# part of AskoziaPBX (http://askozia.com/pbx)
-#
-# Copyright (C) 2008 tecema (a.k.a IKT) <http://www.tecema.de>.
-# All rights reserved.
+# $Id$
+# part of TeeBX VoIP Communication platform (http://www.teebx.com/)
+# Copyright(C) 2010 - 2011 Giovanni Vallesi.
+
+# originally part of AskoziaPBX (http://askozia.com/pbx)
+# Copyright (C) 2010 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved
 
 PKGRC=$1
 VERB=$2
