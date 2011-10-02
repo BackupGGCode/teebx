@@ -1,11 +1,11 @@
 <?php
 /*
 	$Id$
-	The TeeBX(R) communication platform.
-	Copyright(C) 2010 - 2011 Giovanni Vallesi (TeeBX.com)
+	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
+	Copyright(C) 2010 - 2011 Giovanni Vallesi.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx) as iax.inc rev. 1434
-	Copyright (C) 2007-2010 IKT <http://itison-ikt.de>.
+	originally part of AskoziaPBX (http://askozia.com/pbx)
+	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without

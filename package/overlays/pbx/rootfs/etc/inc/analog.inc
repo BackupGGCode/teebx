@@ -1,13 +1,12 @@
 <?php
 /*
 	$Id$
-	part of AskoziaPBX (http://askozia.com/pbx)
+	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
+	Copyright(C) 2010 - 2011 Giovanni Vallesi.
 
+	originally part of AskoziaPBX (http://askozia.com/pbx)
 	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
 	All rights reserved.
-
-	Askozia®PBX is a registered trademark of tecema. Any unauthorized use of
-	this trademark is prohibited by law and international treaties.
 
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
