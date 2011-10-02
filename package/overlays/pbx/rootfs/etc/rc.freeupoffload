@@ -1,0 +1,35 @@
+#!/bin/sh
+
+PATH=/sbin:/bin
+export PATH
+
+platform=`cat /etc/platform`
+if [ "$platform" = "COMpact 3000" ]; then
+	handles=$(lsof -t -O /offload)
+else
+	handles=$(lsof -t /offload)
+fi
+
+for handle in $handles
+do
+	if [ $handle != COMMAND ]; then
+		echo " |   - process ${handle} still using /offload, TERMinating"
+		kill -TERM ${handle} > /dev/null 2>&1
+	fi
+done
+sleep 2
+
+if [ "$platform" = "COMpact 3000" ]; then
+	handles=$(lsof -t -O /offload)
+else
+	handles=$(lsof -t /offload)
+fi
+for handle in $handles
+do
+	if [ $handle != COMMAND ]; then
+		echo " |   - process ${handle} still using /offload, KILLing"
+		kill -KILL ${handle} > /dev/null 2>&1
+	fi
+done
+
+exit 0
