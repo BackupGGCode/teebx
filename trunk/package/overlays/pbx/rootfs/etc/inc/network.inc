@@ -1,12 +1,14 @@
 <?php
 /*
 	$Id$
-	originally part of m0n0wall (http://m0n0.ch/wall)
-	continued modifications as part of AskoziaPBX (http://askozia.com/pbx)
-
-	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>.
-	Copyright (C) 2007-2008 tecema (a.k.a IKT) <http://www.tecema.de>.
+	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
+	Copyright(C) 2010 - 2011 Giovanni Vallesi.
 	All rights reserved.
+	
+	originally part of AskoziaPBX (http://askozia.com/pbx)
+	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
+	originally part of m0n0wall (http://m0n0.ch/wall)
+	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>. All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:

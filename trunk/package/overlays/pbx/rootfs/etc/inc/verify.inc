@@ -1,12 +1,14 @@
 <?php
 /*
 	$Id$
+	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
+	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	All rights reserved.
+	
+	originally part of AskoziaPBX (http://askozia.com/pbx)
+	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
-	continued modifications as part of AskoziaPBX (http://askozia.com/pbx)
-	continued modifications by Giovanni Vallesi as part of TeeBX (http://code.google.com/p/teebx/)
-	Copyright (C) 2010-2011 Giovanni Vallesi (gvallesi atdomain gmail.com).
-	Copyright (C) 2007-2010 tecema (a.k.a IKT) <http://www.tecema.de>.
-	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>.
+	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>. All rights reserved.
 
 	All rights reserved.
 
