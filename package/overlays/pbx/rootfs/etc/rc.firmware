@@ -1,10 +1,10 @@
 #!/bin/sh
-
-# $Id: rc.firmware 1297 2009-12-23 19:39:28Z michael.iedema $
-# part of m0n0wall (http://m0n0.ch/wall)
+# $Id$
+# part of TeeBX VoIP Communication platform (http://www.teebx.com/)
+# Copyright(C) 2010 - 2011 Giovanni Vallesi.
 #
-# Copyright (C) 2003-2005 Manuel Kasper <mk@neon1.net>.
-# All rights reserved.
+# originally part of m0n0wall
+# Copyright (C) 2003-2005 Manuel Kasper <mk@neon1.net>. All rights reserved.
 
 CFDEVICE=`cat /var/etc/cfdevice`
 
