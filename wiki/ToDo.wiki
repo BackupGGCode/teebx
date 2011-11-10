@@ -1,20 +1,10 @@
-<style>
-table
-{
-border-collapse:collapse;
-}
-table, th, td
-{
-border: 1px solid black;
-}
-</style>
 #summary TeeBX ToDo and work progress.
 #labels todo
 
 ===This is the To Do list for TeeBX project===
 _Note that a higher priority doesn't mean that particular job will be done first_.
 
-<table style="border:1px; bordercolor:#000000">
+<table>
   <tr>
     <td>PRIority<br/>(0=None, 9=Top)</td>
     <td>STAtus<br/>(0=None, 9=Done)</td>
