@@ -1,10 +1,20 @@
+<style>
+table
+{
+border-collapse:collapse;
+}
+table, th, td
+{
+border: 1px solid black;
+}
+</style>
 #summary TeeBX ToDo and work progress.
 #labels todo
 
 ===This is the To Do list for TeeBX project===
 _Note that a higher priority doesn't mean that particular job will be done first_.
 
-<table border="1">
+<table style="border:1px; bordercolor:#000000">
   <tr>
     <td>PRIority<br/>(0=None, 9=Top)</td>
     <td>STAtus<br/>(0=None, 9=Done)</td>
@@ -25,6 +35,12 @@ _Note that a higher priority doesn't mean that particular job will be done first
   </tr>
   <tr>
     <td>9</td>
+    <td>8</td>
+    <td>S</td>
+    <td>Brand new web UI (build and use dedicated mini-framework classes to render/check forms, menus and tables)</td>
+  </tr>
+  <tr>
+    <td>9</td>
     <td>9</td>
     <td>S</td>
     <td>SQLite PHP support</td>
@@ -34,6 +50,12 @@ _Note that a higher priority doesn't mean that particular job will be done first
     <td>0</td>
     <td>S</td>
     <td>SIP over TCP configuration options</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>5</td>
+    <td>S</td>
+    <td>Selective include needed php libs instead of polluting memory and namespace.</td>
   </tr>
   <tr>
     <td>9</td>
@@ -51,7 +73,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
     <td>8</td>
     <td>0</td>
     <td>S</td>
-    <td>reload ast configuration after editing files via dev panel</td>
+    <td>Reload ast configuration after editing files via dev panel</td>
   </tr>
   <tr>
     <td>8</td>
@@ -109,7 +131,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
   </tr>
   <tr>
     <td>8</td>
-    <td>0</td>
+    <td>2</td>
     <td>F</td>
     <td>Country settings (numbering plan, isdn, flash timers, cli...)</td>
   </tr>
@@ -133,7 +155,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
   </tr>
   <tr>
     <td>7</td>
-    <td>6</td>
+    <td>7</td>
     <td>S</td>
     <td>Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)</td>
   </tr>
@@ -199,12 +221,6 @@ _Note that a higher priority doesn't mean that particular job will be done first
   </tr>
   <tr>
     <td>0</td>
-    <td>6</td>
-    <td>S</td>
-    <td>Brand new web UI</td>
-  </tr>
-  <tr>
-    <td>0</td>
     <td>0</td>
     <td>F</td>
     <td>IVR</td>
@@ -238,6 +254,12 @@ _Note that a higher priority doesn't mean that particular job will be done first
     <td>0</td>
     <td>H</td>
     <td>Support to use spare disk space as r/w media storage partition when installed to hdd</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Move hidden developer panel inside a proper menu item, this also avoid loading every time a lot of js code.</td>
   </tr>
   <tr>
     <td>0</td>
