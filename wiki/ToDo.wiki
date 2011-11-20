@@ -54,6 +54,12 @@ _Note that a higher priority doesn't mean that particular job will be done first
     <td>Encrypt sensitive configuration options</td>
   </tr>
   <tr>
+    <td>9</td>
+    <td>0</td>
+    <td>S</td>
+    <td>Properly handle busy level and call waiting using also DEVICE_STATE(device) in dialplan</td>
+  </tr>
+  <tr>
     <td>8</td>
     <td>0</td>
     <td>S</td>
