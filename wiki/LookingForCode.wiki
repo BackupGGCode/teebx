@@ -5,10 +5,12 @@
 
 I'm working on code refactoring/rewriting to complete my very basic requirements for the TeeBX base firmware.<br>
 ~~I hope to publish the code by the end of July.~~<br>
-The base build environment was committed a couple of days ago but the configuration UI need further work... I want a clean interface that lower html markup to minimum, use the full power of style sheets (but avoid fancy themes) and keep php code away from html whenever possible.
+The base build environment was committed some time ago but the configuration UI need further work... I want a clean interface that lower html markup to minimum, use the full power of style sheets (but avoid fancy themes) and keep php code away from html whenever possible.
 
 Stay tuned! Meanwhile settle for a couple of screen captures.
 
+====Brand new tabbed VoIP extension configuration (preview).====
+http://teebx.googlecode.com/svn/wiki/TeeBX-ip-exten-config-priv_svn156.png
 ====Brand new table-less forms proof of concept.====
 http://teebx.googlecode.com/svn/wiki/TeeBX-form-proof-priv_svn103.png
 ====Splitted logs.====
