@@ -1,4 +1,4 @@
-#summary Looking for code?
+#summary Looking for code or downloads?
 #labels Featured,code,preview,gui
 
 === Current status ===
