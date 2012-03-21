@@ -84,11 +84,11 @@ X freeplay-ulaw-base
 X php
 X sslwrap
 X ajaxcgi
-X jquery.ui
-X jquery.preloadimages
-X jquery.progressbar
-X jquery.selectboxes
-X codemirror
+#X jquery.ui
+#X jquery.preloadimages
+#X jquery.progressbar
+#X jquery.selectboxes
+#X codemirror
 
 # binaries
 X busybox
@@ -110,5 +110,7 @@ X libfb
 X libpcap
 X libnet
 
+# Utility software
+X tcpdump
 # file system overlay
 X pbx
