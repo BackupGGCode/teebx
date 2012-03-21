@@ -2,7 +2,7 @@
 <!-- TeeBX default system configuration -->
 <!-- $Id: config.xml 1137 2009-09-14 15:24:18Z michael.iedema $ -->
 <teebx>
-	<version>2.02</version>
+	<version>0.1</version>
 	<lastchange></lastchange>
 	<system>
 		<hostname>TeeBX</hostname>

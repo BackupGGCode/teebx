@@ -12,14 +12,14 @@
 # GNU General Public License can be found in the file COPYING.
 # --- T2-COPYRIGHT-NOTE-END ---
 
-#Description: AskoziaPBX - Deciso
+#Description: TeeBX - Deciso
 
 # select init
 SDECFGSET_INIT='busybox'
 
 # architecture
-SDECFGSET_ARCH="x86"
-SDECFGSET_X86_OPT="i486"
+SDECFG_ARCH="x86"
+SDECFG_X86_OPT="i486"
 
 # firmware type
 SDECFGSET_IMAGE='firmware'
