@@ -112,5 +112,9 @@ X libnet
 
 # Utility software
 X tcpdump
-# file system overlay
-X pbx
+
+# application specific overlay
+X appliance
+
+# system overlay
+X tz-base
