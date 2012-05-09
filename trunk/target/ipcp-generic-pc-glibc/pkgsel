@@ -84,11 +84,6 @@ X freeplay-ulaw-base
 X php
 X sslwrap
 X ajaxcgi
-#X jquery.ui
-#X jquery.preloadimages
-#X jquery.progressbar
-#X jquery.selectboxes
-#X codemirror
 
 # binaries
 X busybox
@@ -102,15 +97,8 @@ X lsof
 X verifysig
 X sox
 
-# redfone
-X fonulator
-X fbflash
-X libargtable
-X libfb
+# Network utility software
 X libpcap
-X libnet
-
-# Utility software
 X tcpdump
 
 # application specific overlay
