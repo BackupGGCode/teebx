@@ -42,6 +42,8 @@
 	/* parse the configuration and include all functions used below */
 	require_once("config.inc");
 	require_once("functions.inc");
+	require_once('fileutils.lib.php');
+	require_once('smtpconf.lib.php');
 
 	/* check whether config reset is desired (via hardware button on wrap and alix23x) */
 	echo " - Checking reset button... ";
@@ -74,7 +76,7 @@
 
 	/* set up our timezone */
 	echo " - Configuring timezone... ";
-	system_timezone_configure();
+	system_timezone_configure($config);
 	echo "done\n";
 
 	/* set up our hostname */
@@ -111,6 +113,11 @@
 	//echo " - Upgrading https certificate... ";
 	//system_upgrade_https_certificate();
 	//echo "done\n";
+
+	/* SMTP client configuration */
+	echo " - Configuring SMTP client... ";
+	writeSmtpConf($config);
+	echo "done\n";
 
 	/* start web server */
 	echo " - Starting webgui... ";

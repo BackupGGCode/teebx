@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2012 Giovanni Vallesi.
 	All rights reserved.
 	
 	originally part of AskoziaPBX (http://askozia.com/pbx)
@@ -33,19 +33,10 @@
 */
 
 /* include globals/utility/XML parser files */
-require_once("globals.inc");
-require_once("util.inc");
-require_once("xmlparse.inc");
-require_once("timezones.inc");
-
-if (strnatcmp(phpversion(), '5.1.0') >= 0)
-{
-	if (!isset($config['system']['timezone']))
-	{
-		$config['system']['timezone'] = '0000';
-	}
-	date_default_timezone_set($tz[$config['system']['timezone']][2]);
-}
+require_once('globals.inc');
+require_once('util.inc');
+require_once('xmlparse.inc');
+require_once('tzdata.lib.php');
 
 /* read platform */
 if (file_exists("{$g['etc_path']}/platform"))
@@ -104,11 +95,6 @@ if ($g['booting'])
 
 EOD;
 			sleep(5);
-			// } else {
-			// echo "Using floppy disk for configuration storage.\n";
-			// mwexec("/bin/umount -f {$g['cf_path']}");
-			// }
-			// }
 		}
 		else
 		{
@@ -297,8 +283,19 @@ EOD;
 			fclose($fd);
 		}
 	}
-
 	config_unlock();
+}
+//
+if (!isset($config['system']['timezone']))
+{
+	$config['system']['timezone'] = '99000';
+}
+$arrTz = getTzData($tzData, $config['system']['timezone']);
+date_default_timezone_set($arrTz['name']);
+
+if (isset($config['system']['webgui']['language']))
+{
+	setlocale(LC_TIME, $config['system']['webgui']['language']);
 }
 
 /**
