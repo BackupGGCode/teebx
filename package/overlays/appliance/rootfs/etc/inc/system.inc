@@ -238,23 +238,18 @@ function system_update_shell_password()
 /**
 * Populates /etc/TZ with an appropriate time zone
 */
-function system_timezone_configure()
+function system_timezone_configure(&$config)
 {
-	global $config, $g;
+	include('tzdata.lib.php');
 
-	$timezone = $config['system']['timezone'];
+	unlink_if_exists('/etc/TZ');
+	unlink_if_exists('/etc/localtime');
 
-	include("timezones.inc");
-
-	unlink_if_exists("/etc/TZ");
-	unlink_if_exists("/etc/localtime");
-
-	if ($timezone)
+	if (isset($config['system']['timezone']))
 	{
-		$zonestring = $tz[$timezone][1];
-		exec("echo \"$zonestring\" > /etc/TZ");
-		$zonefile = $tz[$timezone][2];
-		exec("cp /usr/share/zoneinfo/" . $zonefile . " /etc/localtime");
+		$arrTz = getTzData($tzData, $config['system']['timezone']);
+		exec('echo "' . $arrTz['rule'] . '" > /etc/TZ');
+		exec('cp /usr/share/zoneinfo/' . $arrTz['name'] . ' /etc/localtime');
 	}
 }
 
