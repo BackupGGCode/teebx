@@ -30,7 +30,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||7||6||S||Better system logs GUI||
 ||7||0||S||Auto banning source ips via login failures monitoring (VoIP, webUI, ssh)||
 ||7||7||S||Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)||
-||6||0||S||System performance collection (candidate app.: collectd), monitoring and GUI.||
+||6||1||S||System performance collection (candidate app.: ~~collectd~~ sysstat), monitoring and GUI.||
 ||6||0||F||Alerts about connettivity and providers registrations failures||
 ||5||9||S||Centered widened web UI||
 ||4||0||F||Inter-pbx trunking/networking||
