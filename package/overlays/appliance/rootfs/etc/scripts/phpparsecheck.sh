@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: $
+# $Id$
 # part of BoneOS build platform (http://www.teebx.com/)
 # Copyright(C) 2011 - 2012 Giovanni Vallesi.
 # All rights reserved.
