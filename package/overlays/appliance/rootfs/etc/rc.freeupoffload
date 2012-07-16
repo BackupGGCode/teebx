@@ -10,12 +10,7 @@
 PATH=/sbin:/bin
 export PATH
 
-platform=`cat /etc/platform`
-if [ "$platform" = "COMpact 3000" ]; then
-	handles=$(lsof -t -O /offload)
-else
-	handles=$(lsof -t /offload)
-fi
+handles=$(lsof -t /offload)
 
 for handle in $handles
 do
@@ -26,11 +21,8 @@ do
 done
 sleep 2
 
-if [ "$platform" = "COMpact 3000" ]; then
-	handles=$(lsof -t -O /offload)
-else
-	handles=$(lsof -t /offload)
-fi
+handles=$(lsof -t /offload)
+
 for handle in $handles
 do
 	if [ $handle != COMMAND ]; then
