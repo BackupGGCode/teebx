@@ -10,57 +10,51 @@
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 export PATH
 
-echo "checking for livecd..."
-cddev=$(/sbin/sysctl -n dev.cdrom.info | /bin/busybox grep "drive name" | /bin/busybox cut -f 3)
-length=${#cddev}
-if [ "$length" -gt 2 ]; then
-	echo " - CD-ROM found at /dev/${cddev}, mounting..."
-	mount -r /dev/${cddev} /offload
-	if [ -f /offload/livecd ]; then
-		echo " - found flag file..."
-		exit 0
+RETRY_COUNT=1
+until [ $RETRY_COUNT -gt 2 ]
+do
+	echo "Checking for livecd, attempt #$RETRY_COUNT ..."
+	cddev=$(/sbin/sysctl -n dev.cdrom.info | /bin/busybox grep "drive name" | /bin/busybox cut -f 3)
+	length=${#cddev}
+	if [ "$length" -gt 2 ]; then
+		echo " - CD-ROM found at /dev/${cddev}, mounting..."
+		mount -r /dev/${cddev} /offload
+		if [ -f /offload/livecd ]; then
+			echo " - found flag file..."
+			exit 0
+		fi
 	fi
-fi
+	echo "Waiting for cd device to settle and trying again..."
+	RETRY_COUNT=$(( RETRY_COUNT+1 ))
+	sleep 5
+done
 
-echo "attempting to mount /offload partition..."
-# checking for test/debug mode
-mntmode="-r";
-if [ -f /cf/conf/debugmnt ]; then
-	mntmode="-w -o noatime";
-	echo " - Warning: Debug mode, /offload partition will be mounted RW!"
-fi
 #temp hack for debugging
+#was mntmode="-r";
 mntmode="-w -o noatime";
 echo " - Warning: Debug mode hack, /offload partition will be mounted RW!"
 
-disks=$(fdisk -l | grep "^/dev/" | busybox cut -c 6-8 | busybox uniq)
-for disk in $disks
+RETRY_COUNT=1
+until [ $RETRY_COUNT -gt 5 ]
 do
-	echo " - trying ${disk}"
-	mount ${mntmode} /dev/${disk}2 /offload
-	echo "   - mount returned: $?"
-	if [ -d /offload/rootfs ]; then
-		echo "   - found rootfs!"
-		exit 0
-	fi
-	echo "   - failed to find rootfs!"
+	echo "Attempting to mount /offload partition, attempt #$RETRY_COUNT ..."
+	disks=$(fdisk -l | grep "^/dev/" | busybox cut -c 6-8 | busybox uniq)
+	for disk in $disks
+	do
+		echo " - trying ${disk}"
+		mount ${mntmode} /dev/${disk}2 /offload
+		echo "   - mount returned: $?"
+		if [ -d /offload/rootfs ]; then
+			echo "   - found rootfs!"
+			exit 0
+		fi
+	done
+	echo "Waiting for disks to settle and trying again..."
+	RETRY_COUNT=$(( RETRY_COUNT+1 ))
+	sleep 3
 done
 
-echo "waiting for disks to settle and trying again..."
-sleep 5
-disks=$(fdisk -l | grep "^/dev/" | busybox cut -c 6-8 | busybox uniq)
-for disk in $disks
-do
-	echo " - trying ${disk}"
-	mount ${mntmode} /dev/${disk}2 /offload
-	echo "   - mount returned: $?"
-	if [ -d /offload/rootfs ]; then
-		echo "   - found rootfs!"
-		exit 0
-	fi
-	echo "   - failed to find rootfs!"
-done
-
+echo "   - failed to find rootfs!"
 echo
 echo "The system was unable to find the /offload partition!"
 echo
