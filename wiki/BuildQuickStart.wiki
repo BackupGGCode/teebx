@@ -1,0 +1,98 @@
+#summary Build TeeBX using T2 SDE, Quick Start guide.
+#labels Build,T2,image,firmware
+= TeeBX Build Quick Start =
+TeeBX is built using a set of scripts to automate both the linux operating system and applications build. This is done using the T2 System Development Environment ([http://www.t2-project.org/ T2 SDE]) hosted on a T2 linux machine.
+
+== Get the virtual host ==
+For people who don't want to start from scratch by installing a T2 host and all the required software we provide a  linux host VMware image based on T2 version 8.0.<<BR>>The development system image is hosted on the Sourceforge project BoneOS _([http://sourceforge.net/projects/boneos/ BoneOS] is a parent project sharing a common base system with TeeBX)_, browse the project files on the [http://sourceforge.net/projects/boneos/files/dev-environment/ dev-environment folder] to download the latest VMware image.
+
+After downloading the zip archive, uncompress it and then boot the linux virtual host using the VMware player (version 3.1+, free) or workstation (ver. 6+). You will need about 4 GB of free disk space to be able to successfully download all the source packages and build the image.
+
+=== First boot ===
+Out of the box our T2 SDE virtual machine is set up to get it's network IP address via DHCP, the keyboard layout is set to "en-us". The root password is set to "boneos" (without quotes).
+
+=== Customizing system settings ===
+The fastest way to change system setting is using the T2 linux configuration tool:
+
+{{{
+boneos-dev$ stone
+}}}
+Stone allow to easy change the most relevant settings, like keyboard layout, network, timezone... using a simple menu driven interface.
+
+=== Virtual host additional info ===
+The VM image has a 32 GB virtual scsi disk with two partitions. The first partition, mounted on /  is sized at 1 GB, the second partition sized at 5 GB is mounted on /var. The /var partition will be used to store sources and to build the system image. This amount of storage allow to do most of the work without any problem but you must pay attention to keep the system clean.
+
+The choice to leave a large disk spare unpartitioned was done to be able to keep at reasonable size the development system image for distribution while having an option to resize the second partition if needed.
+
+== Hands On ==
+The basic workflow steps are:
+
+ 1. Download sources via subversion
+ 1. Configure a new build in the source tree
+ 1. Start the build
+
+Remember not to start any of the mentioned steps in the / parttion... you will go out of disk space a few minutes later!
+
+=== Get sources ===
+Change your working directory:
+
+{{{
+boneos-dev# cd /var/devel/public/teebx
+}}}
+Download sources from the subversion repository:
+
+{{{
+boneos-dev# svn checkout http://teebx.googlecode.com/svn/trunk/ trunk
+}}}
+=== Configure a new build ===
+Before starting bulding any image you must create a new configuration using the T2 SDE Config script:
+
+{{{
+boneos-dev# cd trunk
+boneos-dev# ./scripts/Config -cfg trunk
+}}}
+In the above example we called the new configuration ''"trunk"'' using the -cfg parameter.
+
+{{http://teebx.googlecode.com/svn/wiki/start-config-step01.png}}
+
+Use arrow keys to move between options, the tab key to move between action buttons.
+
+Now highlight the current Target Distribution then press enter to select a new target.
+
+{{http://teebx.googlecode.com/svn/wiki/start-config-step02.png}}
+
+Press enter or the space bar to choose a new target and go back to the previous screen.
+
+If this is *the first time you use the T2 SDE I suggest you not to change* the various configuration options.
+
+Use the tab key to highlight the Exit button, then press enter to exit saving your new configuration.
+
+=== Starting building ===
+Now that you have made a new configuration you're almost ready to run the build script, but please be patient.
+
+==== Downloading sources ====
+The build script is able to download the source files, as needed, during the build process but I strongly suggest you do it before.
+
+This command will examine the configuration and will download all the required source packages:
+
+{{{
+boneos-dev# ./scripts/Download -cfg trunk -required
+}}}
+We hope everything is going well, but it is possible we may encounter some problems: a few links no longer active, a site temporarily unreachable, a package that has been moved, and so on.
+
+If there are no problems you can switch to compile your image, else you need to fix any failed download before proceeding. You may fix the problematic download link reviewing the package source or downloading manually the source package into the mirror directory.
+
+==== Build! ====
+To actually build the image you need to run the T2 SDE Build-Target script passing the configuration name to it:
+
+{{{
+boneos-dev# ./scripts/Build-Target trunk
+}}}
+Now it's time to take a break,  it will take some time to complete the build (about 1 our on my machine to give you a vague idea).
+
+When the build will end look into the build subdirectory, you will find a directory whose name consists of _teebx-targetname-architecture-optimization-clibrary-configurationname_. Here into a subdirectory called _TOOLCHAIN_ you will find the just built images: a .img file or a .iso file, or both depending on the target configuration.
+
+==== Final thoughts ====
+Would be nice to believe that you have not encountered any problems... but in the real world often things are not going this way, so what can you do now?
+
+The first thing to do is to study the [http://www.t2-project.org/documentation/ T2 SDE documentation], only after doing this, and maybe if you like to contribute to the project, ask the developers.
