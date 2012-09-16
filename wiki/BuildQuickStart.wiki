@@ -1,5 +1,5 @@
 #summary Build TeeBX using T2 SDE, Quick Start guide.
-#labels Build,T2,image,firmware
+#labels Build,T2,image,firmware,Featured
 = TeeBX Build Quick Start =
 TeeBX is built using a set of scripts to automate both the linux operating system and applications build. This is done using the T2 System Development Environment ([http://www.t2-project.org/ T2 SDE]) hosted on a T2 linux machine.
 
