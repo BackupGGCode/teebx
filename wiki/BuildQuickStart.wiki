@@ -18,7 +18,7 @@ The fastest way to change system setting is using the T2 linux configuration too
 {{{
 boneos-dev$ stone
 }}}
-Stone allow to easy change the most relevant settings, like keyboard layout, network, timezone... using a simple menu driven interface.<br>Sure the first thing you want to change will be the the keybord layout, so select the first menu item:
+Stone allow to easy change the most relevant settings, like keyboard layout, network, timezone... using a simple menu driven interface.<br>Sure the first thing you want to change will be the the keyboard layout, so select the first menu item:
 
 http://teebx.googlecode.com/svn/wiki/t2-stone-00.png
 
@@ -34,7 +34,8 @@ http://teebx.googlecode.com/svn/wiki/t2-stone-02-sysconfig-keymap.png
 The VM image has a 32 GB virtual scsi disk with two partitions. The first partition, mounted on /  is sized at 1 GB, the second partition sized at 5 GB is mounted on /var. The /var partition will be used to store sources and to build the system image.<br>This amount of storage allow to do most of the work without any problem but you must pay attention to keep the system clean.
 
 The choice to leave a large disk spare unpartitioned was done to be able to keep at reasonable size the development system image for distribution while having an option to resize the second partition if needed.
-
+==== Host editors ====
+To people who do not like *vi*: before you try to install a new text editor, a good advice... *nano* is already available.
 == Hands On ==
 ----
 The basic workflow steps are:
