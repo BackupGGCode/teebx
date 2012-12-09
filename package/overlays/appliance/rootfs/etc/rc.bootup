@@ -147,7 +147,27 @@
 	echo "done\n";
 
 	/* run platform specific applications*/
+	echo " - Auto configuring DAHDI ports... ";
+	dahdi_autoconfigure_ports();
+	echo "done\n";
 
+	echo " - Auto configuring Analog phones... ";
+	analog_autoconfigure_phones();
+	echo "done\n";
+
+	echo " - Auto configuring ISDN phones... ";
+	isdn_autoconfigure_phones();
+	echo "done\n";
+
+	/* start up Asterisk */
+	echo " - Starting Asterisk... \n";
+	pbx_configure();
+	echo "done\n";
+
+	/* run any shell commands specified in config.xml */
+	echo " - Running shell commands... ";
+	system_do_shell_commands();
+	echo "done\n";
 
 	echo " - Configuring cron services... ";
 	system_cron_configure();
