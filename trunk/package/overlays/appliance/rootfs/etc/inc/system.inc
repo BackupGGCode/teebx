@@ -240,7 +240,7 @@ function system_update_shell_password()
 */
 function system_timezone_configure(&$config)
 {
-	include('tzdata.lib.php');
+	require_once('tzdata.lib.php');
 
 	unlink_if_exists('/etc/TZ');
 	unlink_if_exists('/etc/localtime');
