@@ -96,6 +96,7 @@ X pciutils
 X lsof
 X verifysig
 X sox
+X dosfstools
 
 # Network utility software
 X libpcap
