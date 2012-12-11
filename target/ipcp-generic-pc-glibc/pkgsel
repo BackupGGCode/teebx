@@ -48,7 +48,7 @@ X grub
 # embedded db support both for asterisk and php
 X sqlite
 # asterisk + deps
-X asterisk16
+X asterisk1dot6
 X spandsp
 X libtiff
 #X digium-g729
