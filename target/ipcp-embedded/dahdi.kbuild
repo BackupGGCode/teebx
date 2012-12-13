@@ -8,11 +8,11 @@ obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_TRANSCODE)		+= dahdi_transcode.o
 
 #obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCT4XXP)		+= wct4xxp/
 #obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCTC4XXP)		+= wctc4xxp/
-#obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCTDM24XXP)	+= wctdm24xxp/
+obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCTDM24XXP)	+= wctdm24xxp/
 #obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCTE12XP)		+= wcte12xp/
 obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCTDM)		+= wctdm.o
 obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCTDM)		+= opvxa1200/
-#obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_VOICEBUS)		+= voicebus/
+obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_VOICEBUS)		+= voicebus/
 obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCB4XXP)		+= wcb4xxp/
 
 #obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCT1XXP)		+= wct1xxp.o
@@ -30,7 +30,8 @@ obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_WCFXO)		+= wcfxo.o
 #obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_ECHOCAN_KB1)	+= dahdi_echocan_kb1.o
 #obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_ECHOCAN_MG2)	+= dahdi_echocan_mg2.o
 
-obj-m += $(DAHDI_MODULES_EXTRA) zaphfc/
+#obj-m += $(DAHDI_MODULES_EXTRA) zaphfc/
+obj-$(DAHDI_BUILD_ALL)$(CONFIG_DAHDI_ZAPHFC)            += zaphfc/
 
 # Only enable this if you think you know what you're doing. This is not
 # supported yet:
@@ -69,10 +70,19 @@ ifeq (1,$(shell fgrep -q ' hrtimer_set_expires' include/linux/hrtimer.h 2>/dev/n
 EXTRA_CFLAGS+=-DHAVE_HRTIMER_ACCESSORS=1
 endif
 
+ifeq (1,$(shell fgrep -q 'wait_for_completion_timeout' include/linux/completion.h 2>/dev/null && echo 1))
+CFLAGS_MODULE+=-DHAVE_WAIT_FOR_COMPLETION_TIMEOUT=1
+endif
+
+# In 2.6.18 skb_linearize changed; however, some distros backported the change
+ifneq (,$(wildcard $(srctree)/include/linux/skbuff.h))
+ifeq ($(shell grep "skb_linearize.*(.*, .* gfp)" $(srctree)/include/linux/skbuff.h),)
 CFLAGS_dahdi_dynamic_eth.o := -DNEW_SKB_LINEARIZE
 CFLAGS_dahdi_dynamic_ethmf.o := -DNEW_SKB_LINEARIZE
+endif
+endif
 
-dahdi-objs := dahdi-base.o
+dahdi-objs := dahdi-base.o dahdi-sysfs.o dahdi-version.o
 
 ###############################################################################
 # Find appropriate ARCH value for VPMADT032 and HPEC binary modules
@@ -131,7 +141,7 @@ endif
 $(obj)/pciradio.o: $(obj)/radfw.h
 $(obj)/tor2.o: $(obj)/tor2fw.h
 
-hostprogs-y := $(obj)/makefw
+hostprogs-y := makefw
 
 $(obj)/tor2fw.h: $(src)/tormenta2.rbt $(obj)/makefw 
 	$(obj)/makefw $< tor2fw > $@
@@ -139,7 +149,7 @@ $(obj)/tor2fw.h: $(src)/tormenta2.rbt $(obj)/makefw
 $(obj)/radfw.h: $(src)/pciradio.rbt $(obj)/makefw
 	$(obj)/makefw $< radfw > $@
 
-$(obj)/makefw: $(src)/makefw.c
-	$(HOSTCC) -o $@ $^
+#$(obj)/makefw: $(src)/makefw.c
+#	$(HOSTCC) -o $@ $^
 
 clean-files	:= radfw.h tor2fw.h

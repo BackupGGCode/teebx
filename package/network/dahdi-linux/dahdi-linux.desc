@@ -22,13 +22,14 @@
 
 [A] Digium
 [M] Rene Rebe <rene@exactcode.de>
+[M] Giovanni Vallesi <giovanni.v@teebx.com>
 
 [C] extra/network
 [F] CROSS
 
 [L] GPL
 [S] Stable
-[V] 2.4.1.2
+[V] 2.6.1
 [P] X -----5---9 140.000
 
-[D] 0 dahdi-linux-2.4.1.2.tar.gz http://downloads.digium.com/pub/telephony/dahdi-linux/releases/
+[D] 278696087 dahdi-linux-2.6.1.tar.gz http://downloads.digium.com/pub/telephony/dahdi-linux/releases/

@@ -1,0 +1,2 @@
+Openvox drivers extracted from:
+- http://downloads.openvox.cn/pub/drivers/dahdi-linux-complete/openvox_dahdi-linux-complete-current.tar.gz
