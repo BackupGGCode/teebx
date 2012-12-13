@@ -32,9 +32,7 @@
 #include <linux/version.h>
 #include <linux/kernel.h>
 #include <linux/delay.h>
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 32))
 #include <linux/sched.h>
-#endif
 #include <linux/proc_fs.h>
 #include <linux/if_arp.h>
 
@@ -592,9 +590,9 @@ static void hfc_hdlc_hard_xmit(struct dahdi_chan *d_chan)
 
 }
 
-static int hfc_zap_startup(struct dahdi_span *span)
+static int hfc_zap_startup(struct file *file, struct dahdi_span *span)
 {
-    struct dahdi_hfc *zthfc = dahdi_hfc_from_span(span);
+    struct dahdi_hfc *zthfc = container_of(span, struct dahdi_hfc, span);
     struct hfc_card *hfctmp = zthfc->card;
     int alreadyrunning;
 
@@ -623,7 +621,7 @@ static int hfc_zap_maint(struct dahdi_span *span, int cmd)
 	return 0;
 }
 
-static int hfc_zap_chanconfig(struct dahdi_chan *d_chan, int sigtype)
+static int hfc_zap_chanconfig(struct file *file, struct dahdi_chan *d_chan, int sigtype)
 {
 	struct hfc_chan_duplex *chan = d_chan->pvt;
 	struct hfc_card *card = chan->card;
@@ -637,7 +635,7 @@ static int hfc_zap_chanconfig(struct dahdi_chan *d_chan, int sigtype)
 	return 0;
 }
 
-static int hfc_zap_spanconfig(struct dahdi_span *span,
+static int hfc_zap_spanconfig(struct file *file, struct dahdi_span *span,
 		struct dahdi_lineconfig *lc)
 {
 	span->lineconfig = lc->lineconfig;
@@ -645,24 +643,28 @@ static int hfc_zap_spanconfig(struct dahdi_span *span,
 	return 0;
 }
 
-static const struct dahdi_span_ops hfc_zap_span_ops = {
-       .owner = THIS_MODULE,
-       .chanconfig = hfc_zap_chanconfig,
-       .spanconfig = hfc_zap_spanconfig,
-       .startup = hfc_zap_startup,
-       .shutdown = hfc_zap_shutdown,
-       .maint = hfc_zap_maint,
-       .rbsbits = hfc_zap_rbsbits,
-       .open = hfc_zap_open,
-       .close = hfc_zap_close,
-       .ioctl = hfc_zap_ioctl,
-       .hdlc_hard_xmit = hfc_hdlc_hard_xmit
+static const struct dahdi_span_ops hfccard_span_ops = {
+	.owner = THIS_MODULE,
+	.spanconfig = hfc_zap_spanconfig,
+	.chanconfig = hfc_zap_chanconfig,
+	.startup = hfc_zap_startup,
+	.shutdown = hfc_zap_shutdown,
+	.maint = hfc_zap_maint,
+	.rbsbits = hfc_zap_rbsbits,
+	.open = hfc_zap_open,
+	.close  = hfc_zap_close,
+	.ioctl = hfc_zap_ioctl,
+	.hdlc_hard_xmit = hfc_hdlc_hard_xmit,
 };
 
 static int hfc_zap_initialize(struct dahdi_hfc *hfccard)
 {
 	 struct hfc_card *hfctmp = hfccard->card;
 	int i;
+	
+	hfccard->card->ddev = dahdi_create_device();
+	if (!hfccard->card->ddev)
+		return -ENOMEM;
 
 	memset(&hfccard->span, 0x0, sizeof(struct dahdi_span));
 	sprintf(hfccard->span.name, "ZTHFC%d", hfctmp->cardnum + 1);
@@ -670,16 +672,35 @@ static int hfc_zap_initialize(struct dahdi_hfc *hfccard)
 			"HFC-S PCI A ISDN card %d [%s] ",
 			hfctmp->cardnum,
 			hfctmp->nt_mode ? "NT" : "TE");
+ //      hfccard->span.owner = THIS_MODULE;
 	hfccard->span.spantype = hfctmp->nt_mode ? "NT" : "TE";
-	hfccard->span.manufacturer = "Cologne Chips";
+//	hfccard->span.manufacturer = "Cologne Chips";
+	hfccard->card->ddev->manufacturer = "Cologne Chips";
+	hfccard->span.ops = &hfccard_span_ops;
+	list_add_tail(&hfccard->span.device_node, &hfccard->card->ddev->spans);
+//	hfccard->span.spanconfig = hfc_zap_spanconfig;
+//	hfccard->span.chanconfig = hfc_zap_chanconfig;
+//	hfccard->span.startup = hfc_zap_startup;
+//	hfccard->span.shutdown = hfc_zap_shutdown;
+//	hfccard->span.maint = hfc_zap_maint;
+//	hfccard->span.rbsbits = hfc_zap_rbsbits;
+//	hfccard->span.open = hfc_zap_open;
+//	hfccard->span.close = hfc_zap_close;
+//	hfccard->span.ioctl = hfc_zap_ioctl;
+//	hfccard->span.hdlc_hard_xmit = hfc_hdlc_hard_xmit;
 	hfccard->span.flags = 0;
-	hfccard->span.ops = &hfc_zap_span_ops;
-	hfccard->span.irq = hfctmp->pcidev->irq;
-	dahdi_copy_string(hfccard->span.devicetype, "HFC-S PCI-A ISDN",
-			sizeof(hfccard->span.devicetype));
-	sprintf(hfccard->span.location, "PCI Bus %02d Slot %02d",
+/*	dahdi_copy_string(hfccard->card->ddev->devicetype, "HFC-S PCI-A ISDN",
+			sizeof(hfccard->card->ddev->devicetype)); */
+	hfccard->card->ddev->devicetype = "HFC-S PCI-A ISDN";
+			
+/*	sprintf(hfccard->ddev->location, "PCI Bus %02d Slot %02d",
 			hfctmp->pcidev->bus->number,
-			PCI_SLOT(hfctmp->pcidev->devfn) + 1);
+			PCI_SLOT(hfctmp->pcidev->devfn) + 1); */
+			
+	hfccard->card->ddev->location = kasprintf(GFP_KERNEL,
+				      "PCI Bus %02d Slot %02d",
+				      hfctmp->pcidev->bus->number,
+				      PCI_SLOT(hfctmp->pcidev->devfn) + 1);
 	hfccard->span.chans = hfccard->_chans;
 	hfccard->span.channels = 3;
 	for (i = 0; i < hfccard->span.channels; i++)
@@ -687,7 +708,8 @@ static int hfc_zap_initialize(struct dahdi_hfc *hfccard)
 	hfccard->span.deflaw = DAHDI_LAW_ALAW;
 	hfccard->span.linecompat = DAHDI_CONFIG_AMI | DAHDI_CONFIG_CCS;
 	hfccard->span.offset = 0;
-	init_waitqueue_head(&hfccard->span.maintq);
+//	init_waitqueue_head(&hfccard->span.maintq);
+//	hfccard->span.pvt = hfccard;
 
 	for (i = 0; i < hfccard->span.channels; i++) {
 		memset(&hfccard->chans[i], 0x0, sizeof(struct dahdi_chan));
@@ -739,8 +761,11 @@ static int hfc_zap_initialize(struct dahdi_hfc *hfccard)
 
 	hfccard->chans[DAHDI_B2].pvt = &hfctmp->chans[B2];
 
-	if (dahdi_register(&hfccard->span, 0)) {
+	if (dahdi_register_device(hfccard->card->ddev, &hfccard->card->pcidev->dev)) {
 		printk(KERN_CRIT "unable to register zaptel device!\n");
+		kfree(hfccard->card->ddev->location);
+		dahdi_free_device(hfccard->card->ddev);
+		hfccard->card->ddev = NULL;
 		return -1;
 	}
 
@@ -1603,7 +1628,6 @@ static void __devexit hfc_remove(struct pci_dev *pci_dev)
 {
 	struct hfc_card *card = pci_get_drvdata(pci_dev);
 
-
 	printk(KERN_INFO hfc_DRIVER_PREFIX
 		"card %d: "
 		"shutting down card at %p.\n",
@@ -1612,7 +1636,7 @@ static void __devexit hfc_remove(struct pci_dev *pci_dev)
 
 	hfc_softreset(card);
 
-	dahdi_unregister(&card->ztdev->span);
+	dahdi_unregister_device(card->ddev);
 
 
 	/*
@@ -1635,6 +1659,10 @@ static void __devexit hfc_remove(struct pci_dev *pci_dev)
 	pci_release_regions(pci_dev);
 
 	pci_disable_device(pci_dev);
+	
+	kfree(card->ddev->location);
+	
+	dahdi_free_device(card->ddev);
 
 	kfree(card);
 }

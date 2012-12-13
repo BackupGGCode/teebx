@@ -19,14 +19,14 @@
 [U] http://www.asterisk.org
 
 [A] The Asterisk Project
-[M] Giovanni Vallesi <gvallesi@gmail.com>
+[M] Giovanni Vallesi <giovanni.v@teebx.com>
 
 [C] extra/development
 [F] CROSS
 
 [L] GPL
 [S] Stable
-[V] 1.4.12
+[V] 1.4.13
 [P] X -----5---9 149.000
 
-[D] 0 libpri-1.4.12.tar.gz http://downloads.asterisk.org/pub/telephony/libpri/
+[D] 757434937 libpri-1.4.13.tar.gz http://downloads.asterisk.org/pub/telephony/libpri/
