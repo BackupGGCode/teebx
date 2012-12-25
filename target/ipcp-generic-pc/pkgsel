@@ -49,7 +49,7 @@ X grub
 X sqlite
 
 # asterisk + deps
-X asterisk1dot6
+X asterisk1dot8
 X spandsp
 X libtiff
 
@@ -100,6 +100,7 @@ X dosfstools
 # Network utility software
 X libpcap
 X tcpdump
+X curl
 
 # application specific overlay
 X appliance
