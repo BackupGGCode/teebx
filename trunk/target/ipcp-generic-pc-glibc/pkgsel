@@ -101,6 +101,7 @@ X dosfstools
 # Network utility software
 X libpcap
 X tcpdump
+X curl
 
 # application specific overlay
 X appliance
