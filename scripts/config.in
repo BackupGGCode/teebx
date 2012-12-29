@@ -73,11 +73,9 @@ CFGTEMP_IMAGELIST=""
 comment_id '- Target Distribution' COMMENT_TARGET
 
 block_begin 7
-	choice SDECFG_TARGET generic $CFGTEMP_TARGETLIST
+	choice SDECFG_TARGET pbx-generic-pc $CFGTEMP_TARGETLIST
 	SDECFG_ID="$SDECFG_ID-$SDECFG_TARGET"
-	# if target directory has dots in name strip anything from latest dot,
-	# use it to avoid duplicated identifiers in image name
-	SDECFG_ID=${SDECFG_ID%\.*}
+
 	# detect the target chain
 	targetchain="$SDECFG_TARGET"; x="$SDECFG_TARGET"
 	while [ -f "target/$x/extends" ]; do
@@ -399,4 +397,9 @@ pkgfilter sed '/^[XO] --* / d;'
 [ $SDECFG_EXPERT = 1 ] ||
 	SDECFG_ID="`echo $SDECFG_ID | sed 's,-noexpert.*,,'`"
 
-[ "$SDECFG_IDCKSUM
+[ "$SDECFG_IDCKSUM" = 1 ] &&
+	SDECFG_ID="`echo $SDECFG_ID | cksum | cut -f1 -d' '`"  
+
+const SDECFG_SHORTID "$SDECFG_ID"
+SDECFG_ID="$SDECFG_ID-$SDECFG_LIBC-$config"
+
