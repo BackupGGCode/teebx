@@ -39,7 +39,7 @@
 
 [L] GPL
 [S] Stable
-[V] 2_13-r15871
+[V] 2_13
 [P] O 01---5---9 101.600
 
 [D] X eglibc-2_13-r15871.tar.bz2 svn://svn.eglibc.org/branches/eglibc-2_13 eglibc-2_13 -r 15871
