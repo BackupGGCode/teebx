@@ -2,6 +2,13 @@
 # See option-groups.def in the libc source dir for a description
 # of each option group.
 #
+# This file need only refer to those options whose default settings
+# are to be changed.
+# Note that all options are listed here only for reference.
+#
+# Put this file file into the target directory then rename it to
+# eglibc_option-groups.config to customize the eglibc build.
+#
 OPTION_EGLIBC_ADVANCED_INET6 = y
 OPTION_EGLIBC_BACKTRACE = y
 OPTION_EGLIBC_BIG_MACROS = y
