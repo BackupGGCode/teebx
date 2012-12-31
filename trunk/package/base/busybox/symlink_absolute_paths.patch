@@ -1,11 +1,11 @@
---- busybox-1.14.3/applets/install.sh.orig	2009-12-07 14:39:07.000000000 +0100
-+++ busybox-1.14.3/applets/install.sh	2009-12-07 14:41:19.000000000 +0100
-@@ -90,7 +90,7 @@
+--- busybox-1.20.2/applets/install.sh.vanilla	2012-12-31 13:56:16.311927122 +0000
++++ busybox-1.20.2/applets/install.sh	2012-12-31 13:57:57.224394083 +0000
+@@ -93,7 +93,7 @@
  				bb_path="../bin/busybox"
  			;;
- 			/usr/bin|/usr/sbin)
+ 			/usr/bin | /usr/sbin)
 -				bb_path="../../bin/busybox"
 +				bb_path="/bin/busybox"
  			;;
  			*)
- 			echo "Unknown installation directory: $appdir"
+ 				echo "Unknown installation directory: $appdir"

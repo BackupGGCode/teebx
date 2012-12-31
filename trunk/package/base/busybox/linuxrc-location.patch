@@ -1,11 +1,11 @@
---- busybox-1.15.3/include/applets.h.orig
-+++ busybox-1.15.3/include/applets.h
-@@ -228,7 +228,7 @@
- IF_LESS(APPLET(less, _BB_DIR_USR_BIN, _BB_SUID_DROP))
- IF_SETARCH(APPLET_ODDNAME(linux32, setarch, _BB_DIR_BIN, _BB_SUID_DROP, linux32))
- IF_SETARCH(APPLET_ODDNAME(linux64, setarch, _BB_DIR_BIN, _BB_SUID_DROP, linux64))
--IF_FEATURE_INITRD(APPLET_ODDNAME(linuxrc, init, _BB_DIR_ROOT, _BB_SUID_DROP, linuxrc))
-+IF_FEATURE_INITRD(APPLET_ODDNAME(linuxrc, init, _BB_DIR_SBIN, _BB_SUID_DROP, linuxrc))
- IF_LN(APPLET_NOEXEC(ln, ln, _BB_DIR_BIN, _BB_SUID_DROP, ln))
- IF_LOAD_POLICY(APPLET(load_policy, _BB_DIR_USR_SBIN, _BB_SUID_DROP))
- IF_LOADFONT(APPLET(loadfont, _BB_DIR_USR_SBIN, _BB_SUID_DROP))
+--- busybox-1.20.2/init/init.c.vanilla	2012-12-31 13:27:02.827927302 +0000
++++ busybox-1.20.2/init/init.c	2012-12-31 13:36:09.860594684 +0000
+@@ -10,7 +10,7 @@
+  */
+ 
+ //applet:IF_INIT(APPLET(init, BB_DIR_SBIN, BB_SUID_DROP))
+-//applet:IF_FEATURE_INITRD(APPLET_ODDNAME(linuxrc, init, BB_DIR_ROOT, BB_SUID_DROP, linuxrc))
++//applet:IF_FEATURE_INITRD(APPLET_ODDNAME(linuxrc, init, BB_DIR_SBIN, BB_SUID_DROP, linuxrc))
+ 
+ //kbuild:lib-$(CONFIG_INIT) += init.o
+ 
