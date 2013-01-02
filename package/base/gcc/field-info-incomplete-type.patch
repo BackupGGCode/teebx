@@ -1,0 +1,14 @@
+--- gcc-4.3.2/gcc/config/i386/linux-unwind.h.vanilla	2013-01-02 12:36:10.040041925 +0000
++++ gcc-4.3.2/gcc/config/i386/linux-unwind.h	2013-01-02 10:34:43.000000000 +0000
+@@ -137,9 +137,9 @@
+     {
+       struct rt_sigframe {
+ 	int sig;
+-	struct siginfo *pinfo;
++	siginfo_t *pinfo;
+ 	void *puc;
+-	struct siginfo info;
++	siginfo_t info;
+ 	struct ucontext uc;
+       } *rt_ = context->cfa;
+       /* The void * cast is necessary to avoid an aliasing warning.
