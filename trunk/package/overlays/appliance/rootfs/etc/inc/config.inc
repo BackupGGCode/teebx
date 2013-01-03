@@ -4,7 +4,7 @@
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
 	Copyright(C) 2010 - 2012 Giovanni Vallesi.
 	All rights reserved.
-	
+
 	originally part of AskoziaPBX (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
@@ -290,7 +290,7 @@ if (!isset($config['system']['timezone']))
 {
 	$config['system']['timezone'] = '99000';
 }
-$arrTz = getTzData($tzData, $config['system']['timezone']);
+$arrTz = getTzData($config['system']['timezone']);
 date_default_timezone_set($arrTz['name']);
 
 if (isset($config['system']['webgui']['language']))
