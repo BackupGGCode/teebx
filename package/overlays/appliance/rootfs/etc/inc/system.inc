@@ -2,10 +2,10 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 	All rights reserved.
-	
-	originally part of AskoziaPBX (http://askozia.com/pbx)
+
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
 	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>. All rights reserved..
@@ -129,7 +129,7 @@ function system_update_httpd_settings()
 		$username = "admin";
 	}
 
-	$pid = exec('ps -w | grep "/etc/httpd.conf" | grep -v "grep" | cut -d " " -f 2');
+	$pid = exec('ps | grep "/etc/httpd.conf" | grep -v "grep" | cut -d " " -f 2');
 	if ($pid)
 	{
 		killbypidnumber($pid);
@@ -244,12 +244,21 @@ function system_timezone_configure(&$config)
 
 	unlink_if_exists('/etc/TZ');
 	unlink_if_exists('/etc/localtime');
-
-	if (isset($config['system']['timezone']))
+	if (!isset($config['system']['timezone']))
+		$config['system']['timezone'] = '99000';
+	//
+	$arrTz = getTzData($config['system']['timezone']);
+	if (is_file('/lib/libc.so.6'))
 	{
-		$arrTz = getTzData($tzData, $config['system']['timezone']);
-		exec('echo "' . $arrTz['rule'] . '" > /etc/TZ');
-		exec('cp /usr/share/zoneinfo/' . $arrTz['name'] . ' /etc/localtime');
+		// timezone set for glibc/eglibc targets
+		exec("ln -sf /usr/share/zoneinfo/{$arrTz['name']} /etc/localtime");
+		exec("export TZ={$arrTz['name']}");
+	}
+	else
+	{
+		// timezone set for uClibc targets
+		exec("echo \"{$arrTz['rule']}\" > /etc/TZ");
+		exec("cp /usr/share/zoneinfo/{$arrTz['name']} /etc/localtime");
 	}
 }
 
