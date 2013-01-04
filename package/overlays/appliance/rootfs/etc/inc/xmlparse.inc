@@ -229,6 +229,9 @@ function array_to_xml_sub($arr, $indent)
 		}
 		else
 		{
+			if (is_null($val))
+				continue;
+			//
 			if ((is_bool($val) && ($val == true)) || ($val === ""))
 			{
 				$xmlconfig .= str_repeat("\t", $indent);
