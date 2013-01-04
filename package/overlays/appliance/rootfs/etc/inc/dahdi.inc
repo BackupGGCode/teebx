@@ -2,9 +2,9 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx)
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
 	All rights reserved.
 
@@ -447,7 +447,7 @@ function dahdi_get_gnumber($uniqid)
 	}
 }
 
-function dahdi_generate_system_conf($return = false, $ports = false, $gateways = false)
+function dahdi_generate_system_conf($return = false, $ports = false)
 {
 	global $g, $config, $defaults;
 
@@ -455,18 +455,11 @@ function dahdi_generate_system_conf($return = false, $ports = false, $gateways =
 	{
 		$ports = dahdi_get_ports();
 	}
-	if (!$gateways)
-	{
-		$gateways = redfone_get_gateways();
-	}
 
 	$loadzones = dahdi_get_loadzones();
 
 	$conf = "# Hardware Info\n";
-	foreach ($gateways as $gateway)
-	{
-		$conf .= "# Redfone gateway (" . $gateway['gwname'] . ") with " . $gateway['spancount'] . " spans\n";
-	}
+
 	foreach ($ports as $port)
 	{
 		if ($port['technology'] == "analog")
@@ -480,24 +473,11 @@ function dahdi_generate_system_conf($return = false, $ports = false, $gateways =
 			$conf .= "# isdn " . $port['type'] . " port, basechannel " . $port['basechannel'] . " (" . $name . ") is on card " . $port['card'] . " w/" . $port['totalchannels'] . " channels\n";
 		}
 	}
-	$conf .= "\n";
 
+	$conf .= "\n";
 	$timingprio = 1;
-
-	$conf .= "# Dynamic Spans\n";
-	// dynamic=ethmf,<ethN>/<FB MAC address>/<span number>,<numchans>,<timing>
-	foreach ($gateways as $gateway)
-	{
-		for ($i = 1; $i < $gateway['spancount'] + 1; $i++)
-		{
-			$chancount = ($gateway['span' . $i . 'type'] == "E1") ? 31 : 24;
-			$conf .= "dynamic=ethmf," . $gateway['localif'] . "/" .
-			$gateway['remotemac'] . "/" . ($i - 1) . "," . $chancount . "," . ($gateway['spancount'] + 1 - $i) . "\n";
-		}
-	}
-	$conf .= "\n";
-
 	$conf .= "# Spans\n";
+
 	// span=<span num>,<timing source>,<line build out (LBO)>,<framing>,<coding>[,yellow]
 	foreach ($ports as $port)
 	{
@@ -517,35 +497,11 @@ function dahdi_generate_system_conf($return = false, $ports = false, $gateways =
 			}
 		}
 	}
-	$conf .= "\n";
 
+	$conf .= "\n";
 	$conf .= "# Channels\n";
+
 	// <device>=<channel list>
-	foreach ($gateways as $gateway)
-	{
-		$ch = 1;
-		for ($i = 1; $i < $gateway['spancount'] + 1; $i++)
-		{
-			if ($gateway['span' . $i . 'type'] == "E1")
-			{
-				// bchan=1-15,17-31
-				// dchan=16
-				// alaw=1-31
-				$conf .= "bchan=" . $ch . "-" . ($ch + 14) . "," . ($ch + 16) . "-" . ($ch + 30) . "\n";
-				$conf .= "dchan=" . ($ch + 15) . "\n";
-				$conf .= "alaw=" . $ch . "-" . ($ch + 30) . "\n";
-				$ch += 31;
-			}
-			else
-			{
-				// bchan=1-23
-				// dchan=24
-				$conf .= "bchan=" . $ch . "-" . ($ch + 22) . "\n";
-				$conf .= "dchan=" . ($ch + 23) . "\n";
-				$ch += 24;
-			}
-		}
-	}
 	foreach ($ports as $port)
 	{
 		// analog port config
@@ -590,19 +546,21 @@ function dahdi_generate_system_conf($return = false, $ports = false, $gateways =
 			}
 		}
 	}
-	$conf .= "\n";
 
+	$conf .= "\n";
 	$conf .= "# Tone Zones\n";
+
 	// loadzone=<zone>
 	// defaultzone=<zone>
 	foreach ($loadzones as $zone)
 	{
 		$conf .= "loadzone=" . $zone . "\n";
 	}
+
 	$conf .= "defaultzone=" . $loadzones[0] . "\n";
 	$conf .= "\n";
-
 	$conf .= "# Echo Cancellers\n";
+
 	// echocanceller=<echocanceller name>,<channel(s)>
 	foreach ($ports as $port)
 	{
@@ -639,7 +597,7 @@ function dahdi_generate_system_conf($return = false, $ports = false, $gateways =
 	return ($return) ? $conf : util_file_write("/etc/dahdi/system.conf", $conf);
 }
 
-function chan_dahdi_conf_generate($return = false, $ports = false, $gateways = false)
+function chan_dahdi_conf_generate($return = false, $ports = false)
 {
 	global $g, $config, $defaults;
 
@@ -647,16 +605,8 @@ function chan_dahdi_conf_generate($return = false, $ports = false, $gateways = f
 	{
 		$ports = dahdi_get_ports();
 	}
-	if (!$gateways)
-	{
-		$gateways = redfone_get_gateways();
-	}
 
 	$conf = "; Hardware Info\n";
-	foreach ($gateways as $gateway)
-	{
-		$conf .= "; Redfone gateway (" . $gateway['gwname'] . ") with " . $gateway['spancount'] . " spans\n";
-	}
 	foreach ($ports as $port)
 	{
 		if ($port['technology'] == "analog")
@@ -670,11 +620,11 @@ function chan_dahdi_conf_generate($return = false, $ports = false, $gateways = f
 			$conf .= "; isdn " . $port['type'] . " port, basechannel " . $port['basechannel'] . " (" . $name . ") is on card " . $port['card'] . " w/" . $port['totalchannels'] . " channels\n";
 		}
 	}
+
 	$conf .= "\n";
-
 	$conf .= "[trunkgroups]\n\n";
-
 	$conf .= "[channels]\n";
+
 	$analogproviders = analog_get_providers();
 	foreach ($analogproviders as $provider)
 	{
@@ -816,50 +766,7 @@ function chan_dahdi_conf_generate($return = false, $ports = false, $gateways = f
 			continue;
 		}
 
-		if (strpos($provider['port'], "REDFONE") !== false)
-		{
-			// in case redfone spans start going into the double-digits, watch out here
-			$gwid = substr($provider['port'], 0, - 2);
-			$spannum = substr($provider['port'], - 1);
-			$gateway = redfone_get_gateway($gwid);
-			$basechannel = redfone_get_span_basechannel($gwid, $spannum);
-
-			$conf .= "; Provider: " . $provider['name'] . "\n";
-			$conf .= "signalling=pri_cpe\n";
-			// $conf .= "rxgain=" . $port['rxgain'] . "\n";
-			// $conf .= "txgain=" . $port['txgain'] . "\n";
-			if ($gateway['span' . $spannum . 'echo-taps'] == "disable")
-			{
-				$conf .= "echocancel=no\n";
-			}
-			else
-			{
-				$conf .= "echocancel=" . $gateway['span' . $spannum . 'echo-taps'] . "\n";
-			}
-
-			$conf .= "language=" . $provider['language'] . "\n";
-			$conf .= "context=" . $provider['uniqid'] . "-incoming\n";
-			$conf .= "group=" . $basechannel . "\n";
-			if ($provider['manualattributes'])
-			{
-				$conf .= "; manual attributes\n";
-				$conf .= base64_decode($provider['manualattributes']) . "\n";
-				$conf .= "; end manual attributes\n";
-			}
-			if ($gateway['span' . $spannum . 'type'] == "E1")
-			{
-				$conf .= "switchtype=euroisdn\n";
-				$conf .= "channel => " . $basechannel . "-" . ($basechannel + 14) . "," .
-				($basechannel + 16) . "-" . ($basechannel + 30) . "\n";
-			}
-			else
-			{
-				$conf .= "switchtype=national\n";
-				$conf .= "channel => " . $basechannel . "-" . ($basechannel + 22) . "\n";
-			}
-			$conf .= "\n";
-		}
-		else if (strpos($provider['port'], "DAHDI") !== false)
+		if (strpos($provider['port'], "DAHDI") !== false)
 		{
 			$pports = array();
 
@@ -1050,10 +957,9 @@ function dahdi_configure()
 	global $g;
 
 	$ports = dahdi_get_ports();
-	$gateways = redfone_get_gateways();
 
-	dahdi_generate_system_conf(false, $ports, $gateways);
-	chan_dahdi_conf_generate(false, $ports, $gateways);
+	dahdi_generate_system_conf(false, $ports);
+	chan_dahdi_conf_generate(false, $ports);
 
 	mwexec("/usr/sbin/dahdi_cfg");
 

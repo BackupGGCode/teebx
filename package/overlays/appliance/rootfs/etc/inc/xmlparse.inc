@@ -2,9 +2,9 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 	All rights reserved.
-	
+
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
@@ -33,11 +33,11 @@
 */
 
 /* tags that are always to be handled as lists */
-$listtags = explode(" ",
-	"key dnsserver route shellcmd cacert earlyshellcmd " .
-	"phone provider codec room dialpattern callgroup groupmember incomingextensionmap " .
-	"dahdi-port dahdi-portgroup redfone-gateway disk package loadzone bridge application application2 " .
-	"manager-user read-permission write-permission app-command manual-attribute manual-file fax"
+$listtags = explode(' ',
+	'key dnsserver route shellcmd cacert earlyshellcmd ' .
+	'phone provider codec room dialpattern callgroup groupmember incomingextensionmap ' .
+	'dahdi-port dahdi-portgroup disk package loadzone bridge application application2 ' .
+	'manager-user read-permission write-permission app-command manual-attribute manual-file fax'
 	);
 
 /* xml array used in parsing configuration files
