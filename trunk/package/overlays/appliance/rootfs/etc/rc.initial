@@ -1,9 +1,9 @@
 #!/bin/sh
 # $Id$
 # part of BoneOS build platform (http://www.teebx.com/)
-# Copyright(C) 2011 - 2012 Giovanni Vallesi.
+# Copyright(C) 2011 - 2013 Giovanni Vallesi.
 # All rights reserved.
-# 
+#
 # originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 # Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 # originally part of m0n0wall (http://m0n0.ch/wall)
@@ -30,7 +30,7 @@ read tmp
 
 done
 
-else 
+else
 
 # endless loop
 while : ; do
@@ -38,7 +38,6 @@ while : ; do
 /etc/rc.banner
 
 # display a cheap menu
-echo
 echo
 echo
 echo "PBX console setup"
@@ -50,9 +49,10 @@ echo "4) Reset to factory defaults"
 echo "5) Reboot system"
 echo "6) Ping host"
 echo "7) Asterisk Console"
+echo "8) Shell"
 # need an install option?
 if [ -f /offload/livecd ]; then
-echo "8) Install on Hard Drive";
+echo "9) Install on Hard Drive";
 fi
 echo
 
@@ -63,10 +63,10 @@ read opmode
 case ${opmode} in
 1)
 	/etc/rc.initial.setports
- 	;;
+	;;
 2)
 	/etc/rc.initial.setlanip
- 	;;
+	;;
 3)
 	/etc/rc.initial.password
 	;;
@@ -83,12 +83,12 @@ case ${opmode} in
 	/usr/sbin/asterisk -r
 	;;
 8)
+	/bin/sh
+	;;
+9)
 	if [ -f /offload/livecd ]; then
 	/etc/rc.initial.install
 	fi
-	;;
-9)
-	/bin/sh
 	;;
 esac
 
