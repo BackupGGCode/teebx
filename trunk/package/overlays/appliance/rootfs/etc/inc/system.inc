@@ -570,12 +570,6 @@ function system_load_kernel_modules()
 		mwexec("/sbin/modprobe -q xpd_pri");
 		mwexec("/sbin/modprobe -q xpd_bri");
 	}
-	// is redfone stuff compiled for this platform?
-	if (file_exists("/etc/supports.redfone"))
-	{
-		mwexec("/sbin/modprobe -q dahdi_dynamic");
-		mwexec("/sbin/modprobe -q dahdi_dynamic_ethmf");
-	}
 }
 
 function system_get_product_name()

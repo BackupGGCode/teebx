@@ -2,10 +2,10 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 	All rights reserved.
-	
-	originally part of AskoziaPBX (http://askozia.com/pbx)
+
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
 	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>. All rights reserved.
@@ -60,7 +60,6 @@ $g = array(
 	"sip_dirty_path" => "/var/run/sip.dirty",
 	"iax_dirty_path" => "/var/run/iax.dirty",
 	"isdn_dirty_path" => "/var/run/isdn.dirty",
-	"redfone_dirty_path" => "/var/run/redfone.dirty",
 	"skinny_dirty_path" => "/var/run/skinny.dirty",
 	"storage_dirty_path" => "/var/run/storage.dirty",
 	"dialplan_dirty_path" => "/var/run/dialplan.dirty",

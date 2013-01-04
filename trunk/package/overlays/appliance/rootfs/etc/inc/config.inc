@@ -2,10 +2,10 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2012 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 	All rights reserved.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx)
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
 	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>. All rights reserved.
@@ -526,16 +526,6 @@ function config_build_uniqid_map($config)
 			continue;
 		}
 		$uniqid_map[$config['interfaces']['dahdi-portgroup'][$i]['uniqid']] = $i;
-	}
-	// redfone gateways
-	$n = count($config['interfaces']['redfone-gateway']);
-	for ($i = 0; $i < $n; $i++)
-	{
-		if (!is_array($config['interfaces']['redfone-gateway']))
-		{
-			continue;
-		}
-		$uniqid_map[$config['interfaces']['redfone-gateway'][$i]['uniqid']] = $i;
 	}
 	// storage disks
 	$n = count($config['storage']['disk']);
