@@ -2,10 +2,10 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx)
-	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
+	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -18,11 +18,6 @@
 	   notice, this list of conditions and the following disclaimer in the
 	   documentation and/or other materials provided with the distribution.
 
-	3. Redistribution in any form at a charge, that in whole or in part
-	   contains or is derived from the software, including but not limited to
-	   value added products, is prohibited without prior written consent of
-	   tecema.
-
 	THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
 	INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
 	AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
@@ -34,17 +29,24 @@
 	ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 	POSSIBILITY OF SUCH DAMAGE.
 */
-// try to acquire the language
-$current_language = $config['system']['webgui']['language'];
-// are we updating the languages
-if ($_POST['lang'])
+
+// set a reasonable default
+$current_language = 'en_US';
+// if any, set the configured language
+if (isset($config['system']['webgui']['language']))
 {
-	$current_language = $_POST['lang'];
+	if (!empty($config['system']['webgui']['language']))
+	{
+		$current_language = $config['system']['webgui']['language'];
+	}
 }
-// default to English if nothing is still set
-if (!$current_language)
+// override if just updated.
+if (isset($_POST['lang']))
 {
-	$current_language = "en_US";
+	if (!empty($_POST['lang']))
+	{
+		$current_language = $_POST['lang'];
+	}
 }
 
 bindtextdomain("messages", "./locale");

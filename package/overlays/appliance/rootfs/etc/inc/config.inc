@@ -204,6 +204,8 @@ EOD;
 }
 
 /* parse configuration */
+if (!isset($noparseconfig))
+	$noparseconfig = false;
 if (!$noparseconfig)
 {
 	config_lock();
@@ -295,7 +297,7 @@ date_default_timezone_set($arrTz['name']);
 
 if (isset($config['system']['webgui']['language']))
 {
-	setlocale(LC_TIME, $config['system']['webgui']['language']);
+	$debug_locale = setlocale(LC_TIME, $config['system']['webgui']['language']);
 }
 
 /**
