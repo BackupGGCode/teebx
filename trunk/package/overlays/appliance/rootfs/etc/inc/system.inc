@@ -236,9 +236,9 @@ function system_update_shell_password()
 }
 
 /**
-* Populates /etc/TZ with an appropriate time zone
+* Set system locale and timezone
 */
-function system_timezone_configure(&$config)
+function writeSysRegSettings(&$config)
 {
 	require_once('tzdata.lib.php');
 
@@ -253,6 +253,19 @@ function system_timezone_configure(&$config)
 		// timezone set for glibc/eglibc targets
 		exec("ln -sf /usr/share/zoneinfo/{$arrTz['name']} /etc/localtime");
 		exec("export TZ={$arrTz['name']}");
+		// system wide locale
+		if (isset($config['system']['webgui']['language']))
+		{
+			if (!empty($config['system']['webgui']['language']))
+			{
+				if (is_file('/usr/lib/locale/locale-archive') || is_link('/usr/lib/locale/locale-archive'))
+				{
+					$currLocale = $config['system']['webgui']['language'] . '.UTF-8';
+					exec("echo LANG=\"$currLocale\" > /etc/locale.conf");
+					exec("echo LC_TIME=\"$currLocale\" >> /etc/locale.conf");
+				}
+			}
+		}
 	}
 	else
 	{
@@ -260,6 +273,7 @@ function system_timezone_configure(&$config)
 		exec("echo \"{$arrTz['rule']}\" > /etc/TZ");
 		exec("cp /usr/share/zoneinfo/{$arrTz['name']} /etc/localtime");
 	}
+	return true;
 }
 
 /**

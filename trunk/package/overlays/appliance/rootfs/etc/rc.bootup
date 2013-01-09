@@ -75,8 +75,8 @@
 	echo "done\n";
 
 	/* set up our timezone */
-	echo " - Configuring timezone... ";
-	system_timezone_configure($config);
+	echo " - Configuring timezone and locale settings... ";
+	writeSysRegSettings($config);
 	echo "done\n";
 
 	/* set up our hostname */

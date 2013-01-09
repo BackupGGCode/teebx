@@ -30,7 +30,7 @@
 	POSSIBILITY OF SUCH DAMAGE.
 */
 
-// set a reasonable default
+// set a default
 $current_language = 'en_US';
 // if any, set the configured language
 if (isset($config['system']['webgui']['language']))
@@ -49,10 +49,10 @@ if (isset($_POST['lang']))
 	}
 }
 
-bindtextdomain("messages", "./locale");
-bind_textdomain_codeset("messages", "utf-8");
-setlocale(LC_MESSAGES, $current_language, $current_language . '.utf-8');
+bindtextdomain('messages', $g['www_path'] . '/locale');
+bind_textdomain_codeset('messages', 'UTF-8');
+setlocale(LC_MESSAGES, $current_language, $current_language . '.UTF-8');
 putenv("LANG=$current_language");
-textdomain("messages");
+textdomain('messages');
 
 ?>
