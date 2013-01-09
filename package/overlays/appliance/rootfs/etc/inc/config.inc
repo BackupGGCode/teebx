@@ -68,21 +68,6 @@ if ($g['booting'])
 		if (file_exists("/offload/livecd"))
 		{
 			$livecd = true;
-			/* config is either on floppy disk or USB stick for CD-ROM version */
-
-			/* try the USB stick at da0 first, and if this fails, use the floppy disk  */
-			// $cfgdevice = "da0";
-			// $cfgpartition = "da0s1";
-			// $cfgfstype = "msdos";
-
-			// if (mwexec("/bin/mount -t msdos -r /dev/da0s1 {$g['cf_path']}") == 0) {
-			// /* USB stick is OK */
-			// echo "Using USB memory stick for configuration storage.\n";
-			// mwexec("/bin/umount -f {$g['cf_path']}");
-			// } else {
-			// $cfgdevice = $cfgpartition = "fd0";
-
-			// if (mwexec("/bin/mount -t msdos -r /dev/fd0 {$g['cf_path']}") != 0) {
 			echo <<<EOD
 
 
@@ -102,7 +87,7 @@ EOD;
 			$attempts = 2;
 			while ($attempts--)
 			{
-				if ($g['platform'] == "COMpact 3000" || $g['platform'] == "Warp")
+				if ($g['platform'] == 'BlackfinMT' || $g['platform'] == 'RaspberryPi')
 				{
 					$disks[] = "mmcblk0";
 				}
@@ -297,7 +282,7 @@ date_default_timezone_set($arrTz['name']);
 
 if (isset($config['system']['webgui']['language']))
 {
-	$debug_locale = setlocale(LC_TIME, $config['system']['webgui']['language']);
+	setlocale(LC_TIME, $config['system']['webgui']['language'] . '.UTF-8');
 }
 
 /**
