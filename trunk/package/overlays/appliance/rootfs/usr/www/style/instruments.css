@@ -1,0 +1,34 @@
+/*
+  $Id$
+  - Part of TeeBX project http://code.google.com/p/teebx/
+  - look at TeeBX website to get details about license
+*/
+
+#analog_meter
+{
+	background-color: #CDDFEF;
+	border: 1px solid #FFFFFF;
+	padding: 3px;
+	border-radius: 9px; /* ((inner div height)/2) + padding */
+}
+
+div#analog_meter div
+{
+	background-color: #F58233;
+	width: 50%;
+	height: 12px;
+}
+
+div#analog_meter p
+{
+	color: #000000;
+	padding-top: 0px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#analog_meter > div
+{
+	border-radius: 6px;
+}

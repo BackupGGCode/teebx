@@ -1,0 +1,2763 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-13 18:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "%.0f KB"
+msgstr ""
+
+#, php-format
+msgid "%.2f GB"
+msgstr ""
+
+#, php-format
+msgid "%.2f MB"
+msgstr ""
+
+#, php-format
+msgid "%d bytes"
+msgstr ""
+
+msgid "25%"
+msgstr ""
+
+msgid "50%"
+msgstr ""
+
+msgid "75%"
+msgstr ""
+
+msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
+msgstr ""
+
+#, php-format
+msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
+msgstr ""
+
+msgid "A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'."
+msgstr ""
+
+msgid "A newer <strong>beta</strong> version of TeeBX is available!"
+msgstr ""
+
+msgid "A newer version of TeeBX is available!"
+msgstr ""
+
+msgid "A number must be specified to prepend to the incoming Caller ID number."
+msgstr ""
+
+msgid "A public IP address must be entered for this topology."
+msgstr ""
+
+msgid "A public hostname must be entered for this topology."
+msgstr ""
+
+msgid "A text must be specified to prepend to the incoming Caller ID name."
+msgstr ""
+
+msgid "A username must be specified."
+msgstr ""
+
+msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
+msgstr ""
+
+msgid "A valid IP address must be specified."
+msgstr ""
+
+msgid "A valid MAC address must be specified."
+msgstr ""
+
+msgid "A valid TCP/IP port must be specified for the webGUI port."
+msgstr ""
+
+msgid "A valid attended transfer timeout must be specified."
+msgstr ""
+
+msgid "A valid e-mail address must be specified for the \"from address\"."
+msgstr ""
+
+msgid "A valid e-mail address must be specified."
+msgstr ""
+
+msgid "A valid extension digit timeout must be specified."
+msgstr ""
+
+msgid "A valid extension must be entered."
+msgstr ""
+
+msgid "A valid gateway must be specified."
+msgstr ""
+
+msgid "A valid incoming Caller ID override must be specified (e.g. John Smith <12345>)."
+msgstr ""
+
+msgid "A valid key timeout must be specified."
+msgstr ""
+
+msgid "A valid outgoing Caller ID must be specified (e.g. John Smith <12345>)."
+msgstr ""
+
+msgid "A valid outgoing Caller ID number prefix must be specified."
+msgstr ""
+
+msgid "A valid park time must be specified."
+msgstr ""
+
+msgid "A valid parking extension must be specified."
+msgstr ""
+
+msgid "A valid parking start position must be specified."
+msgstr ""
+
+msgid "A valid parking stop position must be specified."
+msgstr ""
+
+msgid "A valid port must be specified."
+msgstr ""
+
+msgid "A valid public IP address must be entered for this topology."
+msgstr ""
+
+msgid "A valid public hostname must be entered for this topology."
+msgstr ""
+
+msgid "A valid subnet bit count must be specified."
+msgstr ""
+
+msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
+msgstr ""
+
+msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
+msgstr ""
+
+msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
+msgstr ""
+
+msgid "Access PIN"
+msgstr ""
+
+msgid "Accounts"
+msgstr ""
+
+msgid "Activate custom Music-On-Hold"
+msgstr ""
+
+msgid "Activate custom Voicemail greeting"
+msgstr ""
+
+msgid "Active Channels"
+msgstr ""
+
+msgid "Active Channels / Calls"
+msgstr ""
+
+msgid "Active Disks"
+msgstr ""
+
+msgid "Adding"
+msgstr ""
+
+msgid "Adelaide"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Advanced Options"
+msgstr ""
+
+msgid "Advanced Settings"
+msgstr ""
+
+msgid "Alaska Time"
+msgstr ""
+
+msgid "All Provider Ports"
+msgstr ""
+
+msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
+msgstr ""
+
+msgid "All information on this disk will be lost after clicking \"Format\"!"
+msgstr ""
+
+msgid "Amsterdam, Netherlands"
+msgstr ""
+
+msgid "An invalid dialstring was entered."
+msgstr ""
+
+msgid "An invalid port was entered."
+msgstr ""
+
+msgid "Analog"
+msgstr ""
+
+msgid "Analog Faxes"
+msgstr ""
+
+msgid "Analog Phones"
+msgstr ""
+
+msgid "Appended prefixes may only contain digits, '*' and '#'."
+msgstr ""
+
+msgid "Application"
+msgstr ""
+
+msgid "Application Logic"
+msgstr ""
+
+msgid "Applications"
+msgstr ""
+
+msgid "Are you sure you want to proceed?"
+msgstr ""
+
+msgid "Are you sure you want to reboot the system?"
+msgstr ""
+
+msgid "Argentina"
+msgstr ""
+
+msgid "Asia"
+msgstr ""
+
+msgid "Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX."
+msgstr ""
+
+msgid "Athens, Greece"
+msgstr ""
+
+msgid "Atlantic Time"
+msgstr ""
+
+msgid "Attended"
+msgstr ""
+
+msgid "Attended Transfer Answer"
+msgstr ""
+
+msgid "Auckland"
+msgstr ""
+
+msgid "Audio"
+msgstr ""
+
+msgid "Audio Prompts"
+msgstr ""
+
+msgid "Audio prompts will be played back in the selected language for this account."
+msgstr ""
+
+msgid "Australia"
+msgstr ""
+
+msgid "Austria"
+msgstr ""
+
+msgid "Authentication Method"
+msgstr ""
+
+msgid "Authentication Scheme"
+msgstr ""
+
+msgid "Authorization User"
+msgstr ""
+
+msgid "AutoScale"
+msgstr ""
+
+msgid "Backup configuration"
+msgstr ""
+
+msgid "Backup/Restore"
+msgstr ""
+
+msgid "Bahrain"
+msgstr ""
+
+msgid "Barcelona, Spain"
+msgstr ""
+
+msgid "Basic"
+msgstr ""
+
+msgid "Belgium"
+msgstr ""
+
+msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
+msgstr ""
+
+msgid "Berlin, Germany"
+msgstr ""
+
+msgid "Binding Port"
+msgstr ""
+
+msgid "Blind"
+msgstr ""
+
+msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
+msgstr ""
+
+msgid "Block Providers"
+msgstr ""
+
+msgid "Block access to the providers selected above."
+msgstr ""
+
+msgid "Body"
+msgstr ""
+
+msgid "Brackets are not needed for less than 2 characters."
+msgstr ""
+
+msgid "Brazil"
+msgstr ""
+
+msgid "Brazil, São Paulo"
+msgstr ""
+
+msgid "Brisbane"
+msgstr ""
+
+msgid "Brussels, Belgium"
+msgstr ""
+
+msgid "Budapest, Hungary"
+msgstr ""
+
+msgid "Bulgaria"
+msgstr ""
+
+msgid "Bulgarian"
+msgstr ""
+
+msgid "Bulgarian (formal)"
+msgstr ""
+
+msgid "CPU Load"
+msgstr ""
+
+msgid "Call Groups"
+msgstr ""
+
+msgid "Call Notifications & Voicemail"
+msgstr ""
+
+msgid "Call Parking"
+msgstr ""
+
+msgid "Call Routing"
+msgstr ""
+
+msgid "Caller ID"
+msgstr ""
+
+msgid "Caller ID / Name"
+msgstr ""
+
+msgid "Caller ID Options"
+msgstr ""
+
+msgid "Calls"
+msgstr ""
+
+msgid "Calls Processed"
+msgstr ""
+
+msgid "Canada"
+msgstr ""
+
+msgid "Canberra"
+msgstr ""
+
+msgid "Cannot get CPU load"
+msgstr ""
+
+msgid "Card"
+msgstr ""
+
+msgid "Central America"
+msgstr ""
+
+msgid "Central Time"
+msgstr ""
+
+msgid "Central and South America"
+msgstr ""
+
+msgid "Changes to this option will take effect after a reboot."
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "Channels"
+msgstr ""
+
+msgid "Check automatically for new updates."
+msgstr ""
+
+msgid "Chile"
+msgstr ""
+
+msgid "China"
+msgstr ""
+
+#, php-format
+msgid "Choose the new firmware image file (%s-*.img) to be installed."
+msgstr ""
+
+msgid "Clear"
+msgstr ""
+
+msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
+msgstr ""
+
+msgid "Click this button to download the system configuration in XML format."
+msgstr ""
+
+msgid "Codecs"
+msgstr ""
+
+msgid "Collecting initial data, please wait..."
+msgstr ""
+
+msgid "Colombia"
+msgstr ""
+
+msgid "Command"
+msgstr ""
+
+msgid "Command:"
+msgstr ""
+
+msgid "Completely override the generated registration string with a manually defined one."
+msgstr ""
+
+msgid "Conference"
+msgstr ""
+
+msgid "Conference Rooms"
+msgstr ""
+
+msgid "Conference number already exists."
+msgstr ""
+
+msgid "Conference number matches an existing extension."
+msgstr ""
+
+msgid "Conference pins must be numeric."
+msgstr ""
+
+msgid "Conference room numbers must be numeric."
+msgstr ""
+
+msgid "Conferences"
+msgstr ""
+
+msgid "Conferencing"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "Connection Initialization"
+msgstr ""
+
+msgid "Connectivity"
+msgstr ""
+
+msgid "Console menu"
+msgstr ""
+
+msgid "Copenhagen, Denmark"
+msgstr ""
+
+msgid "Croatia"
+msgstr ""
+
+msgid "Custom Applications"
+msgstr ""
+
+msgid "Custom Music-on-Hold"
+msgstr ""
+
+msgid "Cyprus"
+msgstr ""
+
+msgid "Czech"
+msgstr ""
+
+msgid "Czech (formal)"
+msgstr ""
+
+msgid "Czech Republic"
+msgstr ""
+
+msgid "DNS Servers"
+msgstr ""
+
+msgid "DNS Service Records"
+msgstr ""
+
+msgid "DO NOT abort the firmware upgrade once it has started."
+msgstr ""
+
+msgid "DTMF Mode"
+msgstr ""
+
+msgid "Danish"
+msgstr ""
+
+msgid "Danish (formal)"
+msgstr ""
+
+msgid "Darwin"
+msgstr ""
+
+msgid "Default values are 60, 3600 and 120 respectively."
+msgstr ""
+
+#, php-format
+msgid "Defaults to the e-mail address used in the %s setup."
+msgstr ""
+
+msgid "Denmark"
+msgstr ""
+
+msgid "Deny Network"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Descriptive name for this provider."
+msgstr ""
+
+msgid "Device"
+msgstr ""
+
+msgid "Dialing Pattern(s)"
+msgstr ""
+
+msgid "Dialplan"
+msgstr ""
+
+msgid "Dialplan Element Library"
+msgstr ""
+
+msgid "Dialstring"
+msgstr ""
+
+msgid "Disable DNS SRV lookups."
+msgstr ""
+
+msgid "Disable console menu"
+msgstr ""
+
+msgid "Disable overrides"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Disk Device"
+msgstr ""
+
+msgid "Do not register with this provider."
+msgstr ""
+
+msgid "Do you really want to delete this application mapping?"
+msgstr ""
+
+msgid "Do you really want to delete this application?"
+msgstr ""
+
+msgid "Do you really want to delete this call group?"
+msgstr ""
+
+msgid "Do you really want to delete this conference room?"
+msgstr ""
+
+msgid "Do you really want to delete this fax?"
+msgstr ""
+
+msgid "Do you really want to delete this manager user?"
+msgstr ""
+
+msgid "Do you really want to delete this phone?"
+msgstr ""
+
+msgid "Do you really want to delete this port group's settings?"
+msgstr ""
+
+msgid "Do you really want to delete this provider?"
+msgstr ""
+
+msgid "Do you really want to disable this fax?"
+msgstr ""
+
+msgid "Do you really want to disable this phone?"
+msgstr ""
+
+msgid "Do you really want to disable this provider?"
+msgstr ""
+
+msgid "Do you really want to forget this disk?"
+msgstr ""
+
+msgid "Do you really want to forget this gateway's settings?"
+msgstr ""
+
+msgid "Do you really want to forget this port\\'s settings?"
+msgstr ""
+
+msgid "Do you really want to kick this member?"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Download configuration"
+msgstr ""
+
+msgid "Download:"
+msgstr ""
+
+msgid "Dublin, Ireland"
+msgstr ""
+
+msgid "Dutch"
+msgstr ""
+
+msgid "Dutch (formal)"
+msgstr ""
+
+msgid "Dynamic DNS Client"
+msgstr ""
+
+msgid "E-Mail"
+msgstr ""
+
+msgid "E-Mail notifications enabled but the e-mail address is invalid or missing."
+msgstr ""
+
+msgid "E-mail Address"
+msgstr ""
+
+msgid "E-mail Me"
+msgstr ""
+
+msgid "E-mail has been sent successfully."
+msgstr ""
+
+msgid "E-mail notifications for new voicemail will be delivered in this language."
+msgstr ""
+
+msgid "E-mail was not sent, check your settings."
+msgstr ""
+
+msgid "ERR Could not install configuration.\n"
+msgstr ""
+
+msgid "ERR Could not save configuration.\n"
+msgstr ""
+
+msgid "ERR Invalid configuration received.\n"
+msgstr ""
+
+#, php-format
+msgid "ERROR: the changes could not be applied (error code %s)."
+msgstr ""
+
+msgid "Eastern Time"
+msgstr ""
+
+msgid "Echo Cancellation"
+msgstr ""
+
+msgid "Echos audio and video back to the caller as soon as it is received. Used to test connection delay."
+msgstr ""
+
+msgid "Ecuador"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+#, php-format
+msgid "Edit Analog %s Port"
+msgstr ""
+
+msgid "Edit Analog Fax"
+msgstr ""
+
+msgid "Edit Analog Phone"
+msgstr ""
+
+msgid "Edit Analog Provider"
+msgstr ""
+
+msgid "Edit Application"
+msgstr ""
+
+msgid "Edit External Phone"
+msgstr ""
+
+msgid "Edit IAX Phone"
+msgstr ""
+
+msgid "Edit IAX Provider"
+msgstr ""
+
+#, php-format
+msgid "Edit ISDN %s Port"
+msgstr ""
+
+msgid "Edit ISDN Phone"
+msgstr ""
+
+msgid "Edit ISDN Provider"
+msgstr ""
+
+msgid "Edit Provider Group"
+msgstr ""
+
+msgid "Edit Redfone Gateway"
+msgstr ""
+
+msgid "Edit Room"
+msgstr ""
+
+msgid "Edit SIP Phone"
+msgstr ""
+
+msgid "Edit SIP Provider"
+msgstr ""
+
+msgid "Edit Skinny Phone"
+msgstr ""
+
+msgid "Edit Storage Disk"
+msgstr ""
+
+msgid "Edit User"
+msgstr ""
+
+msgid "Egypt"
+msgstr ""
+
+msgid "El Salvador"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Enable Jitterbuffer on IAX connections terminated by the system."
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Encoding"
+msgstr ""
+
+msgid "Encryption Method"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "English (UK)"
+msgstr ""
+
+msgid "English (US)"
+msgstr ""
+
+msgid "English (formal)"
+msgstr ""
+
+msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP)."
+msgstr ""
+
+msgid "Enter a descriptive name for this disk."
+msgstr ""
+
+msgid "Enter a descriptive name for this gateway."
+msgstr ""
+
+msgid "Enter a descriptive name for this port."
+msgstr ""
+
+msgid "Enter a descriptive name for this span."
+msgstr ""
+
+msgid ""
+"Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
+" <ul>\n"
+" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+" \t<li><strong>.</strong> - matches one or more characters</li>\n"
+" \t<li><strong>!</strong> - matches zero or more characters</li>\n"
+" </ul>\n"
+msgstr ""
+
+msgid "Enter a server to synchronize with."
+msgstr ""
+
+msgid ""
+"Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
+" 2,Echo()\n"
+" 3,Hangup()\n"
+" </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
+msgstr ""
+
+msgid ""
+"Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
+" <ul>\n"
+" \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
+" \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
+" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+" \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
+" \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
+" </ul>\n"
+msgstr ""
+
+msgid "Enter the full path where this device should be mounted."
+msgstr ""
+
+msgid "Estonia"
+msgstr ""
+
+msgid "Europe"
+msgstr ""
+
+msgid "Execute"
+msgstr ""
+
+msgid "Extension"
+msgstr ""
+
+msgid "Extension Digit"
+msgstr ""
+
+msgid "External"
+msgstr ""
+
+msgid "External Phones"
+msgstr ""
+
+msgid "Factory Defaults"
+msgstr ""
+
+msgid "Failover Provider"
+msgstr ""
+
+msgid "Faxes"
+msgstr ""
+
+msgid "Filename"
+msgstr ""
+
+msgid "Finland"
+msgstr ""
+
+msgid "Finnish"
+msgstr ""
+
+msgid "Finnish (formal)"
+msgstr ""
+
+msgid "Firmware"
+msgstr ""
+
+msgid "Firmware Version"
+msgstr ""
+
+msgid "Firmware image file:"
+msgstr ""
+
+msgid "Firmware uploading is not supported on this platform."
+msgstr ""
+
+msgid "Force"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Format & Initialize"
+msgstr ""
+
+msgid "Formatting failed! (returned "
+msgstr ""
+
+msgid "Formatting successful!"
+msgstr ""
+
+msgid "Framing"
+msgstr ""
+
+msgid "France"
+msgstr ""
+
+msgid "French"
+msgstr ""
+
+msgid "French (Canada)"
+msgstr ""
+
+msgid "French (formal)"
+msgstr ""
+
+msgid "From Address"
+msgstr ""
+
+msgid "From Domain"
+msgstr ""
+
+msgid "From User"
+msgstr ""
+
+msgid "Functions"
+msgstr ""
+
+msgid "GUI Options"
+msgstr ""
+
+msgid "Gateway"
+msgstr ""
+
+msgid "Gateway Name"
+msgstr ""
+
+msgid "Gateways"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "General Settings"
+msgstr ""
+
+msgid "General Setup"
+msgstr ""
+
+msgid "Generates a constant 1000Hz tone. Used to test connection quality."
+msgstr ""
+
+msgid "Geneva, Switzerland"
+msgstr ""
+
+msgid "German"
+msgstr ""
+
+msgid "German (formal)"
+msgstr ""
+
+msgid "Germany"
+msgstr ""
+
+msgid "Graph shows last"
+msgstr ""
+
+msgid "Greece"
+msgstr ""
+
+msgid "Greek"
+msgstr ""
+
+msgid "Greek (formal)"
+msgstr ""
+
+msgid "Ground Start"
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+msgid "Group Members"
+msgstr ""
+
+msgid "Group name"
+msgstr ""
+
+msgid "Guam"
+msgstr ""
+
+msgid "Hardware Port"
+msgstr ""
+
+msgid "Hawaii Time"
+msgstr ""
+
+msgid "Helsinki, Finland"
+msgstr ""
+
+msgid "Hide Analog related options"
+msgstr ""
+
+msgid "Hide IAX related options"
+msgstr ""
+
+msgid "Hide ISDN related options"
+msgstr ""
+
+msgid "Hide SIP related options"
+msgstr ""
+
+msgid "Hobart"
+msgstr ""
+
+msgid "Hong Kong"
+msgstr ""
+
+msgid "Host"
+msgstr ""
+
+msgid "Hostname"
+msgstr ""
+
+msgid "Hostname of the PBX."
+msgstr ""
+
+msgid "Hostname,Domain,Username"
+msgstr ""
+
+msgid "Hot Keys"
+msgstr ""
+
+msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
+msgstr ""
+
+msgid "Hungary"
+msgstr ""
+
+msgid "I know, thanks for the warning."
+msgstr ""
+
+msgid "IAX"
+msgstr ""
+
+msgid "IAX Phones"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "IP Addresses"
+msgstr ""
+
+msgid "ISDN"
+msgstr ""
+
+msgid "ISDN Phones"
+msgstr ""
+
+msgid "Iceland"
+msgstr ""
+
+msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
+msgstr ""
+
+msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
+msgstr ""
+
+#, php-format
+msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
+msgstr ""
+
+msgid "If you want to change the password for accessing the webGUI, enter it here twice."
+msgstr ""
+
+msgid "If you want to change the username for accessing the webGUI, enter it here."
+msgstr ""
+
+msgid "Image upload failed (out of memory?)"
+msgstr ""
+
+msgid "In"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Incoming Extensions"
+msgstr ""
+
+msgid "Incoming Faxes"
+msgstr ""
+
+msgid "Incoming Modification"
+msgstr ""
+
+msgid "India"
+msgstr ""
+
+msgid "Indication Tones"
+msgstr ""
+
+msgid "Individual Ports"
+msgstr ""
+
+msgid "Indonesia"
+msgstr ""
+
+msgid "Initial connection failed!"
+msgstr ""
+
+msgid "Initial connection successful!"
+msgstr ""
+
+msgid "Interface"
+msgstr ""
+
+msgid "Internal Phones"
+msgstr ""
+
+msgid "Internal extension used to reach this application."
+msgstr ""
+
+msgid "Internal extension used to reach this call group."
+msgstr ""
+
+msgid "International Prefix"
+msgstr ""
+
+msgid "Invalid extension number. Use only numerals."
+msgstr ""
+
+msgid "Invalid public access alias."
+msgstr ""
+
+msgid "Ireland"
+msgstr ""
+
+msgid "Is there a NATing device between the PBX and this account?"
+msgstr ""
+
+msgid "Israel"
+msgstr ""
+
+msgid "It contains an doubled \"+\" character, only one is allowed."
+msgstr ""
+
+msgid "It contains an doubled \"-\" character, only one is allowed."
+msgstr ""
+
+msgid "It contains an doubled \"|\" character, only one is allowed."
+msgstr ""
+
+msgid "It contains an invalid character"
+msgstr ""
+
+msgid "Italian"
+msgstr ""
+
+msgid "Italian (formal)"
+msgstr ""
+
+msgid "Italy"
+msgstr ""
+
+msgid "Jakarta"
+msgstr ""
+
+msgid "Japan"
+msgstr ""
+
+msgid "Japanese"
+msgstr ""
+
+msgid "Japanese (formal)"
+msgstr ""
+
+msgid "Jitterbuffer"
+msgstr ""
+
+msgid "Jordan"
+msgstr ""
+
+msgid "Kazakhstan"
+msgstr ""
+
+msgid "Keep advanced options in navigation expanded"
+msgstr ""
+
+msgid "Kernel"
+msgstr ""
+
+msgid "Kewl Start"
+msgstr ""
+
+msgid "Kiev, Ukraine"
+msgstr ""
+
+msgid "Kuwait"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Last Config Change"
+msgstr ""
+
+msgid "Last upload"
+msgstr ""
+
+msgid "Latvia"
+msgstr ""
+
+msgid "Lebanon"
+msgstr ""
+
+msgid "Lisbon, Portugal"
+msgstr ""
+
+msgid "Lithuania"
+msgstr ""
+
+msgid "Loaded"
+msgstr ""
+
+msgid "Local Area Network"
+msgstr ""
+
+msgid "Local Interface"
+msgstr ""
+
+msgid "Local Prefix"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Logic"
+msgstr ""
+
+msgid "Logs"
+msgstr ""
+
+msgid "London, Great Britain"
+msgstr ""
+
+msgid "Loop Start"
+msgstr ""
+
+msgid "Luxembourg"
+msgstr ""
+
+msgid "MAC Address"
+msgstr ""
+
+msgid "Macao"
+msgstr ""
+
+msgid "Madrid, Spain"
+msgstr ""
+
+msgid "Malaysia"
+msgstr ""
+
+msgid "Malta"
+msgstr ""
+
+msgid "Manager"
+msgstr ""
+
+msgid "Manager Interface"
+msgstr ""
+
+#, php-format
+msgid "Manual Attribute line number %s is invalid."
+msgstr ""
+
+msgid "Manual Attributes"
+msgstr ""
+
+msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
+msgstr ""
+
+msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
+msgstr ""
+
+msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
+msgstr ""
+
+msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
+msgstr ""
+
+msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "Melbourne"
+msgstr ""
+
+msgid "Member"
+msgstr ""
+
+#, php-format
+msgid "Member %s has been kicked from conference %s."
+msgstr ""
+
+msgid "Members"
+msgstr ""
+
+msgid "Memory Usage"
+msgstr ""
+
+msgid "Mexico"
+msgstr ""
+
+msgid "Miscellaneous"
+msgstr ""
+
+msgid "Missing caller id."
+msgstr ""
+
+msgid "Missing dialstring."
+msgstr ""
+
+msgid "Missing extension number."
+msgstr ""
+
+msgid "Missing password."
+msgstr ""
+
+msgid "Morocco"
+msgstr ""
+
+msgid "Moscow, Russia"
+msgstr ""
+
+msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
+msgstr ""
+
+msgid "Mount Point"
+msgstr ""
+
+msgid "Mountain Time"
+msgstr ""
+
+msgid "Mountain Time (Arizona, no DST)"
+msgstr ""
+
+msgid "Music-on-Hold"
+msgstr ""
+
+msgid "My Router"
+msgstr ""
+
+msgid "NAT"
+msgstr ""
+
+msgid "NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below."
+msgstr ""
+
+msgid "NAT + Static Public IP: this PBX is behind a NAT which has a static public IP. Enter this IP below."
+msgstr ""
+
+msgid "NAT + dynamic public IP"
+msgstr ""
+
+msgid "NAT + static public IP"
+msgstr ""
+
+msgid "NTP Server"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "National Prefix"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Nested square brackets are not allowed."
+msgstr ""
+
+msgid "Netherlands"
+msgstr ""
+
+msgid "Network"
+msgstr ""
+
+msgid "Network Traffic"
+msgstr ""
+
+msgid "Networking"
+msgstr ""
+
+msgid "New Application"
+msgstr ""
+
+msgid "New Zealand"
+msgstr ""
+
+msgid "Newfoundland Time"
+msgstr ""
+
+msgid "Nigeria"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No additional storage devices were detected."
+msgstr ""
+
+msgid "No compatible analog ports were detected."
+msgstr ""
+
+msgid "No compatible isdn ports were detected."
+msgstr ""
+
+msgid "No last upload."
+msgstr ""
+
+msgid "No other Providers for failover."
+msgstr ""
+
+msgid "No ports assigned."
+msgstr ""
+
+msgid "Non-Members"
+msgstr ""
+
+msgid "Norway"
+msgstr ""
+
+msgid "Note:"
+msgstr ""
+
+msgid "Notes"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Number"
+msgstr ""
+
+msgid "Number or string to be dialed to reach this telephone."
+msgstr ""
+
+msgid "OK\n"
+msgstr ""
+
+msgid "Oman"
+msgstr ""
+
+msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
+msgstr ""
+
+msgid "Optional PIN needed to access this conference room."
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Oslo, Norway"
+msgstr ""
+
+msgid "Out"
+msgstr ""
+
+msgid "Outgoing Calls Only"
+msgstr ""
+
+msgid "Outgoing Patterns"
+msgstr ""
+
+msgid "Outgoing Presentation"
+msgstr ""
+
+msgid "Outgoing provider or protocol used to reach this telephone."
+msgstr ""
+
+msgid "PHP parsing error"
+msgstr ""
+
+msgid "Pacific Time"
+msgstr ""
+
+msgid "Package activated successfully."
+msgstr ""
+
+msgid "Package deactivated successfully."
+msgstr ""
+
+msgid "Package deleted successfully."
+msgstr ""
+
+msgid "Package installed successfully."
+msgstr ""
+
+msgid "Package restored successfully."
+msgstr ""
+
+msgid "Packages"
+msgstr ""
+
+msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
+msgstr ""
+
+msgid "Pakistan"
+msgstr ""
+
+msgid "Paris, France"
+msgstr ""
+
+msgid "Park Extension"
+msgstr ""
+
+msgid "Park Time"
+msgstr ""
+
+msgid "Parking Range"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Pattern(s)"
+msgstr ""
+
+msgid "Pbx"
+msgstr ""
+
+msgid "Permissions"
+msgstr ""
+
+msgid "Permit Network"
+msgstr ""
+
+msgid "Persistence"
+msgstr ""
+
+msgid "Perth"
+msgstr ""
+
+msgid "Peru"
+msgstr ""
+
+msgid "Philippines"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Phone Connectivity"
+msgstr ""
+
+msgid "Phones"
+msgstr ""
+
+msgid "Pin"
+msgstr ""
+
+msgid "Point-to-Multipoint (PTMP)"
+msgstr ""
+
+msgid "Point-to-Point (PTP)"
+msgstr ""
+
+msgid "Poland"
+msgstr ""
+
+msgid "Polish"
+msgstr ""
+
+msgid "Polish (formal)"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "Ports"
+msgstr ""
+
+msgid "Ports impedance"
+msgstr ""
+
+msgid "Portugal"
+msgstr ""
+
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+msgid "Portuguese, Brazil"
+msgstr ""
+
+msgid "Portuguese, Brazil (formal)"
+msgstr ""
+
+msgid "Prague, Czech Republic"
+msgstr ""
+
+msgid "Prepend Caller ID name with text above"
+msgstr ""
+
+msgid "Prepend Caller ID number with number above"
+msgstr ""
+
+msgid "Previously Used Disks"
+msgstr ""
+
+msgid "Printable Dialplan"
+msgstr ""
+
+msgid "Private Prefix"
+msgstr ""
+
+msgid "Private RSA Key"
+msgstr ""
+
+msgid "Provider"
+msgstr ""
+
+msgid "Provider Port Groups"
+msgstr ""
+
+msgid "Provider host URL or IP address and optional port."
+msgstr ""
+
+msgid "Providers"
+msgstr ""
+
+msgid "Public Access"
+msgstr ""
+
+msgid "Public Hostname"
+msgstr ""
+
+msgid "Public IP Address: this PBX has a routable IP address (entered above)"
+msgstr ""
+
+msgid "Public IP address"
+msgstr ""
+
+msgid "Public Number"
+msgstr ""
+
+msgid "Public RSA Key"
+msgstr ""
+
+msgid "Qualify"
+msgstr ""
+
+msgid "RSA Keys"
+msgstr ""
+
+msgid "RTP"
+msgstr ""
+
+msgid "RTP Port Range"
+msgstr ""
+
+msgid "Read"
+msgstr ""
+
+msgid "Reboot"
+msgstr ""
+
+msgid "Redfone"
+msgstr ""
+
+msgid "Regional Settings"
+msgstr ""
+
+msgid "Registration"
+msgstr ""
+
+msgid "Registration Expiration Timeouts"
+msgstr ""
+
+msgid "Remote IP"
+msgstr ""
+
+msgid "Remote Interface"
+msgstr ""
+
+msgid "Remote MAC"
+msgstr ""
+
+msgid "Replace Caller ID name with Caller ID number"
+msgstr ""
+
+msgid "Replace Caller ID with text above"
+msgstr ""
+
+msgid "Restore configuration"
+msgstr ""
+
+msgid "Resuming updates"
+msgstr ""
+
+msgid "Ring Length"
+msgstr ""
+
+msgid "Romania"
+msgstr ""
+
+msgid "Rome, Italy"
+msgstr ""
+
+msgid "Room Number"
+msgstr ""
+
+msgid "Russia"
+msgstr ""
+
+msgid "Russia / ex Soviet Union"
+msgstr ""
+
+msgid "Russian"
+msgstr ""
+
+msgid "Russian (formal)"
+msgstr ""
+
+msgid "Russian Federation / Former Soviet Union"
+msgstr ""
+
+msgid "SIP"
+msgstr ""
+
+msgid "SIP Phones"
+msgstr ""
+
+msgid "SIP protocol configuration"
+msgstr ""
+
+msgid "SMTP Client Setup"
+msgstr ""
+
+msgid "SMTP host URL or IP address and optional port."
+msgstr ""
+
+msgid "Saudi Arabia"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Secret"
+msgstr ""
+
+msgid "Security"
+msgstr ""
+
+msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
+msgstr ""
+
+msgid "Select how often the time should be synchronized."
+msgstr ""
+
+msgid "Select in which language you want the webGUI to be displayed."
+msgstr ""
+
+msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
+msgstr ""
+
+msgid "Select the location closest to you."
+msgstr ""
+
+msgid "Select which country's indication tones (the ringing, busy and error tones) to be used."
+msgstr ""
+
+msgid "Select which disk you would like to format."
+msgstr ""
+
+msgid "Select which ethernet port on the gateway this system is connected to."
+msgstr ""
+
+msgid "Select which ethernet port on this system the gateway is connected to."
+msgstr ""
+
+msgid "Send all incoming faxes here."
+msgstr ""
+
+msgid "Service"
+msgstr ""
+
+msgid "Service Type"
+msgstr ""
+
+msgid "Services"
+msgstr ""
+
+msgid "Set a friendlier alias above if you would like to use a word or name instead of the extension number."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Signaling"
+msgstr ""
+
+msgid "Singapore"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Skinny"
+msgstr ""
+
+msgid "Slovakia"
+msgstr ""
+
+msgid "Slovenia"
+msgstr ""
+
+msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
+msgstr ""
+
+msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
+msgstr ""
+
+msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
+msgstr ""
+
+msgid "South Africa"
+msgstr ""
+
+msgid "South Korea"
+msgstr ""
+
+msgid "Spain"
+msgstr ""
+
+msgid "Span"
+msgstr ""
+
+msgid "Span Count"
+msgstr ""
+
+msgid "Spanish (Spain)"
+msgstr ""
+
+msgid "Spanish (formal)"
+msgstr ""
+
+msgid "Spans"
+msgstr ""
+
+msgid "Start Signaling"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Static Public IP"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Stockholm, Sweden"
+msgstr ""
+
+msgid "Stopped updates"
+msgstr ""
+
+msgid "Storage"
+msgstr ""
+
+msgid "Storage Disk"
+msgstr ""
+
+msgid "Storage Services"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+#, php-format
+msgid "Successfully installed %s formatted prompts for %s."
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Supported file formats"
+msgstr ""
+
+msgid "Sweden"
+msgstr ""
+
+msgid "Swedish"
+msgstr ""
+
+msgid "Switch to bytes/s"
+msgstr ""
+
+msgid "Switzerland"
+msgstr ""
+
+msgid "Sydney"
+msgstr ""
+
+msgid "Syria"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "System log entries"
+msgstr ""
+
+msgid "Taiwan"
+msgstr ""
+
+msgid "Tallinn, Estonia"
+msgstr ""
+
+msgid "TeeBX Test E-mail"
+msgstr ""
+
+#, php-format
+msgid "TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"
+msgstr ""
+
+msgid "TeeBX&reg; &copy; 2010-2011 Giovanni Vallesi. All rights reserved."
+msgstr ""
+
+msgid "TeeBX: execute command"
+msgstr ""
+
+msgid "Telephone number assigned to this line."
+msgstr ""
+
+msgid "Telephony Ports"
+msgstr ""
+
+msgid "Test E-mail"
+msgstr ""
+
+msgid "Text to be displayed for Caller ID."
+msgstr ""
+
+msgid "Thailand"
+msgstr ""
+
+#, php-format
+msgid "The %s field is required."
+msgstr ""
+
+#, php-format
+msgid "The %s field must be numeric."
+msgstr ""
+
+msgid "The IP address of the foneBRIDGE2 network interface."
+msgstr ""
+
+msgid "The MAC address of this phone."
+msgstr ""
+
+msgid "The PBX will reboot after restoring the configuration."
+msgstr ""
+
+msgid "The audio file could not be uploaded. (file upload error)."
+msgstr ""
+
+msgid "The audio file could not be uploaded. (filetype error)"
+msgstr ""
+
+msgid "The changes have been applied successfully."
+msgstr ""
+
+msgid "The changes have been applied successfully. No upload file found but there was an old custom Music-on-Hold file."
+msgstr ""
+
+msgid "The changes have been applied successfully. No upload file found but there was an old custom voicemail greeting file."
+msgstr ""
+
+msgid "The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect."
+msgstr ""
+
+msgid "The conference room's number, also the extension that this conference is reachable at."
+msgstr ""
+
+msgid "The configuration could not be restored (file upload error)."
+msgstr ""
+
+msgid "The configuration could not be restored."
+msgstr ""
+
+msgid "The configuration has been restored. The PBX is now rebooting."
+msgstr ""
+
+msgid "The digital signature on this image is invalid."
+msgstr ""
+
+msgid "The domain may only contain the characters a-z, 0-9, '-' and '.'."
+msgstr ""
+
+msgid "The dynamic DNS username contains invalid characters."
+msgstr ""
+
+msgid "The echo canceller window size. If your calls have echo, try increasing this window."
+msgstr ""
+
+msgid "The end parking position must be larger than the start position."
+msgstr ""
+
+#, php-format
+msgid "The field '%s' contains invalid characters."
+msgstr ""
+
+#, php-format
+msgid "The field '%s' is required."
+msgstr ""
+
+msgid "The filetype could not be recognized (file upload error)."
+msgstr ""
+
+msgid "The firmware is now being installed. The PBX will reboot automatically."
+msgstr ""
+
+msgid "The following input errors were detected:"
+msgstr ""
+
+msgid "The following variables can be used in the e-mail notification"
+msgstr ""
+
+msgid "The hardware port this phone is connected to."
+msgstr ""
+
+msgid "The high RTP port must be greater than the low RTP port."
+msgstr ""
+
+msgid "The hostname may only contain the characters a-z, 0-9 and '-'."
+msgstr ""
+
+msgid "The image file is corrupt."
+msgstr ""
+
+#, php-format
+msgid "The incoming extension pattern \"%s\" is invalid. %s"
+msgstr ""
+
+msgid "The internal number used to dial this phone."
+msgstr ""
+
+msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
+msgstr ""
+
+msgid "The number of seconds this phone will ring before giving up or going to voicemail."
+msgstr ""
+
+msgid "The number used to dial this application."
+msgstr ""
+
+msgid "The number used to dial this fax."
+msgstr ""
+
+msgid "The number used to dial this phone."
+msgstr ""
+
+#, php-format
+msgid "The outgoing dial-pattern \"%s\" is invalid. %s"
+msgstr ""
+
+msgid "The passwords do not match."
+msgstr ""
+
+msgid "The port range which RTP streams should use. (default:"
+msgstr ""
+
+msgid "The prefix used when dialing international numbers (usually 00)"
+msgstr ""
+
+msgid "The prefix used when dialing numbers within your city (i.e. 0711)"
+msgstr ""
+
+msgid "The prefix used when dialing numbers within your company (i.e. 07115678)"
+msgstr ""
+
+msgid "The prefix used when dialing numbers within your country (usually 0)"
+msgstr ""
+
+msgid "The provider will be contacted this often to check its availability."
+msgstr ""
+
+msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
+msgstr ""
+
+msgid "The system is rebooting now. This may take a minute."
+msgstr ""
+
+#, php-format
+msgid "The uploaded image file is not for this platform (%s)."
+msgstr ""
+
+msgid "The username may only contain the characters a-z, A-Z and 0-9."
+msgstr ""
+
+msgid "The username of \"admin\" is already used internally by the system."
+msgstr ""
+
+msgid "The wildcard character \"!\" is not allowed before a prefix which is to be removed."
+msgstr ""
+
+msgid "The wildcard character \".\" is not allowed before a prefix which is to be removed."
+msgstr ""
+
+msgid "There are currently no active channels."
+msgstr ""
+
+msgid "There are currently no active conferences."
+msgstr ""
+
+msgid "There has been an error verifying the signature on this image."
+msgstr ""
+
+#, php-format
+msgid "There is an update for your version of TeeBX available: %s<br>Download it at <a target='_blank' href='http://www.teebx.org/software'>www.teebx.org/software</a>"
+msgstr ""
+
+msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
+msgstr ""
+
+msgid "This PBX"
+msgstr ""
+
+msgid "This account's password."
+msgstr ""
+
+msgid "This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank"
+msgstr ""
+
+msgid "This image is not digitally signed."
+msgstr ""
+
+msgid "This information should be updated by:"
+msgstr ""
+
+msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
+msgstr ""
+
+msgid "This key combination activates a blind transfer (default ##)."
+msgstr ""
+
+msgid "This key combination activates an attended transfer (default **)."
+msgstr ""
+
+msgid "This range of extensions is where parked calls reside (default 701-720)."
+msgstr ""
+
+msgid "This will be shown as voicemail service's sending address."
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Time Synchronization"
+msgstr ""
+
+msgid "Time zone"
+msgstr ""
+
+msgid "Timeouts"
+msgstr ""
+
+msgid "Toggle auto-updates"
+msgstr ""
+
+msgid "Tokyo, Japan"
+msgstr ""
+
+msgid "Tone Zones"
+msgstr ""
+
+msgid "Topology"
+msgstr ""
+
+msgid "Transfer Key"
+msgstr ""
+
+msgid "Transfers"
+msgstr ""
+
+msgid "Turkish"
+msgstr ""
+
+msgid "Turkish (formal)"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
+msgstr ""
+
+msgid "USA & Canada"
+msgstr ""
+
+msgid "UTC"
+msgstr ""
+
+msgid "Ulaanbaatar, Mongolia"
+msgstr ""
+
+msgid "United Arab Emirates"
+msgstr ""
+
+msgid "United Kingdom"
+msgstr ""
+
+msgid "United States"
+msgstr ""
+
+msgid "United States / North America"
+msgstr ""
+
+msgid "United States Circa 1950/ North America"
+msgstr ""
+
+msgid "Unmatched square bracket."
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Update Interval"
+msgstr ""
+
+msgid "Updates"
+msgstr ""
+
+msgid "Upgrade firmware"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Upload:"
+msgstr ""
+
+msgid "Uptime"
+msgstr ""
+
+msgid "Use Jitterbuffer even when bridging two endpoints."
+msgstr ""
+
+msgid "Use this number as your username."
+msgstr ""
+
+msgid "User defined e-mail text"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Venezuela / South America"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Video"
+msgstr ""
+
+msgid "Voice Prompts"
+msgstr ""
+
+msgid "Voicemail"
+msgstr ""
+
+msgid "Voicemail Greeting"
+msgstr ""
+
+msgid "Voicemail to E-Mail Presentation"
+msgstr ""
+
+msgid "Voicemail to e-mail enabled but the e-mail address is invalid or missing."
+msgstr ""
+
+msgid "Volume"
+msgstr ""
+
+msgid "Wake-Up call manager. Call to set and cancel wake-up calls on the current extension."
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid "Warning:"
+msgstr ""
+
+msgid "Wellington"
+msgstr ""
+
+msgid "Write"
+msgstr ""
+
+#, php-format
+msgid "XML error: %s"
+msgstr ""
+
+msgid "Yemen"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "Yes, alias \"*.hostname.domain\" to hostname specified above."
+msgstr ""
+
+msgid "You are using the most recent <strong>beta</strong> of TeeBX."
+msgstr ""
+
+msgid "You are using the most recent version of TeeBX."
+msgstr ""
+
+msgid "You may enter a description here for your reference (not parsed)."
+msgstr ""
+
+msgid "You must reboot the system before you can upgrade the firmware."
+msgstr ""
+
+msgid "Your Name &lt;number&gt;"
+msgstr ""
+
+msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
+msgstr ""
+
+msgid "access the webGUI with the new IP address"
+msgstr ""
+
+msgid "activate disk"
+msgstr ""
+
+msgid "active"
+msgstr ""
+
+msgid "add application mapping"
+msgstr ""
+
+msgid "add call group"
+msgstr ""
+
+msgid "add conference room"
+msgstr ""
+
+msgid "add disk"
+msgstr ""
+
+msgid "add gateway"
+msgstr ""
+
+msgid "add incoming extension mapping"
+msgstr ""
+
+msgid "add manager user"
+msgstr ""
+
+msgid "add port group"
+msgstr ""
+
+msgid "add set"
+msgstr ""
+
+msgid "address"
+msgstr ""
+
+msgid "after you click &quot;Save&quot;, all current calls will be dropped."
+msgstr ""
+
+msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+msgstr ""
+
+msgid "alias"
+msgstr ""
+
+msgid "allow this number to be reachable over the Internet"
+msgstr ""
+
+msgid "always send Caller ID above"
+msgstr ""
+
+msgid "always use NAT mode."
+msgstr ""
+
+msgid "associated"
+msgstr ""
+
+msgid "assume NAT mode but don't send rport "
+msgstr ""
+
+msgid "authenticate incoming calls with a public RSA key"
+msgstr ""
+
+msgid "authenticate outgoing calls with a private RSA key"
+msgstr ""
+
+msgid "built on"
+msgstr ""
+
+msgid "caller id of person leaving the message"
+msgstr ""
+
+msgid "change the IP address of your computer"
+msgstr ""
+
+msgid "click to disable fax"
+msgstr ""
+
+msgid "click to disable phone"
+msgstr ""
+
+msgid "click to disable provider"
+msgstr ""
+
+msgid "click to enable fax"
+msgstr ""
+
+msgid "click to enable phone"
+msgstr ""
+
+msgid "click to enable provider"
+msgstr ""
+
+msgid "clicking &quot;Save&quot; will drop all current calls."
+msgstr ""
+
+msgid "configured manually"
+msgstr ""
+
+msgid "configured via DHCP client"
+msgstr ""
+
+msgid "confirmation"
+msgstr ""
+
+msgid "connected"
+msgstr ""
+
+msgid "connected but lagged"
+msgstr ""
+
+msgid "default:"
+msgstr ""
+
+msgid "delete application"
+msgstr ""
+
+msgid "delete application mapping"
+msgstr ""
+
+msgid "delete call group"
+msgstr ""
+
+msgid "delete conference room"
+msgstr ""
+
+msgid "delete fax"
+msgstr ""
+
+msgid "delete manager user"
+msgstr ""
+
+msgid "delete phone"
+msgstr ""
+
+msgid "delete port group"
+msgstr ""
+
+msgid "delete provider"
+msgstr ""
+
+msgid "disable certificate checking"
+msgstr ""
+
+msgid "disable echo cancellation"
+msgstr ""
+
+msgid "disable time synchronization"
+msgstr ""
+
+msgid "disabled"
+msgstr ""
+
+msgid "down"
+msgstr ""
+
+msgid "downloading"
+msgstr ""
+
+msgid "drag-and-drop"
+msgstr ""
+
+msgid "duration of the message (i.e. 0:58)"
+msgstr ""
+
+msgid "e.g. <em>pbx . mydomain.com"
+msgstr ""
+
+msgid "edit application"
+msgstr ""
+
+msgid "edit application mapping"
+msgstr ""
+
+msgid "edit call group"
+msgstr ""
+
+msgid "edit conference room"
+msgstr ""
+
+msgid "edit disk"
+msgstr ""
+
+msgid "edit fax"
+msgstr ""
+
+msgid "edit gateway"
+msgstr ""
+
+msgid "edit manager room"
+msgstr ""
+
+msgid "edit phone"
+msgstr ""
+
+msgid "edit port"
+msgstr ""
+
+msgid "edit port group"
+msgstr ""
+
+msgid "edit provider"
+msgstr ""
+
+msgid "enable voicemail to e-mail"
+msgstr ""
+
+msgid "enter a command below..."
+msgstr ""
+
+msgid "every 10 minutes"
+msgstr ""
+
+msgid "every 12 hours"
+msgstr ""
+
+msgid "every 30 minutes"
+msgstr ""
+
+msgid "every 4 hours"
+msgstr ""
+
+msgid "every day"
+msgstr ""
+
+msgid "every hour"
+msgstr ""
+
+msgid "extension number of voicemail box"
+msgstr ""
+
+msgid "extracting"
+msgstr ""
+
+msgid "forget disk settings"
+msgstr ""
+
+msgid "forget gateway settings"
+msgstr ""
+
+msgid "forget port settings"
+msgstr ""
+
+msgid "full date / time (i.e. 2025-11-20 (15:45))"
+msgstr ""
+
+msgid "generate password"
+msgstr ""
+
+msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+msgstr ""
+
+msgid "inactive"
+msgstr ""
+
+msgid "indefinitely"
+msgstr ""
+
+msgid "installed sets"
+msgstr ""
+
+msgid "installing"
+msgstr ""
+
+msgid "kick conference member"
+msgstr ""
+
+msgid "max:"
+msgstr ""
+
+msgid "md5"
+msgstr ""
+
+msgid "milliseconds"
+msgstr ""
+
+msgid "min:"
+msgstr ""
+
+msgid "multipoint-to-point, network termination"
+msgstr ""
+
+msgid "name of voicemail recipient"
+msgstr ""
+
+msgid "never attempt NAT mode or RFC3581 support"
+msgstr ""
+
+msgid "no faxes available."
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "notify me of missed calls via e-mail"
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "on"
+msgstr ""
+
+msgid "only use NAT mode according to RFC3581 (rport)"
+msgstr ""
+
+msgid "optional"
+msgstr ""
+
+msgid "plaintext"
+msgstr ""
+
+msgid "point-to-multipoint, terminal equipment"
+msgstr ""
+
+msgid "point-to-point, network termination"
+msgstr ""
+
+msgid "point-to-point, terminal equipment"
+msgstr ""
+
+msgid "print"
+msgstr ""
+
+msgid "read:"
+msgstr ""
+
+msgid "receive"
+msgstr ""
+
+msgid "restart the PBX"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+msgid "send phone's Caller ID"
+msgstr ""
+
+msgid "send phone's Caller ID + prefix below"
+msgstr ""
+
+#, php-format
+msgid "service already assigned to \"%s\""
+msgstr ""
+
+msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
+msgstr ""
+
+msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
+msgstr ""
+
+msgid "show"
+msgstr ""
+
+msgid "span should be set as a loopback"
+msgstr ""
+
+msgid "span should use CRC4 checking"
+msgstr ""
+
+msgid "status unknown"
+msgstr ""
+
+msgid "store Asterisk's database on disk"
+msgstr ""
+
+msgid "store voice prompts and music-on-hold on disk"
+msgstr ""
+
+msgid "transmit"
+msgstr ""
+
+msgid "unreachable"
+msgstr ""
+
+msgid "up"
+msgstr ""
+
+msgid "use DHCP settings permanently"
+msgstr ""
+
+msgid "use this password"
+msgstr ""
+
+msgid "view license"
+msgstr ""
+
+msgid "warning"
+msgstr ""
+
+msgid "webGUI language"
+msgstr ""
+
+msgid "webGUI port"
+msgstr ""
+
+msgid "write:"
+msgstr ""

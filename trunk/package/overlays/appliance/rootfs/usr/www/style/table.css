@@ -1,0 +1,117 @@
+/*
+  $Id$
+  - Part of TeeBX project http://code.google.com/p/teebx/
+  - look at TeeBX website to get details about license
+*/
+
+/* */
+table
+{
+	font-size: 1.2em;
+	/*background-color: #CDCDCD;*/
+	width: 99%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+td
+{
+	vertical-align: top;
+	font-size: 1em;
+}
+
+td.tblrowlabel
+{
+	text-align: right;
+	background-color:#619CCD;
+	overflow: hidden;
+	width: 25%;
+}
+
+table.home
+{
+	border: 0px;
+}
+
+table.home caption
+{
+	color: #fff;
+	background-color: #336699;
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	margin-bottom: 3px;
+}
+
+table.home tbody tr
+{
+	background-color:#CDDFEF;
+	border: 0px;
+}
+
+table.home td
+{
+	padding: 5px 5px 5px 5px;
+}
+
+/* report tables */
+table.report
+{
+	font-family:arial;
+	/*background-color: #CDCDCD;*/
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+
+table.report caption
+{
+	font-size: 10pt;
+	text-align: center;
+	font-weight: bold;;
+}
+
+table.report thead tr th, table.report tfoot tr th
+{
+	background-color: #619CCD;
+	border: 0px solid #CDCDCD;
+	font-size: 8pt;
+	padding: 4px;
+}
+
+table.report thead tr th.bodytitle
+{
+	border: 1px solid #619CCD;
+	background-color: #fff;
+}
+
+table.report thead tr th.sortable
+{
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+
+table.report tbody td
+{
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+
+table.report tbody tr td
+{
+	background-color:#CDDFEF;
+	border: 1px solid #CDCDCD;
+}
+
+table.report tbody tr:nth-of-type(odd) td
+{
+	background-color:#e6EEEE;
+	border: 1px solid #CDCDCD;
+}

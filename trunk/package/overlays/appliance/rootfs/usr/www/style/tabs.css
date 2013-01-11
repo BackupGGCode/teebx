@@ -1,0 +1,89 @@
+/*
+  $Id$
+  - Part of BoneOS build platform (http://www.teebx.com/)
+  - look at TeeBX website to get details about license
+*/
+#tabs
+{
+	float:left;
+	width:100%;
+	background:#fff;
+	border-bottom:2px solid #336699;
+	overflow:hidden;
+	position:relative;
+	margin-bottom: 5px;
+}
+
+#tabs ul
+{
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+
+#tabs ul li
+{
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+	border-top:2px #FFF solid;
+}
+
+#tabs ul li.active
+{
+	background:#336699;
+	color:#fff;
+	border-top:2px #619CCD solid;
+}
+
+#tabs ul li a
+{
+	display:block;
+	margin: 0 0 0 1px;
+	padding:3px 10px;
+	background: #619CCD;
+	color: #000;
+	font-weight:bold;
+	text-decoration: none;
+	line-height: 1.3em;
+}
+
+#tabs ul li a:hover
+{
+	background:#336699;
+	color:#fff;
+	font-weight:bold;
+}
+
+#tabs ul li a.active
+{
+	background:#336699;
+	color:#fff;
+	font-weight:bold;
+}
+
+#tabs ul li a.active:hover
+{
+	color:#fff;
+	cursor: inherit;
+}
+
+#sets
+{
+	display: block;
+	clear: both;
+}
+
+.wrapper
+{
+	min-height: 250px;
+}
