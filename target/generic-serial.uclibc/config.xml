@@ -7,7 +7,7 @@
 	<system>
 		<hostname>TeeBX</hostname>
 		<domain>local</domain>
-		<dnsserver>192.168.1.1</dnsserver>
+		<dnsserver>8.8.4.4</dnsserver>
 		<username>admin</username>
 		<password>teebx</password>
 		<time-update-interval>4-hours</time-update-interval>
@@ -15,6 +15,10 @@
 		<webgui>
 			<protocol>http</protocol>
 		</webgui>
+		<earlyshellcmd></earlyshellcmd>
+		<shellcmd></shellcmd>
+		<disable-update-check/>
+		<notes>V2FybmluZzogdGhpcyBpcyBhIGRldmVsb3BtZW50IHZlcnNpb24uDQotIEluY29tcGxldGUsIHdvcmsgaW4gcHJvZ3Jlc3MgYW5kICBleHBlcmltZW50YWwgY29uZmlndXJhdGlvbiBpbnRlcmZhY2U6IG5vdGhpbmcgbW9yZSB0aGFuIHRoYXQgcGFnZSENCi0gQWxyZWFkeSB3b3JraW5nOiBBc3Rlcmlzaywgc3NoLXNmdHAsIGRoY3AsIHNtdHAsIG50cC4NCi0gSW50ZXJuZXQgZXhwb3JlciBpcyAqbm90KiBzdXBwb3J0ZWQu</notes>
 	</system>
 	<interfaces>
 		<lan>
@@ -54,236 +58,6 @@
 			<publicaccess></publicaccess>
 			<descr>Reads back the system IP address in English</descr>
 			<uniqid>APPLICATION-MAPPING-933337097386d45555d920</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (DA - Danish)</name>
-			<extension>000047*32</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9ZGEtZGsp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Danish</descr>
-			<uniqid>APPLICATION-MAPPING-7802674684d403d161f4b4</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (DE - German)</name>
-			<extension>000047*33</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9ZGUtZGUp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in German</descr>
-			<uniqid>APPLICATION-MAPPING-7802674684d403d161f4b4</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (FR - French)</name>
-			<extension>000047*37</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9ZnItY2Ep</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in French</descr>
-			<uniqid>APPLICATION-MAPPING-512742884d403cd0e510c</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (IT - Italian)</name>
-			<extension>000047*48</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9aXQtaXQp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Italian</descr>
-			<uniqid>APPLICATION-MAPPING-21001445604d403da7349e6</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (JA - Japanese)</name>
-			<extension>000047*52</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9amEtanAp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess></publicaccess>
-			<descr>Reads back the system IP address in Japanese</descr>
-			<uniqid>APPLICATION-MAPPING-6725752314d403c44928ff</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (NL - Dutch)</name>
-			<extension>000047*65</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9bmwtbmwp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Dutch</descr>
-			<uniqid>APPLICATION-MAPPING-6725752314d403c44928ff</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (PL - Polish)</name>
-			<extension>000047*75</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9cGwtcGwp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Polish</descr>
-			<uniqid>APPLICATION-MAPPING-12586587234d403deef09eb</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (PO - Portuguese)</name>
-			<extension>000047*76</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9cHQtYnIp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Portuguese</descr>
-			<uniqid>APPLICATION-MAPPING-3664170264d403e45d8cbb</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (SP - Spanish)</name>
-			<extension>000047*77</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9ZXMtZXMp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Spanish</descr>
-			<uniqid>APPLICATION-MAPPING-1772552354d403ed4bc4c3</uniqid>
-		</application>
-		<application>
-			<name>read system IP address (RU - Russian)</name>
-			<extension>000047*78</extension>
-			<app-command>MSxBbnN3ZXIoKQ==</app-command>
-			<app-command>MixTZXQoQ0hBTk5FTChsYW5ndWFnZSk9cnUtcnUp</app-command>
-			<app-command>MyxTZXQoSVBPVVRQVVQ9JHtTSEVMTCgvZXRjL3NjcmlwdHMvcGFyc2VpcC5zaCl9KQ==</app-command>
-			<app-command>NCxOb09wKElQT1VUUFVUOiAke0lQT1VUUFVUfSk=</app-command>
-			<app-command>NSxQbGF5YmFjayhiZWVwKQ==</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMSl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMil9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sMyl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixTYXlEaWdpdHMoJHtDVVQoSVBPVVRQVVQsXC4sNCl9KQ==</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixQbGF5YmFjayhzaWxlbmNlLzEp</app-command>
-			<app-command>bixHb3RvKDUp</app-command>
-			<publicaccess/>
-			<descr>Reads back the system IP address in Russian</descr>
-			<uniqid>APPLICATION-MAPPING-18709950654d403e945ff38</uniqid>
 		</application>
 		<application>
 			<name>read my extension number</name>

@@ -1,0 +1,4089 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-04 16:29+0200\n"
+"PO-Revision-Date: 2008-09-07 21:17+0200\n"
+"Last-Translator: sipahoy @ aphidnos\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "%.0f KB"
+msgstr "%.0f KB"
+
+#, php-format
+msgid "%.2f GB"
+msgstr "%.2f GB"
+
+#, php-format
+msgid "%.2f MB"
+msgstr "%.2f MB"
+
+#, php-format
+msgid "%d bytes"
+msgstr "%d bytes"
+
+msgid "25%"
+msgstr "25%"
+
+msgid "50%"
+msgstr "50%"
+
+msgid "75%"
+msgstr "75%"
+
+msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
+msgstr ""
+
+#, php-format
+msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
+msgstr "<strong>%s</strong><br>Αυτό σημαίνει ότι το firmware που στείλατε δεν είναι αυθεντικό/υποστηριζόμενο και μπορεί να έχει σαν αποτέλεσμα προβλήματα, απρόβλεπτη συμπεριφορά ή προβλήματα ασφάλειας. Να εγκαθιστάτε μόνο firmware το οποίο προέρχεται από πηγές που εμπιστεύεστε και να είστε σίγουροι ότι το firmware δεν έχει μεταβληθεί από κάποιον τρίτο.<br><br> Θέλετε παρ' όλα αυτά να εγκαταστήσετε το firmware (αναλαμβάνοντας τον κίνδυνο);"
+
+msgid "A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'."
+msgstr "Το όνομα του διακομιστή ώρας NTP μπορεί να περιέχει μόνο τους χαρακτήρες a-z, 0-9, '-' και '.'."
+
+msgid "A newer <strong>beta</strong> version of TeeBX is available!"
+msgstr ""
+
+msgid "A newer version of TeeBX is available!"
+msgstr ""
+
+msgid "A number must be specified to prepend to the incoming Caller ID number."
+msgstr ""
+
+msgid "A public IP address must be entered for this topology."
+msgstr "Πρέπει να καταχωρήσετε μια δημόσια διεύθυνση IP γι' αυτή την τοπολογία."
+
+msgid "A public hostname must be entered for this topology."
+msgstr "Πρέπει να καταχωρήσετε μια ονομασία συσκευής γι' αυτήν την τοπολογία."
+
+msgid "A text must be specified to prepend to the incoming Caller ID name."
+msgstr ""
+
+msgid "A username must be specified."
+msgstr "Πρέπει να καταχωρήσετε ένα όνομα χρήστη."
+
+msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη διεύθυνση IP  για τον πρωτεύοντα/δευτερεύοντα/τριτεύοντα διακομιστή DNS."
+
+msgid "A valid IP address must be specified."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη διεύθυνση IP."
+
+msgid "A valid MAC address must be specified."
+msgstr "Πρέπει να ορίσετε μια έγκυρη διεύθυνση MAC."
+
+msgid "A valid TCP/IP port must be specified for the webGUI port."
+msgstr "Πρέπει να καταχωρήσετε μία έγκυρη θύρα για πρόσβαση στο περιβάλλον διαχείρισης."
+
+msgid "A valid attended transfer timeout must be specified."
+msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο χρόνο αναμονής για προώθηση με συνεννόηση."
+
+msgid "A valid e-mail address must be specified for the \"from address\"."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη διεύθυνση e-mail για την \"διεύθυνση αποστολέα\""
+
+msgid "A valid e-mail address must be specified."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη διεύθυνση e-mail."
+
+msgid "A valid extension digit timeout must be specified."
+msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο χρόνο αναμονής ψηφίου."
+
+msgid "A valid extension must be entered."
+msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο εσωτερικό."
+
+msgid "A valid gateway must be specified."
+msgstr "Πρέπει να ορίσετε μια έγκυρη πύλη."
+
+#, fuzzy
+msgid "A valid incoming Caller ID override must be specified (e.g. John Smith <12345>)."
+msgstr "Πρέπει να καταχωρήσετε μία υπερισχύουσα ταυτότητα καλούντος."
+
+msgid "A valid key timeout must be specified."
+msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο χρόνο αναμονής."
+
+#, fuzzy
+msgid "A valid outgoing Caller ID must be specified (e.g. John Smith <12345>)."
+msgstr "Πρέπει να καταχωρήσετε  μια έγκυρη ταυτότητα καλούντος"
+
+#, fuzzy
+msgid "A valid outgoing Caller ID number prefix must be specified."
+msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο εθνικό πρόθεμα."
+
+msgid "A valid park time must be specified."
+msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο χρόνο στάθμευσης."
+
+msgid "A valid parking extension must be specified."
+msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο εσωτερικό στάθμευσης."
+
+msgid "A valid parking start position must be specified."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη αρχική θέση στάθμευσης."
+
+msgid "A valid parking stop position must be specified."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη τελική θέση στάθμευσης."
+
+msgid "A valid port must be specified."
+msgstr "Πρέπει να ορίσετε μία έγκυρη θύρα."
+
+msgid "A valid public IP address must be entered for this topology."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη δημόσια διεύθυνση IP γι' αυτή την τοπολογία."
+
+msgid "A valid public hostname must be entered for this topology."
+msgstr "Πρέπει να καταχωρήσετε μια έγκυρη δημόσια ονομασία συσκευής γι' αυτήν την τοπολογία."
+
+msgid "A valid subnet bit count must be specified."
+msgstr "Πρέπει να ορίσετε ένα έγκυρο πλήθος bits υποδικτύου."
+
+msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
+msgstr "Πρέπει να εισάγετε έναν ακέραιο αριθμό δευτερολέπτων για τον \"Προεπιλεγμένο χρόνο ζωής εγγραφών\"."
+
+msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
+msgstr "Πρέπει να εισάγετε έναν ακέραιο αριθμό δευτερολέπτων για τον \"Μέγιστο χρόνο ζωής εγγραφών\"."
+
+msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
+msgstr "Πρέπει να εισάγετε έναν ακέραιο αριθμό δευτερολέπτων για τον \"Ελάχιστο χρόνο ζωής εγγραφών\"."
+
+msgid "Access PIN"
+msgstr "PIN πρόσβασης"
+
+msgid "Accounts"
+msgstr "Λογαριασμοί"
+
+msgid "Activate custom Music-On-Hold"
+msgstr ""
+
+msgid "Activate custom Voicemail greeting"
+msgstr ""
+
+msgid "Active Channels"
+msgstr "Ενεργά κανάλια"
+
+#, fuzzy
+msgid "Active Channels / Calls"
+msgstr "Ενεργά κανάλια"
+
+msgid "Active Disks"
+msgstr ""
+
+#, fuzzy
+msgid "Adding"
+msgstr "Ping"
+
+msgid "Adelaide"
+msgstr ""
+
+msgid "Advanced"
+msgstr "Επιλογές για ειδικούς"
+
+#, fuzzy
+msgid "Advanced Options"
+msgstr "Ρυθμίσεις για ειδικούς"
+
+msgid "Advanced Settings"
+msgstr "Ρυθμίσεις για ειδικούς"
+
+#, fuzzy
+msgid "Alaska Time"
+msgstr "Χρόνος στάθμευσης"
+
+#, fuzzy
+msgid "All Provider Ports"
+msgstr "Πάροχοι"
+
+msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
+msgstr "Όλα τα μέλη της ομάδας θα καλούνται ταυτόχρονα. <strong>Αν η κλήση δεν απαντηθεί, θα χρησιμοποιηθεί η φωνητική θυρίδα του πρώτου μέλους."
+
+msgid "All information on this disk will be lost after clicking \"Format\"!"
+msgstr ""
+
+#, fuzzy
+msgid "Amsterdam, Netherlands"
+msgstr "Ολλανδία"
+
+#, fuzzy
+msgid "An invalid dialstring was entered."
+msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο εσωτερικό."
+
+#, fuzzy
+msgid "An invalid port was entered."
+msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο εσωτερικό."
+
+msgid "Analog"
+msgstr "PSTN"
+
+msgid "Analog Faxes"
+msgstr ""
+
+msgid "Analog Phones"
+msgstr "Αναλογικά τηλέφωνα"
+
+msgid "Appended prefixes may only contain digits, '*' and '#'."
+msgstr ""
+
+msgid "Application"
+msgstr "Εφαρμογή"
+
+#, fuzzy
+msgid "Application Logic"
+msgstr "Εφαρμογή"
+
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+msgid "Are you sure you want to proceed?"
+msgstr "Είστε σίγουροι ότι θέλετε να συνεχίσετε;"
+
+msgid "Are you sure you want to reboot the system?"
+msgstr "Θέλετε πραγματικά να επανεκκινήσετε το σύστημα;"
+
+msgid "Argentina"
+msgstr ""
+
+#, fuzzy
+msgid "Asia"
+msgstr "Αυστρία"
+
+msgid "Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX."
+msgstr ""
+
+#, fuzzy
+msgid "Athens, Greece"
+msgstr "Ελλάδα"
+
+msgid "Atlantic Time"
+msgstr ""
+
+msgid "Attended"
+msgstr "Με συνεννόηση"
+
+msgid "Attended Transfer Answer"
+msgstr "Απάντηση προώθησης με συνεννόηση"
+
+msgid "Auckland"
+msgstr ""
+
+msgid "Audio"
+msgstr "Ήχος"
+
+msgid "Audio Prompts"
+msgstr "Ηχητικές προτροπές"
+
+msgid "Audio prompts will be played back in the selected language for this account."
+msgstr "Οι ηχητικές προτροπές θα αναπαράγονται σε αυτή τη γλώσσα γι' αυτόν το λογαριασμό."
+
+msgid "Australia"
+msgstr "Αυστραλία"
+
+msgid "Austria"
+msgstr "Αυστρία"
+
+msgid "Authentication Method"
+msgstr "Μέθοδος ταυτοποίησης"
+
+#, fuzzy
+msgid "Authentication Scheme"
+msgstr "Μέθοδος ταυτοποίησης"
+
+msgid "Authorization User"
+msgstr "Χρήστης πιστοποίησης"
+
+msgid "AutoScale"
+msgstr "Αυτόματη διαβάθμιση"
+
+msgid "Backup configuration"
+msgstr "Αποθήκευση ρυθμίσεων"
+
+msgid "Backup/Restore"
+msgstr "Αντίγρ. ασφαλείας"
+
+#, fuzzy
+msgid "Bahrain"
+msgstr "Βουλγαρία"
+
+msgid "Barcelona, Spain"
+msgstr ""
+
+msgid "Basic"
+msgstr "Βασικό"
+
+msgid "Belgium"
+msgstr "Βέλγιο"
+
+msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
+msgstr "Ακολουθεί μια λίστα από τα ήδη καθορισμένα τηλέφωνα, μαζί με μια βασική εντολή Dial(), για να τα καλείτε. Υπάρχουν πολλές περισσότερες παράμετροι γι' αυτή την εντολή και μπορείτε να τις δείτε στην τεκμηρίωση που είναι διαθέσιμη στις Εφαρμογές."
+
+#, fuzzy
+msgid "Berlin, Germany"
+msgstr "Γερμανία"
+
+msgid "Binding Port"
+msgstr "Θύρα"
+
+msgid "Blind"
+msgstr "Άμεση"
+
+msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
+msgstr "Κάντε άμεση προώθηση σε αυτό το εσωτερικό για να σταθμεύσετε μια κλήση (προεπιλεγμένη τιμή: 700). Ο αριθμός που θα σας διαβαστεί αφού πραγματοποιήσετε την προώθηση, είναι το εσωτερικό στο οποίο έγινε η στάθμευση."
+
+#, fuzzy
+msgid "Block Providers"
+msgstr "Πάροχοι"
+
+msgid "Block access to the providers selected above."
+msgstr ""
+
+msgid "Body"
+msgstr "Κείμενο"
+
+msgid "Brackets are not needed for less than 2 characters."
+msgstr ""
+
+msgid "Brazil"
+msgstr "Βραζιλία"
+
+msgid "Brazil, São Paulo"
+msgstr ""
+
+msgid "Brisbane"
+msgstr ""
+
+msgid "Brussels, Belgium"
+msgstr ""
+
+msgid "Budapest, Hungary"
+msgstr ""
+
+msgid "Bulgaria"
+msgstr "Βουλγαρία"
+
+#, fuzzy
+msgid "Bulgarian"
+msgstr "Βουλγαρία"
+
+#, fuzzy
+msgid "Bulgarian (formal)"
+msgstr "Ιταλικά (τυπικά)"
+
+msgid "CPU Load"
+msgstr "Φόρτος CPU"
+
+msgid "Call Groups"
+msgstr "Ομάδες τηλεφώνων"
+
+#, fuzzy
+msgid "Call Notifications & Voicemail"
+msgstr "Τοποθεσία"
+
+msgid "Call Parking"
+msgstr "Στάθμευση κλήσεων"
+
+#, fuzzy
+msgid "Call Routing"
+msgstr "Στάθμευση κλήσεων"
+
+msgid "Caller ID"
+msgstr "Ταυτότητα καλούντος"
+
+msgid "Caller ID / Name"
+msgstr "Ταυτότητα καλούντος / Όνομα"
+
+#, fuzzy
+msgid "Caller ID Options"
+msgstr "Ταυτότητα καλούντος"
+
+msgid "Calls"
+msgstr "Κλήσεις"
+
+#, fuzzy
+msgid "Calls Processed"
+msgstr "Ομάδες τηλεφώνων"
+
+#, fuzzy
+msgid "Canada"
+msgstr "Εντολή"
+
+msgid "Canberra"
+msgstr ""
+
+msgid "Cannot get CPU load"
+msgstr "Αδυναμία ανάγνωσης του φόρτου της CPU"
+
+#, fuzzy
+msgid "Card"
+msgstr "Καθαρισμός"
+
+msgid "Central America"
+msgstr ""
+
+msgid "Central Time"
+msgstr ""
+
+#, fuzzy
+msgid "Central and South America"
+msgstr "Βενεζουέλα / Νότιος Αμερική"
+
+msgid "Changes to this option will take effect after a reboot."
+msgstr "Οι μεταβολές αυτής της επιλογής θα ενεργοποιηθούν μετά την επανεκκίνηση του συστήματος."
+
+msgid "Channel"
+msgstr "Κανάλι"
+
+msgid "Channels"
+msgstr "Κανάλια"
+
+msgid "Check automatically for new updates."
+msgstr ""
+
+msgid "Chile"
+msgstr "Χιλή"
+
+msgid "China"
+msgstr "Κίνα"
+
+#, php-format
+msgid "Choose the new firmware image file (%s-*.img) to be installed."
+msgstr "Επιλέξτε το αρχείο του νέου firmware (pbx-%s-*.img) που θέλετε να εγκαταστήσετε."
+
+msgid "Clear"
+msgstr "Καθαρισμός"
+
+msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
+msgstr "Κάντε κλικ στην &quot;Αναβάθμιση firmware&quot; για να αρχίσετε τη διαδικασία αναβάθμισης."
+
+msgid "Click this button to download the system configuration in XML format."
+msgstr "Πιέστε αυτό το κουμπί για να λάβετε τις ρυθμίσεις του συστήματος σε μορφή XML."
+
+#, fuzzy
+msgid "Codecs"
+msgstr "CODECs φωνής"
+
+msgid "Collecting initial data, please wait..."
+msgstr "Συλλογή αρχικών δεδομένων. Παρακαλώ περιμένετε..."
+
+msgid "Colombia"
+msgstr ""
+
+msgid "Command"
+msgstr "Εντολή"
+
+msgid "Command:"
+msgstr "Εντολή:"
+
+msgid "Completely override the generated registration string with a manually defined one."
+msgstr ""
+
+msgid "Conference"
+msgstr "Συνδιάσκεψη"
+
+msgid "Conference Rooms"
+msgstr "Χώροι συνδιασκέψεων"
+
+msgid "Conference number already exists."
+msgstr "Αυτός ο αριθμός συνδιάσκεψης υπάρχει ήδη."
+
+msgid "Conference number matches an existing extension."
+msgstr "Ο αριθμός συνδιάσκεψης είναι ίδιος με ένα υπάρχον εσωτερικό."
+
+msgid "Conference pins must be numeric."
+msgstr "Τα PINs των συνδιασκέψεων πρέπει να είναι αριθμητικά."
+
+msgid "Conference room numbers must be numeric."
+msgstr "Τα εσωτερικά των χώρων συνδιάσκεψης πρέπει να είναι αριθμητικά."
+
+msgid "Conferences"
+msgstr "Συνδιασκέψεις"
+
+msgid "Conferencing"
+msgstr "Συνδιασκέψεις"
+
+#, fuzzy
+msgid "Connect"
+msgstr "συνδεδεμένο"
+
+msgid "Connection Initialization"
+msgstr ""
+
+msgid "Connectivity"
+msgstr ""
+
+msgid "Console menu"
+msgstr "Μενού κονσόλας"
+
+msgid "Copenhagen, Denmark"
+msgstr ""
+
+msgid "Croatia"
+msgstr ""
+
+msgid "Custom Applications"
+msgstr "Εφαρμογές"
+
+msgid "Custom Music-on-Hold"
+msgstr ""
+
+msgid "Cyprus"
+msgstr ""
+
+msgid "Czech"
+msgstr "Τσέχικα"
+
+msgid "Czech (formal)"
+msgstr "Τσέχικα (τυπικά)"
+
+msgid "Czech Republic"
+msgstr "Τσεχία"
+
+msgid "DNS Servers"
+msgstr "Διακομιστές DNS"
+
+msgid "DNS Service Records"
+msgstr "Εγγραφές DNS SRV"
+
+msgid "DO NOT abort the firmware upgrade once it has started."
+msgstr "ΜΗΝ διακόψετε την αναβάθμιση του firmware μετά την εκκίνηση της εγκατάστασής του."
+
+msgid "DTMF Mode"
+msgstr "Μέθοδος DTMF"
+
+msgid "Danish"
+msgstr "Δανικά"
+
+msgid "Danish (formal)"
+msgstr "Δανικά (τυπικά)"
+
+#, fuzzy
+msgid "Darwin"
+msgstr "Τομέας"
+
+msgid "Default values are 60, 3600 and 120 respectively."
+msgstr "Οι πρεπιλεγμένες τιμές είναι 60, 3600 και 120."
+
+#, fuzzy, php-format
+msgid "Defaults to the e-mail address used in the %s setup."
+msgstr "Η προεπιλεγμένη τιμή είναι η διεύθυνση e-mail που φαίνεται πιο πάνω."
+
+msgid "Denmark"
+msgstr "Δανία"
+
+msgid "Deny Network"
+msgstr "Μη επιτρεπτό δίκτυο"
+
+msgid "Description"
+msgstr "Περιγραφή"
+
+msgid "Descriptive name for this provider."
+msgstr "Επεξηγηματικό όνομα γι' αυτόν τον πάροχο."
+
+#, fuzzy
+msgid "Device"
+msgstr "Υπηρεσίες"
+
+msgid "Dialing Pattern(s)"
+msgstr "Πρότυπο/α κλήσης"
+
+msgid "Dialplan"
+msgstr "Πλάνο κλήσεων"
+
+msgid "Dialplan Element Library"
+msgstr "Βιβλιοθήκη στοιχείων πλάνου κλήσεων"
+
+msgid "Dialstring"
+msgstr "Κείμενο/αριθμός κλήσης"
+
+msgid "Disable DNS SRV lookups."
+msgstr "Απενεργοποίηση αναζητήσεων DNS SRV."
+
+msgid "Disable console menu"
+msgstr "Απενεργοποίηση μενού κονσόλας"
+
+msgid "Disable overrides"
+msgstr "Απενεργοποίηση υπερισχύσεων"
+
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+#, fuzzy
+msgid "Disk Device"
+msgstr "Υπηρεσίες"
+
+msgid "Do not register with this provider."
+msgstr "Να μην γίνει εγγραφή σε αυτόν τον πάροχο."
+
+msgid "Do you really want to delete this application mapping?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτή την αντιστοίχηση εφαρμογής;"
+
+#, fuzzy
+msgid "Do you really want to delete this application?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτή την αντιστοίχηση εφαρμογής;"
+
+msgid "Do you really want to delete this call group?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτήν την ομάδα;"
+
+msgid "Do you really want to delete this conference room?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτόν τον χώρο συνδιάσκεψης;"
+
+msgid "Do you really want to delete this fax?"
+msgstr ""
+
+msgid "Do you really want to delete this manager user?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτόν τον διαχειριστή;"
+
+msgid "Do you really want to delete this phone?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτό το τηλέφωνο;"
+
+#, fuzzy
+msgid "Do you really want to delete this port group's settings?"
+msgstr "Θέλετε πραγματικά να διαγράψετε τις ρυθμίσεις αυτής της διεπαφής;"
+
+msgid "Do you really want to delete this provider?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτόν τον πάροχο;"
+
+msgid "Do you really want to disable this fax?"
+msgstr ""
+
+msgid "Do you really want to disable this phone?"
+msgstr "Θέλετε πραγματικά να απενεργοποιήσετε αυτό το τηλέφωνο;"
+
+msgid "Do you really want to disable this provider?"
+msgstr "Θέλετε πραγματικά να απενεργοποιήσετε αυτόν τον πάροχο;"
+
+#, fuzzy
+msgid "Do you really want to forget this disk?"
+msgstr "Θέλετε πραγματικά να διαγράψετε αυτό το τηλέφωνο;"
+
+#, fuzzy
+msgid "Do you really want to forget this gateway's settings?"
+msgstr "Θέλετε πραγματικά να διαγράψετε τις ρυθμίσεις αυτής της διεπαφής;"
+
+#, fuzzy
+msgid "Do you really want to forget this port\\'s settings?"
+msgstr "Θέλετε πραγματικά να διαγράψετε τις ρυθμίσεις αυτής της διεπαφής;"
+
+msgid "Do you really want to kick this member?"
+msgstr "Θέλετε πραγματικά να απομακρύνετε αυτό το μέλος;"
+
+msgid "Download"
+msgstr "Λήψη"
+
+msgid "Download configuration"
+msgstr "Αποθήκευση ρυθμίσεων"
+
+msgid "Download:"
+msgstr "Λήψη:"
+
+msgid "Dublin, Ireland"
+msgstr ""
+
+msgid "Dutch"
+msgstr "Ολλανδικά"
+
+msgid "Dutch (formal)"
+msgstr "Ολλανδικά (τυπικά)"
+
+msgid "Dynamic DNS Client"
+msgstr "Πελάτης δυναμικού DNS"
+
+#, fuzzy
+msgid "E-Mail"
+msgstr "Αποστολή e-mail"
+
+msgid "E-Mail notifications enabled but the e-mail address is invalid or missing."
+msgstr ""
+
+msgid "E-mail Address"
+msgstr "Διεύθυνση e-mail αποστολέα"
+
+msgid "E-mail Me"
+msgstr "Αποστολή e-mail"
+
+msgid "E-mail has been sent successfully."
+msgstr "Το e-mail στάλθηκε επιτυχώς."
+
+msgid "E-mail notifications for new voicemail will be delivered in this language."
+msgstr "Οι ειδοποιήσεις μέσω ηλεκτρονικού ταχυδρομείου για νέα μηνύματα φωνητικού ταχυδρομείου θα στέλνονται σε αυτή τη γλάσσα."
+
+msgid "E-mail was not sent, check your settings."
+msgstr "Το e-mail δεν στάλθηκε. Ελέγξτε τις ρυθμίσεις σας."
+
+msgid "ERR Could not install configuration.\n"
+msgstr "ΣΦΑΛΜΑ: Αδυναμία εγκατάστασης  ρυθμίσεων.\n"
+
+msgid "ERR Could not save configuration.\n"
+msgstr "ΣΦΑΛΜΑ: Αδυναμία αποθήκευσης ρυθμίσεων.\n"
+
+msgid "ERR Invalid configuration received.\n"
+msgstr "ΣΦΑΛΜΑ: Λήψη μη έγκυρων ρυθμίσεων.\n"
+
+#, php-format
+msgid "ERROR: the changes could not be applied (error code %s)."
+msgstr "ΣΦΑΛΜΑ: ήταν αδύνατο να τεθούν σε εφαρμογή οι μεταβολές (κωδικός σφάλματος %s)."
+
+#, fuzzy
+msgid "Eastern Time"
+msgstr "Χρόνος στάθμευσης"
+
+#, fuzzy
+msgid "Echo Cancellation"
+msgstr "Απαλοιφή ηχούς"
+
+msgid "Echos audio and video back to the caller as soon as it is received. Used to test connection delay."
+msgstr "Αντηχεί φωνή και βίντεο στον καλούντα όπως λαμβάνεται από το τηλεφωνικό κέντρο. Χρησιμοποιείται για να ελεγχθεί η καθυστέρηση της σύνδεσης."
+
+#, fuzzy
+msgid "Ecuador"
+msgstr "Επεξεργαστής"
+
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#, fuzzy, php-format
+msgid "Edit Analog %s Port"
+msgstr "Επεξεργασία PSTN"
+
+msgid "Edit Analog Fax"
+msgstr ""
+
+#, fuzzy
+msgid "Edit Analog Phone"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit Analog Provider"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit Application"
+msgstr "Εφαρμογή"
+
+#, fuzzy
+msgid "Edit External Phone"
+msgstr "Επεξεργασία εξωτερικής γραμμής"
+
+#, fuzzy
+msgid "Edit IAX Phone"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit IAX Provider"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy, php-format
+msgid "Edit ISDN %s Port"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit ISDN Phone"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit ISDN Provider"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit Provider Group"
+msgstr "Επεξεργασία PSTN"
+
+#, fuzzy
+msgid "Edit Redfone Gateway"
+msgstr "Πύλη"
+
+msgid "Edit Room"
+msgstr "Επεξεργασία χώρου"
+
+#, fuzzy
+msgid "Edit SIP Phone"
+msgstr "Τηλέφωνα SIP"
+
+#, fuzzy
+msgid "Edit SIP Provider"
+msgstr "Τηλέφωνα SIP"
+
+#, fuzzy
+msgid "Edit Skinny Phone"
+msgstr "Τηλέφωνα SIP"
+
+#, fuzzy
+msgid "Edit Storage Disk"
+msgstr "Επεξεργασία δίσκου"
+
+msgid "Edit User"
+msgstr "Επεξεργασία χρήστη"
+
+msgid "Egypt"
+msgstr ""
+
+msgid "El Salvador"
+msgstr ""
+
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#, fuzzy
+msgid "Enable Jitterbuffer on IAX connections terminated by the system."
+msgstr "Ενεργοποίηση του Jitterbuffer σε συνδέσεις IAX που τερματίζονται στο τηλεφωνικό κέντρο."
+
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+msgid "Encoding"
+msgstr ""
+
+#, fuzzy
+msgid "Encryption Method"
+msgstr "Μέθοδος ταυτοποίησης"
+
+msgid "English"
+msgstr "Αγγλικά"
+
+msgid "English (UK)"
+msgstr "Αγγλικά (Ηνωμένο Βασίλειο)"
+
+msgid "English (US)"
+msgstr "Αγγλικά (ΗΠΑ)"
+
+msgid "English (formal)"
+msgstr "Αγγλικά (τυπικά)"
+
+msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP)."
+msgstr ""
+
+#, fuzzy
+msgid "Enter a descriptive name for this disk."
+msgstr "Επεξηγηματικό όνομα γι' αυτό το τηλέφωνο."
+
+#, fuzzy
+msgid "Enter a descriptive name for this gateway."
+msgstr "Επεξηγηματικό όνομα γι' αυτό το τηλέφωνο."
+
+#, fuzzy
+msgid "Enter a descriptive name for this port."
+msgstr "Επεξηγηματικό όνομα γι' αυτό το τηλέφωνο."
+
+#, fuzzy
+msgid "Enter a descriptive name for this span."
+msgstr "Επεξηγηματικό όνομα γι' αυτό το τηλέφωνο."
+
+msgid ""
+"Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
+" <ul>\n"
+" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+" \t<li><strong>.</strong> - matches one or more characters</li>\n"
+" \t<li><strong>!</strong> - matches zero or more characters</li>\n"
+" </ul>\n"
+msgstr ""
+"Εισάγετε ένα πρότυπο κλήσης ή έναν αριθμό τηλεφώνου και επιλέξτε ένα εσωτερικό. Για να καλέσετε πολλαπλά τηλέφωνα ταυτόχρνα, απλά καταχωρήστε σε όλα το ίδιο πρότυπο κλήσης. Αν καταχωρήσετε έναν αριθμό τηλεφώνου, τότε αυτός θα χρησιμοποιηθεί σαν ο \"εξωτερικός\" αριθμός στις αναπάντητες κλήσεις. Αν δεν καταχωρήσετε τίποτα, όλες οι κλήσεις θα δρομολογηθούν στο εσωτερικό που θα έχετε επιλέξει.<br>\n"
+" <ul>\n"
+" \t<li><strong>X</strong> - αντιστοιχεί στα ψηφία 0-9</li>\n"
+" \t<li><strong>Z</strong> - αντιστοιχεί στα ψηφία 1-9</li>\n"
+" \t<li><strong>N</strong> - αντιστοιχεί στα ψηφία 2-9</li>\n"
+" \t<li><strong>[13-5]</strong> - αντιστοιχεί σε οποιοδήποτε ψηφίο εντός των αγκυλών (στο παράδειγμα, τα 1,3,4,5)</li>\n"
+" \t<li><strong>.</strong> - αντιστοιχεί σε έναν ή περισσότερους χαρακτήρες</li>\n"
+" \t<li><strong>!</strong> - αντιστοιχεί σε κανέναν ή περισσότερους χαρακτήρες</li>\n"
+" </ul>\n"
+
+msgid "Enter a server to synchronize with."
+msgstr ""
+
+#, fuzzy
+msgid ""
+"Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
+" 2,Echo()\n"
+" 3,Hangup()\n"
+" </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
+msgstr ""
+"Εισάγετε τη λογική της εφαρμογής, με μία εντολή ανά γραμμή, όπως φαίνεται πιο κάτω: <br> <pre> 1,Answer()\n"
+" 2,Echo()\n"
+" 3,Hangup()\n"
+" </pre> <p>Για να προγραμματίσετε εφαρμογές, χρειάζεται γνώση του πλάνου κλήσεων του Asterisk. Γίνεται προσπάθεια για τον έλεγχο αυτών που εισάγετε, αλλά υπάρχει η πιθανότητα να κάνετε το τηλεφωνικό σας κέντρο μη λειτουργικό με χρήση λανθασμένης προγραμματιστικής λογικής. Αναφορά σε εφαρμογές, συναρτήσεις και τηλέφωνα υπάρχει στη <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Βιβλιοθήκη Στοιχείων</a></strong>.</p>"
+
+#, fuzzy
+msgid ""
+"Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
+" <ul>\n"
+" \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
+" \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
+" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+" \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
+" \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
+" </ul>\n"
+msgstr ""
+"Εισάγετε πρότυπα, ένα ανά γραμή, για να ορίσετε τη δρομολόγηση του παρόχου. Εισάγετε \"X!\" για να χρησιμοποιήσετε αυτόν τον πάροχο γα όλες τις εξερχόμενες κλήσεις. Για να χρησιμοποιήσετε αυτόν τον πάροχο για κλήσεις που ξεκινούν με το \"9\" εισάγετε \"9|.\". Αν δεν εισάγετε κάποιο πρότυπο, μόνο εισερχόμενες κλήσεις θα γίνονται δεντές.<br>\n"
+" <ul>\n"
+" \t<li><strong>+</strong> - προσθήκη προθέματος (π.χ. \"211+200\" αναγνωρίζει το \"200\" και στέλνει στον πάροχο (δηλ. καλεί) το \"211200\")</li>\n"
+" \t<li><strong>|</strong> - αφαίρεση προθέματος (π.χ. \"9|211200\" αναγνωρίζει το  \"9211200\" αλλά στέλνει στον πάροχο (δηλ. καλεί) μόνο το \"211200\")</li>\n"
+" \t<li><strong>X</strong> - αντιστοιχεί στα ψηφία 0-9</li>\n"
+" \t<li><strong>Z</strong> - αντιστοιχεί στα ψηφία 1-9</li>\n"
+" \t<li><strong>N</strong> - αντιστοιχεί στα ψηφία 2-9</li>\n"
+" \t<li><strong>[13-5]</strong> - αντιστοιχεί σε οποιοδήποτε ψηφίο εντός των αγκυλών (στο παράδειγμα, τα 1,3,4,5)</li>\n"
+" \t<li><strong>.</strong> - αντιστοιχεί σε έναν ή περισσότερους χαρακτήρες (δεν είναι επιτρεπτό πριν το | ή το +)</li>\n"
+" \t<li><strong>!</strong> - αντιστοιχεί σε κανέναν ή περισσότερους χαρακτήρες (δεν είναι επιτρεπτό πριν το | ή το +)</li>\n"
+" </ul>\n"
+
+msgid "Enter the full path where this device should be mounted."
+msgstr ""
+
+msgid "Estonia"
+msgstr "Εσθονία"
+
+msgid "Europe"
+msgstr ""
+
+msgid "Execute"
+msgstr "Εκτέλεση"
+
+msgid "Extension"
+msgstr "Εσωτερικό"
+
+msgid "Extension Digit"
+msgstr "Ψηφία"
+
+msgid "External"
+msgstr "Εξωτερικά"
+
+msgid "External Phones"
+msgstr "Εξωτερικά τηλέφωνα"
+
+msgid "Factory Defaults"
+msgstr "Αρχικοποίηση"
+
+#, fuzzy
+msgid "Failover Provider"
+msgstr "Πάροχοι"
+
+msgid "Faxes"
+msgstr ""
+
+msgid "Filename"
+msgstr "Αρχείο"
+
+msgid "Finland"
+msgstr "Φινλανδία"
+
+msgid "Finnish"
+msgstr "Φινλανδικά"
+
+msgid "Finnish (formal)"
+msgstr "Φινλανδικά (τυπικά)"
+
+msgid "Firmware"
+msgstr "Firmware"
+
+#, fuzzy
+msgid "Firmware Version"
+msgstr "Έλεγχος έκδοσης firmware"
+
+msgid "Firmware image file:"
+msgstr "Αρχείο firmware:"
+
+msgid "Firmware uploading is not supported on this platform."
+msgstr "Αυτή η πλατφόρμα δεν υποστηρίζει αποστολή νέου firmware."
+
+msgid "Force"
+msgstr "Εξαναγκασμός"
+
+msgid "Format"
+msgstr "Μορφή"
+
+msgid "Format & Initialize"
+msgstr ""
+
+msgid "Formatting failed! (returned "
+msgstr ""
+
+msgid "Formatting successful!"
+msgstr ""
+
+#, fuzzy
+msgid "Framing"
+msgstr "Γαλλία"
+
+msgid "France"
+msgstr "Γαλλία"
+
+msgid "French"
+msgstr "Γαλλικά"
+
+msgid "French (Canada)"
+msgstr "Γαλλικά (Καναδάς)"
+
+msgid "French (formal)"
+msgstr "Γαλλικά (τυπικά)"
+
+msgid "From Address"
+msgstr "Διεύθυνση αποστολέα"
+
+msgid "From Domain"
+msgstr "Τομέας προέλευσης"
+
+msgid "From User"
+msgstr "Χρήστης"
+
+msgid "Functions"
+msgstr "Συναρτήσεις"
+
+msgid "GUI Options"
+msgstr "Επιλογές GUI"
+
+msgid "Gateway"
+msgstr "Πύλη"
+
+#, fuzzy
+msgid "Gateway Name"
+msgstr "Πύλη"
+
+#, fuzzy
+msgid "Gateways"
+msgstr "Πύλη"
+
+msgid "General"
+msgstr "Γενικά"
+
+#, fuzzy
+msgid "General Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "General Setup"
+msgstr "Γενικές ρυθμίσεις"
+
+msgid "Generates a constant 1000Hz tone. Used to test connection quality."
+msgstr "Παράγει έναν σταθερό τόνο 1000Hz. Χρησιμοποιείται για να ελεγχθεί η ποιότητα της σύνδεσης."
+
+#, fuzzy
+msgid "Geneva, Switzerland"
+msgstr "Ελβετία"
+
+msgid "German"
+msgstr "Γερμανικά"
+
+msgid "German (formal)"
+msgstr "Γερμανικά (τυπικά)"
+
+msgid "Germany"
+msgstr "Γερμανία"
+
+msgid "Graph shows last"
+msgstr "Το γράφημα δείχνει τα τελευταία"
+
+msgid "Greece"
+msgstr "Ελλάδα"
+
+#, fuzzy
+msgid "Greek"
+msgstr "Ελλάδα"
+
+#, fuzzy
+msgid "Greek (formal)"
+msgstr "Γαλλικά (τυπικά)"
+
+msgid "Ground Start"
+msgstr "Ground Start"
+
+#, fuzzy
+msgid "Group"
+msgstr "Ονομασία ομάδας"
+
+msgid "Group Members"
+msgstr "Μέλη ομάδας"
+
+msgid "Group name"
+msgstr "Ονομασία ομάδας"
+
+msgid "Guam"
+msgstr ""
+
+#, fuzzy
+msgid "Hardware Port"
+msgstr "Firmware"
+
+#, fuzzy
+msgid "Hawaii Time"
+msgstr "Χρόνος στάθμευσης"
+
+msgid "Helsinki, Finland"
+msgstr ""
+
+msgid "Hide Analog related options"
+msgstr "Απόκρυψη επιλογών PSTN"
+
+msgid "Hide IAX related options"
+msgstr "Απόκρυψη επιλογών IAX"
+
+msgid "Hide ISDN related options"
+msgstr "Απόκρυψη επιλογών ISDN"
+
+msgid "Hide SIP related options"
+msgstr "Απόκρυψη επιλογών SIP"
+
+#, fuzzy
+msgid "Hobart"
+msgstr "Ονομασία υπολογιστή"
+
+msgid "Hong Kong"
+msgstr ""
+
+msgid "Host"
+msgstr "Ονομασία υπολογιστή"
+
+msgid "Hostname"
+msgstr "Ονομασία υπολογιστή"
+
+#, fuzzy
+msgid "Hostname of the PBX."
+msgstr "επανεκκίνηση του τηλεφωνικού κέντρου"
+
+msgid "Hostname,Domain,Username"
+msgstr "Ονομασία συσκευής,Τομέας,Όνομα χρήστη"
+
+msgid "Hot Keys"
+msgstr "Προθέματα"
+
+msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
+msgstr ""
+
+msgid "Hungary"
+msgstr "Ουγγαρία"
+
+msgid "I know, thanks for the warning."
+msgstr ""
+
+msgid "IAX"
+msgstr "IAX"
+
+msgid "IAX Phones"
+msgstr "Τηλέφωνα IAX"
+
+#, fuzzy
+msgid "IP"
+msgstr "SIP"
+
+msgid "IP Address"
+msgstr "Διεύθυνση IP"
+
+msgid "IP Addresses"
+msgstr "Διευθύνσεις IP"
+
+msgid "ISDN"
+msgstr "ISDN"
+
+msgid "ISDN Phones"
+msgstr "Τηλέφωνα ISDN"
+
+#, fuzzy
+msgid "Iceland"
+msgstr "Πολωνία"
+
+msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
+msgstr ""
+
+msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
+msgstr ""
+
+#, fuzzy, php-format
+msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
+msgstr "Αν πιέσετε &quot;Ναι&quot;, το τηλεφωνικό κέντρο θα επανέλθει στις αρχικές του ρυθμίσεις και θα επανεκκινήσει αυτόματα. Όλες οι ρυθμίσεις του συστήματος θα διαγραφούν. Η νέα διεύθυνση του συστήματος θα είναι η 192.168.1.2 και ο κωδικός πρόσβασης που θα πρέπει να χρησιμοποιήσετε για πρόσβαση στο σύστημα θα είναι '%s'."
+
+msgid "If you want to change the password for accessing the webGUI, enter it here twice."
+msgstr "Αν θέλετε να αλλάξετε τον κωδικό πρόσβασης που χρησιμοποιείται για πρόσβαση στη διαχείριση του τηλεφωνικού κέντρου, πληκτρολογήστε τον νέο κωδικό εδώ, δύο φορές."
+
+msgid "If you want to change the username for accessing the webGUI, enter it here."
+msgstr "Αν θέλετε να αλλάξετε το όνομα του χρήστη που θα έχει πρόσβαση στη διαχείριση του τηλεφωνικού κέντρου, εισάγετε το νέο όνομα εδώ."
+
+msgid "Image upload failed (out of memory?)"
+msgstr "Η αποστολή του firmware απέτυχε (έλλειψη μνήμης;)"
+
+msgid "In"
+msgstr "Μέσα"
+
+msgid "Inactive"
+msgstr "Ανενεργές"
+
+#, fuzzy
+msgid "Incoming Extensions"
+msgstr "Εισερχόμενο/α εσωτερικό/ά"
+
+msgid "Incoming Faxes"
+msgstr ""
+
+#, fuzzy
+msgid "Incoming Modification"
+msgstr "Εισερχόμενο/α εσωτερικό/ά"
+
+msgid "India"
+msgstr "Ινδία"
+
+#, fuzzy
+msgid "Indication Tones"
+msgstr "Ζώνη τόνων"
+
+msgid "Individual Ports"
+msgstr ""
+
+#, fuzzy
+msgid "Indonesia"
+msgstr "Ινδία"
+
+msgid "Initial connection failed!"
+msgstr ""
+
+msgid "Initial connection successful!"
+msgstr ""
+
+msgid "Interface"
+msgstr " "
+
+msgid "Internal Phones"
+msgstr "Εσωτερικά τηλέφωνα"
+
+msgid "Internal extension used to reach this application."
+msgstr "Ο αριθμός που θα χρησιμοποιείται για να κληθεί αυτή η εφαρμογή."
+
+msgid "Internal extension used to reach this call group."
+msgstr "Ο αριθμός που θα χρησιμοποιείται για να κληθεί αυτή η ομάδα."
+
+msgid "International Prefix"
+msgstr "Διεθνές πρόθεμα"
+
+#, fuzzy
+msgid "Invalid extension number. Use only numerals."
+msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο εσωτερικό."
+
+msgid "Invalid public access alias."
+msgstr ""
+
+#, fuzzy
+msgid "Ireland"
+msgstr "ανάγνωση:"
+
+msgid "Is there a NATing device between the PBX and this account?"
+msgstr ""
+
+msgid "Israel"
+msgstr "Ισραήλ"
+
+msgid "It contains an doubled \"+\" character, only one is allowed."
+msgstr ""
+
+msgid "It contains an doubled \"-\" character, only one is allowed."
+msgstr ""
+
+msgid "It contains an doubled \"|\" character, only one is allowed."
+msgstr ""
+
+#, fuzzy
+msgid "It contains an invalid character"
+msgstr "Το πεδίο '%s' περιέχει μη έγκυρους χαρακτήρες."
+
+msgid "Italian"
+msgstr "Ιταλικά"
+
+msgid "Italian (formal)"
+msgstr "Ιταλικά (τυπικά)"
+
+msgid "Italy"
+msgstr "Ιταλία"
+
+msgid "Jakarta"
+msgstr ""
+
+msgid "Japan"
+msgstr "Ιαπωνία"
+
+msgid "Japanese"
+msgstr "Ιαπωνικά"
+
+#, fuzzy
+msgid "Japanese (formal)"
+msgstr "Ισπανικά (τυπικά)"
+
+msgid "Jitterbuffer"
+msgstr "Jitterbuffer"
+
+msgid "Jordan"
+msgstr ""
+
+msgid "Kazakhstan"
+msgstr ""
+
+msgid "Keep advanced options in navigation expanded"
+msgstr "Οι επιλογές για ειδικούς στο μενού να παραμένουν ανοικτές"
+
+msgid "Kernel"
+msgstr ""
+
+msgid "Kewl Start"
+msgstr "Kewl Start"
+
+msgid "Kiev, Ukraine"
+msgstr ""
+
+msgid "Kuwait"
+msgstr ""
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "Last Config Change"
+msgstr "Τελευταία μεταβολή ρυθμίσεων"
+
+msgid "Last upload"
+msgstr ""
+
+msgid "Latvia"
+msgstr ""
+
+msgid "Lebanon"
+msgstr ""
+
+#, fuzzy
+msgid "Lisbon, Portugal"
+msgstr "Πορτογαλία"
+
+msgid "Lithuania"
+msgstr "Λιθουανία"
+
+msgid "Loaded"
+msgstr "Ενεργές"
+
+#, fuzzy
+msgid "Local Area Network"
+msgstr "Ενσύρματο δίκτυο"
+
+#, fuzzy
+msgid "Local Interface"
+msgstr "Διεπαφή PSTN"
+
+#, fuzzy
+msgid "Local Prefix"
+msgstr "Εθνικό πρόθεμα"
+
+msgid "Location"
+msgstr "Τοποθεσία"
+
+msgid "Logic"
+msgstr "Λογική"
+
+msgid "Logs"
+msgstr "Ημερολόγια"
+
+msgid "London, Great Britain"
+msgstr ""
+
+msgid "Loop Start"
+msgstr "Loop Start"
+
+msgid "Luxembourg"
+msgstr ""
+
+msgid "MAC Address"
+msgstr "Διεύθυνση MAC"
+
+msgid "Macao"
+msgstr ""
+
+msgid "Madrid, Spain"
+msgstr ""
+
+msgid "Malaysia"
+msgstr "Μαλαισία"
+
+#, fuzzy
+msgid "Malta"
+msgstr "Μαλαισία"
+
+msgid "Manager"
+msgstr "Διαχείριση"
+
+msgid "Manager Interface"
+msgstr "Διαχείριση"
+
+#, php-format
+msgid "Manual Attribute line number %s is invalid."
+msgstr ""
+
+msgid "Manual Attributes"
+msgstr "Πρόσθετες ιδιότητες"
+
+msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
+msgstr "Μπορείτε να προσθέσετε ζεύγη κλειδιών-τιμών (π.χ. <em>κλειδί=τιμή</em>). Αυτές οι ρυθμίσεις θα επισυναφθούν στο αρχείο ρυθμίσεων του Asterisk ή το περιβάλλον αυτού του αντικειμένου. Εκτός και αν έχετε έναν πολύ ειδικό λόγο για να το κάνετε, δεν θα πρέπει να καταχωρήσετε τίποτα σε αυτό το πεδίο. Τιμές οι οποίες δεν είναι σωστά διαμορφωμένες μπορούν να επηρεάσουν τη λειτουργικότητα του τηλεφωνικού κέντρου ή να ανοίξουν 'τρύπες' στην ασφάλεια του συστήματος."
+
+msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
+msgstr "Μέγιστος χρόνος σε χιλιοστά του δευτερολέπτου μεταξύ πληκτρολογήσεων για μια προώθηση με συνεννόηση (προεπλεγμένη τιμή: 500)"
+
+msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
+msgstr "Μέγιστος χρόνος σε δευτερόλεπτα κατά τον οποίο μια κλήση μπορεί να παραμείνει σταθμευμένη, πριν επιστραφεί πίσω σε αυτόν που την στάθμευσε (προεπλεγμένη τιμή: 30)"
+
+msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
+msgstr "Ο μέγιστος χρόνος σε δευτερόλεπτα κατά τον οποίο αναμένεται απάντηση σε μια προώθηση με συνεννόηση (προεπλεγμένη τιμή: 15)."
+
+msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
+msgstr "Μέγιστος χρόνος σε δευτερόλεπτα μεταξύ πιέσεων πλήκτρων κατά την προώθηση κλήσεων (προεπλεγμένη τιμή: 3)"
+
+msgid "Media"
+msgstr "Μέσον"
+
+msgid "Melbourne"
+msgstr ""
+
+msgid "Member"
+msgstr "Μέλος"
+
+#, php-format
+msgid "Member %s has been kicked from conference %s."
+msgstr "Το μέλος %s έχει απομακρυνθεί από τη συνδιάσκεψη %s."
+
+msgid "Members"
+msgstr "Μέλη"
+
+msgid "Memory Usage"
+msgstr "Χρήση μνήμης"
+
+msgid "Mexico"
+msgstr "Μεξικό"
+
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+msgid "Missing caller id."
+msgstr ""
+
+#, fuzzy
+msgid "Missing dialstring."
+msgstr "Κείμενο/αριθμός κλήσης"
+
+msgid "Missing extension number."
+msgstr ""
+
+#, fuzzy
+msgid "Missing password."
+msgstr "χρήση αυτού του κωδικού πρόσβασης"
+
+msgid "Morocco"
+msgstr ""
+
+#, fuzzy
+msgid "Moscow, Russia"
+msgstr "Ρωσία"
+
+msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
+msgstr "Οι περισσότεροι λογαριασμοί θα λειτουργήσουν με τη μέθοδο 'auto'. Σε περίπτωση που παρουσιαστούν προβλήματα, επιλέξτε τη μέθοδο ταυτοποίησης που χρησιμοποιεί ο διακομιστής σας."
+
+msgid "Mount Point"
+msgstr ""
+
+msgid "Mountain Time"
+msgstr ""
+
+msgid "Mountain Time (Arizona, no DST)"
+msgstr ""
+
+msgid "Music-on-Hold"
+msgstr ""
+
+msgid "My Router"
+msgstr "Τον router μου"
+
+msgid "NAT"
+msgstr "NAT"
+
+msgid "NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below."
+msgstr "NAT + δυναμική δημόσια διεύθυνση IP: αυτό το τηλεφωνικό κέντρο είναι πίσω από NAT το οποίο έχει μια δυναμική δημόσια διεύθυνση IP. Απαιτείται μια ονομασία συσκευής η οποία να ενημερώνεται διαρκώς. Εισάγετε τις απαιτούμενες πληροφορίες πιο κάτω."
+
+msgid "NAT + Static Public IP: this PBX is behind a NAT which has a static public IP. Enter this IP below."
+msgstr "NAT + στατική δημόσια διεύθυνση IP: αυτό το τηλεφωνικό κέντρο είναι πίσω από NAT το οποίο έχει μια στατική δημόσια διεύθυνση IP. Εισάγετε αυτή τη διεύθυνση πιο κάτω."
+
+msgid "NAT + dynamic public IP"
+msgstr "NAT + δυναμική  δημόσια διεύθυνση IP"
+
+msgid "NAT + static public IP"
+msgstr "NAT + στατική δημόσια διεύθυνση IP"
+
+#, fuzzy
+msgid "NTP Server"
+msgstr "Διακομιστής ώρας NTP"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "National Prefix"
+msgstr "Εθνικό πρόθεμα"
+
+msgid "Navigation"
+msgstr "Πλοήγηση"
+
+msgid "Nested square brackets are not allowed."
+msgstr ""
+
+msgid "Netherlands"
+msgstr "Ολλανδία"
+
+msgid "Network"
+msgstr "Ενσύρματο δίκτυο"
+
+msgid "Network Traffic"
+msgstr "Κίνηση δικτύου"
+
+#, fuzzy
+msgid "Networking"
+msgstr "Ενσύρματο δίκτυο"
+
+#, fuzzy
+msgid "New Application"
+msgstr "Εφαρμογή"
+
+msgid "New Zealand"
+msgstr "Νέα Ζηλανδία"
+
+msgid "Newfoundland Time"
+msgstr ""
+
+#, fuzzy
+msgid "Nigeria"
+msgstr "Σειριακό"
+
+msgid "No"
+msgstr "Όχι"
+
+#, fuzzy
+msgid "No additional storage devices were detected."
+msgstr "Δεν βρέθηκαν συμβατές διεπαφές PSTN."
+
+#, fuzzy
+msgid "No compatible analog ports were detected."
+msgstr "Δεν βρέθηκαν συμβατές διεπαφές PSTN."
+
+#, fuzzy
+msgid "No compatible isdn ports were detected."
+msgstr "Δεν βρέθηκαν συμβατές διεπαφές PSTN."
+
+msgid "No last upload."
+msgstr ""
+
+msgid "No other Providers for failover."
+msgstr ""
+
+msgid "No ports assigned."
+msgstr ""
+
+msgid "Non-Members"
+msgstr "Μη-μέλη"
+
+msgid "Norway"
+msgstr "Νορβηγία"
+
+msgid "Note:"
+msgstr "Σημείωση:"
+
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+#, fuzzy
+msgid "Notifications"
+msgstr "Τοποθεσία"
+
+msgid "Number"
+msgstr "Αριθμός"
+
+#, fuzzy
+msgid "Number or string to be dialed to reach this telephone."
+msgstr "Ο εξερχόμενος πάροχος που θα χρησιμοποιηθεί για να κληθεί αυτό το τηλέφωνο."
+
+msgid "OK\n"
+msgstr "OK\n"
+
+#, fuzzy
+msgid "Oman"
+msgstr "Γερμανικά"
+
+#, fuzzy
+msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
+msgstr "Επιλέξτε ένα αρχείο XML που περιέχει προηγούμενες ρυθμίσεις του συστήματος και πιέστε το κουμπί για να επαναφέρετε τις ρυθμίσεις αυτές στο σύστημά σας."
+
+msgid "Optional PIN needed to access this conference room."
+msgstr "Ένα προαιρετικό PIN για να επιτραπεί η πρόσβαση σε αυτόν τον χώρο συνδιάσκεψης."
+
+msgid "Options"
+msgstr "Επιλογές"
+
+#, fuzzy
+msgid "Oslo, Norway"
+msgstr "Νορβηγία"
+
+msgid "Out"
+msgstr "Έξω"
+
+msgid "Outgoing Calls Only"
+msgstr "Μόνο εξερχόμενες κλήσεις"
+
+#, fuzzy
+msgid "Outgoing Patterns"
+msgstr "Εξερχόμενη ταυτότητα καλούντος"
+
+#, fuzzy
+msgid "Outgoing Presentation"
+msgstr "Παρουσίαση"
+
+#, fuzzy
+msgid "Outgoing provider or protocol used to reach this telephone."
+msgstr "Ο εξερχόμενος πάροχος που θα χρησιμοποιηθεί για να κληθεί αυτό το τηλέφωνο."
+
+msgid "PHP parsing error"
+msgstr ""
+
+#, fuzzy
+msgid "Pacific Time"
+msgstr "Χρόνος στάθμευσης"
+
+msgid "Package activated successfully."
+msgstr "Το πακέτο ενεργοποιήθηκε επιτυχώς."
+
+msgid "Package deactivated successfully."
+msgstr "Το πακέτο απενεργοποιήθηκε επιτυχώς."
+
+msgid "Package deleted successfully."
+msgstr "Το πακέτο διαγράφηκε επιτυχώς."
+
+msgid "Package installed successfully."
+msgstr "Το πακέτο εγκαταστάθηκε επιτυχώς."
+
+msgid "Package restored successfully."
+msgstr "Το πακέτο επαναφέρθηκε επιτυχώς."
+
+msgid "Packages"
+msgstr "Πακέτα"
+
+msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
+msgstr "Θα στέλνονται πακέτα σε αυτόν το λογαριασμό κάθε <i>n</i> δευτερόλεπτα για να ελέγχεται η κατάστασή του.<br>Προεπιλεγμένη τιμή: '2'. Καταχωρήστε '0' για απενεργοποίηση."
+
+msgid "Pakistan"
+msgstr ""
+
+#, fuzzy
+msgid "Paris, France"
+msgstr "Γαλλία"
+
+msgid "Park Extension"
+msgstr "Εσωτερικό στάθμευσης"
+
+msgid "Park Time"
+msgstr "Χρόνος στάθμευσης"
+
+msgid "Parking Range"
+msgstr "Εύρος εσωτερικών στάθμευσης"
+
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+msgid "Pattern(s)"
+msgstr "Πρότυπο/α"
+
+msgid "Pbx"
+msgstr ""
+
+msgid "Permissions"
+msgstr "Δικαιώματα"
+
+msgid "Permit Network"
+msgstr "Επιτρεπτό δίκτυο"
+
+msgid "Persistence"
+msgstr ""
+
+#, fuzzy
+msgid "Perth"
+msgstr "Πορτογαλία"
+
+#, fuzzy
+msgid "Peru"
+msgstr "Πορτογαλία"
+
+msgid "Philippines"
+msgstr "Φιλιππίνες"
+
+#, fuzzy
+msgid "Phone"
+msgstr "Τηλέφωνα"
+
+msgid "Phone Connectivity"
+msgstr ""
+
+msgid "Phones"
+msgstr "Τηλέφωνα"
+
+msgid "Pin"
+msgstr "Pin"
+
+msgid "Point-to-Multipoint (PTMP)"
+msgstr ""
+
+msgid "Point-to-Point (PTP)"
+msgstr ""
+
+msgid "Poland"
+msgstr "Πολωνία"
+
+msgid "Polish"
+msgstr "Πολωνικά"
+
+msgid "Polish (formal)"
+msgstr "Πολωνικά (τυπικά)"
+
+#, fuzzy
+msgid "Port"
+msgstr "Πορτογαλία"
+
+#, fuzzy
+msgid "Ports"
+msgstr "Πορτογαλία"
+
+msgid "Ports impedance"
+msgstr ""
+
+msgid "Portugal"
+msgstr "Πορτογαλία"
+
+msgid "Portuguese (Brazil)"
+msgstr "Πορτογαλικά (Βραζιλία)"
+
+msgid "Portuguese, Brazil"
+msgstr "Πορτογαλικά (Βραζιλία)"
+
+msgid "Portuguese, Brazil (formal)"
+msgstr "Πορτογαλικά (Βραζιλία) (τυπικά)"
+
+#, fuzzy
+msgid "Prague, Czech Republic"
+msgstr "Τσεχία"
+
+msgid "Prepend Caller ID name with text above"
+msgstr ""
+
+msgid "Prepend Caller ID number with number above"
+msgstr ""
+
+msgid "Previously Used Disks"
+msgstr ""
+
+msgid "Printable Dialplan"
+msgstr "Εκτυπώσιμο πλάνο κλήσεων"
+
+#, fuzzy
+msgid "Private Prefix"
+msgstr "Εθνικό πρόθεμα"
+
+msgid "Private RSA Key"
+msgstr ""
+
+msgid "Provider"
+msgstr "Πάροχος"
+
+#, fuzzy
+msgid "Provider Port Groups"
+msgstr "Πάροχοι"
+
+#, fuzzy
+msgid "Provider host URL or IP address and optional port."
+msgstr "Το URL του διακομιστή SMTP ή η διεύθυνση IP του και προαιρετικά η θύρα."
+
+msgid "Providers"
+msgstr "Πάροχοι"
+
+#, fuzzy
+msgid "Public Access"
+msgstr "Δημόσια διεύθυνση IP"
+
+msgid "Public Hostname"
+msgstr "Δημόσια ονομασία συσκευής"
+
+msgid "Public IP Address: this PBX has a routable IP address (entered above)"
+msgstr "Δημόσια διεύθυνση IP: αυτό το τηλεφωνικό κέντρο έχει μια διεύθυνση IP (που καταχωρήσατε πιο πάνω) η οποία είναι απ' ευθείας προσβάσιμη από τα εξωτερικά δίκτυα"
+
+msgid "Public IP address"
+msgstr "Δημόσια διεύθυνση IP"
+
+msgid "Public Number"
+msgstr "Δημόσιος αριθμός"
+
+#, fuzzy
+msgid "Public RSA Key"
+msgstr "Δημόσια διεύθυνση IP"
+
+msgid "Qualify"
+msgstr "Πιστοποίηση"
+
+#, fuzzy
+msgid "RSA Keys"
+msgstr "Προθέματα"
+
+msgid "RTP"
+msgstr "RTP"
+
+msgid "RTP Port Range"
+msgstr "Εύρος θυρών RTP"
+
+msgid "Read"
+msgstr "Ανάγνωση"
+
+msgid "Reboot"
+msgstr "Επανεκκίνηση"
+
+msgid "Redfone"
+msgstr ""
+
+#, fuzzy
+msgid "Regional Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Registration"
+msgstr "Εγγραφή"
+
+msgid "Registration Expiration Timeouts"
+msgstr "Χρόνος ζωής εγγραφών"
+
+msgid "Remote IP"
+msgstr ""
+
+#, fuzzy
+msgid "Remote Interface"
+msgstr " "
+
+msgid "Remote MAC"
+msgstr ""
+
+#, fuzzy
+msgid "Replace Caller ID name with Caller ID number"
+msgstr "Αντικατάσταση του ονόματος καλούντος με τον αριθμό καλούντος"
+
+msgid "Replace Caller ID with text above"
+msgstr ""
+
+msgid "Restore configuration"
+msgstr "Επαναφορά ρυθμίσεων"
+
+#, fuzzy
+msgid "Resuming updates"
+msgstr "λεπτά"
+
+msgid "Ring Length"
+msgstr "Διάρκεια κουδουνίσματος"
+
+#, fuzzy
+msgid "Romania"
+msgstr "Τομέας"
+
+#, fuzzy
+msgid "Rome, Italy"
+msgstr "Ιταλία"
+
+msgid "Room Number"
+msgstr "Αριθμός χώρου"
+
+msgid "Russia"
+msgstr "Ρωσία"
+
+msgid "Russia / ex Soviet Union"
+msgstr "Ρωσία / πρώην Σοβιετική Ένωση"
+
+msgid "Russian"
+msgstr "Ρώσικα"
+
+msgid "Russian (formal)"
+msgstr "Ρώσικα (τυπικά)"
+
+#, fuzzy
+msgid "Russian Federation / Former Soviet Union"
+msgstr "Ρωσία / πρώην Σοβιετική Ένωση"
+
+msgid "SIP"
+msgstr "SIP"
+
+msgid "SIP Phones"
+msgstr "Τηλέφωνα SIP"
+
+msgid "SMTP Client Setup"
+msgstr ""
+
+msgid "SMTP host URL or IP address and optional port."
+msgstr "Το URL του διακομιστή SMTP ή η διεύθυνση IP του και προαιρετικά η θύρα."
+
+msgid "Saudi Arabia"
+msgstr ""
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Secret"
+msgstr "Κωδικός πρόσβασης"
+
+#, fuzzy
+msgid "Security"
+msgstr "Κωδικός πρόσβασης"
+
+msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
+msgstr "Επιλέξτε όλες τις ζώνες τόνων που θέλετε να υποστηρίζονται από τις αναλογικές διεπαφές. <strong>Η πρώτη ζώνη τόνων θα είναι η προεπιλεγμένη."
+
+msgid "Select how often the time should be synchronized."
+msgstr ""
+
+msgid "Select in which language you want the webGUI to be displayed."
+msgstr "Επιλέξτε σε ποια γλώσσα θέλετε να βλέπετε το περιβάλλον διαχείρισης."
+
+msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
+msgstr ""
+
+#, fuzzy
+msgid "Select the location closest to you."
+msgstr "Επιλέξτε την τοποθεσία που βρίκσεται πιο κοντά σε εσάς."
+
+#, fuzzy
+msgid "Select which country's indication tones (the ringing, busy and error tones) to be used."
+msgstr "Επιλέξτε τη χώρα της οποίας οι τηλεφωνικοί τόνοι θα χρησιμοποιηθούν."
+
+#, fuzzy
+msgid "Select which disk you would like to format."
+msgstr "Επιλέξτε ποια πακέτα θέλετε να εγκαταστήσετε."
+
+msgid "Select which ethernet port on the gateway this system is connected to."
+msgstr ""
+
+msgid "Select which ethernet port on this system the gateway is connected to."
+msgstr ""
+
+msgid "Send all incoming faxes here."
+msgstr ""
+
+msgid "Service"
+msgstr ""
+
+msgid "Service Type"
+msgstr "Είδος υπηρεσίας"
+
+msgid "Services"
+msgstr "Υπηρεσίες"
+
+msgid "Set a friendlier alias above if you would like to use a word or name instead of the extension number."
+msgstr ""
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#, fuzzy
+msgid "Signaling"
+msgstr "Σήμα"
+
+msgid "Singapore"
+msgstr "Σιγκαπούρη"
+
+msgid "Size"
+msgstr "Μέγεθος"
+
+msgid "Skinny"
+msgstr ""
+
+msgid "Slovakia"
+msgstr ""
+
+#, fuzzy
+msgid "Slovenia"
+msgstr "Αποθήκευση"
+
+msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
+msgstr "Μερικοί πάροχοι χρειάζονται ένα διαφορετικό τομέα προέλευσης. <br>Η προεπιλεγμένη τιμή είναι η ονομασία υπολογιστή που καταχωρήσατε πιο πάνω."
+
+msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
+msgstr "Μερικοί πάροχοι χρειάζονται ένα διαφορετικό όνομα χρήστη. <br>Η προεπιλεγμένη τιμή είναι το όνομα που καταχωρήσατε πιο πάνω."
+
+#, fuzzy
+msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
+msgstr "Μερικοί πάροχοι χρειάζονται ένα διαφορετικό όνομα χρήστη πιστοποίησης. <br>Η προεπιλεγμένη τιμή είναι το όνομα χρήστη που καταχωρήσατε πιο πάνω."
+
+msgid "South Africa"
+msgstr "Νότια Αφρική"
+
+#, fuzzy
+msgid "South Korea"
+msgstr "Νότια Αφρική"
+
+msgid "Spain"
+msgstr "Ισπανία"
+
+#, fuzzy
+msgid "Span"
+msgstr "Ισπανία"
+
+#, fuzzy
+msgid "Span Count"
+msgstr "Πλήθος"
+
+#, fuzzy
+msgid "Spanish (Spain)"
+msgstr "Ισπανικά (τυπικά)"
+
+msgid "Spanish (formal)"
+msgstr "Ισπανικά (τυπικά)"
+
+#, fuzzy
+msgid "Spans"
+msgstr "Ισπανικά"
+
+msgid "Start Signaling"
+msgstr "Έναρξη σηματοδότησης"
+
+msgid "State"
+msgstr "Κατάσταση"
+
+msgid "Static Public IP"
+msgstr "Στατική δημόσια διεύθυνση IP"
+
+msgid "Status"
+msgstr "Κατάσταση"
+
+msgid "Stockholm, Sweden"
+msgstr ""
+
+msgid "Stopped updates"
+msgstr ""
+
+msgid "Storage"
+msgstr "Αποθήκευση"
+
+#, fuzzy
+msgid "Storage Disk"
+msgstr "Επεξεργασία δίσκου"
+
+#, fuzzy
+msgid "Storage Services"
+msgstr "Υπηρεσίες"
+
+msgid "Subject"
+msgstr "Θέμα"
+
+#, php-format
+msgid "Successfully installed %s formatted prompts for %s."
+msgstr ""
+
+msgid "Summary"
+msgstr "Περίληψη"
+
+msgid "Supported file formats"
+msgstr ""
+
+msgid "Sweden"
+msgstr "Σουηδία"
+
+msgid "Swedish"
+msgstr "Σουηδικά"
+
+msgid "Switch to bytes/s"
+msgstr "Αλλαγή σε bytes/s"
+
+msgid "Switzerland"
+msgstr "Ελβετία"
+
+msgid "Sydney"
+msgstr ""
+
+#, fuzzy
+msgid "Syria"
+msgstr "Σειριακό"
+
+msgid "System"
+msgstr "Σύστημα"
+
+msgid "System Information"
+msgstr "Πληροφορίες συστήματος"
+
+msgid "System log entries"
+msgstr "Εγγραφές ημερολογίου συστήματος"
+
+msgid "Taiwan"
+msgstr "Ταϊβάν"
+
+#, fuzzy
+msgid "Tallinn, Estonia"
+msgstr "Εσθονία"
+
+msgid "TeeBX Test E-mail"
+msgstr ""
+
+#, php-format
+msgid "TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"
+msgstr ""
+
+msgid "TeeBX&reg; &copy; 2010-2011 Giovanni Vallesi. All rights reserved."
+msgstr ""
+
+msgid "TeeBX: execute command"
+msgstr ""
+
+msgid "Telephone number assigned to this line."
+msgstr "Ο αριθμός κλήσης αυτής της γραμμής."
+
+#, fuzzy
+msgid "Telephony Ports"
+msgstr "διαγραφή τηλεφώνου"
+
+msgid "Test E-mail"
+msgstr "Δοκιμαστικό e-mail."
+
+msgid "Text to be displayed for Caller ID."
+msgstr "Το κείμενο που θα παρουσιαστεί ως ταυτότητα καλούντος."
+
+msgid "Thailand"
+msgstr "Ταϊλάνδη"
+
+#, fuzzy, php-format
+msgid "The %s field is required."
+msgstr "Το πεδίο '%s' είναι αναγκαίο."
+
+#, fuzzy, php-format
+msgid "The %s field must be numeric."
+msgstr "Τα PINs των συνδιασκέψεων πρέπει να είναι αριθμητικά."
+
+msgid "The IP address of the foneBRIDGE2 network interface."
+msgstr ""
+
+#, fuzzy
+msgid "The MAC address of this phone."
+msgstr "Το εσωτερικό που θα χρησιμοποιείτε για να καλέσετε αυτό το τηλέφωνο."
+
+msgid "The PBX will reboot after restoring the configuration."
+msgstr "Το τηλεφωνικό κέντρο θα επανεκκινήσει μετά την επαναφορά των ρυθμίσεων."
+
+msgid "The audio file could not be uploaded. (file upload error)."
+msgstr ""
+
+msgid "The audio file could not be uploaded. (filetype error)"
+msgstr ""
+
+msgid "The changes have been applied successfully."
+msgstr "Οι μεταβολές τέθηκαν σε εφαρμογή επιτυχώς."
+
+msgid "The changes have been applied successfully. No upload file found but there was an old custom Music-on-Hold file."
+msgstr ""
+
+msgid "The changes have been applied successfully. No upload file found but there was an old custom voicemail greeting file."
+msgstr ""
+
+msgid "The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect."
+msgstr "Οι μεταβολές αποθηκεύτηκαν. Πρέπει να <a href=\"/system_reboot.php\">επανεκκινήσετε</a> το τηλεφωνικό σας κέντρο για να τεθούν σε εφαρμογή οι μεταβολές σας."
+
+msgid "The conference room's number, also the extension that this conference is reachable at."
+msgstr "Ο αριθμός κλήσης αυτού του χώρου συνδιάσκεψης. Επίσης, ο αριθμός που θα χρησιμοποιείτε για να συμμετάσχετε σε αυτή τη συνδιάσκεψη."
+
+msgid "The configuration could not be restored (file upload error)."
+msgstr "Ήταν αδύνατη η επαναφορά των ρυθμίσεων (πρόβλημα αποστολής αρχείου)."
+
+msgid "The configuration could not be restored."
+msgstr "Ήταν αδύνατη η επαναφορά των ρυθμίσεων."
+
+msgid "The configuration has been restored. The PBX is now rebooting."
+msgstr "Έγινε επαναφορά των ρυθμίσεων. Γίνεται επενεκκίνηση του τηλεφωνικού κέντρου."
+
+msgid "The digital signature on this image is invalid."
+msgstr "Η ηλεκτρονική υπογραφή του firmware δεν είναι έγκυρη."
+
+msgid "The domain may only contain the characters a-z, 0-9, '-' and '.'."
+msgstr "Η ονομασία του τομέα μπορεί να περιέχει μόνο τους χαρακτήρες a-z, 0-9, '-' και '.'."
+
+msgid "The dynamic DNS username contains invalid characters."
+msgstr "Το όνομα χρήστη για το δυναμικό DNS περιέχει μη έγκυρους χαρακτήρες."
+
+msgid "The echo canceller window size. If your calls have echo, try increasing this window."
+msgstr ""
+
+msgid "The end parking position must be larger than the start position."
+msgstr "Η τελική θέση στάθμευσης πρέπει να είναι μεγαλύτερη από την αρχική."
+
+#, php-format
+msgid "The field '%s' contains invalid characters."
+msgstr "Το πεδίο '%s' περιέχει μη έγκυρους χαρακτήρες."
+
+#, php-format
+msgid "The field '%s' is required."
+msgstr "Το πεδίο '%s' είναι αναγκαίο."
+
+msgid "The filetype could not be recognized (file upload error)."
+msgstr ""
+
+msgid "The firmware is now being installed. The PBX will reboot automatically."
+msgstr "Γίνεται εγκατάσταση του firmware. Το τηλεφωνικό κέντρο θα επανεκκινήσει αυτόματα."
+
+msgid "The following input errors were detected:"
+msgstr "Εντοπίστηκαν τα ακόλουθα λάθη στην καταχώρησή σας:"
+
+msgid "The following variables can be used in the e-mail notification"
+msgstr "Μπορείτε να χρησιμοποιήσετε τις ακόλουθες μεταβλητές στο μήνυμα ειδοποίησης"
+
+msgid "The hardware port this phone is connected to."
+msgstr ""
+
+msgid "The high RTP port must be greater than the low RTP port."
+msgstr "Η υψηλή θύρα RTP πρέπει να είναι μεγαλύτερη από την χαμηλή θύρα RTP."
+
+msgid "The hostname may only contain the characters a-z, 0-9 and '-'."
+msgstr "Η ονομασία της συσκευής μπορεί να περιέχει μόνο τους χαρακτήρες a-z, 0-9 και '-'."
+
+msgid "The image file is corrupt."
+msgstr "Το firmware είναι κατεστραμμένο."
+
+#, php-format
+msgid "The incoming extension pattern \"%s\" is invalid. %s"
+msgstr "Το εισερχόμενο πρότυπο κλήσης εσωτερικών \"%s\" δεν είναι έγκυρο. %s"
+
+#, fuzzy
+msgid "The internal number used to dial this phone."
+msgstr "Το εσωτερικό που θα χρησιμοποιείτε για να καλέσετε αυτό το τηλέφωνο."
+
+msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
+msgstr "Το ελάχιστο, μέγιστο και προεπιλεγμένο πλήθος δευτερολέπτων κατά το οποίο οι εισερχόμενες και εξερχόμενες εγγραφές και συνδρομές παραμένουν έγκυρες."
+
+#, fuzzy
+msgid "The number of seconds this phone will ring before giving up or going to voicemail."
+msgstr "Ο χρόνος (σε δευτερόλεπτα) κατά τον οποίο θα κουδουνίζει το τηλέφωνο μέχρι η κλήση να θεωρηθεί αναπάντητη."
+
+#, fuzzy
+msgid "The number used to dial this application."
+msgstr "Το εσωτερικό που θα χρησιμοποιείτε για να καλέσετε αυτό το τηλέφωνο."
+
+msgid "The number used to dial this fax."
+msgstr ""
+
+#, fuzzy
+msgid "The number used to dial this phone."
+msgstr "Το εσωτερικό που θα χρησιμοποιείτε για να καλέσετε αυτό το τηλέφωνο."
+
+#, fuzzy, php-format
+msgid "The outgoing dial-pattern \"%s\" is invalid. %s"
+msgstr "Το πρότυπο κλήσης \"%s\" δεν είναι έγκυρο. %s"
+
+msgid "The passwords do not match."
+msgstr "Οι δύο κωδικοί πρόσβασης δεν είναι ίδιοι."
+
+msgid "The port range which RTP streams should use. (default:"
+msgstr "Το εύρος θυρών που θα χρησιμοποιεί η ροή RTP (προεπιλεγμένη τιμή:"
+
+msgid "The prefix used when dialing international numbers (usually 00)"
+msgstr ""
+
+msgid "The prefix used when dialing numbers within your city (i.e. 0711)"
+msgstr ""
+
+msgid "The prefix used when dialing numbers within your company (i.e. 07115678)"
+msgstr ""
+
+msgid "The prefix used when dialing numbers within your country (usually 0)"
+msgstr ""
+
+msgid "The provider will be contacted this often to check its availability."
+msgstr ""
+
+#, fuzzy
+msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
+msgstr "Το σύστημα έχει αρχικοποιηθεί και θα επενακκινήσει. Παρακαλώ περιμένετε για 30 δευτερόλεπτα."
+
+msgid "The system is rebooting now. This may take a minute."
+msgstr "Το σύστημα επανεκκινεί. Παρακαλώ περιμένετε για περίπου 30 δευτερόλεπτα."
+
+#, php-format
+msgid "The uploaded image file is not for this platform (%s)."
+msgstr "Το firmware που στάλθηκε δεν προορίζεται γι' αυτή την πλατφόρμα (%s)."
+
+msgid "The username may only contain the characters a-z, A-Z and 0-9."
+msgstr "Το όνομα χρήστη μπορεί να περιέχει μόνο τους χαρακτήρες a-z, A-Z και 0-9."
+
+#, fuzzy
+msgid "The username of \"admin\" is already used internally by the system."
+msgstr "Το όνομα \"admin\" χρησιμοποιείται ήδη εσωτερικά από το τηλεφωνικό κέντρο."
+
+msgid "The wildcard character \"!\" is not allowed before a prefix which is to be removed."
+msgstr ""
+
+msgid "The wildcard character \".\" is not allowed before a prefix which is to be removed."
+msgstr ""
+
+msgid "There are currently no active channels."
+msgstr "Δεν υπάρχουν ενεργά κανάλια αυτή τη στιγμή."
+
+msgid "There are currently no active conferences."
+msgstr "Δεν υπάρχουν ενεργές συνδιασκέψεις αυτή τη στιγμή."
+
+msgid "There has been an error verifying the signature on this image."
+msgstr "Παρουσιάστηκε ένα πρόβλημα κατά την πιστοποίηση της υπογραφής του firmware."
+
+#, php-format
+msgid "There is an update for your version of TeeBX available: %s<br>Download it at <a target='_blank' href='http://www.teebx.org/software'>www.teebx.org/software</a>"
+msgstr ""
+
+msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
+msgstr "Αυτός ο 'εξωτερικός' αριθμός θα διαβαστεί στον καλούντα όταν καλέσει τη φωνητική του θυρίδα. Η προεπιλεγμένη τιμή είναι το όνομα χρήστη του λογαριασμού, αν αυτό είναι αριθμητικό. Αν δεν είναι αριθμητικό, τότε θα διαβαστεί ο εσωτερικός αριθμός στον οποίο τερματίστηκε η κλήση."
+
+msgid "This PBX"
+msgstr ""
+
+msgid "This account's password."
+msgstr "Ο κωδικός πρόσβασης αυτού του λογαριασμού."
+
+msgid "This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank"
+msgstr "Αυτό το πεδίο μπορεί να χρησιμοποιηθεί για να μεταβληθεί (να γίνει &quot;spoofing&quot;) η διεύθυνση MAC της κάρτας δικτύου.<br>Εισάγετε μια διεύθυνση MAC με τη μορφή: xx:xx:xx:xx:xx:xx ή αφήστε το πεδίο κενό."
+
+msgid "This image is not digitally signed."
+msgstr "To firmware δεν έχει ηλεκτρονική υπογραφή."
+
+msgid "This information should be updated by:"
+msgstr "Αυτές οι πληροφορίες πρέπει να ενημερώνονται από:"
+
+msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
+msgstr ""
+
+msgid "This key combination activates a blind transfer (default ##)."
+msgstr "Αυτό ο συνδυασμός ενεργοποιεί μια άμεση προώθηση (προεπιλεγμένη τιμή: ##)."
+
+msgid "This key combination activates an attended transfer (default **)."
+msgstr "Αυτό ο συνδυασμός ενεργοποιεί μια προώθηση με συνεννόηση (προεπιλεγμένη τιμή: **)."
+
+msgid "This range of extensions is where parked calls reside (default 701-720)."
+msgstr "Το εύρος των εσωτερικών στο οποίο γίνεται στάθμευση κλήσεων (προεπλεγμένη τιμή: 701-720)."
+
+msgid "This will be shown as voicemail service's sending address."
+msgstr "Αυτή είναι η διεύθυνση αποστολέα που θα φαίνεται στα μηνύματα που προέρχονται από την υπηρεσία φωνητικών θυρίδων."
+
+msgid "Time"
+msgstr "Ώρα"
+
+msgid "Time Synchronization"
+msgstr ""
+
+msgid "Time zone"
+msgstr "Ζώνη ώρας"
+
+msgid "Timeouts"
+msgstr "Χρόνοι αναμονής"
+
+msgid "Toggle auto-updates"
+msgstr ""
+
+msgid "Tokyo, Japan"
+msgstr ""
+
+msgid "Tone Zones"
+msgstr "Ζώνες τόνων"
+
+msgid "Topology"
+msgstr "Τοπολογία"
+
+msgid "Transfer Key"
+msgstr "Προώθηση"
+
+msgid "Transfers"
+msgstr "Προωθήσεις"
+
+msgid "Turkish"
+msgstr ""
+
+#, fuzzy
+msgid "Turkish (formal)"
+msgstr "Δανικά (τυπικά)"
+
+msgid "Type"
+msgstr "Τύπος"
+
+msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
+msgstr "Πληκτρολογήστε μια διεύθυνση e-mail και κάντε κλικ στην &quot;Αποστολή e-mail&quot; για να δοκιμάσετε τις ρυθμίσεις SMTP."
+
+msgid "USA & Canada"
+msgstr ""
+
+msgid "UTC"
+msgstr ""
+
+msgid "Ulaanbaatar, Mongolia"
+msgstr ""
+
+msgid "United Arab Emirates"
+msgstr ""
+
+msgid "United Kingdom"
+msgstr "Ηνωμένο Βασίλειο"
+
+#, fuzzy
+msgid "United States"
+msgstr "Ζωντανά στατιστικά"
+
+msgid "United States / North America"
+msgstr "ΗΠΑ / Βόρειος Αμερική"
+
+msgid "United States Circa 1950/ North America"
+msgstr "ΗΠΑ (1950)/ Βόρειος Αμερική"
+
+msgid "Unmatched square bracket."
+msgstr ""
+
+msgid "Update"
+msgstr "Ενημέρωση"
+
+#, fuzzy
+msgid "Update Interval"
+msgstr "Συχνότητα ενημέρωσης ώρας"
+
+msgid "Updates"
+msgstr ""
+
+msgid "Upgrade firmware"
+msgstr "Αναβάθμιση firmware"
+
+msgid "Upload"
+msgstr "Αποστολή"
+
+msgid "Upload:"
+msgstr "Αποστολή:"
+
+msgid "Uptime"
+msgstr "Χρόνος λειτουργίας"
+
+msgid "Use Jitterbuffer even when bridging two endpoints."
+msgstr "Χρήση Jitterbuffer ακόμα και αν γίνεται γεφύρωση δύο τερματικών."
+
+msgid "Use this number as your username."
+msgstr ""
+
+msgid "User defined e-mail text"
+msgstr "Τροποποίηση προεπιλεγμένου μηνύματος"
+
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+msgid "Venezuela / South America"
+msgstr "Βενεζουέλα / Νότιος Αμερική"
+
+msgid "Version"
+msgstr "Έκδοση"
+
+msgid "Video"
+msgstr ""
+
+#, fuzzy
+msgid "Voice Prompts"
+msgstr "Ηχητικές προτροπές"
+
+msgid "Voicemail"
+msgstr "Φωνητικές θυρίδες"
+
+msgid "Voicemail Greeting"
+msgstr ""
+
+msgid "Voicemail to E-Mail Presentation"
+msgstr ""
+
+msgid "Voicemail to e-mail enabled but the e-mail address is invalid or missing."
+msgstr ""
+
+msgid "Volume"
+msgstr ""
+
+msgid "Wake-Up call manager. Call to set and cancel wake-up calls on the current extension."
+msgstr "Διαχειριστής αφύπνισης. Καλέστε για να ενεργοποιήσετε και να απενεργοποιήσετε κλήσεις αφύπνισης στο εσωτερικό από το οποίο καλείτε."
+
+msgid "Warning"
+msgstr "Προειδοποίηση"
+
+msgid "Warning:"
+msgstr "Προειδοποίηση:"
+
+msgid "Wellington"
+msgstr ""
+
+msgid "Write"
+msgstr "Εγγραφή"
+
+#, php-format
+msgid "XML error: %s"
+msgstr "Σφάλμα XML: %s"
+
+msgid "Yemen"
+msgstr ""
+
+msgid "Yes"
+msgstr "Ναι"
+
+msgid "Yes, alias \"*.hostname.domain\" to hostname specified above."
+msgstr "Ναι, να υποκατασταθεί το \"*.hostname.domain\" με την ονομασία συσκευής που ορίστηκε πιο πάνω."
+
+msgid "You are using the most recent <strong>beta</strong> of TeeBX."
+msgstr ""
+
+msgid "You are using the most recent version of TeeBX."
+msgstr ""
+
+msgid "You may enter a description here for your reference (not parsed)."
+msgstr "Μπορείτε να καταχωρήσετε μια περιγραφή σαν σημείωση, για μεταγενέστερη αναφορά (δεν χρησιμοποιείται από το σύστημα)."
+
+msgid "You must reboot the system before you can upgrade the firmware."
+msgstr "Πρέπει να επανεκκινήσετε το σύστημα πριν μπορέσετε να αναβαθμίσετε τo firmware."
+
+msgid "Your Name &lt;number&gt;"
+msgstr "Το όνομά σας &lt;Αριθμός&gt;"
+
+#, fuzzy
+msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
+msgstr "Οι ρυθμίσεις SMTP λειτουργούν χωρίς πρόβλημα. Μπορείτε τώρα να χρησιμοποιήσετε την αποστολή φωνητικών μηνυμάτων και ειδοποιήσεων αναπάντητων κλήσεων."
+
+msgid "access the webGUI with the new IP address"
+msgstr "πρόσβαση στο περιβάλλον διαχείρισης με τη νέα διεύθυνση IP"
+
+msgid "activate disk"
+msgstr ""
+
+msgid "active"
+msgstr "ενεργό"
+
+msgid "add application mapping"
+msgstr "προσθήκη αντιστοίχησης εφαρμογής"
+
+msgid "add call group"
+msgstr "προσθήκη ομάδας τηλεφώνων"
+
+msgid "add conference room"
+msgstr "προσθήκη χώρου συνδιάσκεψης"
+
+msgid "add disk"
+msgstr ""
+
+#, fuzzy
+msgid "add gateway"
+msgstr "επεξεργασία ενός αντικειμένου"
+
+msgid "add incoming extension mapping"
+msgstr "προσθήκη "
+
+msgid "add manager user"
+msgstr "προσθήκη διαχειριστή"
+
+#, fuzzy
+msgid "add port group"
+msgstr "προσθήκη ομάδας τηλεφώνων"
+
+#, fuzzy
+msgid "add set"
+msgstr "προς"
+
+#, fuzzy
+msgid "address"
+msgstr "Διεύθυνση IP"
+
+msgid "after you click &quot;Save&quot;, all current calls will be dropped."
+msgstr "αφού πιέσετε &quot;Αποθήκευση&quot;, όλες οι ενεργές κλήσεις θα διακοπούν."
+
+msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+msgstr "Όταν πιέσετε &quot;Αποθήκευση&quot;, όλες οι ενεργές κλήσεις θα διακοπούν. Πιθανά να χρειαστεί να κάνετε ένα η περισσότερα από τα ακόλουθα, πριν μπορέσετε να έχετε πρόσβαση στο τηλεφωνικό κέντρο σας:"
+
+#, fuzzy
+msgid "alias"
+msgstr "Ιταλικά"
+
+msgid "allow this number to be reachable over the Internet"
+msgstr ""
+
+msgid "always send Caller ID above"
+msgstr ""
+
+msgid "always use NAT mode."
+msgstr "πάντα χρήση ΝΑΤ"
+
+msgid "associated"
+msgstr "συνδεδεμένο"
+
+msgid "assume NAT mode but don't send rport "
+msgstr "υπόθεση NAT χωρίς αποστολή rport"
+
+msgid "authenticate incoming calls with a public RSA key"
+msgstr ""
+
+msgid "authenticate outgoing calls with a private RSA key"
+msgstr ""
+
+msgid "built on"
+msgstr "&raquo; "
+
+msgid "caller id of person leaving the message"
+msgstr "η ταυτότητα καλούντος του προσώπου που αφήνει το μήνυμα"
+
+msgid "change the IP address of your computer"
+msgstr "μεταβολή της διεύθυνσης IP του υπολογιστή σας"
+
+msgid "click to disable fax"
+msgstr ""
+
+msgid "click to disable phone"
+msgstr "κάντε κλικ για να απενεργοποιήσετε το τηλέφωνο"
+
+msgid "click to disable provider"
+msgstr "κάντε κλικ για να απενεργοποιήσετε τον πάροχο"
+
+msgid "click to enable fax"
+msgstr ""
+
+msgid "click to enable phone"
+msgstr "κάντε κλικ για να ενεργοποιήσετε το τηλέφωνο"
+
+msgid "click to enable provider"
+msgstr "κάντε κλικ για να ενεργοποιήσετε τον πάροχο"
+
+msgid "clicking &quot;Save&quot; will drop all current calls."
+msgstr "αν πατήσετε &quot;Αποθήκευση&quot;, θα τερματιστούν όλες οι τρέχουσες κλήσεις."
+
+#, fuzzy
+msgid "configured manually"
+msgstr "μη ρυθμισμένο"
+
+msgid "configured via DHCP client"
+msgstr ""
+
+msgid "confirmation"
+msgstr "επιβεβαίωση"
+
+msgid "connected"
+msgstr "συνδεδεμένο"
+
+msgid "connected but lagged"
+msgstr "συνδεδεμένο με καθυστέρηση"
+
+msgid "default:"
+msgstr "προεπιλεγμένος:"
+
+#, fuzzy
+msgid "delete application"
+msgstr "διαγραφή αντιστοίχησης εφαμογής"
+
+msgid "delete application mapping"
+msgstr "διαγραφή αντιστοίχησης εφαμογής"
+
+msgid "delete call group"
+msgstr "διαγραφή ομάδας τηλεφώνων"
+
+msgid "delete conference room"
+msgstr "διαγραφή χώρου συνδιάσκεψης"
+
+msgid "delete fax"
+msgstr ""
+
+msgid "delete manager user"
+msgstr "διαγραφή διαχειριστή"
+
+msgid "delete phone"
+msgstr "διαγραφή τηλεφώνου"
+
+#, fuzzy
+msgid "delete port group"
+msgstr "διαγραφή ομάδας τηλεφώνων"
+
+msgid "delete provider"
+msgstr "διαγραφή παρόχου"
+
+msgid "disable certificate checking"
+msgstr ""
+
+msgid "disable echo cancellation"
+msgstr ""
+
+msgid "disable time synchronization"
+msgstr ""
+
+#, fuzzy
+msgid "disabled"
+msgstr "Απενεργοποιημένο"
+
+msgid "down"
+msgstr "ανενεργό"
+
+#, fuzzy
+msgid "downloading"
+msgstr "Λήψη"
+
+msgid "drag-and-drop"
+msgstr "μεταφέρετε με το ποντίκι από τη μια στήλη στην άλλη"
+
+msgid "duration of the message (i.e. 0:58)"
+msgstr "διάρκεια μηνύματος (π.χ. 0:58)"
+
+#, fuzzy
+msgid "e.g. <em>pbx . mydomain.com"
+msgstr "π.χ. <em>etaireia.gr"
+
+#, fuzzy
+msgid "edit application"
+msgstr "επεξεργασία αντιστοίχησης εφαρμογών"
+
+msgid "edit application mapping"
+msgstr "επεξεργασία αντιστοίχησης εφαρμογών"
+
+msgid "edit call group"
+msgstr "επεξεργασία ομάδας τηλεφώνων"
+
+msgid "edit conference room"
+msgstr "επεξεργασία χώρου συνδιάσκεψης"
+
+#, fuzzy
+msgid "edit disk"
+msgstr "Επεξεργασία δίσκου"
+
+msgid "edit fax"
+msgstr ""
+
+#, fuzzy
+msgid "edit gateway"
+msgstr "επεξεργασία ενός αντικειμένου"
+
+msgid "edit manager room"
+msgstr "επεξεργασία χώρου διαχειριστή"
+
+msgid "edit phone"
+msgstr "επεξεργασία τηλεφώνου"
+
+#, fuzzy
+msgid "edit port"
+msgstr "επεξεργασία τηλεφώνου"
+
+#, fuzzy
+msgid "edit port group"
+msgstr "επεξεργασία τηλεφώνου"
+
+msgid "edit provider"
+msgstr "επεξεργασία παρόχου"
+
+#, fuzzy
+msgid "enable voicemail to e-mail"
+msgstr "όνομα του ιδιοκτήτη της φωνητικής θυρίδας"
+
+msgid "enter a command below..."
+msgstr "εισάγετε μια εντολή πιο κάτω..."
+
+#, fuzzy
+msgid "every 10 minutes"
+msgstr "λεπτά"
+
+msgid "every 12 hours"
+msgstr ""
+
+#, fuzzy
+msgid "every 30 minutes"
+msgstr "λεπτά"
+
+msgid "every 4 hours"
+msgstr ""
+
+msgid "every day"
+msgstr ""
+
+msgid "every hour"
+msgstr ""
+
+msgid "extension number of voicemail box"
+msgstr "εσωτερικό κλήσης της φωνητικής θυρίδας"
+
+#, fuzzy
+msgid "extracting"
+msgstr "Ρυθμίσεις"
+
+#, fuzzy
+msgid "forget disk settings"
+msgstr "διαγραφή ρυθμίσεων διεπαφής"
+
+#, fuzzy
+msgid "forget gateway settings"
+msgstr "διαγραφή ρυθμίσεων διεπαφής"
+
+#, fuzzy
+msgid "forget port settings"
+msgstr "διαγραφή ρυθμίσεων διεπαφής"
+
+msgid "full date / time (i.e. 2025-11-20 (15:45))"
+msgstr "πλήρης ημερομηνία και ώρα (π.χ. 2008-08-18 22:01)"
+
+msgid "generate password"
+msgstr "δημιουργία κωδικού πρόσβασης"
+
+msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+msgstr "Αν δεν μπορείτε να δείτε το γράφημα, θα πρέπει να εγκαταστήσετε το <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+
+msgid "inactive"
+msgstr "ανενεργό"
+
+msgid "indefinitely"
+msgstr "για πάντα"
+
+#, fuzzy
+msgid "installed sets"
+msgstr "Εγκατεστημένα πακέτα"
+
+#, fuzzy
+msgid "installing"
+msgstr "Σήμα"
+
+msgid "kick conference member"
+msgstr "απομάκρυνση μέλους συνδιάσκεψης"
+
+msgid "max:"
+msgstr "μέγιστος:"
+
+msgid "md5"
+msgstr "md5"
+
+#, fuzzy
+msgid "milliseconds"
+msgstr "δευτερόλεπτα"
+
+msgid "min:"
+msgstr "ελάχιστος:"
+
+msgid "multipoint-to-point, network termination"
+msgstr "multipoint-to-point, NT"
+
+msgid "name of voicemail recipient"
+msgstr "όνομα του ιδιοκτήτη της φωνητικής θυρίδας"
+
+msgid "never attempt NAT mode or RFC3581 support"
+msgstr "να μην γίνεται ποτέ χρήση NAT ή υποστήριξης RFC3581"
+
+msgid "no faxes available."
+msgstr ""
+
+msgid "none"
+msgstr "κανένα"
+
+msgid "notify me of missed calls via e-mail"
+msgstr ""
+
+msgid "of"
+msgstr "από"
+
+#, fuzzy
+msgid "on"
+msgstr "ανενεργό"
+
+msgid "only use NAT mode according to RFC3581 (rport)"
+msgstr "χρήση NAT μόνο σύμφωνα με το RFC3581 (rport)"
+
+#, fuzzy
+msgid "optional"
+msgstr "Επιλογές"
+
+msgid "plaintext"
+msgstr "κείμενο"
+
+msgid "point-to-multipoint, terminal equipment"
+msgstr "point-to-multipoint, TE"
+
+msgid "point-to-point, network termination"
+msgstr "point-to-point, NT"
+
+msgid "point-to-point, terminal equipment"
+msgstr "point-to-point, TE"
+
+msgid "print"
+msgstr "εκτύπωση"
+
+msgid "read:"
+msgstr "ανάγνωση:"
+
+msgid "receive"
+msgstr "λήψη"
+
+msgid "restart the PBX"
+msgstr "επανεκκίνηση του τηλεφωνικού κέντρου"
+
+msgid "seconds"
+msgstr "δευτερόλεπτα"
+
+#, fuzzy
+msgid "send phone's Caller ID"
+msgstr "Αποστολή της ταυτότητας καλούντος του τηλεφώνου"
+
+#, fuzzy
+msgid "send phone's Caller ID + prefix below"
+msgstr "Αποστολή της ταυτότητας καλούντος του τηλεφώνου"
+
+#, php-format
+msgid "service already assigned to \"%s\""
+msgstr ""
+
+msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
+msgstr "Ορίστε '0.0.0.0 / 0.0.0.0' για να αποτρέψετε την πρόσβαση από όλα τα δίκτυα"
+
+msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
+msgstr "Ορίστε '0.0.0.0 / 0.0.0.0' για να επιτρέψετε την πρόσβαση από όλα τα δίκτυα"
+
+msgid "show"
+msgstr "παρουσίαση"
+
+msgid "span should be set as a loopback"
+msgstr ""
+
+msgid "span should use CRC4 checking"
+msgstr ""
+
+msgid "status unknown"
+msgstr "άγνωστη κατάσταση"
+
+msgid "store Asterisk's database on disk"
+msgstr ""
+
+msgid "store voice prompts and music-on-hold on disk"
+msgstr ""
+
+msgid "transmit"
+msgstr "αποστολή"
+
+msgid "unreachable"
+msgstr "απρόσιτο"
+
+msgid "up"
+msgstr "ενεργό"
+
+msgid "use DHCP settings permanently"
+msgstr ""
+
+msgid "use this password"
+msgstr "χρήση αυτού του κωδικού πρόσβασης"
+
+msgid "view license"
+msgstr "άδεια χρήσης"
+
+#, fuzzy
+msgid "warning"
+msgstr "Προειδοποίηση"
+
+msgid "webGUI Configuration"
+msgstr "Διαχείριση τηλεφωνικού κέντρου"
+
+msgid "webGUI language"
+msgstr "Γλώσσα περιβάλλοντος διαχείρισης"
+
+msgid "webGUI port"
+msgstr "Θύρα περιβάλλοντος διαχείρισης"
+
+msgid "write:"
+msgstr "εγγραφή:"
+
+#~ msgid "%s days, "
+#~ msgstr "%s ημέρες, "
+
+#~ msgid ",WPA PSK"
+#~ msgstr ",WPA PSK"
+
+#~ msgid ",WPA version,WPA cipher"
+#~ msgstr ",WPA version,WPA cipher"
+
+#~ msgid "1000BASE-TX full-duplex"
+#~ msgstr "1000BASE-TX full-duplex"
+
+#~ msgid "100BASE-TX full-duplex"
+#~ msgstr "100BASE-TX full-duplex"
+
+#~ msgid "100BASE-TX half-duplex"
+#~ msgstr "100BASE-TX half-duplex"
+
+#~ msgid "104 (128) bit keys may be entered as 13 ASCII characters or 26 hex digits preceded by '0x'."
+#~ msgstr "Τα κλειδιά 104 (128) bits μπορούν να εισαχθούν σαν 13 χαρακτήρες ASCII ή σαν 26 δεκαεξαδικά ψηφία με πρόθεμα '0x'."
+
+#~ msgid "10BASE-T full-duplex"
+#~ msgstr "10BASE-T full-duplex"
+
+#~ msgid "10BASE-T half-duplex"
+#~ msgstr "10BASE-T half-duplex"
+
+#~ msgid "40 (64) bit keys may be entered as 5 ASCII characters or 10 hex digits preceded by '0x'."
+#~ msgstr "Τα κλειδιά 40 (64) bits μπορούν να εισαχθούν σαν 5 χαρακτήρες ASCII ή σαν 10 δεκαεξαδικά ψηφία με πρόθεμα '0x'."
+
+#~ msgid "802.11a can only be selected if an 802.11a channel is selected too."
+#~ msgstr "Το 802.11a μπορεί να επιλεγεί μόνο αν επιλέξετε ένα κανάλι 802.11a."
+
+#~ msgid "802.11a channels can only be selected if the standard is set to 802.11a too."
+#~ msgstr "Τα κανάλια 802.11a μπορούν να επιλεγούν μόνο αν έχετε επιλέξει το πρότυπο 802.11a."
+
+#~ msgid "<p>This status page includes the following information:\n"
+#~ msgstr "<p>Αυτή η σελίδα κατάστασης περιλαμβάνει τις ακόλουθες πληροφορίες:\n"
+
+#~ msgid "<strong>No compatible interfaces found!</strong><br><br> To configure this type of account, make sure an appropriately configured interface is present on the %s page"
+#~ msgstr "<strong>Δεν βρέθηκαν συμβατές διεπαφές!</strong><br><br>Για να κάνετε ρυθμίσεις σε αυτό το είδος του λογαρισμού, σιγουρευτείτε ότι υπάρχει διαθέσιμη μια κατάλληλη διεπαφή στη σελίδα %s."
+
+#~ msgid "A minimum of %sMB is required. In the future, external media will be able to be used, but currently packages must be stored on the internal system media."
+#~ msgstr "Χρειάζονται %sMB κατ' ελάχιστο. Στο μέλλον θα έχετε τη δυνατότητα να χρησιμοποιήσετε εξωτερικό αποθηκευτικό χώρο, αλλά προς το παρόν όλα τα πακέτα πρέπει να εγκατασταθούν στον εσωτερικό αποθηκευτικό χώρο."
+
+#~ msgid "A newer <strong>beta</strong> version of AskoziaPBX is available!"
+#~ msgstr "Υπάρχει μια νέα έκδοση <strong>beta</strong> του AskoziaPBX!"
+
+#~ msgid "A newer version of AskoziaPBX is available!"
+#~ msgstr "Υπάρχει μια νέα έκδοση του AskoziaPBX!"
+
+#~ msgid "A phone with this extension already exists."
+#~ msgstr "Υπάρχει ήδη ένα τηλέφωνο με αυτό το εσωτερικό."
+
+#~ msgid "A self-signed certificate and private key have been automatically generated."
+#~ msgstr "Δημιουργήθηκαν αυτόματα ένα αυτο-υπογεγραμμένο πιστοποιητικό και ένα ιδιωτικό κλειδί."
+
+#~ msgid "A self-signed certificate could not be generated because the system's clock is not set."
+#~ msgstr "Ήταν αδύνατη η δημιουργία ενός αυτο-υπογεγραμμένου πιστοποιητικού, γιατί δεν έχει ρυθμιστεί η ώρα του συστήματος."
+
+#~ msgid "A valid \"fromuser\" must be specified."
+#~ msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο \"αποστολέα\"."
+
+#~ msgid "A valid Caller ID string must be specified."
+#~ msgstr "Πρέπει να καταχωρήσετε μία έγκυρη ταυτότητα καλούντος."
+
+#~ msgid "A valid default number (MSN) must be specified."
+#~ msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο προεπιλεγμένο αριθμό (MSN)."
+
+#~ msgid "A valid international prefix must be specified."
+#~ msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο διεθνές  πρόθεμα."
+
+#~ msgid "A valid secret must be specified."
+#~ msgstr "Πρέπει να καταχωρήσετε έναν έγκυρο κωδικό πρόσβασης."
+
+#~ msgid "A valid username must be specified."
+#~ msgstr "Πρέπει να καταχωρήσετε ένα έγκυρο όνομα χρήστη."
+
+#~ msgid "A variety of settings are here which define how call transfers and call parking are handled. The defaults should work in most situations."
+#~ msgstr "Εδώ μπορείτε να ορίσετε τον χειρισμό των προωθήσεων και της στάθμευσης κλήσεων. Οι προεπιλεγμένες τιμές πρέπει να δουλεύουν στις περισσότερες περιπτώσεις."
+
+#~ msgid "A whole number of calls must be entered for the \"busy limit.\""
+#~ msgstr "Πρέπει να καταχωρήσετε έναν ακέραιο αριθμό δευτερολέπτων για το \"όριο κατηλειμμένου\"."
+
+#~ msgid "A whole number of calls must be entered for the \"call limit.\""
+#~ msgstr "Πρέπει να καταχωρήσετε έναν ακέραιο αριθμό δευτερολέπτων για το \"όριο κλήσεων\"."
+
+#~ msgid "A whole number of seconds must be entered for the \"qualify\" timeout."
+#~ msgstr "Πρέπει να καταχωρήσετε ένανν ακέραιο αριθμό δευτερολέπτων για το χρονικό όριο \"πιστοποίησης\"."
+
+#~ msgid "A-law"
+#~ msgstr "A-law"
+
+#~ msgid "AES/CCMP"
+#~ msgstr "AES/CCMP"
+
+#~ msgid "AES/CCMP provides better security than TKIP, but TKIP is more compatible with older hardware."
+#~ msgstr "Το AES/CCMP παρέχει καλύτερη ασφάλεια από το TKIP, αλλά το TKIP είναι πιο συμβατό με παλιότερες συσκευές."
+
+#~ msgid "ARP Table"
+#~ msgstr "Πίνακας ARP"
+
+#~ msgid "ARP table"
+#~ msgstr "Πίνακας ARP"
+
+#~ msgid "Account uses TLS"
+#~ msgstr "Ο λογαριασμός χρησιμοποιεί TLS"
+
+#~ msgid "Active Calls"
+#~ msgstr "Ενεργές κλήσεις"
+
+#, fuzzy
+#~ msgid "Advanced SIP Options"
+#~ msgstr "Ρυθμίσεις για ειδικούς"
+
+#~ msgid "Always on"
+#~ msgstr "Πάντα ενεργό"
+
+#~ msgid "An Operating Mode must be selected for this interface."
+#~ msgstr "Πρέπει να ορίσετε έναν τρόπο λειτουργίας γι' αυτή τη διεπαφή."
+
+#~ msgid "An e-mail address. If entered, voicemail will be enabled on this extension. Incoming messages will be sent to the given address."
+#~ msgstr "Μια διεύθυνση e-mail. Αν καταχωρηθεί, τότε η φωνητική θυρίδα θα ενεργοποιηθεί γι' αυτό το εσωτερικό και τα εισερχόμενα μηνύματα θα στέλνονται σε αυτή τη διεύθυνση."
+
+#, fuzzy
+#~ msgid "Askozia&reg;PBX &copy; 2007-2010 IKT. All rights reserved."
+#~ msgstr "AskoziaPBX &copy; 2007-2008 IKT. Με επιφύλαξη παντός δικαιώματος."
+
+#~ msgid "AskoziaPBX"
+#~ msgstr "Το τηλεφωνικό κέντρο"
+
+#~ msgid "AskoziaPBX Test E-mail"
+#~ msgstr "Δοκιμαστικό e-mail"
+
+#~ msgid "AskoziaPBX webGUI"
+#~ msgstr "GUI τηλεφωνικού κέντρου"
+
+#~ msgid "AskoziaPBX's firmware can be kept up to date here. The system's configuration will be maintained through the upgrade. The system will reboot automatically after installing the new firmware. Firmware images of formal releases are digitally signed before distribution and checked upon installation."
+#~ msgstr "Σε αυτή τη σελίδα μπορείτε να εγκαθιστάτε την τελευταία έκδοση firmware του τηλεφωνικού σας κέντρου. Οι ρυθμίσεις του τηλεφωνικού κέντρου θα διατηρηθούν κατά τη διάρκεια της αναβάθμισης. Το σύστημα θα επανεκκινήσει αυτόματα μόλις εγκατασταθεί το νέο firmware. Το firmware που εγκαθίσταται πρέπει να είναι ηλεκτρονικά υπογεγραμμένο, κάτι το οποίο ελέγχεται κατά την εγκατάσταση."
+
+#~ msgid "AskoziaPBX: execute command"
+#~ msgstr "Εκτέλεση εντολής"
+
+#~ msgid "Associated stations"
+#~ msgstr "Συνδεδεμένοι σταθμοί"
+
+#~ msgid "Asterisk log entries"
+#~ msgstr "Εγγραφές ημερολογίου Asterisk"
+
+#~ msgid "Attached"
+#~ msgstr "Συνδεδεμένο"
+
+#~ msgid "Attempt to remove echoes from the line. (recommended)"
+#~ msgstr "Να γίνει προσπάθεια απαλοιφής ηχούς από αυτή τη γραμμή (συνιστάται)."
+
+#~ msgid "Audio Codecs"
+#~ msgstr "CODECs φωνής"
+
+#~ msgid "Auto"
+#~ msgstr "Αυτόματο"
+
+#, fuzzy
+#~ msgid "Auto-Configuration"
+#~ msgstr "Επαναφορά ρυθμίσεων"
+
+#~ msgid "BSSID"
+#~ msgstr "BSSID"
+
+#~ msgid "Busy Limit"
+#~ msgstr "Όριο κατηλειμμένων"
+
+#~ msgid "Call Limit"
+#~ msgstr "Όριο κλήσεων"
+
+#~ msgid "Call Records"
+#~ msgstr "Εγγραφές ημερολογίου κλήσεων"
+
+#~ msgid "Cancel"
+#~ msgstr "Ακύρωση"
+
+#~ msgid "Capabilities"
+#~ msgstr "Δυνατότητες"
+
+#~ msgid "Capacity"
+#~ msgstr "Χωρητικότητα"
+
+#~ msgid "Certificate"
+#~ msgstr "Πιστοποιητικό"
+
+#~ msgid "Certificate and key must always be specified together."
+#~ msgstr "Το πιστοποιητικό και το κλειδί πρέπει να ορίζονται πάντα μαζί."
+
+#~ msgid "Checked interfaces will be bridged to the main interface."
+#~ msgstr "Οι επιλεγμένες διαπαφές θα γεφυρωθούν με την κύρια διεπαφή."
+
+#~ msgid "Checked phones will have access to this provider."
+#~ msgstr "Τα επιλεγμένα τηλέφωνα θα έχουν πρόσβαση σε αυτόν τον πάροχο."
+
+#~ msgid "Checked providers will be accessible from this phone."
+#~ msgstr "Οι επιλεγμένοι πάροχοι θα είναι προσβάσιμοι από αυτό το τηλέφωνο."
+
+#~ msgid "Cipher"
+#~ msgstr "Κρυπτογραφία"
+
+#~ msgid "Clear Log"
+#~ msgstr "Διαγραφή ημερολογίου"
+
+#~ msgid "Clear log"
+#~ msgstr "Διαγραφή ημερολογίου"
+
+#~ msgid "Click &quot;Enable firmware upload&quot; below."
+#~ msgstr "Κάντε κλικ στην &quot;Ενεργοποίηση αποστολής firmware&quot;."
+
+#~ msgid "Click the <img src=\"img/update.png\" border=\"0\"> icon below to select and install the updated packages."
+#~ msgstr "Κάντε κλικ σο εικονίδιο <img src=\"img/update.png\" border=\"0\">  για να επιλέξετε και να εγκαταστήσετε τις αναβαθμίσεις των πακέτων."
+
+#~ msgid "Collisions"
+#~ msgstr "Συγκρούσεις"
+
+#~ msgid "Conference rooms with optional pin authentication can be configured here. The system's performance is the only limiting factor on the number of concurrent members. These rooms can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
+#~ msgstr "Εδώ μπορείτε να ορίσετε χώρους συνδιάσκεψης με προαιρετικά PINs για την πρόσβαση. Ο μόνος παράγοντας που επηρεάζει τα ταυτόχρονα μέλη που μπορούν να συνομιλούν σε έναν χώρο, είναι η δυναμικότητα του τηλεφωνικού κέντρου (επεξεργαστής και μνήμη). Αυτοί οι χώροι μπορούν να κληθούν μέσω των εσωτερικών τους ή να χρησιμοποιηθούν για να τερματιστούν εισερχόμενες κλήσεις από τους παρόχους."
+
+#, fuzzy
+#~ msgid "Configured"
+#~ msgstr "μη ρυθμισμένο"
+
+#~ msgid "Connecting a provider line to an FXS port can damage your hardware! If you are unsure which ports are FXO or FXS on your card, configure and connect your phone accounts before connecting any provider lines."
+#~ msgstr "Αν συνδέσετε μια γραμμή παρόχου σε μια θύρα FXS θα καταστρέψετε τη θύρα! Αν δεν είστε σίγουροι ποιές θύρες είναι FXS και ποιές είναι FXO, ρυθμίστε και συνδέστε πρώτα τα τηλέφωνά σας, πριν συνδέσετε γραμμές παρόχων."
+
+#~ msgid "Contents"
+#~ msgstr "Περιεχόμενα"
+
+#~ msgid "Continue"
+#~ msgstr "Συνέχεια"
+
+#~ msgid "Count must be between 1 and %d"
+#~ msgstr "Το πλήθος πρέπει να είναι μεταξύ 1 και %d"
+
+#~ msgid "Debug"
+#~ msgstr "Αποσφαλμάτωση"
+
+#~ msgid "Debug Ouptut"
+#~ msgstr "Αποτελέσματα αποσφαλμάτωσης"
+
+#~ msgid "Debugging"
+#~ msgstr "Αποσφλαμάτωση"
+
+#~ msgid "Descriptive name for this interface"
+#~ msgstr "Επεξηγηματικό όνομα γι' αυτή τη διεπαφή"
+
+#~ msgid "Descriptive name for this phone."
+#~ msgstr "Επεξηγηματικό όνομα γι' αυτό το τηλέφωνο."
+
+#~ msgid "Detected ports on this page must be edited and saved before the system can utilize them."
+#~ msgstr "Πρέπει να επεξεργαστείτε και να αποθηκεύσετε τις θύρες που βρέθηκαν σε αυτή τη σελίδα, πριν μπορέσει να τις χρησιμοποιήσει το σύστημα."
+
+#~ msgid "Detected ports on this page must be edited and saved before the system can utilize them. Be careful when configuring ISDN interfaces. Having a single port on a card incorrectly configured can result in the entire card being unusable by the system."
+#~ msgstr "Πρέπει να επεξεργαστείτε και να αποθηκεύσετε τις θύρες που βρέθηκαν σε αυτή τη σελίδα, πριν μπορέσει να τις χρησιμοποιήσει το σύστημα. Δείξτε προσοχή όταν ρυθμίζετε διεπαφές ISDN. Αν ρυθμίσετε λάθος μία και μόνο διεπαφή σε μία κάρτα, μπορεί να έχει σαν αποτέλεσμα να μην μπορεί να χρησιμοποιηθεί ολόκληρη η κάρτα από το σύστημα."
+
+#~ msgid "Diagnostics"
+#~ msgstr "Διαγνωστικά"
+
+#~ msgid "Dialtone"
+#~ msgstr "Τόνος κλήσης"
+
+#~ msgid "Disable Power Save"
+#~ msgstr "Απενεργοποίηση κατάστασης εξοικονόμησης ενέργειας."
+
+#~ msgid "Disable firmware upload"
+#~ msgstr "Απανεργοποίηση αποστολής firmware"
+
+#~ msgid "Disable firmware version check"
+#~ msgstr "Απενεργοποίηση ελέγχων firmware"
+
+#~ msgid "Disable package version checks"
+#~ msgstr "Απενεργοποίηση των ελέγχων εκδόσεων πακέτων"
+
+#~ msgid "Disable power save mode. (sometimes needed for older cards)"
+#~ msgstr "Απενεργοποίηση κατάστασης εξοικονόμησης ενέργειας (μερικές φορές χρειάζεται για παλιότερες κάρτες)."
+
+#~ msgid "Do you really want to disable this package?"
+#~ msgstr "Θέλετε πραγματικά να απενεργοποιήσετε αυτό το πακέτο;"
+
+#, fuzzy
+#~ msgid "Do you really want to forget this disk's settings?"
+#~ msgstr "Θέλετε πραγματικά να διαγράψετε τις ρυθμίσεις αυτής της διεπαφής;"
+
+#~ msgid "Do you really want to forget this interface\\'s settings?"
+#~ msgstr "Θέλετε πραγματικά να διαγράψετε τις ρυθμίσεις αυτής της διεπαφής;"
+
+#~ msgid "Do you really want to permanently delete this package\\'s configuration and data?"
+#~ msgstr "Θέλετε πραγματικά να διαγράψετε τις ρυθμίσεις και τα δεδομένα του πακέτου;"
+
+#~ msgid "Driver Type"
+#~ msgstr "Είδος οδηγού"
+
+#~ msgid "E-Mail Language"
+#~ msgstr "Γλώσσα ηλεκτρονκών μηνυμάτων"
+
+#~ msgid "Echo Canceller"
+#~ msgstr "Απαλοιφή ηχούς"
+
+#~ msgid "Edit Analog"
+#~ msgstr "Επεξεργασία PSTN"
+
+#~ msgid "Edit Analog Line"
+#~ msgstr "Επεξεργασία γραμμής PSTN"
+
+#~ msgid "Edit Disk"
+#~ msgstr "Επεξεργασία δίσκου"
+
+#~ msgid "Edit IAX Account"
+#~ msgstr "Επεξεργασία λογαριασμού IAX"
+
+#~ msgid "Edit ISDN Interface #%s"
+#~ msgstr "Επεξεργασία διαπαφής ISDN #%s"
+
+#~ msgid "Edit ISDN Line"
+#~ msgstr "Επεξεργασία γραμμής ISDN"
+
+#~ msgid "Edit SIP Account"
+#~ msgstr "Επεξεργασία λογαρασμού SIP"
+
+#~ msgid "Enable Polling Mode"
+#~ msgstr "Ενεργοποίηση polling"
+
+#~ msgid "Enable WEP"
+#~ msgstr "Ενεργοποίηση WEP"
+
+#~ msgid "Enable Wireless Interface"
+#~ msgstr "Ενεργοποίηση ασύρματης διεπαφής"
+
+#~ msgid "Enable firmware upload"
+#~ msgstr "Ενεργοποίηση αποστολής firmware"
+
+#~ msgid "Enable polling mode. (sometimes needed for older cards)"
+#~ msgstr "Ενεργοποίηση polling (μερικές φορές χρειάζεται για παλιότερες κάρτες)."
+
+#~ msgid "Enable syslog'ing to remote syslog server"
+#~ msgstr "Ενεργοποίηση αποθήκευσης σε απομακρυσμένο διακομιστή syslog"
+
+#, fuzzy
+#~ msgid "Enter a NTP server to synchronize with. Remember to set up at least one DNS server if you enter a host name here!"
+#~ msgstr "Χρησιμοποιήστε κενά για να καταχωρήσετε πολλαπλούς διακομιστές (απαιτείται μόνο ένας). Αν καταχωρήσετε όνομα διακομιστή, αντί για διεύθυνση IP, θυμηθείτε να καταχωρήσετε και ένα διακομιστή DNS!"
+
+#~ msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP, 443 for HTTPS)."
+#~ msgstr "Καταχωρήστε μια θύρα για πρόσβαση στο περιβάλλον διαχείρισης, αν δεν θέλετε να χρησιμοποιήσετε τις προκαθορισμένες (80 για HTTP και 443 για HTTPS)."
+
+#~ msgid "Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."
+#~ msgstr "Εισάγετε τον κωδικό (passphrase) που θα χρησιμοποιηθεί για τον τρόπο λειτουργίας WPA-PSK. Πρέπει να έχει μήκος από 8 μέχρι και 63 χαρακτήρες."
+
+#~ msgid "Existing package not found, update failed."
+#~ msgstr "Το υπάρχον πακέτο δεν βρέθηκε. Η ενημέρωση απέτυχε."
+
+#~ msgid "Extracted package not found, install failed."
+#~ msgstr "Το πακέτο δεν βρέθηκε. Η εγκατάσταση απέτυχε."
+
+#~ msgid "FXS interfaces connect to telephones and FXO interfaces connect to provider lines. FXS interfaces produce electricity to power the telephone and FXO interfaces accept the electricity generated by the provider."
+#~ msgstr "Οι διeπαφές FXS συνδέονται σε τηλέφωνα και οι διεπαφές FXO συνδέονται σε γραμμές παρόχων. Οι διεπαφές FXS παρέχουν τάση για να τροφοδοτήσουν τα τηλέφωνα, ενώ οι διεπαφές FXO δέχονται το ηλεκτρικό ρεύμα που παράγει ο πάροχος."
+
+#~ msgid "File"
+#~ msgstr "Αρχείο"
+
+#~ msgid "File contents (%s) saved."
+#~ msgstr "Τα περιεχόμενα του αρχείου (%s) αποθηκεύτηκαν."
+
+#~ msgid "Firewall"
+#~ msgstr "Τοίχος προστασίας"
+
+#~ msgid "Firmware version check"
+#~ msgstr "Έλεγχος έκδοσης firmware"
+
+#~ msgid "Flags"
+#~ msgstr "Ενδείξεις"
+
+#~ msgid "Flags: A = authorized, E = Extended Rate (802.11g), P = Power save mode<br>Capabilities: E = ESS (infrastructure mode), I = IBSS (ad-hoc mode), P = privacy (WEP/TKIP/AES), S = Short preamble, s = Short slot time"
+#~ msgstr "Ενδείξεις: A = Πιστοποιημένο, E = Εκτεταμένη ταχύτητα (802.11g), P = Κατάσταση εξοικονόμησης ρεύματος<br>Δυνατότητες: E = ESS (infrastructure mode), I = IBSS (ad-hoc mode), P = Εμπιστευτικότητα (WEP/TKIP/AES), S = Short preamble, s = Short slot time"
+
+#~ msgid "French (France)"
+#~ msgstr "Γαλλικά (Γαλλία)"
+
+#~ msgid "Gain (rx/tx)"
+#~ msgstr "Απολαβή  (rx/tx)"
+
+#~ msgid "Generate self-signed certificate"
+#~ msgstr "Δημιουργία αυτο-υπογεγραμμένου πιστοποιητικού"
+
+#~ msgid "Groups of extensions can be configured to ring concurrently. These groups can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
+#~ msgstr "Μπορείτε να ομαδοποιήσετε όσα τηλέφωνα θέλετε, ώστε να κουδουνίζουν ταυτόχρονα. Αυτές οι ομάδες θα μπορούν να καλούνται μέσω των εσωτερικών τους ή να χρησιμοποιηθούν για να τερματιστούν εισερχόμενες κλήσεις από τους παρόχους."
+
+#~ msgid "HIDE"
+#~ msgstr "ΑΠΟΚΡΥΨΗ"
+
+#~ msgid "HTTP"
+#~ msgstr "HTTP"
+
+#~ msgid "HTTPS"
+#~ msgstr "HTTPS"
+
+#~ msgid "Hard disk standby time"
+#~ msgstr "Χρόνος αναμονής σκληρού δίσκου"
+
+#, fuzzy
+#~ msgid "Hardware"
+#~ msgstr "Firmware"
+
+#, fuzzy
+#~ msgid "Hardware Version"
+#~ msgstr "Firmware"
+
+#~ msgid "Help"
+#~ msgstr "Βοήθεια"
+
+#~ msgid "Hide SSID"
+#~ msgstr "Απόκρυψη  SSID"
+
+#~ msgid "IAX proxy host URL or IP address and optional port."
+#~ msgstr "Το URL του διακομιστή μεσολάβησης IAX, ή η διεύθυνση IP του και προαιρετικά η θύρα."
+
+#~ msgid "IP address"
+#~ msgstr "Διεύθυνση IP"
+
+#~ msgid "IP address of remote syslog server"
+#~ msgstr "Διεύθυνση IP του απομακρυσμένου διακομιστή syslog"
+
+#~ msgid "ISDN Interface"
+#~ msgstr "Διεπαφή ISDN"
+
+#, fuzzy
+#~ msgid "If a compatible wireless card is present in the system, it can be configured to act as an Access Point. It will be bridged to the wired network that the PBX is connected to."
+#~ msgstr "Αν υπάρχει συμβατή ασύρματη κάρτα στο σύστημά σας, τότε το σύστημά σας μπορεί να χρησιμοποιηθεί και σαν ασύρματο σημείο πρόσβασης. Το ασύρματο δίκτυο θα γεφυρωθεί με το ενσύρματο δίκτυο στο οποίο συνδέεται το τηλεφωνικό σας κέντρο."
+
+#~ msgid "If an ISDN interface is present but was not detected, please send <a href=\"ajax.cgi?exec_shell=/usr/sbin/pciconf%20-lv;/bin/echo;/bin/dmesg\">this output</a> to <a href=\"mailto:michael@askozia.com\">michael@askozia.com</a>."
+#~ msgstr "Αν υπάρχει εγκατεστημένη μια διεπαφή ISDN, αλλά δεν βρέθηκε από το σύστημα, παρακαλούμε στείλτε <a href=\"ajax.cgi?exec_shell=/usr/sbin/pciconf%20-lv;/bin/echo;/bin/dmesg\">αυτές τις πληροφορίες</a> στη διεύθυνση <a href=\"mailto:michael@askozia.com\">michael@askozia.com</a>."
+
+#~ msgid "If an analog interface is present but was not detected, please send <a href=\"ajax.cgi?exec_shell=/usr/sbin/pciconf%20-lv;/bin/echo;/bin/dmesg\">this output</a> to <a href=\"mailto:michael@askozia.com\">michael@askozia.com</a>."
+#~ msgstr "Αν υπάρχει εγκατεστημένη μια διεπαφή PSTN, αλλά δεν βρέθηκε από το σύστημα, παρακαλούμε στείλτε <a href=\"ajax.cgi?exec_shell=/usr/sbin/pciconf%20-lv;/bin/echo;/bin/dmesg\">αυτές τις πληροφορίες</a> στη διεύθυνση <a href=\"mailto:michael@askozia.com\">michael@askozia.com</a>."
+
+#~ msgid "If this is a USB ISDN device, send <a href=\"ajax.cgi?exec_shell=/sbin/udesc_dump\">this output</a> as well."
+#~ msgstr "Αν έχετε μια συσκευή ISDN με σύνδεση μέσω USB, τότε στείλτε και <a href=\"ajax.cgi?exec_shell=/sbin/udesc_dump\">αυτές τις πληροφορίες</a>."
+
+#~ msgid "If this option is selected, the SSID will not be broadcast in hostap mode, and onlyclients that know the exact SSID will be able to connect. Note that this option should never be used as a substitute for proper security/encryption settings."
+#~ msgstr "Αν επιλεγεί, το SSID δεν θα μεταδίδεται και θα μπορούν να συνδεθούν μόνο πελάτες που το γνωρίζουν. Σημειώστε ότι δεν θα πρέπει να χρησιμοποιείτε ποτέ αυτή την επιλογή σαν υποκατάστατο των ρυθμίσεων ασφαλείας και κρυπτογράφησης."
+
+#, fuzzy
+#~ msgid "If you click &quot;Yes&quot;, the PBX will "
+#~ msgstr "αφού πιέσετε &quot;Αποθήκευση&quot;, όλες οι ενεργές κλήσεις θα διακοπούν."
+
+#~ msgid "In most cases, you should select &quot;WPA + WPA2&quot; here."
+#~ msgstr "Στις περισσότερες περιπτώσεις  η πιο σωστή επιλογή είναι &quot;WPA + WPA2&quot;."
+
+#~ msgid "In nearly all cases, 'Kewl Start' is the appropriate choice here."
+#~ msgstr "Στις περισσότερες περιπτώσεις, η πιο σωστή επιλογή είναι 'Kewl Start'."
+
+#~ msgid "In order to send missed call notifications and recorded voicemail messages via e-mail, a mail server must be correctly configured here."
+#~ msgstr "Για να μπορέσετε να στείλετε ειδοποιήσεις για αναπάντητες κλήσεις ή ηχογραφημένα μηνύματα φωνητικών θυρίδων μέσω e-mail, θα πρέπει να ορίσετε έναν διακομιστή e-mail."
+
+#~ msgid "In/Out Errors"
+#~ msgstr "Σφάλματα (εισ/εξ)"
+
+#~ msgid "In/Out Packets"
+#~ msgstr "Πακέτα (εισ/εξ)"
+
+#~ msgid "Incoming Caller ID Overrides"
+#~ msgstr "Αντιστοιχήσεις εισερχόμενων ταυτοτήτων καλούντος"
+
+#~ msgid "Install"
+#~ msgstr "Εγκατάσταση"
+
+#~ msgid "Install a New Package"
+#~ msgstr "Εγκατάσταση νέου πακέτου"
+
+#~ msgid "Installed Packages"
+#~ msgstr "Εγκατεστημένα πακέτα"
+
+#~ msgid "Interface #"
+#~ msgstr "Αριθμός διεπαφής"
+
+#~ msgid "Interfaces"
+#~ msgstr "Διεπαφές"
+
+#~ msgid "Internal extension used to reach this phone."
+#~ msgstr "Το εσωτερικό που θα χρησιμοποιείτε για να καλέσετε αυτό το τηλέφωνο."
+
+#, fuzzy
+#~ msgid "Is there a NATing device between the pbx and this account? Setting this to 'yes' will work in most cases. The options 'never' and 'route' are only rarely used for certain buggy SIP phones."
+#~ msgstr "Υπάρχει συσκευή NAT μεταξύ του τηλεφωνικού σας κέντρου και αυτού του λογαριασμού; Θέτοντας 'yes' θα λειτουργήσει στις περισσότερες περιπτώσεις. Οι επιλογές 'never' και 'route' χρησιμοποιούνται σπανιότατα και μόνο για συγκεκριμένα προβληματικά τηλέφωνα SIP."
+
+#~ msgid "Keep diagnostics in navigation expanded"
+#~ msgstr "Τα διαγνωστικά στο μενού να παραμένουν ανοικτά"
+
+#~ msgid "Key"
+#~ msgstr "Κλειδί"
+
+#~ msgid "Key 1:"
+#~ msgstr "Κλειδί 1:"
+
+#~ msgid "Key 2:"
+#~ msgstr "Κλειδί 2:"
+
+#~ msgid "Key 3:"
+#~ msgstr "Κλειδί 3:"
+
+#~ msgid "Key 4:"
+#~ msgstr "Κλειδί 4:"
+
+#~ msgid "LAN"
+#~ msgstr "LAN"
+
+#~ msgid "LAN net"
+#~ msgstr "Ενσύρματο τοπικό δίκτυο"
+
+#~ msgid "Last scan results"
+#~ msgstr "Αποτελέσματα τελευταίας σάρωσης"
+
+#~ msgid "Line Gain"
+#~ msgstr "Απολαβή γραμμής"
+
+#~ msgid "Live"
+#~ msgstr "Ζωντανά"
+
+#~ msgid "MAC address"
+#~ msgstr "Διεύθυνση MAC"
+
+#, fuzzy
+#~ msgid "Main Number"
+#~ msgstr "Αριθμός"
+
+#~ msgid "Manual Install"
+#~ msgstr "Χειροκίνητη εγκατάσταση"
+
+#~ msgid "Manual Update"
+#~ msgstr "Χειροκίνητη αναβάθμιση"
+
+#, fuzzy
+#~ msgid "Master"
+#~ msgstr "Διαχείριση"
+
+#~ msgid "Maximum number of hops"
+#~ msgstr "Mέγιστος αριθμός βημάτων"
+
+#~ msgid "Maximum number of hops must be between 1 and %d"
+#~ msgstr "Ο μέγιστος αριθμός βημάτων πρέπει να είναι μεταξύ του 1 και του %d."
+
+#~ msgid "Minutes between network time sync.; 300 recommended, or 0 to disable"
+#~ msgstr "Λεπτά μεταξύ ενημερώσεων της ώρας του συστήματος μέσω δικτύου. Προτείνονται 300 λεπτά. Καταχωρήστε 0 για απενεργοποίηση."
+
+#~ msgid "Mode"
+#~ msgstr "Τρόπος λειτουργίας"
+
+#~ msgid "No compatible ISDN interfaces detected."
+#~ msgstr "Δεν βρέθηκαν συμβατές διεπαφές ISDN."
+
+#~ msgid "No compatible analog interfaces detected."
+#~ msgstr "Δεν βρέθηκαν συμβατές διεπαφές PSTN."
+
+#~ msgid "No compatible wireless interfaces detected."
+#~ msgstr "Δεν βρέθηκαν συμβατές διεπαφές ασύρματου δικτύου."
+
+#~ msgid "No matches found."
+#~ msgstr "Δεν βρέθηκαν εγγραφές."
+
+#~ msgid "No new packages available."
+#~ msgstr "Δεν υπάρχουν νέα πακέτα διαθέσιμα."
+
+#~ msgid "No stations are associated at this time."
+#~ msgstr "Δεν υπάρχουν συνδεδεμένοι σταθμοί αυτή τη στιγμή."
+
+#~ msgid "Noise"
+#~ msgstr "Θόρυβος"
+
+#~ msgid "Note: make sure to remove any sensitive information (passwords, maybe also IP addresses) before posting information from this page in public places (like mailing lists)!"
+#~ msgstr "Σημείωση: Φροντίστε να διαγράψετε ευαίσθητες πληροφορίες (κωδικούς πρόσβασης και διευθύνσεις IP) πριν αντιγράψετε πληροφορίες από αυτή τη σελίδα σε δημόσιους χώρους (π.χ. φόρα, δημόσιες συζητήσεις, chat rooms κλπ)!"
+
+#~ msgid "Number of log entries to show must be between 50 and 1000."
+#~ msgstr "Ο αριθμός των εγγραφών του ημερολογίου που θα παρουσιάζονται πρέπει να είναι από 50 έως 1000."
+
+#~ msgid "Number of log entries to show:"
+#~ msgstr "Πλήθος εγγραφών ημερολογίου για παρουσίαση:"
+
+#~ msgid "Number or string to be dialed to reach this telephone. This will be dialed directly; outgoing pattern matching rules do not apply"
+#~ msgstr "Ο αριθμός ή το κείμενο που πρέπει να πληκτρολογηθεί για να κληθεί αυτό το τηλέφωνο. Η κλήση θα γίνει απ' ευθείας, χωρις την εφαρμογή κανόνων εξερχομένων προτύπων."
+
+#~ msgid "Open"
+#~ msgstr "Άνοιγμα"
+
+#~ msgid "Operating Mode"
+#~ msgstr "Τρόπος λειτουργίας"
+
+#~ msgid "Operating Modes"
+#~ msgstr "Τρόποι λειτουργίας"
+
+#~ msgid "Output"
+#~ msgstr "Αποτέλεσμα"
+
+#~ msgid "PBX"
+#~ msgstr "Τηλεφωνικό κέντρο"
+
+#~ msgid "PCM Timing Slave"
+#~ msgstr "PCM Timing Slave"
+
+#~ msgid "PH State"
+#~ msgstr "Κατάσταση PH"
+
+#~ msgid "PSK"
+#~ msgstr "PSK"
+
+#~ msgid "Package already exists, install failed."
+#~ msgstr "Το πακέτο υπάρχει ήδη. Η εγκατάσταση απέτυχε."
+
+#~ msgid "Package data and logic will be replaced by the backup."
+#~ msgstr "Τα δεδομένα, η λογική και οι ρυθμίσεις του πακέτου θα αντικατασταθούν με αυτά του αντιγράφου ασφαλείας."
+
+#~ msgid "Package version checks"
+#~ msgstr "Έλεγχοι εκδόσεων πακέτων"
+
+#~ msgid "Packages to expand system functionality can be installed and updated here. Start by clicking <img src=\"img/add.png\" border=\"0\"> to check for newly available packages. All packages are digitally signed before distribution and checked upon installation."
+#~ msgstr "Εδώ μπορείτε να εγκαταστήσετε και να ενημερώσετε πακέτα το οποία επεκτείνουν τις δυνατότητες του συστήματος. Ξεκινήστε κάνοντας κλικ στο <img src=\"img/add.png\" border=\"0\"> για να ελέγξετε για νέα διαθέσιμα πακέτα. Όλα τα πακέτα είναι υπογεγραμμένα ψηφιακά πριν τη δημοσίευσή τους και ελέγχονται κατά την εγκατάσταση."
+
+#~ msgid "Passwords in config.xml have been automatically removed."
+#~ msgstr "Οι κωδικοί πρόσβασης διαγράφηκαν αυτόματα από το config.xml."
+
+#~ msgid "Paste a signed certificate in X.509 PEM format here."
+#~ msgstr "Επικολλήστε ένα υπογεγραμμένο πιστοποιητικό σε μορφή X.509 PEM."
+
+#~ msgid "Paste an RSA private key in PEM format here."
+#~ msgstr "Επικολλήστε ένα ιδιωτικό κλειδί RSA σε μορφή PEM."
+
+#, fuzzy
+#~ msgid "Permit only 'n' concurrent calls (default: 2)"
+#~ msgstr "Επιτρέπονται μόνο 'n' εξερχόμενες κλήσεις και 'n' εισερχόμενες κλήσεις (προεπιλεγμένη τιμή: 2)"
+
+#~ msgid "Phone Accounts allow you to configure internal extensions and their access to Provider Accounts. Click an account type below to get started."
+#~ msgstr "Οι λογαριασμοί τηλεφώνων σας επιτρέπουν να ρυθμίσετε εσωτερικά και την πρόσβασή τους σε λογαριασμούς παρόχων. Κάντε κλικ σε έναν από τους τύπους λογαριασμών που ακολουθούν, για να ξεκινήσετε."
+
+#~ msgid "Phone status will be switched to 'busy' with 'n' concurrent calls (default: 1)"
+#~ msgstr "Η κατάσταση του τηλεφώνου θα γίνει 'κατηλειμμένο' με 'n' ταυτόχρονες κλήσεις (προεπιλεγμένη τιμή: 1)"
+
+#~ msgid "Ping output:"
+#~ msgstr "Αποτέλεσμα ping:"
+
+#~ msgid "Ping/Traceroute"
+#~ msgstr "Ping/Traceroute"
+
+#~ msgid "Platform"
+#~ msgstr "Πλατφόρμα"
+
+#~ msgid "Please <a href=\"mailto:michael@askozia.com\">contact us</a> if you are able to provide a new translation."
+#~ msgstr "Επικοινωνήστε <a href=\"mailto:michael@askozia.com\">μαζί μας</a> αν μπορείτε να κάνετε μια νέα μετάφραση."
+
+#~ msgid "Power Save"
+#~ msgstr "Κατάσταση εξοικονόμησης ενέργειας"
+
+#~ msgid "Prepend with string"
+#~ msgstr "Πρόθεση κειμένου"
+
+#~ msgid "Provider Accounts allow you to configure routes to and from external sources (i.e. VoIP service providers or attached ISDN / Analog interface hardware). Click an account type below to get started."
+#~ msgstr "Οι λογαριασμοί παρόχων σας επιτρέπουν να ορίσετε δρομολογήσεις κλήσεων από και προς εξωτερικές πηγές (π.χ. παρόχους VoIP ή/και συνδεδεμένες διεπαφές ISDN και PSTN). Κάντε κλικ σε έναν τύπο λογαριασμού για να ξεκινήσετε."
+
+#~ msgid "Public Direct Dial"
+#~ msgstr "Δημόσια απ' ευθείας κλήση"
+
+#~ msgid "Public name. Enter a string to map a friendly name to this extension."
+#~ msgstr "Δημόσιο όνομα. Εισάγετε μία λέξη για να δημιουργήσετε ένα φιλικό όνομα το οποίο θα χρησιμοποιείται γι' αυτό το εσωτερικό."
+
+#~ msgid "Puts the hard disk into standby mode when the selected amount of time after the last access has elapsed. <em>Do not set this for CF cards."
+#~ msgstr "Βάζει τον σκληρό δίσκο σε κατάσταση αναμονής, όταν ο καθορισμένος χρόνος μετά την τελευταία πρόσβαση έχει περάσει. <em>Μην το ορίσετε για κάρτες CF."
+
+#~ msgid "RSSI"
+#~ msgstr "RSSI"
+
+#~ msgid "Rate"
+#~ msgstr "Ρυθμός"
+
+#~ msgid "Remote syslog server"
+#~ msgstr "Απομακρυσμένος διακομιστής syslog"
+
+#~ msgid "Replace with string"
+#~ msgstr "Αντικατάσταση με κείμενο"
+
+#~ msgid "Resolve IP addresses to hostnames"
+#~ msgstr "Μετάφραση διευθύνσεων IP σε ονόματα υπολογιστών"
+
+#~ msgid "Restart"
+#~ msgstr "Επανεκκίνηση"
+
+#~ msgid "Restore"
+#~ msgstr "Επαναφορά"
+
+#~ msgid "Restore from a Backup Archive"
+#~ msgstr "Επαναφορά αντιγράφου ασφαλείας"
+
+#~ msgid "SIP proxy host URL or IP address and optional port."
+#~ msgstr "Το URL του διακομιστή μεσολάβησης SIP, ή η διεύθυνσή IP του και προαιρετικά η θύρα."
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#, fuzzy
+#~ msgid "SNOM MAC Address"
+#~ msgstr "Διεύθυνση MAC"
+
+#~ msgid "SSID"
+#~ msgstr "SSID"
+
+#~ msgid "SSID,Channel"
+#~ msgstr "SSID,Κανάλι"
+
+#~ msgid "Select a .pbxpkg file from your computer to install."
+#~ msgstr "Επιλέξτε ένα αρχείο με κατάληξη .pbxpkg για την εγκατάσταση."
+
+#~ msgid "Select a .pbxpkg file from your computer to update from, existing package data will be preserved."
+#~ msgstr "Επιλέξτε ένα αρχείο με κατάληξη .pbxpkg για να χρησιμοποιηθεί για την αναβάθμιση. Τα υπάρχοντα δεδομένα του πακέτου θα διατηριηθούν."
+
+#~ msgid "Select a backup .tgz archive and press 'Restore'"
+#~ msgstr "Επιλέξτε ένα αρχείο με κατάληξη .tgz και πιέστε 'Επαναφορά'"
+
+#~ msgid "Select which packages you would like to install."
+#~ msgstr "Επιλέξτε ποια πακέτα θέλετε να εγκαταστήσετε."
+
+#~ msgid "Select which packages you would like to update, existing package data will be preserved."
+#~ msgstr "Επιλέξτε ποια πακέτα θέλετε να αναβαθμίσετε. Τα δεδομένα των πακέτων θα διατηριηθούν."
+
+#~ msgid "Send string defined above&nbsp;"
+#~ msgstr "Αποστολή του κειμένου που καταχωρήθηκε πιο πάνω&nbsp;"
+
+#~ msgid "Show log entries in reverse order (newest entries on top)"
+#~ msgstr "Παρουσίαση των εγγραφών του ημερολογίου με φθίνουσα ταξινόμηση (οι νεότερες εγγραφές στην κορυφή)"
+
+#~ msgid "Some analog connections may need adjustment to achieve an acceptable audio level. Adjust the receive and transmit gain in decibels to amplify or quiet the line."
+#~ msgstr "Μερικές συνδέσεις PSTN μπορεί να χρειάζονται ρυθμίσεις για να επιτευχθεί ένα αποδεκτό ηχητικό επίπεδο. Ρυθμίστε τις απολαβές λήψης και αποστολής σε dB για να ενισχύσετε ή σιγάσετε τη γραμμή."
+
+#~ msgid "Source Name &lt;number&gt;"
+#~ msgstr "Όνομα &lt;Αριθμός&gt;"
+
+#~ msgid "Standard"
+#~ msgstr "Πρότυπο"
+
+#~ msgid "Start"
+#~ msgstr "Έναρξη"
+
+#~ msgid "Stop"
+#~ msgstr "Τερματισμός"
+
+#~ msgid "Subnet Mask"
+#~ msgstr "Μάσκα υποδικτύου"
+
+#~ msgid "TKIP"
+#~ msgstr "TKIP"
+
+#~ msgid "TKIP + AES/CCMP"
+#~ msgstr "TKIP + AES/CCMP"
+
+#~ msgid "TLS certificates are currently not verified."
+#~ msgstr "Τα πιστοποιητικά TLS προς το παρόν δεν επαληθεύονται."
+
+#~ msgid "TX key"
+#~ msgstr "Κλειδί (TX key)"
+
+#, fuzzy
+#~ msgid "The PBX automatically allocates leftover space for permanent storage. Packages to extend the system's functionality can be installed in this space."
+#~ msgstr "Το σύστημα επιμερίζει αυτόματα τον χώρο που απομένει για μόνιμη αποθήκευση. Τα πακέτα που επεκτείνουν τη λειτουργικότητα του συστήματος μπορούν να εγκτασταθούν σε αυτόν τον χώρο."
+
+#~ msgid "The WPA PSK must be between 8 and 63 characters long."
+#~ msgstr "Το WPA PSK πρέπει να έχει μήκος από 8 μέχρι 63 χαρακτήρες."
+
+#~ msgid "The default telephone number (MSN) assigned to this line. Individual MSN mappings can be defined below."
+#~ msgstr "Ο προεπιλεγμένος αριθμός (MSN) γι' αυτή τη γραμμή. Πρόσθετεες αντιστοιχήσεις MSNs μπορούν να οριστούν πιο κάτω."
+
+#~ msgid "The dial-pattern \"%s\" is invalid. %s"
+#~ msgstr "Το πρότυπο κλήσης \"%s\" δεν είναι έγκυρο. %s"
+
+#~ msgid "The digital signature on this package is invalid."
+#~ msgstr "Η ψηφιακή υπογραφή αυτού του πακέτου είναι άκυρη."
+
+#~ msgid "The echo canceller 'tap' size. Larger sizes more effectively cancel echo but require more processing power."
+#~ msgstr "Το μέγεθος 'tap' της απαλοιφής ηχούς. Μεγαλύτερα μεγέθη απαλοίφουν καλύτερη την ηχώ, αλλά απαιτούν μεγαλύτερη υπολογιστική ισχύ."
+
+#~ msgid "The entire system configuration can be backed up and restored via this page."
+#~ msgstr "Σε αυτή τη σελίδα μορείτε να να δημιουργήσετε αντίγραφα ασφαλείας του τηλεφωνικού κέντρου ή να επαναφέρετε τις αποθηκευμένες ρυθμίσεις του."
+
+#~ msgid "The following packages issued warnings while verifying their digital signature. This means that they are not official/supported packages and may lead to unexpected behavior or security compromises. Only install packages that come from sources that you trust, and make sure that they have not been tampered with.<br><br>Check the packages you wish to install despite this warning."
+#~ msgstr "Τα ακόλουθα πακέτα εξέπεμψαν προειδοποιήσεις κατά την πιστοποίηση της ηλεκτρονικής τους υπογραφής. Αυτό σημαίνει ότι δεν είναι αυθεντικά/υποστηριζόμενα και η εγκατάστασή τους μπορεί να οδηγήσει σε απρόβλεπτη συμπεριφορά και προβλήματα ασφάλειας. Θα πρέπει να εγκαθιστάτε μόνο πακέτα που προέρχονται από πηγές που εμπιστεύεστε, και να είστε σίγουροι ότι τα πακέτα δεν έχουν μεταβληθεί από τρίτους.<br><br>Επιλέξτε τα πακέτα που θέλετε να εγκαταστήσετε παρά την προειδοποίηση αυτή."
+
+#~ msgid "The internal extension used to dial this phone."
+#~ msgstr "Το εσωτερικό που θα χρησιμοποιείτε για να καλέσετε αυτό το τηλέφωνο."
+
+#, fuzzy
+#~ msgid "The main telephone number assigned to this line."
+#~ msgstr "Ο αριθμός κλήσης αυτής της γραμμής."
+
+#~ msgid "The package is corrupt and has been deleted."
+#~ msgstr "Αυτό το πακέτο είναι κατεστραμμένο και έχει διαγραφεί."
+
+#~ msgid "The phone number assigned to this account. Also this account's username."
+#~ msgstr "Το τηλέφωνο που έχει συνδεθεί με αυτόν τον λογαριασμό. Επίσης, το όνομα χρήστη αυτού του λογαριασμού."
+
+#, fuzzy
+#~ msgid "The settings on this page are critical to ensuring connectivity to VoIP Providers. In particular, incorrect Topology settings can prevent incoming calls from connecting. If this system is behind a NAT, by default the system requires the following ports be forwarded to it: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
+#~ msgstr "Οι ρυθμίσεις σε αυτή τη σελίδα είναι σημαντικές για τη σύνδεση με παρόχους VoIP. Πιο συγκεκριμένα, λανθασμένες ρυθμίσεις τοπολογίας μπορούν να αποτρέψουν τη σύνδεση εισερχομένων κλήσεων. Αν το σύστημά σας είναι πίσω από NAT, χρειάζεται να προωθήσετε τις ακόλουθες θύρες στο τηλεφωνικό σας κέντρο: 5060 UDP (SIP), 4569 UDP (IAX) και 10000-10200 UDP (Ήχος RTP)"
+
+#~ msgid "The specified file (%s) does not exist."
+#~ msgstr "Το αρχείο (%s) δεν υπάρχει."
+
+#~ msgid "The system storage media is not large enough to install packages."
+#~ msgstr "Ο χώρος αποθήκευσης δεν είναι αρκετά μεγάλος για να εγκαταστήσετε πακέτα."
+
+#~ msgid "The time update interval must be either 0 (disabled) or between 6 and 1440."
+#~ msgstr "Η συχνότητα ενημέρωσης ώρας μπορεί να είναι 0 (απενεργοποιημένη) ή να έχει τιμή μεταξύ 6 και 1440."
+
+#~ msgid "The uploaded package is not newer than the existing package, update failed."
+#~ msgstr "Το πακέτο που στείλατε δεν είναι νεότερο από το ήδη υπάρχον. Η αναβάθμιση απέτυχε."
+
+#~ msgid "There are currently no phones defined."
+#~ msgstr "Δεν έχουν οριστεί τηλέφωνα αυτή τη στιγμή."
+
+#~ msgid "There are currently no providers defined."
+#~ msgstr "Δεν έχουν οριστεί πάροχοι αυτή τη στιγμή."
+
+#~ msgid "There are updates available for packages on your system."
+#~ msgstr "Υπάρχουν διαθέσιμες αναβαθμίσεις για τα πακέτα στο σύστημά σας."
+
+#~ msgid "There has been an error verifying the signature on this package."
+#~ msgstr "Παρουσιάστηκε ένα πρόβλημα κατά την επικύρωση της ψηφιακής υπογραφής αυτού του πακέτου."
+
+#~ msgid "There is already another card present which provides the timing.<br><em>(Unless more than one inteface card is present in the system, this should not be changed."
+#~ msgstr "Υπάρχει ήδη μια άλλη κάρτα στο σύστημα που παρέχει τον χρονισμό.<br><em>(Εκτός και αν υπάρχουν περισσότερες από μία διεπαφές, αυτή η ρύθμιση δεν πρέπει να αλλάξει."
+
+#~ msgid "This account's password and authentication scheme."
+#~ msgstr "Ο κωδικός πρόσβασης και ο τρόπος ταυτοποίησης αυτού του λογαριασμού."
+
+#~ msgid "This certificate does not appear to be valid."
+#~ msgstr "Αυτό το πιστοποιητικό δεν φαίνεται να είναι έγκυρο."
+
+#, fuzzy
+#~ msgid "This extension is reachable via SIP and IAX2 URIs (extension@%s) unless disabled here."
+#~ msgstr "Η ενεργοποίηση αυτού του χαρακτηριστικού επιτρέπει την κλήση αυτού του εσωτερικού μέσω SIP ή IAX2 URIs (εσωτερικό@%s)"
+
+#~ msgid "This is the first page which needs configuring upon installing a new system. Most importantly, the default password should be changed. Then, ensure your host/domain name, time zone and country's indication tones are set correctly before continuing."
+#~ msgstr "Αυτή είναι η πρώτη σελίδα που πρέπει να ρυθμιστεί σε ένα νέο σύστημα. Το πιο σημαντικό που πρέπει να κάνετε είναι να αλλάξετε τον κωδικό πρόσβασης. Μετά καταχωρήστε την ονομασία της συσκευής και το όνομα του τομέα, τη ζώνη ώρας και τη ζώνη τόνων."
+
+#~ msgid "This key does not appear to be valid."
+#~ msgstr "Αυτό το κλειδί δεν φαίνεται να είναι έγκυρο."
+
+#~ msgid "This package is not digitally signed."
+#~ msgstr "Αυτό το πακέτο δεν έχει ψηφιακή υπογραφή."
+
+#~ msgid "This page allows direct execution of commands on the Asterisk console. Execute \"help\" to see a list of possible commands."
+#~ msgstr "Αυτή η σελίδα επιτρέπει την εκτέλεση εντολών στο τηλεφωνικό κέντρο. Εκτελέστε \"help\" για να δείτε όλες τις διαθέσιμες εντολές."
+
+#~ msgid "This phone's number (MSN)."
+#~ msgstr "Ο αριθμός (MSN) αυτού του τηλεφώνου."
+
+#, fuzzy
+#~ msgid "This type of account can use this port."
+#~ msgstr "Ο κωδικός πρόσβασης αυτού του λογαριασμού."
+
+#, fuzzy
+#~ msgid "This will cause the system not to check for newer firmware versions when the <a href=\"system_firmware.php\">System: Firmware</a> page is viewed."
+#~ msgstr "Αποτέλεσμα αυτής της επιλογής θα είναι να μην γίνονται έλεγχοι για νέες εκδόσεις firmware όταν φορτώνεται η σελίδα <a href=\"system_firmware.php\">Σύστημα &raquo; Firmware</a>."
+
+#, fuzzy
+#~ msgid "This will cause the system not to check for package updates when the <a href=\"system_packages.php\">System: Packages</a> page is viewed."
+#~ msgstr "Αποτέλεσμα αυτής της επιλογής θα είναι να μην γίνονται έλεγχοι για νέες εκδόσεις πακέτων όταν φορτώνεται η σελίδα <a href=\"system_packages.php\">Σύστημα &raquo; Πακέτα</a>."
+
+#~ msgid "Traceroute"
+#~ msgstr "Traceroute"
+
+#~ msgid "Traceroute may take a while to complete.  You may hit the Stop button on your browser at any time to see the progress of failed traceroutes."
+#~ msgstr "Το traceroute μπορεί να πάρει λίγο χρόνο μέχρι να ολοκληρωθεί. Μπορείτε να πατήσετε το κουμπί \"Τερματισμός\" στον browser σας για να δείτε την πρόοδο των αποτυχημένων traceroutes."
+
+#~ msgid "Traceroute output:"
+#~ msgstr "Αποτέλεσμα traceroute:"
+
+#~ msgid "Unit"
+#~ msgstr "Μονάδα"
+
+#~ msgid "Update Installed Package"
+#~ msgstr "Ενημέρωση εγκατεστημένου πακέτου"
+
+#~ msgid "Video Codecs"
+#~ msgstr "CODECs βίντεο"
+
+#~ msgid "Voicemail Services"
+#~ msgstr "Οι υπηρεσίες φωνητικής θυρίδας"
+
+#~ msgid "WEP"
+#~ msgstr "WEP"
+
+#~ msgid "WPA"
+#~ msgstr "WPA"
+
+#~ msgid "WPA + WPA2"
+#~ msgstr "WPA + WPA2"
+
+#~ msgid "WPA only"
+#~ msgstr "μόνο WPA"
+
+#~ msgid "WPA settings"
+#~ msgstr "Ρυθμίσεις WPA"
+
+#~ msgid "WPA2 only"
+#~ msgstr "μόνο WPA2"
+
+#~ msgid "Wireless"
+#~ msgstr "Ασύρματο δίκτυο"
+
+#, fuzzy
+#~ msgid "With some knowledge of how the Asterisk dialplan works, some basic applications can be added to the system. These applications can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
+#~ msgstr "Με λίγη γνώση του τρόπου με τον οποίο λειτουργεί το πλάνο κλήσεων του Asterisk, μπορείτε να προσθέσετε κάποιες βασικές εφαρμογές στο AskoziaPBX. Αυτές οι εφαρμογές μπορούν να κληθούν μέσω των εσωτερικών που θα ορίσετε ή να χρησιμοποιηθούν για τον τερματισμό των εισερχομένων κλήσεων από τους παρόχους."
+
+#~ msgid "You are using the most recent <strong>beta</strong> of AskoziaPBX."
+#~ msgstr "Χρησιμοποιείτε την πιο πρόσφατη έκδοση <strong>beta</strong> του AskoziaPBX."
+
+#~ msgid "You are using the most recent version of AskoziaPBX."
+#~ msgstr "Χρησιμοποιείτε την τελευταία έκδοση του AskoziaPBX."
+
+#~ msgid "add a new item"
+#~ msgstr "προσθήκη αντικειμένου"
+
+#~ msgid "allow extension to be directly dialed over public networks"
+#~ msgstr "το εσωτερικό μπορεί να καλείται απ' ευθείας από τα δημόσια δίκτυα"
+
+#, fuzzy
+#~ msgid "and is now rebooting. This may take a minute."
+#~ msgstr "Το σύστημα επανεκκινεί. Παρακαλώ περιμένετε για περίπου 30 δευτερόλεπτα."
+
+#~ msgid "autoselect"
+#~ msgstr "αυτόματη επιλογή"
+
+#~ msgid "backup package data"
+#~ msgstr "αντίγραφο ασφαλείας των δεδομένων του πακέτου"
+
+#, fuzzy
+#~ msgid "be reset to factory defaults and will reboot immediately. The entire "
+#~ msgstr "Το σύστημα έχει αρχικοποιηθεί και θα επενακκινήσει. Παρακαλώ περιμένετε για 30 δευτερόλεπτα."
+
+#~ msgid "bill"
+#~ msgstr "χρόνος ομιλίας"
+
+#~ msgid "call detail records"
+#~ msgstr "εγγραφές κλήσεων"
+
+#~ msgid "calls"
+#~ msgstr "κλήσεις"
+
+#~ msgid "channels"
+#~ msgstr "κανάλια"
+
+#~ msgid "check for package updates"
+#~ msgstr "έλεγχος για αναβαθμίσεις πακέτων"
+
+#~ msgid "click to disable package"
+#~ msgstr "κάντε κλικ για να απενεργοποιήσετε αυτό το πακέτο"
+
+#~ msgid "click to enable package"
+#~ msgstr "κάντε κλικ για να ενεργοποιήσετε αυτό το πακέτο"
+
+#, fuzzy
+#~ msgid "click to mount disk"
+#~ msgstr "κάντε κλικ για να απενεργοποιήσετε αυτό το πακέτο"
+
+#~ msgid "delete arp entry"
+#~ msgstr "διαγραφή καταχώρησης arp"
+
+#~ msgid "delete package configuration and data"
+#~ msgstr "διαγραφή των ρυθμίσεων και των δεδομένων του πακέτου"
+
+#~ msgid "descr"
+#~ msgstr "περιγραφή"
+
+#~ msgid "descriptive name"
+#~ msgstr "επεξηγηματικό όνομα"
+
+#~ msgid "direct outbound dialing via SIP uris"
+#~ msgstr "Απ' ευθείας εξερχόμενες κλήσεις μέσω SIP URIs"
+
+#~ msgid "disposition"
+#~ msgstr "κατάληξη"
+
+#~ msgid "don't send to voicemail when busy"
+#~ msgstr "να μην γίνεται εκτροπή στη φωνητική θυρίδα όταν το τηλέφωνο είναι κατειλημμένο"
+
+#~ msgid "download a backup archive"
+#~ msgstr "λήψη ενός αντιγράφου ασφαλείας"
+
+#~ msgid "e.g. <em>pbx"
+#~ msgstr "π.χ. <em>pbx"
+
+#~ msgid "edit ISDN interface"
+#~ msgstr "επεξεργασία διεπαφής ISDN"
+
+#~ msgid "edit an item"
+#~ msgstr "επεξεργασία ενός αντικειμένου"
+
+#~ msgid "edit analog interface"
+#~ msgstr "επεξεργασία διεπαφής PSTN"
+
+#, fuzzy
+#~ msgid "edit analog port"
+#~ msgstr "επεξεργασία διεπαφής PSTN"
+
+#~ msgid "filter"
+#~ msgstr "φίλτρο"
+
+#~ msgid "hidden"
+#~ msgstr "κρυφό"
+
+#~ msgid "install new package"
+#~ msgstr "εγκατάσταση νέου πακέτου"
+
+#~ msgid "item is disabled, click to enable"
+#~ msgstr "το αντικείμενο είναι ανενεργό - κάντε κλικ για να το ενεργοποιήσετε"
+
+#~ msgid "item is enabled, click to disable"
+#~ msgstr "το αντικείμενο είναι ενεργό - κάντε κλικ για να το απενεργοποιήσετε"
+
+#~ msgid "last app"
+#~ msgstr "τελευταία εφαρμογή"
+
+#~ msgid "minutes"
+#~ msgstr "λεπτά"
+
+#~ msgid "multipoint-to-point, network termination: this port provides MSNs to route calls and is attached to one or more telephones"
+#~ msgstr "multipoint-to-point, NT: αυτή η θύρα παρέχει MSNs και σε αυτή συνδέονται ένα ή περισσότερα τηλέφωνα"
+
+#~ msgid "must be configured</a> before this feature will work."
+#~ msgstr "θα πρέπει να ενεργοποιηθούν</a> για να λειτουργήσει αυτό το χαρακτηριστικό."
+
+#~ msgid "name of the pbx host, without domain part"
+#~ msgstr "ονομασία του τηλεφωνικού κέντρου, χωρίς τον τομέα"
+
+#~ msgid "pbx events"
+#~ msgstr "γεγονότα τηλεφωνικού κέντρου"
+
+#~ msgid "permanently delete an item"
+#~ msgstr "οριστιή διαγραφή ενός αντικειμένου"
+
+#~ msgid "point-to-multipoint, terminal equipment: this port accepts MSNs to route calls and is attached to the public ISDN network or another PBX system"
+#~ msgstr "point-to-multipoint, TE: αυτή η θύρα δέχεται MSNs και συνδέεται στο δημόσιο δίκτυο ISDN ή σε άλλο τηλεφωνικό κέντρο"
+
+#~ msgid "point-to-point, network termination: this port provides DID to route calls and is connected directly to another PBX system"
+#~ msgstr "point-to-point, NT: αυτή η θύρα παρέχει DIDs και συνδέεται απ' ευθείας σε άλλο τηλεφωνικό κέντρο"
+
+#~ msgid "point-to-point, terminal equipment: this port accepts DID to route calls and is connected directly to another PBX system"
+#~ msgstr "point-to-point, TE: αυτή η θύρα δέχεται DIDs και συνδέεται απ' ευθείας σε άλλο τηλεφωνικό κέντρο"
+
+#, fuzzy
+#~ msgid "provider lines"
+#~ msgstr "Πάροχοι"
+
+#~ msgid "reload page"
+#~ msgstr "επαναφόρτωση σελίδας"
+
+#~ msgid "remove all entries from arp table"
+#~ msgstr "διαγραφή όλων των καταχωρήσεων από τον πίνακα arp"
+
+#~ msgid "reset filter and reload firewall logs page"
+#~ msgstr "αρχικοποίηση φίλτρου και επαναφόρτωση σελίδας ημερολογίου τοίχους προστασίας"
+
+#~ msgid "restore a backup archive"
+#~ msgstr "επαναφορά ενός αντιγράφου ασφαλείας"
+
+#~ msgid "restore package data"
+#~ msgstr "επαναφορά των δεδομένων του πακέτου"
+
+#~ msgid "sec."
+#~ msgstr "συνολικός χρόνος"
+
+#~ msgid "send missed call notifications"
+#~ msgstr "αποστολή ειδοποιήσεων αναπάντητων κλήσεων"
+
+#~ msgid "src"
+#~ msgstr "από"
+
+#~ msgid "ssid"
+#~ msgstr "SSID"
+
+#~ msgid "start"
+#~ msgstr "έναρξη"
+
+#~ msgid "state"
+#~ msgstr "κατάσταση"
+
+#~ msgid "status"
+#~ msgstr "κατάσταση"
+
+#, fuzzy
+#~ msgid "syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this system."
+#~ msgstr "Το syslog στέλνει UDP datagrams στη θύρα 514 στον απομακρυσμένο διακομιστή syslog. Βεβαιωθείτε ότι ο απομακρυσμένος διακομιστής syslog μπορεί να δεχτεί τα μηνύματα αυτά από το τηλεφωνικό κέντρο."
+
+#~ msgid "system events"
+#~ msgstr "γεγονότα συστήματος"
+
+#~ msgid "system storage partition"
+#~ msgstr "αποθηκευτικός χώρος συστήματος"
+
+#~ msgid "u-law"
+#~ msgstr "u-law"
+
+#~ msgid "unconfigured"
+#~ msgstr "μη ρυθμισμένο"
+
+#~ msgid "update package to newer version"
+#~ msgstr "αναβάθμιση πακέτου στην τελευταία έκδοση"
+
+#~ msgid "webGUI SSL certificate/key"
+#~ msgstr "Πιστοποιητικό/κλειδί του GUI SSL"
+
+#~ msgid "webGUI protocol"
+#~ msgstr "Πρωτόκολλο περιβάλλοντος διαχείρισης"

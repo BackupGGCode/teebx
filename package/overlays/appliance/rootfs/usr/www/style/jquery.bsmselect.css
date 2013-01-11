@@ -1,0 +1,111 @@
+.bsmContainer {
+  /* container that surrounds entire bsmSelect widget */
+}
+
+.bsmSelect {
+  /* the newly created regular 'select' */
+  display: inline;
+}
+
+.bsmOptionDisabled {
+  /* disabled options in new select */
+  color: #999;
+}
+
+.bsmHighlight {
+  /* the highlight span */
+  float: right;
+  padding: 0;
+  margin: 0 0 0 1em;
+}
+
+.bsmList {
+  /* html list that contains selected items */
+  margin: 0.25em 0 1em 0;
+  position: relative;
+  display: block;
+  padding-left: 0;
+  list-style: none;
+}
+
+.bsmListItem {
+  /* li item from the html list above */
+  position: relative;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  background: #f5bc73;
+  border: 2px solid #5cc542;
+  width: 26em;
+  margin: 0 0 -1px 0;
+  line-height: 1em;
+}
+
+.bsmListItem:hover {
+  background-color: #e5e5e5;
+}
+
+.bsmListItemLabel {
+  /* this is a span that surrounds the text in the item, except for the remove link */
+  padding: 5px;
+  display: block;
+}
+
+.bsmListSortable .bsmListItemLabel {
+  cursor: move;
+}
+
+.bsmListItemRemove {
+  /* the remove link in each list item */
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+
+.bsmHighlight {
+  color: #777;
+}
+
+.bsmSelect {
+  margin: 1em 0 0.25em 0;
+}
+
+.bsmListSortableCustom li {
+  cursor: move;
+  margin: 4px 0;
+}
+
+/* custom */
+
+
+.bsmList-custom {
+  /* html list that contains selected items */
+  margin: 0.25em 0 0.25em 0;
+  display: block;
+  padding-left: 0;
+  list-style: none;
+}
+
+.bsmListItem-custom {
+  /* li item from the html list above */
+  margin: 0 5px 5px 0;
+  padding: 4px;
+  list-style: none;
+  background: #ddd;
+  border: 1px solid #bbb;
+  line-height: 1em;
+  float: left;
+}
+
+.bsmListItem-custom:hover {
+  background-color: #e5e5e5;
+}
+
+.bsmListItemLabel-custom {
+  padding-right: 5px;
+}
+
+.bsmListItemRemove-custom {
+  text-decoration: none;
+}
