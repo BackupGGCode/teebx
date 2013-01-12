@@ -413,118 +413,151 @@ function config_build_uniqid_map($config)
 	// providers and internal phones
 	foreach ($g['technologies'] as $tech)
 	{
-		$n = count($config[$tech]['provider']);
-		for ($i = 0; $i < $n; $i++)
+		if (isset($config[$tech]['provider']))
 		{
-			if (!is_array($config[$tech]['provider']))
+			$n = count($config[$tech]['provider']);
+			for ($i = 0; $i < $n; $i++)
 			{
-				continue;
+				if (!is_array($config[$tech]['provider']))
+				{
+					continue;
+				}
+				$uniqid_map[$config[$tech]['provider'][$i]['uniqid']] = $i;
 			}
-			$uniqid_map[$config[$tech]['provider'][$i]['uniqid']] = $i;
 		}
-		$n = count($config[$tech]['phone']);
-		for ($i = 0; $i < $n; $i++)
+		if (isset($config[$tech]['phone']))
 		{
-			if (!is_array($config[$tech]['phone']))
+			$n = count($config[$tech]['phone']);
+			for ($i = 0; $i < $n; $i++)
 			{
-				continue;
+				if (!is_array($config[$tech]['phone']))
+				{
+					continue;
+				}
+				$uniqid_map[$config[$tech]['phone'][$i]['uniqid']] = $i;
 			}
-			$uniqid_map[$config[$tech]['phone'][$i]['uniqid']] = $i;
 		}
 	}
 	// external phones
-	$n = count($config['external']['phone']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['external']['phone']))
 	{
-		if (!is_array($config['external']['phone']))
+		$n = count($config['external']['phone']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['external']['phone']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['external']['phone'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['external']['phone'][$i]['uniqid']] = $i;
 	}
 	// conferencing
-	$n = count($config['conferencing']['room']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['conferencing']['room']))
 	{
-		if (!is_array($config['conferencing']['room']))
+		$n = count($config['conferencing']['room']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['conferencing']['room']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['conferencing']['room'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['conferencing']['room'][$i]['uniqid']] = $i;
 	}
 	// faxes
 	foreach ($g['fax_types'] as $tech)
 	{
-		$n = count($config[$tech]['fax']);
-		for ($i = 0; $i < $n; $i++)
+		if (isset($config[$tech]['fax']))
 		{
-			if (!is_array($config[$tech]['fax']))
+			$n = count($config[$tech]['fax']);
+			for ($i = 0; $i < $n; $i++)
 			{
-				continue;
+				if (!is_array($config[$tech]['fax']))
+				{
+					continue;
+				}
+				$uniqid_map[$config[$tech]['fax'][$i]['uniqid']] = $i;
 			}
-			$uniqid_map[$config[$tech]['fax'][$i]['uniqid']] = $i;
 		}
 	}
 	// callgroups
-	$n = count($config['dialplan']['callgroup']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['dialplan']['callgroup']))
 	{
-		if (!is_array($config['dialplan']['callgroup']))
+		$n = count($config['dialplan']['callgroup']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['dialplan']['callgroup']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['dialplan']['callgroup'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['dialplan']['callgroup'][$i]['uniqid']] = $i;
 	}
 	// applications
-	$n = count($config['dialplan']['application']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['dialplan']['application']))
 	{
-		if (!is_array($config['dialplan']['application']))
+		$n = count($config['dialplan']['application']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['dialplan']['application']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['dialplan']['application'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['dialplan']['application'][$i]['uniqid']] = $i;
 	}
-	$n = count($config['dialplan']['application2']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['dialplan']['application2']))
 	{
-		if (!is_array($config['dialplan']['application2']))
+		$n = count($config['dialplan']['application2']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['dialplan']['application2']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['dialplan']['application2'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['dialplan']['application2'][$i]['uniqid']] = $i;
 	}
 	// dahdi ports
-	$n = count($config['interfaces']['dahdi-port']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['interfaces']['dahdi-port']))
 	{
-		if (!is_array($config['interfaces']['dahdi-port']))
+		$n = count($config['interfaces']['dahdi-port']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['interfaces']['dahdi-port']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['interfaces']['dahdi-port'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['interfaces']['dahdi-port'][$i]['uniqid']] = $i;
 	}
 	// dahdi portgroups
-	$n = count($config['interfaces']['dahdi-portgroup']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['interfaces']['dahdi-portgroup']))
 	{
-		if (!is_array($config['interfaces']['dahdi-portgroup']))
+		$n = count($config['interfaces']['dahdi-portgroup']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['interfaces']['dahdi-portgroup']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['interfaces']['dahdi-portgroup'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['interfaces']['dahdi-portgroup'][$i]['uniqid']] = $i;
 	}
 	// storage disks
-	$n = count($config['storage']['disk']);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($config['storage']['disk']))
 	{
-		if (!is_array($config['storage']['disk']))
+		$n = count($config['storage']['disk']);
+		for ($i = 0; $i < $n; $i++)
 		{
-			continue;
+			if (!is_array($config['storage']['disk']))
+			{
+				continue;
+			}
+			$uniqid_map[$config['storage']['disk'][$i]['uniqid']] = $i;
 		}
-		$uniqid_map[$config['storage']['disk'][$i]['uniqid']] = $i;
 	}
-
+	//
 	return $uniqid_map;
 }
 

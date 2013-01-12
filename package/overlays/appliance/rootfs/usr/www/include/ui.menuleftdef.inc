@@ -14,12 +14,12 @@ $left_items = array
 			array
 			(
 				'label' => gettext('General Setup'),
-				'url' => 'system.php'
+				'url' => 'sys_general.php'
 			),
 			array
 			(
 				'label' => gettext('Networking'),
-				'url' => 'network_lan.php'
+				'url' => 'sys_network.php'
 			),
 			array
 			(
