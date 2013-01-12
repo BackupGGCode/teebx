@@ -46,7 +46,7 @@ $g = array(
 	'www_path' => '/usr/www',
 	'xml_rootobj' => 'teebx',
 	'debug' => false,
-	'latest_config' => '0.01',
+	'latest_config' => '0.1',
 	'package_system' => '1.0',
 	'technologies' => array('sip', 'iax', 'isdn', 'analog', 'skinny'),
 	'phone_types' => array('sip', 'iax', 'isdn', 'analog', 'skinny', 'external'),
@@ -98,13 +98,13 @@ $defaults['sip']['natmode'] = 'yes';
 
 $defaults['iax']['authentication'] = 'md5';
 
-$defaults['storage']['system-partition-offset-megabytes'] = "64";
-$defaults['storage']['system-media-minimum-size'] = "96";
+$defaults['storage']['system-partition-offset-megabytes'] = 64;
+$defaults['storage']['system-media-minimum-size'] = 96;
 
 $defaults['system'] = array();
-$defaults['system']['username'] = "admin";
-$defaults['system']['timeservers'] = "pool.ntp.org";
-$defaults['system']['timeupdateinterval'] = "4-hours";
+$defaults['system']['username'] = 'admin';
+$defaults['system']['timeservers'] = 'pool.ntp.org';
+$defaults['system']['timeupdateinterval'] = '4-hours';
 // regional settings defaults
 $defaults['system']['regional']['analog']['fxo']['daa'] = 'FCC';
 

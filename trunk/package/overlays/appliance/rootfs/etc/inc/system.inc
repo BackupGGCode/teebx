@@ -273,7 +273,7 @@ function writeSysRegSettings(&$config)
 		exec("echo \"{$arrTz['rule']}\" > /etc/TZ");
 		exec("cp /usr/share/zoneinfo/{$arrTz['name']} /etc/localtime");
 	}
-	return true;
+	return 0;
 }
 
 /**
@@ -603,6 +603,8 @@ function system_get_product_name()
 function system_cron_generate($return = false)
 {
 	$interval = $GLOBALS['config']['system']['time-update-interval'];
+	$conf = '';
+	//
 	if ($interval != "disable")
 	{
 		switch ($interval)
@@ -626,10 +628,9 @@ function system_cron_generate($return = false)
 				$conf .= "0 0 * * *";
 				break;
 		}
-
+		//
 		$conf .= " ntpclient -i 10 -L -s -h " . $GLOBALS['config']['system']['timeservers'] . "\n";
 	}
-
 	return ($return) ? $conf : util_file_write("/var/spool/cron/crontabs/root", $conf);
 }
 

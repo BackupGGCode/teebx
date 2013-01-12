@@ -277,27 +277,33 @@ function util_file_write($fullpath, $contents)
 		return 1;
 	}
 	// should this file be appended or overridden with any manual input?
-	$files = $GLOBALS['config']['manual-file'];
-	$n = count($files);
-	for ($i = 0; $i < $n; $i++)
+	if (isset($GLOBALS['config']['manual-file']))
 	{
-		if ($files[$i]['full-path'] == $fullpath)
+		$files = $GLOBALS['config']['manual-file'];
+		$n = count($files);
+		for ($i = 0; $i < $n; $i++)
 		{
-			if ($files[$i]['mode'] == 'append')
+			if ($files[$i]['full-path'] == $fullpath)
 			{
-				$append = base64_decode($files[$i]['encoded-contents']);
-			}
-			else if ($files[$i]['mode'] == 'override')
-			{
-				$contents = base64_decode($files[$i]['encoded-contents']);
+				if ($files[$i]['mode'] == 'append')
+				{
+					$append = base64_decode($files[$i]['encoded-contents']);
+				}
+				else if ($files[$i]['mode'] == 'override')
+				{
+					$contents = base64_decode($files[$i]['encoded-contents']);
+				}
 			}
 		}
 	}
 	// write out contents and append
 	fwrite($fd, $contents . "\n");
-	if ($append)
+	if (isset($append))
 	{
-		fwrite($fd, "\n\n" . $append . "\n");
+		if (!empty($append))
+		{
+			fwrite($fd, "\n\n" . $append . "\n");
+		}
 	}
 	fclose($fd);
 

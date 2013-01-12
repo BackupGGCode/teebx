@@ -79,7 +79,7 @@ class cfgForm extends quickForm implements Serializable
 						'c_fldBlock' => $this->layout,
 						'p_tagsPool' => $this->tagsPool,
 						'p_constraints' => $this->constraints,
-						'p_breakCodeAfterFields' => $this->breakCodeAfterFields,
+						'p_breakCodeAfterFields' => $this->breakAfterFields,
 						'p_autoIdSep' => $this->autoIdSep
 					)
 				)
@@ -96,8 +96,8 @@ class cfgForm extends quickForm implements Serializable
 			$this->tagsPool = $clsState['p_tagsPool'];
 		if (isset($clsState['p_constraints']))
 			$this->constraints = $clsState['p_constraints'];
-		if (isset($clsState['p_breakCodeAfterFields']))
-			$this->breakCodeAfterFields = $clsState['p_breakCodeAfterFields'];
+		if (isset($clsState['p_breakAfterFields']))
+			$this->breakCodeAfterFields = $clsState['p_breakAfterFields'];
 		if (isset($clsState['p_autoIdSep']))
 			$this->autoIdSep = $clsState['p_autoIdSep'];
 	}
