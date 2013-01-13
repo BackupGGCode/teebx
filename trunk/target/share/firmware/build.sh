@@ -30,7 +30,8 @@ imagelocation="$build_toolchain/firmware"
 # cylinder size in bytes (16 heads x 63 sectors/track x 512 bytes/sector)
 cylinder_size="516096"
 sectors_per_cylinder="1008"
-block_pad="2048"
+rtp_block_pad="2048"
+ofp_block_pad="10240"
 
 echo "Preparing firmware image from build result ..."
 rm -rf $imagelocation{,.img}
@@ -168,12 +169,12 @@ rm -rf `find ./ -name ".svn"`
 
 echo "Root partition size calculation ..."
 root_size=`du -B512 -s root_stage | cut -f 1`
-root_size=`expr $root_size + $block_pad`
+root_size=`expr $root_size + $rtp_block_pad`
 echo "   = $root_size sectors"
 
 echo "Offload partition size calculation ..."
 offload_size=`du -B512 -s offload_stage | cut -f 1`
-offload_size=`expr $offload_size + $block_pad`
+offload_size=`expr $offload_size + $ofp_block_pad`
 echo "   = $offload_size sectors"
 
 . $base/target/share/calculate-image-size.part
