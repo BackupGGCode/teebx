@@ -56,7 +56,6 @@ require_once("i18n.inc");
 require_once("functions.inc");
 require_once('libs-php/microui.lib.php');    // will replace parts from display.inc
 require_once("display.inc");                // !DEPRECATED, replaced in microui.inc and/or form classes depending on scope
-require_once("javascript.inc");             // !TODO, to be rewritten
 
 $d_staticroutesdirty_path = $g['varrun_path'] . "/staticroutes.dirty";
 $d_extensionsconfdirty_path = $g['varrun_path'] . "/extensionsconf.dirty";
