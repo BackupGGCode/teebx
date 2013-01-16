@@ -309,7 +309,7 @@ class cfgForm extends quickForm implements Serializable
 			}
 			else
 			{
-				/* That field/fields collections was deleted by the user, nothing to clone
+				/* This field/fields collection was deleted by the user, nothing to clone
 				but set up an hidden field to let the update method to consider
 				this field later when values will be needed to update configuration
 				*/
@@ -322,7 +322,7 @@ class cfgForm extends quickForm implements Serializable
 		if (!is_array($fValues))
 			return;
 		$res = getArrValueByPath($this->layout, $this->prevLayoutPath);
-		// check if values passed for fields is a multidimentional array
+		// check if values passed for fields is a multidimensional array
 		$multi = (count($fValues) != count($fValues, COUNT_RECURSIVE));
 		if ($res[0] != null)
 		{

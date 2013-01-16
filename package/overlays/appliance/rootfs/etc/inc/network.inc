@@ -2,9 +2,9 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2012 Giovanni Vallesi.
+	Copyright(C) 2011 - 2013 Giovanni Vallesi.
 	All rights reserved.
-	
+
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
@@ -58,6 +58,14 @@ function network_lan_configure($linkWaitCount = 20)
 	$lancfg = $config['interfaces']['lan'];
 	//
 	$lanIf = escapeshellarg($lancfg['if']);
+	$useDhcp = true;
+	if (isset($lancfg['dhcp']))
+	{
+		if ($lancfg['dhcp'] === 'no')
+		{
+			$useDhcp = false;
+		}
+	}
 
 	/* bring interface down */
 	mwexec('/sbin/ifconfig ' . $lanIf . ' down');
@@ -80,7 +88,7 @@ function network_lan_configure($linkWaitCount = 20)
 	mwexec('/sbin/route del default gw 0.0.0.0 dev ' . $lanIf);
 
 	/* set address & default route */
-	if (isset($lancfg['dhcp']))
+	if ($useDhcp)
 	{
 		mwexec('/sbin/ifconfig ' . $lanIf . ' up');
 		// ask the linux kernel that eth port link is really up,
@@ -151,7 +159,7 @@ function network_get_current_public_ip_address()
 
 function network_get_interface_names()
 {
-	exec("ls /proc/sys/net/ipv4/conf/ | grep eth", $names);
+	exec('ls /proc/sys/net/ipv4/conf/ | grep eth', $names);
 	return $names;
 }
 
@@ -181,7 +189,7 @@ function network_get_interface($name)
 		$interface['up'] = false;
 	}
 
-	exec('/sbin/route | grep "$name" | grep "default" | cut -d " " -f 10', $gwout);
+	exec('/bin/iproute | grep "$name" | grep "default" | cut -d " " -f 3', $gwout);
 	if (verify_is_ipaddress($gwout[0]))
 	{
 		$interface['gateway'] = $gwout[0];
