@@ -48,10 +48,18 @@
 		$copyright_info = "\n\n";
 	}
 
+	$usingDhcp = true;
 	if (isset($config['interfaces']['lan']['dhcp']))
 	{
-		$ip_line = "LAN IP address assigned via DHCP";
-		$ip_info = "unassigned";
+		if ($config['interfaces']['lan']['dhcp'] == 'no')
+		{
+			$usingDhcp = false;
+		}
+	}
+	if ($usingDhcp)
+	{
+		$ip_line = 'LAN IP address assigned via DHCP';
+		$ip_info = 'unassigned';
 		$interface = network_get_interface($config['interfaces']['lan']['if']);
 		if ($interface['ipaddr'])
 		{
@@ -60,9 +68,8 @@
 	}
 	else
 	{
-		$ip_line = "LAN IP address";
-		$ip_info = $config['interfaces']['lan']['ipaddr'] . " on " .
-			$config['interfaces']['lan']['if'];
+		$ip_line = 'LAN IP address';
+		$ip_info = $config['interfaces']['lan']['ipaddr'] . ' on ' . $config['interfaces']['lan']['if'];
 	}
 
 	echo <<<EOD

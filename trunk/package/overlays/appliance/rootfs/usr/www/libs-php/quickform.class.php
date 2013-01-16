@@ -510,7 +510,13 @@ class quickForm
 		}
 		if (is_null($index))
 		{
-			return $_POST[$fName];
+			if (isset($_POST[$fName]))
+			{
+				return $_POST[$fName];
+			}
+			else
+				return null;
+			//
 		}
 		else
 		{
@@ -743,7 +749,10 @@ class quickForm
 			}
 			if (is_null($elemValue))
 			{
-				$elemValue = $this->constraints[$grpId]['default'];
+				if (isset($this->constraints[$grpId]['default']))
+				{
+					$elemValue = $this->constraints[$grpId]['default'];
+				}
 			}
 			if (!isset($this->tagsPool[$grpId]['attrlist']['items'][$elemValue]))
 			{

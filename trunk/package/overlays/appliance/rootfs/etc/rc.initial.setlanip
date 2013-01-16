@@ -3,9 +3,9 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2012 Giovanni Vallesi.
+	Copyright(C) 2011 - 2013 Giovanni Vallesi.
 	All rights reserved.
-	
+
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
@@ -42,15 +42,15 @@
 	// LAN IP via DHCP
 	echo "\nDo you want to use DHCP to configure your LAN interface? (y/n) ";
 
-	if (strcasecmp(chop(fgets($fp)), "y") == 0) {
-		$config['interfaces']['lan']['dhcp'] = true;
+	if (strcasecmp(chop(fgets($fp)), 'y') == 0) {
+		$config['interfaces']['lan']['dhcp'] = 'yes';
 		write_config();
 		network_lan_configure();
 		system_update_httpd_settings();
 
 		echo <<<EOD
 
-The LAN interface will now be configured via DHCP:
+The LAN interface will now be configured via DHCP.
 
 Press ENTER to continue.
 
@@ -58,49 +58,62 @@ EOD;
 
 		fgets($fp);
 		exit(0);
-	} else {
-		$config['interfaces']['lan']['dhcp'] = false;
+	}
+	else
+	{
+		$config['interfaces']['lan']['dhcp'] = 'no';
 	}
 
 	// LAN IP address
-	do {
+	do
+	{
 		echo "\nEnter the new LAN IP address: ";
 		$lanip = chop(fgets($fp));
-		if ($lanip === "") {
+		if ($lanip === '')
+		{
 			exit(0);
 		}
-	} while (!verify_is_ipaddress($lanip));
+	}
+	while (!verify_is_ipaddress($lanip));
 
 	echo "\nSubnet masks are to be entered as bit counts (as in CIDR notation).\n";
-	echo "e.g. 255.255.255.0 = 24\n";
-	echo "     255.255.0.0   = 16\n";
-	echo "     255.0.0.0     = 8\n\n";
+	echo 'e.g. 255.255.255.0 = 24', "\n";
+	echo '     255.255.0.0   = 16', "\n";
+	echo '     255.0.0.0     = 8', "\n\n";
 
-	do {
+	do
+	{
 		echo "Enter the new LAN subnet bit count: ";
 		$lanbits = chop(fgets($fp));
-		if ($lanbits === "") {
+		if ($lanbits === "")
+		{
 			exit(0);
 		}
-	} while (!is_numeric($lanbits) || ($lanbits < 1) || ($lanbits > 31));
+	}
+	while (!is_numeric($lanbits) || ($lanbits < 1) || ($lanbits > 31));
 
 	// LAN Gateway
-	do {
+	do
+	{
 		echo "\nEnter the LAN gateway IP address: ";
 		$gwip = chop(fgets($fp));
-		if ($gwip === "") {
+		if ($gwip === '') {
 			exit(0);
 		}
-	} while (!verify_is_ipaddress($gwip));
+	}
+	while (!verify_is_ipaddress($gwip));
 
 	// LAN DNS
-	do {
+	do
+	{
 		echo "\nEnter the LAN DNS IP address: ";
 		$dnsip = chop(fgets($fp));
-		if ($dnsip === "") {
+		if ($dnsip === "")
+		{
 			exit(0);
 		}
-	} while (!verify_is_ipaddress($dnsip));
+	}
+	while (!verify_is_ipaddress($dnsip));
 
 
 	$config['interfaces']['lan']['ipaddr'] = $lanip;
@@ -110,17 +123,21 @@ EOD;
 	unset($config['system']['dnsserver']);
 	$config['system']['dnsserver'][] = $dnsip;
 
-	$proto = "http";
+	$proto = 'http';
 	$webgui_restart = false;
-	if ($config['system']['webgui']['protocol'] == "https") {
+	if ($config['system']['webgui']['protocol'] == 'https')
+	{
 
 		echo "\nDo you want to revert to HTTP as the webGUI protocol? (y/n) ";
 
-		if (strcasecmp(chop(fgets($fp)), "y") == 0) {
-			$config['system']['webgui']['protocol'] = "http";
+		if (strcasecmp(chop(fgets($fp)), 'y') == 0)
+		{
+			$config['system']['webgui']['protocol'] = 'http';
 			$webgui_restart = true;
-		} else {
-			$proto = "https";
+		}
+		else
+		{
+			$proto = 'https';
 		}
 	}
 
