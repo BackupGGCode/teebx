@@ -4,11 +4,10 @@
 	The TeeBX(R) communication platform.
 	Copyright(C) 2010 - 2013 Giovanni Vallesi (TeeBX.com)
 
-	originally part of AskoziaPBX (http://askozia.com/pbx) as guiconfig.inc rev. 1935
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
+	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
-
-	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>.
-	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>.
+	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>. All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
 	modification, are permitted provided that the following conditions are met:
@@ -54,8 +53,7 @@ if (!$omit_nocacheheaders)
 require_once("config.inc");
 require_once("i18n.inc");
 require_once("functions.inc");
-require_once('libs-php/microui.lib.php');    // will replace parts from display.inc
-require_once("display.inc");                // !DEPRECATED, replaced in microui.inc and/or form classes depending on scope
+require_once('libs-php/microui.lib.php');
 
 $d_staticroutesdirty_path = $g['varrun_path'] . "/staticroutes.dirty";
 $d_extensionsconfdirty_path = $g['varrun_path'] . "/extensionsconf.dirty";
