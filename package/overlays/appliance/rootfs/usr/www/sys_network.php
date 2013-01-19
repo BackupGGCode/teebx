@@ -35,7 +35,7 @@ require('include/network.def.inc');
 require('libs-php/cfgform.class.php');
 // define some constants referenced in fbegin.inc
 define('INCLUDE_FORMSTYLE', true);
-define('INCLUDE_TABSFILES', true);
+define('INCLUDE_TABSFILES', 'jshelper');
 define('INCLUDE_JSCRIPTS', 'sys_network.conditionalfields.js');
 // page title
 $pgtitle = array(gettext('System'), gettext('Networking'));

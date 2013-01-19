@@ -22,6 +22,18 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
+	function escapeStr($in_str, $mode = 'js')
+	{
+		$out_str = '';
+		$len_in_str = strlen($in_str);
+		for($i = 0; $i < $len_in_str; $i++)
+		{
+			$dec = ord(substr($in_str, $i, 1));
+			$out_str .= '\\x' . dechex($dec);
+		}
+		return $out_str;
+	}
+
 	function getArrValueByPath($target, $path)
 	{
 		$result = array(0 => null);

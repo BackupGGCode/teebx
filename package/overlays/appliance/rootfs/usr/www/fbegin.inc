@@ -73,8 +73,13 @@
 	<?php
 		if (defined('INCLUDE_TABSFILES'))
 		{
+			if (INCLUDE_TABSFILES === 'jshelper')
+			{
 	?>
 	<script src="libs-js/tab.toggledivs.js" type="text/javascript"></script>
+	<?php
+			}
+	?>
 	<link href="style/tabs.css" rel="stylesheet" type="text/css">
 	<?php
 		}
