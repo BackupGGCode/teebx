@@ -116,7 +116,15 @@ function getTabs($arrTabItems, $printOut = false)
 		$retval = '<div id="tabs"><ul>';
 		foreach(array_keys($arrTabItems) as $itemKey)
 		{
-			$retval .= '<li><a href="'. $arrTabItems[$itemKey]['url'] .'">' . $arrTabItems[$itemKey]['label'] . '</a></li>';
+			$flagActiveCls = '';
+			if ($arrTabItems[$itemKey]['url'] === $_SERVER['REQUEST_URI'])
+			{
+				$flagActiveCls = ' class="active"';
+			}
+			$retval .= "<li$flagActiveCls>" .
+				"<a href=\"{$arrTabItems[$itemKey]['url']}\"$flagActiveCls>" .
+				$arrTabItems[$itemKey]['label'] .
+				'</a></li>';
 		}
 		$retval .= '</ul></div>';
 	}

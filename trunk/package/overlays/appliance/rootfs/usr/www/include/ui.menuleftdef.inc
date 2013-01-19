@@ -24,7 +24,7 @@ $left_items = array
 			array
 			(
 				'label' => gettext('Storage'),
-				'url' => 'system_storage.php'
+				'url' => 'sys_storage.php'
 			),
 			array
 			(
@@ -154,7 +154,7 @@ $left_items = array
 					array
 					(
 						'label' => gettext('Logs'),
-						'url' => 'status_logs.php?show=kernel'
+						'url' => 'maint_status_logs.php?show=kernel'
 					),
 					array
 					(
