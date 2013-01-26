@@ -129,6 +129,7 @@ input[type="button"].additem
 	background : url("/img/add.png") no-repeat center center;
 	width: 16px;
 	height:16px;
+	margin-top: 3px;
 	border: none;
 	color: transparent;
 }
@@ -140,6 +141,11 @@ input[type="button"].removeitem
 	height:16px;
 	border: none;
 	color: transparent;
+}
+
+input[type="button"]  + input[type="text"]
+{
+	margin-left: 6px;
 }
 
 select
