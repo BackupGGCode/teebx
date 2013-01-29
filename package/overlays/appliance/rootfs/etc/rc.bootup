@@ -33,108 +33,110 @@
 	POSSIBILITY OF SUCH DAMAGE.
 */
 
-	require_once("globals.inc");
+	require_once('globals.inc');
 
 	/* let the other functions know we're booting */
 	$g['booting'] = true;
 	touch("{$g['varrun_path']}/booting");
 
 	/* parse the configuration and include all functions used below */
-	require_once("config.inc");
-	require_once("functions.inc");
+	require_once('config.inc');
+	require_once('functions.inc');
 	require_once('fileutils.lib.php');
 	require_once('smtpconf.lib.php');
 
 	/* check whether config reset is desired (via hardware button on wrap and alix23x) */
 	echo " - Checking reset button... ";
 	system_check_reset_button();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* convert configuration, if necessary */
+	/*
 	echo " - Converting configuration... ";
 	convert_config();
-	echo "done\n";
+	echo 'done', PHP_EOL;
+	*/
 
 	/* load kernel modules */
 	echo " - Loading kernel modules... ";
 	system_load_kernel_modules();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* run any early shell commands specified in config.xml */
-	echo " - Running early shell commands... ";
+	echo ' - Running early shell commands... ';
 	system_do_shell_commands(1);
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
-	echo " - Configuring storage... ";
+	echo ' - Configuring storage... ';
 	storage_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* execute package boot routines */
-	echo " - Booting all packages... ";
+	echo ' - Booting all packages... ';
 	packages_boot_all();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* set up our timezone */
-	echo " - Configuring timezone and locale settings... ";
+	echo ' - Configuring timezone and locale settings... ';
 	writeSysRegSettings($config);
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* set up our hostname */
-	echo " - Configuring hostname... ";
+	echo ' - Configuring hostname... ';
 	system_hostname_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* make hosts file */
-	echo " - Generating hosts... ";
+	echo ' - Generating hosts... ';
 	system_hosts_generate();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* generate resolv.conf */
-	echo " - Generating resolv.conf... ";
+	echo ' - Generating resolv.conf... ';
 	system_resolvconf_generate();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* configure loopback interface */
-	echo " - Configuring network loopback interface... ";
+	echo ' - Configuring network loopback interface... ';
 	network_loopback_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* set up LAN interface */
-	echo " - Configuring LAN interface... ";
+	echo ' - Configuring LAN interface... ';
 	network_lan_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* initial NTP sync */
-	echo " - Initial NTP time sync... ";
+	echo ' - Initial NTP time sync... ';
 	system_ntp_initial_sync();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* generate machine specific ssl certificate */
 	//echo " - Upgrading https certificate... ";
 	//system_upgrade_https_certificate();
-	//echo "done\n";
+	//echo 'done', PHP_EOL;
 
 	/* SMTP client configuration */
-	echo " - Configuring SMTP client... ";
+	echo ' - Configuring SMTP client... ';
 	writeSmtpConf($config);
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* start web server */
-	echo " - Starting webgui... ";
+	echo ' - Starting web UI... ';
 	system_update_httpd_settings();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* configure console menu */
-	echo " - Configuring console ... ";
+	echo ' - Configuring console ... ';
 	system_update_shell_password();
 	system_console_configure();
 	system_sshd_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* start dyndns service */
-	echo " - Configuring dyndns... ";
+	echo ' - Configuring dyndns... ';
 	services_dyndns_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* static IP address? -> attempt DNS update *//*
 	if ($config['interfaces']['lan']['topology'] == "public" ||
@@ -142,40 +144,40 @@
 		services_dnsupdate_process();*/
 
 	/* run any shell commands specified in config.xml */
-	echo " - Running shell commands... ";
+	echo ' - Running shell commands... ';
 	system_do_shell_commands();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* run platform specific applications*/
-	echo " - Auto configuring DAHDI ports... ";
+	echo ' - Auto configuring DAHDI ports... ';
 	dahdi_autoconfigure_ports();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
-	echo " - Auto configuring Analog phones... ";
+	echo ' - Auto configuring Analog phones... ';
 	analog_autoconfigure_phones();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
-	echo " - Auto configuring ISDN phones... ";
+	echo ' - Auto configuring ISDN phones... ';
 	isdn_autoconfigure_phones();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* start up Asterisk */
-	echo " - Starting Asterisk... \n";
+	echo ' - Starting Asterisk... ', PHP_EOL;
 	pbx_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* run any shell commands specified in config.xml */
-	echo " - Running shell commands... ";
+	echo ' - Running shell commands... ';
 	system_do_shell_commands();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
-	echo " - Configuring cron services... ";
+	echo ' - Configuring cron services... ';
 	system_cron_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
-	echo " - Configuring displays... ";
+	echo ' - Configuring displays... ';
 	system_displays_configure();
-	echo "done\n";
+	echo 'done', PHP_EOL;
 
 	/* done */
 	unlink("{$g['varrun_path']}/booting");
