@@ -79,6 +79,8 @@ Press enter or the space bar to choose a new target and go back to the previous 
 If this is *the first time you use the T2 SDE I suggest you not to change* the various configuration options.<br>
 _Caution: At the time of writing this document, the glibc target must be considered as experimental, it builds successfully but still shows many problems that need to be resolved - try it only if you want to contribute-_
 
+*_Update:* the glib target got few progress but the eglib target may be considered mature and will become the preferred libc variant.
+
 Use the tab key to highlight the Exit button, then press enter to exit saving your new configuration.
 
 === Starting building ===
