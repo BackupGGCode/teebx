@@ -86,6 +86,7 @@ echo "Creating links for identical files ..."
 link_identical_files
 
 echo "Setting permissions ..."
+chmod 755 init
 chmod 755 bin/*
 chmod 755 sbin/*
 chmod 755 etc/rc*
