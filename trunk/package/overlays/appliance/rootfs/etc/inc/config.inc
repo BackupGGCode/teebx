@@ -87,7 +87,7 @@ EOD;
 			$attempts = 2;
 			while ($attempts--)
 			{
-				if ($g['platform'] == 'BlackfinMT' || $g['platform'] == 'RaspberryPi')
+				if ($g['platform'] == 'Blackfin MT' || $g['platform'] == 'Raspberry Pi')
 				{
 					$disks[] = "mmcblk0";
 				}
@@ -95,10 +95,10 @@ EOD;
 				{
 					exec('fdisk -l | grep "^/dev/" | cut -c 6-8 | uniq', $disks);
 				}
-				echo "Found disks: " . implode(", ", $disks) . "\n";
+				echo "[      config] Found disks: " . implode(", ", $disks) . "\n";
 				foreach ($disks as $disk)
 				{
-					echo "Looking for configuration on: $disk\n";
+					echo "[      config] Looking for configuration on: $disk\n";
 					if (strpos($disk, "mmcblk") !== false)
 					{
 						$part = "p1";
@@ -113,7 +113,7 @@ EOD;
 						{
 							$cfgdevice = $disk;
 							$cfgpartition = $cfgdevice . $part;
-							echo "Found configuration on $cfgdevice.\n";
+							echo "[      config] Found configuration on $cfgdevice.\n";
 						}
 
 						mwexec("/bin/umount -f {$g['cf_path']}");
@@ -132,8 +132,8 @@ EOD;
 
 				if ($attempts)
 				{
-					echo "Configuration not found.\n";
-					echo "Waiting for devices to settle and attempting again.\n";
+					echo "[      config] Configuration not found.\n";
+					echo "[      config] Waiting for devices to settle and attempting again.\n";
 					sleep(5);
 				}
 			}
@@ -215,11 +215,11 @@ if (!$noparseconfig)
 					/* try copying the default config. to the floppy/USB stick */
 					reset_factory_defaults();
 
-					echo "No XML configuration file found - using factory defaults.\n";
+					echo "[      config] No XML configuration file found - using factory defaults.\n";
 				}
 				else
 				{
-					echo "XML configuration file not found. $product_name cannot continue booting.\n";
+					echo "[      config] XML configuration file not found. $product_name cannot continue booting.\n";
 					mwexec("/sbin/halt");
 					exit;
 				}
