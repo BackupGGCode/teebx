@@ -32,37 +32,34 @@ done
 #temp hack for debugging
 #was mntmode="-r";
 mntmode="-w -o noatime";
-echo " - Warning: Debug mode hack, /offload partition will be mounted RW!"
+echo "[mountoffload] Warning: Debug mode, /offload partition will be mounted RW!"
 
 RETRY_COUNT=1
 until [ $RETRY_COUNT -gt 5 ]
 do
-	echo "Attempting to mount /offload partition, attempt #$RETRY_COUNT ..."
-	disks=$(fdisk -l | grep "^/dev/" | busybox cut -c 6-8 | busybox uniq)
+	echo "[mountoffload] Trying to find /offload partition, attempt #$RETRY_COUNT ..."
+	disks=$(/bin/busybox cat /proc/partitions|/bin/busybox awk '/[a-z]+[2]|[a-z]+[0][a-z][2]/ {print $4}')
 	for disk in $disks
 	do
-		echo " - trying ${disk}"
-		mount ${mntmode} /dev/${disk}2 /offload
-		echo "   - mount returned: $?"
+		echo "[mountoffload] Trying ${disk}"
+		mount ${mntmode} /dev/${disk} /offload
+		echo "[mountoffload] Result from mount command: $?"
 		if [ -d /offload/rootfs ]; then
-			echo "   - found rootfs!"
+			echo "[mountoffload] Found rootfs!"
 			exit 0
 		fi
 	done
-	echo "Waiting for disks to settle and trying again..."
+	echo "[mountoffload] Waiting for disks to settle and trying again..."
 	RETRY_COUNT=$(( RETRY_COUNT+1 ))
-	sleep 3
+	sleep 1
 done
 
-echo "   - failed to find rootfs!"
-echo
-echo "The system was unable to find the /offload partition!"
-echo
-echo "Send in the output of (ls /dev) and (fdisk -l) to the"
-echo "development team to get this fixed."
-echo "Thanks...and sorry this is not already working better!"
-echo
-echo "Here's a prompt, see what you can see..."
+echo "[mountoffload] Failed to find rootfs!"
+echo "[mountoffload] The system was unable to find the /offload partition!"
+echo "[mountoffload] Send in the output of (ls /dev), (fdisk -l) and"
+echo "[mountoffload] (cat /proc/partitions) to the development team to get help."
+echo "[mountoffload] Thanks...and sorry this is not already working better!"
+echo "[mountoffload] Here's a prompt, see what you can see..."
 exec /bin/sh
 
 exit 1
