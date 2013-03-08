@@ -25,3 +25,9 @@
 
 [ "$SDECFG_SOFTFLOAT" = 1 ] &&
 	var_append GCC_WRAPPER_INSERT " " "-msoft-float"
+
+[ "$SDECFG_ARM_FLOAT_ABI" != "none" ] &&
+	var_append GCC_WRAPPER_INSERT " " "-mfloat-abi=$SDECFG_ARM_FLOAT_ABI"
+
+[ "$SDECFG_ARM_FPU" != "none" ] &&
+	var_append GCC_WRAPPER_INSERT " " "-mfpu=$SDECFG_ARM_FPU"
