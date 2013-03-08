@@ -211,6 +211,20 @@ choice SDECFG_ARM_BOARDDEF none \
 	yl9200		"yl9200 Board" \
 	zylonite	"zylonite Board"
 
+choice SDECFG_ARM_FLOAT_ABI none \
+	none	"Not set" \
+	hard	"Hardware floating point via VFP ABI" \
+	soft	"Software floating point emulation" \
+	softfp	"VFP hardware floating point using soft-float ABI"
+
+choice SDECFG_ARM_FPU none \
+	none	"No FPU" \
+	fpa	"FPA" \
+	maverik	"Maverik" \
+	neon	"NEON" \
+	vfp	"VFP-lite" \
+	vfp3	"VFP v3"
+
 bool 'Generate code using the 16bit thumb instruction set' SDECFG_ARM_THUMB 0
 
 SDECFG_ID="$SDECFG_ID-$SDECFG_ARM_ABI"
