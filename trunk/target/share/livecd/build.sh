@@ -37,7 +37,7 @@ cp ../../usr/lib/grub/i386-t2/stage2_eltorito $livecdlocation/boot/grub/
 cp $base/target/share/livecd/menu.lst $livecdlocation/boot/grub/
 
 echo "Adding installable firmware image ..."
-cp ../$SDECFG_ID.img $livecdlocation/firmware.img.gz
+cp ../$SDECFG_ID.img.gz $livecdlocation/firmware.img.gz
 
 echo "Building iso ..."
 mkisofs -R -b boot/grub/stage2_eltorito -no-emul-boot -boot-load-size 4 -boot-info-table -iso-level 3 -o $build_toolchain/$SDECFG_ID.iso .
