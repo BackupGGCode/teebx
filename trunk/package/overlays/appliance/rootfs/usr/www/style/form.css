@@ -108,6 +108,11 @@ input[type="submit"]
 	width: 6em;
 }
 
+input[type="submit"]:hover
+{
+	cursor: pointer;
+}
+
 input[type="text"].required
 {
 	border-left: 4px solid red;
@@ -148,6 +153,11 @@ input[type="button"]  + input[type="text"]
 	margin-left: 6px;
 }
 
+button[disabled]:hover, html input[disabled]:hover
+{
+	cursor: default;
+}
+
 select
 {
 	font-size: 1em;
@@ -173,4 +183,21 @@ select.required
 {
 	padding-bottom: 1em;
 	border-bottom: 1px solid #336699;
+}
+
+/* used in client side validation */
+span.cli-error
+{
+	background-color: #990000;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	height: 1.1em;
+	border-radius: 4px 4px 4px 4px;
+	margin-left: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;;
+
 }

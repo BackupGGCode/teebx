@@ -36,7 +36,7 @@
 $listtags = explode(' ',
 	'key dnsserver route shellcmd cacert earlyshellcmd ' .
 	'phone provider codec room dialpattern callgroup groupmember incomingextensionmap ' .
-	'dahdi-port dahdi-portgroup disk package loadzone bridge application application2 ' .
+	'dahdi-port dahdi-portgroup package loadzone bridge application application2 ' .
 	'manager-user read-permission write-permission app-command manual-attribute manual-file fax'
 	);
 

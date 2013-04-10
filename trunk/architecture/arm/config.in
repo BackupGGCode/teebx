@@ -82,6 +82,7 @@ choice SDECFG_ARM_OPT generic   \
 	mpcore		"mpcore CPU" \
 	arm1156t2-s	"arm1156t2-s CPU" \
 	cortex-a8	"cortex-a8 CPU" \
+	cortex-a9	"cortex-a9 CPU" \
 	cortex-r4	"cortex-r4 CPU" \
 	cortex-r3	"cortex-r3 CPU" \
 	cortex-m3	"cortex-m3 CPU" \
@@ -117,6 +118,7 @@ choice SDECFG_ARM_BOARDDEF none \
 	collie		"collie Board" \
 	corgi		"corgi Board" \
 	csb337		"csb337 Board" \
+	cubieboard	"cubieboard - A10 SoC based board" \
 	ecbat91		"ecbat91 Board" \
 	edb7211		"edb7211 Board" \
 	ep93xx		"ep93xx Board" \
@@ -182,6 +184,7 @@ choice SDECFG_ARM_BOARDDEF none \
 	palmtt		"palmtt Board" \
 	palmz71		"palmz71 Board" \
 	palmz72		"palmz72 Board" \
+	pcduino	"pcduino - A10 SoC based board" \
 	pcm027		"pcm027 Board" \
 	pcm037		"pcm037 Board" \
 	pcm038		"pcm038 Board" \
@@ -199,7 +202,7 @@ choice SDECFG_ARM_BOARDDEF none \
 	shark		"shark Board" \
 	simpad		"simpad Board" \
 	spitz		"spitz Board" \
-	sun4i	"a10 Allwinner SoC"\
+	sun4i	"A10 Allwinner SoC board" \
 	sx1		"sx1 Board" \
 	tct_hammer	"tct_hammer Board" \
 	trizeps4	"trizeps4 Board" \
@@ -207,6 +210,7 @@ choice SDECFG_ARM_BOARDDEF none \
 	usb-a9263	"usb-a9263 Board" \
 	versatile	"versatile Board" \
 	viper		"viper Board" \
+	wmt	"wm8950 Board" \
 	xm_x2xx		"xm_x2xx Board" \
 	yl9200		"yl9200 Board" \
 	zylonite	"zylonite Board"

@@ -1,7 +1,7 @@
 /*
 	$Id$
 	- Part of TeeBX project http://code.google.com/p/teebx/
-	
+
 	originally from m0n0wall (http://m0n0.ch/wall)
 	Copyright (C) 2003-2006 Manuel Kasper <mk@neon1.net>.
 	All rights reserved.
@@ -536,4 +536,9 @@ div.scrollvlist
 a.doedit > img
 {
 	padding-right: 6px;
+}
+
+.starthidden
+{
+	display: none;
 }
