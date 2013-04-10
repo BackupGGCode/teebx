@@ -518,7 +518,7 @@ class cfgForm extends quickForm implements Serializable
 		$this->exitLayout(2);
 	}
 
-	public function setBlockHint($idTag, $hintText)
+	public function setBlockHint($idTag, $hintText = '')
 	{
 		$oldPath = $this->currLayoutPath;
 		$this->currLayoutPath .= "/$idTag";
