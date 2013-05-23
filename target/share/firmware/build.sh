@@ -33,6 +33,9 @@ sectors_per_cylinder="1008"
 rtp_block_pad="2048"
 ofp_block_pad="10240"
 
+# quick & dirty fix until this and sourced scripts will be rewritten
+declare -i part_offset=1
+
 echo "Preparing firmware image from build result ..."
 rm -rf $imagelocation{,.img}
 mkdir -p $imagelocation ; cd $imagelocation
