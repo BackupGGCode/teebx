@@ -5,7 +5,7 @@ TeeBX is built using a set of scripts to automate both the linux operating syste
 
 == Get the virtual host ==
 ----
-For people who don't want to start from scratch by installing a T2 host and all the required software we provide a  linux host VMware image based on T2 version 8.0.<BR>The development system image is hosted on the Sourceforge project BoneOS _([http://sourceforge.net/projects/boneos/ BoneOS] is a parent project sharing a common base system with TeeBX)_, browse the project files on the [http://sourceforge.net/projects/boneos/files/dev-environment/ dev-environment folder] to download the latest VMware image.
+For people who don't want to start from scratch by installing a T2 host and all the required software we provide a  linux host VMware image based on T2 version 8.0.<BR>The development system image is hosted on the Sourceforge project BoneOS _([http://sourceforge.net/projects/boneos/ BoneOS] is a parent project sharing a common base system with TeeBX)_, browse the project files on the [http://sourceforge.net/projects/boneos/files/00-dev-environment/ dev-environment folder] to download the latest VMware image.
 
 After downloading the zip archive, uncompress it and then boot the linux virtual host using the VMware player (version 3.1+, free) or workstation (ver. 6+).<BR>You will need about 4 GB of free disk space to be able to successfully download all the source packages and build the image.
 
