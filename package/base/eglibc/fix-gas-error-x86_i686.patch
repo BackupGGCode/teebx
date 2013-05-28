@@ -1,0 +1,16 @@
+Fixes the following and error for generic i686 build:
+../sysdeps/i386/i686/multiarch/strcmp.S: Assembler messages:
+../sysdeps/i386/i686/multiarch/strcmp.S:90: Error: can't resolve `.text' {.text section} - `strcmp' {.text section}
+
+--- libc/sysdeps/i386/sysdep.h.vanilla	2013-05-28 10:56:12.139954377 +0000
++++ libc/sysdeps/i386/sysdep.h	2013-05-28 09:00:10.000000000 +0000
+@@ -64,8 +64,7 @@
+ #undef	END
+ #define END(name)							      \
+   cfi_endproc;								      \
+-  ASM_SIZE_DIRECTIVE(name)						      \
+-  STABS_FUN_END(name)
++  ASM_SIZE_DIRECTIVE(name)
+ 
+ #define ENTRY_CHK(name) ENTRY (name)
+ #define END_CHK(name) END (name)
