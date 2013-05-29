@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2012 Giovanni Vallesi.
+	Copyright(C) 2011 - 2013 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)

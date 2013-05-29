@@ -1,0 +1,74 @@
+# $Id$
+# part of BoneOS build platform (http://www.teebx.com/)
+# Copyright(C) 2013 Giovanni Vallesi.
+# More information can be found in the files COPYING and README.
+
+appliance_prepareAstMedia()
+{
+	# $1: rootfs preparation directory
+	#
+	# TODO: convert media to a common format set for all countries
+	# or include only one format for all then convert at runtime via UI
+
+	local currFile
+	local newFile
+
+	echo "Cleaning up asterisk sounds..."
+	if [[ -d "${1}/asterisk/sounds/es" ]] ; then
+		rmdir ${1}/asterisk/sounds/es
+	fi
+	if [[ -d "${1}/asterisk/sounds/fr" ]] ; then
+		rmdir ${1}/asterisk/sounds/fr
+	fi
+	find ${1}/asterisk/sounds/ -type f -name "*.pdf" -print -delete
+	find ${1}/asterisk/sounds/ -type f -name "*.txt" -print -delete
+
+	for currFile in $(find ${1}/asterisk/sounds/ -name *g711u)
+	do
+		newFile=$(echo $currFile | sed -e 's/g711u/ulaw/')
+		mv "$currFile" "$newFile"
+	done
+
+	for currFile in $(find offload_stage/asterisk/sounds/ -name *.wav)
+	do
+		newFile=$(echo $currFile | sed -e 's/wav/ulaw/')
+		sox -V "$currFile" -r 8000 -c 1 -t ul "$newFile"
+		rm -f "$currFile"
+	done
+}
+
+appliance_prepareImgDirs()
+{
+	# $1: initramfs top directory
+	# $2: rootfs preparation directory
+	
+	mkdir ${2}/asterisk
+}
+
+appliance_prepareRootfs()
+{
+	# $1: build root (source)
+	# $2: rootfs preparation top directory (destination)
+
+	# usr/bin
+	cp -Rp ${1}/offload/asterisk/* ${2}/asterisk/
+	# ...cleanup
+	rm -rf ${2}/asterisk/agi-bin
+	rm -rf ${2}/asterisk/firmware
+	rm -rf ${2}/asterisk/images
+	rm -rf ${2}/asterisk/keys
+	rm -rf ${2}/asterisk/static-http
+	rm -rf ${2}/asterisk/astdb
+	rm -rf ${2}/asterisk/sounds/en
+
+	# usr/sbin ...cleanup
+	rm -rf ${2}/rootfs/usr/sbin/dahdi_genconf
+	rm -rf ${2}/rootfs/usr/sbin/dahdi_hardware
+	rm -rf ${2}/rootfs/usr/sbin/dahdi_registration
+
+	# usr/share
+	cp -Rp ${1}/usr/share/dahdi ${2}/rootfs/usr/share/
+
+	# call other rootfs appliance specific function defined in this script
+	appliance_prepareAstMedia ${2}
+}
