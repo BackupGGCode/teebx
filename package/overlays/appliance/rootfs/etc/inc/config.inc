@@ -38,23 +38,23 @@ require_once('util.inc');
 require_once('xmlparse.inc');
 require_once('tzdata.lib.php');
 
+if (!isset($g['booting']))
+{
+	$g['booting'] = false;
+}
+$livecd = false;
+$g['platform'] = "unknown";
+$product_name = "TeeBX";
+
 /* read platform */
 if (file_exists("{$g['etc_path']}/platform"))
 {
 	$g['platform'] = chop(file_get_contents("{$g['etc_path']}/platform"));
 }
-else
-{
-	$g['platform'] = "unknown";
-}
 
 if (file_exists("{$g['etc_path']}/brand.product"))
 {
 	$product_name = chop(file_get_contents("{$g['etc_path']}/brand.product"));
-}
-else
-{
-	$product_name = "TeeBX";
 }
 
 if ($g['booting'])
@@ -79,17 +79,25 @@ if ($g['booting'])
 
 
 EOD;
-			sleep(5);
+			sleep(3);
 		}
 		else
 		{
 			/* iterate through the disks fdisk finds until one contains a config.xml */
-			$attempts = 2;
+			$attempts = 3;
+			$machine = 'generic';
+			if (strpos(exec('uname -m'), 'armv') !== false)
+			{
+				$machine = 'ARM';
+			}
 			while ($attempts--)
 			{
-				if ($g['platform'] == 'Blackfin MT' || $g['platform'] == 'Raspberry Pi')
+				unset($disks);
+				unset($cfgdevice);
+				if ($machine == 'ARM')
 				{
-					$disks[] = "mmcblk0";
+					// most arm boards, else if needed in the future will check the $g['platform'] variable
+					$disks[] = 'mmcblk0';
 				}
 				else
 				{
@@ -98,43 +106,33 @@ EOD;
 				echo "[      config] Found disks: " . implode(", ", $disks) . "\n";
 				foreach ($disks as $disk)
 				{
-					echo "[      config] Looking for configuration on: $disk\n";
 					if (strpos($disk, "mmcblk") !== false)
 					{
-						$part = "p1";
+						$part = 'p1';
 					}
 					else
 					{
-						$part = "1";
+						$part = '1';
 					}
+					echo "[      config] Looking for configuration on: $disk partition $part...\n";
 					if (mwexec("/bin/mount -r /dev/{$disk}{$part} {$g['cf_path']}") == 0)
 					{
 						if (file_exists("{$g['cf_conf_path']}/config.xml"))
 						{
 							$cfgdevice = $disk;
 							$cfgpartition = $cfgdevice . $part;
-							echo "[      config] Found configuration on $cfgdevice.\n";
+							echo "[      config] Found configuration on $cfgdevice partition $part.\n";
+							// leave partition mounted then exit both the nested loops
+							break 2;
 						}
-
 						mwexec("/bin/umount -f {$g['cf_path']}");
-
-						if ($cfgdevice)
-						{
-							break;
-						}
 					}
 				}
-
-				if ($cfgdevice)
-				{
-					break;
-				}
-
-				if ($attempts)
+				if ($attempts > 0)
 				{
 					echo "[      config] Configuration not found.\n";
 					echo "[      config] Waiting for devices to settle and attempting again.\n";
-					sleep(5);
+					sleep(2);
 				}
 			}
 		}
@@ -154,38 +152,54 @@ EOD;
 
 EOD;
 
-			mwexec("/sbin/halt");
+			mwexec('/sbin/halt');
 			exit;
 		}
 
-		/* write device name to a file for rc.firmware */
-		$fd = fopen("{$g['varetc_path']}/cfdevice", "w");
-		fwrite($fd, $cfgdevice . "\n");
-		fclose($fd);
-
-		/* write out an fstab */
-		$fd = fopen("/etc/fstab", "w");
-
-		$fstab = "/dev/{$cfgpartition} {$g['cf_path']} msdos ro 1 1\n";
-		if (strpos($disk, "mmcblk") !== false)
+		if (!$livecd)
 		{
-			$part = "p2";
+			/* write device name to a file for rc.firmware */
+			$fd = fopen("{$g['varetc_path']}/cfdevice", 'w');
+			fwrite($fd, $cfgdevice . "\n");
+			fclose($fd);
+
+			/* write out an fstab */
+			$fd = fopen('/etc/fstab', 'w');
+
+			$fstab = "/dev/{$cfgpartition} {$g['cf_path']} vfat ro 1 1\n";
+			if (strpos($disk, 'mmcblk') !== false)
+			{
+				$part = 'p2';
+			}
+			else
+			{
+				$part = '2';
+			}
+			$fstab .= "/dev/{$cfgdevice}{$part} /offload ext2 ro 0 0\n";
+
+			fwrite($fd, $fstab);
+			fclose($fd);
+
+			/* create a copy for the fstab generator to read in */
+			copy('/etc/fstab', '/etc/fstab.boot');
+		}
+	}
+
+	if (!$livecd)
+	{
+		/* mount all filesystems */
+		echo "[      config] Mounting all filesystems...\n";
+		$mountAllRes = mwexec('/bin/mount -a');
+		if ($mountAllRes == 0)
+		{
+			echo "[      config] Done.\n";
 		}
 		else
 		{
-			$part = "2";
+			echo "[      config] Mount error: $mountAllRes.\n";
+			// TODO: consider dropping into a shell.
 		}
-		$fstab .= "/dev/{$cfgdevice}{$part} /offload ext2 ro 0 0\n";
-
-		fwrite($fd, $fstab);
-		fclose($fd);
-
-		/* create a copy for the fstab generator to read in */
-		copy("/etc/fstab", "/etc/fstab.boot");
 	}
-
-	/* mount all filesystems */
-	mwexec("/bin/mount -a");
 }
 
 /* parse configuration */
@@ -220,7 +234,8 @@ if (!$noparseconfig)
 				else
 				{
 					echo "[      config] XML configuration file not found. $product_name cannot continue booting.\n";
-					mwexec("/sbin/halt");
+					// TODO: consider to drop into a shell instead of halt.
+					mwexec('/sbin/halt');
 					exit;
 				}
 			}
@@ -410,6 +425,8 @@ function write_config()
 function config_build_uniqid_map($config)
 {
 	global $g;
+	$uniqid_map = array();
+
 	// providers and internal phones
 	foreach ($g['technologies'] as $tech)
 	{

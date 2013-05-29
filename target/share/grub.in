@@ -1,0 +1,6 @@
+device (hd0) firmware.img
+geometry (hd0) __CILS_NEEDED__ 16 63
+root (hd0,0)
+setup (hd0)
+quit
+

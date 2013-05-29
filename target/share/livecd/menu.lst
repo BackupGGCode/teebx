@@ -3,4 +3,4 @@ timeout 5
 
 title TeeBX LiveCD
 kernel (cd)/boot/vmlinuz
-initrd (cd)/boot/initramfs.igz
+initrd (cd)/boot/initramf.igz
