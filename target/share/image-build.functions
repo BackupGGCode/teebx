@@ -335,5 +335,6 @@ setupGrub()
 	cat "$base/target/share/grub.in" | sed -e "s/__CILS_NEEDED__/$cyls_needed/" >> "$grub_cmdfile"
 
 	grub --device-map=/dev/null --batch --no-pager --no-floppy --no-curses < "$grub_cmdfile"
+	rm -f "$grub_cmdfile"
 	echo "  -> Done."
 }

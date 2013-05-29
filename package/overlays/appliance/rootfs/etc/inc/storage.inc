@@ -2,9 +2,9 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx)
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
 	All rights reserved.
 
@@ -589,7 +589,11 @@ function storage_configure()
 {
 	global $g;
 
-	$conf = file_get_contents("/etc/fstab.boot");
+	$conf = '';
+	if (file_exists('/etc/fstab.boot'))
+	{
+		$conf = file_get_contents('/etc/fstab.boot');
+	}
 
 	$disks = storage_get_disks();
 	foreach ($disks as $disk)
