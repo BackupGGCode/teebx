@@ -12,8 +12,11 @@ appliance_prepareAstMedia()
 
 	local currFile
 	local newFile
+	local logFile=${build_root}/var/adm/X-appliance_prepareAstMedia.log
+	rm -f "$logFile"
 
-	echo "Cleaning up asterisk sounds..."
+	echo "Processing asterisk media..."
+	echo "  -> Cleaning up asterisk sounds."
 	if [[ -d "${1}/asterisk/sounds/es" ]] ; then
 		rmdir ${1}/asterisk/sounds/es
 	fi
@@ -23,18 +26,24 @@ appliance_prepareAstMedia()
 	find ${1}/asterisk/sounds/ -type f -name "*.pdf" -print -delete
 	find ${1}/asterisk/sounds/ -type f -name "*.txt" -print -delete
 
+	echo "  -> Renaming some file using non standard extension."
 	for currFile in $(find ${1}/asterisk/sounds/ -name *g711u)
 	do
 		newFile=$(echo $currFile | sed -e 's/g711u/ulaw/')
 		mv "$currFile" "$newFile"
 	done
 
+	echo "  -> Converting wav files to uLaw."
+	printf '  -> '
 	for currFile in $(find offload_stage/asterisk/sounds/ -name *.wav)
 	do
 		newFile=$(echo $currFile | sed -e 's/wav/ulaw/')
-		sox -V "$currFile" -r 8000 -c 1 -t ul "$newFile"
+		sox -V "$currFile" -r 8000 -c 1 -t ul "$newFile" >> "$logFile" 2>&1
 		rm -f "$currFile"
+		printf '.'
 	done
+	printf "\n"
+	echo "Done."
 }
 
 appliance_prepareImgDirs()
