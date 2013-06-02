@@ -101,6 +101,7 @@ X dosfstools
 X libpcap
 X tcpdump
 X curl
+X nuttcp
 
 # application specific overlay
 X appliance
