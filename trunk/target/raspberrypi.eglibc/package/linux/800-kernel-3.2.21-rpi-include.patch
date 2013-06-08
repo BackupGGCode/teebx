@@ -1,0 +1,19 @@
+diff -uNr linux-3.2.21/include/linux/mmc/sdhci.h linux-rpi-3.2.21-bootc-5b0ccb0292/include/linux/mmc/sdhci.h
+--- linux-3.2.21/include/linux/mmc/sdhci.h	2012-06-19 22:18:30.000000000 +0000
++++ linux-rpi-3.2.21-bootc-5b0ccb0292/include/linux/mmc/sdhci.h	2012-07-01 16:30:34.000000000 +0000
+@@ -121,6 +121,7 @@
+ #define SDHCI_AUTO_CMD23	(1<<7)	/* Auto CMD23 support */
+ #define SDHCI_PV_ENABLED	(1<<8)	/* Preset value enabled */
+ #define SDHCI_SDIO_IRQ_ENABLED	(1<<9)	/* SDIO irq enabled */
++#define SDHCI_USE_PLATDMA       (1<<10) /* Host uses 3rd party DMA */
+ 
+ 	unsigned int version;	/* SDHCI spec. version */
+ 
+@@ -135,6 +136,7 @@
+ 
+ 	struct mmc_request *mrq;	/* Current request */
+ 	struct mmc_command *cmd;	/* Current command */
++	int	last_cmdop;	/* Opcode of last cmd sent */
+ 	struct mmc_data *data;	/* Current data request */
+ 	unsigned int data_early:1;	/* Data finished before cmd */
+ 
