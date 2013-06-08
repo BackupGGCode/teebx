@@ -1,0 +1,11 @@
+--- u-boot-sunxi-7aa9f04/arch/arm/cpu/armv7/config.mk.vanilla	2013-02-12 14:40:11.000000000 +0000
++++ u-boot-sunxi-7aa9f04/arch/arm/cpu/armv7/config.mk	2013-03-11 11:26:03.076101288 +0000
+@@ -20,7 +20,7 @@
+ # Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ # MA 02111-1307 USA
+ #
+-PLATFORM_RELFLAGS += -fno-common -ffixed-r8 -msoft-float
++PLATFORM_RELFLAGS += -fno-common -fPIC -ffixed-r8
+ 
+ # If armv7-a is not supported by GCC fall-back to armv5, which is
+ # supported by more tool-chains

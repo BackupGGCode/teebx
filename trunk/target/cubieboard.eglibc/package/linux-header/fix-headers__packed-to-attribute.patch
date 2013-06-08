@@ -1,0 +1,20 @@
+Cc: Artem Bityutskiy <Artem.Bityutskiy@xxxxxxxxx>
+CC: Joe Perches <joe@xxxxxxxxxxx>
+Signed-off-by: Markus Trippelsdorf <markus@xxxxxxxxxxxxxxx>
+---
+ scripts/headers_install.pl |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/scripts/headers_install.pl b/scripts/headers_install.pl
+index efb3be1..48462be 100644
+--- a/scripts/headers_install.pl
++++ b/scripts/headers_install.pl
+@@ -35,6 +35,7 @@ foreach my $file (@files) {
+ 		$line =~ s/([\s(])__iomem\s/$1/g;
+ 		$line =~ s/\s__attribute_const__\s/ /g;
+ 		$line =~ s/\s__attribute_const__$//g;
++		$line =~ s/\b__packed\b/__attribute__((packed))/g;
+ 		$line =~ s/^#include <linux\/compiler.h>//;
+ 		$line =~ s/(^|\s)(inline)\b/$1__$2__/g;
+ 		$line =~ s/(^|\s)(asm)\b(\s|[(]|$)/$1__$2__$3/g;
+
