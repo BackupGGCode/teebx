@@ -1,0 +1,1 @@
+smsc95xx.turbo_mode=N dwc_otg.lpm_enable=0 dwc_otg.microframe_schedule=1 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 rootfstype=ext2 init=/init loglevel=7 elevator=noop rootwait

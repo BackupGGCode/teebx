@@ -1,0 +1,11 @@
+--- libc/Makeconfig.vanilla	2013-01-09 16:21:06.492009333 +0000
++++ libc/Makeconfig	2013-01-09 14:19:23.000000000 +0000
+@@ -969,7 +969,7 @@
+ 	      stdlib stdio-common libio malloc string wcsmbs time dirent    \
+ 	      grp pwd posix io termios resource misc socket sysvipc gmon    \
+ 	      gnulib iconv iconvdata wctype manual shadow gshadow po argp   \
+-	      crypt nss localedata timezone rt conform debug		    \
++	      crypt nss rt conform debug		    \
+ 	      $(add-on-subdirs) $(dlfcn) $(binfmt-subdir)
+ 
+ ifndef avoid-generated
