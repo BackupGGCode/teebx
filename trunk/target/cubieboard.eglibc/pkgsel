@@ -30,7 +30,6 @@ X gcc
 X automake
 X autoconf
 X libtool
-X gettext
 X bison
 X ncurses
 X termcap
