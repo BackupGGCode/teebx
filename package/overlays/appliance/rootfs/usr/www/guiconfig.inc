@@ -51,6 +51,7 @@ if (!$omit_nocacheheaders)
 
 /* parse the configuration and include all configuration functions */
 require_once("config.inc");
+// TODO: why on arm eglibc targets setting locale crashes the php interpreter?? po files endianess??
 require_once("i18n.inc");
 require_once("functions.inc");
 require_once('libs-php/microui.lib.php');
