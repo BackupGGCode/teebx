@@ -5,7 +5,7 @@
  	      grp pwd posix io termios resource misc socket sysvipc gmon    \
  	      gnulib iconv iconvdata wctype manual shadow gshadow po argp   \
 -	      crypt nss localedata timezone rt conform debug		    \
-+	      crypt nss rt conform debug		    \
++	      crypt nss localedata rt conform debug		    \
  	      $(add-on-subdirs) $(dlfcn) $(binfmt-subdir)
  
  ifndef avoid-generated

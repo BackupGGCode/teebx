@@ -271,6 +271,9 @@ prepareRootfs()
 	chmod 755 $2/rootfs/usr/share/udhcpc/default.script
 	mkdir $2/rootfs/usr/share/zoneinfo
 	cp -Rp $1/usr/share/zoneinfo $2/rootfs/usr/share/
+	if [ -d "$1/usr/share/i18n" ] ; then
+		cp -Rp $1/usr/share/i18n $2/rootfs/usr/share/
+	fi
 
 	# usr/www
 	cp -Rp $1/usr/www $2/rootfs/usr/

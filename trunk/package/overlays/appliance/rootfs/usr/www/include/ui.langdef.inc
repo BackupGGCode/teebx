@@ -21,7 +21,7 @@
 		"ja_JP" => "日本語",
 		"pt_BR" => "Português",
 		"fi_FI" => "Suomi",
-		"se_SE" => "Svenska",
+		"sv_SE" => "Svenska",
 		"tr_TR" => "Türkçe",
 		"ru_RU" => "Ру�?�?кий �?зык"
 	);
