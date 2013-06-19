@@ -52,7 +52,7 @@ if (isset($_POST['lang']))
 bindtextdomain('messages', $g['www_path'] . '/locale');
 bind_textdomain_codeset('messages', 'UTF-8');
 setlocale(LC_MESSAGES, $current_language, $current_language . '.UTF-8');
-putenv("LANG=$current_language");
+//putenv("LANG=$current_language");
 textdomain('messages');
 
 ?>
