@@ -105,3 +105,4 @@ X nuttcp
 # file system overlay
 X appliance
 X tz-base
+X locale-base

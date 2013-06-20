@@ -107,3 +107,4 @@ X appliance
 
 # system overlay
 X tz-base
+X locale-base
