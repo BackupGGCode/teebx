@@ -35,7 +35,7 @@ $pgtitle = array("License");
 ?>
 <?php include("fbegin.inc"); ?>
 	<p><strong>The TeeBX&reg; communication platform.<br>
-	Copyright &copy; 2010 - 2011 Giovanni Vallesi (<a href="http://teebx.org/">TeeBX.org</a>).<br>
+	Copyright &copy; 2010 - 2013 Giovanni Vallesi (<a href="http://teebx.org/">TeeBX.org</a>).<br>
 	All rights reserved.</strong></p>
 	<pre>  This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU Affero General Public License as

@@ -3,7 +3,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2012 Giovanni Vallesi.
+	Copyright(C) 2011 - 2013 Giovanni Vallesi.
 	All rights reserved.
 	
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -37,94 +37,78 @@
 	require_once("config.inc");
 	require_once("functions.inc");
 
-	$fp = fopen('php://stdin', 'r');
+	$in = fopen('php://stdin', 'r');
+	$out = fopen('php://stdout', 'w');
 
 	$iflist = network_get_interfaces();
 
-	echo <<<EOD
-
-Valid interfaces are:
-
-
-EOD;
-
-	foreach ($iflist as $iface => $ifa) {
-		echo sprintf("% -8s%s%s\n", $iface, $ifa['mac'],
-			$ifa['up'] ? "   (up)" : "");
+	fwrite($out, "Valid interfaces are:\n");
+	foreach ($iflist as $iface => $ifa)
+	{
+		fwrite($out, sprintf("% -8s%s%s\n", $iface, $ifa['mac'],
+			$ifa['up'] ? "   (up)" : "")
+		);
 	}
 
-	echo <<<EOD
-
-If you don't know the names of your interfaces, you may choose to use
-auto-detection. In that case, disconnect all interfaces before you begin,
-and reconnect each one when prompted to do so.
-
-EOD;
-
-	do {
-		echo "\nEnter the LAN interface name or 'a' for auto-detection: ";
-		$lanif = chop(fgets($fp));
-		if ($lanif === "") {
+	fwrite($out,
+		"\nIf you don't know the names of your interfaces, you may choose to use\n" .
+		"auto-detection. In that case, disconnect all interfaces before you begin,\n" .
+		'and reconnect each one when prompted to do so.'
+	);
+	do
+	{
+		fwrite($out, "\nEnter the LAN interface name or 'a' for auto-detection:\n >");
+		$lanif = chop(fgets($in));
+		if ($lanif === '')
+		{
 			exit(0);
 		}
 
-		if ($lanif === "a")
-			$lanif = autodetect_interface("LAN", $fp);
-		else if (!array_key_exists($lanif, $iflist)) {
-			echo "\nInvalid interface name '{$lanif}'\n";
+		if ($lanif === 'a')
+		{
+			$lanif = autodetect_interface('LAN', $in, $out);
+		}
+		else if (!array_key_exists($lanif, $iflist))
+		{
+			fwrite($out, "\nInvalid interface name '{$lanif}'\n");
 			unset($lanif);
 			continue;
 		}
 	} while (!$lanif);
 
-
-	echo <<<EOD
-
-The interfaces will be assigned as follows:
-
-LAN  -> {$lanif}
-
-
-The PBX will reboot after saving the changes.
-
-Do you want to proceed? (y/n)
-EOD;
-
-	if (strcasecmp(chop(fgets($fp)), "y") == 0) {
-
+	fwrite($out, 
+		"The interfaces will be assigned as follows:\n" .
+		"  LAN  -> {$lanif}\n" .
+		"The PBX will reboot after saving the changes.\n" .
+		'Do you want to proceed? (y/n)'
+	);
+	if (strcasecmp(chop(fgets($in)), "y") == 0)
+	{
 		$config['interfaces']['lan']['if'] = $lanif;
-
 		write_config();
-
-		echo <<<EOD
-
-The system is rebooting now.
-
-EOD;
-
+		fwrite($out, "The system is rebooting now, please wait...");
 		system_reboot_sync();
 	}
 
-	function autodetect_interface($ifname, $fp) {
+	function autodetect_interface($ifname, &$in, &$out)
+	{
 		$iflist_prev = network_get_interfaces();
-		echo <<<EOD
+		fwrite($out, 
+			"Connect the {$ifname} interface now and make sure that the link is up.\n" .
+			"Then press RETURN to continue.\n"
+		);
 
-Connect the {$ifname} interface now and make sure that the link is up.
-Then press ENTER to continue.
-
-EOD;
-		fgets($fp);
+		fgets($in);
 		$iflist = network_get_interfaces();
-
-		foreach ($iflist_prev as $ifn => $ifa) {
+		foreach ($iflist_prev as $ifn => $ifa)
+		{
 			if (!$ifa['up'] && $iflist[$ifn]['up']) {
-				echo "Detected link-up on interface {$ifn}.\n";
+				fwrite($out,  "Detected link-up on interface {$ifn}.\n");
 				return $ifn;
 			}
 		}
 
-		echo "No link-up detected.\n";
-
+		fwrite($out, "No link-up detected.\n");
 		return null;
 	}
 

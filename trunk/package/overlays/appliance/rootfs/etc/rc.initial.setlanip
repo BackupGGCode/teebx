@@ -34,29 +34,28 @@
 */
 
 	/* parse the configuration and include all functions used below */
-	require_once("config.inc");
-	require_once("functions.inc");
+	require_once('config.inc');
+	require_once('functions.inc');
 
-	$fp = fopen('php://stdin', 'r');
+	$in = fopen('php://stdin', 'r');
+	$out = fopen('php://stdout', 'w');
 
 	// LAN IP via DHCP
-	echo "\nDo you want to use DHCP to configure your LAN interface? (y/n) ";
+	fwrite($out, "\nDo you want to use DHCP to configure your LAN interface? (y/n) ");
 
-	if (strcasecmp(chop(fgets($fp)), 'y') == 0) {
+	if (strcasecmp(chop(fgets($in)), 'y') == 0)
+	{
 		$config['interfaces']['lan']['dhcp'] = 'yes';
 		write_config();
 		network_lan_configure();
 		system_update_httpd_settings();
 
-		echo <<<EOD
+		fwrite($out,
+			"The LAN interface will now be configured via DHCP.\n" .
+			'Press ENTER to continue.'
+		);
 
-The LAN interface will now be configured via DHCP.
-
-Press ENTER to continue.
-
-EOD;
-
-		fgets($fp);
+		fgets($in);
 		exit(0);
 	}
 	else
@@ -64,11 +63,11 @@ EOD;
 		$config['interfaces']['lan']['dhcp'] = 'no';
 	}
 
-	// LAN IP address
+	// Static LAN IP address
 	do
 	{
-		echo "\nEnter the new LAN IP address: ";
-		$lanip = chop(fgets($fp));
+		fwrite($out, "\nEnter the new LAN IP address:\n >");
+		$lanip = chop(fgets($in));
 		if ($lanip === '')
 		{
 			exit(0);
@@ -76,16 +75,17 @@ EOD;
 	}
 	while (!verify_is_ipaddress($lanip));
 
-	echo "\nSubnet masks are to be entered as bit counts (as in CIDR notation).\n";
-	echo 'e.g. 255.255.255.0 = 24', "\n";
-	echo '     255.255.0.0   = 16', "\n";
-	echo '     255.0.0.0     = 8', "\n\n";
-
+	fwrite($out,
+		"\nSubnet masks are to be entered as bit counts (as in CIDR notation).\n" .
+		"  e.g. 255.255.255.0 = 24\n" .
+		"         255.255.0.0 = 16\n" .
+		"           255.0.0.0 =  8\n\n"
+	);
 	do
 	{
-		echo "Enter the new LAN subnet bit count: ";
-		$lanbits = chop(fgets($fp));
-		if ($lanbits === "")
+		fwrite($out, "Enter the new LAN subnet bit count:\n >");
+		$lanbits = chop(fgets($in));
+		if ($lanbits === '')
 		{
 			exit(0);
 		}
@@ -95,20 +95,20 @@ EOD;
 	// LAN Gateway
 	do
 	{
-		echo "\nEnter the LAN gateway IP address: ";
-		$gwip = chop(fgets($fp));
+		fwrite($out, "\nEnter the LAN gateway IP address:\n >");
+		$gwip = chop(fgets($in));
 		if ($gwip === '') {
 			exit(0);
 		}
 	}
 	while (!verify_is_ipaddress($gwip));
 
-	// LAN DNS
+	//  DNS
 	do
 	{
-		echo "\nEnter the LAN DNS IP address: ";
-		$dnsip = chop(fgets($fp));
-		if ($dnsip === "")
+		fwrite($out, "\nEnter the DNS IP address:\n >");
+		$dnsip = chop(fgets($in));
+		if ($dnsip === '')
 		{
 			exit(0);
 		}
@@ -125,12 +125,12 @@ EOD;
 
 	$proto = 'http';
 	$webgui_restart = false;
+	// the next block is disabled,  until https will be available
+	/*
 	if ($config['system']['webgui']['protocol'] == 'https')
 	{
-
-		echo "\nDo you want to revert to HTTP as the webGUI protocol? (y/n) ";
-
-		if (strcasecmp(chop(fgets($fp)), 'y') == 0)
+		fwrite($out, "\nDo you want to revert to HTTP as the webGUI protocol? (y/n) ");
+		if (strcasecmp(chop(fgets($in)), 'y') == 0)
 		{
 			$config['system']['webgui']['protocol'] = 'http';
 			$webgui_restart = true;
@@ -140,25 +140,22 @@ EOD;
 			$proto = 'https';
 		}
 	}
+	*/
 
 	write_config();
 	system_resolvconf_generate();
 	network_lan_configure();
-	if ($webgui_restart) {
+	if ($webgui_restart)
+	{
 		system_update_httpd_settings();
 	}
 
-	echo <<<EOD
-
-The LAN IP address has been set to $lanip/$lanbits.
-You can now access the webGUI by opening the following URL
-in your browser:
-
-$proto://$lanip/
-
-Press ENTER to continue.
-
-EOD;
-
-	fgets($fp);
+	fwrite($out,
+		"The LAN IP address has been set to $lanip/$lanbits.\n" .
+		"You can now access the webGUI by opening the following URL\n" .
+		"in your browser:\n" .
+		"  $proto://$lanip/\n\n" .
+		'Press RETURN to continue.'
+	);
+	fgets($in);
 ?>
