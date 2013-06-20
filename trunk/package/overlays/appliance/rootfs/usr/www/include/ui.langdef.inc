@@ -10,7 +10,7 @@
 		"es_ES" => "Castellano",
 		"zh_CN" => "简体中文",
 		"zh_TW" => "�?體中文",
-		"cs_CS" => "Čeština",
+		"cs_CZ" => "Čeština",
 		"da_DK" => "Dansk",
 		"de_DE" => "Deutsch",
 		"el_GR" => "Ελληνικά",
