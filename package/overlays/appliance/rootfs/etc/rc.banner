@@ -34,8 +34,8 @@
 */
 
 	/* parse the configuration and include all functions used below */
-	require_once("config.inc");
-	require_once("functions.inc");
+	require_once('config.inc');
+	require_once('functions.inc');
 
 	$version = chop(file_get_contents("{$g['etc_path']}/version"));
 	$buildtime = strftime('%c', chop(file_get_contents("{$g['etc_path']}/version.buildtime")));

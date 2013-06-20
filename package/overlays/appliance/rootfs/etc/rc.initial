@@ -13,85 +13,74 @@
 #trap : 2
 #trap : 3
 
-# redirect input/output
-#exec </dev/console >/dev/console 2>/dev/console
+HOME=/root
 
 # XXX : starting here, this needs to become PHP code for the gettext support
 if [ -r /var/etc/disableconsole ]; then
-
-while : ; do
-
-echo
-echo
-echo "*** Console menu disabled. ***"
-echo
-
-read tmp
-
-done
-
+	while : ; do
+		echo
+		echo
+		echo "*** Console menu disabled. ***"
+		echo
+		read tmp
+	done
 else
+	# endless loop
+	while : ; do
+		/etc/rc.banner
 
-# endless loop
-while : ; do
+		# display a cheap menu
+		echo
+		echo
+		echo "PBX console setup"
+		echo "*****************"
+		echo "1) Interfaces: assign network port"
+		echo "2) Set up LAN IP address"
+		echo "3) Reset system password"
+		echo "4) Reset to factory defaults"
+		echo "5) Reboot system"
+		echo "6) Ping host"
+		echo "7) Asterisk Console"
+		echo "8) Shell"
+		# need an install option?
+		if [ -f /offload/livecd ]; then
+			echo "9) Install on Hard Drive";
+		fi
+		echo
+		echo -n "Enter a number: "
 
-/etc/rc.banner
-
-# display a cheap menu
-echo
-echo
-echo "PBX console setup"
-echo "*****************"
-echo "1) Interfaces: assign network port"
-echo "2) Set up LAN IP address"
-echo "3) Reset webGUI password"
-echo "4) Reset to factory defaults"
-echo "5) Reboot system"
-echo "6) Ping host"
-echo "7) Asterisk Console"
-echo "8) Shell"
-# need an install option?
-if [ -f /offload/livecd ]; then
-echo "9) Install on Hard Drive";
-fi
-echo
-
-echo -n "Enter a number: "
-read opmode
-
-# see what the user has chosen
-case ${opmode} in
-1)
-	/etc/rc.initial.setports
-	;;
-2)
-	/etc/rc.initial.setlanip
-	;;
-3)
-	/etc/rc.initial.password
-	;;
-4)
-	/etc/rc.initial.defaults
-	;;
-5)
-	/etc/rc.initial.reboot
-	;;
-6)
-	/etc/rc.initial.ping
-	;;
-7)
-	/usr/sbin/asterisk -r
-	;;
-8)
-	/bin/sh
-	;;
-9)
-	if [ -f /offload/livecd ]; then
-	/etc/rc.initial.install
-	fi
-	;;
-esac
-
-done
-
+		read opmode
+		# see what the user has chosen
+		case ${opmode} in
+			1)
+				/etc/rc.initial.setports
+				;;
+			2)
+				/etc/rc.initial.setlanip
+				;;
+			3)
+				/etc/rc.initial.password
+				;;
+			4)
+				/etc/rc.initial.defaults
+				;;
+			5)
+				/etc/rc.initial.reboot
+				;;
+			6)
+				/etc/rc.initial.ping
+				;;
+			7)
+				/usr/sbin/asterisk -r
+				;;
+			8)
+				/bin/sh
+				;;
+			9)
+				if [ -f /offload/livecd ]; then
+					/etc/rc.initial.install
+				fi
+				;;
+		esac
+	done
 fi

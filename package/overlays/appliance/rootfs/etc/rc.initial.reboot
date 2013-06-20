@@ -34,26 +34,16 @@
 */
 
 	/* parse the configuration and include all functions used below */
-	require_once("config.inc");
-	require_once("functions.inc");
+	require_once('config.inc');
+	require_once('functions.inc');
 
-	$fp = fopen('php://stdin', 'r');
+	$in = fopen('php://stdin', 'r');
+	$out = fopen('php://stdout', 'w');
 
-	echo <<<EOD
-
-The system will reboot. This may take a minute.
-
-Do you want to proceed? (y/n)
-EOD;
-
-	if (strcasecmp(chop(fgets($fp)), "y") == 0) {
-
-		echo <<<EOD
-
-The system is rebooting now.
-
-EOD;
-
+	fwrite($out, "\nThe system will reboot, this may take a minute.\n  Do you want to proceed? (y/n)");
+	if (strcasecmp(chop(fgets($in)), "y") == 0)
+	{
+		fwrite($out, 'The system is rebooting now. Please wait.');
 		system_reboot_sync();
 	}
 ?>
