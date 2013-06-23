@@ -81,3 +81,27 @@ appliance_prepareRootfs()
 	# call other rootfs appliance specific function defined in this script
 	appliance_prepareAstMedia ${2}
 }
+
+appliance_fixRelativeLinks()
+{
+	# $1: search directory top level
+	# $2: path begin string to be removed, without last slash, like '../..'
+	
+	local removePattern=$2
+	local sLink
+	local oldTarget
+	local newTarget
+
+	pushd "$1"
+
+	echo "Fixing relative symlinks in $1..."
+	for sLink in $(find -lname "${removePattern}/*")
+	do
+		oldTarget=$(readlink $sLink)
+		newTarget=${oldTarget#$removePattern}
+		echo "  -> ($sLink): $oldTarget now $newTarget"
+		ln -sf $newTarget $sLink
+	done
+
+	popd
+}

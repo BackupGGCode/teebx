@@ -262,6 +262,7 @@ prepareRootfs()
 	cp -Rp $1/usr/share/terminfo/s/screen $2/rootfs/usr/share/terminfo/s/
 	mkdir $2/rootfs/usr/share/terminfo/v
 	cp -Rp $1/usr/share/terminfo/v/vt100 $2/rootfs/usr/share/terminfo/v/
+	cp -Rp $1/usr/share/terminfo/v/vt102 $2/rootfs/usr/share/terminfo/v/
 	cp -Rp $1/usr/share/terminfo/v/vt200 $2/rootfs/usr/share/terminfo/v/
 	mkdir $2/rootfs/usr/share/terminfo/x
 	cp -Rp $1/usr/share/terminfo/x/xterm $2/rootfs/usr/share/terminfo/x/
@@ -283,6 +284,7 @@ prepareRootfs()
 
 	# call appliance custom function
 	appliance_prepareRootfs "$1" "$2"
+	appliance_fixRelativeLinks "$2/rootfs/usr/" '../..'
 
 	# add a build report to image
 	packageBuildInfo "$1" "$2/rootfs/usr/www/docs"
