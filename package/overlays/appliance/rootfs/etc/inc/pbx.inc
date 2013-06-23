@@ -1093,8 +1093,8 @@ load => res_agi.so
 load => res_crypto.so
 load => res_limit.so
 load => res_musiconhold.so
-load => res_qstat.so
 load => res_smdi.so
+load => res_timing_timerfd.so
 
 EOD;
 
