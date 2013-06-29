@@ -48,7 +48,9 @@ declare initramfs_name=initramf.igz
 #
 # sector size in bytes
 declare -i sect_size=512
-# first partition offset in sectors, defaults to 1.
+declare -i track_sec=63
+declare -i heads=16
+# first partition offset in sectors, defaults to 63.
 # increase it via a target image.conf
 # if you need to write raw data before fs partitions
 declare -i part_offset=1
@@ -63,7 +65,7 @@ if [ -f $base/target/$target/image.conf ]; then
 fi
 
 # cylinder size in bytes (16 heads x 63 sectors/track x $sect_size bytes/sector)
-cylinder_size=$((16 * 63 * $sect_size))
+cylinder_size=$(($heads * $track_sec * $sect_size))
 sectors_per_cylinder=$(($cylinder_size / $sect_size))
 
 # build initramfs
@@ -156,7 +158,7 @@ offload_start_sector=$(($root_size + $part_offset))
 echo "Pushing working dir then moving to image directory:"
 pushd $imagelocation
 echo "Partitioning the disk image..."
-sfdisk -C$cyls_needed -S63 -H16 -uS -f -D --no-reread firmware.img << EOF
+sfdisk -C$cyls_needed -S${track_sec} -H${heads} -uS -f -L --no-reread firmware.img << EOF
 $part_offset,$root_size,6,*
 $offload_start_sector,,83
 EOF
