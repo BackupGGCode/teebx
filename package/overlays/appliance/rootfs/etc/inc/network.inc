@@ -189,7 +189,7 @@ function network_get_interface($name)
 		$interface['up'] = false;
 	}
 
-	exec('/bin/iproute | grep "$name" | grep "default" | cut -d " " -f 3', $gwout);
+	exec('/bin/busybox iproute | grep "$name" | grep "default" | cut -d " " -f 3', $gwout);
 	if (verify_is_ipaddress($gwout[0]))
 	{
 		$interface['gateway'] = $gwout[0];
@@ -340,7 +340,7 @@ function ip_in_subnet($addr, $subnet)
 */
 function arp_get_mac_by_ip($ip)
 {
-	exec("/usr/sbin/arp -n {$ip}", $arpoutput);
+	exec("/bin/busybox arp -n {$ip}", $arpoutput);
 
 	if ($arpoutput[0])
 	{
