@@ -50,6 +50,10 @@ declare initramfs_name=initramf.igz
 declare -i sect_size=512
 declare -i track_sec=63
 declare -i heads=16
+
+# sfdisk compatibility mode
+declare part_comp='-L'
+
 # first partition offset in sectors, defaults to 63.
 # increase it via a target image.conf
 # if you need to write raw data before fs partitions
@@ -158,7 +162,7 @@ offload_start_sector=$(($root_size + $part_offset))
 echo "Pushing working dir then moving to image directory:"
 pushd $imagelocation
 echo "Partitioning the disk image..."
-sfdisk -C$cyls_needed -S${track_sec} -H${heads} -uS -f -L --no-reread firmware.img << EOF
+sfdisk -C$cyls_needed -S${track_sec} -H${heads} -uS -f ${part_comp} --no-reread firmware.img << EOF
 $part_offset,$root_size,6,*
 $offload_start_sector,,83
 EOF
