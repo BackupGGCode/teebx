@@ -71,6 +71,13 @@ fi
 # cylinder size in bytes (16 heads x 63 sectors/track x $sect_size bytes/sector)
 cylinder_size=$(($heads * $track_sec * $sect_size))
 sectors_per_cylinder=$(($cylinder_size / $sect_size))
+echo "Image geometry summary:"
+echo "  -> Heads: $heads"
+echo "  -> Sectors per track: $track_sec"
+echo "  -> Sector Size: $sect_size"
+echo "  -> Cylinder Size: $cylinder_size"
+echo "  -> Sectors per cylinder: $sectors_per_cylinder"
+echo "  -> Partition offset, sector(s): $part_offset"
 
 # build initramfs
 . target/share/initramfs/build.sh
