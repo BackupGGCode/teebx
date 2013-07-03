@@ -1,0 +1,11 @@
+--- dahdi-tools-2.6.1/Makefile.vanilla	2013-07-03 21:25:21.000000000 +0200
++++ dahdi-tools-2.6.1/Makefile	2013-07-03 21:28:21.000000000 +0200
+@@ -27,7 +27,7 @@
+ endif
+ 
+ SUBDIRS_UTILS_ALL:= ppp
+-SUBDIRS_UTILS := xpp
++SUBDIRS_UTILS :=
+ 
+ OPTFLAGS=-O2
+ CFLAGS+=-I. $(OPTFLAGS) -g -fPIC -Wall -DBUILDING_TONEZONE #-DTONEZONE_DRIVER
