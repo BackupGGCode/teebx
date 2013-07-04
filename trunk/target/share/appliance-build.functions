@@ -76,7 +76,9 @@ appliance_prepareRootfs()
 	rm -rf ${2}/rootfs/usr/sbin/dahdi_registration
 
 	# usr/share
-	cp -Rp ${1}/usr/share/dahdi ${2}/rootfs/usr/share/
+	if [ -d "${1}/usr/share/dahdi" ] ; then
+		cp -Rp ${1}/usr/share/dahdi ${2}/rootfs/usr/share/
+	fi
 
 	# call other rootfs appliance specific function defined in this script
 	appliance_prepareAstMedia ${2}
