@@ -96,6 +96,8 @@ X lsof
 X verifysig
 X sox
 X dosfstools
+X e2fsprogs
+X parted
 
 # Network utility software
 X libpcap

@@ -94,15 +94,17 @@ X lsof
 X verifysig
 X sox
 X dosfstools
+X e2fsprogs
+X parted
 
 # Network utility software
 X libpcap
 X tcpdump
 X curl
 X nuttcp
-#X ser2net
 
-# file system overlay
+# application specific overlay
 X appliance
+# system overlay
 X tz-base
 X locale-base
