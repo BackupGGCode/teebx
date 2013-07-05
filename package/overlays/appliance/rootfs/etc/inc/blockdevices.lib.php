@@ -50,7 +50,7 @@ function getBlockDevices($refresh = false, $revealMTD = false)
 	}
 
 	$result = array();
-	exec('fdisk -u -l;echo 1;blkid;echo 2;mount', $out);
+	exec('/bin/busybox fdisk -u -l;echo 1;/bin/busybox blkid;echo 2;mount', $out);
 	foreach (array_keys($out) as $idx)
 	{
 		// try to match lines that reports info about disks
