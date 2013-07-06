@@ -1,0 +1,28 @@
+Only happens when building with uClibc
+
+In file included from xstrtoll.c:6:0:
+xstrtol.c: In function 'bkm_scale':
+xstrtol.c:49:40: error: 'LLONG_MIN' undeclared (first use in this function)
+xstrtol.c:49:40: note: each undeclared identifier is reported only once for each function it appears in
+xstrtol.c:54:7: error: 'LLONG_MAX' undeclared (first use in this function)
+make[4]: *** [xstrtoll.lo] Error 1
+
+--- parted-3.0/lib/xstrtol.c.vanilla	2013-07-06 12:43:29.983933976 +0000
++++ parted-3.0/lib/xstrtol.c	2013-07-06 10:39:35.000000000 +0000
+@@ -18,6 +18,16 @@
+ 
+ /* Written by Jim Meyering. */
+ 
++# ifndef ULLONG_MAX
++#  define ULLONG_MAX TYPE_MAXIMUM (unsigned long long)
++# endif
++# ifndef LLONG_MAX
++#  define LLONG_MAX TYPE_MAXIMUM (long long int)
++# endif
++# ifndef LLONG_MIN
++#  define LLONG_MIN TYPE_MINIMUM (long long int)
++# endif
++
+ #ifndef __strtol
+ # define __strtol strtol
+ # define __strtol_t long int
