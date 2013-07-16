@@ -1,6 +1,6 @@
---- asterisk-1.6.1.11/Makefile.rules.orig	2009-12-01 16:34:42.000000000 +0100
-+++ asterisk-1.6.1.11/Makefile.rules	2009-12-01 16:39:32.000000000 +0100
-@@ -124,6 +124,6 @@
+--- asterisk-1.8.23.0/Makefile.rules.vanilla	2013-07-16 17:32:56.607940463 +0000
++++ asterisk-1.8.23.0/Makefile.rules	2013-07-16 17:33:09.516206128 +0000
+@@ -157,6 +157,6 @@
  
  %: %.o
  	$(ECHO_PREFIX) echo "   [LD] $^ -> $@"
