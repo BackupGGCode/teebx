@@ -1,6 +1,6 @@
---- asterisk-1.8.4/doc/appdocsxml.dtd      (revision 308789)
-+++ asterisk-1.8.4/doc/appdocsxml.dtd      (working copy)
-@@ -30,7 +30,7 @@
+--- asterisk-1.8.23.0/doc/appdocsxml.dtd.vanilla	2013-07-16 17:32:02.896203786 +0000
++++ asterisk-1.8.23.0/doc/appdocsxml.dtd	2013-07-16 17:32:15.884861880 +0000
+@@ -32,7 +32,7 @@
    <!ELEMENT see-also (ref|xi:include)*>
  
    <!ELEMENT ref (#PCDATA)>

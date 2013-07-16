@@ -1,5 +1,5 @@
---- asterisk-1.8.4/contrib/scripts/safe_asterisk.orig	2011-06-10 20:45:01.000000000 +0200
-+++ asterisk-1.8.4/contrib/scripts/safe_asterisk	2011-06-10 20:46:21.000000000 +0200
+--- asterisk-1.8.23.0/contrib/scripts/safe_asterisk.vanilla	2013-07-16 17:33:44.848151870 +0000
++++ asterisk-1.8.23.0/contrib/scripts/safe_asterisk	2013-07-16 17:34:01.419950335 +0000
 @@ -2,7 +2,6 @@
  # vim:textwidth=80:tabstop=4:shiftwidth=4:smartindent:autoindent
  

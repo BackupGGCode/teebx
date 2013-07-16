@@ -1,6 +1,6 @@
---- asterisk-1.6.1.17/channels/chan_iax2.c.orig	2010-03-09 13:12:30.000000000 +0100
-+++ asterisk-1.6.1.17/channels/chan_iax2.c	2010-03-09 14:15:49.000000000 +0100
-@@ -6344,6 +6344,40 @@
+--- asterisk-1.8.23.0/channels/chan_iax2.c.vanilla	2013-07-16 17:07:42.496255546 +0000
++++ asterisk-1.8.23.0/channels/chan_iax2.c	2013-07-16 17:16:19.439983413 +0000
+@@ -6787,6 +6787,40 @@
  #undef FORMAT2
  }
  
@@ -41,7 +41,7 @@
  static char *handle_cli_iax2_show_threads(struct ast_cli_entry *e, int cmd, struct ast_cli_args *a)
  {
  	struct iax2_thread *thread = NULL;
-@@ -6506,6 +6540,29 @@
+@@ -6950,6 +6984,29 @@
  	}
  }
  
@@ -71,7 +71,7 @@
  static int manager_iax2_show_netstats(struct mansession *s, const struct message *m)
  {
  	ast_cli_netstats(s, -1, 0);
-@@ -13446,6 +13503,7 @@
+@@ -14243,6 +14300,7 @@
  	AST_CLI_DEFINE(handle_cli_iax2_show_netstats,       "List active IAX channel netstats"),
  	AST_CLI_DEFINE(handle_cli_iax2_show_peer,           "Show details on specific IAX peer"),
  	AST_CLI_DEFINE(handle_cli_iax2_show_peers,          "List defined IAX peers"),

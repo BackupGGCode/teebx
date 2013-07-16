@@ -1,6 +1,6 @@
---- asterisk-1.8.4/main/xmldoc.c.orig	2011-05-25 10:46:36.000000000 +0200
-+++ asterisk-1.8.4/main/xmldoc.c	2011-05-25 10:46:59.000000000 +0200
-@@ -35,6 +35,8 @@
+--- asterisk-1.8.23.0/main/xmldoc.c.vanilla	2013-07-16 17:24:02.976011820 +0000
++++ asterisk-1.8.23.0/main/xmldoc.c	2013-07-16 17:31:23.212508625 +0000
+@@ -39,6 +39,8 @@
  #include "asterisk/term.h"
  #include "asterisk/xmldoc.h"
  
