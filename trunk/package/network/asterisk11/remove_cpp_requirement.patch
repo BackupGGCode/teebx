@@ -1,0 +1,10 @@
+--- asterisk-11.5.0/Makefile.rules.vanilla	2013-07-19 17:27:00.400143947 +0000
++++ asterisk-11.5.0/Makefile.rules	2013-07-19 17:27:16.300838292 +0000
+@@ -157,6 +157,6 @@
+ 
+ %: %.o
+ 	$(ECHO_PREFIX) echo "   [LD] $^ -> $@"
+-	$(CMD_PREFIX) $(CXX) $(STATIC_BUILD) -o $@ $(PTHREAD_CFLAGS) $(_ASTLDFLAGS) $^ $(CXX_LIBS) $(ASTLDFLAGS)
++	$(CMD_PREFIX) $(CC) $(STATIC_BUILD) -o $@ $(PTHREAD_CFLAGS) $(_ASTLDFLAGS) $^ $(CC_LIBS) $(ASTLDFLAGS)
+ 
+ dist-clean:: clean
