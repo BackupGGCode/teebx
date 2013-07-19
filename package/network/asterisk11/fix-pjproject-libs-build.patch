@@ -1,0 +1,33 @@
+--- asterisk-11.5.0/res/pjproject/pjlib-util/build/Makefile.vanilla	2013-07-19 16:26:33.392431181 +0000
++++ asterisk-11.5.0/res/pjproject/pjlib-util/build/Makefile	2013-07-19 14:22:46.000000000 +0000
+@@ -32,7 +32,7 @@
+ 		getopt.o hmac_md5.o hmac_sha1.o http_client.o md5.o pcap.o resolver.o \
+ 		scanner.o sha1.o srv_resolver.o string.o stun_simple.o \
+ 		stun_simple_client.o xml.o
+-export PJLIB_UTIL_CFLAGS += $(_CFLAGS)
++export PJLIB_UTIL_CFLAGS += -c -fPIC $(_CFLAGS)
+ 
+ ###############################################################################
+ # Defines for building test application
+--- asterisk-11.5.0/res/pjproject/pjnath/build/Makefile.vanilla	2013-07-19 16:24:55.567927024 +0000
++++ asterisk-11.5.0/res/pjproject/pjnath/build/Makefile	2013-07-19 10:09:13.000000000 +0000
+@@ -34,7 +34,7 @@
+ 		errno.o ice_session.o ice_strans.o nat_detect.o stun_auth.o \
+ 		stun_msg.o stun_msg_dump.o stun_session.o stun_sock.o \
+ 		stun_transaction.o turn_session.o turn_sock.o
+-export PJNATH_CFLAGS += $(_CFLAGS)
++export PJNATH_CFLAGS += -c -fPIC $(_CFLAGS)
+ 
+ ###############################################################################
+ # Defines for building test application
+--- asterisk-11.5.0/res/pjproject/pjlib/build/Makefile.vanilla	2013-07-19 16:25:21.488334187 +0000
++++ asterisk-11.5.0/res/pjproject/pjlib/build/Makefile	2013-07-19 10:09:28.000000000 +0000
+@@ -29,7 +29,7 @@
+ 	rbtree.o sock_common.o sock_qos_common.o sock_qos_bsd.o \
+ 	ssl_sock_common.o ssl_sock_ossl.o ssl_sock_dump.o \
+ 	string.o timer.o types.o
+-export PJLIB_CFLAGS += $(_CFLAGS)
++export PJLIB_CFLAGS += -c -fPIC $(_CFLAGS)
+ 
+ ###############################################################################
+ # Defines for building test application
