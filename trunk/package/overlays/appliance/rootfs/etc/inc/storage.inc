@@ -305,7 +305,7 @@ function storage_cdrom_get_devices()
 
 function storage_disk_get_devices()
 {
-	return explode(" ", trim(exec("/bin/ls /dev | grep '[s|h]d[a-z]' | tr \"\n\" \" \"")));
+	return explode(" ", trim(exec("/bin/ls /dev | grep '^[s|h]d[a-z]' | tr \"\n\" \" \"")));
 }
 
 function storage_disk_get_name($device)
