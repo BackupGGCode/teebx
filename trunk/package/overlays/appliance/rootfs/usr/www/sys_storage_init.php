@@ -143,11 +143,11 @@ if (strpos($diskDev, '/dev/mmcblk') !== false)
 {
 	$newPart = "{$diskDev}p{$newPartNum}";
 }
-$newPartId = 'b';
+$newPartId = 'fat32';
 //
 if ($_POST['task'] === 'partinit')
 {
-	$data['retval'] = newPartition($diskDev, $newPartNum, $sectStart, $clearPartTable, $newPartId);
+	$data['retval'] = newPartition($diskDev, $sectStart, '100%', $newPartId, $clearPartTable);
 	if ($_POST['mode'] === 'use-spare')
 	{
 		/* when initializing a new partition on system disk
@@ -172,7 +172,7 @@ if ($_POST['task'] === 'partinit')
 elseif ($_POST['task'] === 'partformat')
 {
 	$newLabel = $_POST['label'];
-	$data['retval'] = formatPartitionFAT32($newPart, $newLabel);
+	$data['retval'] = formatPartitionDos($newPart, $newLabel);
 }
 // exit
 exit(json_encode($data));
