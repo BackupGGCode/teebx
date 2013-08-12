@@ -37,6 +37,18 @@ if (file_exists('/etc/inc/initsvc.storage.php'))
 	include('/etc/inc/initsvc.storage.php');
 }
 
+function closestDivisibleBy($in, $divider)
+{
+	// this function should never return a value smaller than $in
+	$closest = $in;
+	$remainder = ($in % $divider);
+	if ($remainder > 0)
+	{
+		$closest = $closest + ($divider - $remainder);
+	}
+	return $closest;
+}
+
 function getBlockDevices($refresh = false, $revealMTD = false)
 {
 	// dmesg | grep -i 'attached scsi\|usb disconnect'
@@ -218,55 +230,53 @@ function getLastUsedSector($diskDev, &$arrDiskInfo)
 	return max($partEnd);
 }
 
-function newPartition($dev, $partNum, $partStart, $ovPartTable = false, $fs = 'b')
+function newPartition($dev, $partStart, $partEnd, $fs = 'fat32', $newPartTable = false, $align = 2048)
 {
-  /* partition code ids short table
-  0 Empty                  1 FAT12                   4 FAT16 <32M
-  6 FAT16                  b Win95 FAT32             c Win95 FAT32 (LBA)
-  e Win95 FAT16 (LBA)      82 Linux swap             83 Linux
-  85 Linux extended        8e Linux LVM              ee EFI GPT
-  ef EFI (FAT-12/16/32)    fd Linux raid autodetect
+  /* partition types table
+    ext2         fat16         fat32
+    hfs          hfs+          hfsx
+    linux-swap   NTFS          reiserfs
+    ufs
   */
 	openlog('UI disk partitioning', LOG_INFO, LOG_LOCAL0);
 
-	$cmdParType = "t\n$fs\n";
-	if ($partNum > 1)
+	if ($newPartTable === true)
 	{
-		$cmdParType = "t\n$partNum\n$fs\n";
+		exec("parted -a optimal --script $dev -- mklabel msdos", $out, $retval);
+		syslog(LOG_INFO, "Writing new partition table on $dev returned $retval");
+		if ($retval !== 0)
+		{
+			// error writing the new partition table, exiting
+			syslog(LOG_ERR, "parted mklabel error: $out");
+			return $retval;
+		}
 	}
 
-	$cmdParams = '"';
-	if ($ovPartTable === true)
+	if (is_int($align))
 	{
-		// overwrite with fresh DOS partition table
-		$cmdParams .= "o\n";
+		$partStart = closestDivisibleBy($partStart, $align);
 	}
-	$cmdParams .=
-		// create new
-		"n\n" .
-		// primary partition
-		"p\n" .
-		// number
-		"$partNum\n" .
-		// from $partStart sector
-		"$partStart\n" .
-		// to the end
-		"\n" .
-		// set partition type
-		$cmdParType .
-		// and write changes
-		"w\n\"";
-	exec("echo $cmdParams|fdisk -u $dev", $out, $retval);
-	syslog(LOG_INFO, "fdisk returned " . $retval);
+
+	$cmdParams = "{$dev} -- mkpart primary $fs {$partStart}s $partEnd";
+	exec("parted -a optimal --script $cmdParams", $out, $retval);
+	syslog(LOG_INFO, "parted mkpart returned " . $retval);
+	if ($retval !== 0)
+	{
+		syslog(LOG_ERR, "parted mkpart error: $out");
+	}
 	closelog();
 	return $retval;
 }
 
-function formatPartitionFAT32($devPart, $label)
+function formatPartitionDos($devPart, $label, $fatSize = 32)
 {
-	openlog('UI partition formatting', LOG_INFO, LOG_LOCAL0);
-	exec("mkdosfs -n $label $devPart", $out, $retval);
-	syslog(LOG_INFO, 'mkdosfs returned ' . $retval);
+	openlog('UI dos partition formatting', LOG_INFO, LOG_LOCAL0);
+	exec("mkdosfs -F $fatSize -n $label $devPart", $out, $retval);
+	syslog(LOG_INFO, "Creating new filesystem on $devPart returned $retval");
+	if ($retval !== 0)
+	{
+		syslog(LOG_ERR, "mkdosfs error: $out");
+	}
 	closelog();
 	return $retval;
 }

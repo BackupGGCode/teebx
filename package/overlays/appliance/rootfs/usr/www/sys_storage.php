@@ -88,7 +88,7 @@ $tbl->tbody();
 		foreach (array_keys($freeDisks) as $key)
 		{
 			$diskEditTool = gettext('Click here to configure this disk');
-			$actionCall = "doClickAction('new', '$key', '1')";
+			$actionCall = "doClickAction('new', '$key', '1', '1')";
 			$diskEditLabel = '<a class="doedit" href="#" OnClick="' . $actionCall .'" title="' . $diskEditTool . '">'
 				. '<img  src="img/add.png" alt="+">'
 				. round($disksInfo[$key]['size']/1000000)
