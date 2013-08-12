@@ -247,7 +247,7 @@ function newPartition($dev, $partStart, $partEnd, $fs = 'fat32', $newPartTable =
 		if ($retval !== 0)
 		{
 			// error writing the new partition table, exiting
-			syslog(LOG_ERR, "parted mklabel error: $out");
+			syslog(LOG_ERR, 'parted mklabel error: ' . implode(' ',$out));
 			return $retval;
 		}
 	}
@@ -262,7 +262,7 @@ function newPartition($dev, $partStart, $partEnd, $fs = 'fat32', $newPartTable =
 	syslog(LOG_INFO, "parted mkpart returned " . $retval);
 	if ($retval !== 0)
 	{
-		syslog(LOG_ERR, "parted mkpart error: $out");
+		syslog(LOG_ERR, 'parted mkpart error: ' . implode(' ',$out));
 	}
 	closelog();
 	return $retval;
@@ -275,7 +275,7 @@ function formatPartitionDos($devPart, $label, $fatSize = 32)
 	syslog(LOG_INFO, "Creating new filesystem on $devPart returned $retval");
 	if ($retval !== 0)
 	{
-		syslog(LOG_ERR, "mkdosfs error: $out");
+		syslog(LOG_ERR, 'mkdosfs error: ' . implode(' ',$out));
 	}
 	closelog();
 	return $retval;
