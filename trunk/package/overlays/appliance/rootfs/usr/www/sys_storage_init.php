@@ -150,18 +150,15 @@ if ($_POST['task'] === 'partinit')
 	$data['retval'] = newPartition($diskDev, $sectStart, '100%', $newPartId, $clearPartTable);
 	if ($_POST['mode'] === 'use-spare')
 	{
-		/* when initializing a new partition on system disk
-		fdisk output a warning and return 1 so we need to check
-		that the new partition exists instead of accepting raw result.
+		/* force kernel to reread partition table
+		when initializing a new partition on system disk.
 		*/
-		exec("fdisk -l|grep '$newPart'| awk '{print \$5}'", $out);
+		exec('partprobe');
+		exec("cat /proc/partitions |grep $newPart", $out);
 		if (isset($out[0]))
 		{
-			if ($out[0] == $newPartId)
-			{
-				// return integer 2 instead of 1, evaluating this we will notice the user about actions to be done.
+				// return integer 2 instead of 0, evaluating this we will notice the user about actions to be done.
 				$data['retval'] = 2;
-			}
 		}
 		else
 		{

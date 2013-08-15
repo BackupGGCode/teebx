@@ -49,6 +49,32 @@ function closestDivisibleBy($in, $divider)
 	return $closest;
 }
 
+function getFsIdentifierType($fsIdent)
+{
+	$deviceName = "/dev/$fsIdent";
+	if (file_exists($deviceName))
+	{
+		$deviceType = filetype($deviceName);
+		if ($deviceType === 'block')
+		{
+			return $deviceType;
+		}
+	}
+
+	// uuid (or fat volume serial number)
+	if (preg_match('/^([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[A-F0-9]{4}-[A-F0-9]{4})/', $fsIdent))
+	{
+		return 'UUID';
+	}
+
+	// volume label
+	// labels created in system should not accept dashes and spaces
+	if (preg_match('/^([_a-z0-9]{1,11})$/i', $fsIdent))
+	{
+		return 'LABEL';
+	}
+}
+
 function getBlockDevices($refresh = false, $revealMTD = false)
 {
 	// dmesg | grep -i 'attached scsi\|usb disconnect'
@@ -75,7 +101,13 @@ function getBlockDevices($refresh = false, $revealMTD = false)
 					continue;
 				//
 			}
-			$result[$regs[1]]['size'] = (float) $regs[2];
+			$device = $regs[1];
+			$result[$device]['size'] = (float) $regs[2];
+			// get total sectors on next array element
+			if (preg_match('/^([\d]+)\sheads,\s([\d]+)\s[a-z\/]+,\s([\d]+)\s[a-z]+,\s[a-z]+\s([\d]+)\ssectors/', $out[$idx+1], $regs))
+			{
+				$result[$device]['sectors'] = (float) $regs[4];
+			}
 		}
 	}
 	//
@@ -276,6 +308,29 @@ function formatPartitionDos($devPart, $label, $fatSize = 32)
 	if ($retval !== 0)
 	{
 		syslog(LOG_ERR, 'mkdosfs error: ' . implode(' ',$out));
+	}
+	closelog();
+	return $retval;
+}
+
+function mountPart($devFs, $mountPoint, $mountParams = '', $devFsIdentType = null)
+{
+	// $devFsType = NULL or [block, UUID, LABEL]
+	if (is_null($devFsIdentType))
+	{
+		$devFsIdentType = getFsIdentifierType($devFs);
+	}
+	$devFs = "/dev/{$devFs}";
+	if ($devFsIdentType != 'block')
+	{
+		$devFs = "{$devFsIdentType}={$devFs}";
+	}
+
+	openlog("Appliance filesystem mount, $devFs to $mountPoint", LOG_INFO, LOG_LOCAL0);
+	exec("mount $devFs $mountPoint $mountParams", $out, $retval);
+	if ($retval !== 0)
+	{
+		syslog(LOG_ERR, 'mount error: ' . implode(' ',$out));
 	}
 	closelog();
 	return $retval;

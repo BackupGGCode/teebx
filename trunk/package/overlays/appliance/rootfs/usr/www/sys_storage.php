@@ -165,28 +165,31 @@ $tbl->tbody();
 			}
 			//
 			$newPartStart = max($partsEndSect) + 1;
-			$spareSize = $devFree - BDEV_SYS_SPARESIZE;
-			if ($spareSize >= BDEV_MIN_SIZE)
+			if ($newPartStart < $disksInfo[$devKey]['sectors'])
 			{
-				$tbl->thead();
-				$tbl->tr();
-					$tbl->th(gettext('Device name'), 'class=colheader');
-					$tbl->th(gettext('Spare disk space'), 'class=colheader|colspan=2');
-				//
-				$diskEditTool = gettext('Click here to configure this disk');
-				$actionCall = "doClickAction('use-spare', '$devKey', '3', '$newPartStart')";
-				$diskEditLabel = '<a class="doedit" href="#" OnClick="' . $actionCall .'" title="' . $diskEditTool . '">'
-					. '<img  src="img/add.png" alt="+">'
-					. round($devFree)
-					.' MB</a>';
-				// this is the system disk, print a notice to the user
-				$noticeLabel = ' ' . gettext('Notice: this is the system disk, avoid using it for additional storage.');
-				$noticeLabel .= '&nbsp;<img  src="img/alert.png" alt="!">';
-				$tbl->tbody();
-				$tbl->tr();
-					$tbl->td($devKey);
-					$tbl->td($diskEditLabel . $noticeLabel, 'colspan=2');
-				//
+				$spareSize = $devFree - BDEV_SYS_SPARESIZE;
+				if ($spareSize >= BDEV_MIN_SIZE)
+				{
+					$tbl->thead();
+					$tbl->tr();
+						$tbl->th(gettext('Device name'), 'class=colheader');
+						$tbl->th(gettext('Spare disk space'), 'class=colheader|colspan=2');
+					//
+					$diskEditTool = gettext('Click here to configure this disk');
+					$actionCall = "doClickAction('use-spare', '$devKey', '3', '$newPartStart')";
+					$diskEditLabel = '<a class="doedit" href="#" OnClick="' . $actionCall .'" title="' . $diskEditTool . '">'
+						. '<img  src="img/add.png" alt="+">'
+						. round($devFree)
+						.' MB</a>';
+					// this is the system disk, print a notice to the user
+					$noticeLabel = ' ' . gettext('Notice: this is the system disk, avoid using it for additional storage.');
+					$noticeLabel .= '&nbsp;<img  src="img/alert.png" alt="!">';
+					$tbl->tbody();
+					$tbl->tr();
+						$tbl->td($devKey);
+						$tbl->td($diskEditLabel . $noticeLabel, 'colspan=2');
+					//
+				}
 			}
 		}
 	}
