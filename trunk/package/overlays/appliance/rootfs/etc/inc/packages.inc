@@ -2,10 +2,10 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx)
-	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
+	Copyright (C) 2007-2008 IKT <http://itison-ikt.de>.
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without
@@ -17,11 +17,6 @@
 	2. Redistributions in binary form must reproduce the above copyright
 	   notice, this list of conditions and the following disclaimer in the
 	   documentation and/or other materials provided with the distribution.
-
-	3. Redistribution in any form at a charge, that in whole or in part
-	   contains or is derived from the software, including but not limited to
-	   value added products, is prohibited without prior written consent of
-	   tecema.
 
 	THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
 	INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
