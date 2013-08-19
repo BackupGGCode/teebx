@@ -37,6 +37,7 @@ require_once('globals.inc');
 require_once('util.inc');
 require_once('xmlparse.inc');
 require_once('tzdata.lib.php');
+require_once('console.msg.inc');
 
 if (!isset($g['booting']))
 {
@@ -68,17 +69,7 @@ if ($g['booting'])
 		if (file_exists("/offload/livecd"))
 		{
 			$livecd = true;
-			echo <<<EOD
-
-
-*******************************************************************************
-* WARNING!                                                                    *
-* No FAT formatted USB memory stick or floppy disk could be found.            *
-* Your configuration changes will be lost on reboot.                          *
-*******************************************************************************
-
-
-EOD;
+			getBanner($msg_cfg_nosave, 'WARNING!');
 			sleep(3);
 		}
 		else
@@ -140,18 +131,7 @@ EOD;
 		if (!$cfgdevice && !$livecd)
 		{
 			/* no device found, print an error and die */
-			echo <<<EOD
-
-
-*******************************************************************************
-* FATAL ERROR                                                                 *
-* The device that contains the configuration file (config.xml) could not be   *
-* found. $product_name cannot continue booting.                                  *
-*******************************************************************************
-
-
-EOD;
-
+			getBanner($msg_cfg_missing, 'FATAL ERROR', $product_name);
 			mwexec('/sbin/halt');
 			exit;
 		}
@@ -252,19 +232,7 @@ if (!$noparseconfig)
 		{
 			if ($g['booting'])
 			{
-				echo <<<EOD
-
-
-*******************************************************************************
-* WARNING!                                                                    *
-* The current configuration has been created with a newer version of          *
-* $product_name than this one! This can lead to serious misbehavior and even     *
-* security holes! You are urged to either upgrade to a newer version of       *
-* $product_name or revert to the default configuration immediately!              *
-*******************************************************************************
-
-
-EOD;
+				getBanner($msg_cfg_mismatch, 'WARNING!', $product_name);
 			}
 		}
 
