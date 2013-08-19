@@ -36,8 +36,10 @@
 	/* parse the configuration and include all functions used below */
 	require_once("config.inc");
 	require_once("functions.inc");
+	require_once('console.msg.inc');
 
 	$fp = fopen('php://stdin', 'r');
+	$out = fopen('php://stdout', 'w');
 
 	$disks = storage_disk_get_devices();
 	$optdrvs = storage_cdrom_get_devices();
@@ -50,42 +52,30 @@
 		}
 	}
 	$disks = array_unique($stack);
-	echo <<<EOD
 
-Valid disks are:
+	echo "\n", 'Valid disks are:', "\n\n";
 
-
-EOD;
-
-	foreach ($disks as $disk) {
-		echo (exec("dmesg | grep $disk | grep -E 'sector|block'")) . "\n";
+	foreach ($disks as $disk)
+	{
+		echo (exec("dmesg | grep $disk | grep -E 'sector|block'")), "\n";
 	}
 
-	do {
+	do
+	{
 		echo "\nEnter the device name you wish to install onto: ";
 		$target_disk = chop(fgets($fp));
-		if ($target_disk === "") {
+		if ($target_disk === "")
+		{
 			exit(0);
 		}
-	} while (!in_array($target_disk, $disks));
+	}
+	while (!in_array($target_disk, $disks));
 
+	getBanner($msg_dev_overwrite, 'WARNING!', $target_disk);
+	fwrite($out, 'Do you want to proceed? (y/n)');
 
-	echo <<<EOD
-
-*******************************************************************************
-* WARNING!                                                                    *
-* The PBX is about to be installed onto the $target_disk device.              *
-* - everything on this device will be erased!                                 *
-* - this cannot be undone!                                                    *
-*******************************************************************************
-
-The PBX will reboot after installation.
-
-Do you want to proceed? (y/n)
-EOD;
-
-	if (strcasecmp(chop(fgets($fp)), "y") == 0) {
-
+	if (strcasecmp(chop(fgets($fp)), "y") == 0)
+	{
 		echo "Installing...";
 		mwexec("/bin/gunzip -c /offload/firmware.img.gz | dd of=/dev/{$target_disk} bs=512");
 		echo "done\n";
