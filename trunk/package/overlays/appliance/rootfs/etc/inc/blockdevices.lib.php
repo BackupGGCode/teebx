@@ -24,12 +24,10 @@ All rights reserved.
 
 define('BDEV_ROOT_LABEL', 'system');
 define('BDEV_ROOT_MOUNTP', '/cf');
-// 32 MB spare on the system disk reserved for updates
+// spare on the system disk reserved for updates
 define('BDEV_SYS_SPARESIZE', 5);
 // minimum size for additional storage
 define('BDEV_MIN_SIZE', 32);
-// prefix used to name disk uuid xml element because naming rules forbid to start with a number
-define('BDEV_CFG_UUIDPREFIX', 'uuid_');
 define('CACHE_FILE', '/tmp/blkdevca.che');
 
 if (file_exists('/etc/inc/initsvc.storage.php'))
@@ -49,7 +47,7 @@ function closestDivisibleBy($in, $divider)
 	return $closest;
 }
 
-function getFsIdentifierType($fsIdent)
+function getFsIdentifier($fsIdent)
 {
 	$deviceName = "/dev/$fsIdent";
 	if (file_exists($deviceName))
@@ -57,27 +55,54 @@ function getFsIdentifierType($fsIdent)
 		$deviceType = filetype($deviceName);
 		if ($deviceType === 'block')
 		{
-			return $deviceType;
+			return $deviceName;
 		}
 	}
 
 	// uuid (or fat volume serial number)
 	if (preg_match('/^([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[A-F0-9]{4}-[A-F0-9]{4})/', $fsIdent))
 	{
-		return 'UUID';
+		return "UUID=$fsIdent";
 	}
 
 	// volume label
 	// labels created in system should not accept dashes and spaces
 	if (preg_match('/^([_a-z0-9]{1,11})$/i', $fsIdent))
 	{
-		return 'LABEL';
+		return "LABEL=$fsIdent";
 	}
+
+	return false;
+}
+
+function killCacheFile()
+{
+	if (file_exists(CACHE_FILE))
+	{
+		unlink(CACHE_FILE);
+	}
+}
+
+function waitDeviceFs($fsIdent, $waitCount = 5)
+{
+	for ($i = 0; $i < $waitCount; $i++)
+	{
+		exec("blkid -c /dev/null -w /dev/null|grep $fsIdent", $out, $retval);
+		if (empty($out))
+		{
+			sleep(1);
+			continue;
+		}
+		return $i;
+	}
+	return false;
 }
 
 function getBlockDevices($refresh = false, $revealMTD = false)
 {
-	// dmesg | grep -i 'attached scsi\|usb disconnect'
+	// TODO:
+	// check new plugged in device and refresh cache
+	//   dmesg | grep -i 'attached scsi\|usb disconnect'
 	if (!$refresh)
 	{
 		if (file_exists(CACHE_FILE))
@@ -102,12 +127,51 @@ function getBlockDevices($refresh = false, $revealMTD = false)
 				//
 			}
 			$device = $regs[1];
+			$devName = basename($regs[1]);
 			$result[$device]['size'] = (float) $regs[2];
+			$result[$device]['sizelabel'] = round($result[$device]['size']/1000000). ' MB';
 			// get total sectors on next array element
 			if (preg_match('/^([\d]+)\sheads,\s([\d]+)\s[a-z\/]+,\s([\d]+)\s[a-z]+,\s[a-z]+\s([\d]+)\ssectors/', $out[$idx+1], $regs))
 			{
 				$result[$device]['sectors'] = (float) $regs[4];
 			}
+			// check if the current device is removable
+			$result[$device]['removable'] = false;
+			if (file_exists("/sys/block/$devName/removable"))
+			{
+				$flines = file_get_contents("/sys/block/$devName/removable");
+				if ($flines !== false)
+				{
+					$flines = trim($flines);
+					if ($flines == 1)
+					{
+						$result[$device]['removable'] = true;
+					}
+				}
+				unset($flines);
+			}
+			// get some info about device name/vendor
+			$result[$device]['info'] = '';
+			if (file_exists("/sys/block/$devName/device/vendor"))
+			{
+				$flines = file_get_contents("/sys/block/$devName/device/vendor");
+				if ($flines !== false)
+				{
+					$result[$device]['info'] = trim($flines);
+				}
+				unset($flines);
+			}
+			if (file_exists("/sys/block/$devName/device/model"))
+			{
+				$flines = file_get_contents("/sys/block/$devName/device/model");
+				if ($flines !== false)
+				{
+					$flines = trim($flines);
+					$result[$device]['info'] .= " $flines";
+				}
+				unset($flines);
+			}
+			$result[$device]['info'] = trim($result[$device]['info']);
 		}
 	}
 	//
@@ -313,30 +377,91 @@ function formatPartitionDos($devPart, $label, $fatSize = 32)
 	return $retval;
 }
 
-function mountPart($devFs, $mountPoint, $mountParams = '', $devFsIdentType = null)
+function mountPart($devFs, $mountPoint, $mountParams = '', $guessFsIdentifier = true)
 {
-	// $devFsType = NULL or [block, UUID, LABEL]
-	if (is_null($devFsIdentType))
+	openlog("Appliance filesystem mount, $devFs to $mountPoint", LOG_INFO, LOG_LOCAL0);
+
+	if ($guessFsIdentifier)
 	{
-		$devFsIdentType = getFsIdentifierType($devFs);
-	}
-	$devFs = "/dev/{$devFs}";
-	if ($devFsIdentType != 'block')
-	{
-		$devFs = "{$devFsIdentType}={$devFs}";
+		$devFs = getFsIdentifier($devFs);
+		if ($devFs === false)
+		{
+			syslog(LOG_ERR, "Func. mountPart(): unable to guess a filesystem for $devFs");
+			return false;
+		}
 	}
 
-	openlog("Appliance filesystem mount, $devFs to $mountPoint", LOG_INFO, LOG_LOCAL0);
-	exec("mount $devFs $mountPoint $mountParams", $out, $retval);
-	if ($retval !== 0)
+	exec("mount $mountParams $devFs $mountPoint", $out, $retval);
+	if ($retval != 0)
 	{
 		syslog(LOG_ERR, 'mount error: ' . implode(' ',$out));
+		return false;
 	}
 	closelog();
+	$retval = $devFs;
 	return $retval;
 }
 
-function mountStorageDevices()
+function mountStorageDevices(&$conf)
+{
+	$log = array('cfgchanged' => 0, 'fsappend' => array());
+	if (!is_array($conf['storage']['fsmounts']))
+	{
+		return $log;
+	}
+	foreach (array_keys($conf['storage']['fsmounts']) as $devMount)
+	{
+		if (!is_array($conf['storage']['fsmounts'][$devMount]))
+		{
+			// empty set, ignore it
+			continue;
+		}
+		if ($conf['storage']['fsmounts'][$devMount]['active'] != 1)
+		{
+			// disabled entry, ignore it
+			continue;
+		}
+		$fullMntPath = "{$conf['storage']['mountroot']}/{$devMount}";
+		// make the fs mount point
+		exec("mkdir -p $fullMntPath", $out, $retval);
+		if ($retval != 0)
+		{
+			// should never happen... but disable entry because will not mount
+			$conf['storage']['fsmounts'][$devMount]['active'] = -1;
+			$log['cfgchanged'] = 1;
+			continue;
+		}
+		// check that the device to be mounted is ready
+		$devFsId = $conf['storage']['fsmounts'][$devMount]['uuid'];
+		$ready = waitDeviceFs($devFsId);
+		if ($ready === false)
+		{
+			// device no longer exists? Anyway mark it as disabled
+			$conf['storage']['fsmounts'][$devMount]['active'] = -2;
+			$log['cfgchanged'] = 1;
+			continue;
+		}
+		$fsType = $conf['storage']['fsmounts'][$devMount]['filesystem'];
+		$fsMntOpts = "-w -t $fsType -o noatime";
+		// mount the filesystem
+		$fstabFsId = mountPart($devFsId, $fullMntPath, $fsMntOpts);
+		if ($fstabFsId === false)
+		{
+			$conf['storage']['fsmounts'][$devMount]['active'] = -3;
+			$log['cfgchanged'] = 1;
+			continue;
+		}
+		// update fstab buffer
+		$log['fsappend'][] = "$fstabFsId $fullMntPath $fsType rw 0 0";
+	}
+	return $log;
+}
+
+function setupFstab()
+{
+}
+
+function setupStorageDevices(&$conf)
 {
 }
 
