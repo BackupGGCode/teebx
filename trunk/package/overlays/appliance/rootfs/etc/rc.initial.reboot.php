@@ -3,7 +3,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2012 Giovanni Vallesi.
+	Copyright(C) 2011 - 2013 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -34,61 +34,16 @@
 */
 
 	/* parse the configuration and include all functions used below */
-	require_once("config.inc");
-	require_once("functions.inc");
-	require_once('console.msg.inc');
+	require_once('config.inc');
+	require_once('functions.inc');
 
-	$fp = fopen('php://stdin', 'r');
+	$in = fopen('php://stdin', 'r');
 	$out = fopen('php://stdout', 'w');
 
-	$disks = storage_disk_get_devices();
-	$optdrvs = storage_cdrom_get_devices();
-
-	$stack = array();
-	foreach ($disks as $disk) {
-		if (!in_array($disk, $optdrvs)) {
-			$disk = substr($disk, 0,3);
-			array_push($stack, $disk);
-		}
-	}
-	$disks = array_unique($stack);
-
-	echo "\n", 'Valid disks are:', "\n\n";
-
-	foreach ($disks as $disk)
+	fwrite($out, "\nThe system will reboot, this may take a minute.\n  Do you want to proceed? (y/n)");
+	if (strcasecmp(chop(fgets($in)), "y") == 0)
 	{
-		echo (exec("dmesg | grep $disk | grep -E 'sector|block'")), "\n";
-	}
-
-	do
-	{
-		echo "\nEnter the device name you wish to install onto: ";
-		$target_disk = chop(fgets($fp));
-		if ($target_disk === "")
-		{
-			exit(0);
-		}
-	}
-	while (!in_array($target_disk, $disks));
-
-	getBanner($msg_dev_overwrite, 'WARNING!', $target_disk);
-	fwrite($out, 'Do you want to proceed? (y/n)');
-
-	if (strcasecmp(chop(fgets($fp)), "y") == 0)
-	{
-		echo "Installing...";
-		mwexec("/bin/gunzip -c /offload/firmware.img.gz | dd of=/dev/{$target_disk} bs=512");
-		echo "done\n";
-
-		/* copy existing configuration */
-		echo "Copying configuration...";
-		@mkdir("/mnttmp");
-		mwexec("/bin/mount -w -o noatime /dev/{$target_disk}1 /mnttmp");
-		mwexec("cp {$g['conf_path']}/config.xml /mnttmp/conf/");
-		mwexec("/bin/umount /mnttmp");
-		echo "done\n";
-
+		fwrite($out, 'The system is rebooting now. Please wait.');
 		system_reboot_sync();
 	}
-
 ?>

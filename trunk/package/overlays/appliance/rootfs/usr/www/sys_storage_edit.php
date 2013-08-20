@@ -241,7 +241,7 @@ jQuery('#disk_label').keyup(function()
 {
 	jQuery('span.cli-error').remove();
 	var inputVal = jQuery(this).val();
-	var characterReg = /^\s*[a-zA-Z0-9\-\_]+\s*$/;
+	var characterReg = /^\s*[a-zA-Z0-9\_]+\s*$/;
 	if(!characterReg.test(inputVal))
 	{
 		if (inputVal.length > 0)

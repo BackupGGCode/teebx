@@ -1,4 +1,4 @@
 ::sysinit:/sbin/syslogd -S -C512
-::sysinit:/etc/rc.bootup
+::sysinit:/etc/rc.bootup.php
 ttyS0::respawn:/etc/rc.initial
 
