@@ -352,7 +352,7 @@ function system_reboot()
 
 	system_reboot_cleanup();
 
-	mwexec("nohup /etc/rc.reboot > /dev/null 2>&1 &");
+	mwexec("nohup /etc/rc.reboot.php > /dev/null 2>&1 &");
 }
 
 /**
@@ -364,7 +364,7 @@ function system_reboot_sync()
 
 	system_reboot_cleanup();
 
-	mwexec("/etc/rc.reboot > /dev/null 2>&1");
+	mwexec("/etc/rc.reboot.php > /dev/null 2>&1");
 }
 
 /**

@@ -27,7 +27,7 @@ if [ -r /var/etc/disableconsole ]; then
 else
 	# endless loop
 	while : ; do
-		/etc/rc.banner
+		/etc/rc.banner.php
 
 		# display a cheap menu
 		echo
@@ -53,22 +53,22 @@ else
 		# see what the user has chosen
 		case ${opmode} in
 			1)
-				/etc/rc.initial.setports
+				/etc/rc.initial.setports.php
 				;;
 			2)
-				/etc/rc.initial.setlanip
+				/etc/rc.initial.setlanip.php
 				;;
 			3)
-				/etc/rc.initial.password
+				/etc/rc.initial.password.php
 				;;
 			4)
-				/etc/rc.initial.defaults
+				/etc/rc.initial.defaults.php
 				;;
 			5)
-				/etc/rc.initial.reboot
+				/etc/rc.initial.reboot.php
 				;;
 			6)
-				/etc/rc.initial.ping
+				/etc/rc.initial.ping.php
 				;;
 			7)
 				/usr/sbin/asterisk -r
@@ -78,7 +78,7 @@ else
 				;;
 			9)
 				if [ -f /offload/livecd ]; then
-					/etc/rc.initial.install
+					/etc/rc.initial.install.php
 				fi
 				;;
 		esac

@@ -3,9 +3,9 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2012 Giovanni Vallesi.
+	Copyright(C) 2011 - 2013 Giovanni Vallesi.
 	All rights reserved.
-	
+
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
@@ -34,16 +34,60 @@
 */
 
 	/* parse the configuration and include all functions used below */
-	require_once('config.inc');
-	require_once('functions.inc');
+	require_once("config.inc");
+	require_once("functions.inc");
+	require_once('console.msg.inc');
+	require_once('blockdevices.lib.php');
 
-	$in = fopen('php://stdin', 'r');
-	$out = fopen('php://stdout', 'w');
+	$rin = fopen('php://stdin', 'r');
+	$rout = fopen('php://stdout', 'w');
 
-	fwrite($out, "\nThe system will reboot, this may take a minute.\n  Do you want to proceed? (y/n)");
-	if (strcasecmp(chop(fgets($in)), "y") == 0)
+	$disks = getBlockDevices();
+	echo "\n", 'Valid disks are:', "\n\n";
+	foreach (array_keys($disks) as $descriptor)
 	{
-		fwrite($out, 'The system is rebooting now. Please wait.');
+		// skip removable devices
+		if ($disks[$descriptor]['removable'])
+			continue;
+		// show anything else
+		echo ' ',
+			basename($descriptor),
+			' -> ',
+			$disks[$descriptor]['info'],
+			' (', $disks[$descriptor]['sizelabel'], ')',
+			PHP_EOL;
+		//
+	}
+
+	do
+	{
+		echo "\nEnter the device name you wish to install onto: ";
+		$target_disk = chop(fgets($rin));
+		if ($target_disk === '')
+		{
+			exit(0);
+		}
+	}
+	while (!array_key_exists("/dev/$target_disk", $disks));
+
+	getBanner($msg_dev_overwrite, 'WARNING!', $target_disk);
+	fwrite($rout, 'Do you want to proceed? (y/n)');
+
+	if (strcasecmp(chop(fgets($rin)), "y") == 0)
+	{
+		echo "Installing...";
+		mwexec("/bin/gunzip -c /offload/firmware.img.gz | dd of=/dev/{$target_disk} bs=512");
+		echo "done\n";
+
+		/* copy existing configuration */
+		echo "Copying configuration...";
+		@mkdir("/mnttmp");
+		mwexec("/bin/mount -w -o noatime /dev/{$target_disk}1 /mnttmp");
+		mwexec("cp {$g['conf_path']}/config.xml /mnttmp/conf/");
+		mwexec("/bin/umount /mnttmp");
+		echo "done\n";
+
 		system_reboot_sync();
 	}
+
 ?>
