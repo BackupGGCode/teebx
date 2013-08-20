@@ -60,7 +60,8 @@ $pgtitle = array($product_name . ' ' . gettext('web UI'));
 $statusMsg = null;
 if (pbx_exec("core show version") == 1)
 {
-	$statusMsg = display_info_box(gettext("Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX."), "keep");
+	// TODO: display this info somewere...
+	$statusMsg = gettext("Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX.");
 }
 
 // init a table object
