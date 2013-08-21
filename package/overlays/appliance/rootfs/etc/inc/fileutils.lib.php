@@ -42,7 +42,7 @@ function cfgFileWrite($fileName, &$fileLines, $keySep = ' ', $chgMode = '0600')
 	}
 	else
 	{
-		fwrite($fileLines);
+		fwrite($fHandle, $fileLines);
 	}
 	//
 	fclose($fHandle);
