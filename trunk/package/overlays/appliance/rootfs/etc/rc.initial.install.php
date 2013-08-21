@@ -61,7 +61,7 @@
 
 	do
 	{
-		echo "\nEnter the device name you wish to install onto: ";
+		fwrite($rout, "\nEnter the device name you wish to install onto: ");
 		$target_disk = chop(fgets($rin));
 		if ($target_disk === '')
 		{
