@@ -405,49 +405,49 @@ function mountPart($devFs, $mountPoint, $mountParams = '', $guessFsIdentifier = 
 function mountStorageDevices(&$conf)
 {
 	$log = array('cfgchanged' => 0, 'fsappend' => array());
-	if (!is_array($conf['storage']['fsmounts']))
+	if (!is_array($conf['system']['storage']['fsmounts']))
 	{
 		return $log;
 	}
-	foreach (array_keys($conf['storage']['fsmounts']) as $devMount)
+	foreach (array_keys($conf['system']['storage']['fsmounts']) as $devMount)
 	{
-		if (!is_array($conf['storage']['fsmounts'][$devMount]))
+		if (!is_array($conf['system']['storage']['fsmounts'][$devMount]))
 		{
 			// empty set, ignore it
 			continue;
 		}
-		if ($conf['storage']['fsmounts'][$devMount]['active'] != 1)
+		if ($conf['system']['storage']['fsmounts'][$devMount]['active'] != 1)
 		{
 			// disabled entry, ignore it
 			continue;
 		}
-		$fullMntPath = "{$conf['storage']['mountroot']}/{$devMount}";
+		$fullMntPath = "{$conf['system']['storage']['mountroot']}/{$devMount}";
 		// make the fs mount point
 		exec("mkdir -p $fullMntPath", $out, $retval);
 		if ($retval != 0)
 		{
 			// should never happen... but disable entry because will not mount
-			$conf['storage']['fsmounts'][$devMount]['active'] = -1;
+			$conf['system']['storage']['fsmounts'][$devMount]['active'] = -1;
 			$log['cfgchanged'] = 1;
 			continue;
 		}
 		// check that the device to be mounted is ready
-		$devFsId = $conf['storage']['fsmounts'][$devMount]['uuid'];
+		$devFsId = $conf['system']['storage']['fsmounts'][$devMount]['uuid'];
 		$ready = waitDeviceFs($devFsId);
 		if ($ready === false)
 		{
 			// device no longer exists? Anyway mark it as disabled
-			$conf['storage']['fsmounts'][$devMount]['active'] = -2;
+			$conf['system']['storage']['fsmounts'][$devMount]['active'] = -2;
 			$log['cfgchanged'] = 1;
 			continue;
 		}
-		$fsType = $conf['storage']['fsmounts'][$devMount]['filesystem'];
+		$fsType = $conf['system']['storage']['fsmounts'][$devMount]['filesystem'];
 		$fsMntOpts = "-w -t $fsType -o noatime";
 		// mount the filesystem
 		$fstabFsId = mountPart($devFsId, $fullMntPath, $fsMntOpts);
 		if ($fstabFsId === false)
 		{
-			$conf['storage']['fsmounts'][$devMount]['active'] = -3;
+			$conf['system']['storage']['fsmounts'][$devMount]['active'] = -3;
 			$log['cfgchanged'] = 1;
 			continue;
 		}
