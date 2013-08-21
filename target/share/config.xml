@@ -50,12 +50,5 @@
 			<gateway>192.168.1.1</gateway>
 		</lan>
 	</interfaces>
-	<conferencing>
-		<room>
-			<number>2663</number>
-			<name>Default Conference</name>
-			<uniqid>CONFERENCE-ROOM-914902610465bd5b50d0c6</uniqid>
-		</room>
-	</conferencing>
 	<dialplan/>
 </teebx>
