@@ -631,6 +631,7 @@ class quickForm
 	 * @param string $id
 	 * @param string $type
 	 * @param string $attributes
+	 * @return string
 	 */
 	public function setField($id, $type, $attributes=null, $breakAfter=false, $def=null)
 	{

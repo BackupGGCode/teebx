@@ -46,6 +46,9 @@ if (!isset($g['booting']))
 $livecd = false;
 $g['platform'] = "unknown";
 $product_name = "TeeBX";
+$cfgdevice = false;
+$disks = array();
+$disk = '';
 
 /* read platform */
 if (file_exists("{$g['etc_path']}/platform"))
@@ -61,7 +64,6 @@ if (file_exists("{$g['etc_path']}/brand.product"))
 if ($g['booting'])
 {
 	/* find the device where config.xml resides and write out an fstab */
-	unset($cfgdevice);
 
 	/* check if there's already an fstab (NFS booting?) */
 	if (!file_exists("{$g['etc_path']}/fstab"))
@@ -83,8 +85,6 @@ if ($g['booting'])
 			}
 			while ($attempts--)
 			{
-				unset($disks);
-				unset($cfgdevice);
 				if ($machine == 'ARM')
 				{
 					// most arm boards, else if needed in the future will check the $g['platform'] variable
