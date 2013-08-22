@@ -379,7 +379,7 @@ function formatPartitionDos($devPart, $label, $fatSize = 32)
 
 function mountPart($devFs, $mountPoint, $mountParams = '', $guessFsIdentifier = true)
 {
-	openlog("Appliance filesystem mount, $devFs to $mountPoint", LOG_INFO, LOG_LOCAL0);
+	openlog("Appliance filesystem mount, $devFs to $mountPoint", LOG_PERROR, LOG_LOCAL0);
 
 	if ($guessFsIdentifier)
 	{

@@ -32,9 +32,11 @@
 	POSSIBILITY OF SUCH DAMAGE.
 */
 
-function msgToSyslog($msg, $tag = 'TeeBX')
+function msgToSyslog($msg, $pri = LOG_INFO, $tag = 'Appliance')
 {
-	exec("logger -t $tag '$msg'");
+	openlog($tag, LOG_PERROR, LOG_LOCAL0);
+	syslog($pri, $msg);
+	closelog();
 }
 /**
 * Kills a process by pid file
