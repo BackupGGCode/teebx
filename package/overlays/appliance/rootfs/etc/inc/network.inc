@@ -93,7 +93,7 @@ function network_lan_configure($linkWaitCount = 20)
 		mwexec('/sbin/ifconfig ' . $lanIf . ' up');
 		// ask the linux kernel that eth port link is really up,
 		// else wait then retry some times
-		for ($i = 0; $i < $linkWaitCount; $i++)
+		for ($i = 1; $i <= $linkWaitCount; $i++)
 		{
 			if (netGetIfLinkState($lanIf))
 			{
@@ -107,8 +107,7 @@ function network_lan_configure($linkWaitCount = 20)
 					' -h ' . escapeshellarg("{$syscfg['hostname']}.{$syscfg['domain']}"));
 				break;
 			}
-			$msg = "Waiting for link up on $lanIf: try " . $i + 1;
-			msgToSyslog($msg);
+			msgToSyslog("Waiting for link up on $lanIf: try #$i", LOG_NOTICE);
 			usleep(150000);
 		}
 	}
