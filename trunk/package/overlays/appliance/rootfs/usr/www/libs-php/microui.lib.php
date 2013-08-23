@@ -100,10 +100,16 @@ function showSaveWarning(&$msg, $restartMsg = false)
 
 function getAnalogBar($value, $label = null)
 {
+	if (is_array($value))
+	{
+		$value = round(($value['used'] * 100) / $value['total'], 0);
+	}
+
 	if (is_null($label))
 	{
 		$label = $value;
 	}
+
 	$barHtml = '<div id="analog_meter"><div style="width: %s%%;"><p>%s%%</p></div></div>';
 	return sprintf($barHtml, $value, $label);
 }

@@ -33,55 +33,103 @@ $_SESSION['diskedit']['token'] = uniqid(md5(microtime()), true);
 
 $start = microtime_float();
 
-require('guiconfig.inc');
-require('blockdevices.lib.php');
-require('libs-php/htmltable.class.php');
+require_once('guiconfig.inc');
+require_once('util.inc');
+require_once('blockdevices.lib.php');
+require_once('libs-php/htmltable.class.php');
 // define some constants referenced in fbegin.inc
 define('INCLUDE_TBLSTYLE', true);
 // page title
 $pgtitle = array(gettext('System'), gettext('Storage'));
 // actual configuration reference
-$cfgPtr = &$config['system']['storage']['disk'];
+$cfgPtr = &$config['system']['storage'];
 // retrieve informations about system block devices
 $disksInfo = getBlockDevices();
 getDiskUsage($disksInfo);
 $_SESSION['diskedit']['info'] = $disksInfo;
+//
 // init a table object
-$tbl = new htmlTable('id=table01|class=report');
+$tblStorage = new htmlTable('id=table01|class=report');
 // fill the table caption
-$tbl->caption(gettext('Disk Report'));
+$tblStorage->caption(gettext('Configured storage'));
 // table section heading
-$tbl->thead();
-	$tbl->tr();
-		$tbl->th(gettext('Configured storage'), 'class=bodytitle|colspan=3');
-	$tbl->tr();
-		$tbl->th(gettext('Name'), 'class=colheader');
-		$tbl->th(gettext('Mount Point'), 'class=colheader');
-		$tbl->th(gettext('Services'), 'class=colheader');
+$tblStorage->thead();
+	$tblStorage->tr();
+		$tblStorage->th(gettext('Device name'), 'class=colheader');
+		$tblStorage->th(gettext('Label'), 'class=colheader');
+		$tblStorage->th(gettext('Mount Point'), 'class=colheader');
+		$tblStorage->th(gettext('Free'), 'class=colheader');
+		$tblStorage->th(gettext('Used'), 'class=colheader');
+		$tblStorage->th(gettext('Total'), 'class=colheader');
+		$tblStorage->th(gettext('Usage %'), 'class=colheader');
+		$tblStorage->th(gettext('Services'), 'class=colheader');
 	//
 // section body
-$tbl->tbody();
+$tblStorage->tbody();
 	// list configured devices
-	$tbl->tr();
-	if (!empty($cfgPtr))
+	$tblStorage->tr();
+	if (isset($cfgPtr['fsmounts']))
 	{
-
+		foreach (array_keys($cfgPtr['fsmounts']) as $mntNode)
+		{
+			if (!is_array($cfgPtr['fsmounts'][$mntNode]))
+				continue;
+			//
+			$fsInfo = getDevByUuid($disksInfo, $cfgPtr['fsmounts'][$mntNode]['uuid']);
+			$devText = '';
+			if ($fsInfo !== false)
+			{
+				$devText = basename("{$fsInfo[0]}{$fsInfo[1]}");
+			}
+			// device/partition
+			$tblStorage->td($devText);
+			// filesystem label
+			$tblStorage->td($cfgPtr['fsmounts'][$mntNode]['label']);
+			// mount point
+			$tblStorage->td("{$cfgPtr['mountroot']}/$mntNode");
+			// size/usage/...
+			$fsFree = '';
+			$fsUsed = '';
+			$fsTotal = '';
+			$usage = '';
+			if (isset($disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-total']))
+			{
+				$fsBlocksTotal = $disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-total'];
+				$fsBlocksUsed = $disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-used'];
+				// we have 1024 bytes blocks, not bytes.
+				$fsFree = formatBytes(($fsBlocksTotal * 1024) - ($fsBlocksUsed * 1024));
+				$fsUsed = formatBytes($fsBlocksUsed * 1024);
+				$fsTotal = formatBytes($fsBlocksTotal * 1024);
+				$usage = getAnalogBar(array('total' => $fsBlocksTotal, 'used' => $fsBlocksUsed));
+			}
+			$tblStorage->td($fsFree);
+			$tblStorage->td($fsUsed);
+			$tblStorage->td($fsTotal);
+			$tblStorage->td($usage);
+			// attached services
+			$tblStorage->td('');
+		}
 	}
 	else
 	{
-		$tbl->td(gettext('No additional storage configured.'), 'colspan=3');
+		$tblStorage->td(gettext('No additional storage configured.'), 'colspan=8');
 	}
-	// list available devices
+	//
+// report all system devices
+// init another table object
+$tblDiskRep = new htmlTable('id=table01|class=report');
+// fill the table caption
+$tblDiskRep->caption(gettext('Disk Report'));
 // table section heading
-$tbl->thead();
-	$tbl->tr();
-		$tbl->th(gettext('Free disks'), 'class=bodytitle|colspan=3');
-	$tbl->tr();
-		$tbl->th(gettext('Device name'), 'class=colheader');
-		$tbl->th(gettext('Size'), 'class=colheader|colspan=2');
+$tblDiskRep->thead();
+	$tblDiskRep->tr();
+		$tblDiskRep->th(gettext('Free disks'), 'class=bodytitle|colspan=3');
+	$tblDiskRep->tr();
+		$tblDiskRep->th(gettext('Device name'), 'class=colheader');
+		$tblDiskRep->th(gettext('Size'), 'class=colheader|colspan=2');
 	//
 // section body
-$tbl->tbody();
+$tblDiskRep->tbody();
 	$freeDisks = getFreeDisks($cfgPtr, $disksInfo);
 	if (!empty($freeDisks))
 	{
@@ -91,8 +139,8 @@ $tbl->tbody();
 			$actionCall = "doClickAction('new', '$key', '1', '1')";
 			$diskEditLabel = '<a class="doedit" href="#" OnClick="' . $actionCall .'" title="' . $diskEditTool . '">'
 				. '<img  src="img/add.png" alt="+">'
-				. round($disksInfo[$key]['size']/1000000)
-				.' MB</a>';
+				. $disksInfo[$key]['sizelabel']
+				.'</a>';
 			$noticeLabel = '';
 			if ($freeDisks[$key] > 0)
 			{
@@ -100,29 +148,29 @@ $tbl->tbody();
 				$noticeLabel = sprintf(" Notice: this disk already has %s partition(s)", $freeDisks[$key]);
 				$noticeLabel .= '&nbsp;<img  src="img/alert.png" alt="!">';
 			}
-			$tbl->tr();
-				$tbl->td($key);
-				$tbl->td($diskEditLabel . $noticeLabel, 'colspan=2');
+			$tblDiskRep->tr();
+				$tblDiskRep->td($key);
+				$tblDiskRep->td($diskEditLabel . $noticeLabel, 'colspan=2');
 			//
 		}
 	}
 	else
 	{
-		$tbl->tr();
-		$tbl->td(gettext('No free disk devices.'), 'colspan=3');
+		$tblDiskRep->tr();
+		$tblDiskRep->td(gettext('No free disk devices.'), 'colspan=3');
 	}
 	// show system disk summary
 // section heading
-$tbl->thead();
-	$tbl->tr();
-		$tbl->th(gettext('System disk status'), 'class=bodytitle|colspan=3');
-	$tbl->tr();
-		$tbl->th(gettext('Label'), 'class=colheader');
-		$tbl->th(gettext('Mount Point'), 'class=colheader');
-		$tbl->th(gettext('Size'), 'class=colheader');
+$tblDiskRep->thead();
+	$tblDiskRep->tr();
+		$tblDiskRep->th(gettext('System disk status'), 'class=bodytitle|colspan=3');
+	$tblDiskRep->tr();
+		$tblDiskRep->th(gettext('Label'), 'class=colheader');
+		$tblDiskRep->th(gettext('Mount Point'), 'class=colheader');
+		$tblDiskRep->th(gettext('Size'), 'class=colheader');
 	//
 // section body
-$tbl->tbody();
+$tblDiskRep->tbody();
 	foreach (array_keys($disksInfo) as $devKey)
 	{
 		if (isset($disksInfo[$devKey]['__SYS_DISK__']))
@@ -157,10 +205,10 @@ $tbl->tbody();
 					$labelText = $disksInfo[$devKey]['parts'][$partKey]['label'];
 				}
 				//
-				$tbl->tr();
-					$tbl->td($labelText);
-					$tbl->td($mountText);
-					$tbl->td($partSize . $partSizeUnits);
+				$tblDiskRep->tr();
+					$tblDiskRep->td($labelText);
+					$tblDiskRep->td($mountText);
+					$tblDiskRep->td($partSize . $partSizeUnits);
 				//
 			}
 			//
@@ -170,10 +218,10 @@ $tbl->tbody();
 				$spareSize = $devFree - BDEV_SYS_SPARESIZE;
 				if ($spareSize >= BDEV_MIN_SIZE)
 				{
-					$tbl->thead();
-					$tbl->tr();
-						$tbl->th(gettext('Device name'), 'class=colheader');
-						$tbl->th(gettext('Spare disk space'), 'class=colheader|colspan=2');
+					$tblDiskRep->thead();
+					$tblDiskRep->tr();
+						$tblDiskRep->th(gettext('Device name'), 'class=colheader');
+						$tblDiskRep->th(gettext('Spare disk space'), 'class=colheader|colspan=2');
 					//
 					$diskEditTool = gettext('Click here to configure this disk');
 					$actionCall = "doClickAction('use-spare', '$devKey', '3', '$newPartStart')";
@@ -184,10 +232,10 @@ $tbl->tbody();
 					// this is the system disk, print a notice to the user
 					$noticeLabel = ' ' . gettext('Notice: this is the system disk, avoid using it for additional storage.');
 					$noticeLabel .= '&nbsp;<img  src="img/alert.png" alt="!">';
-					$tbl->tbody();
-					$tbl->tr();
-						$tbl->td($devKey);
-						$tbl->td($diskEditLabel . $noticeLabel, 'colspan=2');
+					$tblDiskRep->tbody();
+					$tblDiskRep->tr();
+						$tblDiskRep->td($devKey);
+						$tblDiskRep->td($diskEditLabel . $noticeLabel, 'colspan=2');
 					//
 				}
 			}
@@ -197,12 +245,19 @@ $tbl->tbody();
 // render main layout
 require('fbegin.inc');
 // render the page content
-$tbl->renderTable();
+$tblStorage->renderTable();
+// echo '<br>';
+$tblDiskRep->renderTable();
 
 //debug
 $end = microtime_float();
 echo '<div><pre>';
 var_export($disksInfo);
+echo "\n\n";
+var_export($config['system']['storage']);
+echo "\n\n";
+var_export($fsInfo);
+//mountStorageDevices($config);
 echo '</pre></div>';
 
 echo 'Script Execution Time: ' . round($end - $start, 3) . ' seconds';

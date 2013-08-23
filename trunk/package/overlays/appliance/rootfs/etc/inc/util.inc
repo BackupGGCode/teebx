@@ -38,6 +38,19 @@ function msgToSyslog($msg, $pri = LOG_INFO, $tag = 'Appliance')
 	syslog($pri, $msg);
 	closelog();
 }
+
+function getMemoryStatus()
+{
+	exec('/usr/bin/free -b', $memory, $retval);
+	if ($retval == 1)
+		return false;
+	//
+	$memory = preg_split("/\s+/", $memory[1]);
+	// eglibc + busybox 1.20.2 reports:
+	// Array ( [0] => Mem: [1] => 513652 [2] => 40516 [3] => 473136 [4] => 0 [5] => 520 )
+	return array('total' => $memory[1], 'used' => $memory[1] - $memory[3], 'free' => $memory[3]);
+}
+
 /**
 * Kills a process by pid file
 */
@@ -123,6 +136,29 @@ function unlink_if_exists($fn)
 {
 	if (file_exists($fn))
 		unlink($fn);
+}
+
+function formatBytes($bytes, $precision = 1, $siUnits = false)
+{
+	// default to use IEC units
+	$uLabels = array('B', 'KiB', 'MiB', 'GiB', 'TiB');
+	$mod = 1024;
+	if ($siUnits)
+	{
+		$uLabels = array('B', 'KB', 'MB', 'GB', 'TB');
+		$mod = 1000;
+	}
+	// set format string
+	$fmt = "%.{$precision}f %s";
+
+	$bytes = max($bytes, 0);
+	$pow = 0;
+	if ($bytes > 0)
+	{
+		$pow = min(floor(log($bytes) / log($mod)), count($uLabels) - 1);
+	}
+	$bytes = $bytes/pow($mod, $pow);
+	return sprintf($fmt, $bytes, $uLabels[$pow]);
 }
 
 function format_bytes($bytes)
