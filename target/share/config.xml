@@ -16,7 +16,7 @@
 			<protocol>http</protocol>
 		</webgui>
 		<storage>
-			<mountroot>/opt/storage</mountroot>
+			<mountroot>/offload/opt/storage</mountroot>
 			<fsmounts>
 				<media_01>
 					<uuid>520B-C01C</uuid>

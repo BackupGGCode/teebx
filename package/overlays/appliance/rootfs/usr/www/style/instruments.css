@@ -8,8 +8,11 @@
 {
 	background-color: #CDDFEF;
 	border: 1px solid #FFFFFF;
-	padding: 3px;
-	border-radius: 9px; /* ((inner div height)/2) + padding */
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	padding-right : 3px;
+	border-radius: 5px; /* ((inner div height)/2) + padding */
 }
 
 div#analog_meter div
@@ -30,5 +33,5 @@ div#analog_meter p
 
 #analog_meter > div
 {
-	border-radius: 6px;
+	border-radius: 3px;
 }

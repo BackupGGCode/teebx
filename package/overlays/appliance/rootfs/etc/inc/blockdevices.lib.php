@@ -75,6 +75,28 @@ function getFsIdentifier($fsIdent)
 	return false;
 }
 
+function getDevByUuid(&$arrDiskInfo, $uuid)
+{
+	if (!is_array($arrDiskInfo))
+		return false;
+	//
+	foreach (array_keys($arrDiskInfo) as $device)
+	{
+		if (!isset($arrDiskInfo[$device]['parts']))
+			continue;
+		//
+		foreach (array_keys($arrDiskInfo[$device]['parts']) as $part)
+		{
+			if ($arrDiskInfo[$device]['parts'][$part]['uuid'] != $uuid)
+			{
+				continue;
+			}
+			return array($device, $part);
+		}
+	}
+	return false;
+}
+
 function killCacheFile()
 {
 	if (file_exists(CACHE_FILE))

@@ -47,7 +47,8 @@ if (is_file("/offload/livecd"))
 }
 
 require('guiconfig.inc');
-require('libs-php/htmltable.class.php');
+require_once('libs-php/htmltable.class.php');
+require_once('blockdevices.lib.php');
 // define some constants referenced in fbegin.inc
 define('INCLUDE_TBLSTYLE', true);
 
@@ -110,18 +111,81 @@ $tbl->tr();
 	$tbl->td(gettext('Uptime'), 'class=tblrowlabel');
 	$tbl->td($upTime);
 // memory usage
-exec('/usr/bin/free', $memory);
-$memory = preg_split("/\s+/", $memory[1]);
-// eglibc + busybox 1.20.2 reports:
-// Array ( [0] => Mem: [1] => 513652 [2] => 40516 [3] => 473136 [4] => 0 [5] => 520 )
-$totalMem = $memory[1];
-$freeMem = $memory[3];
-$usedMem = $totalMem - $freeMem;
-$memUsage = round(($usedMem * 100) / $totalMem, 0);
-$usageTitle = $usedMem . ' / ' . $totalMem . ' kBytes';
+$memStatus = getMemoryStatus();
+if ($memStatus !== false)
+{
+	$memReport = gettext('Free') . ': '. formatBytes($memStatus['free']) . ' ';
+	$memReport .= gettext('Used') . ': '. formatBytes($memStatus['used']) . ' ';
+	$memReport .= gettext('Total') . ': '. formatBytes($memStatus['total']);
+	$memReport .= getAnalogBar($memStatus);
+}
+else
+{
+	$memReport = gettext('Unable to get data.');
+}
+
 $tbl->tr();
 	$tbl->td(gettext('Memory Usage'), 'class=tblrowlabel');
-	$tbl->td(getAnalogBar($memUsage));
+	$tbl->td($memReport);
+	//
+unset($memStatus, $memReport);
+// storage status
+if (isset($config['system']['storage']['fsmounts']))
+{
+	if (is_array($config['system']['storage']['fsmounts']))
+	{
+		$disksInfo = getBlockDevices(true);
+		getDiskUsage($disksInfo);
+		$storageReport = '';
+
+		foreach (array_keys($config['system']['storage']['fsmounts']) as $mntNode)
+		{
+			if (!is_array($config['system']['storage']['fsmounts'][$mntNode]))
+				continue;
+			//
+			if ($config['system']['storage']['fsmounts'][$mntNode]['active'] != 1)
+			{
+				// disabled entry, only report active devices status
+				continue;
+			}
+			// TODO: also report alerts about disks autodisabled at boot time because of errors
+			//
+			$fsInfo = getDevByUuid($disksInfo, $config['system']['storage']['fsmounts'][$mntNode]['uuid']);
+			if ($fsInfo !== false)
+			{
+				if (isset($disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-total']))
+				{
+					$fsBlocksTotal = $disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-total'];
+					$fsBlocksUsed = $disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-used'];
+					//
+					$storageReport .= basename("{$fsInfo[0]}{$fsInfo[1]}");
+					$storageReport .= ' (' . $disksInfo[$fsInfo[0]]['info'] . ')<br>';
+					// units of 1024 bytes blocks
+					$storageReport .= gettext('Free') . ': ' . formatBytes(($fsBlocksTotal * 1024) - ($fsBlocksUsed * 1024)) . ' ';
+					$storageReport .= gettext('Used') . ': ' . formatBytes($fsBlocksUsed * 1024) . ' ';
+					$storageReport .= gettext('Total') . ': ' . formatBytes($fsBlocksTotal * 1024);
+					$storageReport .= getAnalogBar(array('total' => $fsBlocksTotal, 'used' => $fsBlocksUsed));
+				}
+				else
+				{
+					$storageReport .= gettext('Unable to get data.');
+				}
+			}
+			else
+			{
+				$storageReport .= gettext('Missing device.');
+			}
+		}
+		//
+		if (!empty($storageReport))
+		{
+		$tbl->tr();
+			$tbl->td(gettext('Configured storage'), 'class=tblrowlabel');
+			$tbl->td($storageReport);
+		}
+		unset($disksInfo, $storageReport, $fsInfo);
+	}
+}
 // system notes
 if (isset($config['system']['notes']))
 {
