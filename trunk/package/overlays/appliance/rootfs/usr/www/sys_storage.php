@@ -67,7 +67,6 @@ $tblStorage->thead();
 // section body
 $tblStorage->tbody();
 	// list configured devices
-	$tblStorage->tr();
 	if (isset($cfgPtr['fsmounts']))
 	{
 		foreach (array_keys($cfgPtr['fsmounts']) as $mntNode)
@@ -81,6 +80,7 @@ $tblStorage->tbody();
 			{
 				$devText = basename("{$fsInfo[0]}{$fsInfo[1]}");
 			}
+			$tblStorage->tr();
 			// device/partition
 			$tblStorage->td($devText);
 			// filesystem label
@@ -112,9 +112,10 @@ $tblStorage->tbody();
 	}
 	else
 	{
+		$tblStorage->tr();
 		$tblStorage->td(gettext('No additional storage configured.'), 'colspan=8');
 	}
-	//
+//
 // report all system devices
 // init another table object
 $tblDiskRep = new htmlTable('id=table01|class=report');
