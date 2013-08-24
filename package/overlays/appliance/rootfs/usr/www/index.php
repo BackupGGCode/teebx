@@ -150,7 +150,8 @@ if (isset($config['system']['storage']['fsmounts']))
 			}
 			// TODO: also report alerts about disks autodisabled at boot time because of errors
 			//
-			$fsInfo = getDevByUuid($disksInfo, $config['system']['storage']['fsmounts'][$mntNode]['uuid']);
+			$fsUuid = $config['system']['storage']['fsmounts'][$mntNode]['uuid'];
+			$fsInfo = getDevByUuid($disksInfo, $fsUuid);
 			if ($fsInfo !== false)
 			{
 				if (isset($disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-total']))
@@ -168,12 +169,12 @@ if (isset($config['system']['storage']['fsmounts']))
 				}
 				else
 				{
-					$storageReport .= gettext('Unable to get data.');
+					$storageReport .= gettext('Unable to get data.') . " ($fsUuid)<br>";
 				}
 			}
 			else
 			{
-				$storageReport .= gettext('Missing device.');
+				$storageReport .= gettext('Missing device.') . " ($fsUuid)<br>";
 			}
 		}
 		//
