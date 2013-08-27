@@ -25,9 +25,9 @@
 [C] base/system
 [F] CROSS
 
-[L] OpenSource
+[L] Restricted
 [S] Stable
-[V] f90b104
+[V] 3ab17ac
 [P] X -----5---9 600.000
 
-[D] 1526692880 firmware-bcmrpi-f90b104.tar.bz2 http://downloads.sourceforge.net/project/boneos/src-pkg-mirror/f/
+[D] 2617130811 firmware-bcmrpi-3ab17ac.tar.bz2 http://downloads.sourceforge.net/project/boneos/src-pkg-mirror/f/
