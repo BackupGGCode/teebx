@@ -96,6 +96,7 @@ choice SDECFG_ARM_BOARDDEF none \
 	none		"Board config not available, use defconfig" \
 	afeb9260	"afeb9260 Board" \
 	am200epdkit	"am200epdkit Board" \
+	am335x_evm	"am335x beaglebone Board" \
 	ams_delta	"ams_delta Board" \
 	assabet		"assabet Board" \
 	at91cap9adk	"at91cap9adk Board" \
@@ -210,6 +211,8 @@ choice SDECFG_ARM_BOARDDEF none \
 	usb-a9263	"usb-a9263 Board" \
 	versatile	"versatile Board" \
 	viper		"viper Board" \
+	wandboard_solo	"wandboard i.MX6 solo Board" \
+	wandboard_dl	"wandboard i.MX6 dual Board" \
 	wmt	"wm8950 Board" \
 	xm_x2xx		"xm_x2xx Board" \
 	yl9200		"yl9200 Board" \
