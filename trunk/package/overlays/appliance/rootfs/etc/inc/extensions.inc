@@ -59,7 +59,8 @@ function extensions_conf_generate($return = false)
 
 	$product_name = system_get_product_name();
 
-	$disk = storage_service_is_active("media");
+	//$disk = storage_service_is_active("media");
+	$disk = false;
 
 	$conf = <<<EOD
 

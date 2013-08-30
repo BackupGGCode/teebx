@@ -1136,16 +1136,16 @@ EOD;
 function asterisk_conf_generate($return = false)
 {
 	$datapath = "/offload/asterisk";
-	if ($disk = storage_service_is_active("media"))
+/*	if ($disk = storage_service_is_active("media"))
 	{
 		$datapath = $disk['mountpoint'] . "/teebx/media";
-	}
+	}*/
 
 	$dbpath = "/etc/asterisk/db";
-	if ($disk = storage_service_is_active("persistence"))
+/*	if ($disk = storage_service_is_active("persistence"))
 	{
 		$dbpath = $disk['mountpoint'] . "/teebx/persistence";
-	}
+	} */
 
 	$conf = <<<EOD
 [directories]
@@ -1178,7 +1178,7 @@ function musiconhold_conf_generate($return = false)
 {
 	global $config;
 	$mohpath = "/offload/asterisk/moh";
-	if ($disk = storage_service_is_active("media"))
+/*	if ($disk = storage_service_is_active("media"))
 	{
 		if (isset($config['media']['custom-moh']))
 		{
@@ -1189,7 +1189,7 @@ function musiconhold_conf_generate($return = false)
 			$mohpath = $disk['mountpoint'] . "/teebx/media/moh";
 		}
 	}
-
+*/
 	$conf = <<<EOD
 [default]
 mode=files
@@ -1204,10 +1204,10 @@ EOD;
 function logger_conf_generate($return = false)
 {
 	$astlogopt = '';
-	if ($disk = storage_service_is_active("astlogs"))
+/*	if ($disk = storage_service_is_active("astlogs"))
 	{
 		$astlogopt = 'full => verbose,notice,warning,error,debug';
-	}
+	} */
 	$conf = <<<EOD
 [general]
 queue_log = no

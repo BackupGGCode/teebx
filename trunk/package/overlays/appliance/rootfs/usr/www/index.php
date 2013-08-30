@@ -49,6 +49,7 @@ if (is_file("/offload/livecd"))
 require('guiconfig.inc');
 require_once('libs-php/htmltable.class.php');
 require_once('blockdevices.lib.php');
+
 // define some constants referenced in fbegin.inc
 define('INCLUDE_TBLSTYLE', true);
 

@@ -115,12 +115,12 @@ function packages_get_package($name)
 function packages_get_paths()
 {
 	$paths = array();
-
+/*
 	if (storage_syspart_get_state() == "active")
 	{
 		$paths['syspart'] = storage_get_media_path("syspart");
 	}
-
+  */
 	return $paths;
 }
 

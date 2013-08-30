@@ -44,6 +44,7 @@
 	require_once('functions.inc');
 	require_once('fileutils.lib.php');
 	require_once('smtpconf.lib.php');
+	require_once('initsvc.storage.php');
 
 	/* check whether config reset is desired (via hardware button on wrap and alix23x) */
 	echo " - Checking reset button... ";
@@ -67,8 +68,8 @@
 	system_do_shell_commands(1);
 	echo 'done', PHP_EOL;
 
-	echo ' - Configuring storage... ';
-	storage_configure();
+	echo ' - Configuring storage... ', PHP_EOL;
+	setupStorageDevices($config);
 	echo 'done', PHP_EOL;
 
 	/* execute package boot routines */

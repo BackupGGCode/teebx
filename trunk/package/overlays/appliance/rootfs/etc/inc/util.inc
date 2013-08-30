@@ -32,7 +32,7 @@
 	POSSIBILITY OF SUCH DAMAGE.
 */
 
-function msgToSyslog($msg, $pri = LOG_INFO, $tag = 'Appliance')
+function msgToSyslog($msg, $pri = LOG_INFO, $tag = 'appliance')
 {
 	openlog($tag, LOG_PERROR, LOG_LOCAL0);
 	syslog($pri, $msg);
