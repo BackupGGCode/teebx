@@ -30,11 +30,6 @@ define('BDEV_SYS_SPARESIZE', 5);
 define('BDEV_MIN_SIZE', 32);
 define('CACHE_FILE', '/tmp/blkdevca.che');
 
-if (file_exists('/etc/inc/initsvc.storage.php'))
-{
-	include('/etc/inc/initsvc.storage.php');
-}
-
 function closestDivisibleBy($in, $divider)
 {
 	// this function should never return a value smaller than $in
@@ -94,6 +89,16 @@ function getDevByUuid(&$arrDiskInfo, $uuid)
 			return array($device, $part);
 		}
 	}
+	return false;
+}
+
+function isMountpoint($mntNode)
+{
+	// we could also look at cat  /proc/self/mounts and return which device is mounted on?
+	exec("mountpoint $mntNode | grep 'is a mountpoint'", $out);
+	if (!empty($out))
+		return true;
+	//
 	return false;
 }
 
@@ -390,7 +395,7 @@ function newPartition($dev, $partStart, $partEnd, $fs = 'fat32', $newPartTable =
 	return $retval;
 }
 
-function formatPartitionDos($devPart, $label, $fatSize = 32)
+function formatPartitionFat($devPart, $label, $fatSize = 32)
 {
 	openlog('UI dos partition formatting', LOG_INFO, LOG_LOCAL0);
 	exec("mkdosfs -F $fatSize -n $label $devPart", $out, $retval);
@@ -405,8 +410,8 @@ function formatPartitionDos($devPart, $label, $fatSize = 32)
 
 function mountPart($devFs, $mountPoint, $mountParams = '', $guessFsIdentifier = true)
 {
-	openlog("Appliance filesystem mount, $devFs to $mountPoint", LOG_PERROR, LOG_LOCAL0);
-
+	openlog('appliance', LOG_PERROR, LOG_LOCAL0);
+	syslog(LOG_INFO, "filesystem mount, $devFs to $mountPoint");
 	if ($guessFsIdentifier)
 	{
 		$devFs = getFsIdentifier($devFs);
@@ -430,32 +435,40 @@ function mountPart($devFs, $mountPoint, $mountParams = '', $guessFsIdentifier = 
 
 function mountStorageDevices(&$conf)
 {
-	$log = array('cfgchanged' => 0, 'fsappend' => array());
+	$log = array('cfgchanged' => 0, 'newdevs' => 0, 'fsappend' => array());
 	if (!is_array($conf['system']['storage']['fsmounts']))
 	{
 		return $log;
 	}
+
+	$devDisabled = 0;
+	$devConfigured = count($conf['system']['storage']['fsmounts']);
 	foreach (array_keys($conf['system']['storage']['fsmounts']) as $devMount)
 	{
 		if (!is_array($conf['system']['storage']['fsmounts'][$devMount]))
 		{
 			// empty set, ignore it
+			$devDisabled += 1;
 			continue;
 		}
 		if ($conf['system']['storage']['fsmounts'][$devMount]['active'] != 1)
 		{
 			// disabled entry, ignore it
+			$devDisabled += 1;
 			continue;
 		}
 		$fullMntPath = "{$conf['system']['storage']['mountroot']}/{$devMount}";
 		// make the fs mount point
-		exec("mkdir -p $fullMntPath", $out, $retval);
-		if ($retval != 0)
+		if (!is_dir($fullMntPath))
 		{
-			// should never happen... but disable entry because will not mount
-			$conf['system']['storage']['fsmounts'][$devMount]['active'] = -1;
-			$log['cfgchanged'] = 1;
-			continue;
+			if (!mkdir($fullMntPath, 0766, true))
+			{
+				// should never happen... but disable entry because will not mount
+				$conf['system']['storage']['fsmounts'][$devMount]['active'] = -1;
+				$devDisabled += 1;
+				$log['cfgchanged'] = 1;
+				continue;
+			}
 		}
 		// check that the device to be mounted is ready
 		$devFsId = $conf['system']['storage']['fsmounts'][$devMount]['uuid'];
@@ -464,6 +477,7 @@ function mountStorageDevices(&$conf)
 		{
 			// device no longer exists? Anyway mark it as disabled
 			$conf['system']['storage']['fsmounts'][$devMount]['active'] = -2;
+			$devDisabled += 1;
 			$log['cfgchanged'] = 1;
 			continue;
 		}
@@ -474,21 +488,59 @@ function mountStorageDevices(&$conf)
 		if ($fstabFsId === false)
 		{
 			$conf['system']['storage']['fsmounts'][$devMount]['active'] = -3;
+			$devDisabled += 1;
 			$log['cfgchanged'] = 1;
 			continue;
 		}
 		// update fstab buffer
-		$log['fsappend'][] = "$fstabFsId $fullMntPath $fsType rw 0 0";
+		$log['fsappend'][] = "$fstabFsId $fullMntPath $fsType rw,noatime 0 0";
 	}
+	// write down a new fstab if needed
+	$log['newdevs'] = count($log['fsappend']);
+	msgToSyslog("storage check complete ($devConfigured devices configured, {$log['newdevs']} activated, $devDisabled disabled).");
+	if ($log['newdevs'] > 0)
+	{
+		setupFstab($log['fsappend'], 'from');
+		msgToSyslog('fstab update complete.');
+	}
+	unset($log['fsappend']);
 	return $log;
 }
 
-function setupFstab()
+function setupFstab($rows, $copyMode = false, $fstabCopy = '/etc/fstab.boot')
 {
-}
+	$lines = '';
+	$bytesCount = false;
+	if ($copyMode == 'from')
+	{
+		if (file_exists($fstabCopy))
+		{
+			$lines = file_get_contents($fstabCopy);
+		}
+	}
 
-function setupStorageDevices(&$conf)
-{
+	$fHandle = fopen('/etc/fstab', 'w');
+	if (is_array($rows))
+	{
+		foreach (array_keys($rows) as $row)
+		{
+			$lines .= $rows[$row] . PHP_EOL;
+		}
+	}
+	else
+	{
+		$lines .= $rows . PHP_EOL;
+	}
+
+	$bytesCount = fwrite($fHandle, $lines);
+	fflush($fHandle);
+	fclose($fHandle);
+	//exec('sync');
+
+	if ($copyMode == 'to')
+		copy('/etc/fstab', $fstabCopy);
+	//
+	return $bytesCount;
 }
 
 ?>

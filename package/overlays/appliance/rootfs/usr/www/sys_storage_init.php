@@ -22,8 +22,8 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 session_start();
-require('guiconfig.inc');
-require('blockdevices.lib.php');
+require_once('guiconfig.inc');
+require_once('blockdevices.lib.php');
 define('SYS_PARTCOUNT', 2); // <-- to be moved to larger visibility
 // to be returned as json
 $data = array();
@@ -169,7 +169,7 @@ if ($_POST['task'] === 'partinit')
 elseif ($_POST['task'] === 'partformat')
 {
 	$newLabel = $_POST['label'];
-	$data['retval'] = formatPartitionDos($newPart, $newLabel);
+	$data['retval'] = formatPartitionFat($newPart, $newLabel);
 }
 // exit
 exit(json_encode($data));
