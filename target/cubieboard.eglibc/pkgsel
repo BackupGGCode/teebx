@@ -47,10 +47,11 @@ X u-boot
 
 # Proprietary binary blobs ()
 
-# embedded db support both for generic data storage and php
+# embedded db support both for generic data storage, php, asterisk
 X sqlite
+
 # asterisk + deps
-X asterisk1dot8
+X asterisk11
 X spandsp
 X libtiff
 
@@ -98,6 +99,7 @@ X sox
 X dosfstools
 X e2fsprogs
 X parted
+X logsurfer
 
 # Network utility software
 X libpcap
@@ -105,7 +107,8 @@ X tcpdump
 X curl
 X nuttcp
 
-# file system overlay
+# application specific overlay
 X appliance
+# system overlay
 X tz-base
 X locale-base

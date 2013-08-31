@@ -44,11 +44,11 @@ X libxml2
 # bootloader
 X grub
 
-# embedded db support both for asterisk and php
+# embedded db support both for generic data storage, php, asterisk
 X sqlite
 
 # asterisk + deps
-X asterisk1dot8
+X asterisk11
 X spandsp
 X libtiff
 
@@ -96,6 +96,7 @@ X sox
 X dosfstools
 X e2fsprogs
 X parted
+X logsurfer
 
 # Network utility software
 X libpcap
