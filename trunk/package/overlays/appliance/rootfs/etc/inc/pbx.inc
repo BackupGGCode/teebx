@@ -2,9 +2,9 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2011 Giovanni Vallesi.
+	Copyright(C) 2010 - 2013 Giovanni Vallesi.
 
-	originally part of AskoziaPBX (http://askozia.com/pbx)
+	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
 	All rights reserved.
 
@@ -17,11 +17,6 @@
 	2. Redistributions in binary form must reproduce the above copyright
 	   notice, this list of conditions and the following disclaimer in the
 	   documentation and/or other materials provided with the distribution.
-
-	3. Redistribution in any form at a charge, that in whole or in part
-	   contains or is derived from the software, including but not limited to
-	   value added products, is prohibited without prior written consent of
-	   tecema.
 
 	THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
 	INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
@@ -36,13 +31,14 @@
 */
 
 /* include all configuration functions */
-require_once("functions.inc");
+require_once('functions.inc');
 
 /**
 * Generates all Asterisk configuration files and (re)starts the Asterisk process
 */
 function pbx_configure()
 {
+	require('astunmanagedf.def.inc');
 	global $config, $g;
 
 	if (!$g['booting'])
@@ -110,60 +106,9 @@ function pbx_configure()
 	if ($g['booting']) echo "done\n";
 
 	if ($g['booting']) echo "   |- generating manual configuration...";
-	$res |= adsi_conf_generate();
-	$res |= adtranvofr_conf_generate();
-	$res |= agents_conf_generate();
-	$res |= ais_conf_generate();
-	$res |= alarmreceiver_conf_generate();
-	$res |= alsa_conf_generate();
-	$res |= cdr_adaptive_odbc_conf_generate();
-	$res |= cdr_manager_conf_generate();
-	$res |= cdr_odbc_conf_generate();
-	$res |= cdr_pgsql_conf_generate();
-	$res |= cdr_sqlite3_custom_conf_generate();
-	$res |= cdr_tds_conf_generate();
-	$res |= cli_conf_generate();
-	$res |= cli_aliases_conf_generate();
-	$res |= cli_permissions_conf_generate();
-	$res |= codecs_conf_generate();
-	$res |= console_conf_generate();
-	$res |= dbsep_conf_generate();
-	$res |= dnsmgr_conf_generate();
-	$res |= dsp_conf_generate();
-	$res |= dundi_conf_generate();
-	$res |= extconfig_conf_generate();
-	$res |= extensions_minivm_conf_generate();
-	$res |= festival_conf_generate();
-	$res |= followme_conf_generate();
-	$res |= func_odbc_conf_generate();
-	$res |= gtalk_conf_generate();
-	$res |= h323_conf_generate();
-	$res |= http_conf_generate();
-	$res |= iaxprov_conf_generate();
-	$res |= jabber_conf_generate();
-	$res |= jingle_conf_generate();
-	$res |= mgcp_conf_generate();
-	$res |= minivm_conf_generate();
-	$res |= misdn_conf_generate();
-	$res |= muted_conf_generate();
-	$res |= chan_ooh323_conf_generate();
-	$res |= osp_conf_generate();
-	$res |= oss_conf_generate();
-	$res |= phone_conf_generate();
-	$res |= phoneprov_conf_generate();
-	$res |= queuerules_conf_generate();
-	$res |= queues_conf_generate();
-	$res |= res_config_sqlite_conf_generate();
-	$res |= res_ldap_conf_generate();
-	$res |= res_odbc_conf_generate();
-	$res |= res_pgsql_conf_generate();
-	$res |= res_snmp_conf_generate();
-	$res |= sla_conf_generate();
-	$res |= unistim_conf_generate();
-	$res |= usbradio_conf_generate();
-	$res |= users_conf_generate();
-	$res |= vpb_conf_generate();
+	$res |= unmanaged_cfgfiles_generate($unmanaged_ast_cfgfiles);
 	if ($g['booting']) echo "done\n";
+
 	if ($g['booting']) echo "   |- executing Asterisk...";
 	$res |= pbx_start();
 	if ($g['booting']) echo "done\n";
@@ -441,9 +386,8 @@ function pbx_get_extensions()
 		conferencing_get_extensions(),
 		external_get_extensions(),
 		callgroups_get_extensions(),
-		applications_get_extensions(),
-		fax_get_extensions()
-		);
+		applications_get_extensions()
+	);
 }
 
 function pbx_get_next_default_phone_extension()
@@ -752,67 +696,6 @@ function _a_sortphones($a, $b)
 	return strcmp($a['callerid'], $b['callerid']);
 }
 
-function pbx_delete_fax($uniqid)
-{
-	global $g, $uniqid_map;
-
-	$pieces = explode("-", $uniqid);
-	$fax_type = strtolower($pieces[0]);
-
-	if ($pieces[1] == "FAX" &&
-		in_array($fax_type, $g['fax_types']) &&
-			is_array($GLOBALS['config'][$fax_type]['fax'][$uniqid_map[$uniqid]]))
-	{
-		unset($GLOBALS['config'][$fax_type]['fax'][$uniqid_map[$uniqid]]);
-		dialplan_remove_defaultfax_reference_from_providers($uniqid);
-		return 0;
-	}
-	else
-	{
-		return "ERROR: invalid uniqid ($uniqid) provided in pbx_delete_fax!";
-	}
-}
-
-function pbx_disable_fax($uniqid)
-{
-	global $g, $uniqid_map;
-
-	$pieces = explode("-", $uniqid);
-	$fax_type = strtolower($pieces[0]);
-
-	if ($pieces[1] == "FAX" &&
-		in_array($fax_type, $g['fax_types']) &&
-			is_array($GLOBALS['config'][$fax_type]['fax'][$uniqid_map[$uniqid]]))
-	{
-		$GLOBALS['config'][$fax_type]['fax'][$uniqid_map[$uniqid]]['disabled'] = true;
-		return 0;
-	}
-	else
-	{
-		return "ERROR: invalid uniqid ($uniqid) provided in pbx_disable_fax!";
-	}
-}
-
-function pbx_enable_fax($uniqid)
-{
-	global $g, $uniqid_map;
-
-	$pieces = explode("-", $uniqid);
-	$fax_type = strtolower($pieces[0]);
-
-	if ($pieces[1] == "FAX" &&
-		in_array($fax_type, $g['fax_types']) &&
-			is_array($GLOBALS['config'][$fax_type]['fax'][$uniqid_map[$uniqid]]))
-	{
-		unset($GLOBALS['config'][$fax_type]['fax'][$uniqid_map[$uniqid]]['disabled']);
-		return 0;
-	}
-	else
-	{
-		return "ERROR: invalid uniqid ($uniqid) provided in pbx_enable_fax!";
-	}
-}
-
 /**
 * Merges all *get_dialpatterns() into a single array
 * XXX : should be reimplemented to have an optional "technology" parameter
@@ -1038,67 +921,15 @@ function pbx_uniqid_to_technology($uniqid)
 
 function modules_conf_generate($return = false)
 {
-	$conf = <<<EOD
-[modules]
-autoload=no
-;
-; this is the minimum set of modules to support the
-; functionality built into the TeeBX GUI
-;
-load => app_dial.so
-load => app_echo.so
-load => app_exec.so
-load => app_macro.so
-load => app_meetme.so
-load => app_milliwatt.so
-load => app_playback.so
-load => app_setcallerid.so
-load => app_stack.so
-load => app_system.so
-load => app_verbose.so
-load => app_voicemail.so
-load => app_wakeme.so
-load => app_while.so
-load => chan_dahdi.so
-load => chan_iax2.so
-load => chan_local.so
-load => chan_sip.so
-load => chan_skinny.so
-load => codec_a_mu.so
-load => codec_adpcm.so
-load => codec_alaw.so
-load => codec_dahdi.so
-load => codec_g722.so
-load => codec_gsm.so
-load => codec_ulaw.so
-load => format_gsm.so
-load => format_pcm.so
-load => format_sln.so
-load => format_wav.so
-load => format_wav_gsm.so
-load => func_callerid.so
-load => func_channel.so
-load => func_config.so
-load => func_cut.so
-load => func_db.so
-load => func_logic.so
-load => func_md5.so
-load => func_shell.so
-load => func_strings.so
-load => pbx_config.so
-load => pbx_loopback.so
-load => pbx_spool.so
-load => res_adsi.so
-load => res_agi.so
-load => res_crypto.so
-load => res_limit.so
-load => res_musiconhold.so
-load => res_smdi.so
-load => res_timing_timerfd.so
+	require('astbasemod.def.inc');
+	$conf = $heading . PHP_EOL;
 
-EOD;
+	foreach (array_keys($base_ast_modules) as $key)
+	{
+		$conf .= "load => {$base_ast_modules[$key]}" . PHP_EOL;
+	}
 
-	return ($return) ? $conf : util_file_write("/etc/asterisk/modules.conf", $conf);
+	return ($return) ? $conf : util_file_write('/etc/asterisk/modules.conf', $conf);
 }
 
 function phpagi_conf_generate($return = false)
@@ -1360,324 +1191,14 @@ EOD;
 	return ($return) ? $conf : util_file_write("/etc/asterisk/sip_notify.conf", $conf);
 }
 
-/* boilerplate functions */
-function adsi_conf_generate($return = false)
+function unmanaged_cfgfiles_generate(&$unmanagedFiles)
 {
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/adsi.conf", $conf);
-}
-function adtranvofr_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/adtranvofr.conf", $conf);
-}
-function agents_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/agents.conf", $conf);
-}
-function ais_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/ais.conf", $conf);
-}
-function alarmreceiver_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/alarmreceiver.conf", $conf);
-}
-function alsa_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/alsa.conf", $conf);
-}
-function cdr_adaptive_odbc_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cdr_adaptive_odbc.conf", $conf);
-}
-function cdr_manager_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cdr_manager.conf", $conf);
-}
-function cdr_odbc_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cdr_odbc.conf", $conf);
-}
-function cdr_pgsql_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cdr_pgsql.conf", $conf);
-}
-function cdr_sqlite3_custom_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cdr_sqlite3_custom.conf", $conf);
-}
-function cdr_tds_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cdr_tds.conf", $conf);
-}
-function chan_ooh323_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/chan_ooh323.conf", $conf);
-}
-function cli_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cli.conf", $conf);
-}
-function cli_aliases_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cli_aliases.conf", $conf);
-}
-function cli_permissions_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/cli_permissions.conf", $conf);
-}
-function codecs_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/codecs.conf", $conf);
-}
-function console_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/console.conf", $conf);
-}
-function dbsep_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/dbsep.conf", $conf);
-}
-function dnsmgr_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/dnsmgr.conf", $conf);
-}
-function dsp_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/dsp.conf", $conf);
-}
-function dundi_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/dundi.conf", $conf);
-}
-function extconfig_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/extconfig.conf", $conf);
-}
-function extensions_minivm_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/extensions_minivm.conf", $conf);
-}
-function festival_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/festival.conf", $conf);
-}
-function followme_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/followme.conf", $conf);
-}
-function func_odbc_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/func_odbc.conf", $conf);
-}
-function gtalk_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/gtalk.conf", $conf);
-}
-function h323_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/h323.conf", $conf);
-}
-function http_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/http.conf", $conf);
-}
-function iaxprov_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/iaxprov.conf", $conf);
-}
-function jabber_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/jabber.conf", $conf);
-}
-function jingle_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/jingle.conf", $conf);
-}
-function mgcp_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/mgcp.conf", $conf);
-}
-function minivm_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/minivm.conf", $conf);
-}
-function misdn_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/misdn.conf", $conf);
-}
-function muted_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/muted.conf", $conf);
-}
-function osp_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/osp.conf", $conf);
-}
-function oss_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/oss.conf", $conf);
-}
-function phone_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/phone.conf", $conf);
-}
-function phoneprov_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/phoneprov.conf", $conf);
-}
-function queuerules_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/queuerules.conf", $conf);
-}
-function queues_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/queues.conf", $conf);
-}
-function res_config_sqlite_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/res_config_sqlite.conf", $conf);
-}
-function res_ldap_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/res_ldap.conf", $conf);
-}
-function res_odbc_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/res_odbc.conf", $conf);
-}
-function res_pgsql_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/res_pgsql.conf", $conf);
-}
-function res_snmp_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/res_snmp.conf", $conf);
-}
-function sla_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/sla.conf", $conf);
-}
-function unistim_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/unistim.conf", $conf);
-}
-function usbradio_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/usbradio.conf", $conf);
-}
-function users_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/users.conf", $conf);
-}
-function vpb_conf_generate($return = false)
-{
-	$conf = "";
-
-	return ($return) ? $conf : util_file_write("/etc/asterisk/vpb.conf", $conf);
+	$retval = 0;
+	foreach (array_keys($unmanagedFiles) as $key)
+	{
+		$retval |= util_file_write($unmanagedFiles[$key], '');
+	}
+	return $retval;
 }
 
 ?>
