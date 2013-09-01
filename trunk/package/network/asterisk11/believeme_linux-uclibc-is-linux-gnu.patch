@@ -1,0 +1,22 @@
+--- asterisk-11.5.0/configure.ac.vanilla	2013-09-01 16:29:17.479034161 +0000
++++ asterisk-11.5.0/configure.ac	2013-09-01 16:33:57.211906798 +0000
+@@ -178,7 +178,7 @@
+      OSARCH=cygwin
+      PBX_WINARCH=1
+      ;;
+-     linux-gnueabi* |  linux-gnuspe)
++     linux-gnueabi* |  linux-gnuspe |  linux-uclibc)
+      OSARCH=linux-gnu
+      ;;
+      kfreebsd*-gnu)
+--- asterisk-11.5.0/configure.vanilla	2013-09-01 17:43:18.767964174 +0000
++++ asterisk-11.5.0/configure	2013-09-01 17:44:39.931062247 +0000
+@@ -4744,7 +4744,7 @@
+      OSARCH=cygwin
+      PBX_WINARCH=1
+      ;;
+-     linux-gnueabi* |  linux-gnuspe)
++     linux-gnueabi* |  linux-gnuspe |  linux-uclibc)
+      OSARCH=linux-gnu
+      ;;
+      kfreebsd*-gnu)
