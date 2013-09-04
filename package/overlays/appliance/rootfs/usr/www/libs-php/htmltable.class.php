@@ -22,12 +22,12 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-// w3c reference: http://www.w3.org/TR/html401/struct/tables.html#h-11.2.3
+// w3c reference: http://www.w3.org/TR/html401/struct/tables.html
 
 class htmlTable extends baseTag
 {
-	private $tblStack = array();
-	private $last = NULL;
+	protected $tblStack = array();
+	protected $last = null;
 
 	protected function appendElement($element)
 	{
@@ -50,7 +50,7 @@ class htmlTable extends baseTag
 		}
 	}
 
-	public function caption($text, $attributes = NULL)
+	public function caption($text, $attributes = null)
 	{
 		$caption = new tableCaption($text, $attributes);
 		$this->tblStack[] = $caption;
@@ -58,53 +58,53 @@ class htmlTable extends baseTag
 		$this->last = count($this->tblStack) - 1;
 	}
 
-	public function colgroup($attributes = NULL)
+	public function colgroup($attributes = null)
 	{
 		$colgroup = new tableColgroup($attributes);
 		$this->tblStack[] = $colgroup;
 		$this->last = count($this->tblStack) - 1;
 	}
 
-	public function col($attributes = NULL)
+	public function col($attributes = null)
 	{
 		$col = new tableCol($attributes);
 		$this->appendElement($col);
 	}
 
-	public function thead($attributes = NULL)
+	public function thead($attributes = null)
 	{
 		$head = new tableHead($attributes);
 		$this->tblStack[] = $head;
 		$this->last = count($this->tblStack) - 1;
 	}
 
-	public function tfoot($attributes = NULL)
+	public function tfoot($attributes = null)
 	{
 		$foot = new tableFoot($attributes);
 		$this->tblStack[] = $foot;
 		$this->last = count($this->tblStack) - 1;
 	}
 
-	public function tbody($attributes = NULL)
+	public function tbody($attributes = null)
 	{
 		$body = new tableBody($attributes);
 		$this->tblStack[] = $body;
 		$this->last = count($this->tblStack) - 1;
 	}
 
-	public function tr($rowAttributes = NULL)
+	public function tr($rowAttributes = null)
 	{
 		$row = new tableRow($rowAttributes);
 		$this->appendElement($row);
 	}
 
-	public function td($data = '', $cellAttributes = NULL)
+	public function td($data = '', $cellAttributes = null)
 	{
 		$cell = new tableCell($data, $cellAttributes);
 		$this->appendElement($cell);
 	}
 
-	public function th($data = '', $cellAttributes = NULL)
+	public function th($data = '', $cellAttributes = null)
 	{
 		$cell = new tableHeadingCell($data, $cellAttributes);
 		$this->appendElement($cell);
@@ -124,6 +124,75 @@ class htmlTable extends baseTag
 			return $tblHtml;
 		}
 		echo $tblHtml;
+	}
+}
+
+class csvRenderer extends htmlTable
+{
+	protected $emptyCol = '&nbsp;';
+	protected $colsNum = false;
+
+	public function loadData($csvFile, $colHeaders = false, $caption = false)
+	{
+		if ($caption !== false)
+		{
+			$this->caption(htmlspecialchars($caption));
+		}
+		if ($colHeaders !== false)
+		{
+			// set the number of columns based on number of columns headers
+			$this->colsNum = count($colHeaders);
+			$this->thead();
+			foreach (array_keys($colHeaders) as $key)
+			{
+				$this->th(htmlspecialchars($colHeaders[$key]));
+			}
+		}
+		// we need at least one tbody tag
+		$this->tbody();
+		$rows = 0;
+		if (is_file($csvFile))
+		{
+			$fHandle = fopen($csvFile, 'r');
+			while (($currLine = fgetcsv($fHandle, 0, ';')) !== false)
+			{
+				$currColsNum = count($currLine);
+				// skip any empty line
+				if ($currColsNum == 0)
+					continue;
+				if ($currLine[0] === null)
+					continue;
+				// if number of columns was not known set it according to the number of values on the first line read
+				if ($this->colsNum === false)
+				{
+					$this->colsNum = $currColsNum;
+				}
+				$this->tr();
+				foreach (array_keys($currLine) as $key)
+				{
+					$this->td(htmlspecialchars($currLine[$key]));
+				}
+				// if we got less columns than the expected nunber fill the row with blank colums
+				while ($currColsNum < $this->colsNum)
+				{
+					$this->td($this->emptyCol);
+					$currColsNum++;
+				}
+				$rows++;
+			}
+			fclose($fHandle);
+		}
+		if ($rows == 0)
+		{
+			if ($this->colsNum === false)
+			{
+				$this->colsNum = 1;
+			}
+			$colSpan = "colspan={$this->colsNum}";
+			$this->tr();
+			$this->td($emptyCol, $colSpan);
+		}
+		return $rows;
 	}
 }
 
@@ -216,7 +285,7 @@ class tableCol extends baseTag
 
 abstract class baseTag
 {
-	protected static $innerElement = NULL;
+	protected static $innerElement = null;
 	protected static $closeTag = true;
 	private $attributes = array();
 
