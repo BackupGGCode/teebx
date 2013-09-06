@@ -193,7 +193,7 @@ function callInit(dev, act, par, start, stk)
 		dataType: 'json',
 		success: function(data){
 			jQuery('#waiting').remove();
-			if (data.retval == 0)
+			if (data.retval == 0 || data.retval == 2)
 			{
 				jQuery('#mpart').append('<?php echo $msgDone; ?>');
 				jQuery('#init-progress').append('<div id="mformat"><?php echo $msgStartFormat; ?></div>');
@@ -218,11 +218,13 @@ function callInit(dev, act, par, start, stk)
 					}
 				});
 			}
+			/*
 			else if (data.retval == 2)
 			{
 				jQuery('#mpart').append('<?php echo $msgDone; ?>');
 				jQuery('#init-progress').append('<div id="mreboot"><?php echo $msgAskReboot; ?></div>');
 			}
+			*/
 			else
 			{
 				jQuery('#init-progress').append('<div>Failure, return value: ' + data.retval + '</div>');

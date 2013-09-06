@@ -25,6 +25,9 @@ session_start();
 require_once('guiconfig.inc');
 require_once('blockdevices.lib.php');
 define('SYS_PARTCOUNT', 2); // <-- to be moved to larger visibility
+// initialize some local variables
+$devToPartition = null;
+$clearPartTable = null;
 // to be returned as json
 $data = array();
 $data['retval'] = 1;
@@ -32,132 +35,118 @@ $data['retval'] = 1;
 $debug = array();
 // errors array
 $data['errors'] = array();
-// sanity checks
-$devToPartition = null;
-$clearPartTable = null;
-$accessAllowed = false;
+//
+if (!isset($_SESSION['diskedit']['token']))
+{
+	$data['errors'][] = gettext('Missing token, access not allowed!');
+	exit(json_encode($data));
+}
+if (!isset($_POST))
+{
+	$data['errors'][] = gettext('Missing post data!');
+	exit(json_encode($data));
+}
+// initialize post data that may not exists
 if (!isset($_POST['mode']))
 	$_POST['mode'] = null;
 if (!isset($_POST['task']))
 	$_POST['task'] = null;
 if (!isset($_POST['label']))
 	$_POST['label'] = null;
-if (isset($_SESSION['diskedit']['token']))
+if (!isset($_POST['stk']))
+	$_POST['stk'] = null;
+// check for required session data
+if ($_POST['stk'] !== $_SESSION['diskedit']['token'])
+	$data['errors'][] = gettext('Invalid token, access not allowed!');
+if (!isset($_SESSION['diskedit']['info']))
+	$data['errors'][] = gettext('Invalid or missing disk informations.');
+// check that post data is plausible before continue
+if (!isset($_POST['dev']))
+	$data['errors'][] = gettext('Missing device name.');
+if (!isset($_POST['part']))
+	$data['errors'][] = gettext('Missing partition number.');
+else
 {
-	if (isset($_POST))
+	if (($_POST['part'] < 1) || ($_POST['part'] > 4))
+		$data['errors'][] = gettext('Invalid partition number.');
+	//
+}
+if (!isset($_POST['start']))
+	$data['errors'][] = gettext('Missing partition start sector!');
+if (is_null($_POST['label']) || ($_POST['label'] == ''))
+{
+	$data['errors'][] = gettext('Empty or missing partition label.');
+}
+// something failed?
+if (count($data['errors']) > 0)
+{
+	exit(json_encode($data));
+}
+
+$newPartNum = $_POST['part'];
+$disksInfo = $_SESSION['diskedit']['info'];
+$diskDev = $_POST['dev'];
+$sectStart = $_POST['start'];
+$clearPartTable = false;
+// be paranoid, ensure not to overwrite system partitions
+if (isset($disksInfo[$_POST['dev']]['__SYS_DISK__']))
+{
+	if ($newPartNum <= SYS_PARTCOUNT)
 	{
-		if ($_POST['stk'] === $_SESSION['diskedit']['token'])
-		{
-			$accessAllowed = true;
-			if (isset($_POST['dev']))
-			{
-				if (isset($_POST['part']))
-				{
-					if (($_POST['part'] >= 1) && ($_POST['part'] <= 4))
-					{
-						$newPartNum = $_POST['part'];
-						if (isset($_SESSION['diskedit']['info']))
-						{
-							$disksInfo = $_SESSION['diskedit']['info'];
-							$devToPartition = $_POST['dev'];
-							$clearPartTable = false;
-							// be paranoid, ensure not to overwrite system partitions
-							if (isset($disksInfo[$_POST['dev']]['__SYS_DISK__']))
-							{
-								if ($newPartNum <= SYS_PARTCOUNT)
-								{
-									$data['errors'][] = gettext('Overwriting partitions not allowed on: ') . $_POST['dev'];
-								}
-							}
-							else
-							{
-								$clearPartTable = true;
-							}
-							if (is_null($_POST['label']) || ($_POST['label'] == ''))
-							{
-								$data['errors'][] = gettext('Empty or missing partition label.');
-							}
-							//
-							switch ($_POST['mode'])
-							{
-								case 'new':
-								case 'use-spare':
-								case 'edit':
-									break;
-								default:
-									$data['errors'][] = gettext('Invalid or missing mode.');
-								//
-							}
-							switch ($_POST['task'])
-							{
-								case 'partinit':
-								case 'partformat':
-									break;
-								default:
-									$data['errors'][] = gettext('Invalid or missing task.');
-							}
-						}
-						else
-						{
-							$data['errors'][] = gettext('Invalid or missing disk informations.');
-						}
-					}
-					else
-					{
-						$data['errors'][] = gettext('Invalid partition number.');
-					}
-				}
-				else
-				{
-					$data['errors'][] = gettext('Missing partition number.');
-				}
-			}
-			else
-			{
-				$data['errors'][] = gettext('Missing device name.');
-			}
-		}
+		$data['errors'][] = gettext('Overwriting partitions not allowed on: ') . $_POST['dev'];
 	}
-}
-if (!$accessAllowed)
-{
-	$data['errors'][] = gettext('Direct access not allowed!');
-}
-if (isset($_POST['start']))
-{
-	$sectStart = $_POST['start'];
 }
 else
 {
-	$data['errors'][] = gettext('Missing partition start sector!');
+	$clearPartTable = true;
 }
+// validate options
+switch ($_POST['mode'])
+{
+	case 'new':
+	case 'use-spare':
+	case 'edit':
+		break;
+	default:
+		$data['errors'][] = gettext('Invalid or missing mode.');
+	//
+}
+
+switch ($_POST['task'])
+{
+	case 'partinit':
+	case 'partformat':
+		break;
+	default:
+		$data['errors'][] = gettext('Invalid or missing task.');
+}
+
 if (count($data['errors']) > 0)
 {
-	die(json_encode($data));
+	exit(json_encode($data));
 }
+
 //
-$opStatus = 0;
-$diskDev = $_POST['dev'];
 $newPart = "$diskDev$newPartNum";
 if (strpos($diskDev, '/dev/mmcblk') !== false)
 {
 	$newPart = "{$diskDev}p{$newPartNum}";
 }
-$newPartId = 'fat32';
+$newPartFs = 'fat32';
 //
 if ($_POST['task'] === 'partinit')
 {
-	$data['retval'] = newPartition($diskDev, $sectStart, '100%', $newPartId, $clearPartTable);
+	$data['retval'] = newPartition($diskDev, $sectStart, '100%', $newPartFs, $clearPartTable);
 	if ($_POST['mode'] === 'use-spare')
 	{
 		/* force kernel to reread partition table
 		when initializing a new partition on system disk.
 		*/
 		exec('partprobe');
-		exec("cat /proc/partitions |grep $newPart", $out);
+		exec('cat /proc/partitions |grep ' . basename($newPart), $out);
 		if (isset($out[0]))
 		{
-				// return integer 2 instead of 0, evaluating this we will notice the user about actions to be done.
+				// return integer 2 instead of 0, evaluating this we will able to notice the user about actions to be done.
 				$data['retval'] = 2;
 		}
 		else
@@ -171,25 +160,7 @@ elseif ($_POST['task'] === 'partformat')
 	$newLabel = $_POST['label'];
 	$data['retval'] = formatPartitionFat($newPart, $newLabel);
 }
-// exit
+// we should exit immediately returning the json data to the calling ajax request
 exit(json_encode($data));
-
-if ($_POST['mode'] === 'new')
-{
-	// New partition on dedicated disk
-}
-elseif ($_POST['mode'] === 'use-spare')
-{
-	// Partitioning spare space on system device
-}
-elseif ($_POST['mode'] === 'edit')
-{
-	// Edit current settings
-}
-else
-{
-	$data['retval'] = 1;
-	die(json_encode($data));
-}
 
 ?>
