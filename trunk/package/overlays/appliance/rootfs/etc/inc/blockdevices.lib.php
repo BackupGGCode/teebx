@@ -82,6 +82,10 @@ function getDevByUuid(&$arrDiskInfo, $uuid)
 		//
 		foreach (array_keys($arrDiskInfo[$device]['parts']) as $part)
 		{
+			if (!isset($arrDiskInfo[$device]['parts'][$part]['uuid']))
+			{
+				continue;
+			}
 			if ($arrDiskInfo[$device]['parts'][$part]['uuid'] != $uuid)
 			{
 				continue;
