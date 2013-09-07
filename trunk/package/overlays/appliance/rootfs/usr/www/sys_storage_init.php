@@ -139,19 +139,18 @@ if ($_POST['task'] === 'partinit')
 	$data['retval'] = newPartition($diskDev, $sectStart, '100%', $newPartFs, $clearPartTable);
 	if ($_POST['mode'] === 'use-spare')
 	{
-		/* force kernel to reread partition table
-		when initializing a new partition on system disk.
+		/*
+		  force kernel to reread partition table.
+		  (actually used when initializing a new partition on system disk)
 		*/
 		exec('partprobe');
+		// check that the kernel got it
 		exec('cat /proc/partitions |grep ' . basename($newPart), $out);
-		if (isset($out[0]))
+		if (!isset($out[0]))
 		{
 				// return integer 2 instead of 0, evaluating this we will able to notice the user about actions to be done.
 				$data['retval'] = 2;
-		}
-		else
-		{
-			$data['errors'][] = gettext('Something went wrong creating new partition.');
+				$data['errors'][] = gettext('Rereading partition table failed, kernel still uses old table.');
 		}
 	}
 }
