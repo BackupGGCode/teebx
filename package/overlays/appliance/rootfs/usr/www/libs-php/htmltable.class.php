@@ -190,7 +190,7 @@ class csvRenderer extends htmlTable
 			}
 			$colSpan = "colspan={$this->colsNum}";
 			$this->tr();
-			$this->td($emptyCol, $colSpan);
+			$this->td($this->emptyCol, $colSpan);
 		}
 		return $rows;
 	}
