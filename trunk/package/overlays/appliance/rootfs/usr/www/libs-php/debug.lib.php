@@ -26,11 +26,11 @@ All rights reserved.
  * Wrapper for echo, output a message to standard output or append to a global "buffer" variable ($msg_buf)
  *
  * Written to give feedback to user during package boot...
- * but the way package routinea executed redirect to dev/null :-((
+ * but the way package routine executed redirect to dev/null :-((
  * This is the reason of $do_echo parameter which defaults to FALSE
  *
- * @param mixed var $msg         The message
- * @param bool $do_echo          Default to false, echo $msg when true
+ * @param mixed $msg            The message
+ * @param bool $do_echo         Default to false, echo $msg when true
  */
 
 define('LOG_FILE', '/tmp/php-debug.log');
