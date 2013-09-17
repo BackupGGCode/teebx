@@ -70,6 +70,18 @@ function getFsIdentifier($fsIdent)
 	return false;
 }
 
+function getDevModel($device)
+{
+	$arrDiskInfo = getBlockDevices(false, true);
+	if (!is_array($arrDiskInfo))
+		return false;
+	//
+	if (!isset($arrDiskInfo[$device]['info']))
+		return false;
+	//
+	return $arrDiskInfo[$device]['info'];
+}
+
 function getDevByUuid(&$arrDiskInfo, $uuid)
 {
 	if (!is_array($arrDiskInfo))

@@ -27,6 +27,7 @@ require('guiconfig.inc');
 require('blockdevices.lib.php');
 require('libs-php/cfgform.class.php');
 require_once('libs-php/utils.lib.php');
+require_once('initsvc.storage.php');
 // define some constants referenced in fbegin.inc
 define('INCLUDE_FORMSTYLE', true);
 // page title
@@ -71,18 +72,25 @@ if(!$accessAllowed)
 	include('include/blankpagetpl.php');
 	exit();
 }
+// label for the device fieldset
+$fsetLabel = $_POST['dev'];
+$devModel = getDevModel($_POST['dev']);
+if ($devModel !== false)
+{
+	$fsetLabel .= " ($devModel)";
+}
 // instantiate the disk initialization form object
 $initForm = new cfgForm('sys_storage_edit.php', 'method=post|name=iform|id=iform');
 // inizialization UI
-$initForm->startFieldset('fset_init', gettext('Disk Device') . ': ' . $_POST['dev']);
+$initForm->startFieldset('fset_init', gettext('Disk Device') . ": $fsetLabel");
 	$initForm->startBlock('rw_label');
-		$initForm->setLabel(null, gettext('Disk label'), 'label', 'class=labelcol');
+		$initForm->setLabel(null, gettext('Partition label'), 'label', 'class=labelcol');
 		$initForm->startBlock('rw_label', 'right');
-		$initForm->setField('disk_label', 'text', 'size=11|maxlength=11|class=required', false, '');
-		$initForm->setInputText('disk_label', $cfgPtr['boba']);
-		$initForm->setBlockHint('disk_label',
-			gettext('Enter the label for this disk partition.') . '<br>' . gettext('Only letters A-z, numbers, dash and underscore allowed.'));
-		$initForm->setValidationFunc('disk_label', 'validMountPoint');
+		$initForm->setField('part_label', 'text', 'size=11|maxlength=11|class=required', false, '');
+		$initForm->setInputText('part_label', $cfgPtr['boba']);
+		$initForm->setBlockHint('part_label',
+			gettext('Enter the label for this disk partition.') . '<br>' . gettext('Only letters A-z, numbers and underscore allowed.'));
+		$initForm->setValidationFunc('part_label', 'validMountPoint');
 	$initForm->exitBlock();
 	$initForm->startBlock('rw_device');
 		$initForm->setLabel(null, $modeCaption, 'allowinit', 'class=labelcol');
@@ -109,7 +117,7 @@ $initForm->exitFieldSet();
 // instantiate the disk configuration form object
 $confForm = new cfgForm('sys_storage_edit.php', 'method=post|name=confform|id=confform');
 // configuration UI
-$confForm->startFieldset('fset_conf', gettext('General Settings'));
+$confForm->startFieldset('fset_conf', gettext('General Settings'), 'disabled=disabled');
 	$confForm->startBlock('rw_name');
 		$confForm->setLabel(null, gettext('Name'), 'name', 'class=labelcol');
 		$confForm->startBlock('rw_name', 'right');
@@ -118,7 +126,7 @@ $confForm->startFieldset('fset_conf', gettext('General Settings'));
 		$confForm->setBlockHint('name', gettext('Enter a descriptive name for this disk.'));
 	$confForm->exitBlock();
 $confForm->exitFieldSet();
-$confForm->setRequired('disk_label', gettext('Disk label'));
+$confForm->setRequired('part_label', gettext('Disk label'));
 
 $confForm->startWrapper('saveservices');
 $saveClick = 'onclick=callSave(\'' .
@@ -147,6 +155,8 @@ $initForm->renderForm();
 $confForm->renderForm();
 echo '<div><pre>';
 var_export($_POST);
+echo "\n";
+var_export(getAvailServices());
 echo '</pre></div>';
 // end layout
 require('fend.inc');
@@ -158,7 +168,7 @@ function callInit(dev, act, par, start, stk)
 {
 	var uri = '/sys_storage_init.php';
 	var wait = '<div id="waiting"><img alt="" src="img/ajax_busy_round.gif"></div>';
-	var label = jQuery('#disk_label').val();
+	var label = jQuery('#part_label').val();
 	var params = 'dev=' + dev +
 		'&mode=' + act +
 		'&part=' + par +
@@ -211,6 +221,7 @@ function callInit(dev, act, par, start, stk)
 						if (data.retval == 0)
 						{
 							jQuery('#mformat').append('<?php echo $msgDone; ?>');
+							jQuery('#fset_conf').prop('disabled', false);
 						}
 					},
 					failure: function(data){
@@ -237,7 +248,7 @@ function callInit(dev, act, par, start, stk)
 
 // client side field validation
 
-jQuery('#disk_label').keyup(function()
+jQuery('#part_label').keyup(function()
 {
 	jQuery('span.cli-error').remove();
 	var inputVal = jQuery(this).val();

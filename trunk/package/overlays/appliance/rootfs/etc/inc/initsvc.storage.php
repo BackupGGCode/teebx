@@ -26,6 +26,22 @@ require_once('config.inc');
 require_once('util.inc');
 require_once('blockdevices.lib.php');
 
+function getAvailServices()
+{
+	$services = array('astmedia' => null, 'astdb' => null, 'astcdr' => null);
+	foreach (array_keys($services) as $service)
+	{
+		$fCall = 'initsvc' . ucfirst($service);
+		if (is_callable($fCall))
+		{
+			$services[$service] = $fCall;
+			continue;
+		}
+		unset($services[$service]);
+	}
+	return $services;
+}
+
 function setupStorageDevices(&$conf)
 {
 	if (!is_array($conf['system']['storage']))
@@ -36,6 +52,8 @@ function setupStorageDevices(&$conf)
 	if (!is_array($conf['system']['storage']['services']))
 		return 0;
 	//
+	// get callable service functions
+	$svcFuncs = getAvailServices();
 	// now loop thru $conf['system']['storage']['services'] array to initialize services
 	foreach (array_keys($conf['system']['storage']['services']) as $service)
 	{
@@ -57,37 +75,35 @@ function setupStorageDevices(&$conf)
 		{
 			continue;
 		}
-		$fCall = 'initsvc' . ucfirst($service);
-		if (is_callable($fCall))
-		{
-			/*
-				check that the required directory exists, else make it.
-				This also to avoid a system call execept the very first time.
-			*/
-			$svcPath = "{$conf['system']['storage']['mountroot']}/$fsMount/$service";
-			if (!is_dir($svcPath))
-			{
-				if (!mkdir($svcPath, 0766, true))
-				{
-					$conf['system']['storage']['services'][$service]['active'] = -1;
-					$setup['cfgchanged'] = 1;
-					msgToSyslog("making directory for service ($service) failed.");
-				}
-			}
-			$svcResult = call_user_func($fCall, $svcPath);
-			if ($svcResult === false)
-			{
-				// disable that service
-				$conf['system']['storage']['services'][$service]['active'] = -2;
-				$setup['cfgchanged'] = 1;
-				msgToSyslog("handler for service ($service) failed during execution.");
-			}
-		}
-		else
+		// check that service has a callable function defined
+		if (!isset($svcFuncs[$service]))
 		{
 			$conf['system']['storage']['services'][$service]['active'] = -3;
 			$setup['cfgchanged'] = 1;
 			msgToSyslog("initialization for service ($service) failed because no handler available.");
+			continue;
+		}
+		/*
+			check that the required directory exists, else make it.
+			This also to avoid a system call except the very first time.
+		*/
+		$svcPath = "{$conf['system']['storage']['mountroot']}/$fsMount/$service";
+		if (!is_dir($svcPath))
+		{
+			if (!mkdir($svcPath, 0766, true))
+			{
+				$conf['system']['storage']['services'][$service]['active'] = -1;
+				$setup['cfgchanged'] = 1;
+				msgToSyslog("making directory for service ($service) failed.");
+			}
+		}
+		$svcResult = call_user_func($svcFuncs[$service], $svcPath);
+		if ($svcResult === false)
+		{
+			// disable that service
+			$conf['system']['storage']['services'][$service]['active'] = -2;
+			$setup['cfgchanged'] = 1;
+			msgToSyslog("handler for service ($service) failed during execution.");
 		}
 	}
 	// check if configuration was changed due to some errors
