@@ -40,7 +40,7 @@ Notes:
 - _Want Your board supported?_ Make a suggestion or *donate a sample*.
 
 || *Board* || *SoC/CPU* || *Core type* || *Core(s)* || *CPU clock* || *RAM* || *Flash* || *Status* || *Donor/Sponsor*||
-|| *BeagleBone Black* ||TI AM3359AZCZ100||Cortex-A8||1||1 GHz||512 MB||2 GB||WIP||Own founds||
+|| *Beaglebone Black* ||TI AM3359AZCZ100||Cortex-A8||1||1 GHz||512 MB||2 GB||WIP||Own founds||
 ||||||||||||||||||||http://teebx.googlecode.com/svn/wiki/beageboneblack_w360_00.jpg||
 || *Cubieboard* ||Allwinner A10||Cortex-A8||1||1 GHz||1 GB||4 GB||Supported||Own founds||
 ||||||||||||||||||||http://teebx.googlecode.com/svn/wiki/cubieboard_w360_00.jpg||
