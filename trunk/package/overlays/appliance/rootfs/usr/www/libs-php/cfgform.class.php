@@ -31,7 +31,7 @@ class cfgForm extends quickForm implements Serializable
 
 	// protected
 	protected $layout = array();
-	protected $formTpl = NULL;
+	protected $formTpl = null;
 	protected $containerTpl = array();
 	protected $tplFmtCount = 2;
 	// private
@@ -48,7 +48,7 @@ class cfgForm extends quickForm implements Serializable
 	 * @param string $action
 	 * @param string $attributes
 	 */
-	public function __construct($action, $attributes=NULL)
+	public function __construct($action, $attributes=null)
 	{
 		parent::__construct();
 		$this->setForm($action, $attributes);
@@ -160,7 +160,7 @@ class cfgForm extends quickForm implements Serializable
 		$this->currLayoutPath = $oldPath;
 	}
 
-	private function registerLayoutElement($kind, $content= null, $attribs = null)
+	private function registerLayoutElement($kind, $content=null, $attribs=null)
 	{
 		$tmpArr = array('__KIND__' => $kind);
 		if (!is_null($content))

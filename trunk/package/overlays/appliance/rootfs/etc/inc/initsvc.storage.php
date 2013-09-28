@@ -28,13 +28,14 @@ require_once('blockdevices.lib.php');
 
 function getAvailServices()
 {
-	$services = array('astmedia' => null, 'astdb' => null, 'astcdr' => null);
+	require('services.def.inc');
+
 	foreach (array_keys($services) as $service)
 	{
 		$fCall = 'initsvc' . ucfirst($service);
 		if (is_callable($fCall))
 		{
-			$services[$service] = $fCall;
+			$services[$service]['handler'] = $fCall;
 			continue;
 		}
 		unset($services[$service]);
@@ -76,7 +77,7 @@ function setupStorageDevices(&$conf)
 			continue;
 		}
 		// check that service has a callable function defined
-		if (!isset($svcFuncs[$service]))
+		if (!isset($svcFuncs[$service]['handler']))
 		{
 			$conf['system']['storage']['services'][$service]['active'] = -3;
 			$setup['cfgchanged'] = 1;
@@ -97,7 +98,7 @@ function setupStorageDevices(&$conf)
 				msgToSyslog("making directory for service ($service) failed.");
 			}
 		}
-		$svcResult = call_user_func($svcFuncs[$service], $svcPath);
+		$svcResult = call_user_func($svcFuncs[$service]['handler'], $svcPath);
 		if ($svcResult === false)
 		{
 			// disable that service
