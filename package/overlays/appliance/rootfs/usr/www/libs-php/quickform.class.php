@@ -52,7 +52,7 @@ class quickForm
 		$this->idPrefix = 'id-';
 		$this->formTag = array();
 		$this->curFieldset = null;
-		$this->submitted = !empty($_POST);
+		$this->submitted = false;
 
 		//
 		$this->htmlTagsPoolReady = false;
@@ -736,7 +736,7 @@ class quickForm
 		$this->setGroupItems($id, $items, $lblAfter);
 	}
 
-	public function setCbState($grpId, $elemValue, $state= 1)
+	public function setCbState($grpId, $elemValue, $state = 1)
 	{
 		if (!isset($this->tagsPool[$grpId]))
 		{
@@ -1433,7 +1433,7 @@ class quickForm
 		return 0;
 	}
 
-	public function setForm($action, $attributes=NULL)
+	public function setForm($action, $attributes = null)
 	{
 		if (!isset($this->formTag['attrlist']))
 		{
@@ -1449,6 +1449,14 @@ class quickForm
 				$this->formTag['attrlist'][$params[0]] = $params[1];
 			}
 		}
+		// add an auto generated hidden field to be used for internal checks
+		// require that form name is set
+		if (isset($this->formTag['attrlist']['name']))
+		{
+			$this->setField("form_{$this->formTag['attrlist']['name']}", 'hidden');
+		}
+
+		$this->submitted = isset($_POST["form_{$this->formTag['attrlist']['name']}"]);
 	}
 
 	public function htmlForm($mode=NULL)
