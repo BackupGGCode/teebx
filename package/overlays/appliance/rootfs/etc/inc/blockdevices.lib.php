@@ -217,7 +217,7 @@ function getBlockDevices($refresh = false, $revealMTD = false)
 			$result[$device]['info'] = trim($result[$device]['info']);
 			if (empty($result[$device]['info']))
 			{
-				$result[$device]['info'] = gettext('Unknown brand/model');
+				$result[$device]['info'] = _('Unknown brand/model');
 			}
 		}
 	}

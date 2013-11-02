@@ -17,6 +17,6 @@
 		50 => '50',
 		55 => '55',
 		60 => '60',
-		'indefinitely' => gettext('indefinitely')
+		'indefinitely' => _('indefinitely')
 	);
 ?>

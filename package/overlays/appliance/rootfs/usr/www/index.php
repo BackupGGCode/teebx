@@ -41,7 +41,7 @@ if (is_file("/offload/livecd"))
 	{
 		if ($local_version != $livecd_version)
 		{
-			die(sprintf(gettext("TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"), $local_version, $livecd_version));
+			die(sprintf(_("TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"), $local_version, $livecd_version));
 		}
 	}
 }
@@ -54,7 +54,7 @@ require_once('blockdevices.lib.php');
 define('INCLUDE_TBLSTYLE', true);
 
 $product_name = system_get_product_name();
-$pgtitle = array($product_name . ' ' . gettext('web UI'));
+$pgtitle = array($product_name . ' ' . _('web UI'));
 
 //check_update();
 
@@ -63,30 +63,30 @@ $statusMsg = null;
 if (pbx_exec("core show version") == 1)
 {
 	// TODO: display this info somewere...
-	$statusMsg = gettext("Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX.");
+	$statusMsg = _("Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX.");
 }
 
 // init a table object
 $tbl = new htmlTable('id=table01|class=home');
 // fill the table caption
-$tbl->caption(gettext('System Information'));
+$tbl->caption(_('System Information'));
 // a tbody is mandatory
 $tbl->tbody();
 // show system informations
 // name
 $tbl->tr();
-	$tbl->td(gettext('Name'), 'class=tblrowlabel');
+	$tbl->td(_('Name'), 'class=tblrowlabel');
 	$tbl->td($config['system']['hostname'] . '.' . $config['system']['domain']);
 // version name
 $tbl->tr();
-	$tbl->td(gettext('Version'), 'class=tblrowlabel');
+	$tbl->td(_('Version'), 'class=tblrowlabel');
 	$tbl->td('<strong>' . system_get_product_name() . '&nbsp;' .
 		file_get_contents('/etc/version') . '</strong>' .
-		gettext('on') . '&nbsp;' . $g['platform'] . '<br>'
+		_('on') . '&nbsp;' . $g['platform'] . '<br>'
 	);
 // version build time
 $tbl->tr();
-	$tbl->td(gettext('built on'), 'class=tblrowlabel');
+	$tbl->td(_('built on'), 'class=tblrowlabel');
 	$tbl->td(strftime('%c', chop(file_get_contents('/etc/version.buildtime'))));
 // last config change
 if (isset($config['lastchange']))
@@ -94,14 +94,14 @@ if (isset($config['lastchange']))
 	if (!empty($config['lastchange']))
 	{
 		$tbl->tr();
-			$tbl->td(gettext('Last Config Change'), 'class=tblrowlabel');
+			$tbl->td(_('Last Config Change'), 'class=tblrowlabel');
 			$tbl->td(strftime('%c', $config['lastchange']));
 		//
 	}
 }
 // system date/time
 $tbl->tr();
-	$tbl->td(gettext('System clock (at page load)'), 'class=tblrowlabel');
+	$tbl->td(_('System clock (at page load)'), 'class=tblrowlabel');
 	$tbl->td(strftime('%c'));
 // uptime
 exec('/usr/bin/uptime', $ut);
@@ -109,24 +109,24 @@ $start = strpos($ut[0], 'up') + 2;
 $end = strpos($ut[0], ',');
 $upTime = substr($ut[0], $start, $end - $start);
 $tbl->tr();
-	$tbl->td(gettext('Uptime'), 'class=tblrowlabel');
+	$tbl->td(_('Uptime'), 'class=tblrowlabel');
 	$tbl->td($upTime);
 // memory usage
 $memStatus = getMemoryStatus();
 if ($memStatus !== false)
 {
-	$memReport = gettext('Free') . ': '. formatBytes($memStatus['free']) . ' ';
-	$memReport .= gettext('Used') . ': '. formatBytes($memStatus['used']) . ' ';
-	$memReport .= gettext('Total') . ': '. formatBytes($memStatus['total']);
+	$memReport = _('Free') . ': '. formatBytes($memStatus['free']) . ' ';
+	$memReport .= _('Used') . ': '. formatBytes($memStatus['used']) . ' ';
+	$memReport .= _('Total') . ': '. formatBytes($memStatus['total']);
 	$memReport .= getAnalogBar($memStatus);
 }
 else
 {
-	$memReport = gettext('Unable to get data.');
+	$memReport = _('Unable to get data.');
 }
 
 $tbl->tr();
-	$tbl->td(gettext('Memory Usage'), 'class=tblrowlabel');
+	$tbl->td(_('Memory Usage'), 'class=tblrowlabel');
 	$tbl->td($memReport);
 	//
 unset($memStatus, $memReport);
@@ -163,26 +163,26 @@ if (isset($config['system']['storage']['fsmounts']))
 					$storageReport .= basename("{$fsInfo[0]}{$fsInfo[1]}");
 					$storageReport .= ' (' . $disksInfo[$fsInfo[0]]['info'] . ')<br>';
 					// units of 1024 bytes blocks
-					$storageReport .= gettext('Free') . ': ' . formatBytes(($fsBlocksTotal * 1024) - ($fsBlocksUsed * 1024)) . ' ';
-					$storageReport .= gettext('Used') . ': ' . formatBytes($fsBlocksUsed * 1024) . ' ';
-					$storageReport .= gettext('Total') . ': ' . formatBytes($fsBlocksTotal * 1024);
+					$storageReport .= _('Free') . ': ' . formatBytes(($fsBlocksTotal * 1024) - ($fsBlocksUsed * 1024)) . ' ';
+					$storageReport .= _('Used') . ': ' . formatBytes($fsBlocksUsed * 1024) . ' ';
+					$storageReport .= _('Total') . ': ' . formatBytes($fsBlocksTotal * 1024);
 					$storageReport .= getAnalogBar(array('total' => $fsBlocksTotal, 'used' => $fsBlocksUsed));
 				}
 				else
 				{
-					$storageReport .= gettext('Unable to get data.') . " ($fsUuid)<br>";
+					$storageReport .= _('Unable to get data.') . " ($fsUuid)<br>";
 				}
 			}
 			else
 			{
-				$storageReport .= gettext('Missing device.') . " ($fsUuid)<br>";
+				$storageReport .= _('Missing device.') . " ($fsUuid)<br>";
 			}
 		}
 		//
 		if (!empty($storageReport))
 		{
 		$tbl->tr();
-			$tbl->td(gettext('Configured storage'), 'class=tblrowlabel');
+			$tbl->td(_('Configured storage'), 'class=tblrowlabel');
 			$tbl->td($storageReport);
 		}
 		unset($disksInfo, $storageReport, $fsInfo);
@@ -194,7 +194,7 @@ if (isset($config['system']['notes']))
 	if (!empty($config['system']['notes']))
 	{
 		$tbl->tr();
-			$tbl->td(gettext('Notes'), 'class=tblrowlabel');
+			$tbl->td(_('Notes'), 'class=tblrowlabel');
 			$tbl->td(nl2br(htmlentities(base64_decode($config['system']['notes']), ENT_QUOTES, 'UTF-8'), false));
 		//
 	}

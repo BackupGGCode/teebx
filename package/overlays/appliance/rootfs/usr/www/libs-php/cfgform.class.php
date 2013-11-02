@@ -642,27 +642,27 @@ class cfgForm extends quickForm implements Serializable
 
 	public function presetFldsetExtBasic(&$cfgPtr, $techInfo)
 	{
-		$numFldHint = gettext('The number used to dial this phone.');
+		$numFldHint = _('The number used to dial this phone.');
 		if ($techInfo == 'sip' OR $tech == 'iax')
 		{
-			$numFldHint .= '<br>' . gettext('Use this number as your username.');
-			$authLabel = gettext('Password');
+			$numFldHint .= '<br>' . _('Use this number as your username.');
+			$authLabel = _('Password');
 			$authFldName = 'secret';
 			$authFldLen = 16;
 			$authFldMaxLen = 64;
-			$authFldHint = gettext('This account\'s password.');
+			$authFldHint = _('This account\'s password.');
 		}
 		elseif ($techInfo == 'skinny')
 		{
-			$authLabel = gettext('Device');
+			$authLabel = _('Device');
 			$authFldName = 'device';
 			$authFldLen = 17;
 			$authFldMaxLen = 17;
-			$authFldHint = gettext('The MAC address of this phone.');
+			$authFldHint = _('The MAC address of this phone.');
 		}
 		else
 		{
-			$authFldHint = gettext('The hardware port this phone is connected to.');
+			$authFldHint = _('The hardware port this phone is connected to.');
 			if ($techInfo == 'isdn')
 			{
 			}
@@ -671,9 +671,9 @@ class cfgForm extends quickForm implements Serializable
 			}
 		}
 		// extension number, required
-		$this->startFieldset('fset_baseexten', gettext('Base Settings'));
+		$this->startFieldset('fset_baseexten', _('Base Settings'));
 		$this->startBlock('rw_number');
-		$this->setLabel(null, gettext('Number'), 'extension', 'class=labelcol');
+		$this->setLabel(null, _('Number'), 'extension', 'class=labelcol');
 		$this->startBlock('rw_number', 'right');
 		$this->setField('extension', 'text', "size=12|maxlength=12|class=required");
 		$this->setInputText('extension', $cfgPtr['extension']);
@@ -681,11 +681,11 @@ class cfgForm extends quickForm implements Serializable
 		$this->exitBlock();
 		// caller name part used for CLI, required
 		$this->startBlock('rw_cname');
-		$this->setLabel(null, gettext('Caller Name'), 'callerid', 'class=labelcol');
+		$this->setLabel(null, _('Caller Name'), 'callerid', 'class=labelcol');
 		$this->startBlock('rw_cname', 'right');
 		$this->setField('callerid', 'text', "size=40|maxlength=40|class=required");
 		$this->setInputText('callerid', $cfgPtr['callerid']);
-		$this->setBlockHint('hint-cname', gettext('Text to be displayed for Caller ID Name.'));
+		$this->setBlockHint('hint-cname', _('Text to be displayed for Caller ID Name.'));
 		$this->exitBlock();
 		// auth details or phisical port, depending on used technology. Required.
 		if ($techInfo == 'isdn' OR $techInfo == 'analog')
@@ -708,32 +708,32 @@ class cfgForm extends quickForm implements Serializable
 
 	public function presetFldsetExtGeneral(&$cfgPtr, &$arrRingLen, &$arrLangs)
 	{
-		$this->startFieldset('fset_genexten', gettext('General Settings'));
+		$this->startFieldset('fset_genexten', _('General Settings'));
 		// ring len. selector
 		$this->startBlock('rw_rlen');
-		$this->setLabel(null, gettext('Ring Length'), 'ringlength', 'class=labelcol');
+		$this->setLabel(null, _('Ring Length'), 'ringlength', 'class=labelcol');
 		$this->startBlock('rw_rlen', 'right');
 		$this->setField('ringlength', 'select', "name=ringlength");
 		$this->setSelectOptFill('ringlength', $arrRingLen);
 		$this->setFieldOptionsState('ringlength', $cfgPtr['ringlength']);
-		$this->setBlockHint('hint-rlen', gettext('The number of seconds this phone will ring before giving up or going to voicemail.'));
+		$this->setBlockHint('hint-rlen', _('The number of seconds this phone will ring before giving up or going to voicemail.'));
 		$this->exitBlock();
 		// channel language selector
 		$this->startBlock('rw_clang');
-		$this->setLabel(null, gettext('Language'), 'ringlength', 'class=labelcol');
+		$this->setLabel(null, _('Language'), 'ringlength', 'class=labelcol');
 		$this->startBlock('rw_clang', 'right');
 		$this->setField('language', 'select', "name=language");
 		$this->setSelectOptFill('language', $arrLangs);
 		$this->setFieldOptionsState('language', $cfgPtr['language']);
-		$this->setBlockHint('hint-clang', gettext('Audio prompts will be played back in the selected language for this account.'));
+		$this->setBlockHint('hint-clang', _('Audio prompts will be played back in the selected language for this account.'));
 		$this->exitBlock();
 		// free text description
 		$this->startBlock('rw_descr');
-		$this->setLabel(null, gettext('Description'), 'descr', 'class=labelcol');
+		$this->setLabel(null, _('Description'), 'descr', 'class=labelcol');
 		$this->startBlock('rw_descr', 'right');
 		$this->setField('descr', 'text', "size=40|maxlength=40");
 		$this->setInputText('descr', $cfgPtr['descr']);
-		$this->setBlockHint('hint-descr', gettext('You may enter a description here for your reference (not parsed).'));
+		$this->setBlockHint('hint-descr', _('You may enter a description here for your reference (not parsed).'));
 		$this->exitBlock();
 		//
 		$this->exitFieldSet();
@@ -741,24 +741,24 @@ class cfgForm extends quickForm implements Serializable
 
 	public function presetFldsetExtSecurity(&$cfgPtr, $ShowAuthOpt = false, $showNetOpt = false)
 	{
-		$this->startFieldset('fset_security', gettext('Security'));
+		$this->startFieldset('fset_security', _('Security'));
 		// public access enable
 			$this->startBlock('rw_pubaccs');
-				$this->setLabel(null, gettext('Public Access'), null, 'class=labelcol');
+				$this->setLabel(null, _('Public Access'), null, 'class=labelcol');
 				$this->startBlock('rw_pubaccs', 'right');
 					$this->setField('publicaccess', 'checkbox');
 					$this->setCbItems('publicaccess',
-						'yes=' . gettext('allow this number to be reachable over the Internet'),
+						'yes=' . _('allow this number to be reachable over the Internet'),
 						true);
 					$this->setCbStateByIsset('publicaccess', 'yes', $cfgPtr['publicaccess']);
 				$this->exitBlock();
 			// public acces alias field
 			$this->startBlock('rw_publicname');
-				$this->setLabel(null, gettext('alias'), 'publicname', 'class=labelcol');
+				$this->setLabel(null, _('alias'), 'publicname', 'class=labelcol');
 				$this->startBlock('rw_publicname', 'right');
 					$this->setField('publicname', 'text', "size=40|maxlength=40");
 					$this->setInputText('publicname', $cfgPtr['publicname']);
-					$this->setBlockHint('hint-publicname', gettext('Set a friendlier alias above if you would like to use a word or name instead of the extension number.'));
+					$this->setBlockHint('hint-publicname', _('Set a friendlier alias above if you would like to use a word or name instead of the extension number.'));
 			$this->exitBlock();
 			// auth method field
 			if (array_key_exists('authentication', $cfgPtr))
@@ -778,9 +778,9 @@ class cfgForm extends quickForm implements Serializable
 		{
 			return;
 		}
-		$this->startFieldset('fset_ogroutes', gettext('Outgoing calls restrictions'));
+		$this->startFieldset('fset_ogroutes', _('Outgoing calls restrictions'));
 			$this->startBlock('rw_ogroutes');
-				$this->setLabel(null, gettext('Block Providers'), null, 'class=labelcol');
+				$this->setLabel(null, _('Block Providers'), null, 'class=labelcol');
 				$this->startBlock('rw_ogroutes', 'right');
 				//
 				foreach ($ogRoutes as $route)
@@ -792,7 +792,7 @@ class cfgForm extends quickForm implements Serializable
 					$this->setCbStateByIsset($r_uid, 'yes', $cfgPtr['provider']);
 				}
 				//
-				$this->setBlockHint('hint-ogroute', gettext('Block access to the providers selected above.'));
+				$this->setBlockHint('hint-ogroute', _('Block access to the providers selected above.'));
 			$this->exitBlock();
 		$this->exitFieldset();
 	}
@@ -813,7 +813,7 @@ class cfgForm extends quickForm implements Serializable
 
 	public function getValidationErrMsg($fieldName, $funcName = null)
 	{
-		$retval = gettext('Unknown error in field: ' . $fieldName);
+		$retval = _('Unknown error in field: ' . $fieldName);
 		if (is_null($funcName))
 		{
 			$stack = debug_backtrace(false);
@@ -882,7 +882,7 @@ class cfgForm extends quickForm implements Serializable
 				if ($testPass)
 					continue;
 				//
-				$this->errQueue[] = sprintf(gettext("The field '%s' is required."), gettext($reqFldMap['fCaptions'][$fKey]));
+				$this->errQueue[] = sprintf(_("The field '%s' is required."), _($reqFldMap['fCaptions'][$fKey]));
 			}
 		}
 	}
@@ -901,7 +901,7 @@ class cfgForm extends quickForm implements Serializable
 			}
 			if (preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/", $str))
 			{
-				$this->errQueue[] = sprintf(gettext("The field '%s' contains invalid characters."), $aKey);
+				$this->errQueue[] = sprintf(_("The field '%s' contains invalid characters."), $aKey);
 			}
 		}
 	}
@@ -923,7 +923,7 @@ class cfgForm extends quickForm implements Serializable
 		$portNumericString = &$_POST[$fieldName];
 		if (!ctype_digit($portNumericString))
 		{
-			$this->errQueue[] = gettext('A valid port must be specified.') . ' (' . gettext('Port value must be a number') . ')';
+			$this->errQueue[] = _('A valid port must be specified.') . ' (' . _('Port value must be a number') . ')';
 		}
 		// set a lower start base if we want priveleged ports also
 		if (!$unprivileged)
@@ -932,7 +932,7 @@ class cfgForm extends quickForm implements Serializable
 		}
 		if (($portNumericString < $lowerPort) OR ($portNumericString > 65535))
 		{
-			$this->errQueue[] = gettext('Port value must be greather than 1023.');
+			$this->errQueue[] = _('Port value must be greather than 1023.');
 		}
 	}
 
@@ -1046,7 +1046,7 @@ class cfgForm extends quickForm implements Serializable
 		{
 			return;
 		}
-		$this->errQueue[] = $ident . gettext('A valid IP address must be specified.');
+		$this->errQueue[] = $ident . _('A valid IP address must be specified.');
 	}
 
 	public function validForm()

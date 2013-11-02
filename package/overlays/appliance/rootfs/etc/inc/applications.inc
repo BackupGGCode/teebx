@@ -131,7 +131,7 @@ EOD;
 
 	$application = array();
 
-	$application['name'] = gettext("New Application");
+	$application['name'] = _("New Application");
 	$application['uniqid'] = "DIALPLAN-APPLICATION-" . uniqid(rand());
 	$application['applicationlogic'] = base64_encode($defaultlogic);
 	$application['type'] = "php";
@@ -164,8 +164,8 @@ function applications2_verify_application($post, $errors)
 	$application = array();
 
 	v_cleanliness(&$post, &$errors);
-	v_required('name', gettext('Name'), &$application, &$post, &$errors);
-	v_required('extension', gettext('Number'), &$application, &$post, &$errors);
+	v_required('name', _('Name'), &$application, &$post, &$errors);
+	v_required('extension', _('Number'), &$application, &$post, &$errors);
 	v_optional('descr', &$application, &$post);
 	v_public_access_editor(&$application, &$post, &$errors);
 	v_applicationlogic(&$application, &$post, &$errors);

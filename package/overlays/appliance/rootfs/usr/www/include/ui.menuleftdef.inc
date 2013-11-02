@@ -8,42 +8,42 @@ $left_items = array
 (
 	array
 	(
-		'label' => gettext('System'),
+		'label' => _('System'),
 		'child' => array
 		(
 			array
 			(
-				'label' => gettext('General Setup'),
+				'label' => _('General Setup'),
 				'url' => 'sys_general.php'
 			),
 			array
 			(
-				'label' => gettext('Networking'),
+				'label' => _('Networking'),
 				'url' => 'sys_network.php'
 			),
 			array
 			(
-				'label' => gettext('Storage'),
+				'label' => _('Storage'),
 				'url' => 'sys_storage.php'
 			),
 			array
 			(
-				'label' => gettext('Notifications'),
+				'label' => _('Notifications'),
 				'url' => 'notifications_email.php'
 			),
 			array
 			(
-				'label' => gettext('Telephony Ports'),
+				'label' => _('Telephony Ports'),
 				'child' => array
 				(
 					array
 					(
-						'label' => gettext('Analog'),
+						'label' => _('Analog'),
 						'url' => 'ports_analog.php'
 					),
 					array
 					(
-						'label' => gettext('ISDN'),
+						'label' => _('ISDN'),
 						'url' => 'ports_isdn.php'
 					)
 				)
@@ -52,123 +52,123 @@ $left_items = array
 	),
 	array
 	(
-		'label' => gettext('Accounts'),
+		'label' => _('Accounts'),
 		'child' => array
 		(
 			array
 			(
-				'label' => gettext('Providers'),
+				'label' => _('Providers'),
 				'url' => 'accounts_providers.php'
 			),
 			array
 			(
-				'label' => gettext('Groups'),
+				'label' => _('Groups'),
 				'url' => 'accounts_phones.php'
 			)
 		)
 	),
 	array
 	(
-		'label' => gettext('Dialplan'),
+		'label' => _('Dialplan'),
 		'child' => array
 		(
 			array
 			(
-				'label' => gettext('Phones'),
+				'label' => _('Phones'),
 				'url' => 'accounts_phones.php'
 			),
 			array
 			(
-				'label' => gettext('Ring groups'),
+				'label' => _('Ring groups'),
 				'url' => 'dialplan_callgroups.php'
 			),
 			array
 			(
-				'label' => gettext('Conferencing'),
+				'label' => _('Conferencing'),
 				'url' => 'services_conferencing.php'
 			),
 			array
 			(
-				'label' => gettext('Faxes'),
+				'label' => _('Faxes'),
 				'url' => 'accounts_faxes.php'
 			),
 			array
 			(
-				'label' => gettext('Applications'),
+				'label' => _('Applications'),
 				'url' => 'dialplan_applications.php'
 			),
 			array
 			(
-				'label' => gettext('Feature codes'),
+				'label' => _('Feature codes'),
 				'url' => 'dialplan_transfers.php'
 			)
 		)
 	),
 	array
 	(
-		'label' => gettext('Services'),
+		'label' => _('Services'),
 		'child' => array
 		(
 			array
 			(
-				'label' => gettext('Voicemail'),
+				'label' => _('Voicemail'),
 				'url' => 'services_voicemail.php'
 			),
 			array
 			(
-				'label' => gettext('MOH'),
+				'label' => _('MOH'),
 				'url' => 'services_media_moh.php'
 			)
 		)
 	),
 	array
 	(
-		'label' => gettext('Maintenance'),
+		'label' => _('Maintenance'),
 		'child' => array
 		(
 			array
 			(
-				'label' => gettext('Firmware'),
+				'label' => _('Firmware'),
 				'url' => 'system_firmware.php'
 			),
 			array
 			(
-				'label' => gettext('Backup/Restore'),
+				'label' => _('Backup/Restore'),
 				'url' => 'system_backup.php'
 			),
 			array
 			(
-				'label' => gettext('Factory Defaults'),
+				'label' => _('Factory Defaults'),
 				'url' => 'system_defaults.php'
 			),
 			array
 			(
-				'label' => gettext('Reboot'),
+				'label' => _('Reboot'),
 				'url' => 'system_reboot.php'
 			),
 			array
 			(
-				'label' => gettext('Status'),
+				'label' => _('Status'),
 				'child' => array
 				(
 					array
 					(
-						'label' => gettext('Logs'),
+						'label' => _('Logs'),
 						'url' => 'maint_status_logs.php?show=kernel'
 					),
 					array
 					(
-						'label' => gettext('Network Traffic'),
+						'label' => _('Network Traffic'),
 						'url' => 'status_graph_traffic.php'
 					),
 					array
 					(
-						'label' => gettext('Ports'),
+						'label' => _('Ports'),
 						'url' => 'status_ports.php'
 					),
 					array
 					(
-						'label' => gettext('CPU Load'),
+						'label' => _('CPU Load'),
 						'url' => 'status_graph_cpu.php'
 					)
 				)
@@ -177,37 +177,37 @@ $left_items = array
 	),
 	array
 	(
-		'label' => gettext('Advanced'),
+		'label' => _('Advanced'),
 		'child' => array
 		(
 			array
 			(
-				'label' => gettext('SIP'),
+				'label' => _('SIP'),
 				'url' => 'advanced_sip.php'
 			),
 			array
 			(
-				'label' => gettext('IAX'),
+				'label' => _('IAX'),
 				'url' => 'advanced_iax.php'
 			),
 			array
 			(
-				'label' => gettext('RTP'),
+				'label' => _('RTP'),
 				'url' => 'advanced_rtp.php'
 			),
 			array
 			(
-				'label' => gettext('Analog'),
+				'label' => _('Analog'),
 				'url' => 'advanced_analog.php'
 			),
 			array
 			(
-				'label' => gettext('Manager'),
+				'label' => _('Manager'),
 				'url' => 'advanced_manager.php'
 			),
 			array
 			(
-				'label' => gettext('GUI Options'),
+				'label' => _('GUI Options'),
 				'url' => 'advanced_guioptions.php'
 			)
 		)

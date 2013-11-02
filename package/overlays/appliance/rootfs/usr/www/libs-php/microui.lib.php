@@ -71,7 +71,7 @@ function showErrBlock(&$errMsg)
 	//
 	if ($msg != '')
 	{
-		$msg = gettext('The following input errors were detected:') . "<ul>$msg</ul>";
+		$msg = _('The following input errors were detected:') . "<ul>$msg</ul>";
 		echo sprintf('<div id="msgbox" class="error"><div>%s</div></div>', $msg);
 	}
 }
@@ -80,9 +80,9 @@ function showPbxRestartWarning($msg = null)
 {
 	if (is_null($msg))
 	{
-		$msg = '<span>' . gettext('Warning') . ':</span><br>';
-		$msg .= gettext('after you click &quot;Save&quot;, all current calls will be dropped.') . '<br>';
-		$msg .= gettext('Pbx will restart.');
+		$msg = '<span>' . _('Warning') . ':</span><br>';
+		$msg .= _('after you click &quot;Save&quot;, all current calls will be dropped.') . '<br>';
+		$msg .= _('Pbx will restart.');
 	}
 	echo '<div class="save_warning">' . $msg . '</div>';
 }
@@ -92,9 +92,9 @@ function showSaveWarning(&$msg, $restartMsg = false)
 	$appendStr = '';
 	if ($restartMsg)
 	{
-		$appendStr .= '<br><strong>' . gettext('System will restart.') . '</strong>';
+		$appendStr .= '<br><strong>' . _('System will restart.') . '</strong>';
 	}
-	echo '<div class="save_warning"><span>' . gettext('Warning') . ':</span></div>';
+	echo '<div class="save_warning"><span>' . _('Warning') . ':</span></div>';
 	echo '<div class="hint">' . $msg . $appendStr . '</div>';
 }
 

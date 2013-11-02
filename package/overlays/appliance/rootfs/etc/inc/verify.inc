@@ -472,7 +472,7 @@ function verify_input($postdata, $reqdfields, $reqdfieldsn, $input_errors)
 	{
 		if (is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/", $pd))
 		{
-			$input_errors[] = sprintf(gettext("The field '%s' contains invalid characters."), $pn);
+			$input_errors[] = sprintf(_("The field '%s' contains invalid characters."), $pn);
 		}
 	}
 
@@ -480,7 +480,7 @@ function verify_input($postdata, $reqdfields, $reqdfieldsn, $input_errors)
 	{
 		if (!isset($_POST[$reqdfields[$i]]) || ($_POST[$reqdfields[$i]] === ""))
 		{
-			$input_errors[] = sprintf(gettext("The field '%s' is required."), gettext($reqdfieldsn[$i]));
+			$input_errors[] = sprintf(_("The field '%s' is required."), _($reqdfieldsn[$i]));
 		}
 	}
 }
@@ -492,7 +492,7 @@ function v_cleanliness($post, $errors)
 	{
 		if (is_string($pd) && preg_match("/[\\x00-\\x08\\x0b\\x0c\\x0e-\\x1f]/", $pd))
 		{
-			$errors[] = sprintf(gettext("The field '%s' contains invalid characters."), $pn);
+			$errors[] = sprintf(_("The field '%s' contains invalid characters."), $pn);
 		}
 	}
 }
@@ -501,11 +501,11 @@ function v_extension($element, $post, $errors)
 {
 	if (!strlen($post['extension']))
 	{
-		$errors[] = gettext("Missing extension number.");
+		$errors[] = _("Missing extension number.");
 	}
 	else if (preg_match("/[^0-9]/", $post['extension']))
 	{
-		$errors[] = gettext("Invalid extension number. Use only numerals.");
+		$errors[] = _("Invalid extension number. Use only numerals.");
 	}
 	$element['extension'] = $post['extension'];
 }
@@ -514,7 +514,7 @@ function v_callerid($element, $post, $errors)
 {
 	if (!strlen($post['callerid'])) // || preg_match("/^[a-z0-9]+(\s{1}[a-z0-9]|[a-z0-9])+$/i", $post['callerid'])) {
 	{
-		$errors[] = gettext("Missing caller id.");
+		$errors[] = _("Missing caller id.");
 	}
 	$element['callerid'] = $post['callerid'];
 }
@@ -523,7 +523,7 @@ function v_analog_port($element, $post, $errors)
 {
 	if (!strlen($post['port']))
 	{
-		$errors[] = gettext("No ports assigned.");
+		$errors[] = _("No ports assigned.");
 	}
 	$element['port'] = $post['port'];
 }
@@ -532,7 +532,7 @@ function v_public_access_editor($element, $post, $errors)
 {
 	if ($post['publicaccess'] == 'enabled' && !v_is_publicname($post['publicname']))
 	{
-		$errors[] = gettext("Invalid public access alias.");
+		$errors[] = _("Invalid public access alias.");
 	}
 	$element['publicaccess'] = v_strip($post['publicaccess']);
 	$element['publicname'] = v_strip($post['publicname']);
@@ -554,7 +554,7 @@ function v_notifications_editor($element, $post, $errors)
 {
 	if ($post['emailcallnotify'] == 'enabled' && !v_is_email($post['emailcallnotifyaddress']))
 	{
-		$errors[] = gettext("E-Mail notifications enabled but the e-mail address is invalid or missing.");
+		$errors[] = _("E-Mail notifications enabled but the e-mail address is invalid or missing.");
 	}
 	$element['emailcallnotify'] = v_strip($post['emailcallnotify']);
 	$element['emailcallnotifyaddress'] = v_strip($post['emailcallnotifyaddress']);
@@ -564,7 +564,7 @@ function v_voicemail_editor($element, $post, $errors)
 {
 	if ($post['vmtoemail'] == 'enabled' && !v_is_email($post['vmtoemailaddress']))
 	{
-		$errors[] = gettext("Voicemail to e-mail enabled but the e-mail address is invalid or missing.");
+		$errors[] = _("Voicemail to e-mail enabled but the e-mail address is invalid or missing.");
 	}
 	$element['vmtoemail'] = v_strip($post['vmtoemail']);
 	$element['vmtoemailaddress'] = v_strip($post['vmtoemailaddress']);
@@ -613,7 +613,7 @@ function v_password($element, $post)
 {
 	if (!strlen($s))
 	{
-		$errors[] = gettext("Missing password.");
+		$errors[] = _("Missing password.");
 	}
 	$element['secret'] = $post['secret'];
 }
@@ -622,11 +622,11 @@ function v_dialstring($element, $post, $errors)
 {
 	if (!strlen($post['dialstring']))
 	{
-		$errors[] = gettext("Missing dialstring.");
+		$errors[] = _("Missing dialstring.");
 	}
 	else if (!preg_match("/^[a-zA-Z0-9\-\.\+\@]+$/", $post['dialstring']))
 	{
-		$errors[] = gettext("An invalid dialstring was entered.");
+		$errors[] = _("An invalid dialstring was entered.");
 	}
 	$element['dialstring'] = $post['dialstring'];
 }
@@ -635,7 +635,7 @@ function v_port($element, $post, $errors)
 {
 	if (strlen($post['port']) && ($post['port'] < 1 || $post['port'] > 65535))
 	{
-		$errors[] = gettext("An invalid port was entered.");
+		$errors[] = _("An invalid port was entered.");
 	}
 	$element['port'] = v_strip($post['port']);
 }
@@ -649,7 +649,7 @@ function v_incoming_prov_routing($element, $post, $errors)
 		{
 			if ($map['incomingpattern'] && !pbx_is_valid_dialpattern($map['incomingpattern'], &$internal_error, true))
 			{
-				$errors[] = sprintf(gettext("The incoming extension pattern \"%s\" is invalid. %s"), $map['incomingpattern'], $internal_error);
+				$errors[] = sprintf(_("The incoming extension pattern \"%s\" is invalid. %s"), $map['incomingpattern'], $internal_error);
 			}
 		}
 	}
@@ -665,7 +665,7 @@ function v_outgoing_prov_routing($element, $post, $errors)
 		{
 			if (!pbx_is_valid_dialpattern($p, &$internal_error))
 			{
-				$errors[] = sprintf(gettext("The outgoing dial-pattern \"%s\" is invalid. %s"), $p, $internal_error);
+				$errors[] = sprintf(_("The outgoing dial-pattern \"%s\" is invalid. %s"), $p, $internal_error);
 			}
 		}
 	}
@@ -676,11 +676,11 @@ function v_outgoing_prov_callerid($element, $post, $errors)
 {
 	if ($post['calleridsource'] == "string" && !pbx_is_valid_callerid_string($post['calleridstring']))
 	{
-		$errors[] = gettext("A valid outgoing Caller ID must be specified (e.g. John Smith <12345>).");
+		$errors[] = _("A valid outgoing Caller ID must be specified (e.g. John Smith <12345>).");
 	}
 	if ($post['calleridsource'] == "phonesplusprefix" && !isset($post['calleridnumberprefix']))
 	{
-		$errors[] = gettext("A valid outgoing Caller ID number prefix must be specified.");
+		$errors[] = _("A valid outgoing Caller ID number prefix must be specified.");
 	}
 	$element['calleridsource'] = $post['calleridsource'];
 	$element['calleridstring'] = v_strip($post['calleridstring']);
@@ -691,15 +691,15 @@ function v_incoming_prov_callerid($element, $post, $errors)
 {
 	if ($post['override'] == "replace" && !pbx_is_valid_callerid_string($post['overridestring']))
 	{
-		$errors[] = gettext("A valid incoming Caller ID override must be specified (e.g. John Smith <12345>).");
+		$errors[] = _("A valid incoming Caller ID override must be specified (e.g. John Smith <12345>).");
 	}
 	if ($post['override'] == "prepend" && !isset($post['overridestring']))
 	{
-		$errors[] = gettext("A text must be specified to prepend to the incoming Caller ID name.");
+		$errors[] = _("A text must be specified to prepend to the incoming Caller ID name.");
 	}
 	if ($post['override'] == "prependnumber" && !isset($post['overridestring']))
 	{
-		$errors[] = gettext("A number must be specified to prepend to the incoming Caller ID number.");
+		$errors[] = _("A number must be specified to prepend to the incoming Caller ID number.");
 	}
 	$element['override'] = ($post['override'] != "disable") ? $post['override'] : false;
 	$element['overridestring'] = v_strip($post['overridestring']);
@@ -711,11 +711,11 @@ function v_numeric($field, $name, $element, $post, $errors, $required = false)
 	{
 		if (!strlen($post[$field]))
 		{
-			$errors[] = sprintf(gettext("The %s field is required."), $name);
+			$errors[] = sprintf(_("The %s field is required."), $name);
 		}
 		else if (preg_match("/[^0-9]/", $post[$field]))
 		{
-			$errors[] = sprintf(gettext("The %s field must be numeric."), $name);
+			$errors[] = sprintf(_("The %s field must be numeric."), $name);
 		}
 		$element[$field] = $post[$field];
 	}
@@ -723,7 +723,7 @@ function v_numeric($field, $name, $element, $post, $errors, $required = false)
 	{
 		if (strlen($post[$field]) && preg_match("/[^0-9]/", $post[$field]))
 		{
-			$errors[] = sprintf(gettext("The %s field must be numeric."), $name);
+			$errors[] = sprintf(_("The %s field must be numeric."), $name);
 		}
 		$element[$field] = v_strip($post[$field]);
 	}
@@ -733,7 +733,7 @@ function v_required($field, $name, $element, $post, $errors)
 {
 	if (!strlen($post[$field]))
 	{
-		$errors[] = sprintf(gettext("The %s field is required."), $name);
+		$errors[] = sprintf(_("The %s field is required."), $name);
 	}
 	$element[$field] = $post[$field];
 }
@@ -767,7 +767,7 @@ function v_manualattributes($element, $post, $errors)
 		// basic formatting check
 		if (!preg_match("/^.+=.+/", $lines[$i]))
 		{
-			$errors[] = sprintf(gettext("Manual Attribute line number %s is invalid."), ($i + 1));
+			$errors[] = sprintf(_("Manual Attribute line number %s is invalid."), ($i + 1));
 		}
 	}
 
@@ -786,7 +786,7 @@ function v_applicationlogic($element, $post, $errors)
 		unlink($tmpfilepath);
 		if ($retval != 0)
 		{
-			$errormessage = gettext("PHP parsing error") . ":";
+			$errormessage = _("PHP parsing error") . ":";
 			foreach ($output as $out)
 			{
 				if (strpos($out, "Parse error: ") !== false)

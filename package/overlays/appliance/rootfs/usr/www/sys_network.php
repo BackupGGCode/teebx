@@ -38,7 +38,7 @@ define('INCLUDE_FORMSTYLE', true);
 define('INCLUDE_TABSFILES', 'jshelper');
 define('INCLUDE_JSCRIPTS', 'sys_network.conditionalfields.js');
 // page title
-$pgtitle = array(gettext('System'), gettext('Networking'));
+$pgtitle = array(_('System'), _('Networking'));
 // set pointers to the actual configuration variables
 // interface options
 $cfgPtr['if'] = &$config['interfaces']['lan']['if'];
@@ -70,14 +70,14 @@ $oldIpaddr = $netInterfaces[$cfgPtr['if']]['ipaddr'];
 $form = new cfgForm('sys_network.php', 'method=post|name=iform|id=iform');
 // initialize form
 $form->startWrapper('tab-1');
-	$form->startFieldset('fset_lanport', gettext('Port') . " {$cfgPtr['if']} ({$netInterfaces[$cfgPtr['if']]['mac']})");
+	$form->startFieldset('fset_lanport', _('Port') . " {$cfgPtr['if']} ({$netInterfaces[$cfgPtr['if']]['mac']})");
 		// if address mode selector
 		$form->startBlock('rw_usedhcp');
-			$form->setLabel(null, gettext('Settings'), 'dhcp', 'class=labelcol');
+			$form->setLabel(null, _('Settings'), 'dhcp', 'class=labelcol');
 			$form->startBlock('rw_usedhcp', 'right');
 				$form->setField('dhcp', 'select', 'name=dhcp', false, 'yes');
-				$selectOpts['yes'] = gettext('configured via DHCP client');
-				$selectOpts['no'] = gettext('configured manually');
+				$selectOpts['yes'] = _('configured via DHCP client');
+				$selectOpts['no'] = _('configured manually');
 				$form->setSelectOptFill('dhcp', $selectOpts);
 				$form->setFieldOptionsState('dhcp', $cfgPtr['dhcp']);
 				unset($selectOpts);
@@ -85,13 +85,13 @@ $form->startWrapper('tab-1');
 		$form->exitBlock();
 		// static ip address and netmask
 		$form->startBlock('rw_ipaddr');
-			$form->setLabel(null, gettext('IP Address'), 'ipaddr', 'class=labelcol');
+			$form->setLabel(null, _('IP Address'), 'ipaddr', 'class=labelcol');
 			$form->startBlock('rw_ipaddr', 'right');
 				$form->setField('ipaddr', 'text', 'size=15|maxlength=15', false, '192.168.1.222');
 				$form->setInputText('ipaddr', $cfgPtr['ipaddr']);
 				$form->setValidationFunc('ipaddr', 'validIpAddr');
 				// netmask selector
-				$form->setLabel(null, gettext('Subnet') . ' /', 'subnet');
+				$form->setLabel(null, _('Subnet') . ' /', 'subnet');
 				$form->setField('subnet', 'select', 'name=subnet', false, '24');
 				$form->setSelectOptFill('subnet', $netmask);
 				$form->setFieldOptionsState('subnet', $cfgPtr['subnet']);
@@ -99,7 +99,7 @@ $form->startWrapper('tab-1');
 		$form->exitBlock();
 		// gateway
 		$form->startBlock('rw_gateway');
-			$form->setLabel(null, gettext('Gateway'), 'gateway', 'class=labelcol');
+			$form->setLabel(null, _('Gateway'), 'gateway', 'class=labelcol');
 			$form->startBlock('rw_gateway', 'right');
 				$form->setField('gateway', 'text', 'size=15|maxlength=15', false, '192.168.1.1');
 				$form->setInputText('gateway', $cfgPtr['gateway']);
@@ -108,20 +108,20 @@ $form->startWrapper('tab-1');
 		$form->exitBlock();
 		// mac spoofing
 		$form->startBlock('rw_spoofmac');
-			$form->setLabel(null, gettext('MAC Address'), 'spoofmac', 'class=labelcol');
+			$form->setLabel(null, _('MAC Address'), 'spoofmac', 'class=labelcol');
 			$form->startBlock('rw_spoofmac', 'right');
 				$form->setField('spoofmac', 'text', 'size=17|maxlength=17');
 				$form->setInputText('spoofmac', $cfgPtr['spoofmac']);
 				$form->setBlockHint('hint-spoofmac',
-					gettext('This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank')
+					_('This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank')
 				);
 			//
 		$form->exitBlock();
 	$form->exitFieldSet();
-	$form->startFieldset('fset_dns', gettext('DNS Servers'));
+	$form->startFieldset('fset_dns', _('DNS Servers'));
 		// dns servers
 		$form->startBlock('rw_dnsserver');
-			$form->setLabel(null, gettext('IP Addresses'), 'dnsserver', 'class=labelcol');
+			$form->setLabel(null, _('IP Addresses'), 'dnsserver', 'class=labelcol');
 			$form->startBlock('rw_dnsserver', 'right');
 			$form->startWrapper('rw_dnsopts', 'controls');
 				$form->startWrapper('dnstpl', 'cloneable', 'class=cloneable');
@@ -139,30 +139,30 @@ $form->startWrapper('tab-1');
 	$form->exitFieldSet();
 $form->exitWrapper();
 $form->startWrapper('tab-2');
-	$form->startFieldset('fset_topo', gettext('Topology'));
+	$form->startFieldset('fset_topo', _('Topology'));
 		// network topology
 		$form->startBlock('rw_topology');
-			$form->setLabel(null, gettext('Topology'), 'topology', 'class=labelcol');
+			$form->setLabel(null, _('Topology'), 'topology', 'class=labelcol');
 			$form->startBlock('rw_topology', 'right');
 				$form->setField('topology', 'select', 'name=topology');
-				$selectOpts['public'] = gettext('Public IP address');
-				$selectOpts['natstatic'] = gettext('NAT + static public IP');
-				$selectOpts['natdynamichost'] = gettext('NAT + dynamic public IP');
+				$selectOpts['public'] = _('Public IP address');
+				$selectOpts['natstatic'] = _('NAT + static public IP');
+				$selectOpts['natdynamichost'] = _('NAT + dynamic public IP');
 				$form->setSelectOptFill('topology', $selectOpts);
 				$form->setFieldOptionsState('topology', $cfgPtr['topology']);
 				unset($selectOpts);
 				$form->setBlockHint('hint-topology',
 					'<ul>' .
-					'<li>' . gettext('Public IP Address: this PBX has a routable IP address (entered above)') . '</li>'.
-					'<li>' . gettext('NAT + Static Public IP: this PBX is behind a NAT which has a static public IP. Enter this IP below.') . '</li>' .
-					'<li>' . gettext('NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below.') . '</li>' .
+					'<li>' . _('Public IP Address: this PBX has a routable IP address (entered above)') . '</li>'.
+					'<li>' . _('NAT + Static Public IP: this PBX is behind a NAT which has a static public IP. Enter this IP below.') . '</li>' .
+					'<li>' . _('NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below.') . '</li>' .
 					'</ul>'
 				);
 			//
 		$form->exitBlock();
 		// public ip address
 		$form->startBlock('rw_extipaddr');
-			$form->setLabel(null, gettext('Static Public IP'), 'extipaddr', 'class=labelcol');
+			$form->setLabel(null, _('Static Public IP'), 'extipaddr', 'class=labelcol');
 			$form->startBlock('rw_extipaddr', 'right');
 				$form->setField('extipaddr', 'text', 'size=15|maxlength=15');
 				$form->setInputText('extipaddr', $cfgPtr['extipaddr']);
@@ -170,25 +170,25 @@ $form->startWrapper('tab-2');
 		$form->exitBlock();
 		// public host name
 		$form->startBlock('rw_exthostname');
-			$form->setLabel(null, gettext('Public Hostname'), 'exthostname', 'class=labelcol');
+			$form->setLabel(null, _('Public Hostname'), 'exthostname', 'class=labelcol');
 			$form->startBlock('rw_exthostname', 'right');
 				$form->setField('exthostname', 'text', 'size=32', true);
 				$form->setInputText('exthostname', $cfgPtr['exthostname']);
-				$form->setLabel(null, gettext('This information should be updated by:'), null, null, true);
+				$form->setLabel(null, _('This information should be updated by:'), null, null, true);
 				$form->setField('hostnameupdatesrc', 'radio', null, false, 'router');
 				$form->setRadioItems('hostnameupdatesrc',
-					'router=' . gettext('My Router') . '|' .
-					'local=' . gettext('This system'),
+					'router=' . _('My Router') . '|' .
+					'local=' . _('This system'),
 					true
 				);
 				$form->setCbState('hostnameupdatesrc', $cfgPtr['hostnameupdatesrc']);
 			//
 		$form->exitBlock();
 	$form->exitFieldSet();
-	$form->startFieldset('fset_dyndns', gettext('Dynamic DNS Client'));
+	$form->startFieldset('fset_dyndns', _('Dynamic DNS Client'));
 		// dynamic dns
 		$form->startBlock('rw_service');
-			$form->setLabel(null, gettext('Service Type'), 'dyndnstype', 'class=labelcol');
+			$form->setLabel(null, _('Service Type'), 'dyndnstype', 'class=labelcol');
 			$form->startBlock('rw_service', 'right');
 				$form->setField('dyndnstype', 'select', 'name=dyndnstype');
 				$form->setSelectOptFill('dyndnstype', $ddnsProviders);
@@ -197,7 +197,7 @@ $form->startWrapper('tab-2');
 		$form->exitBlock();
 		// ddns username
 		$form->startBlock('rw_dyndnsusername');
-			$form->setLabel(null, gettext('Username'), 'dyndnsusername', 'class=labelcol');
+			$form->setLabel(null, _('Username'), 'dyndnsusername', 'class=labelcol');
 			$form->startBlock('rw_dyndnsusername', 'right');
 				$form->setField('dyndnsusername', 'text', 'size=32');
 				$form->setInputText('dyndnsusername', $cfgPtr['dyndnsusername']);
@@ -205,7 +205,7 @@ $form->startWrapper('tab-2');
 		$form->exitBlock();
 		// ddns password
 		$form->startBlock('rw_dyndnspassword');
-			$form->setLabel(null, gettext('Password'), 'dyndnspassword', 'class=labelcol');
+			$form->setLabel(null, _('Password'), 'dyndnspassword', 'class=labelcol');
 			$form->startBlock('rw_dyndnspassword', 'right');
 				$form->setField('dyndnspassword', 'text', 'size=32');
 				$form->setInputText('dyndnspassword', $cfgPtr['dyndnspassword']);
@@ -213,17 +213,17 @@ $form->startWrapper('tab-2');
 		$form->exitBlock();
 		// ddns domain wildcards
 		$form->startBlock('rw_dyndnswildcard');
-			$form->setLabel(null, gettext('Wildcards'), 'dyndnswildcard', 'class=labelcol');
+			$form->setLabel(null, _('Wildcards'), 'dyndnswildcard', 'class=labelcol');
 			$form->startBlock('rw_dyndnswildcard', 'right');
 				$form->setField('dyndnswildcard', 'checkbox');
-				$form->setCbItems('dyndnswildcard', 'yes=' . gettext('Yes, alias "*.hostname.domain" to hostname specified above.'), true);
+				$form->setCbItems('dyndnswildcard', 'yes=' . _('Yes, alias "*.hostname.domain" to hostname specified above.'), true);
 				$form->setCbState('dyndnswildcard', $cfgPtr['dyndnswildcard']);
 			//
 		$form->exitBlock();
 	$form->exitFieldSet();
 $form->exitWrapper();
 $form->startWrapper('tab-3');
-	$form->startFieldset('fset_routes', gettext('Static routes'));
+	$form->startFieldset('fset_routes', _('Static routes'));
 	// static routes
 		$form->startBlock('rw_route');
 			$form->setLabel(null, '#1', 'routeaddress', 'class=labelcol');
@@ -232,20 +232,20 @@ $form->startWrapper('tab-3');
 				//
 				$form->startWrapper('routetpl', 'cloneable', 'class=cloneable');
 					$form->setField('remove', 'button', 'class=remove removeitem|value=', false);
-					$form->setLabel(null, gettext('Address'), 'raddress');
+					$form->setLabel(null, _('Address'), 'raddress');
 					$form->setField('raddress', 'text', 'disabled=disabled|size=17', false);
 					$form->setValidationFunc('raddress', 'validIpAddr');
-					$form->setLabel(null, gettext('Subnet') . ' /', 'rsubnet');
+					$form->setLabel(null, _('Subnet') . ' /', 'rsubnet');
 					$form->setField('rsubnet', 'select', 'disabled=disabled', true, '24');
 					$form->setSelectOptFill('rsubnet', $netmask);
-					$form->setLabel(null, gettext('Gateway'), 'rgateway');
+					$form->setLabel(null, _('Gateway'), 'rgateway');
 					$form->setField('rgateway', 'text', 'disabled=disabled|size=17', false);
-					$form->setLabel(null, gettext('Interface'), 'rdev');
+					$form->setLabel(null, _('Interface'), 'rdev');
 					$form->setField('rdev', 'select', 'disabled=disabled', false);
 					$form->setSelectOptFill('rdev', network_get_interface_names());
 					$form->setValidationFunc('rgateway', 'validIpAddr');
-					$form->setRequired('rgateway', gettext('Gateway'), 'rdev=__NONULL__');
-					$form->setRequired('raddress', gettext('Address'), 'rdev=__NONULL__');
+					$form->setRequired('rgateway', _('Gateway'), 'rdev=__NONULL__');
+					$form->setRequired('raddress', _('Address'), 'rdev=__NONULL__');
 				$form->exitWrapper();
 				$form->clonePrevWrapper('route', $cfgPtr['route']);
 				//
@@ -258,15 +258,15 @@ $form->startWrapper('tab-3');
 		$form->exitBlock();
 	$form->exitFieldSet();
 $form->exitWrapper();
-$form->setField('submit', 'submit', 'value=' . gettext('Save'));
+$form->setField('submit', 'submit', 'value=' . _('Save'));
 // set required fields
-$form->setRequired('ipaddr', gettext('IP Address'), 'dhcp=no');
-$form->setRequired('subnet', gettext('Subnet'), 'dhcp=no');
-$form->setRequired('gateway', gettext('Gateway'), 'dhcp=no');
-$form->setRequired('extipaddr', gettext('Static Public IP'), 'topology=natstatic');
-$form->setRequired('exthostname', gettext('Public Hostname'), 'topology=natdynamichost');
-$form->setRequired('dyndnsusername', gettext('Dynamic DNS Client') . ': ' . gettext('Username'), 'hostnameupdatesrc=local');
-$form->setRequired('dyndnspassword', gettext('Dynamic DNS Client') . ': ' . gettext('Password'), 'hostnameupdatesrc=local');
+$form->setRequired('ipaddr', _('IP Address'), 'dhcp=no');
+$form->setRequired('subnet', _('Subnet'), 'dhcp=no');
+$form->setRequired('gateway', _('Gateway'), 'dhcp=no');
+$form->setRequired('extipaddr', _('Static Public IP'), 'topology=natstatic');
+$form->setRequired('exthostname', _('Public Hostname'), 'topology=natdynamichost');
+$form->setRequired('dyndnsusername', _('Dynamic DNS Client') . ': ' . _('Username'), 'hostnameupdatesrc=local');
+$form->setRequired('dyndnspassword', _('Dynamic DNS Client') . ': ' . _('Password'), 'hostnameupdatesrc=local');
 
 //
 if ($_POST)
@@ -298,8 +298,8 @@ if ($_POST)
 						define('REDIRECT_REQ', "http://{$config['interfaces']['lan']['ipaddr']}{$_SERVER['REQUEST_URI']}");
 						define('REDIRECT_DLY', 1);
 						define('CONTENT_TOP', '<a href="' . REDIRECT_REQ . '">' .
-							gettext('Click here to') .' ' .
-							gettext('access the web UI using the new IP address') .
+							_('Click here to') .' ' .
+							_('access the web UI using the new IP address') .
 							'</a>');
 						define('FILL_FORCE_FLUSH', true);
 						include('include/blankpagetpl.php');
@@ -325,18 +325,18 @@ if (defined('REDIRECT_REQ'))
 // render the page content
 require('fbegin.inc');
 // prepare logical groups to show tabs
-$arrTabs[] = array('url' => '#tab-1', 'label' => gettext('Interface') . '/' . gettext('Dns'));
-$arrTabs[] = array('url' => '#tab-2', 'label' => gettext('Topology') . '/' . gettext('Dynamic DNS'));
-$arrTabs[] = array('url' => '#tab-3', 'label' => gettext('Routing'));
+$arrTabs[] = array('url' => '#tab-1', 'label' => _('Interface') . '/' . _('Dns'));
+$arrTabs[] = array('url' => '#tab-2', 'label' => _('Topology') . '/' . _('Dynamic DNS'));
+$arrTabs[] = array('url' => '#tab-3', 'label' => _('Routing'));
 getTabs($arrTabs, true);
 // wrap the form to make tabs working
 $form->set_formTpl('<div id="sets">' . $form->get_formTpl() . '</div>');
 // render form
 $form->renderForm();
-$msg = gettext('After you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:') .
-	'<ul><li>' . gettext('restart system'). '</li>' .
-	'<li>' . gettext('change the IP address of your computer') . '</li>' .
-	'<li>' . gettext('access the web UI using the new IP address') . '</li></ul>';
+$msg = _('After you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:') .
+	'<ul><li>' . _('restart system'). '</li>' .
+	'<li>' . _('change the IP address of your computer') . '</li>' .
+	'<li>' . _('access the web UI using the new IP address') . '</li></ul>';
 showSaveWarning($msg);
 require('fend.inc');
 ?>

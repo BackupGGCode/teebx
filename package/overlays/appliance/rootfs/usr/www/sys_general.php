@@ -30,7 +30,7 @@ require('libs-php/cfgform.class.php');
 // define some constants needed in fbegin.inc to conditionally load some js utilities and style sheets
 define('INCLUDE_FORMSTYLE', true);
 // page title
-$pgtitle = array(gettext('System'), gettext('General Setup'));
+$pgtitle = array(_('System'), _('General Setup'));
 // instantiate the config form object
 $form = new cfgForm('sys_general.php', 'method=post|name=iform|id=iform');
 // set session name
@@ -86,47 +86,47 @@ if ($_POST)
 else
 {
 	// prepare the configuration form
-	$form->startFieldSet('fset_sysmanage', gettext('Management'));
+	$form->startFieldSet('fset_sysmanage', _('Management'));
 		$form->startBlock('rw_username');
-			$form->setLabel(null, gettext('Username'), 'username', 'class=labelcol');
+			$form->setLabel(null, _('Username'), 'username', 'class=labelcol');
 			$form->startBlock('rw_username', 'right');
 				$form->setField('username', 'text', 'size=20|maxlength=64|class=required');
 				$form->setDefault('username', 'admin');
 				$form->setInputText('username', $cfgPtr['username']);
 				$form->setBlockHint('hint-username',
-					gettext('If you want to change the username for accessing the webGUI, enter it here.')
+					_('If you want to change the username for accessing the webGUI, enter it here.')
 				);
 			//
 		$form->exitBlock();
 		$form->startBlock('rw_passwd');
-			$form->setLabel(null, gettext('Password'), 'password', 'class=labelcol');
+			$form->setLabel(null, _('Password'), 'password', 'class=labelcol');
 			$form->startBlock('rw_passwd', 'right');
 				$empyPass = null;
 				$form->setField('password', 'password', 'size=20|maxlength=64|class=required');
 				$form->setInputText('password', $empyPass);
-				$form->setLabel(null, gettext('confirmation') . ':', 'password-chk');
+				$form->setLabel(null, _('confirmation') . ':', 'password-chk');
 				$form->setField('password-chk', 'password', 'size=20|maxlength=64|class=required');
 				$form->setInputText('password-chk', $empyPass);
 				$form->setBlockHint('hint-passwd',
-					gettext('If you want to change the password for accessing the web UI, enter it here twice.')
+					_('If you want to change the password for accessing the web UI, enter it here twice.')
 				);
 			//
 		$form->exitBlock();
 		$form->startBlock('rw_httpport');
-			$form->setLabel(null, gettext('webGUI port'), 'webuiport', 'class=labelcol');
+			$form->setLabel(null, _('webGUI port'), 'webuiport', 'class=labelcol');
 			$form->startBlock('rw_httpport', 'right');
 				$form->setField('webuiport', 'text', 'size=5|maxlength=5');
 				$form->setDefault('webuiport', '80');
 				$form->setInputText('webuiport', $cfgPtr['webuiport']);
 				$form->setBlockHint('hint-httpport',
-					gettext('Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP).')
+					_('Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP).')
 				);
 			//
 		$form->exitBlock();
 	$form->exitFieldSet();
-	$form->startFieldSet('fset_sethost', gettext('Hostname'));
+	$form->startFieldSet('fset_sethost', _('Hostname'));
 		$form->startBlock('rw_hostname');
-			$form->setLabel(null, gettext('Hostname'), 'hostname', 'class=labelcol');
+			$form->setLabel(null, _('Hostname'), 'hostname', 'class=labelcol');
 			$form->startBlock('rw_hostname', 'right');
 				$form->setField('hostname', 'text', 'size=24|maxlength=64|class=required');
 				$form->setInputText('hostname', $cfgPtr['hostname']);
@@ -134,15 +134,15 @@ else
 				$form->setField('domain', 'text', 'size=32|maxlength=64|class=required');
 				$form->setInputText('domain', $cfgPtr['domain']);
 				$form->setBlockHint('hint-host-domain',
-					gettext('Hostname of that system.') . '<br>' .
-					gettext('e.g.') . '&nbsp;<em>' . gettext('pbx . mydomain.com') . '</em>'
+					_('Hostname of that system.') . '<br>' .
+					_('e.g.') . '&nbsp;<em>' . _('pbx . mydomain.com') . '</em>'
 				);
 		$form->exitBlock();
 	$form->exitFieldSet();
 	//
-	$form->startFieldSet('fset_locales', gettext('Regional Settings'));
+	$form->startFieldSet('fset_locales', _('Regional Settings'));
 		$form->startBlock('rw_uilang');
-			$form->setLabel(null, gettext('webGUI language'), 'language', 'class=labelcol');
+			$form->setLabel(null, _('webGUI language'), 'language', 'class=labelcol');
 			$form->startBlock('rw_uilang', 'right');
 				$form->setField('language', 'select', 'name=language');
 				$form->setDefault('language', 'en_US');
@@ -163,11 +163,11 @@ else
 				$form->setSelectOptFill('language', $ui_language);
 				$form->setFieldOptionsState('language', $cfgPtr['language']);
 				$form->setBlockHint('hint-lang',
-					gettext('Select in which language you want the webGUI to be displayed.'));
+					_('Select in which language you want the webGUI to be displayed.'));
 			//
 		$form->exitBlock();
 		$form->startBlock('rw_tz');
-			$form->setLabel(null, gettext('Time zone'), 'timezone', 'class=labelcol');
+			$form->setLabel(null, _('Time zone'), 'timezone', 'class=labelcol');
 			$form->startBlock('rw_tz', 'right');
 				$form->setField('timezone', 'select', 'name=timezone');
 				$form->setDefault('timezone', '99000');
@@ -192,54 +192,54 @@ else
 				//
 				$form->setFieldOptionsState('timezone', $cfgPtr['timezone']);
 				$form->setBlockHint('hint-tz',
-					gettext('Select the location closest to you.'));
+					_('Select the location closest to you.'));
 			//
 		$form->exitBlock();
 	$form->exitFieldSet();
 	//
-	$form->startFieldSet('fset_timesync', gettext('Time Synchronization'));
+	$form->startFieldSet('fset_timesync', _('Time Synchronization'));
 		$form->startBlock('rw_sync');
-			$form->setLabel(null, gettext('Update Interval'), 'timeupdateinterval', 'class=labelcol');
+			$form->setLabel(null, _('Update Interval'), 'timeupdateinterval', 'class=labelcol');
 			$form->startBlock('rw_sync', 'right');
 				$form->setField('timeupdateinterval', 'select', 'name=timeupdateinterval');
 				$form->setDefault('timeupdateinterval', $defaults['system']['timeupdateinterval']);
 				//
 				$syncOptions = array(
-					'disable' => gettext('disable time synchronization'),
-					'10-minutes' => gettext('every 10 minutes'),
-					'30-minutes' => gettext('every 30 minutes'),
-					'1-hour' => gettext('every hour'),
-					'4-hours' => gettext('every 4 hours'),
-					'12-hours' => gettext('every 12 hours'),
-					'1-day' => gettext('every day')
+					'disable' => _('disable time synchronization'),
+					'10-minutes' => _('every 10 minutes'),
+					'30-minutes' => _('every 30 minutes'),
+					'1-hour' => _('every hour'),
+					'4-hours' => _('every 4 hours'),
+					'12-hours' => _('every 12 hours'),
+					'1-day' => _('every day')
 				);
 				$form->setSelectOptFill('timeupdateinterval', $syncOptions);
 				$form->setFieldOptionsState('timeupdateinterval', $cfgPtr['timeupdateinterval']);
 				$form->setBlockHint('hint-timeupdateinterval',
-					gettext('Select how often the time should be synchronized.'));
+					_('Select how often the time should be synchronized.'));
 			//
 		$form->exitBlock();
 		$form->startBlock('rw_timeservers');
-			$form->setLabel(null, gettext('NTP Server'), 'timeservers', 'class=labelcol');
+			$form->setLabel(null, _('NTP Server'), 'timeservers', 'class=labelcol');
 			$form->startBlock('rw_timeservers', 'right');
 				$form->setField('timeservers', 'text', 'size=20|maxlength=64');
 				$form->setDefault('timeservers', $defaults['system']['timeservers']);
 				$form->setInputText('timeservers', $cfgPtr['timeservers']);
 				$form->setBlockHint('hint-timeservers',
-					gettext('Enter a server to synchronize with.')
+					_('Enter a server to synchronize with.')
 				);
 			//
 		$form->exitBlock();
 	$form->exitFieldSet();
 	//
-	$form->setField('submit', 'submit', 'value=' . gettext('Save'));
+	$form->setField('submit', 'submit', 'value=' . _('Save'));
 	// set required fields
-	$form->setRequired('username', gettext('Username'));
-	$form->setRequired('hostname', gettext('Hostname'));
-	$form->setRequired('domain', gettext('domain'));
+	$form->setRequired('username', _('Username'));
+	$form->setRequired('hostname', _('Hostname'));
+	$form->setRequired('domain', _('domain'));
 	// set validation constraints
 	$validationParams = array(
-		'errorMsg' => gettext('The passwords do not match.'),
+		'errorMsg' => _('The passwords do not match.'),
 		'validSet' => array(
 			'fld' => 'password-chk', 'cond' => '==')
 		);

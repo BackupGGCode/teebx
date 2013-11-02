@@ -38,12 +38,12 @@ $data['errors'] = array();
 //
 if (!isset($_SESSION['diskedit']['token']))
 {
-	$data['errors'][] = gettext('Missing token, access not allowed!');
+	$data['errors'][] = _('Missing token, access not allowed!');
 	exit(json_encode($data));
 }
 if (!isset($_POST))
 {
-	$data['errors'][] = gettext('Missing post data!');
+	$data['errors'][] = _('Missing post data!');
 	exit(json_encode($data));
 }
 // initialize post data that may not exists
@@ -57,25 +57,25 @@ if (!isset($_POST['stk']))
 	$_POST['stk'] = null;
 // check for required session data
 if ($_POST['stk'] !== $_SESSION['diskedit']['token'])
-	$data['errors'][] = gettext('Invalid token, access not allowed!');
+	$data['errors'][] = _('Invalid token, access not allowed!');
 if (!isset($_SESSION['diskedit']['info']))
-	$data['errors'][] = gettext('Invalid or missing disk informations.');
+	$data['errors'][] = _('Invalid or missing disk informations.');
 // check that post data is plausible before continue
 if (!isset($_POST['dev']))
-	$data['errors'][] = gettext('Missing device name.');
+	$data['errors'][] = _('Missing device name.');
 if (!isset($_POST['part']))
-	$data['errors'][] = gettext('Missing partition number.');
+	$data['errors'][] = _('Missing partition number.');
 else
 {
 	if (($_POST['part'] < 1) || ($_POST['part'] > 4))
-		$data['errors'][] = gettext('Invalid partition number.');
+		$data['errors'][] = _('Invalid partition number.');
 	//
 }
 if (!isset($_POST['start']))
-	$data['errors'][] = gettext('Missing partition start sector!');
+	$data['errors'][] = _('Missing partition start sector!');
 if (is_null($_POST['label']) || ($_POST['label'] == ''))
 {
-	$data['errors'][] = gettext('Empty or missing partition label.');
+	$data['errors'][] = _('Empty or missing partition label.');
 }
 // something failed?
 if (count($data['errors']) > 0)
@@ -93,7 +93,7 @@ if (isset($disksInfo[$_POST['dev']]['__SYS_DISK__']))
 {
 	if ($newPartNum <= SYS_PARTCOUNT)
 	{
-		$data['errors'][] = gettext('Overwriting partitions not allowed on: ') . $_POST['dev'];
+		$data['errors'][] = _('Overwriting partitions not allowed on: ') . $_POST['dev'];
 	}
 }
 else
@@ -108,7 +108,7 @@ switch ($_POST['mode'])
 	case 'edit':
 		break;
 	default:
-		$data['errors'][] = gettext('Invalid or missing mode.');
+		$data['errors'][] = _('Invalid or missing mode.');
 	//
 }
 
@@ -118,7 +118,7 @@ switch ($_POST['task'])
 	case 'partformat':
 		break;
 	default:
-		$data['errors'][] = gettext('Invalid or missing task.');
+		$data['errors'][] = _('Invalid or missing task.');
 }
 
 if (count($data['errors']) > 0)
@@ -150,7 +150,7 @@ if ($_POST['task'] === 'partinit')
 		{
 				// return integer 2 instead of 0, evaluating this we will able to notice the user about actions to be done.
 				$data['retval'] = 2;
-				$data['errors'][] = gettext('Rereading partition table failed, kernel still uses old table.');
+				$data['errors'][] = _('Rereading partition table failed, kernel still uses old table.');
 		}
 	}
 }

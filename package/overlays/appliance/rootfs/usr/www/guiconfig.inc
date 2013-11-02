@@ -69,50 +69,50 @@ $d_sysrebootreqd_path = $g['varrun_path'] . "/sysreboot.reqd";
 $d_passworddirty_path = $g['varrun_path'] . "/password.dirty";
 
 $applications = array(
-	"Echo" => gettext("Echos audio and video back to the caller as soon as it is received. Used to test connection delay."),
-	"Milliwatt" => gettext("Generates a constant 1000Hz tone. Used to test connection quality."),
-	"WakeMe" => gettext("Wake-Up call manager. Call to set and cancel wake-up calls on the current extension.")
+	"Echo" => _("Echos audio and video back to the caller as soon as it is received. Used to test connection delay."),
+	"Milliwatt" => _("Generates a constant 1000Hz tone. Used to test connection quality."),
+	"WakeMe" => _("Wake-Up call manager. Call to set and cancel wake-up calls on the current extension.")
 	);
 
 $vm_email_languages = array(
-	"en-informal" => gettext("English"),
-	"en-formal" => gettext("English (formal)"),
-	"bg-informal" => gettext("Bulgarian"),
-	"bg-formal" => gettext("Bulgarian (formal)"),
-	"cs-informal" => gettext("Czech"),
-	"cs-formal" => gettext("Czech (formal)"),
-	"da-informal" => gettext("Danish"),
-	"da-formal" => gettext("Danish (formal)"),
-	"nl-informal" => gettext("Dutch"),
-	"nl-formal" => gettext("Dutch (formal)"),
-	"fi-informal" => gettext("Finnish"),
-	"fi-formal" => gettext("Finnish (formal)"),
-	"fr-informal" => gettext("French"),
-	"fr-formal" => gettext("French (formal)"),
-	"de-informal" => gettext("German"),
-	"de-formal" => gettext("German (formal)"),
-	"gr-informal" => gettext("Greek"),
-	"gr-formal" => gettext("Greek (formal)"),
-	"it-informal" => gettext("Italian"),
-	"it-formal" => gettext("Italian (formal)"),
-	"ja-formal" => gettext("Japanese (formal)"),
-	"pl-informal" => gettext("Polish"),
-	"pl-formal" => gettext("Polish (formal)"),
-	"pt-br-informal" => gettext("Portuguese, Brazil"),
-	"pt-br-formal" => gettext("Portuguese, Brazil (formal)"),
-	"ru-informal" => gettext("Russian"),
-	"ru-formal" => gettext("Russian (formal)"),
-	"es-formal" => gettext("Spanish (formal)"),
-	"se-informal" => gettext("Swedish"),
-	"tr-informal" => gettext("Turkish"),
-	"tr-formal" => gettext("Turkish (formal)")
+	"en-informal" => _("English"),
+	"en-formal" => _("English (formal)"),
+	"bg-informal" => _("Bulgarian"),
+	"bg-formal" => _("Bulgarian (formal)"),
+	"cs-informal" => _("Czech"),
+	"cs-formal" => _("Czech (formal)"),
+	"da-informal" => _("Danish"),
+	"da-formal" => _("Danish (formal)"),
+	"nl-informal" => _("Dutch"),
+	"nl-formal" => _("Dutch (formal)"),
+	"fi-informal" => _("Finnish"),
+	"fi-formal" => _("Finnish (formal)"),
+	"fr-informal" => _("French"),
+	"fr-formal" => _("French (formal)"),
+	"de-informal" => _("German"),
+	"de-formal" => _("German (formal)"),
+	"gr-informal" => _("Greek"),
+	"gr-formal" => _("Greek (formal)"),
+	"it-informal" => _("Italian"),
+	"it-formal" => _("Italian (formal)"),
+	"ja-formal" => _("Japanese (formal)"),
+	"pl-informal" => _("Polish"),
+	"pl-formal" => _("Polish (formal)"),
+	"pt-br-informal" => _("Portuguese, Brazil"),
+	"pt-br-formal" => _("Portuguese, Brazil (formal)"),
+	"ru-informal" => _("Russian"),
+	"ru-formal" => _("Russian (formal)"),
+	"es-formal" => _("Spanish (formal)"),
+	"se-informal" => _("Swedish"),
+	"tr-informal" => _("Turkish"),
+	"tr-formal" => _("Turkish (formal)")
 	);
 
 $isdn_dchannel_modes = array(0 => "",
-	"DRVR_DSS1_TE" => gettext("point-to-multipoint, terminal equipment"),
-	"DRVR_DSS1_NT" => gettext("multipoint-to-point, network termination"),
-	"DRVR_DSS1_P2P_TE" => gettext("point-to-point, terminal equipment"),
-	"DRVR_DSS1_P2P_NT" => gettext("point-to-point, network termination")
+	"DRVR_DSS1_TE" => _("point-to-multipoint, terminal equipment"),
+	"DRVR_DSS1_NT" => _("multipoint-to-point, network termination"),
+	"DRVR_DSS1_P2P_TE" => _("point-to-point, terminal equipment"),
+	"DRVR_DSS1_P2P_NT" => _("point-to-point, network termination")
 	// "DRVR_D_CHANNEL" => "default D-channel driver",
 	// "DRVR_CAPI_TE" => "",
 	// "DRVR_DIEHL_TE" => "",
@@ -124,46 +124,46 @@ $isdn_dchannel_modes = array(0 => "",
 
 // !TODO: duplicated in advanced_analog.php
 $system_tonezones = array(
-	"us" => gettext("United States / North America"),
-	"au" => gettext("Australia"),
-	"at" => gettext("Austria"),
-	"be" => gettext("Belgium"),
-	"br" => gettext("Brazil"),
-	"bg" => gettext("Bulgaria"),
-	"cl" => gettext("Chile"),
-	"cn" => gettext("China"),
-	"cz" => gettext("Czech Republic"),
-	"dk" => gettext("Denmark"),
-	"ee" => gettext("Estonia"),
-	"fi" => gettext("Finland"),
-	"fr" => gettext("France"),
-	"de" => gettext("Germany"),
-	"gr" => gettext("Greece"),
-	"hu" => gettext("Hungary"),
-	"in" => gettext("India"),
-	"il" => gettext("Israel"),
-	"it" => gettext("Italy"),
-	"ja" => gettext("Japan"),
-	"lt" => gettext("Lithuania"),
-	"my" => gettext("Malaysia"),
-	"mx" => gettext("Mexico"),
-	"nl" => gettext("Netherlands"),
-	"nz" => gettext("New Zealand"),
-	"no" => gettext("Norway"),
-	"ph" => gettext("Philippines"),
-	"pl" => gettext("Poland"),
-	"pt" => gettext("Portugal"),
-	"ru" => gettext("Russia / ex Soviet Union"),
-	"sg" => gettext("Singapore"),
-	"za" => gettext("South Africa"),
-	"es" => gettext("Spain"),
-	"se" => gettext("Sweden"),
-	"ch" => gettext("Switzerland"),
-	"tw" => gettext("Taiwan"),
-	"th" => gettext("Thailand"),
-	"uk" => gettext("United Kingdom"),
-	"us-old" => gettext("United States Circa 1950/ North America"),
-	"ve" => gettext("Venezuela / South America")
+	"us" => _("United States / North America"),
+	"au" => _("Australia"),
+	"at" => _("Austria"),
+	"be" => _("Belgium"),
+	"br" => _("Brazil"),
+	"bg" => _("Bulgaria"),
+	"cl" => _("Chile"),
+	"cn" => _("China"),
+	"cz" => _("Czech Republic"),
+	"dk" => _("Denmark"),
+	"ee" => _("Estonia"),
+	"fi" => _("Finland"),
+	"fr" => _("France"),
+	"de" => _("Germany"),
+	"gr" => _("Greece"),
+	"hu" => _("Hungary"),
+	"in" => _("India"),
+	"il" => _("Israel"),
+	"it" => _("Italy"),
+	"ja" => _("Japan"),
+	"lt" => _("Lithuania"),
+	"my" => _("Malaysia"),
+	"mx" => _("Mexico"),
+	"nl" => _("Netherlands"),
+	"nz" => _("New Zealand"),
+	"no" => _("Norway"),
+	"ph" => _("Philippines"),
+	"pl" => _("Poland"),
+	"pt" => _("Portugal"),
+	"ru" => _("Russia / ex Soviet Union"),
+	"sg" => _("Singapore"),
+	"za" => _("South Africa"),
+	"es" => _("Spain"),
+	"se" => _("Sweden"),
+	"ch" => _("Switzerland"),
+	"tw" => _("Taiwan"),
+	"th" => _("Thailand"),
+	"uk" => _("United Kingdom"),
+	"us-old" => _("United States Circa 1950/ North America"),
+	"ve" => _("Venezuela / South America")
 	);
 
 $manager_permissions = array(
@@ -215,13 +215,13 @@ function get_std_save_message($ok)
 	if ($ok == 0)
 	{
 		if (file_exists($d_sysrebootreqd_path))
-			return gettext("The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect.");
+			return _("The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect.");
 		else
-			return gettext("The changes have been applied successfully.");
+			return _("The changes have been applied successfully.");
 	}
 	else
 	{
-		return sprintf(gettext("ERROR: the changes could not be applied (error code %s)."), $ok);
+		return sprintf(_("ERROR: the changes could not be applied (error code %s)."), $ok);
 	}
 }
 
