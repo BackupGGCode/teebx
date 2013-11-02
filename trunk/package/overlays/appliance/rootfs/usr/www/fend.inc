@@ -1,7 +1,7 @@
 				</div>
 				<div style="clear:both;"></div>
 				<div id="ui_footer">
-					<?=gettext("TeeBX&reg; &copy; 2010-2013 Giovanni Vallesi. All rights reserved.");?>&nbsp;[<a href="license.php" class="tblnk"><?=gettext("view license");?></a>]
+					<?=_("TeeBX&reg; &copy; 2010-2013 Giovanni Vallesi. All rights reserved.");?>&nbsp;[<a href="license.php" class="tblnk"><?=_("view license");?></a>]
 				</div>
 			</div>
 		</div>

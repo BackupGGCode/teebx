@@ -40,7 +40,7 @@ require_once('libs-php/htmltable.class.php');
 // define some constants referenced in fbegin.inc
 define('INCLUDE_TBLSTYLE', true);
 // page title
-$pgtitle = array(gettext('System'), gettext('Storage'));
+$pgtitle = array(_('System'), _('Storage'));
 // actual configuration reference
 $cfgPtr = &$config['system']['storage'];
 // retrieve informations about system block devices
@@ -51,18 +51,18 @@ $_SESSION['diskedit']['info'] = $disksInfo;
 // init a table object
 $tblStorage = new htmlTable('id=table01|class=report');
 // fill the table caption
-$tblStorage->caption(gettext('Configured storage'));
+$tblStorage->caption(_('Configured storage'));
 // table section heading
 $tblStorage->thead();
 	$tblStorage->tr();
-		$tblStorage->th(gettext('Device name'), 'class=colheader');
-		$tblStorage->th(gettext('Label'), 'class=colheader');
-		$tblStorage->th(gettext('Mount Point'), 'class=colheader');
-		$tblStorage->th(gettext('Free'), 'class=colheader');
-		$tblStorage->th(gettext('Used'), 'class=colheader');
-		$tblStorage->th(gettext('Total'), 'class=colheader');
-		$tblStorage->th(gettext('Usage %'), 'class=colheader');
-		$tblStorage->th(gettext('Services'), 'class=colheader');
+		$tblStorage->th(_('Device name'), 'class=colheader');
+		$tblStorage->th(_('Label'), 'class=colheader');
+		$tblStorage->th(_('Mount Point'), 'class=colheader');
+		$tblStorage->th(_('Free'), 'class=colheader');
+		$tblStorage->th(_('Used'), 'class=colheader');
+		$tblStorage->th(_('Total'), 'class=colheader');
+		$tblStorage->th(_('Usage %'), 'class=colheader');
+		$tblStorage->th(_('Services'), 'class=colheader');
 	//
 // section body
 $tblStorage->tbody();
@@ -113,21 +113,21 @@ $tblStorage->tbody();
 	else
 	{
 		$tblStorage->tr();
-		$tblStorage->td(gettext('No additional storage configured.'), 'colspan=8');
+		$tblStorage->td(_('No additional storage configured.'), 'colspan=8');
 	}
 //
 // report all system devices
 // init another table object
 $tblDiskRep = new htmlTable('id=table01|class=report');
 // fill the table caption
-$tblDiskRep->caption(gettext('Disk Report'));
+$tblDiskRep->caption(_('Disk Report'));
 // table section heading
 $tblDiskRep->thead();
 	$tblDiskRep->tr();
-		$tblDiskRep->th(gettext('Free disks'), 'class=bodytitle|colspan=3');
+		$tblDiskRep->th(_('Free disks'), 'class=bodytitle|colspan=3');
 	$tblDiskRep->tr();
-		$tblDiskRep->th(gettext('Device name'), 'class=colheader');
-		$tblDiskRep->th(gettext('Size'), 'class=colheader|colspan=2');
+		$tblDiskRep->th(_('Device name'), 'class=colheader');
+		$tblDiskRep->th(_('Size'), 'class=colheader|colspan=2');
 	//
 // section body
 $tblDiskRep->tbody();
@@ -136,7 +136,7 @@ $tblDiskRep->tbody();
 	{
 		foreach (array_keys($freeDisks) as $key)
 		{
-			$diskEditTool = gettext('Click here to configure this disk');
+			$diskEditTool = _('Click here to configure this disk');
 			$actionCall = "doClickAction('new', '$key', '1', '1')";
 			$diskEditLabel = '<a class="doedit" href="#" OnClick="' . $actionCall .'" title="' . $diskEditTool . '">'
 				. '<img  src="img/add.png" alt="+">'
@@ -158,17 +158,17 @@ $tblDiskRep->tbody();
 	else
 	{
 		$tblDiskRep->tr();
-		$tblDiskRep->td(gettext('No free disk devices.'), 'colspan=3');
+		$tblDiskRep->td(_('No free disk devices.'), 'colspan=3');
 	}
 	// show system disk summary
 // section heading
 $tblDiskRep->thead();
 	$tblDiskRep->tr();
-		$tblDiskRep->th(gettext('System disk status'), 'class=bodytitle|colspan=3');
+		$tblDiskRep->th(_('System disk status'), 'class=bodytitle|colspan=3');
 	$tblDiskRep->tr();
-		$tblDiskRep->th(gettext('Label'), 'class=colheader');
-		$tblDiskRep->th(gettext('Mount Point'), 'class=colheader');
-		$tblDiskRep->th(gettext('Size'), 'class=colheader');
+		$tblDiskRep->th(_('Label'), 'class=colheader');
+		$tblDiskRep->th(_('Mount Point'), 'class=colheader');
+		$tblDiskRep->th(_('Size'), 'class=colheader');
 	//
 // section body
 $tblDiskRep->tbody();
@@ -221,17 +221,17 @@ $tblDiskRep->tbody();
 				{
 					$tblDiskRep->thead();
 					$tblDiskRep->tr();
-						$tblDiskRep->th(gettext('Device name'), 'class=colheader');
-						$tblDiskRep->th(gettext('Spare disk space'), 'class=colheader|colspan=2');
+						$tblDiskRep->th(_('Device name'), 'class=colheader');
+						$tblDiskRep->th(_('Spare disk space'), 'class=colheader|colspan=2');
 					//
-					$diskEditTool = gettext('Click here to configure this disk');
+					$diskEditTool = _('Click here to configure this disk');
 					$actionCall = "doClickAction('use-spare', '$devKey', '3', '$newPartStart')";
 					$diskEditLabel = '<a class="doedit" href="#" OnClick="' . $actionCall .'" title="' . $diskEditTool . '">'
 						. '<img  src="img/add.png" alt="+">'
 						. round($devFree)
 						.' MB</a>';
 					// this is the system disk, print a notice to the user
-					$noticeLabel = ' ' . gettext('Notice: this is the system disk, avoid using it for additional storage.');
+					$noticeLabel = ' ' . _('Notice: this is the system disk, avoid using it for additional storage.');
 					$noticeLabel .= '&nbsp;<img  src="img/alert.png" alt="!">';
 					$tblDiskRep->tbody();
 					$tblDiskRep->tr();

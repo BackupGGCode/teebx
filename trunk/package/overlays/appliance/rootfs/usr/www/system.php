@@ -33,7 +33,7 @@
 require("guiconfig.inc");
 include("timezones.inc");
 
-$pgtitle = array(gettext("System"), gettext("General Setup"));
+$pgtitle = array(_("System"), _("General Setup"));
 
 $pconfig['language'] = $config['system']['webgui']['language'];
 $pconfig['hostname'] = $config['system']['hostname'];
@@ -70,37 +70,37 @@ if ($_POST)
 
 	/* input validation */
 	$reqdfields = explode(' ', 'hostname domain username');
-	$reqdfieldsn = explode(',', gettext('Hostname,Domain,Username'));
+	$reqdfieldsn = explode(',', _('Hostname,Domain,Username'));
 
 	verify_input($_POST, $reqdfields, $reqdfieldsn, &$input_errors);
 
 	if ($_POST['hostname'] && !verify_is_hostname($_POST['hostname']))
 	{
-		$input_errors[] = gettext("The hostname may only contain the characters a-z, 0-9 and '-'.");
+		$input_errors[] = _("The hostname may only contain the characters a-z, 0-9 and '-'.");
 	}
 	if ($_POST['domain'] && !verify_is_domain($_POST['domain']))
 	{
-		$input_errors[] = gettext("The domain may only contain the characters a-z, 0-9, '-' and '.'.");
+		$input_errors[] = _("The domain may only contain the characters a-z, 0-9, '-' and '.'.");
 	}
 	if ($_POST['username'] && !preg_match("/^[a-zA-Z0-9]*$/", $_POST['username']))
 	{
-		$input_errors[] = gettext("The username may only contain the characters a-z, A-Z and 0-9.");
+		$input_errors[] = _("The username may only contain the characters a-z, A-Z and 0-9.");
 	}
 	if ($_POST['webguiport'] && (!verify_is_numericint($_POST['webguiport']) ||
 				($_POST['webguiport'] < 1) || ($_POST['webguiport'] > 65535)))
 	{
-		$input_errors[] = gettext("A valid TCP/IP port must be specified for the webGUI port.");
+		$input_errors[] = _("A valid TCP/IP port must be specified for the webGUI port.");
 	}
 	if (($_POST['password']) && ($_POST['password'] != $_POST['password2']))
 	{
-		$input_errors[] = gettext("The passwords do not match.");
+		$input_errors[] = _("The passwords do not match.");
 	}
 
 	foreach (explode(' ', $_POST['timeservers']) as $ts)
 	{
 		if (!verify_is_domain($ts))
 		{
-			$input_errors[] = gettext("A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'.");
+			$input_errors[] = _("A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'.");
 		}
 	}
 
@@ -168,62 +168,62 @@ include("fbegin.inc");
 ?><form action="system.php" method="post">
 <table width="100%" border="0" cellpadding="6" cellspacing="0">
 	<tr>
-		<td colspan="2" valign="top" class="listtopic"><?=gettext("Security");?></td>
+		<td colspan="2" valign="top" class="listtopic"><?=_("Security");?></td>
 	</tr>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("Username");?></td>
+		<td valign="top" class="vncell"><?=_("Username");?></td>
 		<td class="vtable">
 			<input name="username" type="text" class="formfld" id="username" size="20" value="<?=$pconfig['username'];?>">
 			<br>
-			<span class="vexpl"><?=gettext("If you want to change the username for accessing the webGUI, enter it here.");?></span>
+			<span class="vexpl"><?=_("If you want to change the username for accessing the webGUI, enter it here.");?></span>
 		</td>
 	</tr>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("Password");?></td>
+		<td valign="top" class="vncell"><?=_("Password");?></td>
 		<td class="vtable">
 			<input name="password" type="password" class="formfld" id="password" size="20">
 			<br>
 			<input name="password2" type="password" class="formfld" id="password2" size="20">
-			&nbsp;(<?=gettext("confirmation");?>) <br> <span class="vexpl"><?=gettext("If you want to change the password for accessing the webGUI, enter it here twice.");?></span>
+			&nbsp;(<?=_("confirmation");?>) <br> <span class="vexpl"><?=_("If you want to change the password for accessing the webGUI, enter it here twice.");?></span>
 		</td>
 	</tr><?/*
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("webGUI protocol");?></td>
+		<td valign="top" class="vncell"><?=_("webGUI protocol");?></td>
 		<td class="vtable">
 			<input name="webguiproto" type="radio" value="http" <? if ($pconfig['webguiproto'] == "http") echo "checked"; ?>>
-			<?=gettext("HTTP");?> &nbsp;&nbsp;&nbsp; <input type="radio" name="webguiproto" value="https" <? if ($pconfig['webguiproto'] == "https") echo "checked"; ?>><?=gettext("HTTPS");?>
+			<?=_("HTTP");?> &nbsp;&nbsp;&nbsp; <input type="radio" name="webguiproto" value="https" <? if ($pconfig['webguiproto'] == "https") echo "checked"; ?>><?=_("HTTPS");?>
 		</td>
 	</tr>
 	*/ ?><tr>
-		<td valign="top" class="vncell"><?=gettext("webGUI port");?></td>
+		<td valign="top" class="vncell"><?=_("webGUI port");?></td>
 		<td class="vtable">
 			<input name="webguiport" type="text" class="formfld" id="webguiport" size="5" value="<?=htmlspecialchars($pconfig['webguiport']);?>">
 			<br>
-			<?/*<span class="vexpl"><?=gettext("Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP, 443 for HTTPS).");?></span>*/?>
-			<span class="vexpl"><?=gettext("Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP).");?></span>
+			<?/*<span class="vexpl"><?=_("Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP, 443 for HTTPS).");?></span>*/?>
+			<span class="vexpl"><?=_("Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP).");?></span>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="list" height="12"></td>
 	</tr>
 	<tr>
-		<td colspan="2" valign="top" class="listtopic"><?=gettext("Hostname");?></td>
+		<td colspan="2" valign="top" class="listtopic"><?=_("Hostname");?></td>
 	</tr>
 	<tr>
-		<td width="22%" valign="top" class="vncellreq"><?=gettext("Hostname");?></td>
+		<td width="22%" valign="top" class="vncellreq"><?=_("Hostname");?></td>
 		<td width="78%" class="vtable">
 			<input name="hostname" type="text" class="formfld" id="hostname" size="25" value="<?=htmlspecialchars($pconfig['hostname']);?>"> . <input name="domain" type="text" class="formfld" id="domain" size="25" value="<?=htmlspecialchars($pconfig['domain']);?>">
 	    	<br>
-			<span class="vexpl"><?=gettext("Hostname of the PBX.");?>
+			<span class="vexpl"><?=_("Hostname of the PBX.");?>
 			<br>
-			<?=gettext("e.g. <em>pbx . mydomain.com");?></em></span>
+			<?=_("e.g. <em>pbx . mydomain.com");?></em></span>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="list" height="12"></td>
 	</tr>
 	<tr>
-		<td colspan="2" valign="top" class="listtopic"><?=gettext("Regional Settings");?></td>
+		<td colspan="2" valign="top" class="listtopic"><?=_("Regional Settings");?></td>
 	</tr>
 	<?php
 if (!isset($config['system']['webgui']['language']))
@@ -234,7 +234,7 @@ display_gui_language_selector($config['system']['webgui']['language']);
 
 ?>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("Indication Tones");?></td>
+		<td valign="top" class="vncell"><?=_("Indication Tones");?></td>
 		<td class="vtable">
 			<select name="tonezone" id="tonezone"><?
 foreach ($system_tonezones as $abbreviation => $friendly)
@@ -244,11 +244,11 @@ foreach ($system_tonezones as $abbreviation => $friendly)
 
 ?></select>
 			<br>
-			<span class="vexpl"><?=gettext("Select which country's indication tones (the ringing, busy and error tones) to be used.");?></span>
+			<span class="vexpl"><?=_("Select which country's indication tones (the ringing, busy and error tones) to be used.");?></span>
 		</td>
 	</tr>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("Time zone");?></td>
+		<td valign="top" class="vncell"><?=_("Time zone");?></td>
 		<td class="vtable">
 			<select name="timezone" id="timezone">
 				<option value="0000">UTC</option><?
@@ -265,55 +265,55 @@ foreach ($tz as $id => $t)
 
 ?></select>
 			<br>
-			<span class="vexpl"><?=gettext("Select the location closest to you.");?></span>
+			<span class="vexpl"><?=_("Select the location closest to you.");?></span>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="list" height="12"></td>
 	</tr>
 	<tr>
-		<td colspan="2" valign="top" class="listtopic"><?=gettext("Time Synchronization");?></td>
+		<td colspan="2" valign="top" class="listtopic"><?=_("Time Synchronization");?></td>
 	</tr>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("Update Interval");?></td>
+		<td valign="top" class="vncell"><?=_("Update Interval");?></td>
 		<td class="vtable">
 			<select name="timeupdateinterval" id="timeupdateinterval">
-				<option value="disable" <? if ($pconfig['timeupdateinterval'] == "disable") echo "selected";?>><?=gettext("disable time synchronization");?></option>
-				<option value="10-minutes" <? if ($pconfig['timeupdateinterval'] == "10-minutes") echo "selected";?>><?=gettext("every 10 minutes");?></option>
-				<option value="30-minutes" <? if ($pconfig['timeupdateinterval'] == "30-minutes") echo "selected";?>><?=gettext("every 30 minutes");?></option>
-				<option value="1-hour" <? if ($pconfig['timeupdateinterval'] == "1-hour") echo "selected";?>><?=gettext("every hour");?></option>
-				<option value="4-hours" <? if ($pconfig['timeupdateinterval'] == "4-hours") echo "selected";?>><?=gettext("every 4 hours");?></option>
-				<option value="12-hours" <? if ($pconfig['timeupdateinterval'] == "12-hours") echo "selected";?>><?=gettext("every 12 hours");?></option>
-				<option value="1-day" <? if ($pconfig['timeupdateinterval'] == "1-day") echo "selected";?>><?=gettext("every day");?></option>
+				<option value="disable" <? if ($pconfig['timeupdateinterval'] == "disable") echo "selected";?>><?=_("disable time synchronization");?></option>
+				<option value="10-minutes" <? if ($pconfig['timeupdateinterval'] == "10-minutes") echo "selected";?>><?=_("every 10 minutes");?></option>
+				<option value="30-minutes" <? if ($pconfig['timeupdateinterval'] == "30-minutes") echo "selected";?>><?=_("every 30 minutes");?></option>
+				<option value="1-hour" <? if ($pconfig['timeupdateinterval'] == "1-hour") echo "selected";?>><?=_("every hour");?></option>
+				<option value="4-hours" <? if ($pconfig['timeupdateinterval'] == "4-hours") echo "selected";?>><?=_("every 4 hours");?></option>
+				<option value="12-hours" <? if ($pconfig['timeupdateinterval'] == "12-hours") echo "selected";?>><?=_("every 12 hours");?></option>
+				<option value="1-day" <? if ($pconfig['timeupdateinterval'] == "1-day") echo "selected";?>><?=_("every day");?></option>
 			</select>
 			<br>
-			<span class="vexpl"><?=gettext("Select how often the time should be synchronized.");?></span>
+			<span class="vexpl"><?=_("Select how often the time should be synchronized.");?></span>
 		</td>
 	</tr>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("NTP Server");?></td>
+		<td valign="top" class="vncell"><?=_("NTP Server");?></td>
 		<td class="vtable">
 			<input name="timeservers" type="text" class="formfld" id="timeservers" size="40" value="<?=htmlspecialchars($pconfig['timeservers']);?>">
 			<br>
-			<span class="vexpl"><?=gettext("Enter a server to synchronize with.");?></span>
+			<span class="vexpl"><?=_("Enter a server to synchronize with.");?></span>
 		</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="list" height="12"></td>
 	</tr>
 	<tr>
-		<td colspan="2" valign="top" class="listtopic"><?=gettext("Service");?></td>
+		<td colspan="2" valign="top" class="listtopic"><?=_("Service");?></td>
 	</tr>
 	<tr>
-		<td valign="top" class="vncell"><?=gettext("Updates");?></td>
+		<td valign="top" class="vncell"><?=_("Updates");?></td>
 		<td class="vtable">
-			<input name="autocheck_update" type="checkbox" id="autocheck_update" value="yes" <?=$form["autocheck_update"]?>>&nbsp;<span class="vexpl"><?=gettext("Check automatically for new updates.");?></span>
+			<input name="autocheck_update" type="checkbox" id="autocheck_update" value="yes" <?=$form["autocheck_update"]?>>&nbsp;<span class="vexpl"><?=_("Check automatically for new updates.");?></span>
 		</td>
 	</tr>
 	<tr>
 		<td valign="top">&nbsp;</td>
 		<td>
-			<input name="Submit" type="submit" class="formbtn" value="<?=gettext("Save");?>">
+			<input name="Submit" type="submit" class="formbtn" value="<?=_("Save");?>">
 			<input name="webguiproto" id="webguiproto" type="hidden" value="http">
 		</td>
 	</tr>

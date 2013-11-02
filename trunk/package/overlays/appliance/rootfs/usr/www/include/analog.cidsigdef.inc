@@ -5,17 +5,17 @@
 */
 
 	$cid_sigmode = array(
-		'bell' => gettext('Bell202, USA'),
-		'v23' => gettext('V23, ETSI/Europe'),
-		'v23_jp' => gettext('V23, Japan V23 variant'),
-		'dtmf' => gettext('DTMF, as used in Denmark, Sweden and Netherlands')
+		'bell' => _('Bell202, USA'),
+		'v23' => _('V23, ETSI/Europe'),
+		'v23_jp' => _('V23, Japan V23 variant'),
+		'dtmf' => _('DTMF, as used in Denmark, Sweden and Netherlands')
 		/*smdi = Use SMDI for caller ID. Requires SMDI to be enabled*/
 	);
 /*
 ; What signals the start of caller ID*/
 	$cid_sigstart = array(
-		'ring' => gettext('Ring'),
-		'polarity' => gettext('Polarity reversal'),
-		'polarity_IN' => gettext('India polarity reversal dtmf cid variant')
+		'ring' => _('Ring'),
+		'polarity' => _('Polarity reversal'),
+		'polarity_IN' => _('India polarity reversal dtmf cid variant')
 	);
 ?>

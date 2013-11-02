@@ -160,13 +160,13 @@ function dahdi_autoconfigure_ports()
 			// setup analog specific defaults
 			if ($p['technology'] == "analog")
 			{
-				$p['name'] = gettext("Port") . " " . $p['basechannel'];
+				$p['name'] = _("Port") . " " . $p['basechannel'];
 				$p['startsignaling'] = $defaults['dahdi']['analog']['startsignaling'];
 				// setup bri isdn specific defaults
 			}
 			else if ($p['technology'] == "isdn" && $p['totalchannels'] == 3)
 			{
-				$p['name'] = gettext("Port") . " " . $p['span'];
+				$p['name'] = _("Port") . " " . $p['span'];
 				// for now we're disabling echo cancellation on auto-generated isdn ports
 				// as several platforms have reported software interrupt floods and
 				// extremely high cpu usage causing the system to be unusable
@@ -203,7 +203,7 @@ function dahdi_autoconfigure_ports()
 			{
 				$group = dahdi_generate_default_portgroup($tech);
 				$group['uniqid'] = $magic_uniqid;
-				$group['name'] = gettext("All Provider Ports");
+				$group['name'] = _("All Provider Ports");
 				foreach ($provider_ports as $port)
 				{
 					$group['groupmember'][] = $port['uniqid'];
@@ -328,7 +328,7 @@ function dahdi_generate_default_portgroup($technology)
 
 	$group = array();
 
-	$group['name'] = gettext("Group") . " " . $number;
+	$group['name'] = _("Group") . " " . $number;
 	$group['number'] = $number;
 	$group['technology'] = $technology;
 	if ($technology == "analog")
@@ -385,7 +385,7 @@ function dahdi_verify_portgroup($post, $errors)
 	$group = array();
 
 	v_cleanliness(&$post, &$errors);
-	v_required('name', gettext('Name'), &$group, &$post, &$errors);
+	v_required('name', _('Name'), &$group, &$post, &$errors);
 	v_draganddrop(&$group, &$post);
 
 	$trusted = array(

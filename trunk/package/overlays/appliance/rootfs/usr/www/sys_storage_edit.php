@@ -28,10 +28,15 @@ require('blockdevices.lib.php');
 require('libs-php/cfgform.class.php');
 require_once('libs-php/utils.lib.php');
 require_once('initsvc.storage.php');
+
 // define some constants referenced in fbegin.inc
 define('INCLUDE_FORMSTYLE', true);
+// actual configuration reference and variables initialization
+$cfgPtr = &$config['system']['storage'];
+$partLabel = '';
+$partComment = '';
 // page title
-$pgtitle = array(gettext('System'), gettext('Edit Storage Disk'));
+$pgtitle = array(_('System'), _('Edit Storage Disk'));
 $accessAllowed = false;
 // sanity checks
 if (isset($_SESSION['diskedit']['token']))
@@ -42,16 +47,29 @@ if (isset($_SESSION['diskedit']['token']))
 		{
 			if ($_POST['stk'] === $_SESSION['diskedit']['token'])
 			{
-				$modeCaption = gettext('Edit');
+				$modeCaption = _('Edit');
 				if (($_POST['act'] === 'new') or ($_POST['act'] === 'use-spare'))
 				{
-					$modeCaption = gettext('Format & Initialize');
+					$modeCaption = _('Format & Initialize');
 					$modeHint = '<div class="save_warning"><span>' .
-						gettext('warning') . ':</span> ' .
-						gettext('All information on this disk will be lost after clicking "Format"!') . '</div>';
+						_('warning') . ':</span> ' .
+						_('All information on this disk will be lost after clicking "Format"!') . '</div>';
+						$mntDir = getNewMixedIndex('media', $cfgPtr['fsmounts']);
 				}
 				elseif ($_POST['act'] === 'edit')
 				{
+					if (isset($cfgPtr['fsmounts'][$_POST['fsmount']]))
+					{
+						$mntDir = $cfgPtr['fsmounts'][$_POST['fsmount']];
+						if (isset($cfgPtr['fsmounts'][$_POST['fsmount']]['label']))
+						{
+							$partLabel = '';
+						}
+						if (isset($cfgPtr['fsmounts'][$_POST['fsmount']]['comment']))
+						{
+							$partComment = '';
+						}
+					}
 				}
 				$accessAllowed = true;
 			}
@@ -65,13 +83,18 @@ if(!$accessAllowed)
 	define('REDIRECT_REQ', "http://{$_SERVER['HTTP_HOST']}/");
 	define('REDIRECT_DLY', 3000);
 	define('CONTENT_TOP', '<a href="' . REDIRECT_REQ . '">' .
-		gettext('<b>Direct access not allowed!<b><br>') .
-		gettext('Click here to') .' ' .
-		gettext('access the web UI.') .
+		_('<b>Direct access not allowed!<b><br>') .
+		_('Click here to') .' ' .
+		_('access the web UI.') .
 		'</a>');
 	include('include/blankpagetpl.php');
 	exit();
 }
+
+// instantiate the service binding configuration form object
+$confForm = new cfgForm('sys_storage_edit.php', 'method=post|name=confform|id=confform');
+$cfgSessionName = 'confform';
+
 // label for the device fieldset
 $fsetLabel = $_POST['dev'];
 $devModel = getDevModel($_POST['dev']);
@@ -82,16 +105,34 @@ if ($devModel !== false)
 // instantiate the disk initialization form object
 $initForm = new cfgForm('sys_storage_edit.php', 'method=post|name=iform|id=iform');
 // inizialization UI
-$initForm->startFieldset('fset_init', gettext('Disk Device') . ": $fsetLabel");
+$initForm->startFieldset('fset_init', _('Disk Device') . ": $fsetLabel");
 	$initForm->startBlock('rw_label');
-		$initForm->setLabel(null, gettext('Partition label'), 'label', 'class=labelcol');
+		$initForm->setLabel(null, _('Partition label'), 'label', 'class=labelcol');
 		$initForm->startBlock('rw_label', 'right');
 		$initForm->setField('part_label', 'text', 'size=11|maxlength=11|class=required', false, '');
-		$initForm->setInputText('part_label', $cfgPtr['boba']);
+		$initForm->setInputText('part_label', $partLabel);
 		$initForm->setBlockHint('part_label',
-			gettext('Enter the label for this disk partition.') . '<br>' . gettext('Only letters A-z, numbers and underscore allowed.'));
+			_('Enter the label for this disk partition.') . '<br>' . _('Only letters A-z, numbers and underscore allowed.'));
 		$initForm->setValidationFunc('part_label', 'validMountPoint');
 	$initForm->exitBlock();
+
+	$initForm->startBlock('rw_name');
+		$initForm->setLabel(null, _('Name'), 'name', 'class=labelcol');
+		$initForm->startBlock('rw_name', 'right');
+		$initForm->setField('name', 'text', 'size=40|maxlength=40', false, '');
+		$initForm->setInputText('name', $partComment);
+		$initForm->setBlockHint('name', _('Enter a descriptive name for this disk.'));
+	$initForm->exitBlock();
+
+	$newMount = "{$cfgPtr['mountroot']}/$mntDir";
+	$initForm->startBlock('rw_mountpoint');
+		$initForm->setLabel(null, _('Mount Point'), 'mountpoint', 'class=labelcol');
+		$initForm->startBlock('rw_mountpoint', 'right');
+		$initForm->setField('mountpoint', 'text', 'disabled=disabled|size=40|maxlength=40', false, '');
+		$initForm->setInputText('mountpoint', $newMount);
+		$initForm->setBlockHint('mountpoint', _('This partition will be mounted on the path set above.'));
+	$initForm->exitBlock();
+
 	$initForm->startBlock('rw_device');
 		$initForm->setLabel(null, $modeCaption, 'allowinit', 'class=labelcol');
 		$initForm->startBlock('rw_device', 'right');
@@ -103,52 +144,59 @@ $initForm->startFieldset('fset_init', gettext('Disk Device') . ": $fsetLabel");
 			$initForm->exitWrapper();
 			$initForm->startWrapper('initstart');
 				$initForm->setField('allowinit', 'checkbox', 'onclick=jQuery(\'#startdiskinit\').attr(\'disabled\', !jQuery(this).attr(\'checked\'));');
-				$initForm->setCbItems('allowinit', 'yes=' . gettext('I know, thanks for the warning.'), true);
-				$initForm->setCbState('allowinit', false);
+				$initForm->setCbItems('allowinit', 'yes=' . _('I know, thanks for the warning.'), true);
+				$initForm->setCbState('allowinit', 'yes', 0);
 				$initClick = 'onclick=callInit(\'' .
 					escapeStr($_POST['dev']) .
 					"', '{$_POST['act']}', '{$_POST['par']}', '{$_POST['start']}', '{$_POST['stk']}'
 				)";
-				$initForm->setField('startdiskinit', 'button', $initClick . '|class=startjob|disabled=disabled|value=' . gettext('Format'), false);
+				$initForm->setField('startdiskinit', 'button', $initClick . '|class=startjob|disabled=disabled|value=' . _('Format'), false);
 			$initForm->exitWrapper();
 		//
 	$initForm->exitBlock();
 $initForm->exitFieldSet();
-// instantiate the disk configuration form object
-$confForm = new cfgForm('sys_storage_edit.php', 'method=post|name=confform|id=confform');
-// configuration UI
-$confForm->startFieldset('fset_conf', gettext('General Settings'), 'disabled=disabled');
-	$confForm->startBlock('rw_name');
-		$confForm->setLabel(null, gettext('Name'), 'name', 'class=labelcol');
-		$confForm->startBlock('rw_name', 'right');
-		$confForm->setField('name', 'text', 'size=40|maxlength=40', false, '');
-		$confForm->setInputText('name', $cfgPtr['bobo']);
-		$confForm->setBlockHint('name', gettext('Enter a descriptive name for this disk.'));
-	$confForm->exitBlock();
+// service configuration UI
+$confForm->startFieldset('fset_conf', _('General Settings'), 'disabled=disabled');
+	$svcAvail = getAvailServices();
+	foreach (array_keys($svcAvail) as $svc)
+	{
+		$confForm->startBlock("rw_{$svc}");
+			$confForm->setLabel(null, $svcAvail[$svc]['fld_label'], null, 'class=labelcol');
+			$confForm->startBlock("rw_{$svc}", 'right');
+			$confForm->setField($svc, 'checkbox');
+			$confForm->setCbItems($svc,
+				"yes={$svcAvail[$svc]['fld_desc']}",
+				true);
+			$confForm->setCbState($svc, 'yes');
+		$confForm->exitBlock();
+	}
 $confForm->exitFieldSet();
-$confForm->setRequired('part_label', gettext('Disk label'));
+
+$confForm->setRequired('part_label', _('Disk label'));
 
 $confForm->startWrapper('saveservices');
 $saveClick = 'onclick=callSave(\'' .
 	escapeStr($_POST['dev']) .
 	"', '{$_POST['act']}', '{$_POST['par']}', '{$_POST['stk']}'
 )";
-$confForm->setField('savecfg', 'button', $saveClick . '|class=startjob|disabled=disabled|value=' . gettext('Save'), false);
+$confForm->setField('savecfg', 'button', $saveClick . '|class=startjob|disabled=disabled|value=' . _('Save'), false);
 $confForm->exitWrapper();
+// hold form data in a session variable
+$_SESSION[$cfgSessionName] = $confForm->serialize();
 
 //
 
 // variables for messages populated later from js code
-$msgStartPartion = gettext('Creating new partition') . ' ' .
+$msgStartPartion = _('Creating new partition') . ' ' .
 	$_POST['par'] .' ' .
-	gettext('on') . ' ' .
+	_('on') . ' ' .
 	$_POST['dev'] . '... ';
-$msgStartFormat = gettext('Formatting partition') . ' ' .
+$msgStartFormat = _('Formatting partition') . ' ' .
 	$_POST['par'] . ' ' .
-	gettext('on') . ' ' .
+	_('on') . ' ' .
 	$_POST['dev'] . '... ';
-$msgAskReboot = gettext('Reboot required');
-$msgDone = gettext('done.');
+$msgAskReboot = _('Reboot required');
+$msgDone = _('done.');
 // render main layout
 require('fbegin.inc');
 $initForm->renderForm();
@@ -156,7 +204,7 @@ $confForm->renderForm();
 echo '<div><pre>';
 var_export($_POST);
 echo "\n";
-var_export(getAvailServices());
+var_export($svcAvail);
 echo '</pre></div>';
 // end layout
 require('fend.inc');

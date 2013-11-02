@@ -123,7 +123,7 @@
 			<div id="user" align="center">
 				<div id="ui_header">
 					<div id="ui_header_left">
-						<a href="index.php"><img src="img/logo.png" width="182" height="68" border="0" alt="<?php echo gettext("System Information"); ?>"></a>
+						<a href="index.php"><img src="img/logo.png" width="182" height="68" border="0" alt="<?php echo _("System Information"); ?>"></a>
 					</div>
 					<div id="ui_header_right">
 						<div class="ui_header_info">[admin@<?=$config['system']['hostname'] . '.' . $config['system']['domain'];?>]</div>

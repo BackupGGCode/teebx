@@ -303,7 +303,7 @@ function isdn_verify_provider($post, $errors)
 	$provider = array();
 
 	v_cleanliness(&$post, &$errors);
-	v_required('name', gettext('Name'), &$provider, &$post, &$errors);
+	v_required('name', _('Name'), &$provider, &$post, &$errors);
 	v_incoming_prov_routing(&$provider, &$post, &$errors);
 	v_incoming_prov_callerid(&$provider, &$post, &$errors);
 	v_outgoing_prov_routing(&$provider, &$post, &$errors);

@@ -35,9 +35,9 @@ require('guiconfig.inc');
 require_once('libs-php/utils.lib.php');
 define('INCLUDE_TABSFILES', true);
 
-$pgtitle = array(gettext('Status'), gettext('Logs'));
+$pgtitle = array(_('Status'), _('Logs'));
 $log_get_cmd = 'dmesg';
-$logHeader = gettext('Kernel log entries');
+$logHeader = _('Kernel log entries');
 if (isset($_GET))
 {
 	if (!empty($_GET['show']))
@@ -46,14 +46,14 @@ if (isset($_GET))
 		{
 			case 'syslog':
 				$log_get_cmd = 'logread|grep -v "asterisk\["';
-				$logHeader = gettext('System log entries');
+				$logHeader = _('System log entries');
 				break;
 			case 'asterisk':
 				$log_get_cmd = 'logread|grep "asterisk\["';
-				$logHeader = gettext('Asterisk pbx log entries');
+				$logHeader = _('Asterisk pbx log entries');
 				break;
 			case 'cdr':
-				$logHeader = gettext('Call detail records') . ' (STOP: Not yet ready!)';
+				$logHeader = _('Call detail records') . ' (STOP: Not yet ready!)';
 				break;
 		}
 	}
@@ -67,8 +67,8 @@ include('fbegin.inc');
 
 	var last_line;
 	var auto_updating = true;
-	var msg_disabled = '<?php echo gettext('Stopped updates'); ?>';
-	var msg_enabled = '<?php echo gettext('Resuming updates'); ?>';
+	var msg_disabled = '<?php echo _('Stopped updates'); ?>';
+	var msg_enabled = '<?php echo _('Resuming updates'); ?>';
 
 	jQuery(document).ready(function(){
 		update();
@@ -127,10 +127,10 @@ include('fbegin.inc');
 </script>
 <?php
 	// prepare logical groups to show tabs
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=kernel', 'label' => gettext('Kernel'));
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=syslog', 'label' => gettext('System'));
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=asterisk', 'label' => gettext('Pbx'));
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=cdr', 'label' => gettext('Calls'));
+	$arrTabs[] = array('url' => '/maint_status_logs.php?show=kernel', 'label' => _('Kernel'));
+	$arrTabs[] = array('url' => '/maint_status_logs.php?show=syslog', 'label' => _('System'));
+	$arrTabs[] = array('url' => '/maint_status_logs.php?show=asterisk', 'label' => _('Pbx'));
+	$arrTabs[] = array('url' => '/maint_status_logs.php?show=cdr', 'label' => _('Calls'));
 	getTabs($arrTabs, true);
 ?>
 <div style="clear: both;"></div>
@@ -139,7 +139,7 @@ include('fbegin.inc');
 	<div id="log_contents" class="scrollable"></div>
 	<div style="clear: both;"></div>
 	<div style="float:right; padding-top:5px" id="log_controls">
-		<input id="update_toggle" type="submit" class="formbtn" value="<?php echo gettext("Toggle auto-updates"); ?>" onclick="toggle_auto_updating()">
+		<input id="update_toggle" type="submit" class="formbtn" value="<?php echo _("Toggle auto-updates"); ?>" onclick="toggle_auto_updating()">
 	</div>
 </div>
 <?php include('fend.inc'); ?>

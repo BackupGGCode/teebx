@@ -89,4 +89,20 @@ All rights reserved.
 		}
 		return $retval;
 	}
+
+	function getNewMixedIndex($baseStr, &$searchArray, $padDigits = 2, $separator = '_', $padChar = '0')
+	{
+		$index = 1;
+		do
+		{
+			$current = $baseStr . $separator . str_pad((string)$index, $padDigits, $padChar, STR_PAD_LEFT);
+			if (!isset($searchArray))
+				break;
+			//
+			$index++;
+		}
+		while (array_key_exists($current, $searchArray));
+		return $current;
+	}
+
 ?>

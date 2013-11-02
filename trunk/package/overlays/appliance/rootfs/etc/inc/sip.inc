@@ -552,11 +552,11 @@ function sip_verify_provider($post, $errors)
 	$provider = array();
 
 	v_cleanliness(&$post, &$errors);
-	v_required('name', gettext('Name'), &$provider, &$post, &$errors);
-	v_required('host', gettext('Host'), &$provider, &$post, &$errors);
+	v_required('name', _('Name'), &$provider, &$post, &$errors);
+	v_required('host', _('Host'), &$provider, &$post, &$errors);
 	v_port(&$provider, &$post, &$errors);
-	v_required('username', gettext('Username'), &$provider, &$post, &$errors);
-	v_numeric('readbacknumber', gettext('Public Number'), &$provider, &$post, &$errors);
+	v_required('username', _('Username'), &$provider, &$post, &$errors);
+	v_numeric('readbacknumber', _('Public Number'), &$provider, &$post, &$errors);
 	v_incoming_prov_routing(&$provider, &$post, &$errors);
 	v_incoming_prov_callerid(&$provider, &$post, &$errors);
 	v_outgoing_prov_routing(&$provider, &$post, &$errors);

@@ -64,11 +64,11 @@ include('fbegin.inc');
 	<?php
 		$dataTbl = new csvRenderer('id=table_software_list|class=report');
 		$dataTbl->loadData('docs/software-information.csv',
-			array(gettext('Name'),
-				gettext('Version'),
-				gettext('Description'),
-				gettext('License'),
-				gettext('Website')
+			array(_('Name'),
+				_('Version'),
+				_('Description'),
+				_('License'),
+				_('Website')
 			)
 		);
 		$dataTbl->renderTable();
