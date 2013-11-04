@@ -260,8 +260,8 @@ function getBlockDevices($refresh = false, $revealMTD = false)
 	{
 		$current ++;
 		// get labels and uuid
-		//                 Device         Pnum             Label           UUID
-		if (preg_match('/^(\/dev\/(?:nand|mmcblk\d|[a-z]{3}))((?:p{1}[\d]+|[\d]+|[a-z]{1})):(?:\sLABEL="([\w\-]+)")*(?:\sUUID="([a-fA-F\d\-]+)")*/', $out[$idx], $regs))
+		//                 Device                            Pnum                                   Boot sect. type            Label                  UUID
+		if (preg_match('/^(\/dev\/(?:nand|mmcblk\d|[a-z]{3}))((?:p{1}[\d]+|[\d]+|[a-z]{1})):\s(?:(?:SEC_TYPE="[\w]+"\s)*LABEL="([\w\-]+)")*(?:\sUUID="([a-fA-F\d\-]+)")*/', $out[$idx], $regs))
 		{
 			if (isset($result[$regs[1]]))
 			{
