@@ -108,6 +108,46 @@ function getDevByUuid(&$arrDiskInfo, $uuid)
 	return false;
 }
 
+function getBlkidInfo()
+{
+	$result = array();
+	exec('/sbin/blkid', $out);
+	foreach (array_keys($out) as $idx)
+	{
+		// get device, label, uuid and fs type from blkid results
+		//                Device           Boot sect. type                  Label                  UUID                     Part. Type
+		if (preg_match('/^(\/dev\/[\w]+):\s(?:(?:SEC_TYPE="[\w]+"\s)*LABEL="([\w\-]+)")*(?:\sUUID="([a-fA-F\d\-]+)")\sTYPE="([\w]+)"*/', $out[$idx], $regs))
+		{
+			$result[$regs[1]] = array('label' => $regs[2], 'uuid' => $regs[3], 'type' => $regs[4]);
+		}
+	}
+	return $result;
+}
+
+function getPartDevByUuid($uuid)
+{
+	$devs = getBlkidInfo();
+	foreach (array_keys($devs) as $node)
+	{
+		if (array_search($uuid, $devs[$node]) !== false)
+		{
+			return $devs[$node];
+		}
+	}
+	return false;
+}
+
+function getPartUuidByDev($device)
+{
+	$devs = getBlkidInfo();
+	if (array_key_exists($device, $devs))
+	{
+		return $devs[$device]['uuid'];
+	}
+	return false;
+}
+
+
 function isMountpoint($mntNode)
 {
 	// we could also look at cat  /proc/self/mounts and return which device is mounted on?
