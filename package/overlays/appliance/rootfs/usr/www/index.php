@@ -52,6 +52,7 @@ require_once('blockdevices.lib.php');
 
 // define some constants referenced in fbegin.inc
 define('INCLUDE_TBLSTYLE', true);
+define('INCLUDE_JSCRIPTS', 'dashboard.js');
 
 $product_name = system_get_product_name();
 $pgtitle = array($product_name . ' ' . _('web UI'));
@@ -101,8 +102,8 @@ if (isset($config['lastchange']))
 }
 // system date/time
 $tbl->tr();
-	$tbl->td(_('System clock (at page load)'), 'class=tblrowlabel');
-	$tbl->td(strftime('%c'));
+	$tbl->td(_('System Time'), 'class=tblrowlabel');
+	$tbl->td('<span id="systime"></span> (page loaded '. strftime('%c') . ')');
 // uptime
 exec('/usr/bin/uptime', $ut);
 $start = strpos($ut[0], 'up') + 2;
@@ -202,5 +203,6 @@ if (isset($config['system']['notes']))
 
 include('fbegin.inc');
 $tbl->renderTable();
+echo '<div id="timestamp" style="display: none;">' . (time() * 1000) . '</div>';
 include("fend.inc");
 ?>
