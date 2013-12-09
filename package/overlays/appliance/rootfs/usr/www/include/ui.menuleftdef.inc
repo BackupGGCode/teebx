@@ -159,7 +159,7 @@ $left_items = array
 					array
 					(
 						'label' => _('Network Traffic'),
-						'url' => 'status_graph_traffic.php'
+						'url' => 'maint_status_netstat.php'
 					),
 					array
 					(
