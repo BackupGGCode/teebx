@@ -85,6 +85,16 @@ input
 	border: 1px solid #333;
 }
 
+input[readonly]
+{
+	background-color: #E5E5E5;
+}
+
+input[disabled]
+{
+	background-color: #E5E5E5;
+}
+
 input[type="checkbox"]
 {
 	margin-bottom: 0px;
