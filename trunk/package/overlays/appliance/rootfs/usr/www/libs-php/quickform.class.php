@@ -1081,13 +1081,15 @@ class quickForm
 		}
 	}
 
-	public function getCbState($cbGroupId, $cbValue)
+	public function getCbState($cbGroupId, $cbValue, $returnType = true)
 	{
 		$retval = false;
 		if (isset($this->tagsPool[$cbGroupId]['attrlist']['items'][$cbValue]['checked']))
 		{
-			$retval = (bool) $this->tagsPool[$cbGroupId]['attrlist']['items'][$cbValue]['checked'];
+			$retval = $this->tagsPool[$cbGroupId]['attrlist']['items'][$cbValue]['checked'];
 		}
+		if ($returnType === true) return (bool) $retval;
+		if ($returnType === 'int') return (int) $retval;
 		return $retval;
 	}
 
