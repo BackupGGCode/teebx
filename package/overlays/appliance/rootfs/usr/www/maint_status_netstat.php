@@ -236,7 +236,10 @@ function getData()
 			else
 			{
 				update(_data);
-				jQuery('#waiting').remove();
+				if (device.current.eth0.bpsTx.length == 3)
+				{
+					jQuery('#waiting').remove();
+				}
 			}
 		},
 		complete: function () {
@@ -297,6 +300,10 @@ function update(_data)
 
 jQuery(document).ready(function ()
 {
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+	{
+		device.plot.totalPoints = 120;
+	}
 	getData();
 });
 </script>
