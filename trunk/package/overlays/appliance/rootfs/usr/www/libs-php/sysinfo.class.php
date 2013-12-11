@@ -37,7 +37,7 @@ class sysInfo
 		$this->data['errors'] = array();
 	}
 
-	protected function readIntFromFile($fileName)
+	protected function readAsFloatFromFile($fileName)
 	{
 		if (!file_exists($fileName))
 		{
@@ -50,7 +50,7 @@ class sysInfo
 		}
 		$this->data['time'] = time() * 1000;
 		$this->data['retval'] = 0;
-		return (int) trim($result);
+		return (float) trim($result);
 	}
 
 	protected function readFileIntoArray($fileName)
@@ -71,8 +71,8 @@ class sysInfo
 
 	public function getNetIfTraffic($if = 'eth0')
 	{
-		$this->data['net'][$if]['tx_bits'] = $this->readIntFromFile("{$this->pSysClass}net/$if/statistics/tx_bytes") * 8;
-		$this->data['net'][$if]['rx_bits'] = $this->readIntFromFile("{$this->pSysClass}net/$if/statistics/rx_bytes") * 8;
+		$this->data['net'][$if]['tx_bits'] = $this->readAsFloatFromFile("{$this->pSysClass}net/$if/statistics/tx_bytes") * 8;
+		$this->data['net'][$if]['rx_bits'] = $this->readAsFloatFromFile("{$this->pSysClass}net/$if/statistics/rx_bytes") * 8;
 		return $this->data;
 	}
 
@@ -91,23 +91,23 @@ class sysInfo
 			if (count($res) == 17)
 			{
 				// tx stats
-				$this->data['net'][$res[0]]['rx_bits'] = $res[1] * 8;
-				$this->data['net'][$res[0]]['rx_pkts'] = (int) $res[2];
-				$this->data['net'][$res[0]]['rx_errs'] = (int) $res[3];
-				$this->data['net'][$res[0]]['rx_drop'] = (int) $res[4];
-				$this->data['net'][$res[0]]['rx_fifo'] = (int) $res[5];
-				$this->data['net'][$res[0]]['rx_frame'] = (int) $res[6];
-				$this->data['net'][$res[0]]['rx_compressed'] = (int) $res[7];
-				$this->data['net'][$res[0]]['rx_multicast'] = (int) $res[8];
+				$this->data['net'][$res[0]]['rx_bits'] = (float) $res[1] * 8;
+				$this->data['net'][$res[0]]['rx_pkts'] = (float) $res[2];
+				$this->data['net'][$res[0]]['rx_errs'] = (float) $res[3];
+				$this->data['net'][$res[0]]['rx_drop'] = (float) $res[4];
+				$this->data['net'][$res[0]]['rx_fifo'] = (float) $res[5];
+				$this->data['net'][$res[0]]['rx_frame'] = (float) $res[6];
+				$this->data['net'][$res[0]]['rx_compressed'] = (float) $res[7];
+				$this->data['net'][$res[0]]['rx_multicast'] = (float) $res[8];
 				// rx stats
-				$this->data['net'][$res[0]]['tx_bits'] = $res[9] * 8;
-				$this->data['net'][$res[0]]['tx_pkts'] = (int) $res[10];
-				$this->data['net'][$res[0]]['tx_errs'] = (int) $res[11];
-				$this->data['net'][$res[0]]['tx_drop'] = (int) $res[12];
-				$this->data['net'][$res[0]]['tx_fifo'] = (int) $res[13];
-				$this->data['net'][$res[0]]['tx_colls'] = (int) $res[14];
-				$this->data['net'][$res[0]]['tx_carrier'] = (int) $res[15];
-				$this->data['net'][$res[0]]['rx_compressed'] = (int) $res[16];
+				$this->data['net'][$res[0]]['tx_bits'] = (float) $res[9] * 8;
+				$this->data['net'][$res[0]]['tx_pkts'] = (float) $res[10];
+				$this->data['net'][$res[0]]['tx_errs'] = (float) $res[11];
+				$this->data['net'][$res[0]]['tx_drop'] = (float) $res[12];
+				$this->data['net'][$res[0]]['tx_fifo'] = (float) $res[13];
+				$this->data['net'][$res[0]]['tx_colls'] = (float) $res[14];
+				$this->data['net'][$res[0]]['tx_carrier'] = (float) $res[15];
+				$this->data['net'][$res[0]]['rx_compressed'] = (float) $res[16];
 			}
 		}
 		return $this->data;
