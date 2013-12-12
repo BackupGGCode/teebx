@@ -37,6 +37,32 @@ class sysInfo
 		$this->data['errors'] = array();
 	}
 
+	/* this class method depends on glibc/eglibc */
+	private function glibc_getKernelHz($immediateResult = true)
+	{
+		$result = false;
+		exec('getconf CLK_TCK', $out, $cmdRes);
+		if (($cmdRes == 0) & is_array($out))
+		{
+			$result = (int) $out[0];
+		}
+		$this->data['kernelhz'] = $result;
+		$this->data['retval'] = $cmdRes;
+	}
+
+	/* this class method depends on glibc/eglibc */
+	private function glibc_getCoreCount()
+	{
+		$result = false;
+		exec('getconf _NPROCESSORS_CONF', $out, $cmdRes);
+		if (($cmdRes == 0) & is_array($out))
+		{
+			$result = (int) $out[0];
+		}
+		$this->data['corecount'] = $result;
+		$this->data['retval'] = $cmdRes;
+	}
+
 	protected function readAsFloatFromFile($fileName)
 	{
 		if (!file_exists($fileName))
@@ -73,7 +99,6 @@ class sysInfo
 	{
 		$this->data['net'][$if]['tx_bits'] = $this->readAsFloatFromFile("{$this->pSysClass}net/$if/statistics/tx_bytes") * 8;
 		$this->data['net'][$if]['rx_bits'] = $this->readAsFloatFromFile("{$this->pSysClass}net/$if/statistics/rx_bytes") * 8;
-		return $this->data;
 	}
 
 	public function getNetStats()
@@ -81,7 +106,7 @@ class sysInfo
 		$stats = $this->readFileIntoArray("{$this->pProc}net/dev");
 		if (!is_array($stats))
 		{
-			return $this->data;
+			return false;
 		}
 		// unset the first tree array elements that contains only text headers
 		unset($stats[0], $stats[1], $stats[2]);
@@ -110,7 +135,69 @@ class sysInfo
 				$this->data['net'][$res[0]]['rx_compressed'] = (float) $res[16];
 			}
 		}
-		return $this->data;
+	}
+
+	public function getCpuStats()
+	{
+		// docs: http://man7.org/linux/man-pages/man5/proc.5.html
+		$stats = $this->readFileIntoArray("{$this->pProc}/stat");
+		if (!is_array($stats))
+		{
+			return false;
+		}
+		// drop the first row
+		unset($stats[0]);
+		foreach (array_keys($stats) as $key)
+		{
+			if (strpos($stats[$key], 'cpu') === 0)
+			{
+				// remove the initial 'cpu' substring so only the cpu index will remain
+				$stats[$key] = substr($stats[$key], 3);
+				//
+				$fields = explode(' ', $stats[$key]);
+				$fields[0] = (int) $fields[0];
+				$this->data['cpu']['time'] = $this->data['time'];
+				$this->data['cpu']['abs'][$fields[0]]['user'] = (float) $fields[1];
+				$this->data['cpu']['abs'][$fields[0]]['nice'] = (float) $fields[2];
+				$this->data['cpu']['abs'][$fields[0]]['system'] = (float) $fields[3];
+				$this->data['cpu']['abs'][$fields[0]]['idle'] = (float) $fields[4];
+				$this->data['cpu']['abs'][$fields[0]]['iowait '] = (float) $fields[5];
+				$this->data['cpu']['abs'][$fields[0]]['irq'] = (float) $fields[6];
+				$this->data['cpu']['abs'][$fields[0]]['softirq'] = (float) $fields[7];
+				$this->data['cpu']['abs'][$fields[0]]['steal'] = (float) $fields[8];
+				$this->data['cpu']['abs'][$fields[0]]['guest'] = (float) $fields[9];
+				$this->data['cpu']['abs'][$fields[0]]['guest_nice'] = (float) $fields[10];
+				$this->data['cpu']['sum'][$fields[0]]['totalticks'] = array_sum($this->data['cpu']['abs'][$fields[0]]);
+				continue;
+			}
+			if (strpos($stats[$key], 'intr') === 0)
+			{
+				break;
+			}
+		}
+		if (!isset($this->data['cpu']['cores']))
+		{
+			$this->data['cpu']['cores'] = count($this->data['cpu']['abs']);
+		}
+	}
+
+	public function getCpuStatsRelative()
+	{
+		$this->data['cpu']['rel'] = array();
+		$this->getCpuStats();
+		foreach (array_keys($this->data['cpu']['abs']) as $cpuIdx)
+		{
+			foreach (array_keys($this->data['cpu']['abs'][$cpuIdx]) as $fieldIdx)
+			{
+				$this->data['cpu']['rel'][$cpuIdx][$fieldIdx] = 0;
+				if ($this->data['cpu']['abs'][$cpuIdx][$fieldIdx] > 0)
+				{
+					$this->data['cpu']['rel'][$cpuIdx][$fieldIdx] = (1.0 / ($this->data['cpu']['sum'][$cpuIdx]['totalticks'] / $this->data['cpu']['abs'][$cpuIdx][$fieldIdx]));
+				}
+			}
+			// debugging info: total for each core must be equal to 1
+			$this->data['cpu']['sum'][$cpuIdx]['totalusage'] = array_sum($this->data['cpu']['rel'][$cpuIdx]);
+		}
 	}
 }
 ?>

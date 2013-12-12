@@ -25,7 +25,6 @@ All rights reserved.
 require('guiconfig.inc');
 
 // define some variables referenced in fbegin.inc
-//define('INCLUDE_TBLSTYLE', true);
 define('INCLUDE_JSCRIPTS', 'flot/jquery.flot.js|flot/excanvas.js|flot/jquery.flot.time.js|flot/jquery.flot.axislabels.js');
 $pgtitle = array(_('Status'), _('Network Traffic'));
 
