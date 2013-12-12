@@ -40,6 +40,16 @@ if (is_array($_POST['job']))
 {
 	foreach (array_keys($_POST['job']) as $job)
 	{
+		if ($_POST['job'][$job] == 'netall')
+		{
+			$sys->getNetStats();
+			continue;
+		}
+		if ($_POST['job'][$job] == 'cpustats')
+		{
+			$sys->getCpuStatsRelative();
+			continue;
+		}
 		if ($_POST['job'][$job] == 'net')
 		{
 			if (isset($_POST['if']))
@@ -52,11 +62,6 @@ if (is_array($_POST['job']))
 					}
 				}
 			}
-			continue;
-		}
-		if ($_POST['job'][$job] == 'netall')
-		{
-			$sys->getNetStats();
 			continue;
 		}
 	}
