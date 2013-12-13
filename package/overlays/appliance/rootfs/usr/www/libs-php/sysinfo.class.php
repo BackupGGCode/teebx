@@ -161,7 +161,7 @@ class sysInfo
 				$this->data['cpu']['abs'][$fields[0]]['nice'] = (float) $fields[2];
 				$this->data['cpu']['abs'][$fields[0]]['system'] = (float) $fields[3];
 				$this->data['cpu']['abs'][$fields[0]]['idle'] = (float) $fields[4];
-				$this->data['cpu']['abs'][$fields[0]]['iowait '] = (float) $fields[5];
+				$this->data['cpu']['abs'][$fields[0]]['iowait'] = (float) $fields[5];
 				$this->data['cpu']['abs'][$fields[0]]['irq'] = (float) $fields[6];
 				$this->data['cpu']['abs'][$fields[0]]['softirq'] = (float) $fields[7];
 				$this->data['cpu']['abs'][$fields[0]]['steal'] = (float) $fields[8];
