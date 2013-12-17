@@ -167,7 +167,7 @@ class sysInfo
 				$this->data['cpu']['abs'][$fields[0]]['steal'] = (float) $fields[8];
 				$this->data['cpu']['abs'][$fields[0]]['guest'] = (float) $fields[9];
 				$this->data['cpu']['abs'][$fields[0]]['guest_nice'] = (float) $fields[10];
-				$this->data['cpu']['sum'][$fields[0]]['totalticks'] = array_sum($this->data['cpu']['abs'][$fields[0]]);
+				$this->data['cpu']['abs'][$fields[0]]['totalticks'] = array_sum($this->data['cpu']['abs'][$fields[0]]);
 				continue;
 			}
 			if (strpos($stats[$key], 'intr') === 0)
@@ -192,11 +192,12 @@ class sysInfo
 				$this->data['cpu']['rel'][$cpuIdx][$fieldIdx] = 0;
 				if ($this->data['cpu']['abs'][$cpuIdx][$fieldIdx] > 0)
 				{
-					$this->data['cpu']['rel'][$cpuIdx][$fieldIdx] = (1.0 / ($this->data['cpu']['sum'][$cpuIdx]['totalticks'] / $this->data['cpu']['abs'][$cpuIdx][$fieldIdx]));
+					$this->data['cpu']['rel'][$cpuIdx][$fieldIdx] = (100.0 / ($this->data['cpu']['abs'][$cpuIdx]['totalticks'] / $this->data['cpu']['abs'][$cpuIdx][$fieldIdx]));
 				}
 			}
 			// debugging info: total for each core must be equal to 1
-			$this->data['cpu']['sum'][$cpuIdx]['totalusage'] = array_sum($this->data['cpu']['rel'][$cpuIdx]);
+			$this->data['cpu']['sum'][$cpuIdx]['usage'] = array_sum($this->data['cpu']['rel'][$cpuIdx]) - $this->data['cpu']['rel'][$cpuIdx]['totalticks'];
+			$this->data['cpu']['sum'][$cpuIdx]['busy'] = 100.0 - $this->data['cpu']['rel'][$cpuIdx]['idle'];
 		}
 	}
 }

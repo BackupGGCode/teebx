@@ -169,7 +169,7 @@ $left_items = array
 					array
 					(
 						'label' => _('CPU Load'),
-						'url' => 'status_graph_cpu.php'
+						'url' => 'maint_status_cpustat.php'
 					)
 				)
 			)

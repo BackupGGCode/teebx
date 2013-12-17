@@ -47,7 +47,7 @@ if (is_array($_POST['job']))
 		}
 		if ($_POST['job'][$job] == 'cpustats')
 		{
-			$sys->getCpuStatsRelative();
+			$sys->getCpuStats();
 			continue;
 		}
 		if ($_POST['job'][$job] == 'net')
