@@ -250,24 +250,40 @@ function update(_data)
 
 	// update cpu usage chart
 	var dataset = [];
-	for (var dp = 0, len = device.dpSetup.aggregate.display.length; dp < len; dp++)
+	if (coreCount > 1)
 	{
-		// for each core, scale on left axis
+		for (var dp = 0, len = device.dpSetup.aggregate.display.length; dp < len; dp++)
+		{
+			// for each core, scale on left axis
+			dataset.push({
+				label: device.dpSetup.aggregate.label[dp],
+				data: device.current.aggregate.points[device.dpSetup.aggregate.display[dp]],
+				lines: {fill: false, lineWidth: 1.2},
+				color: device.dpSetup.aggregate.color[dp]
+			})
+		}
+		// average load sum, system cpu(s), rigth axis, auto scale
 		dataset.push({
-			label: device.dpSetup.aggregate.label[dp],
+			label: 'CPU',
+			yaxis: 2,
 			data: device.current.aggregate.points[device.dpSetup.aggregate.display[dp]],
-			lines: {fill: false, lineWidth: 1.2},
-			color: device.dpSetup.aggregate.color[dp]
+			lines: {fill: true, lineWidth: 1.2},
+			color: '#fee090'
 		})
 	}
-// average load sum, system cpu(s), rigth axis, auto scale
-	dataset.push({
-		label: 'CPU',
-		yaxis: 2,
-		data: device.current.aggregate.getSeriesAvg(device.dpSetup.aggregate.display),
-		lines: {fill: true, lineWidth: 1.2},
-		color: '#fee090'
-	})
+	else
+	{
+		// average load sum, system cpu, second axis moved left (auto scale)
+		optsCpus.yaxes[0].show = false;
+		optsCpus.yaxes[1].position = 'left';
+		dataset.push({
+			label: 'CPU',
+			yaxis: 2,
+			data: device.current.aggregate.points['core0'],
+			lines: {fill: true, lineWidth: 1.2},
+			color: '#fee090'
+		})
+	}
 
 	jQuery.plot(jQuery('#aggregate'), dataset, optsCpus);
 	// store actual data to be used as back reference in the next run
