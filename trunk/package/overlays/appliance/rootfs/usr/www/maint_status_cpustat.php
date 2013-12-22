@@ -266,7 +266,7 @@ function update(_data)
 		dataset.push({
 			label: 'CPU',
 			yaxis: 2,
-			data: device.current.aggregate.points[device.dpSetup.aggregate.display[dp]],
+			data: device.current.aggregate.getSeriesAvg(device.dpSetup.aggregate.display),
 			lines: {fill: true, lineWidth: 1.2},
 			color: '#fee090'
 		})
