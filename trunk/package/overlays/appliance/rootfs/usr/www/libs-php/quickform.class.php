@@ -364,20 +364,13 @@ class quickForm
 		return $text;
 	}
 
-	protected function setTagOptUnselected($fldList = null)
+	protected function setTagOptUnselected()
 	{
 		// reset the checked/selected values for any checkbox/radio/select option element
 		foreach (array_keys($this->tagsPool) as $tagKey)
 		{
-			if (!is_null($fldList))
-			{
-				if (!in_array($tagKey, $fldList))
-				{
-					continue;
-				}
-			}
 			$elemType = &$this->tagsPool[$tagKey]['elemtype'];
-			if (($elemType == 'checkbox') OR ($elemType == 'radio'))
+			if (($elemType == 'checkbox') or ($elemType == 'radio'))
 			{
 				foreach (array_keys($this->tagsPool[$tagKey]['attrlist']['items']) as $elmemKey)
 				{
@@ -406,6 +399,7 @@ class quickForm
 					array_multisort($tagOptsPtr[0], SORT_ASC);
 				}
 			}
+			else continue;
 		}
 	}
 

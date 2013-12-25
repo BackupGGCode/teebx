@@ -108,7 +108,7 @@ class cfgForm extends quickForm implements Serializable
 	{
 		if (!isset($_POST))
 			return;
-		$this->setTagOptUnselected($_POST);
+		$this->setTagOptUnselected();
 		foreach (array_keys($_POST) as $pKey)
 		{
 			$value = &$_POST[$pKey];
