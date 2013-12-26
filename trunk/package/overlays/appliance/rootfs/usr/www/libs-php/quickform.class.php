@@ -399,7 +399,6 @@ class quickForm
 					array_multisort($tagOptsPtr[0], SORT_ASC);
 				}
 			}
-			else continue;
 		}
 	}
 
