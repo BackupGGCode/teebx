@@ -158,6 +158,7 @@ elseif ($_POST['task'] === 'partformat')
 {
 	$newLabel = $_POST['label'];
 	$data['retval'] = formatPartitionFat($newPart, $newLabel);
+	$data['uuid'] = getPartUuidByDev($newPart);
 }
 // we should exit immediately returning the json data to the calling ajax request
 exit(json_encode($data));

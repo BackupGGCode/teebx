@@ -91,9 +91,11 @@ if(!$accessAllowed)
 	exit();
 }
 
+// instantiate the disk initialization form object
+$initForm = new cfgForm('sys_storage_init.php', 'method=post|name=iform|id=iform');
 // instantiate the service binding configuration form object
-$confForm = new cfgForm('sys_storage_edit.php', 'method=post|name=confform|id=confform');
-$cfgSessionName = 'confform';
+$confForm = new cfgForm('sys_services_set.php', 'method=post|name=confform|id=confform');
+$cfgSvcName = 'frmSvcCfg';
 
 // label for the device fieldset
 $fsetLabel = $_POST['dev'];
@@ -102,8 +104,7 @@ if ($devModel !== false)
 {
 	$fsetLabel .= " ($devModel)";
 }
-// instantiate the disk initialization form object
-$initForm = new cfgForm('sys_storage_edit.php', 'method=post|name=iform|id=iform');
+
 // inizialization UI
 $initForm->startFieldset('fset_init', _('Disk Device') . ": $fsetLabel");
 	$initForm->startBlock('rw_label');
@@ -116,12 +117,12 @@ $initForm->startFieldset('fset_init', _('Disk Device') . ": $fsetLabel");
 		$initForm->setValidationFunc('part_label', 'validMountPoint');
 	$initForm->exitBlock();
 
-	$initForm->startBlock('rw_name');
-		$initForm->setLabel(null, _('Name'), 'name', 'class=labelcol');
-		$initForm->startBlock('rw_name', 'right');
-		$initForm->setField('name', 'text', 'size=40|maxlength=40', false, '');
-		$initForm->setInputText('name', $partComment);
-		$initForm->setBlockHint('name', _('Enter a descriptive name for this disk.'));
+	$initForm->startBlock('rw_part_desc');
+		$initForm->setLabel(null, _('Comment'), 'part_desc', 'class=labelcol');
+		$initForm->startBlock('rw_part_desc', 'right');
+		$initForm->setField('part_desc', 'text', 'size=40|maxlength=40', false, '');
+		$initForm->setInputText('part_desc', $partComment);
+		$initForm->setBlockHint('part_desc', _('Enter a descriptive comment about this partition.'));
 	$initForm->exitBlock();
 
 	$newMount = "{$cfgPtr['mountroot']}/$mntDir";
@@ -155,6 +156,7 @@ $initForm->startFieldset('fset_init', _('Disk Device') . ": $fsetLabel");
 		//
 	$initForm->exitBlock();
 $initForm->exitFieldSet();
+
 // service configuration UI
 $confForm->startFieldset('fset_conf', _('General Settings'), 'disabled=disabled');
 	$svcAvail = getAvailServices();
@@ -163,26 +165,58 @@ $confForm->startFieldset('fset_conf', _('General Settings'), 'disabled=disabled'
 		$confForm->startBlock("rw_{$svc}");
 			$confForm->setLabel(null, $svcAvail[$svc]['fld_label'], null, 'class=labelcol');
 			$confForm->startBlock("rw_{$svc}", 'right');
-			$confForm->setField($svc, 'checkbox');
+
+			$svcAttrib = null;
+			$cbState = 0;
+			if (isset($cfgPtr['services'][$svc]['fsmount'], $cfgPtr['services'][$svc]['active']))
+			{
+				if ($cfgPtr['services'][$svc]['active'] == 1)
+				{
+					if ($cfgPtr['services'][$svc]['fsmount'] != $mntDir)
+					{
+						$svcAttrib = 'disabled=disabled';
+					}
+					elseif ($cfgPtr['services'][$svc]['fsmount'] == $mntDir)
+					{
+						$cbState = 1;
+					}
+				}
+			}
+
+			$confForm->setField($svc, 'checkbox', $svcAttrib);
 			$confForm->setCbItems($svc,
 				"yes={$svcAvail[$svc]['fld_desc']}",
 				true);
-			$confForm->setCbState($svc, 'yes');
+			$confForm->setCbState($svc, 'yes', $cbState);
+
 		$confForm->exitBlock();
 	}
 $confForm->exitFieldSet();
 
-$confForm->setRequired('part_label', _('Disk label'));
+$confForm->setField('label', 'hidden');
+$confForm->setField('desc', 'hidden');
+$confForm->setField('fsmount', 'hidden');
+$confForm->setInputText('fsmount', $mntDir);
+
+$confForm->setField('uuid', 'hidden');
+// set fs type to a constant value until a choice will be available
+$fsType = 'vfat';
+$confForm->setField('filesystem', 'hidden');
+$confForm->setInputText('filesystem', $fsType);
+// set the active flag to a constant value until editing will be available
+$devActive = '1';
+$confForm->setField('active', 'hidden');
+$confForm->setInputText('active', $devActive);
+
+$confForm->setRequired('uuid', _('Disk unique identifier'));
+$confForm->setRequired('fsmount', _('Service mount point'));
 
 $confForm->startWrapper('saveservices');
-$saveClick = 'onclick=callSave(\'' .
-	escapeStr($_POST['dev']) .
-	"', '{$_POST['act']}', '{$_POST['par']}', '{$_POST['stk']}'
-)";
-$confForm->setField('savecfg', 'button', $saveClick . '|class=startjob|disabled=disabled|value=' . _('Save'), false);
+$saveClick = "onclick=callApply('#confform')";
+$confForm->setField('savecfg', 'submit', $saveClick . '|class=startjob|disabled=disabled|value=' . _('Save'), false);
 $confForm->exitWrapper();
 // hold form data in a session variable
-$_SESSION[$cfgSessionName] = $confForm->serialize();
+$_SESSION[$cfgSvcName] = $confForm->serialize();
 
 //
 
@@ -210,8 +244,6 @@ echo '</pre></div>';
 require('fend.inc');
 ?>
 <script type="text/javascript">
-
-
 function callInit(dev, act, par, start, stk)
 {
 	var uri = '/sys_storage_init.php';
@@ -268,8 +300,21 @@ function callInit(dev, act, par, start, stk)
 						jQuery('#waiting').remove();
 						if (data.retval == 0)
 						{
-							jQuery('#mformat').append('<?php echo $msgDone; ?>');
-							jQuery('#fset_conf').prop('disabled', false);
+							if (data.uuid != false)
+							{
+								jQuery('#mformat').append('<?php echo $msgDone; ?>');
+								jQuery('#uuid').val(data.uuid);
+								jQuery('#fset_conf').prop('disabled', false);
+								jQuery('#savecfg').prop('disabled', false);
+								// copy some values from the initialization form
+								jQuery('#label').val(jQuery('#part_label').val());
+								jQuery('#desc').val(jQuery('#part_desc').val());
+							}
+							else
+							{
+								// something went wrong
+								jQuery('#init-progress').html('<div>Err: Unable to retrive the new partition unique identifier.</div>');
+							}
 						}
 					},
 					failure: function(data){
@@ -292,6 +337,31 @@ function callInit(dev, act, par, start, stk)
 		}
 	});
 	return false;
+}
+
+function callApply(formIdentifier)
+{
+	var frm = jQuery(formIdentifier);
+	var submitBtn = frm.find(':submit');
+	frm.submit(function(event) {
+		event.preventDefault();
+		submitBtn.attr('disabled', true);
+		jQuery.ajax({
+			type: frm.attr('method'),
+			url: frm.attr('action'),
+			async: false,
+			dataType: 'json',
+			data: frm.serialize(),
+			success: function(data){
+				alert('ok');
+				// now reconfigure/restart any application which depends on changed storage settings
+				jQuery('#init-progress').html('<div>Result:<br><pre>' + data.retval + '<pre></div>');
+			},
+			failure: function(data){
+				jQuery('#init-progress').html('<div>Err:<br><pre>' + data.retval + '<pre></div>');
+			}
+		});
+	});
 }
 
 // client side field validation

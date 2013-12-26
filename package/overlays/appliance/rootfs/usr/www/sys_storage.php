@@ -231,7 +231,7 @@ $tblDiskRep->tbody();
 						. round($devFree)
 						.' MB</a>';
 					// this is the system disk, print a notice to the user
-					$noticeLabel = ' ' . _('Notice: this is the system disk, avoid using it for additional storage.');
+					$noticeLabel = ' ' . _('Notice: this is the system disk. Unless you really know what you are doing please avoid using it for additional storage.');
 					$noticeLabel .= '&nbsp;<img  src="img/alert.png" alt="!">';
 					$tblDiskRep->tbody();
 					$tblDiskRep->tr();
