@@ -17,24 +17,6 @@
 		</webgui>
 		<storage>
 			<mountroot>/offload/opt/storage</mountroot>
-			<fsmounts>
-				<media_01>
-					<uuid>520B-C01C</uuid>
-					<comment>Storage01</comment>
-					<label>TeeBX_s01</label>
-					<filesystem>vfat</filesystem>
-					<active>0</active>
-				</media_01>
-			</fsmounts>
-			<services>
-				<astmedia>
-					<fsmount>media_01</fsmount>
-				</astmedia>
-				<astdb>
-				</astdb>
-				<astcdr>
-				</astcdr>
-			</services>
 		</storage>
 		<earlyshellcmd></earlyshellcmd>
 		<shellcmd></shellcmd>
