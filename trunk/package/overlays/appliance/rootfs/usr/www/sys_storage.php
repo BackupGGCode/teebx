@@ -22,18 +22,10 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-function microtime_float ()
-{
-	list ($msec, $sec) = explode(' ', microtime());
-	$microtime = (float)$msec + (float)$sec;
-	return $microtime;
-}
 session_start();
 $_SESSION['diskedit']['token'] = uniqid(md5(microtime()), true);
 
-$start = microtime_float();
-
-require_once('guiconfig.inc');
+require('guiconfig.inc');
 require_once('util.inc');
 require_once('blockdevices.lib.php');
 require_once('libs-php/htmltable.class.php');
@@ -44,7 +36,13 @@ $pgtitle = array(_('System'), _('Storage'));
 // actual configuration reference
 $cfgPtr = &$config['system']['storage'];
 // retrieve informations about system block devices
-$disksInfo = getBlockDevices();
+$forceDevRefresh = false;
+if (isset($_SESSION['refresh']['blockdevice']))
+{
+	$forceDevRefresh = true;
+	unset($_SESSION['refresh']['blockdevice']);
+}
+$disksInfo = getBlockDevices($forceDevRefresh);
 getDiskUsage($disksInfo);
 $_SESSION['diskedit']['info'] = $disksInfo;
 //
@@ -249,20 +247,6 @@ require('fbegin.inc');
 $tblStorage->renderTable();
 // echo '<br>';
 $tblDiskRep->renderTable();
-
-//debug
-$end = microtime_float();
-echo '<div><pre>';
-var_export($disksInfo);
-echo "\n\n";
-var_export($config['system']['storage']);
-echo "\n\n";
-var_export($fsInfo);
-//mountStorageDevices($config);
-echo '</pre></div>';
-
-echo 'Script Execution Time: ' . round($end - $start, 3) . ' seconds';
-echo '';
 ?>
 <script type="text/javascript">
 	function doClickAction(action, device, partnum, partstart)

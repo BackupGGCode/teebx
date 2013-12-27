@@ -39,6 +39,11 @@ function msgToSyslog($msg, $pri = LOG_INFO, $tag = 'appliance')
 	closelog();
 }
 
+function getMilliTime()
+{
+	return microtime(true) * 1000;
+}
+
 function getMemoryStatus()
 {
 	exec('/usr/bin/free -b', $memory, $retval);

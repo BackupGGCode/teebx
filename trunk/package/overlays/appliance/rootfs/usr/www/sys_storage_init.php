@@ -160,7 +160,8 @@ elseif ($_POST['task'] === 'partformat')
 	$data['retval'] = formatPartitionFat($newPart, $newLabel);
 	$data['uuid'] = getPartUuidByDev($newPart);
 }
+// set a session flag to tell other scripts that a refresh of block device status is needed
+$_SESSION['refresh']['blockdevice'] = 1;
 // we should exit immediately returning the json data to the calling ajax request
 exit(json_encode($data));
-
 ?>
