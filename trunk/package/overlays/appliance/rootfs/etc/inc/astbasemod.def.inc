@@ -17,7 +17,6 @@
 		'app_system.so',
 		'app_verbose.so',
 		'app_voicemail.so',
-		'app_wakeme.so',
 		'app_while.so',
 		'chan_dahdi.so',
 		'chan_iax2.so',
