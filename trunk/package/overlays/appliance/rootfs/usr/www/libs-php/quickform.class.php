@@ -381,15 +381,18 @@ class quickForm
 			{
 				// internal array target pointers
 				$tagOptsPtr = &$this->tagsPool[$tagKey]['attrlist']['options'];
-				$topOptGrp = $this->tagsPool[$tagKey]['keepvaltopsorted'];
-				foreach (array_keys($tagOptsPtr) as $opGrpgKey)
+				if (isset($this->tagsPool[$tagKey]['keepvaltopsorted']))
 				{
-					foreach (array_keys($tagOptsPtr[$opGrpgKey]) as $optionKey)
+					$topOptGrp = $this->tagsPool[$tagKey]['keepvaltopsorted'];
+					foreach (array_keys($tagOptsPtr) as $opGrpgKey)
 					{
-						$tagOptsPtr[$opGrpgKey][$optionKey]['selected'] = 0;
+						foreach (array_keys($tagOptsPtr[$opGrpgKey]) as $optionKey)
+						{
+							$tagOptsPtr[$opGrpgKey][$optionKey]['selected'] = 0;
+						}
 					}
 				}
-				if (isset($tagOptsPtr[$topOptGrp]))
+				if (isset($topOptGrp, $tagOptsPtr[$topOptGrp]))
 				{
 					foreach (array_keys($tagOptsPtr[$topOptGrp]) as $opKey)
 					{

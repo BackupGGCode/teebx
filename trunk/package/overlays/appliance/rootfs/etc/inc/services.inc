@@ -4,7 +4,7 @@
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
 	Copyright(C) 2010 - 2011 Giovanni Vallesi.
 	All rights reserved.
-	
+
 	originally part of AskoziaPBX (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
 	originally part of m0n0wall (http://m0n0.ch/wall)
@@ -58,22 +58,31 @@ function services_dyndns_configure()
 {
 	global $config, $g;
 
+	if (!isset($config['interfaces']['lan']['hostnameupdatesrc']))
+	{
+		return 0;
+	}
+
 	/* kill any running ez-ipupdate */
 	/* ez-ipupdate needs SIGQUIT instead of SIGTERM */
-	sigkillbypid("{$g['varrun_path']}/ez-ipupdate.pid", "QUIT");
+	sigkillbypid("{$g['varrun_path']}/ez-ipupdate.pid", 'QUIT');
 
 	$dyndnscfg = $config['dyndns'];
 	$lancfg = $config['interfaces']['lan'];
 
-	if ($config['interfaces']['lan']['hostnameupdatesrc'] == "pbx")
+	if ($config['interfaces']['lan']['hostnameupdatesrc'] === 'pbx')
 	{
 		if ($g['booting'])
-			echo "Starting DynDNS client... ";
+		{
+			echo 'Starting DynDNS client... ';
+		}
 		else
+		{
 			sleep(1);
+		}
 
 		/* write ez-ipupdate.conf */
-		$fd = fopen("{$g['etc_path']}/ez-ipupdate.conf", "w");
+		$fd = fopen("{$g['etc_path']}/ez-ipupdate.conf", 'w');
 		if (!$fd)
 		{
 			printf("Error: cannot open ez-ipupdate.conf in services_dyndns_configure().\n");
