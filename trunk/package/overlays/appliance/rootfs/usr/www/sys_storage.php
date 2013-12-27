@@ -131,7 +131,7 @@ $tblDiskRep->thead();
 	//
 // section body
 $tblDiskRep->tbody();
-	$freeDisks = getFreeDisks($cfgPtr, $disksInfo);
+	$freeDisks = getFreeDisks($config, $disksInfo);
 	if (!empty($freeDisks))
 	{
 		foreach (array_keys($freeDisks) as $key)

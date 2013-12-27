@@ -154,6 +154,11 @@ if (isset($config['system']['storage']['fsmounts']))
 			//
 			$fsUuid = $config['system']['storage']['fsmounts'][$mntNode]['uuid'];
 			$fsInfo = getDevByUuid($disksInfo, $fsUuid);
+			$hwName = '';
+			if (isset($disksInfo[$fsInfo[0]]['info']) && (!empty($disksInfo[$fsInfo[0]]['info'])))
+			{
+				$hwName = "{$disksInfo[$fsInfo[0]]['info']} / ";
+			}
 			if ($fsInfo !== false)
 			{
 				if (isset($disksInfo[$fsInfo[0]]['parts'][$fsInfo[1]]['blocks-total']))
@@ -171,12 +176,12 @@ if (isset($config['system']['storage']['fsmounts']))
 				}
 				else
 				{
-					$storageReport .= _('Unable to get data.') . " ($fsUuid)<br>";
+					$storageReport .= _('Unable to get data.') . " ({$hwName}{$fsUuid})<br>";
 				}
 			}
 			else
 			{
-				$storageReport .= _('Missing device.') . " ($fsUuid)<br>";
+				$storageReport .= _('Missing device.') . " ({$hwName}{$fsUuid})<br>";
 			}
 		}
 		//
