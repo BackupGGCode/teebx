@@ -366,6 +366,8 @@ function getDiskUsage(&$arrDiskInfo)
 function getFreeDisks(&$cfgPtr, &$arrDiskInfo)
 {
 	$result = array();
+	$busyDisks = getConfiguredDisks($cfgPtr);
+
 	foreach (array_keys($arrDiskInfo) as $devKey)
 	{
 		if (!isset($arrDiskInfo[$devKey]['__SYS_DISK__']))
@@ -377,11 +379,19 @@ function getFreeDisks(&$cfgPtr, &$arrDiskInfo)
 			}
 			else
 			{
-				// check if this disk is already mounted
 				foreach (array_keys($arrDiskInfo[$devKey]['parts']) as $partKey)
 				{
+					// check if this disk partition is not mounted
 					if (!isset($arrDiskInfo[$devKey]['parts'][$partKey]['mountpoint']))
 					{
+						// verify that this partition is not already configured to be mounted
+						if (isset($arrDiskInfo[$devKey]['parts'][$partKey]['uuid']) & ($busyDisks !== false))
+						{
+							if (array_key_exists($arrDiskInfo[$devKey]['parts'][$partKey]['uuid'], $busyDisks))
+							{
+								continue;
+							}
+						}
 						// return the actual number of partitions
 						$result[$devKey] = count($arrDiskInfo[$devKey]['parts']);
 						break;
@@ -399,6 +409,24 @@ function getFreeDisks(&$cfgPtr, &$arrDiskInfo)
 
 function getConfiguredDisks(&$cfgPtr)
 {
+	if (!isset($cfgPtr['system']['storage']['fsmounts']))
+	{
+		return false;
+	}
+	if (!is_array($cfgPtr['system']['storage']['fsmounts']))
+	{
+		return false;
+	}
+
+	$result = array();
+	foreach (array_keys($cfgPtr['system']['storage']['fsmounts']) as $mp)
+	{
+		if (isset($cfgPtr['system']['storage']['fsmounts'][$mp]['uuid']))
+		{
+			$result[$cfgPtr['system']['storage']['fsmounts'][$mp]['uuid']] = $cfgPtr['system']['storage']['fsmounts'][$mp];
+		}
+	}
+	return $result;
 }
 
 function getLastUsedSector($diskDev, &$arrDiskInfo)
