@@ -5,12 +5,14 @@
 */
 
 	$unmanaged_ast_cfgfiles = array(
+		'/etc/asterisk/acl.conf',
 		'/etc/asterisk/adsi.conf',
 		'/etc/asterisk/adtranvofr.conf',
 		'/etc/asterisk/agents.conf',
 		'/etc/asterisk/ais.conf',
 		'/etc/asterisk/alarmreceiver.conf',
 		'/etc/asterisk/alsa.conf',
+		'/etc/asterisk/ccss.conf',
 		'/etc/asterisk/cdr_adaptive_odbc.conf',
 		'/etc/asterisk/cdr_manager.conf',
 		'/etc/asterisk/cdr_odbc.conf',
@@ -54,6 +56,7 @@
 		'/etc/asterisk/res_pgsql.conf',
 		'/etc/asterisk/res_snmp.conf',
 		'/etc/asterisk/sla.conf',
+		'/etc/asterisk/udptl.conf',
 		'/etc/asterisk/unistim.conf',
 		'/etc/asterisk/usbradio.conf',
 		'/etc/asterisk/users.conf',
