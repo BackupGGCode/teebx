@@ -136,7 +136,14 @@ function initsvcAstmedia($basePath, $arrOpt = null)
 
 function initsvcAstdb($basePath, $arrOpt = null)
 {
-	exec("cp -p /etc/asterisk/db/astdb $basePath/");
+	if (!is_dir("$basePath/db"))
+	{
+		mkdir("$basePath/db", 0766, true);
+		if (is_file('/etc/asterisk/db/astdb'))
+		{
+			exec("cp -p /etc/asterisk/db/astdb $basePath/db/");
+		}
+	}
 	return true;
 }
 
