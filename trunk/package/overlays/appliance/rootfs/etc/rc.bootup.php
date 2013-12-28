@@ -169,11 +169,6 @@
 	pbx_configure();
 	echo 'done', PHP_EOL;
 
-	/* run any shell commands specified in config.xml */
-	echo ' - Running shell commands... ';
-	system_do_shell_commands();
-	echo 'done', PHP_EOL;
-
 	echo ' - Configuring cron services... ';
 	system_cron_configure();
 	echo 'done', PHP_EOL;
