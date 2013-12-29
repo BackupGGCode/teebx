@@ -1,0 +1,19 @@
+# $Id: $
+# part of BoneOS build platform (http://www.teebx.com/)
+# this file contains information about included third party code/libraries
+#
+Package Name: jQuery-progressbar
+Version: 1.1.0
+Description: jQuery Progress Bar plugin
+Size:
+Source Checksum:
+Architecture:
+Prefix:
+Status: Stable
+License: MIT
+License URL: http://www.opensource.org/licenses/mit-license.php
+Original Author(s): Gary Teo
+Maintainer(s):
+Project URL: http://t.wits.sg
+Download URL(s):
+

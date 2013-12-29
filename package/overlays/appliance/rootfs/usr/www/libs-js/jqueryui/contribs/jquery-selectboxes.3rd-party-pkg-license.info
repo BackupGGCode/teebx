@@ -1,0 +1,19 @@
+# $Id: $
+# part of BoneOS build platform (http://www.teebx.com/)
+# this file contains information about included third party code/libraries
+#
+Package Name: jQuery-selectboxes
+Version: 2.2.4
+Description: jQuery selectboxes plugin
+Size:
+Source Checksum:
+Architecture:
+Prefix:
+Status: Stable
+License: MIT
+License URL: http://www.opensource.org/licenses/mit-license.php
+Original Author(s): Sam Collett
+Maintainer(s):
+Project URL: http://www.texotela.co.uk/code/jquery/select/
+Download URL(s):
+
