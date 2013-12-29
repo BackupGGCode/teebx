@@ -165,6 +165,7 @@ packageBuildInfo()
 	# $1: build root directory (source)
 	# $2: rootfs preparation directory (output file target)
 	local pkgInfoDir="$1/var/adm/packages/"
+	local httpRoot="$1/usr/www/"
 	local csvFile="$2/software-information"
 	local revInfoFile="$2/svn-information.txt"
 	local f
@@ -184,6 +185,7 @@ packageBuildInfo()
 	rm -f $csvFile
 	touch $csvFile
 	pushd "$pkgInfoDir"
+	# standard T2 packages (usually just compiled) 
 	for f in $(find * -type f) 
 	do
 		echo "  -> Retrieving $f package information."
@@ -195,6 +197,20 @@ packageBuildInfo()
 		currentLine=${pNameVer}";"${pDesc}";"${pLic}";"${pSite}
 		echo "$currentLine" >> "$csvFile"
 	done
+	# Embedded third party library/packages (like some js libs in /usr/www/...)
+	for f in $(find $httpRoot -type f -name *.3rd-party-pkg-license.info) 
+	do
+		pName=$(awk '/^Package Name:/ {print $3}' "$f")
+		pVer=$(awk '/^Version:/ {print $2}' "$f")
+		pDesc=$(awk '/^Description:/ {print substr($0,14)}' "$f")
+		pLic=$(awk '/^License:/ {print $2}' "$f")
+		pSite=$(awk '/Project URL:/ {print $3}' "$f")
+		echo "  -> Retrieved third party library information about $pName."
+		#
+		currentLine=${pName}";"${pVer}";"${pDesc}";"${pLic}";"${pSite}
+		echo "$currentLine" >> "$csvFile"
+	done
+	# sort results
 	sort -k1 "$csvFile" > ${csvFile}.csv
 	rm -f "$csvFile"
 	#
