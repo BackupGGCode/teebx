@@ -127,10 +127,10 @@ prepareImgDirs()
 	mkdir ${initramDir}/conf
 
 	mkdir $rootfsDir
-	mkdir ${rootfsDir}/opt
 	mkdir ${rootfsDir}/kernel-modules
 	mkdir ${rootfsDir}/rootfs
-	mkdir ${rootfsDir}/rootfs/usr/
+	mkdir ${rootfsDir}/rootfs/opt
+	mkdir ${rootfsDir}/rootfs/usr
 	mkdir ${rootfsDir}/rootfs/usr/libexec
 	mkdir ${rootfsDir}/rootfs/usr/share
 	mkdir -p ${rootfsDir}/rootfs/usr/www/docs
