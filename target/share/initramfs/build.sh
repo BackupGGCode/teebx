@@ -114,9 +114,12 @@ echo "Cleaning away stray files ..."
 find ./ -type f -name "._*" -print -delete
 
 #remove openssh build files
-rm -rf $initramfs_loc/opt/bin
-rm -rf $initramfs_loc/opt/etc
-rm -rf $initramfs_loc/opt/sbin
+#rm -rf $initramfs_loc/opt/bin
+#rm -rf $initramfs_loc/opt/etc
+#rm -rf $initramfs_loc/opt/sbin
+
+#remove /opt
+rm -rf $initramfs_loc/opt
 
 echo "Creating initramfs image..."
 find . | cpio -H newc -o | gzip > "$build_toolchain/initramfs.igz"
