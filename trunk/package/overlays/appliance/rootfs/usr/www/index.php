@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -208,6 +208,6 @@ if (isset($config['system']['notes']))
 
 include('fbegin.inc');
 $tbl->renderTable();
-echo '<div id="timestamp" style="display: none;">' . (time() * 1000) . '</div>';
+echo '<div id="timestamp" style="display: none;">' . (time() + date('Z')) % 86400 . '</div>';
 include("fend.inc");
 ?>

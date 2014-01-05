@@ -8,10 +8,6 @@
 	</body>
 </html>
 <?php
-	// debug info
-	require('libs-php/debug.lib.php');
-	logPushMsg($GLOBALS);
-	//
 	if (file_exists($d_passworddirty_path))
 	{
 		system_update_shell_password();
