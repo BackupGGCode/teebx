@@ -151,8 +151,8 @@ function getPartUuidByDev($device)
 function isMountpoint($mntNode)
 {
 	// we could also look at cat  /proc/self/mounts and return which device is mounted on?
-	exec("mountpoint -q $mntNode", $out);
-	if ($out[0] == 0)
+	exec("mountpoint -q $mntNode", $discard, $retval);
+	if ($retval == 0)
 		return true;
 	//
 	return false;
@@ -407,13 +407,9 @@ function getFreeDisks(&$cfgPtr, &$arrDiskInfo)
 	return $result;
 }
 
-function getConfiguredDisks(&$cfgPtr)
+function getConfiguredDisks(&$cfgPtr, $all = true, $fstabFmt = false, $fstabOpt = 'rw,noatime 0 0')
 {
-	if (!isset($cfgPtr['system']['storage']['fsmounts']))
-	{
-		return false;
-	}
-	if (!is_array($cfgPtr['system']['storage']['fsmounts']))
+	if (!isset($cfgPtr['system']['storage']['fsmounts']) || !is_array($cfgPtr['system']['storage']['fsmounts']))
 	{
 		return false;
 	}
@@ -421,9 +417,27 @@ function getConfiguredDisks(&$cfgPtr)
 	$result = array();
 	foreach (array_keys($cfgPtr['system']['storage']['fsmounts']) as $mp)
 	{
+		if (!$all)
+		{
+			if ($cfgPtr['system']['storage']['fsmounts'][$mp]['active'] != 1)
+			{
+				continue;
+			}
+		}
 		if (isset($cfgPtr['system']['storage']['fsmounts'][$mp]['uuid']))
 		{
-			$result[$cfgPtr['system']['storage']['fsmounts'][$mp]['uuid']] = $cfgPtr['system']['storage']['fsmounts'][$mp];
+			if ($fstabFmt)
+			{
+				$result[] = "UUID={$cfgPtr['system']['storage']['fsmounts'][$mp]['uuid']} ".
+					"{$cfgPtr['system']['storage']['mountroot']}/$mp " .
+					"{$cfgPtr['system']['storage']['fsmounts'][$mp]['filesystem']} " .
+					$fstabOpt
+				;
+			}
+			else
+			{
+				$result[$cfgPtr['system']['storage']['fsmounts'][$mp]['uuid']] = $cfgPtr['system']['storage']['fsmounts'][$mp];
+			}
 		}
 	}
 	return $result;
@@ -526,6 +540,7 @@ function mountStorageDevices(&$conf)
 	}
 
 	$devDisabled = 0;
+	$devUnchanged = 0;
 	$devConfigured = count($conf['system']['storage']['fsmounts']);
 	foreach (array_keys($conf['system']['storage']['fsmounts']) as $devMount)
 	{
@@ -542,6 +557,12 @@ function mountStorageDevices(&$conf)
 			continue;
 		}
 		$fullMntPath = "{$conf['system']['storage']['mountroot']}/{$devMount}";
+		// check that is not already mounted
+		if (isMountpoint($fullMntPath))
+		{
+			$devUnchanged += 1;
+			continue;
+		}
 		// make the fs mount point
 		if (!is_dir($fullMntPath))
 		{
@@ -577,14 +598,14 @@ function mountStorageDevices(&$conf)
 			continue;
 		}
 		// update fstab buffer
-		$log['fsappend'][] = "$fstabFsId $fullMntPath $fsType rw,noatime 0 0";
+		$log['fsappend'][] = $fstabFsId;
 	}
 	// write down a new fstab if needed
 	$log['newdevs'] = count($log['fsappend']);
-	msgToSyslog("storage check complete ($devConfigured devices configured, {$log['newdevs']} activated, $devDisabled disabled).");
+	msgToSyslog("storage check complete ($devConfigured devices configured, {$log['newdevs']} activated, $devUnchanged unchanged, $devDisabled disabled).");
 	if ($log['newdevs'] > 0)
 	{
-		setupFstab($log['fsappend'], 'from');
+		setupFstab(getConfiguredDisks($conf, false, true), 'from');
 		msgToSyslog('fstab update complete.');
 	}
 	unset($log['fsappend']);
@@ -594,7 +615,10 @@ function mountStorageDevices(&$conf)
 function setupFstab($rows, $copyMode = false, $fstabCopy = '/etc/fstab.boot')
 {
 	$lines = '';
-	$bytesCount = false;
+	$bytesCount = 0;
+	if (empty($rows))
+		return 0;
+	//
 	if ($copyMode == 'from')
 	{
 		if (file_exists($fstabCopy))
@@ -603,7 +627,6 @@ function setupFstab($rows, $copyMode = false, $fstabCopy = '/etc/fstab.boot')
 		}
 	}
 
-	$fHandle = fopen('/etc/fstab', 'w');
 	if (is_array($rows))
 	{
 		foreach (array_keys($rows) as $row)
@@ -613,13 +636,13 @@ function setupFstab($rows, $copyMode = false, $fstabCopy = '/etc/fstab.boot')
 	}
 	else
 	{
-		$lines .= $rows . PHP_EOL;
+		$lines .= PHP_EOL . $rows . PHP_EOL;
 	}
 
+	$fHandle = fopen('/etc/fstab', 'w');
 	$bytesCount = fwrite($fHandle, $lines);
 	fflush($fHandle);
 	fclose($fHandle);
-	//exec('sync');
 
 	if ($copyMode == 'to')
 		copy('/etc/fstab', $fstabCopy);

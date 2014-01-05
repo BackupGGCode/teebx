@@ -28,6 +28,8 @@ require('blockdevices.lib.php');
 require('libs-php/cfgform.class.php');
 require_once('libs-php/utils.lib.php');
 require_once('initsvc.storage.php');
+require_once('applianceboot.lib.php');
+require_once('appliance.lib.php');
 
 // define some constants referenced in fbegin.inc
 define('INCLUDE_FORMSTYLE', true);
@@ -235,11 +237,6 @@ $msgDone = _('done.');
 require('fbegin.inc');
 $initForm->renderForm();
 $confForm->renderForm();
-echo '<div><pre>';
-var_export($_POST);
-echo "\n";
-var_export($svcAvail);
-echo '</pre></div>';
 // end layout
 require('fend.inc');
 ?>

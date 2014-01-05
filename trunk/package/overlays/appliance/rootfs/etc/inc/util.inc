@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -44,8 +44,17 @@ function getMilliTime()
 	return microtime(true) * 1000;
 }
 
+function syncFreeCache()
+{
+	exec('sync; /sbin/sysctl -w vm.drop_caches=3', $discard, $retval);
+	unset($discard);
+	return $retval;
+}
+
 function getMemoryStatus()
 {
+	// TODO: add a sleep to syncFreeCache() and call this function via ajax to avoid page loading latency
+	syncFreeCache();
 	exec('/usr/bin/free -b', $memory, $retval);
 	if ($retval == 1)
 		return false;
