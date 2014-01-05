@@ -1,8 +1,8 @@
- <?php
+<?php
 /*
   $Id$
 part of BoneOS build platform (http://www.teebx.com/)
-Copyright(C) 2010 - 2013 Giovanni Vallesi (http://www.teebx.com).
+Copyright(C) 2010 - 2014 Giovanni Vallesi (http://www.teebx.com).
 All rights reserved.
 
   This program is free software: you can redistribute it and/or modify
@@ -22,9 +22,9 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-require_once('config.inc');
 require_once('util.inc');
 require_once('blockdevices.lib.php');
+require_once('services.lib.php');
 
 function getAvailServices()
 {
@@ -32,20 +32,111 @@ function getAvailServices()
 
 	foreach (array_keys($services) as $service)
 	{
-		$fCall = 'initsvc' . ucfirst($service);
-		if (is_callable($fCall))
+		if (!is_callable($services[$service]['handler']))
 		{
-			$services[$service]['handler'] = $fCall;
+			unset($services[$service]);
 			continue;
 		}
-		unset($services[$service]);
+		foreach (array_keys($services[$service]['rules']) as $rule)
+		{
+			if (is_callable($services[$service]['rules'][$rule]))
+			{
+				continue;
+			}
+			// something misconfigured, break out, this service key will be unset
+			unset($services[$service]);
+			break;
+		}
 	}
 	return $services;
 }
 
-function setupStorageDevices(&$conf)
+function setupDoBefore($services, $filter = null, $coldStart = false)
 {
-	if (!is_array($conf['system']['storage']))
+	$job = array(
+		'now' => array(),
+		'reconf' => array(),
+		'defer' => array()
+	);
+
+	if ($filter !== null && is_array($filter))
+	{
+		$services = array_intersect_key($services, array_flip($filter));
+	}
+
+	foreach (array_keys($services) as $service)
+	{
+		if ($coldStart && isset($services[$service]['ignorecoldstart']) && $services[$service]['ignorecoldstart'])
+		{
+			continue;
+		}
+		$app = $services[$service]['application'];
+		// fill the list of function(s) to be called to reconfigure application(s)
+		if (isset($services[$service]['rules']['reconf']))
+		{
+			if (!in_array($services[$service]['rules']['reconf'], $job['reconf']))
+			{
+				$job['reconf'][] = $services[$service]['rules']['reconf'];
+			}
+		}
+		// fill the list of function(s) to be called to stop application(s) before changing configuration
+		if (isset($services[$service]['rules']['stop']))
+		{
+			$job['now'][$app][$services[$service]['rules']['stop']] = 'h';
+		}
+		elseif (isset($services[$service]['rules']['reload']))
+		{
+			// skip the reload function if this app need is already set to be restarted
+			if (!array_key_exists($app, $job['now']))
+			{
+				$job['defer'][$app][$services[$service]['rules']['reload']] = 'r';
+			}
+		}
+		if (isset($services[$service]['rules']['start']))
+		{
+			$job['defer'][$app][$services[$service]['rules']['start']] = 's';
+		}
+	}
+	// reduce $job['defer']
+	$tmp = array();
+	array_walk($job['defer'],
+		function($row) use(&$tmp)
+		{
+			$tmp[] = key($row);
+		},
+		$tmp
+	);
+	$job['defer'] = $tmp;
+	unset($tmp);
+
+	// now run any function to stop application(s) as needed
+	foreach (array_keys($job['now']) as $application)
+	{
+		foreach (array_keys($job['now'][$application]) as $fCall)
+		{
+			call_user_func($fCall);
+		}
+	}
+
+	// clean up the job array to keep only the keys to be returned
+	unset($job['now']);
+	return $job;
+}
+
+function setupDoCall($fList)
+{
+	$result = true;
+	foreach (array_keys($fList) as $fCall)
+	{
+		$result |= call_user_func($fList[$fCall]);
+	}
+	return $result;
+}
+
+function setupStorageDevices(&$conf, $filter = null, $boot = false)
+{
+	// check that there are mountpoints defined
+	if (!is_array($conf['system']['storage']) || !is_array($conf['system']['storage']['fsmounts']))
 		return 0;
 	//
 	$setup = mountStorageDevices($conf);
@@ -55,23 +146,30 @@ function setupStorageDevices(&$conf)
 	//
 	// get callable service functions
 	$svcFuncs = getAvailServices();
-	// now loop thru $conf['system']['storage']['services'] array to initialize services
-	foreach (array_keys($conf['system']['storage']['services']) as $service)
+	// get a copy of the storage config array
+	$storageCfg = $conf['system']['storage']['services'];
+	// reduce it according to $filter if set
+	if ($filter !== null && is_array($filter))
+	{
+		$storageCfg = array_intersect_key($storageCfg, array_flip($filter));
+	}
+	// now loop thru $storageCfg array to initialize services
+	foreach (array_keys($storageCfg) as $service)
 	{
 		// first check some required symbols
-		if (!is_array($conf['system']['storage']['services'][$service]))
+		if (!is_array($storageCfg[$service]))
 			continue;
 		//
-		if (!isset($conf['system']['storage']['services'][$service]['active']))
+		if (!isset($storageCfg[$service]['active']))
 			continue;
 		// skip if disabled...
-		if ($conf['system']['storage']['services'][$service]['active'] != 1)
+		if ($storageCfg[$service]['active'] != 1)
 			continue;
-		// ...same if no mount point was set
-		if (!isset($conf['system']['storage']['services'][$service]['fsmount']))
+		// ...the same if no mount point was set
+		if (!isset($storageCfg[$service]['fsmount']))
 			continue;
 		// check that the mount point this service depends on is enabled, else skip it
-		$fsMount = $conf['system']['storage']['services'][$service]['fsmount'];
+		$fsMount = $storageCfg[$service]['fsmount'];
 		if ($conf['system']['storage']['fsmounts'][$fsMount]['active'] != 1)
 		{
 			continue;
@@ -88,7 +186,7 @@ function setupStorageDevices(&$conf)
 			check that the required directory exists, else make it.
 			This also to avoid a system call except the very first time.
 		*/
-		$svcPath = "{$conf['system']['storage']['mountroot']}/$fsMount/$service";
+		$svcPath = "{$conf['system']['storage']['mountroot']}/$fsMount/{$svcFuncs[$service]['dirtree']}";
 		if (!is_dir($svcPath))
 		{
 			if (!mkdir($svcPath, 0766, true))
@@ -116,55 +214,4 @@ function setupStorageDevices(&$conf)
 		msgToSyslog('something went wrong during storage initialization, please check status using the UI.', LOG_ERR);
 	}
 }
-
-function initsvcAstmedia($basePath, $arrOpt = null)
-{
-	if (!is_dir("$basePath/moh"))
-	{
-		mkdir("$basePath/moh/custom", 0766, true);
-		exec("cp -Rp /offload/asterisk/moh/* $basePath/moh/");
-	}
-
-	if (!is_dir("$basePath/sounds"))
-	{
-		mkdir("$basePath/sounds/custom", 0766, true);
-		exec("cp -Rp /offload/asterisk/sounds/* $basePath/sounds/");
-	}
-
-	return true;
-}
-
-function initsvcAstdb($basePath, $arrOpt = null)
-{
-	if (!is_dir("$basePath/db"))
-	{
-		mkdir("$basePath/db", 0766, true);
-		if (is_file('/etc/asterisk/db/astdb'))
-		{
-			exec("cp -p /etc/asterisk/db/astdb $basePath/db/");
-		}
-	}
-	return true;
-}
-
-function initsvcAstcdr($basePath, $arrOpt = null)
-{
-}
-
-function initsvcAstlogs($basePath, $arrOpt = null)
-{
-}
-
-function initsvcFax($basePath, $arrOpt = null)
-{
-}
-
-function initsvcVoicemail($basePath, $arrOpt = null)
-{
-}
-
-function initsvcSystemlogs($arrStorage, $service)
-{
-}
-
 ?>

@@ -22,10 +22,12 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 session_start();
-require('guiconfig.inc');
+require 'guiconfig.inc';
 require_once('blockdevices.lib.php');
 require_once('initsvc.storage.php');
 require_once('libs-php/cfgform.class.php');
+require_once('applianceboot.lib.php');
+require_once('appliance.lib.php');
 
 // initialize local variables
 //
@@ -64,6 +66,7 @@ $cfgPtr['fsmounts'][$svcMount]['comment'] = $confForm->getFldValue('desc');
 $cfgPtr['fsmounts'][$svcMount]['active'] = $confForm->getFldValue('active');;
 
 $svcAvail = getAvailServices();
+$svcSetNow = null;
 
 foreach (array_keys($svcAvail) as $svc)
 {
@@ -72,6 +75,7 @@ foreach (array_keys($svcAvail) as $svc)
 	{
 		$cfgPtr['services'][$svc]['fsmount'] = $svcMount;
 		$cfgPtr['services'][$svc]['active'] = 1;
+		$svcSetNow[] = $svc;
 	}
 	else
 	{
@@ -90,7 +94,14 @@ $data['debug'] = $cfgPtr;
 $data['retval'] = 0;
 write_config();
 
-//setupStorageDevices($config);
+// stop any application that depends on changing settings
+$callQueue = setupDoBefore($svcAvail, $svcSetNow);
+// mount and initialize storage
+setupStorageDevices($config, $svcSetNow);
+// reconfigure applications due to changed settings
+$data['results']['reconf'] = setupDoCall($callQueue['reconf']);
+// start applications previously halted
+$data['results']['defer'] = setupDoCall($callQueue['defer']);
 
 // return json data
 exit(json_encode($data));

@@ -32,6 +32,7 @@
 
 /* include all configuration functions */
 require_once('functions.inc');
+require_once 'services.lib.php';
 
 /**
 * Generates all Asterisk configuration files and (re)starts the Asterisk process
@@ -966,17 +967,21 @@ EOD;
 
 function asterisk_conf_generate($return = false)
 {
-	$datapath = "/offload/asterisk";
-/*	if ($disk = storage_service_is_active("media"))
-	{
-		$datapath = $disk['mountpoint'] . "/teebx/media";
-	}*/
+	global $config;
 
-	$dbpath = "/etc/asterisk/db";
-/*	if ($disk = storage_service_is_active("persistence"))
+	$datapath = '/offload/asterisk';
+	$pathNew = getSvcState($config, 'astmedia');
+	if ($pathNew ==! false)
 	{
-		$dbpath = $disk['mountpoint'] . "/teebx/persistence";
-	} */
+		$datapath = $pathNew;
+	}
+
+	$dbpath = '/etc/asterisk/db';
+	$pathNew = getSvcState($config, 'astdb');
+	if ($pathNew ==! false)
+	{
+		$dbpath = $pathNew;
+	}
 
 	$conf = <<<EOD
 [directories]

@@ -3,7 +3,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -40,11 +40,13 @@
 	touch("{$g['varrun_path']}/booting");
 
 	/* parse the configuration and include all functions used below */
-	require_once('config.inc');
-	require_once('functions.inc');
-	require_once('fileutils.lib.php');
-	require_once('smtpconf.lib.php');
-	require_once('initsvc.storage.php');
+	require_once 'config.inc';
+	require_once 'functions.inc';
+	require_once 'fileutils.lib.php';
+	require_once 'smtpconf.lib.php';
+	require_once 'initsvc.storage.php';
+	require_once 'applianceboot.lib.php';
+	require_once 'appliance.lib.php';
 
 	/* check whether config reset is desired (via hardware button on wrap and alix23x) */
 	echo " - Checking reset button... ";
@@ -69,7 +71,7 @@
 	echo 'done', PHP_EOL;
 
 	echo ' - Configuring storage... ', PHP_EOL;
-	setupStorageDevices($config);
+	setupStorageDevices($config, null, true);
 	echo 'done', PHP_EOL;
 
 	/* execute package boot routines */
