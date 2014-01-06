@@ -75,18 +75,22 @@ table.report caption
 	padding-top: 2px;
 }
 
-table.report thead tr th, table.report tfoot tr th
+table.report thead tr th, table.report tfoot tr th, th.colheader
 {
 	background-color: #619CCD;
-	border: 0px solid #CDCDCD;
 	font-size: 8pt;
 	padding: 4px;
 }
 
-table.report thead tr th.bodytitle
+table.report thead tr th.bodytitle, table.report tbody tr th.bodytitle
 {
 	border: 1px solid #619CCD;
 	background-color: #fff;
+}
+
+table.report tbody tr th.bodytitle
+{
+	padding: 4px;
 }
 
 table.report thead tr th.sortable

@@ -160,7 +160,6 @@ $tblDiskRep->tbody();
 	}
 	// show system disk summary
 // section heading
-$tblDiskRep->thead();
 	$tblDiskRep->tr();
 		$tblDiskRep->th(_('System disk status'), 'class=bodytitle|colspan=3');
 	$tblDiskRep->tr();
