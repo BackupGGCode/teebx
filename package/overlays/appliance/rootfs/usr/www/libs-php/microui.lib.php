@@ -110,7 +110,7 @@ function getAnalogBar($value, $label = null)
 		$label = $value;
 	}
 
-	$barHtml = '<div id="analog_meter"><div style="width: %s%%;"><p>%s%%</p></div></div>';
+	$barHtml = '<div class="analogbar"><div style="width: %s%%;"><p>%s%%</p></div></div>';
 	return sprintf($barHtml, $value, $label);
 }
 
