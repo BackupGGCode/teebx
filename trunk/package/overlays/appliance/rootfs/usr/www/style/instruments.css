@@ -4,7 +4,7 @@
   - look at TeeBX website to get details about license
 */
 
-#analog_meter
+.analogbar
 {
 	background-color: #CDDFEF;
 	border: 1px solid #FFFFFF;
@@ -15,14 +15,14 @@
 	border-radius: 5px; /* ((inner div height)/2) + padding */
 }
 
-div#analog_meter div
+div.analogbar div
 {
 	background-color: #F58233;
 	width: 50%;
 	height: 12px;
 }
 
-div#analog_meter p
+div.analogbar p
 {
 	color: #000000;
 	padding-top: 0px;
@@ -31,7 +31,7 @@ div#analog_meter p
 	text-align: center;
 }
 
-#analog_meter > div
+.analogbar > div
 {
 	border-radius: 3px;
 }

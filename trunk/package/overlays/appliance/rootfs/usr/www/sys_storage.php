@@ -116,7 +116,7 @@ $tblStorage->tbody();
 //
 // report all system devices
 // init another table object
-$tblDiskRep = new htmlTable('id=table01|class=report');
+$tblDiskRep = new htmlTable('id=table02|class=report');
 // fill the table caption
 $tblDiskRep->caption(_('Disk Report'));
 // table section heading
