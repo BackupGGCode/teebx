@@ -63,7 +63,7 @@ $cfgPtr['fsmounts'][$svcMount]['uuid'] = $confForm->getFldValue('uuid');
 $cfgPtr['fsmounts'][$svcMount]['label'] = $confForm->getFldValue('label');
 $cfgPtr['fsmounts'][$svcMount]['filesystem'] = $confForm->getFldValue('filesystem');
 $cfgPtr['fsmounts'][$svcMount]['comment'] = $confForm->getFldValue('desc');
-$cfgPtr['fsmounts'][$svcMount]['active'] = $confForm->getFldValue('active');;
+$cfgPtr['fsmounts'][$svcMount]['active'] = $confForm->getFldValue('active');
 
 $svcAvail = getAvailServices();
 $svcSetNow = null;

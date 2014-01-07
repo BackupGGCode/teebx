@@ -35,7 +35,7 @@ function startIpbx()
 function stopIpbx()
 {
 	exec('/usr/sbin/asterisk -rx \'core stop now\'', $discard, $result);
-	exec('sleep 1');
+	sleep(1);
 	return $result;
 }
 
