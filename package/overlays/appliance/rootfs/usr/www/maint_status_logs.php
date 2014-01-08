@@ -93,25 +93,42 @@ include('fbegin.inc');
 
 			if (last_line) {
 				var overlaps = false;
-				for (i = 0; i < lines.length - 1; i++) {
-					if (last_line == lines[i]) {
+				for (i = 0; i < lines.length - 1; i++)
+				{
+					if (last_line == lines[i])
+					{
 						overlaps = true;
 						i++;
 						break;
 					}
 				}
-				if (!overlaps) {
+				if (!overlaps)
+				{
 					i = 0;
 				}
 			}
 
-			for (i = i; i < lines.length - 1; i++) {
-				jQuery("#log_contents").append(
-					'<div class="logentry">' + lines[i] + '</div>'
-				);
-				last_line = lines[i];
-			}
+			for (i = i; i < lines.length - 1; i++)
+			{
+				var rowStyle = 'logentry';
 
+				last_line = lines[i];
+				if (last_line.search(/ERROR/i) != -1)
+				{
+					rowStyle = rowStyle + ' logentry_err'
+				}
+				else if (last_line.search(/WARNING/i) != -1)
+				{
+					rowStyle = rowStyle + ' logentry_warn'
+				}
+				else if (last_line.search(/FAIL/i) != -1)
+				{
+					rowStyle = rowStyle + ' logentry_fail'
+				}
+				jQuery("#log_contents").append(
+					'<div class="' + rowStyle + '" id="LE' + i + '">' + last_line + '</div>'
+				);
+			}
 		});
 
 		if (!auto_updating) {
