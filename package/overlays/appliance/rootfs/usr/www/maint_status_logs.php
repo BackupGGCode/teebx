@@ -66,6 +66,7 @@ include('fbegin.inc');
 <!--
 
 	var last_line;
+	var displayMarkers = false;
 	var auto_updating = true;
 	var msg_disabled = '<?php echo _('Stopped updates'); ?>';
 	var msg_enabled = '<?php echo _('Resuming updates'); ?>';
@@ -111,23 +112,39 @@ include('fbegin.inc');
 			for (i = i; i < lines.length - 1; i++)
 			{
 				var rowStyle = 'logentry';
+				var newMarker = '';
 
 				last_line = lines[i];
 				if (last_line.search(/ERROR/i) != -1)
 				{
-					rowStyle = rowStyle + ' logentry_err'
+					rowStyle = rowStyle + ' logentry_err';
+					newMarker = '<a class="mark_err" href="#LE' + i + '">|</a>';
+					displayMarkers = true;
 				}
 				else if (last_line.search(/WARNING/i) != -1)
 				{
-					rowStyle = rowStyle + ' logentry_warn'
+					rowStyle = rowStyle + ' logentry_warn';
+					newMarker = '<a class="mark_warn" href="#LE' + i + '">|</a>';
+					displayMarkers = true;
 				}
 				else if (last_line.search(/FAIL/i) != -1)
 				{
-					rowStyle = rowStyle + ' logentry_fail'
+					rowStyle = rowStyle + ' logentry_fail';
+					newMarker = '<a class="mark_fail" href="#LE' + i + '">|</a>';
+					displayMarkers = true;
 				}
 				jQuery("#log_contents").append(
 					'<div class="' + rowStyle + '" id="LE' + i + '">' + last_line + '</div>'
 				);
+				if (newMarker.length > 0)
+				{
+					jQuery(newMarker).insertBefore('#markersbar :last');
+				}
+			}
+
+			if (displayMarkers)
+			{
+				jQuery("#markersbar").show();
 			}
 		});
 
@@ -152,7 +169,12 @@ include('fbegin.inc');
 ?>
 <div style="clear: both;"></div>
 <div class="content_block">
-	<div class="listtopic"><?php echo $logHeader; ?></div>
+	<div class="markersbox">
+		<?php echo $logHeader; ?>
+		<div class="marksbar" id="markersbar">
+			<span class="marksend"></span>
+		</div>
+	</div>
 	<div id="log_contents" class="scrollable"></div>
 	<div style="clear: both;"></div>
 	<div style="float:right; padding-top:5px" id="log_controls">
