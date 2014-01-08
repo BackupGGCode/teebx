@@ -260,6 +260,7 @@ a.link_color_black {
 
 .logentry {
 	background-color: #FFFFFF;
+	border-left: 3px solid #FFFFFF;
 	border-right: 1px solid #999999;
 	border-bottom: 1px solid #999999;
 	font-size: 11px;
@@ -267,6 +268,21 @@ a.link_color_black {
 	padding-left: 6px;
 	padding-top: 4px;
 	padding-bottom: 4px;
+}
+
+.logentry_warn {
+	border-left: 3px solid rgba(255, 153, 0, 1);
+	background-color: rgba(255, 153, 0, 0.3);
+}
+
+.logentry_fail {
+	border-left: 3px solid rgba(255, 0, 0, 1);
+	background-color: rgba(255, 0, 0, 0.3);
+}
+
+.logentry_err {
+	border-left: 3px solid rgba(153, 0, 0, 1);
+	background-color: rgba(153, 0, 0, 0.3);
 }
 
 .d_header {
