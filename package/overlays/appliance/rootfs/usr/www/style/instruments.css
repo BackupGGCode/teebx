@@ -53,34 +53,35 @@ div.analogbar p
 {
 	background-color: #CDDFEF;
 	margin-top: 3px;
-	height: 1.5em;
 	padding-left: 5px;
 	padding-right: 5px;
-	padding-top: 4px;
+	padding-top: 8px;
 	border: 1px solid #FFFFFF;
-	border-radius: 5px;
+	border-radius: 3px;
 	display:none;
 }
 
 .marksbar a, marksbar a:visited, marksbar a:active
 {
-	text-decoration: none;
-	color: inherit;
-	padding-bottom: 2px;
-	border-radius: 2px;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	font-size: 0;
+	line-height: 0;
 }
 
 .mark_warn
 {
-	background-color: rgba(255, 153, 0, 1);
+	border-top: 7px solid rgba(255, 153, 0, 1);
 }
 
 .mark_fail
 {
-	background-color: rgba(255, 0, 0, 1);
+	border-top: 7px solid rgba(255, 0, 0, 1);
 }
 
 .mark_err
 {
-	background-color: rgba(153, 0, 0, 1);
+	border-top: 7px solid rgba(153, 0, 0, 1);
 }
