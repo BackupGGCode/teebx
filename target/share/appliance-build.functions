@@ -59,11 +59,11 @@ appliance_prepareRootfs()
 	# $1: build root (source)
 	# $2: rootfs preparation top directory (destination)
 
-	# usr/bin
+	# asterisk "astvarlibdir"
 	cp -Rp ${1}/offload/asterisk/* ${2}/asterisk/
 	# ...cleanup
 	rm -rf ${2}/asterisk/agi-bin
-	rm -rf ${2}/asterisk/firmware
+	rm -rf ${2}/asterisk/firmware/iax/*
 	rm -rf ${2}/asterisk/images
 	rm -rf ${2}/asterisk/keys
 	rm -rf ${2}/asterisk/static-http

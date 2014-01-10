@@ -57,6 +57,12 @@ function initsvcAstmedia($basePath, $arrOpt = null)
 		exec("cp -Rp /offload/asterisk/sounds/* $basePath/sounds/");
 	}
 
+	// actually unused but we don't like noise in logs due to insignificant errors
+	if (!is_dir("$basePath/firmware/iax"))
+	{
+		mkdir("$basePath/firmware/iax", 0766, true);
+	}
+
 	return true;
 }
 
