@@ -2,7 +2,7 @@
 /*
   $Id$
 part of BoneOS build platform (http://www.teebx.com/)
-Copyright(C) 2010 - 2012 Giovanni Vallesi (http://www.teebx.com).
+Copyright(C) 2010 - 2014 Giovanni Vallesi (http://www.teebx.com).
 All rights reserved.
 
   This program is free software: you can redistribute it and/or modify
@@ -875,7 +875,7 @@ class quickForm
 		$this->tagsPool[$id]['keepvaltopsorted'] = $topGrpOptionText;
 	}
 
-	public function setFieldOptionsState($id, $selectedOpts)
+	public function setFieldOptionsState($id, $selectedOpts, $default = null)
 	{
 		// !TODO: make this work both for select and/or checkbox
 		if (!isset($this->tagsPool[$id]))
@@ -886,9 +886,17 @@ class quickForm
 		{
 			return 20;
 		}
+		if (!is_null($default))
+		{
+			$this->setDefault($id, $default);
+		}
 		if ($this->submitted)
 		{
 			$selectedOpts = $this->getSubmitFieldValue($id);
+		}
+		elseif (is_null($selectedOpts) && isset($this->constraints[$id]['default']))
+		{
+			$selectedOpts = $this->constraints[$id]['default'];
 		}
 		if (isset($this->tagsPool[$id]['keepvaltopsorted']))
 			$this->setTagOptSelectedSorted($id, $selectedOpts);
