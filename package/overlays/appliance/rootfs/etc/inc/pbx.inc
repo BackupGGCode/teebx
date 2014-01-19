@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2013 Giovanni Vallesi.
+	Copyright(C) 2010 - 2014 Giovanni Vallesi.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2011 tecema (a.k.a IKT) <http://www.tecema.de>.
@@ -920,19 +920,6 @@ function pbx_uniqid_to_technology($uniqid)
 	return "ERROR:UNIQID_TO_TECHNOLOGY_FAILED($uniqid)";
 }
 
-function modules_conf_generate($return = false)
-{
-	require('astbasemod.def.inc');
-	$conf = $heading . PHP_EOL;
-
-	foreach (array_keys($base_ast_modules) as $key)
-	{
-		$conf .= "load => {$base_ast_modules[$key]}" . PHP_EOL;
-	}
-
-	return ($return) ? $conf : util_file_write('/etc/asterisk/modules.conf', $conf);
-}
-
 function phpagi_conf_generate($return = false)
 {
 	$conf = <<<EOD
@@ -1196,6 +1183,34 @@ EOD;
 	return ($return) ? $conf : util_file_write("/etc/asterisk/sip_notify.conf", $conf);
 }
 
+// TODO: new functions to be moved to appliance.lib.php
+// some refactoring also required
+function getAsteriskVersion($aliveChk = false)
+{
+	$version = false;
+	$running = true;
+	$result = 1;
+	if ($aliveChk)
+	{
+		exec('/usr/sbin/asterisk -rx \'core show version\'', $out, $result);
+	}
+	if ($result != 0)
+	{
+		$running = false;
+		exec('/usr/sbin/asterisk -V', $out, $result);
+	}
+
+	if (!empty($out) && $result == 0)
+	{
+		$parts = explode(' ', $out[0]);
+		if (isset($parts[1]))
+		{
+			$version = explode('.', $parts[1]);
+		}
+	}
+	return array('alive' => $running, 'version' => $version);
+}
+
 function unmanaged_cfgfiles_generate(&$unmanagedFiles)
 {
 	$retval = 0;
@@ -1204,6 +1219,28 @@ function unmanaged_cfgfiles_generate(&$unmanagedFiles)
 		$retval |= util_file_write($unmanagedFiles[$key], '');
 	}
 	return $retval;
+}
+
+function modules_conf_generate($return = false)
+{
+	require('astbasemod.def.inc');
+	$conf = $heading . PHP_EOL;
+
+	foreach (array_keys($base_ast_modules) as $key)
+	{
+		$conf .= "load => {$base_ast_modules[$key]}" . PHP_EOL;
+	}
+
+	$ver = getAsteriskVersion(false);
+	if ($ver['version'] !== false && $ver['version'][0] == 11)
+	{
+		foreach (array_keys($extra_modules_v11) as $key)
+		{
+			$conf .= "load => {$extra_modules_v11[$key]}" . PHP_EOL;
+		}
+	}
+
+	return ($return) ? $conf : util_file_write('/etc/asterisk/modules.conf', $conf);
 }
 
 ?>
