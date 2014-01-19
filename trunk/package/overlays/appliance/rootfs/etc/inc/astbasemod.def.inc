@@ -56,6 +56,10 @@
 		'res_timing_timerfd.so'
 	);
 
+	$extra_modules_v11 = array(
+		'res_rtp_asterisk.so'
+	);
+
 	$heading = <<<EOD
 [modules]
 autoload=no
