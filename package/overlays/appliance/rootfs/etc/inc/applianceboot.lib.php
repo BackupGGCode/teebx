@@ -22,16 +22,111 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-require_once('util.inc');
+require_once 'util.inc';
+require_once 'services.lib.php';
 
-function configSyslog(&$config, $opt)
+function configSyslog(&$arrCfg)
 {
+	$logPath = null;
+	// safe default command line
+	$args = '-S -C512';
+
+	if (isset($arrCfg['system']['syslog']))
+	{
+		// configure local syslog mode
+		if (isset($arrCfg['system']['syslog']['mode']))
+		{
+			if ($arrCfg['system']['syslog']['mode'] == 'membuffer')
+			{
+				if (isset($arrCfg['system']['syslog']['buffer']) && !empty($arrCfg['system']['syslog']['buffer']))
+				{
+					$args = "-S -C{$arrCfg['system']['syslog']['buffer']}";
+				}
+			}
+			elseif ($arrCfg['system']['syslog']['mode'] == 'disk' && ($logPath = getSvcState($arrCfg, 'systemlog')) ==! false)
+			{
+				$args = "-S -O $logPath/messages";
+			}
+		}
+		// configure remote logging
+		if (isset($arrCfg['system']['syslog']['remotehost']) && !empty($arrCfg['system']['syslog']['remotehost']))
+		{
+			$args .= " -R {$arrCfg['system']['syslog']['remotehost']}";
+			if (isset($arrCfg['system']['syslog']['remoteport']) && !empty($arrCfg['system']['syslog']['remoteport']))
+			{
+				$args .= ":{$arrCfg['system']['syslog']['remoteport']}";
+			}
+			// anyway... keep local logging
+			$args .= ' -L';
+		}
+	}
+
+	$saveOld = false;
+	$oldArgs = getProcessCmdline('syslogd');
+	if ($oldArgs !== false)
+	{
+		if ($oldArgs === $args)
+		{
+			// nothing to do
+			return false;
+		}
+		if (strpos($oldArgs, '-C') !== false)
+		{
+			$saveOld = true;
+		}
+	}
+
+	return array('args' => $args, 'saveOld' => $saveOld, 'logPath' => $logPath);
 }
 
-function stopSyslog()
+function stopSyslog($saveOld = false)
 {
+	if ($saveOld)
+	{
+		// copy current memory log buffer to a temporary location
+		exec("/sbin/logread > /tmp/messages.old", $discard, $result);
+	}
+	sigkillbyname('syslogd', 'TERM');
+	return $result;
 }
 
-function startSyslog()
+function startSyslog($args, $logPath = null)
 {
+	// if saved buffer file exists and persistent storage is available
+	if ($logPath != null && is_file('/tmp/messages.old'))
+	{
+		rename('/tmp/messages.old', "{$logPath}.old");
+	}
+	exec("/sbin/syslogd $args", $discard, $result);
+	return $result;
+}
+
+function restartSyslog(&$config)
+{
+	$params = configSyslog($config);
+	if ($params === false)
+	{
+		return 0;
+	}
+
+	$return = stopSyslog($params['saveOld']);
+	usleep(200000);
+	$return |= startSyslog($params['args'], $params['logPath']);
+	return $return;
+}
+
+function restartSyslogSvcUpdate()
+{
+	$argCount = func_num_args();
+	if (($argCount < 1))
+	{
+		return false;
+	}
+	// expect the system configuration array as first argument
+	$arrCfg = func_get_arg(1);
+	if (!is_array($arrCfg))
+	{
+		return false;
+	}
+	// TODO: code for update to be written...
 }

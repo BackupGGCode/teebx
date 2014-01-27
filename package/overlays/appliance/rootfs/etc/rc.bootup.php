@@ -74,6 +74,10 @@
 	setupStorageDevices($config, null, true);
 	echo 'done', PHP_EOL;
 
+	echo ' - Configuring syslog... ', PHP_EOL;
+	restartSyslog($config);
+	echo 'done', PHP_EOL;
+
 	/* execute package boot routines */
 	/*
 	echo ' - Booting all packages... ';

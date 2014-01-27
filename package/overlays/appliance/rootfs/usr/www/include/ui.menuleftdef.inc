@@ -28,6 +28,11 @@ $left_items = array
 			),
 			array
 			(
+				'label' => _('Logs'),
+				'url' => 'sys_logs.php'
+			),
+			array
+			(
 				'label' => _('Notifications'),
 				'url' => 'notifications_email.php'
 			),

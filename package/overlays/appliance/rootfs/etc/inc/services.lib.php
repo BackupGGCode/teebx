@@ -43,6 +43,14 @@ function getSvcState(&$conf, $svcName)
 	return $retval;
 }
 
+function initsvcSystemlogs($basePath)
+{
+	if (!is_dir($basePath))
+	{
+		mkdir($basePath, 0766, true);
+	}
+}
+
 function initsvcAstmedia($basePath, $arrOpt = null)
 {
 	if (!is_dir("$basePath/moh"))
@@ -100,7 +108,4 @@ function initsvcVoicemail($basePath, $arrOpt = null)
 {
 }
 
-function initsvcSystemlogs($arrStorage, $service)
-{
-}
 ?>
