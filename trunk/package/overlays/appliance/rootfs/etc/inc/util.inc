@@ -65,6 +65,20 @@ function getMemoryStatus()
 	return array('total' => $memory[1], 'used' => $memory[1] - $memory[3], 'free' => $memory[3]);
 }
 
+function getProcessCmdline($name)
+{
+	$result = false;
+	exec("ps|grep -v grep|grep $name", $out);
+	if (count($out) > 0)
+	{
+		if (preg_match('/\s[\d]{1,2}:[\d]{2}\s[\w\/]+\s([ \w\-\/\.\:]+)/', $out[0], $regs))
+		{
+			$result = $regs[1];
+		}
+	}
+	return $result;
+}
+
 /**
 * Kills a process by pid file
 */

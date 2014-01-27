@@ -14,9 +14,7 @@
 			'ignorecoldstart' => false,
 			'handler' => 'initsvcSystemlogs',
 			'rules' => array(
-				'reconf' => 'configSyslog',
-				'stop' => 'stopSyslog',
-				'start' => 'startSyslog',
+				'stop' => 'restartSyslogSvcUpdate'
 			)
 		),
 		'astmedia' => array(

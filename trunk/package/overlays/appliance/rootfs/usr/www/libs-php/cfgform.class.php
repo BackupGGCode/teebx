@@ -917,22 +917,31 @@ class cfgForm extends quickForm implements Serializable
 		return 0;
 	}
 
-	public function validPort($fieldName, $unprivileged = true)
+	public function validPort($fieldName, &$value, $unprivileged = array('unprivileged' => true))
 	{
 		$lowerPort = 1024;
-		$portNumericString = &$_POST[$fieldName];
-		if (!ctype_digit($portNumericString))
+		$highPort = 65535;
+		$portNumericString = $value;
+		if (!ctype_digit($value))
 		{
 			$this->errQueue[] = _('A valid port must be specified.') . ' (' . _('Port value must be a number') . ')';
 		}
-		// set a lower start base if we want priveleged ports also
-		if (!$unprivileged)
+		// set a lower start base if we allow privileged ports
+		if (!$unprivileged['unprivileged'])
 		{
 			$lowerPort = 1;
 		}
-		if (($portNumericString < $lowerPort) OR ($portNumericString > 65535))
+		if ($value == 0)
 		{
-			$this->errQueue[] = _('Port value must be greather than 1023.');
+			$this->errQueue[] = _('Port value must be a number') . '. ' . _('Valid range') . ': ' . "&gt; $lowerPort &lt; $highPort";
+		}
+		elseif ($value < $lowerPort)
+		{
+			$this->errQueue[] = _('Unprivileged port required, value must be greather than' . ' ' . $lowerPort - 1);
+		}
+		elseif ($value > $highPort)
+		{
+			$this->errQueue[] = _('Port value must be lower than') . ' ' . $highPort + 1;
 		}
 	}
 
@@ -1033,6 +1042,18 @@ class cfgForm extends quickForm implements Serializable
 
 	public function validIpAddr($fieldId, &$data, $idx = null, $params = null)
 	{
+		if (!is_null($params) && is_array($params))
+		{
+			if (isset($params['except']))
+			{
+				// no validation because allowed to be empty
+				if ($params['except'] === 'empty' && $data == '')
+				{
+					return;
+				}
+				// ...
+			}
+		}
 		$ident = $this->getConstraintCaption($fieldId);
 		if ($ident != null)
 			$ident = "$ident: ";
@@ -1049,6 +1070,7 @@ class cfgForm extends quickForm implements Serializable
 		$this->errQueue[] = $ident . _('A valid IP address must be specified.');
 	}
 
+	// TODO: this is a mess and need a deep refactoring!
 	public function validForm()
 	{
 		$fProcessed = array();
@@ -1082,7 +1104,7 @@ class cfgForm extends quickForm implements Serializable
 						}
 						else
 						{
-							$this->{$mKey}($fKey, $fValue);
+							$this->{$mKey}($fKey, $fValue, $validationFuncs[$fKey][$mKey]);
 						}
 					}
 					else

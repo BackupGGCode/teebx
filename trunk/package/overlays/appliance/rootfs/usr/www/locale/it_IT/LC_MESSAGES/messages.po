@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TeeBX traslation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-09 22:08+0000\n"
-"PO-Revision-Date: 2014-01-15 17:02+0100\n"
+"PO-Revision-Date: 2014-01-15 18:21+0100\n"
 "Last-Translator: Giovanni Vallesi <giovanni.v@teebx.com>\n"
 "Language-Team: Italian <giovanni.v@teebx.com>\n"
 "Language: it\n"
@@ -499,10 +499,10 @@ msgid "If you want to change the password for accessing the web UI, enter it her
 msgstr "Se desiderate cambiare la password del sistema inseritela identica nei due campi qui sopra."
 
 msgid "If you want to change the password for accessing the webGUI, enter it here twice."
-msgstr "Se vuoi cambiare la password per accedere all'interfaccia WEB, inserirla qui due volte."
+msgstr "Se si desidera cambiare la password per accedere all'interfaccia WEB, inserirla qui due volte."
 
 msgid "If you want to change the username for accessing the webGUI, enter it here."
-msgstr "Se vuoi cambiare l'utente per accedere all'interfaccia WEB, immettere qui il nome."
+msgstr "Se desiderate cambiare l'utente per accedere all'interfaccia WEB, immettere qui il nome."
 
 msgid "India"
 msgstr "India"
@@ -710,7 +710,7 @@ msgid "Moscow, Russia"
 msgstr "Mosca, Russia"
 
 msgid "Mount Point"
-msgstr "Punto di mount"
+msgstr "Punto di montaggio"
 
 msgid "Mountain Time"
 msgstr "Ora della Catena Montuosa (MST)"
@@ -914,7 +914,7 @@ msgid "Rereading partition table failed, kernel still uses old table."
 msgstr "Rilettura delle partizioni fallita, il kernel continuerà ad usare la vecchia tabella."
 
 msgid "Resuming updates"
-msgstr "Riprendi aggiornamenti"
+msgstr "Aggiornamento riavviato"
 
 msgid "Ring"
 msgstr ""
@@ -1025,7 +1025,7 @@ msgid "Stockholm, Sweden"
 msgstr "Stoccolma, Svezia"
 
 msgid "Stopped updates"
-msgstr "Ferma aggiornamenti"
+msgstr "Aggiornamento arrestato"
 
 msgid "Storage"
 msgstr "Memoria di Massa"
@@ -1209,7 +1209,7 @@ msgid "Usage %"
 msgstr "Uso %"
 
 msgid "Used"
-msgstr "In uso"
+msgstr "Utilizzato"
 
 msgid "Username"
 msgstr "Nome utente"
