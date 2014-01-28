@@ -106,160 +106,160 @@ $vm_emailsubject = array(
 /**
 * Voicemail notification e-mail bodies
 */
-$product_name = system_get_product_name();
+$verInfo = getVersionInfo();
 $vm_emailbody = array(
 	// bulgarian
 	"bg-informal" => "Уважаеми \${VM_NAME},\\n\\n" .
 	"Гласово съобщение от \${VM_CALLERID} се получи във вашата гласова поща. " .
 	"Продължителноста му е \${VM_DUR} и е оставено на \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"bg-formal" => "Уважаеми \${VM_NAME},\\n\\n" .
 	"Гласово съобщение с продължителност \${VM_DUR} беше оставено за вас " .
 	"на \${VM_DATE} от \${VM_CALLERID}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// czech
 	"cs-informal" => "Vážený/vázená \${VM_NAME},\\n\\n" .
 	"ve vaší schránce byl zanechán vzkaz. " .
 	"Zpráva byla zaznamenána \${VM_DATE} a je \${VM_DUR} dlouhá.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"cs-formal" => "Vážený/vázená \${VM_NAME},\\n\\n" .
 	"vaše hlasová schárnka obsahuje novou zprávu. " .
 	"Zpráva byla zanechána dne \${VM_DATE}. Delka zprávy: \${VM_DUR}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// danish
 	"da-informal" => "Kære \${VM_NAME},\\n\\n" .
 	"En besked fra \${VM_CALLERID} er modtaget på din telefonsvarer. " .
 	"En \${VM_DUR} lang besked blev indtalt til dig den \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"da-formal" => "Kære \${VM_NAME},\\n\\n" .
 	"En \${VM_DUR} lang besked blev indtalt på din telefonsvarer den \${VM_DATE} " .
 	"fra \${VM_CALLERID}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// german
 	"de-informal" => "Hallo \${VM_NAME},\\n\\n" .
 	"eine \${VM_DUR} lange Nachricht wurde von \${VM_CALLERID} am \${VM_DATE} hinterlassen.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"de-formal" => "Sehr geehrte(r) \${VM_NAME},\\n\\n" .
 	"eine \${VM_DUR} lange Sprachmitteilung wurde von \${VM_CALLERID} am \${VM_DATE} für Sie hinterlassen.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// english
 	"en-informal" => "Dear \${VM_NAME},\\n\\n" .
 	"A call from \${VM_CALLERID} just landed in your voicemail.\\n\\n" .
 	"Here's the \${VM_DUR} long message that was left for you on \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"en-formal" => "Dear \${VM_NAME},\\n\\n" .
 	"A \${VM_DUR} long voicemail was left for you on \${VM_DATE} from \${VM_CALLERID}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// spanish
 	"es-formal" => "Estimado \${VM_NAME},\\n\\n" .
 	"Usted ha recibido un mensaje de voz desde el número \${VM_CALLERID}.\\n\\n" .
 	"La duración del mensaje es \${VM_DUR} y fue dejado para usted el día \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// finnish
 	"fi-informal" => "Hei \${VM_NAME},\\n\\n" .
 	"Puhelu \${VM_CALLERID}:lta on saapunut sinun vastaajaan.\\n\\n" .
 	"Viesti on \${VM_DUR} pitkä ja on jätetty vastaajalle \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"fi-formal" => "Hyvä herra/rouva \${VM_NAME},\\n\\n" .
 	"\${VM_CALLERID} on jättänyt sinulle \${VM_DUR} pitkän puheviestin \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// french
 	"fr-informal" => "Cher \${VM_NAME},\\n\\n" .
 	"Un message de \${VM_CALLERID} t' attend dans ta boite vocale.\\n\\n" .
 	"Tu trouvera en pièce jointe le message d'une durée de \${VM_DUR} qui t'a été laissé en date du \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"fr-formal" => "Cher \${VM_NAME},\\n\\n" .
 	"Un message de \${VM_CALLERID} vous attend dans votre boite vocale.\\n\\n" .
 	"Vous trouverez en pièce jointe le message d'une durée de \${VM_DUR} qui vous a été laissé en date du \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// greek
 	"gr-formal" => "Αγαπητέ/ή \${VM_NAME},\\n\\n" .
 	"Έχετε ένα νέο ηχητικό μήνυμα διάρκειας \${VM_DUR}. " .
 	"Το μήνυμα ηχογραφήθηκε στις \${VM_DATE} από το \${VM_CALLERID}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"gr-informal" => "Αγαπητέ/ή \${VM_NAME},\\n\\n" .
 	"Μια κλήση από το \${VM_CALLERID} έφτασε στη θυρίδα σας στις \${VM_DATE}. " .
 	"Ακολουθεί το μήνυμα με διάρκεια \${VM_DUR}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// italian
 	"it-formal" => "Gentile \${VM_NAME},\\n\\n" .
 	"e' stato ricevuto un messaggio vocale per Lei dal numero telefonico " .
 	"\${VM_CALLERID}. Il messaggio e' stato ricevuto il giorno \${VM_DATE} e la " .
 	"durata e' \${VM_DUR}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"it-informal" => "Ciao \${VM_NAME},\\n\\n" .
 	"hai un messaggio vocale in voicemail!\\n\\n" .
 	"Il numero telefonico del chiamante e' \${VM_CALLERID}.\\n" .
 	"Data \${VM_DATE} - durata \${VM_DUR}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// japanese
 	"jp-formal" => "\${VM_NAME} 様,\\n\\n" .
 	"あなた宛に、\${VM_DATE}に\${VM_CALLERID}からお電話があり、メッセージをお預かり致しました。(メッセージ録音時間:\${VM_DUR})\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// dutch
 	"nl-informal" => "Hallo \${VM_NAME},\\n\\n" .
 	"Een oproep van \${VM_CALLERID} is in je voicemail terecht gekomen.\\n\\n" .
 	"Hier is het \${VM_DUR} durende bericht dat voor jou is achtergelaten op \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"nl-formal" => "Beste \${VM_NAME},\\n\\n" .
 	"Een oproep van \${VM_CALLERID} is in uw voicemail terecht gekomen.\\n\\n" .
 	"Hier is het \${VM_DUR} durende bericht dat voor u is achtergelaten op \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// polish
 	"pl-informal" => "Szanowny \${VM_NAME},\\n\\n" .
 	"Wiadomość głosowa od \${VM_CALLERID} została pozostawiona na " .
 	"twojej skrzynce. Wiadomość trwa \${VM_DUR} i została pozostawiona " .
 	"\${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"pl-formal" => "Szanowny \${VM_NAME},\\n\\n" .
 	"\${VM_CALLERID} pozostawił trwającą \${VM_DUR} wiadomość głosową w " .
 	"dniu \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// portuguese, brazil
 	"pt-br-informal" => "Caro(a) \${VM_NAME},\\n\\n" .
 	"Uma chamada de \${VM_CALLERID} acabou de cair em sua caixa postal de voz.\\n\\n" .
 	"Aqui está a mensagem deixada no dia \${VM_DATE}, que tem \${VM_DUR} de duração.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"pt-br-formal" => "Caro(a) \${VM_NAME},\\n\\n" .
 	"Uma mensagem com \${VM_DUR} chegou para você no dia \${VM_DATE}, vinda de \${VM_CALLERID}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// russian
 	"ru-informal" => "Уважаемые \${VM_NAME},\\n\\n" .
 	"Вам звонил \${VM_CALLERID} и оставил сообщение в голосовом ящике.\\n\\n" .
 	"Продолжительность и дата сообщения \${VM_DUR}, \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"ru-formal" => "Уважаемые \${VM_NAME},\\n\\n" .
 	"Сообщение продолжительностью \${VM_DUR}, от \${VM_DATE} было оставленно\\n\\n" .
 	"для Вас от \${VM_CALLERID}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// swedish
 	"se-informal" => "Bäste \${VM_NAME},\\n\\n" .
 	"Ett samtal ifrån \${VM_CALLERID} har precis spelats in på din telesvar.\\n\\n" .
 	"Meddelandet är \${VM_DUR} långt och det lämnades \${VM_DATE}.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 	// turkish
 	"tr-informal" => "Merhaba (\${VM_MAILBOX}) \${VM_NAME},\\n\\n" .
 	"seni arayan ve ulaşamayan \${VM_CALLERID} \${VM_DUR} uzunluğundaki " .
 	"sesli mesajı \${VM_DATE} tarihinde bırakmıştır.\\n\\n" .
-	"-$product_name",
+	"-{$verInfo['prod']}",
 
 	"tr-formal" => "Merhaba (\${VM_MAILBOX}) \${VM_NAME},\\n\\n" .
 	"sizi arayan ve ulaşamayan \${VM_CALLERID} \${VM_DUR} uzunluğundaki " .
 	"sesli mesajı \${VM_DATE} tarihinde bırakmıştır.\\n\\n" .
-	"-$product_name"
+	"-{$verInfo['prod']}"
 	);
 
 /**
@@ -273,7 +273,7 @@ function voicemail_conf_generate($return = false)
 	$voicemail_config = voicemail_get_configuration();
 	$email_config = notifications_get_email_configuration();
 
-	$product_name = system_get_product_name();
+	$verInfo = getVersionInfo();
 	$conf = <<<EOD
 
 [general]
@@ -286,7 +286,7 @@ maxlogins=3
 minsecs=4
 charset=UTF-8
 
-fromstring=$product_name Voicemail
+fromstring={$verInfo['prod']} Voicemail
 
 EOD;
 
