@@ -68,7 +68,7 @@ else
 {
 	// prepare the configuration form
 	$form->startFieldSet('fset_local', _('Local log'));
-	if (($logPath = getSvcState($arrCfg, 'systemlog')) ==! false)
+	if (($logPath = getSvcState($config, 'systemlog')) ==! false)
 	{
 		$form->startBlock('rw_localmode');
 		$form->setLabel(null, _('Mode'), 'syslogmode', 'class=labelcol');

@@ -223,16 +223,18 @@ $_SESSION[$cfgSvcName] = $confForm->serialize();
 //
 
 // variables for messages populated later from js code
-$msgStartPartion = _('Creating new partition') . ' ' .
+$msgStartPartion = escapeStr(_('Creating new partition') . ' ' .
 	$_POST['par'] .' ' .
 	_('on') . ' ' .
-	$_POST['dev'] . '... ';
-$msgStartFormat = _('Formatting partition') . ' ' .
+	$_POST['dev'] . '... '
+);
+$msgStartFormat = escapeStr(_('Formatting partition') . ' ' .
 	$_POST['par'] . ' ' .
 	_('on') . ' ' .
-	$_POST['dev'] . '... ';
-$msgAskReboot = _('Reboot required');
-$msgDone = _('done.');
+	$_POST['dev'] . '... '
+);
+$msgAskReboot = escapeStr(_('Reboot required'));
+$msgDone = escapeStr(_('done.'));
 // render main layout
 require('fbegin.inc');
 $initForm->renderForm();

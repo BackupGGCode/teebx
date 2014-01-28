@@ -115,7 +115,19 @@ function restartSyslog(&$config)
 	return $return;
 }
 
-function restartSyslogSvcUpdate()
+// functions to be used in admin storage configuration scripts
+
+function sessionQueue($key, $data)
+{
+	if(session_id() == '')
+	{
+		session_start();
+	}
+
+	$_SESSION[$key] = $data;
+}
+
+function storageupd_stopSyslog()
 {
 	$argCount = func_num_args();
 	if (($argCount < 1))
@@ -123,10 +135,30 @@ function restartSyslogSvcUpdate()
 		return false;
 	}
 	// expect the system configuration array as first argument
-	$arrCfg = func_get_arg(1);
+	$arrCfg = func_get_arg(0);
 	if (!is_array($arrCfg))
 	{
 		return false;
 	}
-	// TODO: code for update to be written...
+
+	$params = configSyslog($arrCfg);
+	sessionQueue('cfgqueue_syslog', array('params' => $params));
+	if ($params !== false)
+	{
+		stopSyslog($params['saveOld']);
+	}
+}
+
+function storageupd_startSyslog()
+{
+	if (session_id() == '' || $_SESSION['cfgqueue_syslog']['params'] === false)
+	{
+		// session lost or syslog was not halted
+		return;
+	}
+
+	startSyslog($_SESSION['cfgqueue_syslog']['params']['args'],
+		$_SESSION['cfgqueue_syslog']['params']['logPath']
+	);
+	unset($_SESSION['cfgqueue_syslog']);
 }

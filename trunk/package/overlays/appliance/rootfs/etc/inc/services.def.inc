@@ -14,7 +14,8 @@
 			'ignorecoldstart' => false,
 			'handler' => 'initsvcSystemlogs',
 			'rules' => array(
-				'stop' => 'restartSyslogSvcUpdate'
+				'stop' => 'storageupd_stopSyslog',
+				'start' => 'storageupd_startSyslog'
 			)
 		),
 		'astmedia' => array(
