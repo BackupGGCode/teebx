@@ -95,13 +95,13 @@ $data['retval'] = 0;
 write_config();
 
 // stop any application that depends on changing settings
-$callQueue = setupDoBefore($svcAvail, $svcSetNow);
+$callQueue = setupDoBefore($config, $svcAvail, $svcSetNow);
 // mount and initialize storage
 setupStorageDevices($config, $svcSetNow);
 // reconfigure applications due to changed settings
-$data['results']['reconf'] = setupDoCall($callQueue['reconf']);
+$data['results']['reconf'] = setupDoCall($config, $callQueue['reconf']);
 // start applications previously halted
-$data['results']['defer'] = setupDoCall($callQueue['defer']);
+$data['results']['defer'] = setupDoCall($config, $callQueue['defer']);
 
 // return json data
 exit(json_encode($data));

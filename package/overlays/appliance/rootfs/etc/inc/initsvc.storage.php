@@ -51,7 +51,7 @@ function getAvailServices()
 	return $services;
 }
 
-function setupDoBefore($services, $filter = null, $coldStart = false)
+function setupDoBefore(&$conf, $services, $filter = null, $coldStart = false)
 {
 	$job = array(
 		'now' => array(),
@@ -114,7 +114,7 @@ function setupDoBefore($services, $filter = null, $coldStart = false)
 	{
 		foreach (array_keys($job['now'][$application]) as $fCall)
 		{
-			call_user_func($fCall);
+			call_user_func($fCall, $conf);
 		}
 	}
 
@@ -123,12 +123,12 @@ function setupDoBefore($services, $filter = null, $coldStart = false)
 	return $job;
 }
 
-function setupDoCall($fList)
+function setupDoCall(&$conf, $fList)
 {
 	$result = true;
 	foreach (array_keys($fList) as $fCall)
 	{
-		$result |= call_user_func($fList[$fCall]);
+		$result |= call_user_func($fList[$fCall], $conf);
 	}
 	return $result;
 }
