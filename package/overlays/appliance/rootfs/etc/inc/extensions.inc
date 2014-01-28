@@ -57,7 +57,7 @@ function extensions_conf_generate($return = false)
 	$vmconfig = voicemail_get_configuration();
 	$emailconfig = notifications_get_email_configuration();
 
-	$product_name = system_get_product_name();
+	$versionInfo = getVersionInfo();
 
 	//$disk = storage_service_is_active("media");
 	$disk = false;
@@ -148,7 +148,7 @@ exten => s,n,System(touch \${TMPMAILFILE})
 exten => s,n,System(echo "date: `date`" > \${TMPMAILFILE})
 exten => s,n,System(echo "to: \${SENDNOTIFICATIONS}" >> \${TMPMAILFILE})
 exten => s,n,System(echo "subject: Missed Call (\${MISSEDCAUSE})" >> \${TMPMAILFILE})
-exten => s,n,System(echo "from: $product_name Notifications <{$emailconfig['address']}>" >> \${TMPMAILFILE})
+exten => s,n,System(echo "from: {$versionInfo['prod']} Notifications <{$emailconfig['address']}>" >> \${TMPMAILFILE})
 exten => s,n,System(echo >> \${TMPMAILFILE})
 exten => s,n,System(echo "\${STRFTIME(\${EPOCH},,%Y-%m-%d - %H:%M)} from \${CALLERID(all)}" >> \${TMPMAILFILE})
 exten => s,n,System(/usr/bin/msmtp -C /etc/msmtp.conf -t < \${TMPMAILFILE})
