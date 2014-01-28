@@ -37,10 +37,9 @@
 	require_once('config.inc');
 	require_once('functions.inc');
 
-	$version = chop(file_get_contents("{$g['etc_path']}/version"));
-	$buildtime = strftime('%c', chop(file_get_contents("{$g['etc_path']}/version.buildtime")));
-	$product_name = system_get_product_name();
-	$copyright_info = "{$product_name} is Copyright (C) 2010-2013 Giovanni Vallesi. All rights reserved.\n" .
+	$prodInfo = getVersionInfo();
+	$buildtime = strftime('%c', $prodInfo['timestamp']);
+	$copyright_info = "{$prodInfo['prod']} is Copyright (C) 2010-2013 Giovanni Vallesi. All rights reserved.\n" .
 		"    AskoziaPBX base Copyright (C) 2007-2011 IKT. All rights reserved.\n" .
 		"    m0n0wall base Copyright (C) 2002-2007 Manuel Kasper. All rights reserved.\n";
 	if (file_exists("{$g['etc_path']}/brand.licensed"))
@@ -75,7 +74,7 @@
 	echo <<<EOD
 
 
-*** {$product_name} (version {$version})
+*** {$prodInfo['prod']} (version {$prodInfo['buid']}, source rev. {$prodInfo['rev']})
     built on {$buildtime} for {$g['platform']}
     {$copyright_info}
 

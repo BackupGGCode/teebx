@@ -219,6 +219,40 @@ packageBuildInfo()
 	popd
 }
 
+buildInfo()
+{
+	# package a build report info file (pipe separated values)
+	# $1: build root directory (output file target)
+
+	local bTimestamp=$(date +%s)
+	local bRevision=$(svn info "$base"|grep Revision|awk -F"[ ]*[:][ \t]*" '{print $2}')
+	local revSrcFile="$base/target/share/revision.in"
+	local destFile="$1/etc/revision.data"
+	local bStatus=""
+	local bCodename=""
+	local bProduct=""
+	local bSpare=""
+	local bBrand=""
+	local revInfoLine=""
+
+		echo "  -> Checking for a target revision information file..."
+	if [ -f "$base/target/$target/revision.in" ]; then
+		echo "  -> Using target specific revision information from $target."
+		revSrcFile="$base/target/$target/revision.in"
+	else
+		echo "  -> Using shared revision information."
+	fi
+
+	bStatus=$(awk -F: '/^status:/ {print $2}' "$revSrcFile")
+	bCodename=$(awk -F: '/^codename:/ {print $2}' "$revSrcFile")
+	bProduct=$(awk -F: '/^product:/ {print $2}' "$revSrcFile")
+	bSpare=$(awk -F: '/^spare:/ {print $2}' "$revSrcFile")
+	bBrand=$(awk -F: '/^brand:/ {print $2}' "$revSrcFile")
+
+	revInfoLine=${bTimestamp}"|"${config}"|"${bRevision}"|"${bStatus}"|"${bCodename}"|"${bProduct}"|"${bSpare}"|"${bBrand}
+	echo "$revInfoLine" > "$destFile"
+}
+
 prepareRootfs()
 {
 	# $1: build root (source)

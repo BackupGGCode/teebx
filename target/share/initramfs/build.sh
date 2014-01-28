@@ -15,7 +15,11 @@
 #
 #Description: initramfs
 
-. $base/misc/target/functions.in
+# import T2 functions
+source $base/misc/target/functions.in
+
+# import appliance specific functions
+source $base/target/share/image-build.functions
 
 set -e
 
@@ -89,9 +93,10 @@ fi
 echo "Setup some symlinks ..."
 ln -s /offload/kernel-modules lib/modules
 
-echo "Stamping build ..."
-echo $config > etc/version
-echo `date +%s` > etc/version.buildtime
+echo "Stamping build and release information..."
+#echo $config > etc/version
+#echo `date +%s` > etc/version.buildtime
+buildInfo $initramfs_loc
 
 echo "Creating links for identical files ..."
 link_identical_files
