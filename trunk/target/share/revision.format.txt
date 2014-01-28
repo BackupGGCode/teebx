@@ -1,0 +1,2 @@
+timestamp |buid   |rev|sta|codename|prod |spare|brand
+1390922648|svn.315|315|rc1|friendlyname|TeeBX|00000000000000000000000000000000|TeeBX Biz

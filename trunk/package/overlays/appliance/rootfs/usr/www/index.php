@@ -54,8 +54,8 @@ require_once('blockdevices.lib.php');
 define('INCLUDE_TBLSTYLE', true);
 define('INCLUDE_JSCRIPTS', 'dashboard.js');
 
-$product_name = system_get_product_name();
-$pgtitle = array($product_name . ' ' . _('web UI'));
+$prodInfo = getVersionInfo();
+$pgtitle = array($prodInfo['prod'] . ' ' . _('web UI'));
 
 //check_update();
 
@@ -78,17 +78,28 @@ $tbl->tbody();
 $tbl->tr();
 	$tbl->td(_('Name'), 'class=tblrowlabel');
 	$tbl->td($config['system']['hostname'] . '.' . $config['system']['domain']);
-// version name
+// version information
+$verInfo = '<strong>' . $prodInfo['prod'] . '&nbsp;' . $prodInfo['buid'] . '</strong>' .
+		'&nbsp;' . _('on') . '&nbsp;' . $g['platform'];
+$verDetails = '';
+if ($prodInfo['rev'] != '')
+	$verDetails .= _('source revision') . ' ' . $prodInfo['rev'] . ', ';
+if ($prodInfo['sta'] != '')
+	$verDetails .= _('status') . ' ' . $prodInfo['sta'] . ', ';
+if ($prodInfo['codename'] != '')
+	$verDetails .= _('alias') . ' ' . $prodInfo['codename'] . ', ';
+if ($verDetails != '')
+{
+	$verDetails = ' (' . rtrim($verDetails, ' ,') . ')';
+	$verInfo .= $verDetails;
+}
 $tbl->tr();
 	$tbl->td(_('Version'), 'class=tblrowlabel');
-	$tbl->td('<strong>' . system_get_product_name() . '&nbsp;' .
-		file_get_contents('/etc/version') . '</strong>' .
-		_('on') . '&nbsp;' . $g['platform'] . '<br>'
-	);
+	$tbl->td($verInfo);
 // version build time
 $tbl->tr();
 	$tbl->td(_('built on'), 'class=tblrowlabel');
-	$tbl->td(strftime('%c', chop(file_get_contents('/etc/version.buildtime'))));
+	$tbl->td(strftime('%c', $prodInfo['timestamp']));
 // last config change
 if (isset($config['lastchange']))
 {
