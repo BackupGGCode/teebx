@@ -31,31 +31,37 @@
 	POSSIBILITY OF SUCH DAMAGE.
 */
 
-require('guiconfig.inc');
-require_once('libs-php/utils.lib.php');
+require 'guiconfig.inc';
+require_once 'services.lib.php';
+require_once 'libs-php/utils.lib.php';
 define('INCLUDE_TABSFILES', true);
 
 $pgtitle = array(_('Status'), _('Logs'));
 $log_get_cmd = 'dmesg';
 $logHeader = _('Kernel log entries');
-if (isset($_GET))
+if (isset($_GET) && !empty($_GET['show']))
 {
-	if (!empty($_GET['show']))
+	$sysLogReadCmd = 'logread';
+	$sysLogPath = getSvcState($config, 'systemlog');
+	if ($sysLogPath !== false)
 	{
-		switch ($_GET['show'])
-		{
-			case 'syslog':
-				$log_get_cmd = 'logread|grep -v "asterisk\["';
-				$logHeader = _('System log entries');
-				break;
-			case 'asterisk':
-				$log_get_cmd = 'logread|grep "asterisk\["';
-				$logHeader = _('Asterisk pbx log entries');
-				break;
-			case 'cdr':
-				$logHeader = _('Call detail records') . ' (STOP: Not yet ready!)';
-				break;
-		}
+		$sysLogFile = 'messages';
+		// TODO: rotated logs, saved buffer...
+		$sysLogReadCmd = "cat {$sysLogPath}/{$sysLogFile}";
+	}
+	switch ($_GET['show'])
+	{
+		case 'syslog':
+			$log_get_cmd = $sysLogReadCmd . '|grep -v "asterisk\["';
+			$logHeader = _('System log entries');
+			break;
+		case 'asterisk':
+			$log_get_cmd = $sysLogReadCmd . '|grep "asterisk\["';
+			$logHeader = _('Asterisk pbx log entries');
+			break;
+		case 'cdr':
+			$logHeader = _('Call detail records') . ' (STOP: Not yet ready!)';
+			break;
 	}
 }
 $log_get_cmd = escapeStr($log_get_cmd);
