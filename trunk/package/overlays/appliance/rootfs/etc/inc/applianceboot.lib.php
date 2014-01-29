@@ -86,7 +86,7 @@ function stopSyslog($saveOld = false)
 		// copy current memory log buffer to a temporary location
 		exec("/sbin/logread > /tmp/messages.old", $discard, $result);
 	}
-	sigkillbyname('syslogd', 'TERM');
+	$result |= sigkillbyname('syslogd', 'TERM');
 	return $result;
 }
 
