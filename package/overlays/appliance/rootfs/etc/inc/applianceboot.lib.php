@@ -95,7 +95,7 @@ function startSyslog($args, $logPath = null)
 	// if saved buffer file exists and persistent storage is available
 	if ($logPath != null && is_file('/tmp/messages.old'))
 	{
-		rename('/tmp/messages.old', "{$logPath}.old");
+		rename('/tmp/messages.old', "{$logPath}/messages.old");
 	}
 	exec("/sbin/syslogd $args", $discard, $result);
 	return $result;
