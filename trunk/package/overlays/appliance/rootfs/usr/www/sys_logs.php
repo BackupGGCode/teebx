@@ -43,7 +43,7 @@ if ($_POST)
 	$input_errors = $form->get_errQueue();
 	if (count($input_errors) == 0)
 	{
-		$cfgPtr['syslogmode'] = $form->getFieldSelectedOpts('syslogmode');
+		$cfgPtr['mode'] = $form->getFieldSelectedOpts('mode');
 		$cfgPtr['buffer'] = $form->getFieldSelectedOpts('buffer');
 		$host = $form->getTextFld('remotehost');
 		unset($cfgPtr['remotehost'], $cfgPtr['remoteport']);
@@ -71,17 +71,17 @@ else
 	if (($logPath = getSvcState($config, 'systemlog')) ==! false)
 	{
 		$form->startBlock('rw_localmode');
-		$form->setLabel(null, _('Mode'), 'syslogmode', 'class=labelcol');
+		$form->setLabel(null, _('Mode'), 'mode', 'class=labelcol');
 		$form->startBlock('rw_localmode', 'right');
 
-			$form->setField('syslogmode', 'select', 'name=syslogmode');
+			$form->setField('mode', 'select', 'name=mode');
 			//
 			$modeOptions = array(
 				'membuffer' => _('Shared memory circular buffer'),
 				'disk' => _('Disk') . " ({$logPath}/messages)"
 			);
-			$form->setSelectOptFill('syslogmode', $modeOptions);
-			$form->setFieldOptionsState('syslogmode', $cfgPtr['syslogmode'], 'membuffer');
+			$form->setSelectOptFill('mode', $modeOptions);
+			$form->setFieldOptionsState('mode', $cfgPtr['mode'], 'membuffer');
 			$form->setBlockHint('hint-syslogmode',
 				_('Choose where log application writes the log messages it receives.') .
 				'<br>' .
@@ -147,8 +147,8 @@ $form->renderForm();
 ?>
 <script type="text/javascript">
 jQuery(document).ready(function(){
-	jQuery('#syslogmode').change(function (){
-		if (jQuery('#syslogmode').val() == 'membuffer')
+	jQuery('#mode').change(function (){
+		if (jQuery('#mode').val() == 'membuffer')
 		{
 			jQuery('#rw_localmode').css('border-bottom', '1px dotted #336699');
 			jQuery('#rw_buffer').show();
