@@ -43,7 +43,7 @@ if (isset($_GET) && !empty($_GET['show']))
 {
 	$sysLogReadCmd = 'logread';
 	$sysLogPath = getSvcState($config, 'systemlog');
-	if ($sysLogPath !== false)
+	if (($sysLogPath !== false) && (isset($config['system']['syslog']['mode'])) && $config['system']['syslog']['mode'] == 'disk')
 	{
 		$sysLogFile = 'messages';
 		// TODO: rotated logs, saved buffer...

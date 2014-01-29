@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -50,7 +50,7 @@ function network_loopback_configure()
 /**
 * Configures the system's main LAN interface
 */
-function network_lan_configure($linkWaitCount = 20)
+function network_lan_configure($linkWaitCount = 40)
 {
 	global $config, $g;
 
