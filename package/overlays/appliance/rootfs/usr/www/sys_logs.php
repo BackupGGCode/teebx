@@ -144,5 +144,23 @@ else
 // render the page content
 require('fbegin.inc');
 $form->renderForm();
+?>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('#syslogmode').change(function (){
+		if (jQuery('#syslogmode').val() == 'membuffer')
+		{
+			jQuery('#rw_localmode').css('border-bottom', '1px dotted #336699');
+			jQuery('#rw_buffer').show();
+		}
+		else
+		{
+			jQuery('#rw_buffer').hide();
+			jQuery('#rw_localmode').css('border-bottom', 'medium none');
+		}
+	}).change(); // sync initial state
+});
+</script>
+<?php
 require('fend.inc');
 ?>
