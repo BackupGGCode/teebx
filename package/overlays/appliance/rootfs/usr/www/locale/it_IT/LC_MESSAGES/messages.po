@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TeeBX traslation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-09 22:08+0000\n"
-"PO-Revision-Date: 2014-01-15 18:21+0100\n"
+"POT-Creation-Date: 2014-01-29 20:56+0000\n"
+"PO-Revision-Date: 2014-01-30 10:15+0100\n"
 "Last-Translator: Giovanni Vallesi <giovanni.v@teebx.com>\n"
 "Language-Team: Italian <giovanni.v@teebx.com>\n"
 "Language: it\n"
@@ -18,13 +18,16 @@ msgid "<b>Direct access not allowed!<b><br>"
 msgstr ""
 
 msgid "A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'."
-msgstr "Il nome del time server NTP può contenere i caratteri a-z, 0-9, '-' e '.'."
+msgstr "Il nome del server di tempo (NTP) può contenere solo i caratteri a-z, 0-9, '-' e '.'."
 
 msgid "A number must be specified to prepend to the incoming Caller ID number."
 msgstr ""
 
 msgid "A text must be specified to prepend to the incoming Caller ID name."
 msgstr ""
+
+msgid "A valid IP address must be specified."
+msgstr "Deve essere specificato un indirizzo IP valido."
 
 msgid "A valid TCP/IP port must be specified for the webGUI port."
 msgstr "Per l'nterfaccia web è necessario specificare una porta TCP/IP."
@@ -41,11 +44,14 @@ msgstr "Deve essere specificato un Numero Identificativo(CID) valido."
 msgid "A valid outgoing Caller ID number prefix must be specified."
 msgstr "Deve essere specificato un prefisso nazionale valido."
 
+msgid "A valid port must be specified."
+msgstr "Deve essere specificata una porta valida"
+
 msgid "Accounts"
 msgstr "Profili"
 
 msgid "Address"
-msgstr ""
+msgstr "Indirizzo"
 
 msgid "Adelaide"
 msgstr "Adelaide"
@@ -93,7 +99,7 @@ msgid "Asterisk hasn't started yet. Please wait for a few minutes. If it won't s
 msgstr ""
 
 msgid "Asterisk pbx log entries"
-msgstr ""
+msgstr "Registro eventi di Asterisk"
 
 msgid "Athens, Greece"
 msgstr "Atene, Grecia"
@@ -103,6 +109,9 @@ msgstr "Costa orientale, ora locale (AST)"
 
 msgid "Auckland"
 msgstr "Auckland"
+
+msgid "Audio prompts will be played back in the selected language for this account."
+msgstr "Le istruzioni audio verranno riprodotte nella lingua selezionata per questo profilo."
 
 msgid "Australia"
 msgstr "Australia"
@@ -119,6 +128,9 @@ msgstr "Bahrain"
 msgid "Barcelona, Spain"
 msgstr "Barcellona, Spagna"
 
+msgid "Base Settings"
+msgstr ""
+
 msgid "Belgium"
 msgstr "Belgio"
 
@@ -127,6 +139,12 @@ msgstr ""
 
 msgid "Berlin, Germany"
 msgstr "Berlino, Germania"
+
+msgid "Block Providers"
+msgstr "Sbarramento Operatori"
+
+msgid "Block access to the providers selected above."
+msgstr "Impedisce l'accesso agli operatori selezionati sopra."
 
 msgid "Brackets are not needed for less than 2 characters."
 msgstr "Le parentesi non sono necessarie per meno di 2 caratteri."
@@ -146,6 +164,9 @@ msgstr "Bruxelles, Belgio"
 msgid "Budapest, Hungary"
 msgstr "Budapest, Ungheria"
 
+msgid "Buffer size"
+msgstr ""
+
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
@@ -162,6 +183,9 @@ msgid "Call Report"
 msgstr ""
 
 msgid "Call detail records"
+msgstr "Dettaglio delle chiamate"
+
+msgid "Caller Name"
 msgstr ""
 
 msgid "Calls"
@@ -191,8 +215,11 @@ msgstr "Cile"
 msgid "China"
 msgstr "Cina"
 
+msgid "Choose where log application writes the log messages it receives."
+msgstr "Scegliere dove il servizio di registrazione eventi scriverà i messaggi."
+
 msgid "Click here to"
-msgstr ""
+msgstr "Clicca qui per"
 
 msgid "Click here to configure this disk"
 msgstr "Clicca qui per configurare l'unità disco"
@@ -260,11 +287,17 @@ msgstr "Danimarca"
 msgid "Description"
 msgstr "Descrizione"
 
+msgid "Device"
+msgstr "Dispositivo"
+
 msgid "Device name"
 msgstr "Nome del dispositivo"
 
 msgid "Dialplan"
 msgstr "Piano di numerazione"
+
+msgid "Disk"
+msgstr "Disco"
 
 msgid "Disk Device"
 msgstr "Unità Disco"
@@ -337,7 +370,7 @@ msgid "English (formal)"
 msgstr "Inglese (formale)"
 
 msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP)."
-msgstr ""
+msgstr "Inserire un numero di porta se si desidera personalizzare l'impostazione predefinita (80, http)."
 
 msgid "Enter a descriptive comment about this partition."
 msgstr "Inserite una descrizione per questa partizione."
@@ -489,6 +522,9 @@ msgstr "Indirizzo IP"
 msgid "IP Addresses"
 msgstr "Indirizzi IP"
 
+msgid "IP address"
+msgstr "Indirizzo IP"
+
 msgid "ISDN"
 msgstr "ISDN"
 
@@ -523,16 +559,16 @@ msgid "Invalid extension number. Use only numerals."
 msgstr "Numero di derivato non valido. Deve essere una stringa numerica."
 
 msgid "Invalid or missing disk informations."
-msgstr ""
+msgstr "Informazioni sull'unità non valide o mancanti."
 
 msgid "Invalid or missing mode."
-msgstr ""
+msgstr "Modalità non valida o mancante."
 
 msgid "Invalid or missing task."
-msgstr ""
+msgstr "Compito non valido o mancante."
 
 msgid "Invalid partition number."
-msgstr ""
+msgstr "Numero della partizione non valido."
 
 msgid "Invalid public access alias."
 msgstr "Pseudonimo di accesso pubblico non valido."
@@ -600,6 +636,9 @@ msgstr "Kuwait"
 msgid "Label"
 msgstr "Etichetta"
 
+msgid "Language"
+msgstr "Lingua"
+
 msgid "Last Config Change"
 msgstr "Ultima modifica alla configurazione"
 
@@ -617,6 +656,15 @@ msgstr "Lisbona, Portogallo"
 
 msgid "Lithuania"
 msgstr "Lituania"
+
+msgid "Local log"
+msgstr "Registro (log) locale"
+
+msgid "Local logs will still be updated regardless of this setting."
+msgstr "I registri locali verranno comunque mantenuti aggiornati indipendentemente da questa impostazione."
+
+msgid "Log messages will also be sent to the host address/port above if set."
+msgstr "I messaggi di registro verranno inviati anche al server remoto se specificate un indirizzo/porta."
 
 msgid "Logs"
 msgstr "Registri"
@@ -667,6 +715,9 @@ msgstr "Melbourne"
 msgid "Memory Usage"
 msgstr "Memoria utilizzata"
 
+msgid "Messages written to shared memory will not survive across reboots."
+msgstr "I messaggi di registro scritti in memoria non saranno più disponibili dopo un riavvio."
+
 msgid "Mexico"
 msgstr "Messico"
 
@@ -702,6 +753,9 @@ msgstr "Non sono stati inviati dati!"
 
 msgid "Missing token, access not allowed!"
 msgstr "Manca il gettone di autenticazione, accesso negato!"
+
+msgid "Mode"
+msgstr "Modo"
 
 msgid "Morocco"
 msgstr "Marocco"
@@ -796,6 +850,9 @@ msgstr "Sono consentiti solo le lettere A-z, i numeri ed il trattino basso."
 msgid "Oslo, Norway"
 msgstr "Oslo, Norvegia"
 
+msgid "Outgoing calls restrictions"
+msgstr ""
+
 msgid "Overwriting partitions not allowed on: "
 msgstr "Non è consentita la sovrascrittura di una partizione su:"
 
@@ -835,6 +892,9 @@ msgstr "Password"
 msgid "Pbx"
 msgstr "Pbx"
 
+msgid "Pbx will restart."
+msgstr "Il centralino si riavvierà."
+
 msgid "Persistence"
 msgstr "Persistenza"
 
@@ -850,6 +910,9 @@ msgstr "Filippine"
 msgid "Phones"
 msgstr "Telefoni"
 
+msgid "Please enter a valid ip address for"
+msgstr "Inserire un indirizzo ip valido per"
+
 msgid "Poland"
 msgstr "Polonia"
 
@@ -864,6 +927,12 @@ msgstr "Polacco (formale)"
 
 msgid "Port"
 msgstr "Porta"
+
+msgid "Port value must be a number"
+msgstr "Il valore della porta deve essere un numero"
+
+msgid "Port value must be lower than"
+msgstr "Il numero di porta deve essere minore di"
 
 msgid "Ports"
 msgstr "Porte"
@@ -885,6 +954,9 @@ msgstr "Praga, Repubblica Ceca"
 
 msgid "Providers"
 msgstr "Operatori"
+
+msgid "Public Access"
+msgstr "Accesso Pubblico"
 
 msgid "Public Hostname"
 msgstr "Nome host pubblico"
@@ -910,6 +982,9 @@ msgstr "E' richiesto il riavvio"
 msgid "Regional Settings"
 msgstr "Impostazioni Internazionali"
 
+msgid "Remote log"
+msgstr "Registro remoto"
+
 msgid "Rereading partition table failed, kernel still uses old table."
 msgstr "Rilettura delle partizioni fallita, il kernel continuerà ad usare la vecchia tabella."
 
@@ -918,6 +993,9 @@ msgstr "Aggiornamento riavviato"
 
 msgid "Ring"
 msgstr ""
+
+msgid "Ring Length"
+msgstr "Lunghezza squillo"
 
 msgid "Ring groups"
 msgstr "Gruppi di chiamata"
@@ -979,8 +1057,14 @@ msgstr "Puunto di montaggio del servizio"
 msgid "Services"
 msgstr "Servizi"
 
+msgid "Set a friendlier alias above if you would like to use a word or name instead of the extension number."
+msgstr "Impostare qui sopra uno pseudonimo se si vuole usare una parola o un nome al posto del numero del derivato."
+
 msgid "Settings"
 msgstr "Impostazioni"
+
+msgid "Shared memory circular buffer"
+msgstr "Memoria di transito a rotazione"
 
 msgid "Singapore"
 msgstr "Singapore"
@@ -1031,7 +1115,7 @@ msgid "Storage"
 msgstr "Memoria di Massa"
 
 msgid "Subnet"
-msgstr ""
+msgstr "Maschera di sottorete"
 
 msgid "Sweden"
 msgstr "Svezia"
@@ -1047,6 +1131,9 @@ msgstr "Sydney"
 
 msgid "Syria"
 msgstr "Siria"
+
+msgid "Syslog server"
+msgstr "Server di reg. eventi (syslog)"
 
 msgid "System"
 msgstr "Sistema"
@@ -1066,6 +1153,9 @@ msgstr "Voci del registro degli eventi di sistema"
 msgid "System logs"
 msgstr "Registri di sistema"
 
+msgid "System will restart."
+msgstr "Il sistema si riavvierà."
+
 msgid "Taiwan"
 msgstr "Taiwan"
 
@@ -1082,6 +1172,9 @@ msgstr ""
 msgid "Telephony Ports"
 msgstr "Interfacce Telef."
 
+msgid "Text to be displayed for Caller ID Name."
+msgstr ""
+
 msgid "Thailand"
 msgstr "Tailandia"
 
@@ -1092,6 +1185,9 @@ msgstr "Il campo '%s' è obbligatorio."
 #, php-format
 msgid "The %s field must be numeric."
 msgstr "Il campo %s deve essere numerico."
+
+msgid "The MAC address of this phone."
+msgstr "L'indirizzo MAC di questo telefono."
 
 msgid "The changes have been applied successfully."
 msgstr "Le modifiche sono state applicate con successo."
@@ -1110,12 +1206,24 @@ msgstr "Il campo '%s' contiene dei caratteri non validi."
 msgid "The field '%s' is required."
 msgstr "Il campo '%s' è obbligatorio."
 
+msgid "The following input errors were detected:"
+msgstr "Sono stati individuati i seguenti errori:"
+
+msgid "The hardware port this phone is connected to."
+msgstr "La porta al quale è fisicamente connesso il telefono."
+
 msgid "The hostname may only contain the characters a-z, 0-9 and '-'."
 msgstr "Il nome host può contenere solo i caratteri a-z, 0-9 e '-'."
 
 #, php-format
 msgid "The incoming extension pattern \"%s\" is invalid. %s"
 msgstr "Il percorso degli interni in ingresso \"%s\" non è valido. %s"
+
+msgid "The number of seconds this phone will ring before giving up or going to voicemail."
+msgstr "Il numero di secondi per cui questo telefono suonerà prima che venga abbandonata o inoltrata alla casella vocale."
+
+msgid "The number used to dial this phone."
+msgstr "Numero usato per chiamare questo telefono."
 
 #, php-format
 msgid "The outgoing dial-pattern \"%s\" is invalid. %s"
@@ -1133,6 +1241,9 @@ msgstr "Il carattere jolly \"!\" non è ammesso prima di un prefisso da rimuover
 msgid "The wildcard character \".\" is not allowed before a prefix which is to be removed."
 msgstr "Il carattere jolly \".\" non è ammesso prima di un prefisso da rimuovere."
 
+msgid "This account's password."
+msgstr "La password di questo account."
+
 msgid "This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank"
 msgstr "Questo campo può essere utilizzato per modificare (&quot;spoof&quot;) il MAC address della scheda di rete<br>Inserire un MAC address nel seguente formato: xx:xx:xx:xx:xx:xx o lasciare in bianco"
 
@@ -1140,10 +1251,10 @@ msgid "This information should be updated by:"
 msgstr "Questa informazione deve essere aggiornata da:"
 
 msgid "This partition will be mounted on the path set above."
-msgstr ""
+msgstr "Questa partizione sarà montata sul percorso indicato qui sopra."
 
 msgid "This system"
-msgstr ""
+msgstr "Questo sistema"
 
 msgid "Time Synchronization"
 msgstr "Sincronizzazione Orario"
@@ -1173,7 +1284,7 @@ msgid "Ulaanbaatar, Mongolia"
 msgstr "Ulaanbaatar, Mongolia"
 
 msgid "Unable to get data."
-msgstr ""
+msgstr "Impossibile ottenere i dati."
 
 msgid "United Arab Emirates"
 msgstr "Emirati Arabi"
@@ -1191,22 +1302,31 @@ msgid "United States Circa 1950/ North America"
 msgstr "Stati Uniti/Nord America"
 
 msgid "Unknown brand/model"
-msgstr ""
+msgstr "Marca/modello sconosciuti"
+
+msgid "Unknown error in field: "
+msgstr "Errore sconosciuto nel campo:"
 
 msgid "Unmatched square bracket."
 msgstr "Parentesi quadra senza corrispondenza."
+
+msgid "Unprivileged port required, value must be greather than "
+msgstr "E' richiesta una porta non privilegiata il cui valore sia maggiore di"
 
 msgid "Update Interval"
 msgstr "Intervallo di aggiornamento"
 
 msgid "Updates"
-msgstr ""
+msgstr "Aggiornamento"
 
 msgid "Uptime"
 msgstr "tempo di funzionamento"
 
 msgid "Usage %"
 msgstr "Uso %"
+
+msgid "Use this number as your username."
+msgstr "Usa questo numero come nome utente."
 
 msgid "Used"
 msgstr "Utilizzato"
@@ -1219,6 +1339,9 @@ msgstr "V23, ETSI/Europa"
 
 msgid "V23, Japan V23 variant"
 msgstr ""
+
+msgid "Valid range"
+msgstr "Gamma valida"
 
 msgid "Venezuela / South America"
 msgstr "Venezuela/Sud America"
@@ -1235,6 +1358,9 @@ msgstr "L'inoltro dei messaggi vocali via E-Mail è abilitato ma l'indirizzo E-m
 msgid "Wake-Up call manager. Call to set and cancel wake-up calls on the current extension."
 msgstr "Gestione del servizio sveglia. Chiamando questo numero virtuale si può impostare o cancellare una chiamata di \"Sveglia\" sul derivato chiamante."
 
+msgid "Warning"
+msgstr "Avvertenza"
+
 msgid "Website"
 msgstr "Sito web"
 
@@ -1250,11 +1376,23 @@ msgstr "Yemen"
 msgid "Yes, alias \"*.hostname.domain\" to hostname specified above."
 msgstr "Sì, lo pseudonimo \"*.nome_host.dominio\" verso il nome host specificato qui sopra."
 
+msgid "You may enter a description here for your reference (not parsed)."
+msgstr "Puoi inserire qui una descrizione per avere un riferimento (non verrà analizzata)."
+
 msgid "access the web UI using the new IP address"
-msgstr ""
+msgstr "accedere all'interfaccia di configurazione web utilizzando il nuovo indirizzo IP"
 
 msgid "access the web UI."
 msgstr ""
+
+msgid "after you click &quot;Save&quot;, all current calls will be dropped."
+msgstr "dopo aver cliccato &quot;Salva&quot;, tutte le chiamate verranno terminate."
+
+msgid "alias"
+msgstr "pseudonimo"
+
+msgid "allow this number to be reachable over the Internet"
+msgstr "consenti che questo numero sia raggiungibile direttamente da Internet"
 
 msgid "built on"
 msgstr "compilato il"
@@ -1281,7 +1419,7 @@ msgid "done."
 msgstr "fatto."
 
 msgid "e.g."
-msgstr ""
+msgstr "es."
 
 msgid "e.g. <em>pbx . mydomain.com"
 msgstr "es. <em>miocentralino . miodominio.it"
@@ -1328,14 +1466,21 @@ msgstr "punto-punto, dispositivo terminale (TE, PTP)"
 msgid "restart system"
 msgstr "riavvia il sistema"
 
+msgid "source revision"
+msgstr "rev. sorgente"
+
+#, fuzzy
+msgid "status"
+msgstr "Stati"
+
 msgid "store Asterisk's call detail records on disk"
-msgstr ""
+msgstr "Memorizza il dettaglio chiamate sul disco"
 
 msgid "store Asterisk's database on disk"
 msgstr "memorizza il database di Asterisk sul disco"
 
 msgid "store system logs on disk"
-msgstr ""
+msgstr "Memorizza il registro del sistema su questo disco."
 
 msgid "store voice prompts and music-on-hold on disk"
 msgstr "memorizza i file di guida vocale e le musiche di attesa sul disco"
@@ -1347,7 +1492,7 @@ msgid "warning"
 msgstr "attenzione"
 
 msgid "web UI"
-msgstr ""
+msgstr "interfaccia web"
 
 msgid "webGUI language"
 msgstr "Lingua dell'interfaccia WEB"
@@ -1461,9 +1606,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
 #~ msgstr "Deve essere specificato un indirizzo IP valido per il server DNS primario, secondario, ternario."
 
-#~ msgid "A valid IP address must be specified."
-#~ msgstr "Deve essere specificato un indirizzo IP valido."
-
 #~ msgid "A valid MAC address must be specified."
 #~ msgstr "Deve essere specificato un MAC address valido."
 
@@ -1505,9 +1647,6 @@ msgstr "Porta dell'interfaccia WEB"
 
 #~ msgid "A valid parking stop position must be specified."
 #~ msgstr "Un numero finale valido deve essere specificato per il parcheggio."
-
-#~ msgid "A valid port must be specified."
-#~ msgstr "Deve essere specificata una porta valida"
 
 #~ msgid "A valid public IP address must be entered for this topology."
 #~ msgstr "Un indirizzo IP pubblico valido deve essere specificato per questa tipologia."
@@ -1661,9 +1800,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "Audio Prompts"
 #~ msgstr "Messaggi guida vocale"
 
-#~ msgid "Audio prompts will be played back in the selected language for this account."
-#~ msgstr "Le istruzioni audio verranno riprodotte nella lingua selezionata per questo profilo."
-
 #~ msgid "Authentication Method"
 #~ msgstr "Metodo di Autenticazione"
 
@@ -1693,10 +1829,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgstr "Diretta"
 #~ msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
 #~ msgstr "Questo numero può essere utilizzato per parcheggiare direttamente una chiamata (predefinito 700). Dopo la manovra vi verrà letto il numero effettivo dove la chiamata è stata parcheggiata."
-#~ msgid "Block Providers"
-#~ msgstr "Sbarramento Operatori"
-#~ msgid "Block access to the providers selected above."
-#~ msgstr "Impedisce l'accesso agli operatori selezionati sopra."
 #~ msgid "Body"
 #~ msgstr "Contenuto"
 #~ msgid "Busy Limit"
@@ -1865,9 +1997,6 @@ msgstr "Porta dell'interfaccia WEB"
 
 #~ msgid "Detected ports on this page must be edited and saved before the system can utilize them. Be careful when configuring ISDN interfaces. Having a single port on a card incorrectly configured can result in the entire card being unusable by the system."
 #~ msgstr "Le porte individuate e mostrate in questa pagina necessitano di opportune impostazioni prima di poterle utilizzare nel sistema. Prestate particolare attenzione nella configurazione delle interfacce ISDN. Una errata configurazione di una singola porta in una determinata scheda potrebbe rendere inutilizzabili dal sistema anche le altre porte della medesima scheda."
-
-#~ msgid "Device"
-#~ msgstr "Dispositivo"
 
 #~ msgid "Diagnostics"
 #~ msgstr "Diagnostica"
@@ -2361,9 +2490,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "IP"
 #~ msgstr "IP"
 
-#~ msgid "IP address"
-#~ msgstr "Indirizzo IP"
-
 #~ msgid "IP address of remote syslog server"
 #~ msgstr "Indirizzo IP del syslog server remoto"
 
@@ -2516,9 +2642,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "LAN net"
 #~ msgstr "rete LAN"
 
-#~ msgid "Language"
-#~ msgstr "Lingua"
-
 #~ msgid "Last scan results"
 #~ msgstr "Risultato ultima scansione"
 
@@ -2607,9 +2730,6 @@ msgstr "Porta dell'interfaccia WEB"
 
 #~ msgid "Miscellaneous"
 #~ msgstr "Varie"
-
-#~ msgid "Mode"
-#~ msgstr "Modo"
 
 #~ msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
 #~ msgstr "La maggior parte degli profili utilizzano 'Auto'. Se questo non dovesse funzionare, selezionare un metodo appropriato di autenticazione per il vostro server."
@@ -2847,9 +2967,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "Provider host URL or IP address and optional port."
 #~ msgstr "Nome host o indirizzo IP dell'operatore e relativa porta (opzionale)."
 
-#~ msgid "Public Access"
-#~ msgstr "Accesso Pubblico"
-
 #~ msgid "Public Direct Dial"
 #~ msgstr "Chiamate pubbliche dirette"
 
@@ -2923,9 +3040,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "Restore from a Backup Archive"
 #~ msgstr "Ripristina da una Copia Archiviata"
 
-#~ msgid "Ring Length"
-#~ msgstr "Lunghezza squillo"
-
 #~ msgid "Room Number"
 #~ msgstr "Numero conferenza"
 
@@ -2991,9 +3105,6 @@ msgstr "Porta dell'interfaccia WEB"
 
 #~ msgid "Send string defined above&nbsp;"
 #~ msgstr "Manda la stringa definita sopra&nbsp;"
-
-#~ msgid "Set a friendlier alias above if you would like to use a word or name instead of the extension number."
-#~ msgstr "Impostare qui sopra uno pseudonimo se si vuole usare una parola o un nome al posto del numero del derivato."
 
 #~ msgid "Show log entries in reverse order (newest entries on top)"
 #~ msgstr "Visualizza le voci di registro in ordine inverso (mostra le voci più recenti per prime)"
@@ -3095,9 +3206,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "The IP address of the foneBRIDGE2 network interface."
 #~ msgstr "L'indirizzo IP del interfaccia del foneBRIDGE2."
 
-#~ msgid "The MAC address of this phone."
-#~ msgstr "L'indirizzo MAC di questo telefono."
-
 #~ msgid "The PBX automatically allocates leftover space for permanent storage. Packages to extend the system's functionality can be installed in this space."
 #~ msgstr "Il PBX alloca automaticamente lo spazio libero nella memoria di massa come area di persistenza. In questa area possono essere anche installati pacchetti per estendere le funzionalità del sistema."
 
@@ -3149,17 +3257,11 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "The firmware is now being installed. The PBX will reboot automatically."
 #~ msgstr "Il firmware adesso sarà installato. Il centralino si riavvierà automaticamente."
 
-#~ msgid "The following input errors were detected:"
-#~ msgstr "Sono stati individuati i seguenti errori:"
-
 #~ msgid "The following packages issued warnings while verifying their digital signature. This means that they are not official/supported packages and may lead to unexpected behavior or security compromises. Only install packages that come from sources that you trust, and make sure that they have not been tampered with.<br><br>Check the packages you wish to install despite this warning."
 #~ msgstr "I pacchetti indicati mostrano avvisi nella verifica della firma digitale. Questo significa che l'immagine che è stata caricata non è un immagine supportata ufficialmente e potrebbe avere comportamenti imprevisti o compromettere la sicurezza. Installare immagini provenienti da una fonte sicur ed assicurarsi che l'immagine non sia stata manomessa.<br><br>Desiderate installare comunque questa immagine (a vostro rischio e pericolo)?"
 
 #~ msgid "The following variables can be used in the e-mail notification"
 #~ msgstr "Per personalizzare i messaggi di di notifica via E-mail si possono utilizzare le seguenti variabili"
-
-#~ msgid "The hardware port this phone is connected to."
-#~ msgstr "La porta al quale è fisicamente connesso il telefono."
 
 #~ msgid "The high RTP port must be greater than the low RTP port."
 #~ msgstr "La porta RTP finale deve essere maggiore della porta RTP iniziale."
@@ -3179,12 +3281,8 @@ msgstr "Porta dell'interfaccia WEB"
 # Omessi ingresso ed in uscita... ridondandi rispetto a registrazione e sottoscrizione che già indicano da o verso cosa.
 #~ msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
 #~ msgstr "Il minimo, massimo ed il numero predefinito di secondi durante i quali le registrazioni e le sottoscrizioni verranno considerate valide."
-#~ msgid "The number of seconds this phone will ring before giving up or going to voicemail."
-#~ msgstr "Il numero di secondi per cui questo telefono suonerà prima che venga abbandonata o inoltrata alla casella vocale."
 #~ msgid "The number used to dial this application."
 #~ msgstr "Numero usato per chiamare questa applicazione."
-#~ msgid "The number used to dial this phone."
-#~ msgstr "Numero usato per chiamare questo telefono."
 #~ msgid "The package is corrupt and has been deleted."
 #~ msgstr "Il pacchetto è stato eliminato in quanto corrotto."
 #~ msgid "The phone number assigned to this account. Also this account's username."
@@ -3233,8 +3331,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgstr "Questo centralino"
 #~ msgid "This account's password and authentication scheme."
 #~ msgstr "La password del account e lo schema di autenticazione."
-#~ msgid "This account's password."
-#~ msgstr "La password di questo account."
 #~ msgid "This certificate does not appear to be valid."
 #~ msgstr "Questo certificato sembra non essere valido."
 #, fuzzy
@@ -3338,9 +3434,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "Use Jitterbuffer even when bridging two endpoints."
 #~ msgstr "Usare sempre Jitterbuffer quando si collegano due punti finali."
 
-#~ msgid "Use this number as your username."
-#~ msgstr "Usa questo numero come nome utente."
-
 #~ msgid "User defined e-mail text"
 #~ msgstr "Testo messaggio E-mail personalizzato"
 
@@ -3380,9 +3473,6 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "WPA2 only"
 #~ msgstr "WPA2 (solo)"
 
-#~ msgid "Warning"
-#~ msgstr "Avvertenza"
-
 #~ msgid "Warning:"
 #~ msgstr "Avvertenza:"
 
@@ -3406,9 +3496,6 @@ msgstr "Porta dell'interfaccia WEB"
 
 #~ msgid "You are using the most recent version of AskoziaPBX."
 #~ msgstr "E' in uso la versione più aggiornata di AskoziaPBX."
-
-#~ msgid "You may enter a description here for your reference (not parsed)."
-#~ msgstr "Puoi inserire qui una descrizione per avere un riferimento (non verrà analizzata)."
 
 #~ msgid "You must reboot the system before you can upgrade the firmware."
 #~ msgstr "Devi riavviare il sistema prima di poter aggiornare il firmware."
@@ -3458,20 +3545,11 @@ msgstr "Porta dell'interfaccia WEB"
 #~ msgid "address"
 #~ msgstr "indirizzo"
 
-#~ msgid "after you click &quot;Save&quot;, all current calls will be dropped."
-#~ msgstr "dopo aver cliccato &quot;Salva&quot;, tutte le chiamate verranno terminate."
-
 #~ msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
 #~ msgstr "dopo aver premuto &quot;Salva&quot;, tutte le chiamate verranno terminate. Potresti dover compiere uno o più dei seguenti passaggi prima di avere ancora accesso al tuo centralino:"
 
-#~ msgid "alias"
-#~ msgstr "pseudonimo"
-
 #~ msgid "allow extension to be directly dialed over public networks"
 #~ msgstr "permette che gli interni possano essere chiamati attraverso la rete pubblica."
-
-#~ msgid "allow this number to be reachable over the Internet"
-#~ msgstr "consenti che questo numero sia raggiungibile direttamente da Internet"
 
 #~ msgid "always use NAT mode."
 #~ msgstr "usa sempre la modalità NAT"
@@ -3850,10 +3928,6 @@ msgstr "Porta dell'interfaccia WEB"
 
 #~ msgid "state"
 #~ msgstr "stato"
-
-#, fuzzy
-#~ msgid "status"
-#~ msgstr "Stati"
 
 #~ msgid "status unknown"
 #~ msgstr "stato indefinito"
