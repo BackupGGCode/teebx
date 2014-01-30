@@ -1,8 +1,12 @@
 				</div>
 				<div style="clear:both;"></div>
-				<div id="ui_footer">
-					<?=_("TeeBX&reg; &copy; 2010-2013 Giovanni Vallesi. All rights reserved.");?>&nbsp;[<a href="license.php" class="tblnk"><?=_("view license");?></a>]
-				</div>
+				<div id="ui_footer"><?php
+					echo 'TeeBX&reg; &copy;&nbsp;2010-2014 Giovanni Vallesi.&nbsp;',
+						_('All rights reserved'),
+						'.&nbsp;[<a href="license.php" class="tblnk">',
+						_('view license information'),
+						'</a>]';
+				?></div>
 			</div>
 		</div>
 	</body>
