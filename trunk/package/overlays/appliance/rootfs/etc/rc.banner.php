@@ -3,7 +3,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -42,10 +42,6 @@
 	$copyright_info = "{$prodInfo['prod']} is Copyright (C) 2010-2013 Giovanni Vallesi. All rights reserved.\n" .
 		"    AskoziaPBX base Copyright (C) 2007-2011 IKT. All rights reserved.\n" .
 		"    m0n0wall base Copyright (C) 2002-2007 Manuel Kasper. All rights reserved.\n";
-	if (file_exists("{$g['etc_path']}/brand.licensed"))
-	{
-		$copyright_info = "\n\n";
-	}
 
 	$usingDhcp = true;
 	if (isset($config['interfaces']['lan']['dhcp']))
@@ -71,16 +67,20 @@
 		$ip_info = $config['interfaces']['lan']['ipaddr'] . ' on ' . $config['interfaces']['lan']['if'];
 	}
 
+	$defPassWarning = '';
+	if ($config['system']['username'] == 'admin' & $config['system']['password'] == 'teebx')
+	{
+		$defPassWarning = 'WARNING! Default username/password (admin/teebx) in use, please change it!!';
+	}
 	echo <<<EOD
+* {$prodInfo['prod']} (version {$prodInfo['buid']}, source rev. {$prodInfo['rev']})
+  built on {$buildtime} for {$g['platform']}
+  {$copyright_info}
 
 
-*** {$prodInfo['prod']} (version {$prodInfo['buid']}, source rev. {$prodInfo['rev']})
-    built on {$buildtime} for {$g['platform']}
-    {$copyright_info}
+  {$ip_line}: {$ip_info}
+  {$defPassWarning}
 
-
-    {$ip_line}: {$ip_info}
 
 EOD;
-
 ?>
