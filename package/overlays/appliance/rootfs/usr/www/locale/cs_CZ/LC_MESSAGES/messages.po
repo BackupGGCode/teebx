@@ -7,104 +7,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-04 16:29+0200\n"
+"POT-Creation-Date: 2014-01-30 17:39+0000\n"
 "PO-Revision-Date: 2008-09-12 20:05+0100\n"
 "Last-Translator: David Moravec <info@easywifi.cz>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#, php-format
-msgid "%.0f KB"
-msgstr ""
-
-#, php-format
-msgid "%.2f GB"
-msgstr ""
-
-#, php-format
-msgid "%.2f MB"
-msgstr ""
-
-#, php-format
-msgid "%d bytes"
-msgstr ""
-
-msgid "25%"
-msgstr "25%"
-
-msgid "50%"
-msgstr "50%"
-
-msgid "75%"
-msgstr "75%"
-
-msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
-msgstr ""
-
-#, php-format
-msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
+msgid "<b>Direct access not allowed!<b><br>"
 msgstr ""
 
 msgid "A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr ""
 
-msgid "A newer <strong>beta</strong> version of TeeBX is available!"
-msgstr ""
-
-msgid "A newer version of TeeBX is available!"
-msgstr ""
-
 msgid "A number must be specified to prepend to the incoming Caller ID number."
-msgstr ""
-
-msgid "A public IP address must be entered for this topology."
-msgstr ""
-
-msgid "A public hostname must be entered for this topology."
 msgstr ""
 
 msgid "A text must be specified to prepend to the incoming Caller ID name."
 msgstr ""
 
-msgid "A username must be specified."
-msgstr ""
-
-msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
-msgstr ""
-
 msgid "A valid IP address must be specified."
 msgstr "Musí být zadána validní IP adresa."
-
-msgid "A valid MAC address must be specified."
-msgstr ""
 
 msgid "A valid TCP/IP port must be specified for the webGUI port."
 msgstr ""
 
-msgid "A valid attended transfer timeout must be specified."
-msgstr ""
-
-msgid "A valid e-mail address must be specified for the \"from address\"."
-msgstr ""
-
-msgid "A valid e-mail address must be specified."
-msgstr ""
-
-msgid "A valid extension digit timeout must be specified."
-msgstr ""
-
-msgid "A valid extension must be entered."
-msgstr ""
-
-msgid "A valid gateway must be specified."
-msgstr ""
-
 msgid "A valid incoming Caller ID override must be specified (e.g. John Smith <12345>)."
-msgstr ""
-
-msgid "A valid key timeout must be specified."
 msgstr ""
 
 msgid "A valid outgoing Caller ID must be specified (e.g. John Smith <12345>)."
@@ -114,64 +44,14 @@ msgstr ""
 msgid "A valid outgoing Caller ID number prefix must be specified."
 msgstr "Musí být zadána validní IP adresa."
 
-msgid "A valid park time must be specified."
-msgstr ""
-
-msgid "A valid parking extension must be specified."
-msgstr ""
-
-msgid "A valid parking start position must be specified."
-msgstr ""
-
-msgid "A valid parking stop position must be specified."
-msgstr ""
-
 msgid "A valid port must be specified."
 msgstr ""
-
-msgid "A valid public IP address must be entered for this topology."
-msgstr ""
-
-msgid "A valid public hostname must be entered for this topology."
-msgstr ""
-
-msgid "A valid subnet bit count must be specified."
-msgstr ""
-
-msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
-msgstr ""
-
-msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
-msgstr ""
-
-msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
-msgstr ""
-
-msgid "Access PIN"
-msgstr "Přístupový kód (PIN)"
 
 msgid "Accounts"
 msgstr "Účty"
 
-msgid "Activate custom Music-On-Hold"
+msgid "Address"
 msgstr ""
-
-msgid "Activate custom Voicemail greeting"
-msgstr ""
-
-msgid "Active Channels"
-msgstr "Aktivní kanály"
-
-#, fuzzy
-msgid "Active Channels / Calls"
-msgstr "Aktivní kanály"
-
-msgid "Active Disks"
-msgstr ""
-
-#, fuzzy
-msgid "Adding"
-msgstr "Ping"
 
 msgid "Adelaide"
 msgstr ""
@@ -179,12 +59,8 @@ msgstr ""
 msgid "Advanced"
 msgstr ""
 
-#, fuzzy
-msgid "Advanced Options"
-msgstr "Upřesňující nastavení"
-
-msgid "Advanced Settings"
-msgstr "Upřesňující nastavení"
+msgid "After you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+msgstr ""
 
 msgid "Alaska Time"
 msgstr ""
@@ -193,10 +69,13 @@ msgstr ""
 msgid "All Provider Ports"
 msgstr "Operátoři"
 
-msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
+msgid "All information on this disk will be lost after clicking \"Format\"!"
 msgstr ""
 
-msgid "All information on this disk will be lost after clicking \"Format\"!"
+msgid "All rights reserved"
+msgstr ""
+
+msgid "All rights reserved under the terms of AGPLv3"
 msgstr ""
 
 #, fuzzy
@@ -212,29 +91,11 @@ msgstr ""
 msgid "Analog"
 msgstr "Analog"
 
-msgid "Analog Faxes"
-msgstr ""
-
-msgid "Analog Phones"
-msgstr "Analogové telefony"
-
 msgid "Appended prefixes may only contain digits, '*' and '#'."
-msgstr ""
-
-msgid "Application"
-msgstr ""
-
-msgid "Application Logic"
 msgstr ""
 
 msgid "Applications"
 msgstr ""
-
-msgid "Are you sure you want to proceed?"
-msgstr "Opravdu chcete pokračovat?"
-
-msgid "Are you sure you want to reboot the system?"
-msgstr "Jste si jisti, že chcete restartovat systém?"
 
 msgid "Argentina"
 msgstr ""
@@ -246,6 +107,9 @@ msgstr "Rakousko"
 msgid "Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX."
 msgstr ""
 
+msgid "Asterisk pbx log entries"
+msgstr ""
+
 #, fuzzy
 msgid "Athens, Greece"
 msgstr "Řecko"
@@ -253,19 +117,7 @@ msgstr "Řecko"
 msgid "Atlantic Time"
 msgstr ""
 
-msgid "Attended"
-msgstr ""
-
-msgid "Attended Transfer Answer"
-msgstr ""
-
 msgid "Auckland"
-msgstr ""
-
-msgid "Audio"
-msgstr ""
-
-msgid "Audio Prompts"
 msgstr ""
 
 msgid "Audio prompts will be played back in the selected language for this account."
@@ -277,22 +129,6 @@ msgstr "Austrálie"
 msgid "Austria"
 msgstr "Rakousko"
 
-msgid "Authentication Method"
-msgstr "Metoda ověřování"
-
-#, fuzzy
-msgid "Authentication Scheme"
-msgstr "Metoda ověřování"
-
-msgid "Authorization User"
-msgstr "Uživatelské jméno pro autorizaci"
-
-msgid "AutoScale"
-msgstr ""
-
-msgid "Backup configuration"
-msgstr "Záloha konfigurace"
-
 msgid "Backup/Restore"
 msgstr "Záloha/Obnova"
 
@@ -303,27 +139,18 @@ msgstr "Bulharsko"
 msgid "Barcelona, Spain"
 msgstr ""
 
-msgid "Basic"
+msgid "Base Settings"
 msgstr ""
 
 msgid "Belgium"
 msgstr "Belgie"
 
-msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
+msgid "Bell202, USA"
 msgstr ""
 
 #, fuzzy
 msgid "Berlin, Germany"
 msgstr "Německo"
-
-msgid "Binding Port"
-msgstr ""
-
-msgid "Blind"
-msgstr ""
-
-msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
-msgstr ""
 
 #, fuzzy
 msgid "Block Providers"
@@ -331,9 +158,6 @@ msgstr "Operátoři"
 
 msgid "Block access to the providers selected above."
 msgstr ""
-
-msgid "Body"
-msgstr "Tělo"
 
 msgid "Brackets are not needed for less than 2 characters."
 msgstr ""
@@ -353,6 +177,9 @@ msgstr ""
 msgid "Budapest, Hungary"
 msgstr ""
 
+msgid "Buffer size"
+msgstr ""
+
 msgid "Bulgaria"
 msgstr "Bulharsko"
 
@@ -367,45 +194,23 @@ msgstr "Italština (oficiální)"
 msgid "CPU Load"
 msgstr "Využití CPU"
 
-msgid "Call Groups"
+msgid "Call Report"
 msgstr ""
 
-msgid "Call Notifications & Voicemail"
+msgid "Call detail records"
 msgstr ""
 
-msgid "Call Parking"
+msgid "Caller Name"
 msgstr ""
-
-msgid "Call Routing"
-msgstr ""
-
-msgid "Caller ID"
-msgstr "ID volajícího"
-
-msgid "Caller ID / Name"
-msgstr ""
-
-#, fuzzy
-msgid "Caller ID Options"
-msgstr "ID volajícího"
 
 msgid "Calls"
 msgstr "Hovory"
-
-msgid "Calls Processed"
-msgstr ""
 
 #, fuzzy
 msgid "Canada"
 msgstr "Příkaz"
 
 msgid "Canberra"
-msgstr ""
-
-msgid "Cannot get CPU load"
-msgstr ""
-
-msgid "Card"
 msgstr ""
 
 msgid "Central America"
@@ -418,15 +223,6 @@ msgstr ""
 msgid "Central and South America"
 msgstr "Venezuela / Jižní Afrika"
 
-msgid "Changes to this option will take effect after a reboot."
-msgstr ""
-
-msgid "Channel"
-msgstr ""
-
-msgid "Channels"
-msgstr "Kanály"
-
 msgid "Check automatically for new updates."
 msgstr ""
 
@@ -436,85 +232,40 @@ msgstr "Chile"
 msgid "China"
 msgstr "Čína"
 
-#, php-format
-msgid "Choose the new firmware image file (%s-*.img) to be installed."
+msgid "Choose where log application writes the log messages it receives."
 msgstr ""
 
-msgid "Clear"
+msgid "Click here to"
 msgstr ""
 
-msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
+msgid "Click here to configure this disk"
 msgstr ""
 
-msgid "Click this button to download the system configuration in XML format."
-msgstr "Stisknutím tothoto tlačítka uložíte konfiguraci systému v XML formátu."
-
-#, fuzzy
-msgid "Codecs"
-msgstr "Audio kodeky"
-
-msgid "Collecting initial data, please wait..."
-msgstr "Shromažďuji počáteční data, prosím vyčkejte ..."
+msgid "Collecting initial data, please wait"
+msgstr ""
 
 msgid "Colombia"
 msgstr ""
 
-msgid "Command"
-msgstr "Příkaz"
-
-msgid "Command:"
+msgid "Comment"
 msgstr ""
-
-msgid "Completely override the generated registration string with a manually defined one."
-msgstr ""
-
-msgid "Conference"
-msgstr ""
-
-msgid "Conference Rooms"
-msgstr "Telekonference"
-
-msgid "Conference number already exists."
-msgstr ""
-
-msgid "Conference number matches an existing extension."
-msgstr ""
-
-msgid "Conference pins must be numeric."
-msgstr ""
-
-msgid "Conference room numbers must be numeric."
-msgstr ""
-
-msgid "Conferences"
-msgstr "Telekonference"
 
 msgid "Conferencing"
 msgstr "Telekonference"
 
-#, fuzzy
-msgid "Connect"
-msgstr "připojeno"
-
-msgid "Connection Initialization"
+msgid "Configured storage"
 msgstr ""
 
-msgid "Connectivity"
-msgstr ""
-
-msgid "Console menu"
+msgid "Coordinated Universal Time (UTC)"
 msgstr ""
 
 msgid "Copenhagen, Denmark"
 msgstr ""
 
+msgid "Creating new partition"
+msgstr ""
+
 msgid "Croatia"
-msgstr ""
-
-msgid "Custom Applications"
-msgstr ""
-
-msgid "Custom Music-on-Hold"
 msgstr ""
 
 msgid "Cyprus"
@@ -533,14 +284,8 @@ msgstr "Česká republika"
 msgid "DNS Servers"
 msgstr "Servery DNS"
 
-msgid "DNS Service Records"
+msgid "DTMF, as used in Denmark, Sweden and Netherlands"
 msgstr ""
-
-msgid "DO NOT abort the firmware upgrade once it has started."
-msgstr "NEPŘERUŠUJTE aktualizaci firmwaru po jejím zahájení."
-
-msgid "DTMF Mode"
-msgstr "Mód DTMF"
 
 msgid "Danish"
 msgstr "Dánština"
@@ -552,120 +297,39 @@ msgstr "Dánština (oficiální)"
 msgid "Darwin"
 msgstr "Doména"
 
-msgid "Default values are 60, 3600 and 120 respectively."
+msgid "Default"
 msgstr ""
-
-#, fuzzy, php-format
-msgid "Defaults to the e-mail address used in the %s setup."
-msgstr "Výchozí hodnotou je e-mailová adresa vložená výše."
 
 msgid "Denmark"
 msgstr "Dánsko"
 
-msgid "Deny Network"
-msgstr ""
-
 msgid "Description"
 msgstr "Poznámka"
-
-msgid "Descriptive name for this provider."
-msgstr "Popisnější název tohoto poskytovatele."
 
 #, fuzzy
 msgid "Device"
 msgstr "Služby"
 
-msgid "Dialing Pattern(s)"
-msgstr "Směrovací pravidlo(a)"
+msgid "Device name"
+msgstr ""
 
 msgid "Dialplan"
 msgstr ""
 
-msgid "Dialplan Element Library"
+msgid "Disk"
 msgstr ""
-
-msgid "Dialstring"
-msgstr ""
-
-msgid "Disable DNS SRV lookups."
-msgstr ""
-
-msgid "Disable console menu"
-msgstr ""
-
-msgid "Disable overrides"
-msgstr ""
-
-msgid "Disabled"
-msgstr "Neaktivní"
 
 #, fuzzy
 msgid "Disk Device"
 msgstr "Služby"
 
-msgid "Do not register with this provider."
-msgstr "Neregistruj se k tomuto operátorovi."
-
-msgid "Do you really want to delete this application mapping?"
+msgid "Disk Report"
 msgstr ""
 
-#, fuzzy
-msgid "Do you really want to delete this application?"
-msgstr "Opravdu chcete smazat tento telefonní účet?"
-
-msgid "Do you really want to delete this call group?"
+msgid "Disk unique identifier"
 msgstr ""
 
-msgid "Do you really want to delete this conference room?"
-msgstr "Opravdu si přejete smazat tuto telekonferenci?"
-
-msgid "Do you really want to delete this fax?"
-msgstr ""
-
-msgid "Do you really want to delete this manager user?"
-msgstr ""
-
-msgid "Do you really want to delete this phone?"
-msgstr "Opravdu chcete smazat tento telefonní účet?"
-
-#, fuzzy
-msgid "Do you really want to delete this port group's settings?"
-msgstr "Opravdu chcete smazat tento telefonní účet?"
-
-msgid "Do you really want to delete this provider?"
-msgstr "Opravdu si přejete smazat tohoto operátora?"
-
-msgid "Do you really want to disable this fax?"
-msgstr ""
-
-msgid "Do you really want to disable this phone?"
-msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
-
-msgid "Do you really want to disable this provider?"
-msgstr "Opravdu si přejete deaktivovat tohoto operátora?"
-
-#, fuzzy
-msgid "Do you really want to forget this disk?"
-msgstr "Opravdu chcete smazat tento telefonní účet?"
-
-#, fuzzy
-msgid "Do you really want to forget this gateway's settings?"
-msgstr "Opravdu chcete smazat tento telefonní účet?"
-
-#, fuzzy
-msgid "Do you really want to forget this port\\'s settings?"
-msgstr "Opravdu chcete smazat tento telefonní účet?"
-
-msgid "Do you really want to kick this member?"
-msgstr ""
-
-msgid "Download"
-msgstr ""
-
-msgid "Download configuration"
-msgstr "Uložit konfigurace"
-
-msgid "Download:"
+msgid "Dns"
 msgstr ""
 
 msgid "Dublin, Ireland"
@@ -677,38 +341,13 @@ msgstr "Holandština"
 msgid "Dutch (formal)"
 msgstr "Holandština (oficiální)"
 
+msgid "Dynamic DNS"
+msgstr ""
+
 msgid "Dynamic DNS Client"
 msgstr ""
 
-#, fuzzy
-msgid "E-Mail"
-msgstr "Otestuj"
-
 msgid "E-Mail notifications enabled but the e-mail address is invalid or missing."
-msgstr ""
-
-msgid "E-mail Address"
-msgstr "E-mail"
-
-msgid "E-mail Me"
-msgstr "Otestuj"
-
-msgid "E-mail has been sent successfully."
-msgstr "E-mail byl úspěšně odeslán."
-
-msgid "E-mail notifications for new voicemail will be delivered in this language."
-msgstr "E-mailová upozornění na nové záznamy v hlasové schránce budou doručována v tomto jazyce."
-
-msgid "E-mail was not sent, check your settings."
-msgstr "E-mail nebylo možno deslat. Ověřte nastavení SMTP."
-
-msgid "ERR Could not install configuration.\n"
-msgstr ""
-
-msgid "ERR Could not save configuration.\n"
-msgstr ""
-
-msgid "ERR Invalid configuration received.\n"
 msgstr ""
 
 #, php-format
@@ -719,9 +358,6 @@ msgstr ""
 msgid "Eastern Time"
 msgstr "Uživatelské jméno"
 
-msgid "Echo Cancellation"
-msgstr ""
-
 msgid "Echos audio and video back to the caller as soon as it is received. Used to test connection delay."
 msgstr ""
 
@@ -731,75 +367,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#, fuzzy, php-format
-msgid "Edit Analog %s Port"
-msgstr "změnit položku"
-
-msgid "Edit Analog Fax"
-msgstr ""
-
-#, fuzzy
-msgid "Edit Analog Phone"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit Analog Provider"
-msgstr "změnit položku"
-
-msgid "Edit Application"
-msgstr ""
-
-#, fuzzy
-msgid "Edit External Phone"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit IAX Phone"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit IAX Provider"
-msgstr "změnit položku"
-
-#, fuzzy, php-format
-msgid "Edit ISDN %s Port"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit ISDN Phone"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit ISDN Provider"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit Provider Group"
-msgstr "změnit položku"
-
-#, fuzzy
-msgid "Edit Redfone Gateway"
-msgstr "Brána"
-
-msgid "Edit Room"
-msgstr ""
-
-#, fuzzy
-msgid "Edit SIP Phone"
-msgstr "SIP telefony"
-
-#, fuzzy
-msgid "Edit SIP Provider"
-msgstr "SIP telefony"
-
-#, fuzzy
-msgid "Edit Skinny Phone"
-msgstr "SIP telefony"
-
 msgid "Edit Storage Disk"
-msgstr ""
-
-msgid "Edit User"
 msgstr ""
 
 msgid "Egypt"
@@ -808,21 +376,8 @@ msgstr ""
 msgid "El Salvador"
 msgstr ""
 
-msgid "Enable"
+msgid "Empty or missing partition label."
 msgstr ""
-
-msgid "Enable Jitterbuffer on IAX connections terminated by the system."
-msgstr ""
-
-msgid "Enabled"
-msgstr "Aktivní"
-
-msgid "Encoding"
-msgstr ""
-
-#, fuzzy
-msgid "Encryption Method"
-msgstr "Metoda ověřování"
 
 msgid "English"
 msgstr "Angličtina"
@@ -839,80 +394,13 @@ msgstr "Angličtina (oficiální)"
 msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP)."
 msgstr ""
 
-#, fuzzy
-msgid "Enter a descriptive name for this disk."
-msgstr "Popisnější název tohoto poskytovatele."
-
-#, fuzzy
-msgid "Enter a descriptive name for this gateway."
-msgstr "Popisnější název tohoto poskytovatele."
-
-#, fuzzy
-msgid "Enter a descriptive name for this port."
-msgstr "Popisnější název tohoto poskytovatele."
-
-#, fuzzy
-msgid "Enter a descriptive name for this span."
-msgstr "Popisnější název tohoto poskytovatele."
-
-msgid ""
-"Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
-" <ul>\n"
-" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
-" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
-" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - matches one or more characters</li>\n"
-" \t<li><strong>!</strong> - matches zero or more characters</li>\n"
-" </ul>\n"
+msgid "Enter a descriptive comment about this partition."
 msgstr ""
-"Vložte pravidlo nebo telefonní číslo a vyberte cílovou provolbu. Pro vyzvánění více telefonních čísel je jednoduše definujte se stejnou šablonou. Pokud vložíte telefonní číslo, bude toto použito jako \"externí\" číslo u zmeškaných hovorů. Pokud nic nevložíte, budou všechny hovory přesměrovány na cílovou provolbu.<br>\n"
-" <ul>\n"
-" \t<li><strong>X</strong> - odopvídá číslicím 0-9</li>\n"
-" \t<li><strong>Z</strong> - odpovídá číslicím 1-9</li>\n"
-" \t<li><strong>N</strong> - odpovídá číslicím 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - odpovídá jakékoliv číslici v závorce (zde např., 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - odpovídá jednomu nebo více znakům</li>\n"
-" \t<li><strong>!</strong> - odpovídá žádnému nebo více znakům</li>\n"
-" </ul>\n"
 
 msgid "Enter a server to synchronize with."
 msgstr ""
 
-msgid ""
-"Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
-" 2,Echo()\n"
-" 3,Hangup()\n"
-" </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
-msgstr ""
-
-#, fuzzy
-msgid ""
-"Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
-" <ul>\n"
-" \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
-" \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
-" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
-" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
-" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
-" \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
-" </ul>\n"
-msgstr ""
-"Vložte pravidla, vždy jedno na řádku, která odpovídají směrováním tohoto operátora. Pokud vložíte \"X!\", budou všechny odchozí hovory směrovány na tohoto Operátora. Pokud chcete na tohoto operátora směrovat hovory začínájící číslem \"9\", vložte \"9|.\". Pokud nevložíte žádné pravidlo, budou povoleny pouze příchozí hovory.<br>\n"
-"<ul>\n"
-" \t<li><strong>+</strong> - přidá prefix (např. \"1+555\" odpovídá \"555\" a předává operátorovi \"1555\")</li>\n"
-" \t<li><strong>|</strong> - odstraní prefix (např. \"1|555\" odpovídá \"1555\", ale předá operátorovi pouze \"555\")</li>\n"
-" \t<li><strong>X</strong> - odpovídá číslicím 0-9</li>\n"
-" \t<li><strong>Z</strong> - odpovídá číslicím 1-9</li>\n"
-" \t<li><strong>N</strong> - odpovídá číslicím 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - odpovídá jakékoliv číslici v závorkách (zde např., 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - odpovídá jednomu nebo více znakům (není povoleno před | nebo +)</li>\n"
-" \t<li><strong>!</strong> - odpovídá žádnému nebo více znakům (není povoleno před | nebo +)</li>\n"
-" </ul>\n"
-
-msgid "Enter the full path where this device should be mounted."
+msgid "Enter the label for this disk partition."
 msgstr ""
 
 msgid "Estonia"
@@ -921,32 +409,13 @@ msgstr "Estonsko"
 msgid "Europe"
 msgstr ""
 
-msgid "Execute"
-msgstr ""
-
-msgid "Extension"
-msgstr "Provolba"
-
-msgid "Extension Digit"
-msgstr ""
-
-msgid "External"
-msgstr "Externí"
-
-msgid "External Phones"
-msgstr ""
-
 msgid "Factory Defaults"
 msgstr "Tovární nastavení"
-
-#, fuzzy
-msgid "Failover Provider"
-msgstr "Operátoři"
 
 msgid "Faxes"
 msgstr ""
 
-msgid "Filename"
+msgid "Feature codes"
 msgstr ""
 
 msgid "Finland"
@@ -961,37 +430,23 @@ msgstr "Finština (oficiální)"
 msgid "Firmware"
 msgstr "Firmware"
 
-#, fuzzy
-msgid "Firmware Version"
-msgstr "Firmware"
-
-msgid "Firmware image file:"
-msgstr "Image soubor firmwaru:"
-
-msgid "Firmware uploading is not supported on this platform."
-msgstr ""
-
-msgid "Force"
-msgstr ""
-
 msgid "Format"
 msgstr ""
 
 msgid "Format & Initialize"
 msgstr ""
 
-msgid "Formatting failed! (returned "
+msgid "Formatting partition"
 msgstr ""
-
-msgid "Formatting successful!"
-msgstr ""
-
-#, fuzzy
-msgid "Framing"
-msgstr "Francie"
 
 msgid "France"
 msgstr "Francie"
+
+msgid "Free"
+msgstr ""
+
+msgid "Free disks"
+msgstr ""
 
 msgid "French"
 msgstr "Francouzština"
@@ -1002,34 +457,11 @@ msgstr "Francouzština (Kanada)"
 msgid "French (formal)"
 msgstr "Francouzština (oficiální)"
 
-msgid "From Address"
-msgstr "Odesílatel"
-
-msgid "From Domain"
-msgstr "Doména 'From'"
-
-msgid "From User"
-msgstr "Uživatel 'From'"
-
-msgid "Functions"
-msgstr ""
-
 msgid "GUI Options"
 msgstr ""
 
 msgid "Gateway"
 msgstr "Brána"
-
-#, fuzzy
-msgid "Gateway Name"
-msgstr "Brána"
-
-#, fuzzy
-msgid "Gateways"
-msgstr "Brána"
-
-msgid "General"
-msgstr ""
 
 #, fuzzy
 msgid "General Settings"
@@ -1054,9 +486,6 @@ msgstr "Němčina (oficiální)"
 msgid "Germany"
 msgstr "Německo"
 
-msgid "Graph shows last"
-msgstr "Graf zobrazuje poledních "
-
 msgid "Greece"
 msgstr "Řecko"
 
@@ -1068,41 +497,19 @@ msgstr "Řecko"
 msgid "Greek (formal)"
 msgstr "Francouzština (oficiální)"
 
-msgid "Ground Start"
-msgstr ""
-
 msgid "Group"
 msgstr ""
 
-msgid "Group Members"
-msgstr ""
-
-msgid "Group name"
+msgid "Groups"
 msgstr ""
 
 msgid "Guam"
 msgstr ""
 
-#, fuzzy
-msgid "Hardware Port"
-msgstr "Firmware"
-
 msgid "Hawaii Time"
 msgstr ""
 
 msgid "Helsinki, Finland"
-msgstr ""
-
-msgid "Hide Analog related options"
-msgstr ""
-
-msgid "Hide IAX related options"
-msgstr ""
-
-msgid "Hide ISDN related options"
-msgstr ""
-
-msgid "Hide SIP related options"
 msgstr ""
 
 #, fuzzy
@@ -1118,17 +525,14 @@ msgstr "Hostitel"
 msgid "Hostname"
 msgstr "Název hostitele"
 
+msgid "Hostname of that system."
+msgstr ""
+
 #, fuzzy
 msgid "Hostname of the PBX."
 msgstr "restartovat PBX"
 
 msgid "Hostname,Domain,Username"
-msgstr ""
-
-msgid "Hot Keys"
-msgstr ""
-
-msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
 msgstr ""
 
 msgid "Hungary"
@@ -1140,38 +544,24 @@ msgstr ""
 msgid "IAX"
 msgstr "IAX"
 
-msgid "IAX Phones"
-msgstr "IAX telefony"
-
-#, fuzzy
-msgid "IP"
-msgstr "SIP"
-
 msgid "IP Address"
 msgstr "Adresa IP"
 
 msgid "IP Addresses"
 msgstr "Adresy IP"
 
+msgid "IP address"
+msgstr "IP adresa"
+
 msgid "ISDN"
 msgstr "ISDN"
-
-msgid "ISDN Phones"
-msgstr "ISDN telefony"
 
 #, fuzzy
 msgid "Iceland"
 msgstr "Polsko"
 
-msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
+msgid "If you want to change the password for accessing the web UI, enter it here twice."
 msgstr ""
-
-msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
-msgstr ""
-
-#, fuzzy, php-format
-msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
-msgstr "Po stisknutí tlačítka &quot;Ano&quot;, se PBX přepne do továrního nastavení a okamžitě se restartuje. Konfigurace systému bude přepsána. Adresa IP síťového rozhraní bude nastavena na 192.168.1.2 a heslo na '%s'."
 
 msgid "If you want to change the password for accessing the webGUI, enter it here twice."
 msgstr ""
@@ -1179,73 +569,47 @@ msgstr ""
 msgid "If you want to change the username for accessing the webGUI, enter it here."
 msgstr ""
 
-msgid "Image upload failed (out of memory?)"
-msgstr ""
-
-msgid "In"
-msgstr "Příchozí"
-
-msgid "Inactive"
-msgstr ""
-
-#, fuzzy
-msgid "Incoming Extensions"
-msgstr "Příchozí provolba(y)"
-
-msgid "Incoming Faxes"
-msgstr ""
-
-#, fuzzy
-msgid "Incoming Modification"
-msgstr "Příchozí provolba(y)"
-
 msgid "India"
 msgstr "Indie"
+
+msgid "India polarity reversal dtmf cid variant"
+msgstr ""
 
 #, fuzzy
 msgid "Indication Tones"
 msgstr "Zvuky"
 
-msgid "Individual Ports"
-msgstr ""
-
 #, fuzzy
 msgid "Indonesia"
 msgstr "Indie"
 
-msgid "Initial connection failed!"
-msgstr ""
-
-msgid "Initial connection successful!"
-msgstr ""
-
 msgid "Interface"
 msgstr "Rozhraní"
 
-msgid "Internal Phones"
-msgstr ""
-
-msgid "Internal extension used to reach this application."
-msgstr ""
-
-msgid "Internal extension used to reach this call group."
-msgstr ""
-
-msgid "International Prefix"
-msgstr ""
-
 msgid "Invalid extension number. Use only numerals."
+msgstr ""
+
+msgid "Invalid or missing disk informations."
+msgstr ""
+
+msgid "Invalid or missing mode."
+msgstr ""
+
+msgid "Invalid or missing task."
+msgstr ""
+
+msgid "Invalid partition number."
 msgstr ""
 
 msgid "Invalid public access alias."
 msgstr ""
 
+msgid "Invalid token, access not allowed!"
+msgstr ""
+
 #, fuzzy
 msgid "Ireland"
 msgstr "Izrael"
-
-msgid "Is there a NATing device between the PBX and this account?"
-msgstr ""
 
 msgid "Israel"
 msgstr "Izrael"
@@ -1284,22 +648,16 @@ msgstr "Japonština"
 msgid "Japanese (formal)"
 msgstr "Španělština (oficiální)"
 
-msgid "Jitterbuffer"
-msgstr ""
-
 msgid "Jordan"
 msgstr ""
 
 msgid "Kazakhstan"
 msgstr ""
 
-msgid "Keep advanced options in navigation expanded"
-msgstr ""
-
 msgid "Kernel"
 msgstr ""
 
-msgid "Kewl Start"
+msgid "Kernel log entries"
 msgstr ""
 
 msgid "Kiev, Ukraine"
@@ -1308,19 +666,22 @@ msgstr ""
 msgid "Kuwait"
 msgstr ""
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr "Jazyk"
 
 msgid "Last Config Change"
 msgstr "Poslední změna kofigurace"
 
-msgid "Last upload"
-msgstr ""
-
 msgid "Latvia"
 msgstr ""
 
 msgid "Lebanon"
+msgstr ""
+
+msgid "License"
 msgstr ""
 
 #, fuzzy
@@ -1330,24 +691,13 @@ msgstr "Portugalsko"
 msgid "Lithuania"
 msgstr "Litva"
 
-msgid "Loaded"
+msgid "Local log"
 msgstr ""
 
-#, fuzzy
-msgid "Local Area Network"
-msgstr "Síť"
-
-#, fuzzy
-msgid "Local Interface"
-msgstr "Rozhraní"
-
-msgid "Local Prefix"
+msgid "Local logs will still be updated regardless of this setting."
 msgstr ""
 
-msgid "Location"
-msgstr ""
-
-msgid "Logic"
+msgid "Log messages will also be sent to the host address/port above if set."
 msgstr ""
 
 msgid "Logs"
@@ -1356,19 +706,22 @@ msgstr "Logy"
 msgid "London, Great Britain"
 msgstr ""
 
-msgid "Loop Start"
-msgstr ""
-
 msgid "Luxembourg"
 msgstr ""
 
 msgid "MAC Address"
 msgstr "Adresa MAC"
 
+msgid "MOH"
+msgstr ""
+
 msgid "Macao"
 msgstr ""
 
 msgid "Madrid, Spain"
+msgstr ""
+
+msgid "Maintenance"
 msgstr ""
 
 msgid "Malaysia"
@@ -1378,32 +731,14 @@ msgstr "Malajsie"
 msgid "Malta"
 msgstr "Malajsie"
 
+msgid "Management"
+msgstr ""
+
 msgid "Manager"
 msgstr ""
 
-msgid "Manager Interface"
-msgstr "Příkazová řádka"
-
 #, php-format
 msgid "Manual Attribute line number %s is invalid."
-msgstr ""
-
-msgid "Manual Attributes"
-msgstr ""
-
-msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
-msgstr ""
-
-msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
-msgstr ""
-
-msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
-msgstr ""
-
-msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
-msgstr ""
-
-msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
 msgstr ""
 
 #, fuzzy
@@ -1413,26 +748,22 @@ msgstr "Indie"
 msgid "Melbourne"
 msgstr ""
 
-msgid "Member"
-msgstr ""
-
-#, php-format
-msgid "Member %s has been kicked from conference %s."
-msgstr ""
-
-msgid "Members"
-msgstr ""
-
 msgid "Memory Usage"
 msgstr "Využití paměti"
+
+msgid "Messages written to shared memory will not survive across reboots."
+msgstr ""
 
 msgid "Mexico"
 msgstr "Mexiko"
 
-msgid "Miscellaneous"
-msgstr "Ostatní"
-
 msgid "Missing caller id."
+msgstr ""
+
+msgid "Missing device name."
+msgstr ""
+
+msgid "Missing device."
 msgstr ""
 
 msgid "Missing dialstring."
@@ -1441,9 +772,27 @@ msgstr ""
 msgid "Missing extension number."
 msgstr ""
 
+msgid "Missing parameters, process aborted!"
+msgstr ""
+
+msgid "Missing partition number."
+msgstr ""
+
+msgid "Missing partition start sector!"
+msgstr ""
+
 #, fuzzy
 msgid "Missing password."
 msgstr "použij toto heslo"
+
+msgid "Missing post data!"
+msgstr ""
+
+msgid "Missing token, access not allowed!"
+msgstr ""
+
+msgid "Mode"
+msgstr ""
 
 msgid "Morocco"
 msgstr ""
@@ -1451,9 +800,6 @@ msgstr ""
 #, fuzzy
 msgid "Moscow, Russia"
 msgstr "Rusko"
-
-msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
-msgstr ""
 
 msgid "Mount Point"
 msgstr ""
@@ -1464,14 +810,8 @@ msgstr ""
 msgid "Mountain Time (Arizona, no DST)"
 msgstr ""
 
-msgid "Music-on-Hold"
-msgstr ""
-
 msgid "My Router"
 msgstr "služba MyRouter"
-
-msgid "NAT"
-msgstr "NAT"
 
 msgid "NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below."
 msgstr "NAT + veřejná dynamická IP: tato PBX je za NATem, který má dynamicky přidělovanou IP. Je požadován veřejný název hostitele, který je neustále aktualizován tak, aby směroval na tuto síť. Vložte tuto informaci níže."
@@ -1492,20 +832,11 @@ msgstr "NTP server"
 msgid "Name"
 msgstr "Název"
 
-msgid "National Prefix"
-msgstr ""
-
-msgid "Navigation"
-msgstr ""
-
 msgid "Nested square brackets are not allowed."
 msgstr ""
 
 msgid "Netherlands"
 msgstr "Holandsko"
-
-msgid "Network"
-msgstr "Síť"
 
 msgid "Network Traffic"
 msgstr "Využití sítě"
@@ -1526,41 +857,23 @@ msgstr ""
 msgid "Nigeria"
 msgstr ""
 
-msgid "No"
-msgstr "Ne"
-
-#, fuzzy
-msgid "No additional storage devices were detected."
-msgstr "Žádné analogové zařízení nebylo nalezeno."
-
-#, fuzzy
-msgid "No compatible analog ports were detected."
-msgstr "Žádné analogové zařízení nebylo nalezeno."
-
-#, fuzzy
-msgid "No compatible isdn ports were detected."
-msgstr "Žádné analogové zařízení nebylo nalezeno."
-
-msgid "No last upload."
+msgid "No additional storage configured."
 msgstr ""
 
-msgid "No other Providers for failover."
+msgid "No free disk devices."
 msgstr ""
 
 msgid "No ports assigned."
 msgstr ""
 
-msgid "Non-Members"
-msgstr ""
-
 msgid "Norway"
 msgstr "Norsko"
 
-msgid "Note:"
-msgstr "Poznámka:"
-
 msgid "Notes"
 msgstr "Poznámky"
+
+msgid "Notice: this is the system disk. Unless you really know what you are doing please avoid using it for additional storage."
+msgstr ""
 
 msgid "Notifications"
 msgstr ""
@@ -1569,47 +882,21 @@ msgid "Number"
 msgstr ""
 
 #, fuzzy
-msgid "Number or string to be dialed to reach this telephone."
-msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
-
-msgid "OK\n"
-msgstr ""
-
-#, fuzzy
 msgid "Oman"
 msgstr "Němčina"
 
-#, fuzzy
-msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
-msgstr "Otevřete AskoziaPBX XML konfigurační soubora a stisknutím tlačítka níže obnovte konfiguraci."
-
-msgid "Optional PIN needed to access this conference room."
-msgstr "Pro přístup do této konference je třeba dodatečně zadat PIN."
-
-msgid "Options"
-msgstr "Možnosti"
+msgid "Only letters A-z, numbers and underscore allowed."
+msgstr ""
 
 #, fuzzy
 msgid "Oslo, Norway"
 msgstr "Norsko"
 
-msgid "Out"
-msgstr "Odchozí"
+msgid "Outgoing calls restrictions"
+msgstr ""
 
-msgid "Outgoing Calls Only"
-msgstr "Pouze odchozí hovory"
-
-#, fuzzy
-msgid "Outgoing Patterns"
-msgstr "Odchozí ID volajícího"
-
-#, fuzzy
-msgid "Outgoing Presentation"
-msgstr "Zobrazení"
-
-#, fuzzy
-msgid "Outgoing provider or protocol used to reach this telephone."
-msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
+msgid "Overwriting partitions not allowed on: "
+msgstr ""
 
 msgid "PHP parsing error"
 msgstr ""
@@ -1632,12 +919,6 @@ msgstr "Balíček byl úspěšně nainstalován."
 msgid "Package restored successfully."
 msgstr "Balíček byl úspěšně obnoven."
 
-msgid "Packages"
-msgstr "Balíčky"
-
-msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
-msgstr "Pro zjištění stavu budou každých <i>n</i> vteřin odesílány na tento účet pakety.<br>Výchozí hodnota je '2'. Vložením '0' tuto funkci vypnete."
-
 msgid "Pakistan"
 msgstr ""
 
@@ -1645,28 +926,16 @@ msgstr ""
 msgid "Paris, France"
 msgstr "Francie"
 
-msgid "Park Extension"
-msgstr ""
-
-msgid "Park Time"
-msgstr ""
-
-msgid "Parking Range"
+msgid "Partition label"
 msgstr ""
 
 msgid "Password"
 msgstr "Heslo"
 
-msgid "Pattern(s)"
-msgstr "Šablona(y)"
-
 msgid "Pbx"
 msgstr ""
 
-msgid "Permissions"
-msgstr ""
-
-msgid "Permit Network"
+msgid "Pbx will restart."
 msgstr ""
 
 msgid "Persistence"
@@ -1683,27 +952,17 @@ msgstr "Portugalsko"
 msgid "Philippines"
 msgstr "Filipíny"
 
-#, fuzzy
-msgid "Phone"
-msgstr "Telefonní účty"
-
-msgid "Phone Connectivity"
-msgstr ""
-
 msgid "Phones"
 msgstr "Telefonní účty"
 
-msgid "Pin"
-msgstr "Pin"
-
-msgid "Point-to-Multipoint (PTMP)"
-msgstr ""
-
-msgid "Point-to-Point (PTP)"
+msgid "Please enter a valid ip address for"
 msgstr ""
 
 msgid "Poland"
 msgstr "Polsko"
+
+msgid "Polarity reversal"
+msgstr ""
 
 msgid "Polish"
 msgstr "Polština"
@@ -1715,12 +974,15 @@ msgstr "Polština (oficiální)"
 msgid "Port"
 msgstr "Portugalsko"
 
+msgid "Port value must be a number"
+msgstr ""
+
+msgid "Port value must be lower than"
+msgstr ""
+
 #, fuzzy
 msgid "Ports"
 msgstr "Portugalsko"
-
-msgid "Ports impedance"
-msgstr ""
 
 msgid "Portugal"
 msgstr "Portugalsko"
@@ -1737,35 +999,6 @@ msgstr "Portugalština (Brazílie - oficiální)"
 #, fuzzy
 msgid "Prague, Czech Republic"
 msgstr "Česká republika"
-
-msgid "Prepend Caller ID name with text above"
-msgstr ""
-
-msgid "Prepend Caller ID number with number above"
-msgstr ""
-
-msgid "Previously Used Disks"
-msgstr ""
-
-msgid "Printable Dialplan"
-msgstr ""
-
-msgid "Private Prefix"
-msgstr ""
-
-msgid "Private RSA Key"
-msgstr ""
-
-msgid "Provider"
-msgstr ""
-
-#, fuzzy
-msgid "Provider Port Groups"
-msgstr "Operátoři"
-
-#, fuzzy
-msgid "Provider host URL or IP address and optional port."
-msgstr "URL nebo IP adresa SMTP hostitele a volitelně port."
 
 msgid "Providers"
 msgstr "Operátoři"
@@ -1786,64 +1019,35 @@ msgstr "Veřejná adresa IP"
 msgid "Public Number"
 msgstr ""
 
-#, fuzzy
-msgid "Public RSA Key"
-msgstr "Veřejná adresa IP"
-
-msgid "Qualify"
-msgstr "Kvalita"
-
-msgid "RSA Keys"
-msgstr ""
-
 msgid "RTP"
-msgstr ""
-
-msgid "RTP Port Range"
-msgstr ""
-
-msgid "Read"
 msgstr ""
 
 msgid "Reboot"
 msgstr "Restart"
 
-msgid "Redfone"
+msgid "Reboot required"
 msgstr ""
 
 #, fuzzy
 msgid "Regional Settings"
 msgstr "Nastavení"
 
-msgid "Registration"
-msgstr "Registrace"
-
-msgid "Registration Expiration Timeouts"
+msgid "Remote log"
 msgstr ""
 
-msgid "Remote IP"
+msgid "Rereading partition table failed, kernel still uses old table."
 msgstr ""
-
-#, fuzzy
-msgid "Remote Interface"
-msgstr "Rozhraní"
-
-msgid "Remote MAC"
-msgstr ""
-
-msgid "Replace Caller ID name with Caller ID number"
-msgstr ""
-
-msgid "Replace Caller ID with text above"
-msgstr ""
-
-msgid "Restore configuration"
-msgstr "Obnovit konfiguracei"
 
 msgid "Resuming updates"
 msgstr ""
 
+msgid "Ring"
+msgstr ""
+
 msgid "Ring Length"
+msgstr ""
+
+msgid "Ring groups"
 msgstr ""
 
 #, fuzzy
@@ -1854,11 +1058,8 @@ msgstr "Doména"
 msgid "Rome, Italy"
 msgstr "Itálie"
 
-msgid "Room Number"
-msgstr "Číslo konference"
-
-msgid "Russia"
-msgstr "Rusko"
+msgid "Routing"
+msgstr ""
 
 msgid "Russia / ex Soviet Union"
 msgstr "Rusko (dříve Sovětský svaz)"
@@ -1876,28 +1077,13 @@ msgstr "Rusko (dříve Sovětský svaz)"
 msgid "SIP"
 msgstr "SIP"
 
-msgid "SIP Phones"
-msgstr "SIP telefony"
-
-msgid "SMTP Client Setup"
-msgstr ""
-
-msgid "SMTP host URL or IP address and optional port."
-msgstr "URL nebo IP adresa SMTP hostitele a volitelně port."
-
 msgid "Saudi Arabia"
 msgstr ""
 
 msgid "Save"
 msgstr "Uložit"
 
-msgid "Secret"
-msgstr ""
-
 msgid "Security"
-msgstr ""
-
-msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
 msgstr ""
 
 msgid "Select how often the time should be synchronized."
@@ -1905,9 +1091,6 @@ msgstr ""
 
 msgid "Select in which language you want the webGUI to be displayed."
 msgstr "Vyberze jazyk, ve kterém má být webGUI zobrazeno."
-
-msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
-msgstr ""
 
 #, fuzzy
 msgid "Select the location closest to you."
@@ -1917,23 +1100,13 @@ msgstr "Vyberte nejbližší lokalitu."
 msgid "Select which country's indication tones (the ringing, busy and error tones) to be used."
 msgstr "Vyberte zemi jejíž zvuky budou použity."
 
-#, fuzzy
-msgid "Select which disk you would like to format."
-msgstr "Vyberte balíček, který si přijete instalovat."
-
-msgid "Select which ethernet port on the gateway this system is connected to."
-msgstr ""
-
-msgid "Select which ethernet port on this system the gateway is connected to."
-msgstr ""
-
-msgid "Send all incoming faxes here."
-msgstr ""
-
 msgid "Service"
 msgstr ""
 
 msgid "Service Type"
+msgstr ""
+
+msgid "Service mount point"
 msgstr ""
 
 msgid "Services"
@@ -1945,7 +1118,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Nastavení"
 
-msgid "Signaling"
+msgid "Shared memory circular buffer"
 msgstr ""
 
 msgid "Singapore"
@@ -1954,25 +1127,12 @@ msgstr "Singapur"
 msgid "Size"
 msgstr "Velikost"
 
-msgid "Skinny"
-msgstr ""
-
 msgid "Slovakia"
 msgstr ""
 
 #, fuzzy
 msgid "Slovenia"
 msgstr "Uložit"
-
-msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
-msgstr "Někteří operátoři vyžadují samostatnou 'from' doménu. <br>Odpovídá hostiteli zadanému výše."
-
-msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
-msgstr "Někteří operátoři vyžadují samostátného 'from' uživatele.<br>Odpovídá uživatelskému jménu definovanému výše."
-
-#, fuzzy
-msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
-msgstr "Někteří operátoři vyžadují samostatné autorizační uživatelské jméno.<br>Odpovídá uživatelskému jménu definovanému výše."
 
 msgid "South Africa"
 msgstr "Jižní Afrika"
@@ -1985,32 +1145,20 @@ msgid "Spain"
 msgstr "Španělsko"
 
 #, fuzzy
-msgid "Span"
-msgstr "Španělsko"
-
-#, fuzzy
-msgid "Span Count"
-msgstr "Počet"
-
-#, fuzzy
 msgid "Spanish (Spain)"
 msgstr "Španělština (oficiální)"
 
 msgid "Spanish (formal)"
 msgstr "Španělština (oficiální)"
 
-#, fuzzy
-msgid "Spans"
-msgstr "Španělština"
-
-msgid "Start Signaling"
+msgid "Spare disk space"
 msgstr ""
-
-msgid "State"
-msgstr "Stav"
 
 msgid "Static Public IP"
 msgstr "Veřejná staticá IP"
+
+msgid "Static routes"
+msgstr ""
 
 msgid "Status"
 msgstr "Stav"
@@ -2024,25 +1172,7 @@ msgstr ""
 msgid "Storage"
 msgstr "Úložiště"
 
-#, fuzzy
-msgid "Storage Disk"
-msgstr "Úložiště"
-
-#, fuzzy
-msgid "Storage Services"
-msgstr "Služby"
-
-msgid "Subject"
-msgstr "Předmět"
-
-#, php-format
-msgid "Successfully installed %s formatted prompts for %s."
-msgstr ""
-
-msgid "Summary"
-msgstr "Souhrn"
-
-msgid "Supported file formats"
+msgid "Subnet"
 msgstr ""
 
 msgid "Sweden"
@@ -2050,9 +1180,6 @@ msgstr "Švédsko"
 
 msgid "Swedish"
 msgstr "Švédština"
-
-msgid "Switch to bytes/s"
-msgstr ""
 
 msgid "Switzerland"
 msgstr "Švýcarsko"
@@ -2063,14 +1190,29 @@ msgstr ""
 msgid "Syria"
 msgstr ""
 
+msgid "Syslog server"
+msgstr ""
+
 msgid "System"
 msgstr "Systém"
 
 msgid "System Information"
 msgstr "Informace o systému"
 
+msgid "System Time"
+msgstr ""
+
+msgid "System disk status"
+msgstr ""
+
 msgid "System log entries"
 msgstr "Záznamy systému"
+
+msgid "System logs"
+msgstr ""
+
+msgid "System will restart."
+msgstr ""
 
 msgid "Taiwan"
 msgstr "Tajwan"
@@ -2079,30 +1221,15 @@ msgstr "Tajwan"
 msgid "Tallinn, Estonia"
 msgstr "Estonsko"
 
-msgid "TeeBX Test E-mail"
-msgstr ""
-
 #, php-format
 msgid "TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"
-msgstr ""
-
-msgid "TeeBX&reg; &copy; 2010-2011 Giovanni Vallesi. All rights reserved."
-msgstr ""
-
-msgid "TeeBX: execute command"
-msgstr ""
-
-msgid "Telephone number assigned to this line."
 msgstr ""
 
 #, fuzzy
 msgid "Telephony Ports"
 msgstr "smazat účet"
 
-msgid "Test E-mail"
-msgstr "Testovací e-mail"
-
-msgid "Text to be displayed for Caller ID."
+msgid "Text to be displayed for Caller ID Name."
 msgstr ""
 
 msgid "Thailand"
@@ -2116,59 +1243,17 @@ msgstr ""
 msgid "The %s field must be numeric."
 msgstr ""
 
-msgid "The IP address of the foneBRIDGE2 network interface."
-msgstr ""
-
 #, fuzzy
 msgid "The MAC address of this phone."
 msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
 
-msgid "The PBX will reboot after restoring the configuration."
-msgstr "PBX se po obnově konfigurace restartuje."
-
-msgid "The audio file could not be uploaded. (file upload error)."
-msgstr ""
-
-msgid "The audio file could not be uploaded. (filetype error)"
-msgstr ""
-
 msgid "The changes have been applied successfully."
 msgstr "Změny byl úspěšně uloženy."
-
-msgid "The changes have been applied successfully. No upload file found but there was an old custom Music-on-Hold file."
-msgstr ""
-
-msgid "The changes have been applied successfully. No upload file found but there was an old custom voicemail greeting file."
-msgstr ""
 
 msgid "The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect."
 msgstr ""
 
-msgid "The conference room's number, also the extension that this conference is reachable at."
-msgstr ""
-
-msgid "The configuration could not be restored (file upload error)."
-msgstr ""
-
-msgid "The configuration could not be restored."
-msgstr ""
-
-msgid "The configuration has been restored. The PBX is now rebooting."
-msgstr ""
-
-msgid "The digital signature on this image is invalid."
-msgstr "Digitální podpis tohoto image souboru je neplatný."
-
 msgid "The domain may only contain the characters a-z, 0-9, '-' and '.'."
-msgstr ""
-
-msgid "The dynamic DNS username contains invalid characters."
-msgstr ""
-
-msgid "The echo canceller window size. If your calls have echo, try increasing this window."
-msgstr ""
-
-msgid "The end parking position must be larger than the start position."
 msgstr ""
 
 #, php-format
@@ -2179,49 +1264,20 @@ msgstr ""
 msgid "The field '%s' is required."
 msgstr ""
 
-msgid "The filetype could not be recognized (file upload error)."
-msgstr ""
-
-msgid "The firmware is now being installed. The PBX will reboot automatically."
-msgstr "Firmware se právě instaluje. PBX bude automaticky restartována."
-
 msgid "The following input errors were detected:"
 msgstr ""
 
-msgid "The following variables can be used in the e-mail notification"
-msgstr "V e-mailovém upozornění mohou být použity následující proměnné"
-
 msgid "The hardware port this phone is connected to."
-msgstr ""
-
-msgid "The high RTP port must be greater than the low RTP port."
 msgstr ""
 
 msgid "The hostname may only contain the characters a-z, 0-9 and '-'."
 msgstr ""
 
-msgid "The image file is corrupt."
-msgstr "Image soubor je poškozen."
-
 #, php-format
 msgid "The incoming extension pattern \"%s\" is invalid. %s"
 msgstr ""
 
-#, fuzzy
-msgid "The internal number used to dial this phone."
-msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
-
-msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
-msgstr ""
-
 msgid "The number of seconds this phone will ring before giving up or going to voicemail."
-msgstr ""
-
-#, fuzzy
-msgid "The number used to dial this application."
-msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
-
-msgid "The number used to dial this fax."
 msgstr ""
 
 #, fuzzy
@@ -2235,38 +1291,7 @@ msgstr ""
 msgid "The passwords do not match."
 msgstr ""
 
-msgid "The port range which RTP streams should use. (default:"
-msgstr ""
-
-msgid "The prefix used when dialing international numbers (usually 00)"
-msgstr ""
-
-msgid "The prefix used when dialing numbers within your city (i.e. 0711)"
-msgstr ""
-
-msgid "The prefix used when dialing numbers within your company (i.e. 07115678)"
-msgstr ""
-
-msgid "The prefix used when dialing numbers within your country (usually 0)"
-msgstr ""
-
-msgid "The provider will be contacted this often to check its availability."
-msgstr ""
-
-msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
-msgstr ""
-
-msgid "The system is rebooting now. This may take a minute."
-msgstr ""
-
-#, php-format
-msgid "The uploaded image file is not for this platform (%s)."
-msgstr ""
-
 msgid "The username may only contain the characters a-z, A-Z and 0-9."
-msgstr ""
-
-msgid "The username of \"admin\" is already used internally by the system."
 msgstr ""
 
 msgid "The wildcard character \"!\" is not allowed before a prefix which is to be removed."
@@ -2275,53 +1300,19 @@ msgstr ""
 msgid "The wildcard character \".\" is not allowed before a prefix which is to be removed."
 msgstr ""
 
-msgid "There are currently no active channels."
-msgstr "Nejsou aktivní žádné kanály."
-
-msgid "There are currently no active conferences."
-msgstr "Nejsou aktivní žádné telekonference."
-
-msgid "There has been an error verifying the signature on this image."
-msgstr "Nastala chyba při ověřování podpisu tohoto image souboru."
-
-#, php-format
-msgid "There is an update for your version of TeeBX available: %s<br>Download it at <a target='_blank' href='http://www.teebx.org/software'>www.teebx.org/software</a>"
-msgstr ""
-
-msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
-msgstr "Toto číslo bude přečteno volajícímu při přesměrování hovoru do hlasové schránky; odpovídá uživatelskému jménu Telefonního účtu. Pokud číslo není shodné s uživatelským jménem (provolbou), volajícímu bude přečtena provolba, na kterou byl hovor přesměrován."
-
-msgid "This PBX"
-msgstr ""
-
 msgid "This account's password."
 msgstr "Heslo k tomuto účtu."
 
 msgid "This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank"
 msgstr "Toto pole lze využít ke změně MAC adresy síťového rozhraní<br>Vložte MAC adresu ve formátu: xx:xx:xx:xx:xx:xx nebo ponechte pole prázdné"
 
-msgid "This image is not digitally signed."
-msgstr "Tento image soubor není digitálně podepsán."
-
 msgid "This information should be updated by:"
 msgstr "Tato informace by měla být aktualizována:"
 
-msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
+msgid "This partition will be mounted on the path set above."
 msgstr ""
 
-msgid "This key combination activates a blind transfer (default ##)."
-msgstr ""
-
-msgid "This key combination activates an attended transfer (default **)."
-msgstr ""
-
-msgid "This range of extensions is where parked calls reside (default 701-720)."
-msgstr ""
-
-msgid "This will be shown as voicemail service's sending address."
-msgstr "Tato adresa bude zobrazována jako adresa odesílatele."
-
-msgid "Time"
+msgid "This system"
 msgstr ""
 
 msgid "Time Synchronization"
@@ -2330,25 +1321,13 @@ msgstr ""
 msgid "Time zone"
 msgstr "Časové pásmo"
 
-msgid "Timeouts"
-msgstr ""
-
 msgid "Toggle auto-updates"
-msgstr ""
-
-msgid "Tokyo, Japan"
-msgstr ""
-
-msgid "Tone Zones"
 msgstr ""
 
 msgid "Topology"
 msgstr "Topologie"
 
-msgid "Transfer Key"
-msgstr ""
-
-msgid "Transfers"
+msgid "Total"
 msgstr ""
 
 msgid "Turkish"
@@ -2358,19 +1337,13 @@ msgstr ""
 msgid "Turkish (formal)"
 msgstr "Dánština (oficiální)"
 
-msgid "Type"
-msgstr ""
-
-msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
-msgstr "Pro ověře nastavení SMTP vepište e-mailovou adresu a stiskněte tlačitko &quot;Otestuj&quot."
-
 msgid "USA & Canada"
 msgstr ""
 
-msgid "UTC"
+msgid "Ulaanbaatar, Mongolia"
 msgstr ""
 
-msgid "Ulaanbaatar, Mongolia"
+msgid "Unable to get data."
 msgstr ""
 
 msgid "United Arab Emirates"
@@ -2389,10 +1362,16 @@ msgstr "Spojené státy americké / Severní Amerika"
 msgid "United States Circa 1950/ North America"
 msgstr ""
 
+msgid "Unknown brand/model"
+msgstr ""
+
+msgid "Unknown error in field: "
+msgstr ""
+
 msgid "Unmatched square bracket."
 msgstr ""
 
-msgid "Update"
+msgid "Unprivileged port required, value must be greather than "
 msgstr ""
 
 #, fuzzy
@@ -2402,29 +1381,29 @@ msgstr "Interval aktualizace"
 msgid "Updates"
 msgstr ""
 
-msgid "Upgrade firmware"
-msgstr "Aktualizuj firmware"
-
-msgid "Upload"
-msgstr ""
-
-msgid "Upload:"
-msgstr ""
-
 msgid "Uptime"
 msgstr "Doba provozu"
 
-msgid "Use Jitterbuffer even when bridging two endpoints."
+msgid "Usage %"
 msgstr ""
 
 msgid "Use this number as your username."
 msgstr ""
 
-msgid "User defined e-mail text"
-msgstr "Text e-mailu definovaný uživatelem"
+msgid "Used"
+msgstr ""
 
 msgid "Username"
 msgstr "Uživatelské jméno"
+
+msgid "V23, ETSI/Europe"
+msgstr ""
+
+msgid "V23, Japan V23 variant"
+msgstr ""
+
+msgid "Valid range"
+msgstr ""
 
 msgid "Venezuela / South America"
 msgstr "Venezuela / Jižní Afrika"
@@ -2432,25 +1411,10 @@ msgstr "Venezuela / Jižní Afrika"
 msgid "Version"
 msgstr "Verze"
 
-msgid "Video"
-msgstr ""
-
-msgid "Voice Prompts"
-msgstr ""
-
 msgid "Voicemail"
 msgstr "Hlasová schránka"
 
-msgid "Voicemail Greeting"
-msgstr ""
-
-msgid "Voicemail to E-Mail Presentation"
-msgstr ""
-
 msgid "Voicemail to e-mail enabled but the e-mail address is invalid or missing."
-msgstr ""
-
-msgid "Volume"
 msgstr ""
 
 msgid "Wake-Up call manager. Call to set and cancel wake-up calls on the current extension."
@@ -2459,93 +1423,32 @@ msgstr ""
 msgid "Warning"
 msgstr ""
 
-msgid "Warning:"
-msgstr "Upozornění:"
+msgid "Website"
+msgstr ""
 
 msgid "Wellington"
 msgstr ""
 
-msgid "Write"
-msgstr ""
-
-#, php-format
-msgid "XML error: %s"
+msgid "Wildcards"
 msgstr ""
 
 msgid "Yemen"
 msgstr ""
 
-msgid "Yes"
-msgstr "Ano"
-
 msgid "Yes, alias \"*.hostname.domain\" to hostname specified above."
-msgstr ""
-
-msgid "You are using the most recent <strong>beta</strong> of TeeBX."
-msgstr ""
-
-msgid "You are using the most recent version of TeeBX."
 msgstr ""
 
 msgid "You may enter a description here for your reference (not parsed)."
 msgstr ""
 
-msgid "You must reboot the system before you can upgrade the firmware."
+msgid "access the web UI using the new IP address"
 msgstr ""
 
-msgid "Your Name &lt;number&gt;"
-msgstr "Vaše jméno &lt;číslo&gt;"
-
-msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
+msgid "access the web UI."
 msgstr ""
-
-msgid "access the webGUI with the new IP address"
-msgstr "přihlásit se do webGUI s novou adresou IP"
-
-msgid "activate disk"
-msgstr ""
-
-msgid "active"
-msgstr "aktivní"
-
-msgid "add application mapping"
-msgstr ""
-
-msgid "add call group"
-msgstr ""
-
-msgid "add conference room"
-msgstr "přidat telekonferenci"
-
-msgid "add disk"
-msgstr ""
-
-#, fuzzy
-msgid "add gateway"
-msgstr "změnit položku"
-
-msgid "add incoming extension mapping"
-msgstr ""
-
-msgid "add manager user"
-msgstr ""
-
-msgid "add port group"
-msgstr ""
-
-#, fuzzy
-msgid "add set"
-msgstr "cíl"
-
-#, fuzzy
-msgid "address"
-msgstr "IP adresa"
 
 msgid "after you click &quot;Save&quot;, all current calls will be dropped."
 msgstr ""
-
-msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
-msgstr "po stisknutí tlačítka  &quot;Uložit&quot; budou všechny aktuální hovory ukončeny. Než se budete moci opět přihlásit k PBX, je možné, že budete muset znovu provést některý z následujících kroků:"
 
 #, fuzzy
 msgid "alias"
@@ -2554,53 +1457,11 @@ msgstr "Italština"
 msgid "allow this number to be reachable over the Internet"
 msgstr ""
 
-msgid "always send Caller ID above"
-msgstr ""
-
-msgid "always use NAT mode."
-msgstr "vždy používej NAT"
-
-msgid "associated"
-msgstr ""
-
-msgid "assume NAT mode but don't send rport "
-msgstr "předpokládej NAT, ale neodesílej rport"
-
-msgid "authenticate incoming calls with a public RSA key"
-msgstr ""
-
-msgid "authenticate outgoing calls with a private RSA key"
-msgstr ""
-
 msgid "built on"
 msgstr ""
 
-msgid "caller id of person leaving the message"
-msgstr "ID volajícího, který zprávu zanechal"
-
 msgid "change the IP address of your computer"
 msgstr "změnit adresu IP vašeho počítače"
-
-msgid "click to disable fax"
-msgstr ""
-
-msgid "click to disable phone"
-msgstr "kliknutím deaktivujete účet"
-
-msgid "click to disable provider"
-msgstr "kliknutím deaktivujete operátora"
-
-msgid "click to enable fax"
-msgstr ""
-
-msgid "click to enable phone"
-msgstr "kliknutím aktivujete účet"
-
-msgid "click to enable provider"
-msgstr "kliknutím aktivujete operátora"
-
-msgid "clicking &quot;Save&quot; will drop all current calls."
-msgstr ""
 
 msgid "configured manually"
 msgstr ""
@@ -2611,119 +1472,21 @@ msgstr ""
 msgid "confirmation"
 msgstr ""
 
-msgid "connected"
-msgstr "připojeno"
-
-msgid "connected but lagged"
-msgstr ""
-
-msgid "default:"
-msgstr ""
-
-#, fuzzy
-msgid "delete application"
-msgstr "smazat účet"
-
-msgid "delete application mapping"
-msgstr ""
-
-msgid "delete call group"
-msgstr ""
-
-msgid "delete conference room"
-msgstr "odstranit telekonferenci"
-
-msgid "delete fax"
-msgstr ""
-
-msgid "delete manager user"
-msgstr ""
-
-msgid "delete phone"
-msgstr "smazat účet"
-
-#, fuzzy
-msgid "delete port group"
-msgstr "odstranit operátora"
-
-msgid "delete provider"
-msgstr "odstranit operátora"
-
-msgid "disable certificate checking"
-msgstr ""
-
-msgid "disable echo cancellation"
-msgstr ""
-
 msgid "disable time synchronization"
 msgstr ""
 
-#, fuzzy
-msgid "disabled"
-msgstr "Neaktivní"
-
-msgid "down"
+msgid "domain"
 msgstr ""
 
-msgid "downloading"
+msgid "done."
 msgstr ""
 
-msgid "drag-and-drop"
-msgstr "drag-and-drop"
-
-msgid "duration of the message (i.e. 0:58)"
-msgstr "délka zprávy (např. 0:58)"
+msgid "e.g."
+msgstr ""
 
 #, fuzzy
 msgid "e.g. <em>pbx . mydomain.com"
 msgstr "např. <em>mojedoména.cz"
-
-#, fuzzy
-msgid "edit application"
-msgstr "změnit účet"
-
-msgid "edit application mapping"
-msgstr ""
-
-msgid "edit call group"
-msgstr ""
-
-msgid "edit conference room"
-msgstr "změnit telekonferenci"
-
-msgid "edit disk"
-msgstr ""
-
-msgid "edit fax"
-msgstr ""
-
-#, fuzzy
-msgid "edit gateway"
-msgstr "změnit položku"
-
-msgid "edit manager room"
-msgstr ""
-
-msgid "edit phone"
-msgstr "změnit účet"
-
-#, fuzzy
-msgid "edit port"
-msgstr "změnit účet"
-
-#, fuzzy
-msgid "edit port group"
-msgstr "změnit účet"
-
-msgid "edit provider"
-msgstr "změnit operátora"
-
-#, fuzzy
-msgid "enable voicemail to e-mail"
-msgstr "jméno uživatele hlasové schránky"
-
-msgid "enter a command below..."
-msgstr ""
 
 msgid "every 10 minutes"
 msgstr ""
@@ -2743,93 +1506,19 @@ msgstr ""
 msgid "every hour"
 msgstr ""
 
-msgid "extension number of voicemail box"
-msgstr "číslo provolby hlasové schránky"
-
-#, fuzzy
-msgid "extracting"
-msgstr "Nastavení"
-
-msgid "forget disk settings"
-msgstr ""
-
-msgid "forget gateway settings"
-msgstr ""
-
-msgid "forget port settings"
-msgstr ""
-
-msgid "full date / time (i.e. 2025-11-20 (15:45))"
-msgstr "datum / čas (např. 2025-11.20 (15:45))"
-
-msgid "generate password"
-msgstr "vygeneruj heslo"
-
-msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
-msgstr "jestliže se graf nezobrazuje, nainstalujte si <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
-
-msgid "inactive"
-msgstr "neaktivní"
-
 msgid "indefinitely"
 msgstr ""
 
-#, fuzzy
-msgid "installed sets"
-msgstr "Instalované balíčky"
-
-#, fuzzy
-msgid "installing"
-msgstr "Instaluj"
-
-msgid "kick conference member"
-msgstr ""
-
-msgid "max:"
-msgstr ""
-
-msgid "md5"
-msgstr ""
-
-#, fuzzy
-msgid "milliseconds"
-msgstr "vteřin"
-
-msgid "min:"
+msgid "is based upon/includes various software packages, listed below. A big thanks to the authors for all of their hard work!"
 msgstr ""
 
 msgid "multipoint-to-point, network termination"
 msgstr ""
 
-msgid "name of voicemail recipient"
-msgstr "jméno uživatele hlasové schránky"
-
-msgid "never attempt NAT mode or RFC3581 support"
-msgstr "nikdy nepouživej NAT nebo podporu RFC3581"
-
-msgid "no faxes available."
-msgstr ""
-
-msgid "none"
-msgstr ""
-
-msgid "notify me of missed calls via e-mail"
-msgstr ""
-
-msgid "of"
-msgstr ""
-
 msgid "on"
 msgstr ""
 
-msgid "only use NAT mode according to RFC3581 (rport)"
-msgstr "používej NAT jen dle RFC3581 (rport)"
-
-#, fuzzy
-msgid "optional"
-msgstr "Možnosti"
-
-msgid "plaintext"
+msgid "pbx . mydomain.com"
 msgstr ""
 
 msgid "point-to-multipoint, terminal equipment"
@@ -2841,81 +1530,39 @@ msgstr ""
 msgid "point-to-point, terminal equipment"
 msgstr ""
 
-msgid "print"
-msgstr "tiskni"
-
-msgid "read:"
+msgid "restart system"
 msgstr ""
 
-msgid "receive"
+msgid "show/hide details"
 msgstr ""
 
-msgid "restart the PBX"
-msgstr "restartovat PBX"
-
-msgid "seconds"
-msgstr "vteřin"
-
-#, fuzzy
-msgid "send phone's Caller ID"
-msgstr "Odeslat ID volajícího z telefonního přístroje"
-
-#, fuzzy
-msgid "send phone's Caller ID + prefix below"
-msgstr "Odeslat ID volajícího z telefonního přístroje"
-
-#, php-format
-msgid "service already assigned to \"%s\""
+msgid "source revision"
 msgstr ""
 
-msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
+msgid "status"
 msgstr ""
 
-msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
+msgid "store Asterisk's call detail records on disk"
 msgstr ""
-
-msgid "show"
-msgstr "zobrazit"
-
-msgid "span should be set as a loopback"
-msgstr ""
-
-msgid "span should use CRC4 checking"
-msgstr ""
-
-msgid "status unknown"
-msgstr "neznámý stav"
 
 msgid "store Asterisk's database on disk"
+msgstr ""
+
+msgid "store system logs on disk"
 msgstr ""
 
 msgid "store voice prompts and music-on-hold on disk"
 msgstr ""
 
-msgid "transmit"
+msgid "view license information"
 msgstr ""
-
-msgid "unreachable"
-msgstr "nedostupné"
-
-msgid "up"
-msgstr ""
-
-msgid "use DHCP settings permanently"
-msgstr ""
-
-msgid "use this password"
-msgstr "použij toto heslo"
-
-msgid "view license"
-msgstr "zobrazit licenci"
 
 #, fuzzy
 msgid "warning"
 msgstr "Upozornění:"
 
-msgid "webGUI Configuration"
-msgstr "webGUI konfigurace"
+msgid "web UI"
+msgstr ""
 
 msgid "webGUI language"
 msgstr "Jazyk uživatelského rozhraní"
@@ -2923,8 +1570,14 @@ msgstr "Jazyk uživatelského rozhraní"
 msgid "webGUI port"
 msgstr "Port uživatelského rozhraní"
 
-msgid "write:"
-msgstr ""
+#~ msgid "25%"
+#~ msgstr "25%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "75%"
+#~ msgstr "75%"
 
 #~ msgid "A newer <strong>beta</strong> version of AskoziaPBX is available!"
 #~ msgstr "Je k dispozici novější <strong>beta</strong> verze AskoziaPBX!"
@@ -2938,15 +1591,45 @@ msgstr ""
 #~ msgid "ARP table"
 #~ msgstr "Tabulka ARP"
 
+#~ msgid "Access PIN"
+#~ msgstr "Přístupový kód (PIN)"
+
 #~ msgid "Account uses TLS"
 #~ msgstr "Účet využívá TLS"
 
 #~ msgid "Active Calls"
 #~ msgstr "Aktivní hovory"
 
+#~ msgid "Active Channels"
+#~ msgstr "Aktivní kanály"
+
+#, fuzzy
+#~ msgid "Active Channels / Calls"
+#~ msgstr "Aktivní kanály"
+
+#, fuzzy
+#~ msgid "Adding"
+#~ msgstr "Ping"
+
+#, fuzzy
+#~ msgid "Advanced Options"
+#~ msgstr "Upřesňující nastavení"
+
 #, fuzzy
 #~ msgid "Advanced SIP Options"
 #~ msgstr "Upřesňující nastavení"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Upřesňující nastavení"
+
+#~ msgid "Analog Phones"
+#~ msgstr "Analogové telefony"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Opravdu chcete pokračovat?"
+
+#~ msgid "Are you sure you want to reboot the system?"
+#~ msgstr "Jste si jisti, že chcete restartovat systém?"
 
 #, fuzzy
 #~ msgid "Askozia&reg;PBX &copy; 2007-2010 IKT. All rights reserved."
@@ -2964,9 +1647,25 @@ msgstr ""
 #~ msgid "Audio Codecs"
 #~ msgstr "Audio kodeky"
 
+#~ msgid "Authentication Method"
+#~ msgstr "Metoda ověřování"
+
+#, fuzzy
+#~ msgid "Authentication Scheme"
+#~ msgstr "Metoda ověřování"
+
+#~ msgid "Authorization User"
+#~ msgstr "Uživatelské jméno pro autorizaci"
+
 #, fuzzy
 #~ msgid "Auto-Configuration"
 #~ msgstr "Obnovit konfiguracei"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Záloha konfigurace"
+
+#~ msgid "Body"
+#~ msgstr "Tělo"
 
 #~ msgid "Busy Limit"
 #~ msgstr "Obsazeno při"
@@ -2977,8 +1676,18 @@ msgstr ""
 #~ msgid "Call Records"
 #~ msgstr "Zaznamy hovorů"
 
+#~ msgid "Caller ID"
+#~ msgstr "ID volajícího"
+
+#, fuzzy
+#~ msgid "Caller ID Options"
+#~ msgstr "ID volajícího"
+
 #~ msgid "Capacity"
 #~ msgstr "Kapacita"
+
+#~ msgid "Channels"
+#~ msgstr "Kanály"
 
 #~ msgid "Checked interfaces will be bridged to the main interface."
 #~ msgstr "Zaškrtnutá rozhraní budou přemostěna na hlavní rozhraní."
@@ -2989,33 +1698,198 @@ msgstr ""
 #~ msgid "Clear log"
 #~ msgstr "Vymazat záznamy"
 
+#~ msgid "Click this button to download the system configuration in XML format."
+#~ msgstr "Stisknutím tothoto tlačítka uložíte konfiguraci systému v XML formátu."
+
+#, fuzzy
+#~ msgid "Codecs"
+#~ msgstr "Audio kodeky"
+
+#~ msgid "Collecting initial data, please wait..."
+#~ msgstr "Shromažďuji počáteční data, prosím vyčkejte ..."
+
 #~ msgid "Collisions"
 #~ msgstr "Kolize"
+
+#~ msgid "Command"
+#~ msgstr "Příkaz"
+
+#~ msgid "Conference Rooms"
+#~ msgstr "Telekonference"
+
+#~ msgid "Conferences"
+#~ msgstr "Telekonference"
+
+#, fuzzy
+#~ msgid "Connect"
+#~ msgstr "připojeno"
 
 #~ msgid "Count must be between 1 and %d"
 #~ msgstr "Počet musí být mezi 1 a %d"
 
+#~ msgid "DO NOT abort the firmware upgrade once it has started."
+#~ msgstr "NEPŘERUŠUJTE aktualizaci firmwaru po jejím zahájení."
+
+#~ msgid "DTMF Mode"
+#~ msgstr "Mód DTMF"
+
+#, fuzzy
+#~ msgid "Defaults to the e-mail address used in the %s setup."
+#~ msgstr "Výchozí hodnotou je e-mailová adresa vložená výše."
+
+#~ msgid "Descriptive name for this provider."
+#~ msgstr "Popisnější název tohoto poskytovatele."
+
 #~ msgid "Diagnostics"
 #~ msgstr "Diagnostika"
 
+#~ msgid "Dialing Pattern(s)"
+#~ msgstr "Směrovací pravidlo(a)"
+
+#~ msgid "Disabled"
+#~ msgstr "Neaktivní"
+
+#~ msgid "Do not register with this provider."
+#~ msgstr "Neregistruj se k tomuto operátorovi."
+
+#, fuzzy
+#~ msgid "Do you really want to delete this application?"
+#~ msgstr "Opravdu chcete smazat tento telefonní účet?"
+
+#~ msgid "Do you really want to delete this conference room?"
+#~ msgstr "Opravdu si přejete smazat tuto telekonferenci?"
+
+#~ msgid "Do you really want to delete this phone?"
+#~ msgstr "Opravdu chcete smazat tento telefonní účet?"
+
+#, fuzzy
+#~ msgid "Do you really want to delete this port group's settings?"
+#~ msgstr "Opravdu chcete smazat tento telefonní účet?"
+
+#~ msgid "Do you really want to delete this provider?"
+#~ msgstr "Opravdu si přejete smazat tohoto operátora?"
+
 #~ msgid "Do you really want to disable this package?"
 #~ msgstr "Opravdu chcete deaktivovat tento balíček?"
+
+#~ msgid "Do you really want to disable this phone?"
+#~ msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
+
+#~ msgid "Do you really want to disable this provider?"
+#~ msgstr "Opravdu si přejete deaktivovat tohoto operátora?"
 
 #, fuzzy
 #~ msgid "Do you really want to forget this disk's settings?"
 #~ msgstr "Opravdu chcete smazat tento telefonní účet?"
 
+#, fuzzy
+#~ msgid "Do you really want to forget this disk?"
+#~ msgstr "Opravdu chcete smazat tento telefonní účet?"
+
+#, fuzzy
+#~ msgid "Do you really want to forget this gateway's settings?"
+#~ msgstr "Opravdu chcete smazat tento telefonní účet?"
+
+#, fuzzy
+#~ msgid "Do you really want to forget this port\\'s settings?"
+#~ msgstr "Opravdu chcete smazat tento telefonní účet?"
+
 #~ msgid "Do you really want to permanently delete this package\\'s configuration and data?"
 #~ msgstr "Opravdu chcete trvale odstranit konfiguraci a data tohoto balíčku?"
+
+#~ msgid "Download configuration"
+#~ msgstr "Uložit konfigurace"
+
+#, fuzzy
+#~ msgid "E-Mail"
+#~ msgstr "Otestuj"
 
 #~ msgid "E-Mail Language"
 #~ msgstr "Jazyk e-mailu"
 
+#~ msgid "E-mail Address"
+#~ msgstr "E-mail"
+
+#~ msgid "E-mail Me"
+#~ msgstr "Otestuj"
+
+#~ msgid "E-mail has been sent successfully."
+#~ msgstr "E-mail byl úspěšně odeslán."
+
+#~ msgid "E-mail notifications for new voicemail will be delivered in this language."
+#~ msgstr "E-mailová upozornění na nové záznamy v hlasové schránce budou doručována v tomto jazyce."
+
+#~ msgid "E-mail was not sent, check your settings."
+#~ msgstr "E-mail nebylo možno deslat. Ověřte nastavení SMTP."
+
+#, fuzzy
+#~ msgid "Edit Analog %s Port"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit Analog Phone"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit Analog Provider"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit External Phone"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit IAX Phone"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit IAX Provider"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit ISDN %s Port"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit ISDN Phone"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit ISDN Provider"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit Provider Group"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "Edit Redfone Gateway"
+#~ msgstr "Brána"
+
 #~ msgid "Edit SIP Account"
 #~ msgstr "Změnit účet SIP"
 
+#, fuzzy
+#~ msgid "Edit SIP Phone"
+#~ msgstr "SIP telefony"
+
+#, fuzzy
+#~ msgid "Edit SIP Provider"
+#~ msgstr "SIP telefony"
+
+#, fuzzy
+#~ msgid "Edit Skinny Phone"
+#~ msgstr "SIP telefony"
+
 #~ msgid "Enable syslog'ing to remote syslog server"
 #~ msgstr "Aktivovat logování na syslog server (pomocí syslogd)"
+
+#~ msgid "Enabled"
+#~ msgstr "Aktivní"
+
+#, fuzzy
+#~ msgid "Encryption Method"
+#~ msgstr "Metoda ověřování"
 
 #, fuzzy
 #~ msgid "Enter a NTP server to synchronize with. Remember to set up at least one DNS server if you enter a host name here!"
@@ -3024,8 +1898,112 @@ msgstr ""
 #~ msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP, 443 for HTTPS)."
 #~ msgstr "Pokud chcete změnit standardní nastavení (80 pro HTTP, 443 pro HTTPS), zadejte libovolné číslo portu."
 
+#, fuzzy
+#~ msgid "Enter a descriptive name for this disk."
+#~ msgstr "Popisnější název tohoto poskytovatele."
+
+#, fuzzy
+#~ msgid "Enter a descriptive name for this gateway."
+#~ msgstr "Popisnější název tohoto poskytovatele."
+
+#, fuzzy
+#~ msgid "Enter a descriptive name for this port."
+#~ msgstr "Popisnější název tohoto poskytovatele."
+
+#, fuzzy
+#~ msgid "Enter a descriptive name for this span."
+#~ msgstr "Popisnější název tohoto poskytovatele."
+
+#~ msgid ""
+#~ "Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - matches one or more characters</li>\n"
+#~ " \t<li><strong>!</strong> - matches zero or more characters</li>\n"
+#~ " </ul>\n"
+#~ msgstr ""
+#~ "Vložte pravidlo nebo telefonní číslo a vyberte cílovou provolbu. Pro vyzvánění více telefonních čísel je jednoduše definujte se stejnou šablonou. Pokud vložíte telefonní číslo, bude toto použito jako \"externí\" číslo u zmeškaných hovorů. Pokud nic nevložíte, budou všechny hovory přesměrovány na cílovou provolbu.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>X</strong> - odopvídá číslicím 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - odpovídá číslicím 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - odpovídá číslicím 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - odpovídá jakékoliv číslici v závorce (zde např., 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - odpovídá jednomu nebo více znakům</li>\n"
+#~ " \t<li><strong>!</strong> - odpovídá žádnému nebo více znakům</li>\n"
+#~ " </ul>\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
+#~ " \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
+#~ " \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
+#~ " \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
+#~ " </ul>\n"
+#~ msgstr ""
+#~ "Vložte pravidla, vždy jedno na řádku, která odpovídají směrováním tohoto operátora. Pokud vložíte \"X!\", budou všechny odchozí hovory směrovány na tohoto Operátora. Pokud chcete na tohoto operátora směrovat hovory začínájící číslem \"9\", vložte \"9|.\". Pokud nevložíte žádné pravidlo, budou povoleny pouze příchozí hovory.<br>\n"
+#~ "<ul>\n"
+#~ " \t<li><strong>+</strong> - přidá prefix (např. \"1+555\" odpovídá \"555\" a předává operátorovi \"1555\")</li>\n"
+#~ " \t<li><strong>|</strong> - odstraní prefix (např. \"1|555\" odpovídá \"1555\", ale předá operátorovi pouze \"555\")</li>\n"
+#~ " \t<li><strong>X</strong> - odpovídá číslicím 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - odpovídá číslicím 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - odpovídá číslicím 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - odpovídá jakékoliv číslici v závorkách (zde např., 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - odpovídá jednomu nebo více znakům (není povoleno před | nebo +)</li>\n"
+#~ " \t<li><strong>!</strong> - odpovídá žádnému nebo více znakům (není povoleno před | nebo +)</li>\n"
+#~ " </ul>\n"
+
+#~ msgid "Extension"
+#~ msgstr "Provolba"
+
+#~ msgid "External"
+#~ msgstr "Externí"
+
+#, fuzzy
+#~ msgid "Failover Provider"
+#~ msgstr "Operátoři"
+
+#, fuzzy
+#~ msgid "Firmware Version"
+#~ msgstr "Firmware"
+
+#~ msgid "Firmware image file:"
+#~ msgstr "Image soubor firmwaru:"
+
+#, fuzzy
+#~ msgid "Framing"
+#~ msgstr "Francie"
+
 #~ msgid "French (France)"
 #~ msgstr "Francouzština (Francie)"
+
+#~ msgid "From Address"
+#~ msgstr "Odesílatel"
+
+#~ msgid "From Domain"
+#~ msgstr "Doména 'From'"
+
+#~ msgid "From User"
+#~ msgstr "Uživatel 'From'"
+
+#, fuzzy
+#~ msgid "Gateway Name"
+#~ msgstr "Brána"
+
+#, fuzzy
+#~ msgid "Gateways"
+#~ msgstr "Brána"
+
+#~ msgid "Graph shows last"
+#~ msgstr "Graf zobrazuje poledních "
 
 #~ msgid "HTTP"
 #~ msgstr "HTTP"
@@ -3038,17 +2016,28 @@ msgstr ""
 #~ msgstr "Firmware"
 
 #, fuzzy
+#~ msgid "Hardware Port"
+#~ msgstr "Firmware"
+
+#, fuzzy
 #~ msgid "Hardware Version"
 #~ msgstr "Firmware"
 
 #~ msgid "Help"
 #~ msgstr "Nápověda"
 
-#~ msgid "IP address"
-#~ msgstr "IP adresa"
+#~ msgid "IAX Phones"
+#~ msgstr "IAX telefony"
+
+#, fuzzy
+#~ msgid "IP"
+#~ msgstr "SIP"
 
 #~ msgid "IP address of remote syslog server"
 #~ msgstr "IP adresa syslog serveru"
+
+#~ msgid "ISDN Phones"
+#~ msgstr "ISDN telefony"
 
 #, fuzzy
 #~ msgid "If a compatible wireless card is present in the system, it can be configured to act as an Access Point. It will be bridged to the wired network that the PBX is connected to."
@@ -3063,6 +2052,13 @@ msgstr ""
 #~ msgid "If this is a USB ISDN device, send <a href=\"ajax.cgi?exec_shell=/sbin/udesc_dump\">this output</a> as well."
 #~ msgstr "Jedná-li se o USB ISDN zařízení, zašlete prosím <a href=\"ajax.cgi?exec_shell=/sbin/udesc_dump\">tento výstup</a> také."
 
+#, fuzzy
+#~ msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
+#~ msgstr "Po stisknutí tlačítka &quot;Ano&quot;, se PBX přepne do továrního nastavení a okamžitě se restartuje. Konfigurace systému bude přepsána. Adresa IP síťového rozhraní bude nastavena na 192.168.1.2 a heslo na '%s'."
+
+#~ msgid "In"
+#~ msgstr "Příchozí"
+
 #~ msgid "In order to send missed call notifications and recorded voicemail messages via e-mail, a mail server must be correctly configured here."
 #~ msgstr "Aby bylo možné e-mailem zasílat upozornění na zmeškané hovory a zprávy nahrané do hlasové schránky, musí být správně nastaven SMTP server."
 
@@ -3071,6 +2067,14 @@ msgstr ""
 
 #~ msgid "In/Out Packets"
 #~ msgstr "In/Out pakety"
+
+#, fuzzy
+#~ msgid "Incoming Extensions"
+#~ msgstr "Příchozí provolba(y)"
+
+#, fuzzy
+#~ msgid "Incoming Modification"
+#~ msgstr "Příchozí provolba(y)"
 
 #~ msgid "Install"
 #~ msgstr "Instaluj"
@@ -3087,12 +2091,23 @@ msgstr ""
 #~ msgid "Live"
 #~ msgstr "On-line"
 
+#, fuzzy
+#~ msgid "Local Area Network"
+#~ msgstr "Síť"
+
+#, fuzzy
+#~ msgid "Local Interface"
+#~ msgstr "Rozhraní"
+
 #~ msgid "MAC address"
 #~ msgstr "MAC adresa"
 
 #, fuzzy
 #~ msgid "Main Number"
 #~ msgstr "Číslo konference"
+
+#~ msgid "Manager Interface"
+#~ msgstr "Příkazová řádka"
 
 #~ msgid "Manual Install"
 #~ msgstr "Manuální instalace"
@@ -3109,14 +2124,41 @@ msgstr ""
 #~ msgid "Minutes between network time sync.; 300 recommended, or 0 to disable"
 #~ msgstr "Minuty mezi jednotlivými synchronizacemi času.; doporučená hodnota - 300, 0 znamená vypnuto"
 
+#~ msgid "Miscellaneous"
+#~ msgstr "Ostatní"
+
+#~ msgid "NAT"
+#~ msgstr "NAT"
+
+#~ msgid "Network"
+#~ msgstr "Síť"
+
+#~ msgid "No"
+#~ msgstr "Ne"
+
+#, fuzzy
+#~ msgid "No additional storage devices were detected."
+#~ msgstr "Žádné analogové zařízení nebylo nalezeno."
+
 #~ msgid "No compatible ISDN interfaces detected."
 #~ msgstr "Žádné ISDN rozhraní nebylo nalezeno."
 
 #~ msgid "No compatible analog interfaces detected."
 #~ msgstr "Žádné analogové zařízení nebylo nalezeno."
 
+#, fuzzy
+#~ msgid "No compatible analog ports were detected."
+#~ msgstr "Žádné analogové zařízení nebylo nalezeno."
+
+#, fuzzy
+#~ msgid "No compatible isdn ports were detected."
+#~ msgstr "Žádné analogové zařízení nebylo nalezeno."
+
 #~ msgid "No compatible wireless interfaces detected."
 #~ msgstr "Žádné bezdrátové rozhraní nebylo nalezeno."
+
+#~ msgid "Note:"
+#~ msgstr "Poznámka:"
 
 #~ msgid "Number of log entries to show must be between 50 and 1000."
 #~ msgstr "Počet zobrazovaných záznamů v logu musí být mezi 50 a 1000."
@@ -3124,24 +2166,72 @@ msgstr ""
 #~ msgid "Number of log entries to show:"
 #~ msgstr "Počet zobrazovaných záznamů:"
 
+#, fuzzy
+#~ msgid "Number or string to be dialed to reach this telephone."
+#~ msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
+
+#, fuzzy
+#~ msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
+#~ msgstr "Otevřete AskoziaPBX XML konfigurační soubora a stisknutím tlačítka níže obnovte konfiguraci."
+
+#~ msgid "Optional PIN needed to access this conference room."
+#~ msgstr "Pro přístup do této konference je třeba dodatečně zadat PIN."
+
+#~ msgid "Options"
+#~ msgstr "Možnosti"
+
+#~ msgid "Out"
+#~ msgstr "Odchozí"
+
+#~ msgid "Outgoing Calls Only"
+#~ msgstr "Pouze odchozí hovory"
+
+#, fuzzy
+#~ msgid "Outgoing Patterns"
+#~ msgstr "Odchozí ID volajícího"
+
+#, fuzzy
+#~ msgid "Outgoing Presentation"
+#~ msgstr "Zobrazení"
+
+#, fuzzy
+#~ msgid "Outgoing provider or protocol used to reach this telephone."
+#~ msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
+
 #~ msgid "Output"
 #~ msgstr "Výstup"
 
 #~ msgid "Package data and logic will be replaced by the backup."
 #~ msgstr "Data balíčku a logika bude nahrazena ze zálohy."
 
+#~ msgid "Packages"
+#~ msgstr "Balíčky"
+
 #~ msgid "Packages to expand system functionality can be installed and updated here. Start by clicking <img src=\"img/add.png\" border=\"0\"> to check for newly available packages. All packages are digitally signed before distribution and checked upon installation."
 #~ msgstr "Zde mohou být instalovány a aktualizovány balíčky rozšiřující funkčnost systému. Začněte kliknutím na <img src=\"img/add.png\" border=\"0\">, kde zjistíte nově dostupné balíčky. Všechny balíčky jsou před distribucí prověřeny a digitálně podepsány."
+
+#~ msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
+#~ msgstr "Pro zjištění stavu budou každých <i>n</i> vteřin odesílány na tento účet pakety.<br>Výchozí hodnota je '2'. Vložením '0' tuto funkci vypnete."
+
+#~ msgid "Pattern(s)"
+#~ msgstr "Šablona(y)"
 
 #, fuzzy
 #~ msgid "Permit only 'n' concurrent calls (default: 2)"
 #~ msgstr "Povol pouze 'n' odchozích a 'n' příchozích hovorů (výchozí hodnota: 2)"
+
+#, fuzzy
+#~ msgid "Phone"
+#~ msgstr "Telefonní účty"
 
 #~ msgid "Phone Accounts allow you to configure internal extensions and their access to Provider Accounts. Click an account type below to get started."
 #~ msgstr "Pomocí Telefonních účtů nastavíte interní provolby a jejich přístup k účtům poskytovatel volání. Začněte kliknutím na příslušný typ protokolu níže."
 
 #~ msgid "Phone status will be switched to 'busy' with 'n' concurrent calls (default: 1)"
 #~ msgstr "Status telefonu bude přepnut na 'obsazeno' při 'n' současně probíhajících hovorech (výchozí hodnota: 1)"
+
+#~ msgid "Pin"
+#~ msgstr "Pin"
 
 #~ msgid "Ping output:"
 #~ msgstr "Výstup:"
@@ -3158,6 +2248,28 @@ msgstr ""
 #~ msgid "Provider Accounts allow you to configure routes to and from external sources (i.e. VoIP service providers or attached ISDN / Analog interface hardware). Click an account type below to get started."
 #~ msgstr "Účty operátorů umožnují nastavit směrování do a z externích zdrojů (např. VoIP operátori nebo připojené ISDN / analogové hardwarové rozhraní). Pro začátek klikněte na příslušný typ účtu."
 
+#, fuzzy
+#~ msgid "Provider Port Groups"
+#~ msgstr "Operátoři"
+
+#, fuzzy
+#~ msgid "Provider host URL or IP address and optional port."
+#~ msgstr "URL nebo IP adresa SMTP hostitele a volitelně port."
+
+#, fuzzy
+#~ msgid "Public RSA Key"
+#~ msgstr "Veřejná adresa IP"
+
+#~ msgid "Qualify"
+#~ msgstr "Kvalita"
+
+#~ msgid "Registration"
+#~ msgstr "Registrace"
+
+#, fuzzy
+#~ msgid "Remote Interface"
+#~ msgstr "Rozhraní"
+
 #~ msgid "Remote syslog server"
 #~ msgstr "Vzdálený syslog server"
 
@@ -3167,14 +2279,29 @@ msgstr ""
 #~ msgid "Restore"
 #~ msgstr "Obnovit"
 
+#~ msgid "Restore configuration"
+#~ msgstr "Obnovit konfiguracei"
+
 #~ msgid "Restore from a Backup Archive"
 #~ msgstr "Obnova balíčku ze zálohy"
+
+#~ msgid "Room Number"
+#~ msgstr "Číslo konference"
+
+#~ msgid "Russia"
+#~ msgstr "Rusko"
+
+#~ msgid "SIP Phones"
+#~ msgstr "SIP telefony"
 
 #~ msgid "SIP proxy host URL or IP address and optional port."
 #~ msgstr "URL nebo IP adresa SIP proxy hostitele a volitelně port."
 
 #~ msgid "SMTP"
 #~ msgstr "SMTP"
+
+#~ msgid "SMTP host URL or IP address and optional port."
+#~ msgstr "URL nebo IP adresa SMTP hostitele a volitelně port."
 
 #, fuzzy
 #~ msgid "SNOM MAC Address"
@@ -3189,6 +2316,10 @@ msgstr ""
 #~ msgid "Select a backup .tgz archive and press 'Restore'"
 #~ msgstr "Vyberte zálohovaný soubor .tgz a stiskněte tlačítko 'Obnovit'"
 
+#, fuzzy
+#~ msgid "Select which disk you would like to format."
+#~ msgstr "Vyberte balíček, který si přijete instalovat."
+
 #~ msgid "Select which packages you would like to install."
 #~ msgstr "Vyberte balíček, který si přijete instalovat."
 
@@ -3198,19 +2329,99 @@ msgstr ""
 #~ msgid "Show log entries in reverse order (newest entries on top)"
 #~ msgstr "Zobrazit záznamy v opačném pořadí (nejnovější jako první)"
 
+#~ msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
+#~ msgstr "Někteří operátoři vyžadují samostatnou 'from' doménu. <br>Odpovídá hostiteli zadanému výše."
+
+#~ msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
+#~ msgstr "Někteří operátoři vyžadují samostátného 'from' uživatele.<br>Odpovídá uživatelskému jménu definovanému výše."
+
+#, fuzzy
+#~ msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
+#~ msgstr "Někteří operátoři vyžadují samostatné autorizační uživatelské jméno.<br>Odpovídá uživatelskému jménu definovanému výše."
+
+#, fuzzy
+#~ msgid "Span"
+#~ msgstr "Španělsko"
+
+#, fuzzy
+#~ msgid "Span Count"
+#~ msgstr "Počet"
+
+#, fuzzy
+#~ msgid "Spans"
+#~ msgstr "Španělština"
+
+#~ msgid "State"
+#~ msgstr "Stav"
+
+#, fuzzy
+#~ msgid "Storage Disk"
+#~ msgstr "Úložiště"
+
+#, fuzzy
+#~ msgid "Storage Services"
+#~ msgstr "Služby"
+
+#~ msgid "Subject"
+#~ msgstr "Předmět"
+
+#~ msgid "Summary"
+#~ msgstr "Souhrn"
+
 #~ msgid "TLS certificates are currently not verified."
 #~ msgstr "TLS certifikáty nejsou v současné době verifikovány."
 
+#~ msgid "Test E-mail"
+#~ msgstr "Testovací e-mail"
+
+#~ msgid "The PBX will reboot after restoring the configuration."
+#~ msgstr "PBX se po obnově konfigurace restartuje."
+
+#~ msgid "The digital signature on this image is invalid."
+#~ msgstr "Digitální podpis tohoto image souboru je neplatný."
+
 #~ msgid "The entire system configuration can be backed up and restored via this page."
 #~ msgstr "Na toté stránce můžete uložita a obnovit konfiguraci systému."
+
+#~ msgid "The firmware is now being installed. The PBX will reboot automatically."
+#~ msgstr "Firmware se právě instaluje. PBX bude automaticky restartována."
+
+#~ msgid "The following variables can be used in the e-mail notification"
+#~ msgstr "V e-mailovém upozornění mohou být použity následující proměnné"
+
+#~ msgid "The image file is corrupt."
+#~ msgstr "Image soubor je poškozen."
+
+#, fuzzy
+#~ msgid "The internal number used to dial this phone."
+#~ msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
 
 #, fuzzy
 #~ msgid "The main telephone number assigned to this line."
 #~ msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
 
 #, fuzzy
+#~ msgid "The number used to dial this application."
+#~ msgstr "Opravdu chcete deaktivovat tento telefonní účet?"
+
+#, fuzzy
 #~ msgid "The settings on this page are critical to ensuring connectivity to VoIP Providers. In particular, incorrect Topology settings can prevent incoming calls from connecting. If this system is behind a NAT, by default the system requires the following ports be forwarded to it: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
 #~ msgstr "Nastavení na této stránce jsou důležitá k zajištění spojení s Operátory VoIP. Konkrétné v případě nesprávného nastavení Topologie nemusí být příchozí hovory spojeny. Jestliže je tento systém za NATem, standardně vyžaduje AskoziaPBX, aby na ni byly přesměrovány tyto porty: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
+
+#~ msgid "There are currently no active channels."
+#~ msgstr "Nejsou aktivní žádné kanály."
+
+#~ msgid "There are currently no active conferences."
+#~ msgstr "Nejsou aktivní žádné telekonference."
+
+#~ msgid "There has been an error verifying the signature on this image."
+#~ msgstr "Nastala chyba při ověřování podpisu tohoto image souboru."
+
+#~ msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
+#~ msgstr "Toto číslo bude přečteno volajícímu při přesměrování hovoru do hlasové schránky; odpovídá uživatelskému jménu Telefonního účtu. Pokud číslo není shodné s uživatelským jménem (provolbou), volajícímu bude přečtena provolba, na kterou byl hovor přesměrován."
+
+#~ msgid "This image is not digitally signed."
+#~ msgstr "Tento image soubor není digitálně podepsán."
 
 #~ msgid "This is the first page which needs configuring upon installing a new system. Most importantly, the default password should be changed. Then, ensure your host/domain name, time zone and country's indication tones are set correctly before continuing."
 #~ msgstr "Toto je první nastavení, které by mělo být provedeno po instalaci systému. Nejdůležitější je změnit heslo. Než budete pokračovat dále, ujistětě se, že jste správně nastavili název hostitele/doménu, časové pásmo a zvuky."
@@ -3222,23 +2433,74 @@ msgstr ""
 #~ msgid "This type of account can use this port."
 #~ msgstr "Heslo k tomuto účtu."
 
+#~ msgid "This will be shown as voicemail service's sending address."
+#~ msgstr "Tato adresa bude zobrazována jako adresa odesílatele."
+
 #~ msgid "Traceroute"
 #~ msgstr "Traceroute"
 
 #~ msgid "Traceroute output:"
 #~ msgstr "Výstup:"
 
+#~ msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
+#~ msgstr "Pro ověře nastavení SMTP vepište e-mailovou adresu a stiskněte tlačitko &quot;Otestuj&quot."
+
 #~ msgid "Update Installed Package"
 #~ msgstr "Aktualizuj instalovaný balíček"
+
+#~ msgid "Upgrade firmware"
+#~ msgstr "Aktualizuj firmware"
+
+#~ msgid "User defined e-mail text"
+#~ msgstr "Text e-mailu definovaný uživatelem"
 
 #~ msgid "Video Codecs"
 #~ msgstr "Video kodeky"
 
+#~ msgid "Warning:"
+#~ msgstr "Upozornění:"
+
 #~ msgid "Wireless"
 #~ msgstr "Bezdrátová síť"
 
+#~ msgid "Yes"
+#~ msgstr "Ano"
+
+#~ msgid "Your Name &lt;number&gt;"
+#~ msgstr "Vaše jméno &lt;číslo&gt;"
+
+#~ msgid "access the webGUI with the new IP address"
+#~ msgstr "přihlásit se do webGUI s novou adresou IP"
+
+#~ msgid "active"
+#~ msgstr "aktivní"
+
 #~ msgid "add a new item"
 #~ msgstr "přidat nový záznam"
+
+#~ msgid "add conference room"
+#~ msgstr "přidat telekonferenci"
+
+#, fuzzy
+#~ msgid "add gateway"
+#~ msgstr "změnit položku"
+
+#, fuzzy
+#~ msgid "add set"
+#~ msgstr "cíl"
+
+#, fuzzy
+#~ msgid "address"
+#~ msgstr "IP adresa"
+
+#~ msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+#~ msgstr "po stisknutí tlačítka  &quot;Uložit&quot; budou všechny aktuální hovory ukončeny. Než se budete moci opět přihlásit k PBX, je možné, že budete muset znovu provést některý z následujících kroků:"
+
+#~ msgid "always use NAT mode."
+#~ msgstr "vždy používej NAT"
+
+#~ msgid "assume NAT mode but don't send rport "
+#~ msgstr "předpokládej NAT, ale neodesílej rport"
 
 #~ msgid "backup package data"
 #~ msgstr "zálohovat data balíčku"
@@ -3248,6 +2510,9 @@ msgstr ""
 
 #~ msgid "call detail records"
 #~ msgstr "záznamy o hovorech"
+
+#~ msgid "caller id of person leaving the message"
+#~ msgstr "ID volajícího, který zprávu zanechal"
 
 #~ msgid "calls"
 #~ msgstr "hovor(y)"
@@ -3261,24 +2526,66 @@ msgstr ""
 #~ msgid "click to disable package"
 #~ msgstr "kliknutím deaktivujete balíček"
 
+#~ msgid "click to disable phone"
+#~ msgstr "kliknutím deaktivujete účet"
+
+#~ msgid "click to disable provider"
+#~ msgstr "kliknutím deaktivujete operátora"
+
 #~ msgid "click to enable package"
 #~ msgstr "kliknutím aktivujete balíček"
+
+#~ msgid "click to enable phone"
+#~ msgstr "kliknutím aktivujete účet"
+
+#~ msgid "click to enable provider"
+#~ msgstr "kliknutím aktivujete operátora"
 
 #, fuzzy
 #~ msgid "click to mount disk"
 #~ msgstr "kliknutím deaktivujete balíček"
 
+#~ msgid "connected"
+#~ msgstr "připojeno"
+
+#, fuzzy
+#~ msgid "delete application"
+#~ msgstr "smazat účet"
+
 #~ msgid "delete arp entry"
 #~ msgstr "odstranit arp záznam"
 
+#~ msgid "delete conference room"
+#~ msgstr "odstranit telekonferenci"
+
 #~ msgid "delete package configuration and data"
 #~ msgstr "smazat konfiguraci a data balíčku"
+
+#~ msgid "delete phone"
+#~ msgstr "smazat účet"
+
+#, fuzzy
+#~ msgid "delete port group"
+#~ msgstr "odstranit operátora"
+
+#~ msgid "delete provider"
+#~ msgstr "odstranit operátora"
+
+#, fuzzy
+#~ msgid "disabled"
+#~ msgstr "Neaktivní"
 
 #~ msgid "disposition"
 #~ msgstr "stav"
 
 #~ msgid "download a backup archive"
 #~ msgstr "vytvoř zálohu balíčku"
+
+#~ msgid "drag-and-drop"
+#~ msgstr "drag-and-drop"
+
+#~ msgid "duration of the message (i.e. 0:58)"
+#~ msgstr "délka zprávy (např. 0:58)"
 
 #~ msgid "e.g. <em>pbx"
 #~ msgstr "např. <em>pbx"
@@ -3290,11 +2597,67 @@ msgstr ""
 #~ msgid "edit analog port"
 #~ msgstr "změnit položku"
 
+#, fuzzy
+#~ msgid "edit application"
+#~ msgstr "změnit účet"
+
+#~ msgid "edit conference room"
+#~ msgstr "změnit telekonferenci"
+
+#, fuzzy
+#~ msgid "edit gateway"
+#~ msgstr "změnit položku"
+
+#~ msgid "edit phone"
+#~ msgstr "změnit účet"
+
+#, fuzzy
+#~ msgid "edit port"
+#~ msgstr "změnit účet"
+
+#, fuzzy
+#~ msgid "edit port group"
+#~ msgstr "změnit účet"
+
+#~ msgid "edit provider"
+#~ msgstr "změnit operátora"
+
+#, fuzzy
+#~ msgid "enable voicemail to e-mail"
+#~ msgstr "jméno uživatele hlasové schránky"
+
+#~ msgid "extension number of voicemail box"
+#~ msgstr "číslo provolby hlasové schránky"
+
+#, fuzzy
+#~ msgid "extracting"
+#~ msgstr "Nastavení"
+
 #~ msgid "filter"
 #~ msgstr "filtr"
 
+#~ msgid "full date / time (i.e. 2025-11-20 (15:45))"
+#~ msgstr "datum / čas (např. 2025-11.20 (15:45))"
+
+#~ msgid "generate password"
+#~ msgstr "vygeneruj heslo"
+
+#~ msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+#~ msgstr "jestliže se graf nezobrazuje, nainstalujte si <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+
+#~ msgid "inactive"
+#~ msgstr "neaktivní"
+
 #~ msgid "install new package"
 #~ msgstr "instaluj nový balíček"
+
+#, fuzzy
+#~ msgid "installed sets"
+#~ msgstr "Instalované balíčky"
+
+#, fuzzy
+#~ msgid "installing"
+#~ msgstr "Instaluj"
 
 #~ msgid "item is disabled, click to enable"
 #~ msgstr "účet je neaktivní, kliknutím účet aktivujete"
@@ -3305,8 +2668,25 @@ msgstr ""
 #~ msgid "last app"
 #~ msgstr "poslední aplikace"
 
+#, fuzzy
+#~ msgid "milliseconds"
+#~ msgstr "vteřin"
+
 #~ msgid "name of the pbx host, without domain part"
 #~ msgstr "název hostitele bez doménové části"
+
+#~ msgid "name of voicemail recipient"
+#~ msgstr "jméno uživatele hlasové schránky"
+
+#~ msgid "never attempt NAT mode or RFC3581 support"
+#~ msgstr "nikdy nepouživej NAT nebo podporu RFC3581"
+
+#~ msgid "only use NAT mode according to RFC3581 (rport)"
+#~ msgstr "používej NAT jen dle RFC3581 (rport)"
+
+#, fuzzy
+#~ msgid "optional"
+#~ msgstr "Možnosti"
 
 #~ msgid "pbx events"
 #~ msgstr "události pbx"
@@ -3314,12 +2694,18 @@ msgstr ""
 #~ msgid "permanently delete an item"
 #~ msgstr "trvale odstranit položku"
 
+#~ msgid "print"
+#~ msgstr "tiskni"
+
 #, fuzzy
 #~ msgid "provider lines"
 #~ msgstr "Operátoři"
 
 #~ msgid "remove all entries from arp table"
 #~ msgstr "vymazat všechny záznamy z tabulky arp"
+
+#~ msgid "restart the PBX"
+#~ msgstr "restartovat PBX"
 
 #~ msgid "restore a backup archive"
 #~ msgstr "obnov balíček ze zálohy"
@@ -3329,6 +2715,20 @@ msgstr ""
 
 #~ msgid "sec."
 #~ msgstr "vteřin"
+
+#~ msgid "seconds"
+#~ msgstr "vteřin"
+
+#, fuzzy
+#~ msgid "send phone's Caller ID"
+#~ msgstr "Odeslat ID volajícího z telefonního přístroje"
+
+#, fuzzy
+#~ msgid "send phone's Caller ID + prefix below"
+#~ msgstr "Odeslat ID volajícího z telefonního přístroje"
+
+#~ msgid "show"
+#~ msgstr "zobrazit"
 
 #~ msgid "src"
 #~ msgstr "zdroj"
@@ -3340,6 +2740,9 @@ msgstr ""
 #~ msgid "state"
 #~ msgstr "Stav"
 
+#~ msgid "status unknown"
+#~ msgstr "neznámý stav"
+
 #, fuzzy
 #~ msgid "syslog sends UDP datagrams to port 514 on the specified remote syslog server. Be sure to set syslogd on the remote server to accept syslog messages from this system."
 #~ msgstr "Syslog odesílá UDP datagramy na port 514 specifikovaného syslog serveru. Ujistěte se, že syslogd je na vzdáleném servu nastaven tak, aby akceptoval zprávy od AskoziaPBX."
@@ -3347,8 +2750,20 @@ msgstr ""
 #~ msgid "system events"
 #~ msgstr "systémové události"
 
+#~ msgid "unreachable"
+#~ msgstr "nedostupné"
+
 #~ msgid "update package to newer version"
 #~ msgstr "aktualizuj balíček na novější verzi"
+
+#~ msgid "use this password"
+#~ msgstr "použij toto heslo"
+
+#~ msgid "view license"
+#~ msgstr "zobrazit licenci"
+
+#~ msgid "webGUI Configuration"
+#~ msgstr "webGUI konfigurace"
 
 #~ msgid "webGUI protocol"
 #~ msgstr "Protokol uživatelského rozhraní"

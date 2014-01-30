@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Askozia webGUI for Japanese Ver0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-04 16:29+0200\n"
+"POT-Creation-Date: 2014-01-30 17:39+0000\n"
 "PO-Revision-Date: 2010-07-30 05:16+0900\n"
 "Last-Translator: kenichi fukaumi <kenichifukaumi@gmail.com>\n"
 "Language-Team: Japanese Translation Team(KENICHI FUKAUMI) <info@kula.co.jp>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,98 +19,27 @@ msgstr ""
 "X-Poedit-Country: JAPAN\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#, php-format
-msgid "%.0f KB"
-msgstr "%.0f KB"
-
-#, php-format
-msgid "%.2f GB"
-msgstr "%.2f GB"
-
-#, php-format
-msgid "%.2f MB"
-msgstr "%.2f MB"
-
-#, php-format
-msgid "%d bytes"
-msgstr "%d bytes"
-
-msgid "25%"
-msgstr "25%"
-
-msgid "50%"
-msgstr "50%"
-
-msgid "75%"
-msgstr "75%"
-
-msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
-msgstr "<a href=\"notifications_email.php\">E-Mail 通知</a> 使用する前に正しい設定を行う必要があります"
-
-#, php-format
-msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
-msgstr "<strong>%s</strong><br>この意味は、これらは公式/もしくはサポート対象のバッケージではなく、予期しない動作やセキュリティー問題を引き起こすかも知れません。あなたが信頼しているパッケージのみインストールして下さい。そしてこれらが改ざんされていない事を確認してから行って下さい。<br><br>それでもあなたは、自己責任において、このイメージをインストールしますか？"
+msgid "<b>Direct access not allowed!<b><br>"
+msgstr ""
 
 msgid "A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "NTPサーバー名として使用出来る文字は、a-z, 0-9, '-' もしくは '.'のみです"
 
-msgid "A newer <strong>beta</strong> version of TeeBX is available!"
-msgstr ""
-
-msgid "A newer version of TeeBX is available!"
-msgstr ""
-
 msgid "A number must be specified to prepend to the incoming Caller ID number."
 msgstr ""
-
-msgid "A public IP address must be entered for this topology."
-msgstr "パブリック IP アドレスをこのトポロジに入力する必要があります"
-
-msgid "A public hostname must be entered for this topology."
-msgstr "パブリックホストネームをこのトポロジに入力する必要があります"
 
 msgid "A text must be specified to prepend to the incoming Caller ID name."
 msgstr ""
 
-msgid "A username must be specified."
-msgstr "ユーザー名は、必須です。"
-
-msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
-msgstr "DNSサーバーの有効なIPアドレスを指定する必要があります"
-
 msgid "A valid IP address must be specified."
 msgstr "有効なIPアドレスを指定する必要があります"
-
-msgid "A valid MAC address must be specified."
-msgstr "有効なMACアドレスを指定する必要があります"
 
 msgid "A valid TCP/IP port must be specified for the webGUI port."
 msgstr "webGUIポートとして、有効なTCP/IPポートを指定して下さい。"
 
-msgid "A valid attended transfer timeout must be specified."
-msgstr "有効な取り次ぎ転送のタイムアウト時間を指定する必要があります"
-
-msgid "A valid e-mail address must be specified for the \"from address\"."
-msgstr "\"from address\"に対して、有効なe-mailアドレスを指定する必要があります"
-
-msgid "A valid e-mail address must be specified."
-msgstr "有効なe-mailアドレスを指定する必要があります"
-
-msgid "A valid extension digit timeout must be specified."
-msgstr "有効な内線番号入力のタイムアウト時間を指定する必要があります"
-
-msgid "A valid extension must be entered."
-msgstr "有効な内線番号を入力する必要があります"
-
-msgid "A valid gateway must be specified."
-msgstr "有効なゲートウェイを指定する必要があります"
-
 #, fuzzy
 msgid "A valid incoming Caller ID override must be specified (e.g. John Smith <12345>)."
 msgstr "着信Claller IDを上書きする文字列を指定する必要があります"
-
-msgid "A valid key timeout must be specified."
-msgstr "有効なキー入力のタイムアウト時間を指定する必要があります"
 
 #, fuzzy
 msgid "A valid outgoing Caller ID must be specified (e.g. John Smith <12345>)."
@@ -119,62 +49,14 @@ msgstr "有効なCaller IDを指定する必要があります"
 msgid "A valid outgoing Caller ID number prefix must be specified."
 msgstr "有効な国プレフィックスを指定する必要があります"
 
-msgid "A valid park time must be specified."
-msgstr "有効なパーク保留時間を指定する必要があります"
-
-msgid "A valid parking extension must be specified."
-msgstr "有効なパーク保留の内線番号を指定する必要があります"
-
-msgid "A valid parking start position must be specified."
-msgstr "有効なパーク保留の開始位置を指定する必要があります"
-
-msgid "A valid parking stop position must be specified."
-msgstr "有効なパーク保留の終了位置を指定する必要があります"
-
 msgid "A valid port must be specified."
 msgstr "有効なポートを指定する必要があります"
-
-msgid "A valid public IP address must be entered for this topology."
-msgstr "有効なパブリックIPアドレスを入力する必要があります"
-
-msgid "A valid public hostname must be entered for this topology."
-msgstr "有効なパブリックホストネームをこのトポロジに入力する必要があります"
-
-msgid "A valid subnet bit count must be specified."
-msgstr "有効なサブネットのビット数を指定する必要があります"
-
-msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
-msgstr "\"Default Registration Expiration\"として、全体の秒数を入力する必要があります"
-
-msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
-msgstr "\"Maximum Registration Expiration\"として、全体の秒数を入力する必要があります"
-
-msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
-msgstr "\"Minimum Registration Expiration\"として、全体の秒数を入力する必要があります"
-
-msgid "Access PIN"
-msgstr "入室用パスワード"
 
 msgid "Accounts"
 msgstr "設定名"
 
-msgid "Activate custom Music-On-Hold"
+msgid "Address"
 msgstr ""
-
-msgid "Activate custom Voicemail greeting"
-msgstr ""
-
-msgid "Active Channels"
-msgstr "有効なチャンネル"
-
-msgid "Active Channels / Calls"
-msgstr "有効なチャンネル/呼"
-
-msgid "Active Disks"
-msgstr ""
-
-msgid "Adding"
-msgstr "追加"
 
 msgid "Adelaide"
 msgstr "Adelaide"
@@ -182,11 +64,8 @@ msgstr "Adelaide"
 msgid "Advanced"
 msgstr "拡張"
 
-msgid "Advanced Options"
-msgstr "拡張設定"
-
-msgid "Advanced Settings"
-msgstr "拡張設定"
+msgid "After you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+msgstr ""
 
 msgid "Alaska Time"
 msgstr "Alaska Time"
@@ -194,11 +73,14 @@ msgstr "Alaska Time"
 msgid "All Provider Ports"
 msgstr "全てのプロバイダーポート"
 
-msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
-msgstr "すべてのグループのメンバーが同時に呼ばれます。<strong>誰も呼び出しに答えられないと、一番目のメンバーのヴォイスメールアカウントが使用されます"
-
 msgid "All information on this disk will be lost after clicking \"Format\"!"
 msgstr "\"フォーマット\"! をクリックするとこのディスク上にある全ての情報が失われます"
+
+msgid "All rights reserved"
+msgstr ""
+
+msgid "All rights reserved under the terms of AGPLv3"
+msgstr ""
 
 msgid "Amsterdam, Netherlands"
 msgstr "Amsterdam, Netherlands"
@@ -212,29 +94,11 @@ msgstr "無効なポートを入力しています"
 msgid "Analog"
 msgstr "アナログ"
 
-msgid "Analog Faxes"
-msgstr ""
-
-msgid "Analog Phones"
-msgstr "アナログ電話機"
-
 msgid "Appended prefixes may only contain digits, '*' and '#'."
 msgstr "追加したプリフィックスは恐らく数字,'*'そして'#'しか含まれていません"
 
-msgid "Application"
-msgstr "アプリケーション"
-
-msgid "Application Logic"
-msgstr "アプリケーションのロジック"
-
 msgid "Applications"
 msgstr "アプリケーション"
-
-msgid "Are you sure you want to proceed?"
-msgstr "本当に初期化しますか？"
-
-msgid "Are you sure you want to reboot the system?"
-msgstr "本当にAskoziaPBXを再起動しますか？"
 
 msgid "Argentina"
 msgstr "Argentina"
@@ -245,26 +109,17 @@ msgstr "Asia"
 msgid "Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX."
 msgstr ""
 
+msgid "Asterisk pbx log entries"
+msgstr ""
+
 msgid "Athens, Greece"
 msgstr "Athens, Greece"
 
 msgid "Atlantic Time"
 msgstr "Atlantic Time"
 
-msgid "Attended"
-msgstr "取り次ぎ転送"
-
-msgid "Attended Transfer Answer"
-msgstr "取り次ぎ転送への応答"
-
 msgid "Auckland"
 msgstr "Auckland"
-
-msgid "Audio"
-msgstr "オーディオ"
-
-msgid "Audio Prompts"
-msgstr "音声"
 
 msgid "Audio prompts will be played back in the selected language for this account."
 msgstr "このアカウントで使用する音声ファイルの言語を選択して下さい"
@@ -275,21 +130,6 @@ msgstr "Australia"
 msgid "Austria"
 msgstr "Austria"
 
-msgid "Authentication Method"
-msgstr "認証方式"
-
-msgid "Authentication Scheme"
-msgstr "認証方式"
-
-msgid "Authorization User"
-msgstr "Authorization User"
-
-msgid "AutoScale"
-msgstr "自動スケール"
-
-msgid "Backup configuration"
-msgstr "設定ファイルのバックアップ"
-
 msgid "Backup/Restore"
 msgstr "バックアップ/復元"
 
@@ -299,35 +139,23 @@ msgstr "Bahrain"
 msgid "Barcelona, Spain"
 msgstr "Barcelona, Spain"
 
-msgid "Basic"
-msgstr "基本"
+msgid "Base Settings"
+msgstr ""
 
 msgid "Belgium"
 msgstr "Belgium"
 
-msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
-msgstr "下記は、現在定義されている電話と、これらを呼び出す為の基本的なDial()コマンドのリストです。このコマンドには、多くの追加オプションが用意されています。ぜひアプリケーションタブにあるリファレンスドキュメントをお読み下さい"
+msgid "Bell202, USA"
+msgstr ""
 
 msgid "Berlin, Germany"
 msgstr "Berlin, Germany"
-
-msgid "Binding Port"
-msgstr "接続ポート"
-
-msgid "Blind"
-msgstr "強制転送"
-
-msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
-msgstr "強制転送先をこのコールパーキング用内線番号に指定すると、転送した後に、何番にコールパーキングされているかを、AskoziaPBXがお知らせします(初期値 700)"
 
 msgid "Block Providers"
 msgstr "プロックするプロバイダー"
 
 msgid "Block access to the providers selected above."
 msgstr "上で選択されたプロバイダーへの接続をブロックする"
-
-msgid "Body"
-msgstr "本文"
 
 msgid "Brackets are not needed for less than 2 characters."
 msgstr "2文字以下の場合、括弧は必要有りません"
@@ -347,6 +175,9 @@ msgstr "Brussels, Belgium"
 msgid "Budapest, Hungary"
 msgstr "Budapest, Hungary"
 
+msgid "Buffer size"
+msgstr ""
+
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
@@ -359,44 +190,23 @@ msgstr "Bulgarian (formal)"
 msgid "CPU Load"
 msgstr "CPU負荷状況"
 
-msgid "Call Groups"
-msgstr "グループ"
+msgid "Call Report"
+msgstr ""
 
-msgid "Call Notifications & Voicemail"
-msgstr "コール通知とヴォイスメール"
+msgid "Call detail records"
+msgstr ""
 
-msgid "Call Parking"
-msgstr "コールパーキング"
-
-msgid "Call Routing"
-msgstr "コールルーティング"
-
-msgid "Caller ID"
-msgstr "発信者ID"
-
-msgid "Caller ID / Name"
-msgstr "Caller ID / Name"
-
-msgid "Caller ID Options"
-msgstr "発信者IDオプション"
+msgid "Caller Name"
+msgstr ""
 
 msgid "Calls"
 msgstr "呼/コール"
-
-msgid "Calls Processed"
-msgstr "呼が完了しました"
 
 msgid "Canada"
 msgstr "Canada"
 
 msgid "Canberra"
 msgstr "Canberra"
-
-msgid "Cannot get CPU load"
-msgstr "CPUの負荷状況を取得出来ません"
-
-msgid "Card"
-msgstr "カード"
 
 msgid "Central America"
 msgstr "Central America"
@@ -407,15 +217,6 @@ msgstr "Central Time"
 msgid "Central and South America"
 msgstr "Central and South America"
 
-msgid "Changes to this option will take effect after a reboot."
-msgstr "この変更は、再起動後に有効となります"
-
-msgid "Channel"
-msgstr "チャンネル"
-
-msgid "Channels"
-msgstr "チャンネル"
-
 msgid "Check automatically for new updates."
 msgstr ""
 
@@ -425,84 +226,41 @@ msgstr "Chile"
 msgid "China"
 msgstr "China"
 
-#, php-format
-msgid "Choose the new firmware image file (%s-*.img) to be installed."
-msgstr "インストールする新しいファームウェアのイメージファイル (pbx-%s-*.img) を選択して下さい"
+msgid "Choose where log application writes the log messages it receives."
+msgstr ""
 
-msgid "Clear"
-msgstr "消去"
+msgid "Click here to"
+msgstr ""
 
-msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
-msgstr "&quot;ファームウェアのアップグレード&quot; をクリックし、アップグレードを開始して下さい"
+msgid "Click here to configure this disk"
+msgstr ""
 
-msgid "Click this button to download the system configuration in XML format."
-msgstr "このボタンをクリックして、AskoziaPBXの設定ファイル(XML形式)をダウンロードして下さい"
-
-msgid "Codecs"
-msgstr "コーデック"
-
-msgid "Collecting initial data, please wait..."
-msgstr "初期データの収集を行っています。暫くお待ち下さい"
+msgid "Collecting initial data, please wait"
+msgstr ""
 
 msgid "Colombia"
 msgstr "Colombia"
 
-msgid "Command"
-msgstr "コマンド"
-
-msgid "Command:"
-msgstr "コマンド:"
-
-msgid "Completely override the generated registration string with a manually defined one."
-msgstr "手動で定義したレジストレーションコードで、完全に上書きされます"
-
-msgid "Conference"
-msgstr "電話会議"
-
-msgid "Conference Rooms"
-msgstr "電話会議室"
-
-msgid "Conference number already exists."
-msgstr "会議室番号は、既に存在しています"
-
-msgid "Conference number matches an existing extension."
-msgstr "会議室番号が既存の内線番号と一致します"
-
-msgid "Conference pins must be numeric."
-msgstr "電話会議室のピンコードは、数字である必要があります"
-
-msgid "Conference room numbers must be numeric."
-msgstr "電話会議室の番号は数字である必要があります"
-
-msgid "Conferences"
-msgstr "電話会議"
+msgid "Comment"
+msgstr ""
 
 msgid "Conferencing"
 msgstr "電話会議"
 
-msgid "Connect"
-msgstr "接続"
+msgid "Configured storage"
+msgstr ""
 
-msgid "Connection Initialization"
-msgstr "接続の初期化"
-
-msgid "Connectivity"
-msgstr "接続性"
-
-msgid "Console menu"
-msgstr "コンソールメニュー"
+msgid "Coordinated Universal Time (UTC)"
+msgstr ""
 
 msgid "Copenhagen, Denmark"
 msgstr "Copenhagen, Denmark"
 
+msgid "Creating new partition"
+msgstr ""
+
 msgid "Croatia"
 msgstr "Croatia"
-
-msgid "Custom Applications"
-msgstr "カスタムアプリケーション"
-
-msgid "Custom Music-on-Hold"
-msgstr ""
 
 msgid "Cyprus"
 msgstr "Cyprus"
@@ -519,14 +277,8 @@ msgstr "Czech Republic"
 msgid "DNS Servers"
 msgstr "DNSサーバー"
 
-msgid "DNS Service Records"
-msgstr "DNSサービスレコード"
-
-msgid "DO NOT abort the firmware upgrade once it has started."
-msgstr "アップグレードが完了するまで、絶対に中断したりブラウザを閉じたりしないで下さい"
-
-msgid "DTMF Mode"
-msgstr "DTMFモード"
+msgid "DTMF, as used in Denmark, Sweden and Netherlands"
+msgstr ""
 
 msgid "Danish"
 msgstr "Danish"
@@ -537,114 +289,38 @@ msgstr "Danish (formal)"
 msgid "Darwin"
 msgstr "Darwin"
 
-msgid "Default values are 60, 3600 and 120 respectively."
-msgstr "初期値は、60,3600,そして120が推奨値です"
-
-#, php-format
-msgid "Defaults to the e-mail address used in the %s setup."
-msgstr "%s 設定で使用したEメールアドレスを標準として使用します"
+msgid "Default"
+msgstr ""
 
 msgid "Denmark"
 msgstr "Denmark"
 
-msgid "Deny Network"
-msgstr "拒否するネットワーク"
-
 msgid "Description"
 msgstr "説明"
-
-msgid "Descriptive name for this provider."
-msgstr "このアカウントの名前"
 
 msgid "Device"
 msgstr "デバイス"
 
-msgid "Dialing Pattern(s)"
-msgstr "ダイヤルパターン"
+msgid "Device name"
+msgstr ""
 
 msgid "Dialplan"
 msgstr "ダイヤルプラン"
 
-msgid "Dialplan Element Library"
-msgstr "ダイヤルプラン要素のライブラリー"
-
-msgid "Dialstring"
-msgstr "電話番号列"
-
-msgid "Disable DNS SRV lookups."
-msgstr "DNS SRV lookupsを無効にする。"
-
-msgid "Disable console menu"
-msgstr "コンソールメニュー無効"
-
-msgid "Disable overrides"
-msgstr "上書き無効"
-
-msgid "Disabled"
-msgstr "無効"
+msgid "Disk"
+msgstr ""
 
 msgid "Disk Device"
 msgstr "Disk Device"
 
-msgid "Do not register with this provider."
-msgstr "この電話会社には登録しません"
+msgid "Disk Report"
+msgstr ""
 
-msgid "Do you really want to delete this application mapping?"
-msgstr "本当に、このアプリケーションの関連付けを削除しますか？"
+msgid "Disk unique identifier"
+msgstr ""
 
-msgid "Do you really want to delete this application?"
-msgstr "本当に、このアプリケーションを削除しますか？"
-
-msgid "Do you really want to delete this call group?"
-msgstr "本当にこのグループを削除しますか？"
-
-msgid "Do you really want to delete this conference room?"
-msgstr "本当に、この電話会議室を削除しますか？"
-
-msgid "Do you really want to delete this fax?"
-msgstr "本当にこのファックスを削除しますか？"
-
-msgid "Do you really want to delete this manager user?"
-msgstr "本当に、この管理者ユーザーを削除しますか？"
-
-msgid "Do you really want to delete this phone?"
-msgstr "本当にこの電話機を削除しますか？"
-
-msgid "Do you really want to delete this port group's settings?"
-msgstr "本当に、このポートグループの設定を、削除しても宜しいですか？"
-
-msgid "Do you really want to delete this provider?"
-msgstr "本当にこの接続回線を無効にしますか？"
-
-msgid "Do you really want to disable this fax?"
-msgstr "本当に、このファックスを無効にしますか？"
-
-msgid "Do you really want to disable this phone?"
-msgstr "本当にこの電話機を無効にしますか？"
-
-msgid "Do you really want to disable this provider?"
-msgstr "本当に接続回線を無効にしますか？"
-
-msgid "Do you really want to forget this disk?"
-msgstr "本当にこのディスクを削除しますか？"
-
-msgid "Do you really want to forget this gateway's settings?"
-msgstr "本当に、このゲートウェイの設定を、忘れても宜しいですか？"
-
-msgid "Do you really want to forget this port\\'s settings?"
-msgstr "本当に、このポート\\の設定を、忘れても宜しいですか？"
-
-msgid "Do you really want to kick this member?"
-msgstr "本当に、このメンバーを会議から外して良いですか？"
-
-msgid "Download"
-msgstr "ダウンロード"
-
-msgid "Download configuration"
-msgstr "設定ファイルのダウンロード"
-
-msgid "Download:"
-msgstr "ダウンロード:"
+msgid "Dns"
+msgstr ""
 
 msgid "Dublin, Ireland"
 msgstr "Dublin, Ireland"
@@ -655,38 +331,14 @@ msgstr "Dutch"
 msgid "Dutch (formal)"
 msgstr "Dutch (formal)"
 
+msgid "Dynamic DNS"
+msgstr ""
+
 msgid "Dynamic DNS Client"
 msgstr "Dynamic DNS Client"
 
-msgid "E-Mail"
-msgstr "E-Mail"
-
 msgid "E-Mail notifications enabled but the e-mail address is invalid or missing."
 msgstr "Eメール通知は有効に設定されていますが、Eメールアドレスが正しくないか、間違えています"
-
-msgid "E-mail Address"
-msgstr "E-mailアドレス"
-
-msgid "E-mail Me"
-msgstr "私にメールを送る"
-
-msgid "E-mail has been sent successfully."
-msgstr "Eメールの送信が、完了しました"
-
-msgid "E-mail notifications for new voicemail will be delivered in this language."
-msgstr "新しいボイスメールのお知らせをEメールで送信する際の言語を指定して下さい"
-
-msgid "E-mail was not sent, check your settings."
-msgstr "Eメールは、送信されませんでした。あなたの設定をご確認下さい"
-
-msgid "ERR Could not install configuration.\n"
-msgstr "ERR 設定をインストール出来ませんでした\n"
-
-msgid "ERR Could not save configuration.\n"
-msgstr "ERR 設定を保存出来ませんでした\n"
-
-msgid "ERR Invalid configuration received.\n"
-msgstr "ERR 無効な設定を受信しました\n"
 
 #, php-format
 msgid "ERROR: the changes could not be applied (error code %s)."
@@ -694,9 +346,6 @@ msgstr "エラー: この変更は適用されませんでした(エラーコー
 
 msgid "Eastern Time"
 msgstr "Eastern Time"
-
-msgid "Echo Cancellation"
-msgstr "エコーキャンセラー"
 
 msgid "Echos audio and video back to the caller as soon as it is received. Used to test connection delay."
 msgstr "オーディオ及びビデオを受信すると、すぐさま発信者にエコーバック(掛け直し)ます。これは、遅延のテストに用いられます"
@@ -707,64 +356,8 @@ msgstr "Ecuador"
 msgid "Edit"
 msgstr "編集"
 
-#, php-format
-msgid "Edit Analog %s Port"
-msgstr "アナログ %s ポートの編集"
-
-msgid "Edit Analog Fax"
-msgstr ""
-
-msgid "Edit Analog Phone"
-msgstr "アナログ電話機の編集"
-
-msgid "Edit Analog Provider"
-msgstr "アナログプロバイダーの編集"
-
-msgid "Edit Application"
-msgstr "アプリケーションの編集"
-
-msgid "Edit External Phone"
-msgstr "外部にある電話機の編集"
-
-msgid "Edit IAX Phone"
-msgstr "IAX電話機の編集"
-
-msgid "Edit IAX Provider"
-msgstr "IAXプロバイダーの編集"
-
-#, php-format
-msgid "Edit ISDN %s Port"
-msgstr "ISDN %s ポートの編集"
-
-msgid "Edit ISDN Phone"
-msgstr "ISDN電話機の編集"
-
-msgid "Edit ISDN Provider"
-msgstr "ISDNプロバイダーのの編集"
-
-msgid "Edit Provider Group"
-msgstr "プロバイダーグループの編集"
-
-msgid "Edit Redfone Gateway"
-msgstr "Redfoneゲートウェイを編集"
-
-msgid "Edit Room"
-msgstr "会議室の編集"
-
-msgid "Edit SIP Phone"
-msgstr "SIP電話機の編集"
-
-msgid "Edit SIP Provider"
-msgstr "SIPプロバイダーの編集"
-
-msgid "Edit Skinny Phone"
-msgstr "Skinny電話機の編集"
-
 msgid "Edit Storage Disk"
 msgstr "ストレージディスクの編集"
-
-msgid "Edit User"
-msgstr "ユーザー情報の編集"
 
 msgid "Egypt"
 msgstr "Egypt"
@@ -772,20 +365,8 @@ msgstr "Egypt"
 msgid "El Salvador"
 msgstr "El Salvador"
 
-msgid "Enable"
-msgstr "有効"
-
-msgid "Enable Jitterbuffer on IAX connections terminated by the system."
-msgstr "AskoziaPBXによるIAX接続上で、ジッターバッファを有効にする"
-
-msgid "Enabled"
-msgstr "有効"
-
-msgid "Encoding"
-msgstr "エンコーディング"
-
-msgid "Encryption Method"
-msgstr "暗号化方式"
+msgid "Empty or missing partition label."
+msgstr ""
 
 msgid "English"
 msgstr "English"
@@ -802,82 +383,14 @@ msgstr "English (formal)"
 msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP)."
 msgstr ""
 
-msgid "Enter a descriptive name for this disk."
-msgstr "このディスクの判り易い名前を入力して下さい"
-
-msgid "Enter a descriptive name for this gateway."
-msgstr "このゲートウェイに判り易い名前を入力して下さい"
-
-msgid "Enter a descriptive name for this port."
-msgstr "このポートに判り易い名前を入力して下さい"
-
-msgid "Enter a descriptive name for this span."
-msgstr "このSpanに判り易い名前を入力して下さい"
-
-msgid ""
-"Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
-" <ul>\n"
-" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
-" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
-" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - matches one or more characters</li>\n"
-" \t<li><strong>!</strong> - matches zero or more characters</li>\n"
-" </ul>\n"
+msgid "Enter a descriptive comment about this partition."
 msgstr ""
-"パターンもしくは電話番号の入力、また宛先の内線番号の選択。複数の電話機を鳴らす場合には、同じパターンを用いて、シンプルに定義します。電話番号を入力した場合には、応答しなかった呼に\"external\" ナンバーとして使用されます。何も入力しなかた場合、全ての呼は直接宛先内線番号を呼び出します<br>\n"
-" <ul>\n"
-" \t<li><strong>+</strong> - 頭に番号を追加します(例:\"1+555\"と設定すると、\"555\"をダイヤルした時にマッチし、\"1555\"でこの電話会社に発信されます)</li>\n"
-" \t<li><strong>|</strong> - 頭から番号を削除します(例:\"1|555\"と設定すると、\"1555\"をダイヤルした時にマッチし、\"555\"でこの電話会社に発信されます)</li>\n"
-" \t<li><strong>X</strong> - 0-9のいずれかの数字とマッチ</li>\n"
-" \t<li><strong>Z</strong> - 1-9のいずれかの数字とマッチ</li>\n"
-" \t<li><strong>N</strong> - 2-9のいずれかの数字とマッチ</li>\n"
-" \t<li><strong>[13-5]</strong> - 数字または範囲を指定された数字とマッチ(この例では1と3から5のいずれかとマッチ)</li>\n"
-" \t<li><strong>.</strong> - 一つもしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
-" \t<li><strong>!</strong> - 0もしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
-" </ul>\n"
 
 msgid "Enter a server to synchronize with."
 msgstr "同期させる為のサーバーを入力して下さい"
 
-msgid ""
-"Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
-" 2,Echo()\n"
-" 3,Hangup()\n"
-" </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
+msgid "Enter the label for this disk partition."
 msgstr ""
-"アプリケーションロジックの入力,1行1コマンド:<br> <pre> 1,Answer()\n"
-" 2,Echo()\n"
-" 3,Hangup()\n"
-" </pre> <p>AskoziaPBXのアプリケーションプログラミングには、Asteriskダイヤルプランの知識が必要です。努力すればこの入力を検証する事ができますが、欠陥の有るアプリケーションロジックによって、AskoziaPBXが故障してしまう可能性は残ります。アプリケーション、機能、そして電話機のリファエンスが、<strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>にあります</p>"
-
-msgid ""
-"Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
-" <ul>\n"
-" \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
-" \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
-" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
-" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
-" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
-" \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
-" </ul>\n"
-msgstr ""
-"パターンの入力,1行につき1つ,この電話会社のルーティングを定義します。\"X!\"を設定すると、発信は全てこの電話会社を使用します。\"9\"を押した時だけ、この電話会社を使って発信したい時には、\"9|.\"を設定して下さい。もし何も入力しなかった場合、着信のみ許可します<br>\n"
-" <ul>\n"
-" \t<li><strong>+</strong> - 頭に番号を追加します(例:\"1+555\"と設定すると、\"555\"をダイヤルした時にマッチし、\"1555\"でこの電話会社に発信されます)</li>\n"
-" \t<li><strong>|</strong> - 頭から番号を削除します(例:\"1|555\"と設定すると、\"1555\"をダイヤルした時にマッチし、\"555\"でこの電話会社に発信されます)</li>\n"
-" \t<li><strong>X</strong> - 0-9のいずれかの数字とマッチ</li>\n"
-" \t<li><strong>Z</strong> - 1-9のいずれかの数字とマッチ</li>\n"
-" \t<li><strong>N</strong> - 2-9のいずれかの数字とマッチ</li>\n"
-" \t<li><strong>[13-5]</strong> - 数字または範囲を指定された数字とマッチ(この例では1と3から5のいずれかとマッチ)</li>\n"
-" \t<li><strong>.</strong> - 一つもしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
-" \t<li><strong>!</strong> - 0もしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
-" </ul>\n"
-
-msgid "Enter the full path where this device should be mounted."
-msgstr "このデバイスをどこにマウントしなければならないかを、フルパスで入力して下さい"
 
 msgid "Estonia"
 msgstr "Estonia"
@@ -885,32 +398,14 @@ msgstr "Estonia"
 msgid "Europe"
 msgstr "Europe"
 
-msgid "Execute"
-msgstr "実行"
-
-msgid "Extension"
-msgstr "内線"
-
-msgid "Extension Digit"
-msgstr "内線番号の入力"
-
-msgid "External"
-msgstr "外部"
-
-msgid "External Phones"
-msgstr "外部の電話"
-
 msgid "Factory Defaults"
 msgstr "工場出荷時に戻す"
-
-msgid "Failover Provider"
-msgstr "非常用プロバイダー(回線)"
 
 msgid "Faxes"
 msgstr "ファックス"
 
-msgid "Filename"
-msgstr "ファイル名"
+msgid "Feature codes"
+msgstr ""
 
 msgid "Finland"
 msgstr "Finland"
@@ -924,35 +419,23 @@ msgstr "Finnish (formal)"
 msgid "Firmware"
 msgstr "ファームウェア"
 
-msgid "Firmware Version"
-msgstr "ファームウェアバージョン"
-
-msgid "Firmware image file:"
-msgstr "ファームウェアのイメージファイル:"
-
-msgid "Firmware uploading is not supported on this platform."
-msgstr "このプラットフォームでは、ファームウェアのアップロードはサポートされていません"
-
-msgid "Force"
-msgstr "効力"
-
 msgid "Format"
 msgstr "フォーマット"
 
 msgid "Format & Initialize"
 msgstr "フォーマット、及び初期化"
 
-msgid "Formatting failed! (returned "
-msgstr "フォーマット失敗(戻る"
-
-msgid "Formatting successful!"
-msgstr "フォーマット完了"
-
-msgid "Framing"
-msgstr "フレーム"
+msgid "Formatting partition"
+msgstr ""
 
 msgid "France"
 msgstr "France"
+
+msgid "Free"
+msgstr ""
+
+msgid "Free disks"
+msgstr ""
 
 msgid "French"
 msgstr "French"
@@ -963,32 +446,11 @@ msgstr "French (Canada)"
 msgid "French (formal)"
 msgstr "French (formal)"
 
-msgid "From Address"
-msgstr "送信者アドレス"
-
-msgid "From Domain"
-msgstr "From Domain"
-
-msgid "From User"
-msgstr "From User"
-
-msgid "Functions"
-msgstr "機能"
-
 msgid "GUI Options"
 msgstr "GUIオプション"
 
 msgid "Gateway"
 msgstr "ゲートウェイ"
-
-msgid "Gateway Name"
-msgstr "ゲートウェイ名"
-
-msgid "Gateways"
-msgstr "ゲートウェイ"
-
-msgid "General"
-msgstr "全般"
 
 msgid "General Settings"
 msgstr "全般設定"
@@ -1011,9 +473,6 @@ msgstr "German (formal)"
 msgid "Germany"
 msgstr "Germany"
 
-msgid "Graph shows last"
-msgstr "Graph shows last"
-
 msgid "Greece"
 msgstr "Greece"
 
@@ -1023,41 +482,20 @@ msgstr "Greek"
 msgid "Greek (formal)"
 msgstr "Greek (formal)"
 
-msgid "Ground Start"
-msgstr "グランドスタート"
-
 msgid "Group"
 msgstr "グループ"
 
-msgid "Group Members"
-msgstr "グループメンバー"
-
-msgid "Group name"
-msgstr "グループ名"
+msgid "Groups"
+msgstr ""
 
 msgid "Guam"
 msgstr "Guam"
-
-msgid "Hardware Port"
-msgstr "ハードウェアポート"
 
 msgid "Hawaii Time"
 msgstr "Hawaii Time"
 
 msgid "Helsinki, Finland"
 msgstr "Helsinki, Finland"
-
-msgid "Hide Analog related options"
-msgstr "アナログ関連のオプションを隠す"
-
-msgid "Hide IAX related options"
-msgstr "IAX関連のオプションを隠す"
-
-msgid "Hide ISDN related options"
-msgstr "ISDN関連のオプションを隠す"
-
-msgid "Hide SIP related options"
-msgstr "SIP関連のオプションを隠す"
 
 msgid "Hobart"
 msgstr "Hobart"
@@ -1071,17 +509,14 @@ msgstr "ホスト"
 msgid "Hostname"
 msgstr "ホスト名(この機器の名前)"
 
+msgid "Hostname of that system."
+msgstr ""
+
 msgid "Hostname of the PBX."
 msgstr "PBXのホスト名"
 
 msgid "Hostname,Domain,Username"
 msgstr "ホスト名,ドメイン,ユーザー名"
-
-msgid "Hot Keys"
-msgstr "操作ボタン"
-
-msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
-msgstr "家庭用のISDN回線は、通常Point-to-Multipointで、オフィス用のISDN回線は、よりPoint-to-Pointに近いです"
 
 msgid "Hungary"
 msgstr "Hungary"
@@ -1092,36 +527,23 @@ msgstr "判ってます！知らせてくれて有り難う！！"
 msgid "IAX"
 msgstr "IAX"
 
-msgid "IAX Phones"
-msgstr "IAX電話機"
-
-msgid "IP"
-msgstr "cSIP"
-
 msgid "IP Address"
 msgstr "IPアドレス"
 
 msgid "IP Addresses"
 msgstr "IPアドレス"
 
+msgid "IP address"
+msgstr "IPアドレス"
+
 msgid "ISDN"
 msgstr "ISDN"
-
-msgid "ISDN Phones"
-msgstr "ISDN電話機"
 
 msgid "Iceland"
 msgstr "Iceland"
 
-msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
-msgstr "もしこのプロバイダー宛に発信したコールが失敗したら、上に選択されている非常用ルートでの接続を試みます。その場合、ダイヤルパターンが一致している必要が有ります"
-
-msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
-msgstr "もしこのポートにコールが着信した場合に、音量がとても騒がしいか、とても小さい場合、ここで調整して下さい。受信及び送信のレベル(単位はデシベル)を個別に調節する事が出来ます"
-
-#, fuzzy, php-format
-msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
-msgstr "&quot;はい&quot;をクリックするとAskoziaPBXは直ぐに再起動され、工場出荷時の状態に戻ります。これにより、全ての設定は初期化されますので、再起動後はIPアドレス'192.168.1.2'となり、webGUI用のパスワードは'%s'となります"
+msgid "If you want to change the password for accessing the web UI, enter it here twice."
+msgstr ""
 
 msgid "If you want to change the password for accessing the webGUI, enter it here twice."
 msgstr "webGUI用のパスワードを変更したい場合には、こちらに確認を含め２回入力して下さい"
@@ -1129,68 +551,44 @@ msgstr "webGUI用のパスワードを変更したい場合には、こちらに
 msgid "If you want to change the username for accessing the webGUI, enter it here."
 msgstr "webGUI用のユーザー名を変更したい場合には、こちらに新しいユーザー名を入力して下さい"
 
-msgid "Image upload failed (out of memory?)"
-msgstr "イメージのアップロードに失敗しました(メモリー不足かも知れません)"
-
-msgid "In"
-msgstr "In"
-
-msgid "Inactive"
-msgstr "無効"
-
-msgid "Incoming Extensions"
-msgstr "内線番号(着信用)"
-
-msgid "Incoming Faxes"
-msgstr ""
-
-msgid "Incoming Modification"
-msgstr "着信用した呼の発信者番号の変更"
-
 msgid "India"
 msgstr "India"
+
+msgid "India polarity reversal dtmf cid variant"
+msgstr ""
 
 msgid "Indication Tones"
 msgstr "トーン種別"
 
-msgid "Individual Ports"
-msgstr "個々のポート"
-
 msgid "Indonesia"
 msgstr "Indonesia"
-
-msgid "Initial connection failed!"
-msgstr "初期接続失敗！"
-
-msgid "Initial connection successful!"
-msgstr "初期接続完了！"
 
 msgid "Interface"
 msgstr "接続インターフェース"
 
-msgid "Internal Phones"
-msgstr "内部の電話"
-
-msgid "Internal extension used to reach this application."
-msgstr "このアプリケーションに接続させる為に割り当てる内線番号"
-
-msgid "Internal extension used to reach this call group."
-msgstr "このコールグループに到達する為に、内部エクステンションを使用する"
-
-msgid "International Prefix"
-msgstr "国際識別番号"
-
 msgid "Invalid extension number. Use only numerals."
 msgstr "無効な内線番号です。数字のみ利用可能です"
+
+msgid "Invalid or missing disk informations."
+msgstr ""
+
+msgid "Invalid or missing mode."
+msgstr ""
+
+msgid "Invalid or missing task."
+msgstr ""
+
+msgid "Invalid partition number."
+msgstr ""
 
 msgid "Invalid public access alias."
 msgstr "無効なパブリックアクセスエイリアスです"
 
+msgid "Invalid token, access not allowed!"
+msgstr ""
+
 msgid "Ireland"
 msgstr "Ireland"
-
-msgid "Is there a NATing device between the PBX and this account?"
-msgstr "このアカウントと、PBXとの間にNATが存在していますか？"
 
 msgid "Israel"
 msgstr "Israel"
@@ -1228,23 +626,17 @@ msgstr "日本語"
 msgid "Japanese (formal)"
 msgstr "日本語(公式)"
 
-msgid "Jitterbuffer"
-msgstr "ジッタバッファー"
-
 msgid "Jordan"
 msgstr "Jordan"
 
 msgid "Kazakhstan"
 msgstr "Kazakhstan"
 
-msgid "Keep advanced options in navigation expanded"
-msgstr "展開されたナビゲーションで、詳細オプションを維持します"
-
 msgid "Kernel"
 msgstr ""
 
-msgid "Kewl Start"
-msgstr "クールスタート"
+msgid "Kernel log entries"
+msgstr ""
 
 msgid "Kiev, Ukraine"
 msgstr "Kiev, Ukraine"
@@ -1252,14 +644,14 @@ msgstr "Kiev, Ukraine"
 msgid "Kuwait"
 msgstr "Kuwait"
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr "言語"
 
 msgid "Last Config Change"
 msgstr "前回の設定変更"
-
-msgid "Last upload"
-msgstr ""
 
 msgid "Latvia"
 msgstr "Latvia"
@@ -1267,30 +659,23 @@ msgstr "Latvia"
 msgid "Lebanon"
 msgstr "Lebanon"
 
+msgid "License"
+msgstr ""
+
 msgid "Lisbon, Portugal"
 msgstr "Lisbon, Portugal"
 
 msgid "Lithuania"
 msgstr "Lithuania"
 
-msgid "Loaded"
-msgstr "読み込み"
+msgid "Local log"
+msgstr ""
 
-msgid "Local Area Network"
-msgstr "LAN側ネットワーク"
+msgid "Local logs will still be updated regardless of this setting."
+msgstr ""
 
-msgid "Local Interface"
-msgstr "ローカルインターフェース"
-
-#, fuzzy
-msgid "Local Prefix"
-msgstr "国番号"
-
-msgid "Location"
-msgstr "場所"
-
-msgid "Logic"
-msgstr "ロジック"
+msgid "Log messages will also be sent to the host address/port above if set."
+msgstr ""
 
 msgid "Logs"
 msgstr "ログ"
@@ -1298,14 +683,14 @@ msgstr "ログ"
 msgid "London, Great Britain"
 msgstr "London, Great Britain"
 
-msgid "Loop Start"
-msgstr "ループスタート"
-
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
 msgid "MAC Address"
 msgstr "MACアドレス"
+
+msgid "MOH"
+msgstr ""
 
 msgid "Macao"
 msgstr "Macao"
@@ -1313,39 +698,24 @@ msgstr "Macao"
 msgid "Madrid, Spain"
 msgstr "Madrid, Spain"
 
+msgid "Maintenance"
+msgstr ""
+
 msgid "Malaysia"
 msgstr "Malaysia"
 
 msgid "Malta"
 msgstr "Malta"
 
+msgid "Management"
+msgstr ""
+
 msgid "Manager"
 msgstr "マネージャー"
-
-msgid "Manager Interface"
-msgstr "管理者画面"
 
 #, php-format
 msgid "Manual Attribute line number %s is invalid."
 msgstr "手動で作成した属性の行番号 %s は正しく有りません"
-
-msgid "Manual Attributes"
-msgstr "追加設定"
-
-msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
-msgstr "手動で、キーと値のペアを、生成された設定に加え、入力出来ます。(例:<em>configoption=value</em>)。これらの設定は、このアイテムのAsterisk設定ファイルもしくはコンテクストに追加されます。特にこれに関する指定が無い限り、この項目には何もすべきではありません。不適切な値はシステムの機能を停止させ、更に/もしくはセキュリティーホールを空けてしまいます"
-
-msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
-msgstr "取り次ぎ転送時に無応答だった場合の呼び出し時間(秒)の上限(初期値 15)"
-
-msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
-msgstr "コールパーキング可能な最大時間(秒)。これを超えるとパーキングした電話機に通話が戻ります(初期値 30)"
-
-msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
-msgstr "取り次ぎ転送時に無応答だった場合の呼び出し時間(秒)の上限(初期設定 15)"
-
-msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
-msgstr "転送時に押される転送先電話番号のボタンを押す間隔(秒、初期値 3)"
 
 msgid "Media"
 msgstr "メディア"
@@ -1353,27 +723,23 @@ msgstr "メディア"
 msgid "Melbourne"
 msgstr "Melbourne"
 
-msgid "Member"
-msgstr "メンバー"
-
-#, php-format
-msgid "Member %s has been kicked from conference %s."
-msgstr "メンバー %s は、電話会議 %sから、除外されました"
-
-msgid "Members"
-msgstr "メンバー"
-
 msgid "Memory Usage"
 msgstr "メモリー使用状況"
+
+msgid "Messages written to shared memory will not survive across reboots."
+msgstr ""
 
 msgid "Mexico"
 msgstr "Mexico"
 
-msgid "Miscellaneous"
-msgstr "その他"
-
 msgid "Missing caller id."
 msgstr "発信者番号に誤りがあります"
+
+msgid "Missing device name."
+msgstr ""
+
+msgid "Missing device."
+msgstr ""
 
 msgid "Missing dialstring."
 msgstr "誤ったダイヤル文字列を使用しています"
@@ -1381,17 +747,32 @@ msgstr "誤ったダイヤル文字列を使用しています"
 msgid "Missing extension number."
 msgstr "内線番号に誤りがあります"
 
+msgid "Missing parameters, process aborted!"
+msgstr ""
+
+msgid "Missing partition number."
+msgstr ""
+
+msgid "Missing partition start sector!"
+msgstr ""
+
 msgid "Missing password."
 msgstr "誤ったパスワードを使用しています"
+
+msgid "Missing post data!"
+msgstr ""
+
+msgid "Missing token, access not allowed!"
+msgstr ""
+
+msgid "Mode"
+msgstr "モード"
 
 msgid "Morocco"
 msgstr "Morocco"
 
 msgid "Moscow, Russia"
 msgstr "Moscow, Russia"
-
-msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
-msgstr "ほとんどの場合、'auto'で問題有りません。もし上手く動作しない場合には、あなたが使っているメールサーバーの認証方式を指定して下さい"
 
 msgid "Mount Point"
 msgstr "マウントポイント"
@@ -1402,14 +783,8 @@ msgstr "Mountain Time"
 msgid "Mountain Time (Arizona, no DST)"
 msgstr "Mountain Time (Arizona, no DST)"
 
-msgid "Music-on-Hold"
-msgstr ""
-
 msgid "My Router"
 msgstr "Myルーター"
-
-msgid "NAT"
-msgstr "NAT"
 
 msgid "NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below."
 msgstr "NAT + 動的パブリックIP:このPBXは動的なパブリックIP NATの内側にあります。常にこのネットワークを指すホスト名が必要です。この情報を入力して下さい"
@@ -1429,20 +804,11 @@ msgstr "NTPサーバー"
 msgid "Name"
 msgstr "名前"
 
-msgid "National Prefix"
-msgstr "国番号"
-
-msgid "Navigation"
-msgstr "ナビゲーション"
-
 msgid "Nested square brackets are not allowed."
 msgstr "入れ子になった大括弧は許可されません"
 
 msgid "Netherlands"
 msgstr "Netherlands"
-
-msgid "Network"
-msgstr "ネットワーク"
 
 msgid "Network Traffic"
 msgstr "Network利用状況"
@@ -1462,38 +828,23 @@ msgstr "Newfoundland Time"
 msgid "Nigeria"
 msgstr "Nigeria"
 
-msgid "No"
-msgstr "いいえ"
-
-msgid "No additional storage devices were detected."
-msgstr "追加のストレージ機器が見つかりませんでした"
-
-msgid "No compatible analog ports were detected."
-msgstr "非対応のアナログポートが見つかりました"
-
-msgid "No compatible isdn ports were detected."
-msgstr "非対応のISDNポートが見つかりました"
-
-msgid "No last upload."
+msgid "No additional storage configured."
 msgstr ""
 
-msgid "No other Providers for failover."
-msgstr "非常用の他プロバイダーが有りません"
+msgid "No free disk devices."
+msgstr ""
 
 msgid "No ports assigned."
 msgstr ""
 
-msgid "Non-Members"
-msgstr "非メンバー"
-
 msgid "Norway"
 msgstr "Norway"
 
-msgid "Note:"
-msgstr "注釈"
-
 msgid "Notes"
 msgstr "メモ"
+
+msgid "Notice: this is the system disk. Unless you really know what you are doing please avoid using it for additional storage."
+msgstr ""
 
 msgid "Notifications"
 msgstr "通知"
@@ -1501,41 +852,20 @@ msgstr "通知"
 msgid "Number"
 msgstr "番号"
 
-msgid "Number or string to be dialed to reach this telephone."
-msgstr "この電話機に到達する為に使用される発信用電話番号もしくは文字列"
-
-msgid "OK\n"
-msgstr "OK\n"
-
 msgid "Oman"
 msgstr "Oman"
 
-msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
-msgstr "ボタンをクリックして、保存してあるAskoziaPBXの設定ファイル(XML形式)を開き、設定をリストアします"
-
-msgid "Optional PIN needed to access this conference room."
-msgstr "この会議室に入室するのに必要なパスワード(オプション)"
-
-msgid "Options"
-msgstr "オプション"
+msgid "Only letters A-z, numbers and underscore allowed."
+msgstr ""
 
 msgid "Oslo, Norway"
 msgstr "Oslo, Norway"
 
-msgid "Out"
-msgstr "Out"
+msgid "Outgoing calls restrictions"
+msgstr ""
 
-msgid "Outgoing Calls Only"
-msgstr "発信のみ"
-
-msgid "Outgoing Patterns"
-msgstr "発信用ダイヤルパターン"
-
-msgid "Outgoing Presentation"
-msgstr "発信した呼の発信者番号表示"
-
-msgid "Outgoing provider or protocol used to reach this telephone."
-msgstr "この電話機に到達する為に使用される発信用プロバイダーもしくはプロトコル"
+msgid "Overwriting partitions not allowed on: "
+msgstr ""
 
 msgid "PHP parsing error"
 msgstr "PHPのパーシングエラー"
@@ -1558,41 +888,23 @@ msgstr "パッケージのインストールが、完了致しました"
 msgid "Package restored successfully."
 msgstr "パッケージの復旧が、完了致しました"
 
-msgid "Packages"
-msgstr "パッケージ"
-
-msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
-msgstr "このアカウント(電話機)に対して、<i>n</i> 秒毎に、状態確認の為のパケットを送信します。<br>(初期値 '2'、'0'で無効となります)"
-
 msgid "Pakistan"
 msgstr "Pakistan"
 
 msgid "Paris, France"
 msgstr "Paris, France"
 
-msgid "Park Extension"
-msgstr "コールパーキング用内線番号"
-
-msgid "Park Time"
-msgstr "コールパーキング時間"
-
-msgid "Parking Range"
-msgstr "コールパーキング用に確保する内線番号"
+msgid "Partition label"
+msgstr ""
 
 msgid "Password"
 msgstr "パスワード"
 
-msgid "Pattern(s)"
-msgstr "パターン"
-
 msgid "Pbx"
 msgstr ""
 
-msgid "Permissions"
-msgstr "パーミッション"
-
-msgid "Permit Network"
-msgstr "許可するネットワーク"
+msgid "Pbx will restart."
+msgstr ""
 
 msgid "Persistence"
 msgstr "Persistence"
@@ -1606,26 +918,17 @@ msgstr "Peru"
 msgid "Philippines"
 msgstr "Philippines"
 
-msgid "Phone"
-msgstr "電話"
-
-msgid "Phone Connectivity"
-msgstr "電話の接続性"
-
 msgid "Phones"
 msgstr "電話機"
 
-msgid "Pin"
-msgstr "パスワード"
-
-msgid "Point-to-Multipoint (PTMP)"
-msgstr "Point-to-Multipoint (PTMP)"
-
-msgid "Point-to-Point (PTP)"
-msgstr "Point-to-Point (PTP)"
+msgid "Please enter a valid ip address for"
+msgstr ""
 
 msgid "Poland"
 msgstr "Poland"
+
+msgid "Polarity reversal"
+msgstr ""
 
 msgid "Polish"
 msgstr "Polish"
@@ -1636,11 +939,14 @@ msgstr "Polish (formal)"
 msgid "Port"
 msgstr "ポート"
 
+msgid "Port value must be a number"
+msgstr ""
+
+msgid "Port value must be lower than"
+msgstr ""
+
 msgid "Ports"
 msgstr "ポート"
-
-msgid "Ports impedance"
-msgstr "ポートインピーダンス"
 
 msgid "Portugal"
 msgstr "Portugal"
@@ -1656,34 +962,6 @@ msgstr "Portuguese, Brazil (formal)"
 
 msgid "Prague, Czech Republic"
 msgstr "Prague, Czech Republic"
-
-msgid "Prepend Caller ID name with text above"
-msgstr ""
-
-msgid "Prepend Caller ID number with number above"
-msgstr ""
-
-msgid "Previously Used Disks"
-msgstr ""
-
-msgid "Printable Dialplan"
-msgstr "印刷可能なダイヤルプラン"
-
-#, fuzzy
-msgid "Private Prefix"
-msgstr "プライベートRSAキー"
-
-msgid "Private RSA Key"
-msgstr "プライベートRSAキー"
-
-msgid "Provider"
-msgstr "プロバイダー(もしくは電話会社)"
-
-msgid "Provider Port Groups"
-msgstr "プロバイダーポートグループ"
-
-msgid "Provider host URL or IP address and optional port."
-msgstr "プロバイダーののURL、もしくはIPアドレスを入力して下さい。(ポート番号はオプション)"
 
 msgid "Providers"
 msgstr "接続回線"
@@ -1703,63 +981,35 @@ msgstr "Public IP address"
 msgid "Public Number"
 msgstr "パブリックナンバー"
 
-msgid "Public RSA Key"
-msgstr "Public RSA Key"
-
-msgid "Qualify"
-msgstr "クオリファイ"
-
-msgid "RSA Keys"
-msgstr "RSA Keys"
-
 msgid "RTP"
 msgstr "RTP"
-
-msgid "RTP Port Range"
-msgstr "RTPボート"
-
-msgid "Read"
-msgstr "読み込み"
 
 msgid "Reboot"
 msgstr "再起動"
 
-msgid "Redfone"
-msgstr "Redfone"
+msgid "Reboot required"
+msgstr ""
 
 msgid "Regional Settings"
 msgstr "地域設定"
 
-msgid "Registration"
-msgstr "登録"
-
-msgid "Registration Expiration Timeouts"
-msgstr "登録が有効な時間"
-
-msgid "Remote IP"
-msgstr "リモートIP"
-
-msgid "Remote Interface"
-msgstr "リモートインターフェース"
-
-msgid "Remote MAC"
-msgstr "リモートMACアドレス"
-
-#, fuzzy
-msgid "Replace Caller ID name with Caller ID number"
-msgstr "calling nameをcalling numberで入れ替えます"
-
-msgid "Replace Caller ID with text above"
+msgid "Remote log"
 msgstr ""
 
-msgid "Restore configuration"
-msgstr "設定ファイルのリストア"
+msgid "Rereading partition table failed, kernel still uses old table."
+msgstr ""
 
 msgid "Resuming updates"
 msgstr "更新の再開"
 
+msgid "Ring"
+msgstr ""
+
 msgid "Ring Length"
 msgstr "呼び出し時間の長さ"
+
+msgid "Ring groups"
+msgstr ""
 
 msgid "Romania"
 msgstr "Romania"
@@ -1767,11 +1017,8 @@ msgstr "Romania"
 msgid "Rome, Italy"
 msgstr "Rome, Italy"
 
-msgid "Room Number"
-msgstr "部屋番号"
-
-msgid "Russia"
-msgstr "ロシア"
+msgid "Routing"
+msgstr ""
 
 msgid "Russia / ex Soviet Union"
 msgstr "Russia / ex Soviet Union"
@@ -1788,29 +1035,14 @@ msgstr "Russian Federation / Former Soviet Union"
 msgid "SIP"
 msgstr "SIP"
 
-msgid "SIP Phones"
-msgstr "SIP電話機"
-
-msgid "SMTP Client Setup"
-msgstr "SMTPクライアントの設定"
-
-msgid "SMTP host URL or IP address and optional port."
-msgstr "SMTPサーバーのURL、もしくはIPアドレスを入力して下さい。(ポート番号はオプション)"
-
 msgid "Saudi Arabia"
 msgstr "Saudi Arabia"
 
 msgid "Save"
 msgstr "保存"
 
-msgid "Secret"
-msgstr "パスワード"
-
 msgid "Security"
 msgstr "セキュリティー"
-
-msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
-msgstr "あなたのアナログ機器が対応している、全てのトーンゾーンを選んで下さい。<strong>初めに選択したトーンゾーンが、標準設定となります"
 
 msgid "Select how often the time should be synchronized."
 msgstr "どの位の間隔で同期をさせるか選択して下さい"
@@ -1818,32 +1050,20 @@ msgstr "どの位の間隔で同期をさせるか選択して下さい"
 msgid "Select in which language you want the webGUI to be displayed."
 msgstr "webGUIの表示に使用する言語を選択して下さい"
 
-msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
-msgstr "FXOポートのインピーダンスを、ご利用になる国、もしくはその国の規制に併せて選択して下さい; FXSポートも、同じ設定が反映されます"
-
 msgid "Select the location closest to you."
 msgstr "AskoziaPBXの設置場所に一番近いエリアを選択して下さい"
 
 msgid "Select which country's indication tones (the ringing, busy and error tones) to be used."
 msgstr "使用する国のトーン音(呼び出し音/話中音/エラー音)を選択して下さい"
 
-msgid "Select which disk you would like to format."
-msgstr "フォーマットしたいディスクの選択"
-
-msgid "Select which ethernet port on the gateway this system is connected to."
-msgstr "ゲートウェイ上のどちらのイーサネットポートに、このシステムを接続するか選択して下さい"
-
-msgid "Select which ethernet port on this system the gateway is connected to."
-msgstr "このシステム上のどちらのイーサネットポートに、ゲートウェイを接続するか選択して下さい"
-
-msgid "Send all incoming faxes here."
-msgstr ""
-
 msgid "Service"
 msgstr ""
 
 msgid "Service Type"
 msgstr "サービスタイプ"
+
+msgid "Service mount point"
+msgstr ""
 
 msgid "Services"
 msgstr "サービス"
@@ -1854,8 +1074,8 @@ msgstr "もし内線番号の代わりに単語や名前などを使いたい場
 msgid "Settings"
 msgstr "設定"
 
-msgid "Signaling"
-msgstr "シグナル"
+msgid "Shared memory circular buffer"
+msgstr ""
 
 msgid "Singapore"
 msgstr "Singapore"
@@ -1863,23 +1083,11 @@ msgstr "Singapore"
 msgid "Size"
 msgstr "サイズ"
 
-msgid "Skinny"
-msgstr "Skinny"
-
 msgid "Slovakia"
 msgstr "Slovakia"
 
 msgid "Slovenia"
 msgstr "Slovenia"
-
-msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
-msgstr "いくつかの電話会社では、別の'from'ドメインが必要となります。<br>上記に入力したホストをデフォルトにします"
-
-msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
-msgstr "いくつかの電話会社では、別の'from'ユーザーが必要となります。<br>上記に入力したユーザー名をデフォルトにします"
-
-msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
-msgstr "いくつかの電話会社では、別の認証用ユーザー名が必要となります。<br>上記に入力したユーザー名をデフォルトにします"
 
 msgid "South Africa"
 msgstr "South Africa"
@@ -1890,29 +1098,20 @@ msgstr "South Korea"
 msgid "Spain"
 msgstr "Spain"
 
-msgid "Span"
-msgstr "Span"
-
-msgid "Span Count"
-msgstr "スパン数"
-
 msgid "Spanish (Spain)"
 msgstr "Spanish (Spain)"
 
 msgid "Spanish (formal)"
 msgstr "Spanish (formal)"
 
-msgid "Spans"
-msgstr "Spans"
-
-msgid "Start Signaling"
-msgstr "シグナリングスタート"
-
-msgid "State"
-msgstr "状態"
+msgid "Spare disk space"
+msgstr ""
 
 msgid "Static Public IP"
 msgstr "固定IP"
+
+msgid "Static routes"
+msgstr ""
 
 msgid "Status"
 msgstr "ステータス"
@@ -1926,23 +1125,7 @@ msgstr "アップデートの停止"
 msgid "Storage"
 msgstr "ストレージ"
 
-msgid "Storage Disk"
-msgstr "Storage Disk"
-
-msgid "Storage Services"
-msgstr "ストレージサービス"
-
-msgid "Subject"
-msgstr "件名"
-
-#, php-format
-msgid "Successfully installed %s formatted prompts for %s."
-msgstr " %s のインストールが完了しました。%s でフォーマットされました "
-
-msgid "Summary"
-msgstr "概要"
-
-msgid "Supported file formats"
+msgid "Subnet"
 msgstr ""
 
 msgid "Sweden"
@@ -1950,9 +1133,6 @@ msgstr "Sweden"
 
 msgid "Swedish"
 msgstr "Swedish"
-
-msgid "Switch to bytes/s"
-msgstr "Switch to bytes/s"
 
 msgid "Switzerland"
 msgstr "Switzerland"
@@ -1963,14 +1143,29 @@ msgstr "Sydney"
 msgid "Syria"
 msgstr "Syria"
 
+msgid "Syslog server"
+msgstr ""
+
 msgid "System"
 msgstr "システム"
 
 msgid "System Information"
 msgstr "システム情報"
 
+msgid "System Time"
+msgstr ""
+
+msgid "System disk status"
+msgstr ""
+
 msgid "System log entries"
 msgstr "システムログの記録"
+
+msgid "System logs"
+msgstr ""
+
+msgid "System will restart."
+msgstr ""
 
 msgid "Taiwan"
 msgstr "Taiwan"
@@ -1978,30 +1173,15 @@ msgstr "Taiwan"
 msgid "Tallinn, Estonia"
 msgstr "Tallinn, Estonia"
 
-msgid "TeeBX Test E-mail"
-msgstr ""
-
 #, php-format
 msgid "TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"
 msgstr ""
 
-msgid "TeeBX&reg; &copy; 2010-2011 Giovanni Vallesi. All rights reserved."
-msgstr ""
-
-msgid "TeeBX: execute command"
-msgstr ""
-
-msgid "Telephone number assigned to this line."
-msgstr "この回線に電話番号が割り当てられました"
-
 msgid "Telephony Ports"
 msgstr "電話通信のポート"
 
-msgid "Test E-mail"
-msgstr "テスト用メール送信"
-
-msgid "Text to be displayed for Caller ID."
-msgstr "表示させる発信者IDを入力して下さい"
+msgid "Text to be displayed for Caller ID Name."
+msgstr ""
 
 msgid "Thailand"
 msgstr "Thailand"
@@ -2014,59 +1194,17 @@ msgstr "'%s' フィールドは必須です"
 msgid "The %s field must be numeric."
 msgstr "'%s' フィールドは、数字である必要があります"
 
-msgid "The IP address of the foneBRIDGE2 network interface."
-msgstr "foneBRIDGE2のネットワークインターフェースのIPアドレス"
-
 msgid "The MAC address of this phone."
 msgstr "この電話機のMACアドレス"
-
-msgid "The PBX will reboot after restoring the configuration."
-msgstr "設定をリストアした後、システムは再起動されます"
-
-msgid "The audio file could not be uploaded. (file upload error)."
-msgstr ""
-
-msgid "The audio file could not be uploaded. (filetype error)"
-msgstr ""
 
 msgid "The changes have been applied successfully."
 msgstr "変更は、適切に反映されました"
 
-msgid "The changes have been applied successfully. No upload file found but there was an old custom Music-on-Hold file."
-msgstr ""
-
-msgid "The changes have been applied successfully. No upload file found but there was an old custom voicemail greeting file."
-msgstr ""
-
 msgid "The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect."
 msgstr "変更が、保存されました。AskoziaPBXを<a href=\"/system_reboot.php\">再起動</a> させて、変更を適用して下さい"
 
-msgid "The conference room's number, also the extension that this conference is reachable at."
-msgstr "会議室番号は、内線番号と同様にダイヤルしてご利用になれます"
-
-msgid "The configuration could not be restored (file upload error)."
-msgstr "この設定は、リストア出来ませんでした。(ファイルのアップロードエラー)"
-
-msgid "The configuration could not be restored."
-msgstr "この設定は、リストア出来ませんでした"
-
-msgid "The configuration has been restored. The PBX is now rebooting."
-msgstr "設定はリストアされました。このPBXは再起動中です"
-
-msgid "The digital signature on this image is invalid."
-msgstr "このイメージの電子署名は無効です"
-
 msgid "The domain may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "ドメイン名として使用可能な文字は、a-z,0-9そして'-'だけです"
-
-msgid "The dynamic DNS username contains invalid characters."
-msgstr "ダイナミックDNSのユーザー名に、無効な文字が含まれています"
-
-msgid "The echo canceller window size. If your calls have echo, try increasing this window."
-msgstr "エコーキャンセルの調整。もしエコーが発生したら、この設定値を増やしてみて下さい"
-
-msgid "The end parking position must be larger than the start position."
-msgstr "パーク保留の終了位置を、開始位置より大きな値にする必要があります"
 
 #, php-format
 msgid "The field '%s' contains invalid characters."
@@ -2076,48 +1214,21 @@ msgstr "'%s' フィールドに無効な文字が含まれています"
 msgid "The field '%s' is required."
 msgstr "'%s' フィールドは必須です"
 
-msgid "The filetype could not be recognized (file upload error)."
-msgstr ""
-
-msgid "The firmware is now being installed. The PBX will reboot automatically."
-msgstr "ファームウェアがインストールされています。システムは自動的に再起動します"
-
 msgid "The following input errors were detected:"
 msgstr "下記の入力エラーが検出されました"
-
-msgid "The following variables can be used in the e-mail notification"
-msgstr "次の各変数が、Eメールの文面にご使用頂けます。"
 
 msgid "The hardware port this phone is connected to."
 msgstr "この電話のハードウェアポートは、次に接続されています:"
 
-msgid "The high RTP port must be greater than the low RTP port."
-msgstr "RTPポート範囲の上限の値は、下限の値より大きい値を設定する必要が有ります"
-
 msgid "The hostname may only contain the characters a-z, 0-9 and '-'."
 msgstr "ホスト名として使用可能な文字は、a-z,0-9そして'-'だけです。"
-
-msgid "The image file is corrupt."
-msgstr "イメージファイルが壊れています"
 
 #, php-format
 msgid "The incoming extension pattern \"%s\" is invalid. %s"
 msgstr "この着信用ダイヤルプラン\"%s\"は無効です。%s"
 
-msgid "The internal number used to dial this phone."
-msgstr "その内線番号は、この電話にダイヤルする為に使用されています"
-
-msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
-msgstr "着信、発信、登録、予約が有効な最小、最大、そしてデフォルトの秒数"
-
 msgid "The number of seconds this phone will ring before giving up or going to voicemail."
 msgstr "諦めるもしくはヴォイスメールに渡すと判断するまでのこの電話機の呼び出し時間を入力して下さい(秒)"
-
-msgid "The number used to dial this application."
-msgstr "その番号は、このアプリケーションにダイヤルする際に使用されています"
-
-msgid "The number used to dial this fax."
-msgstr "その番号は、このファックスにダイヤルする為に使われています"
 
 msgid "The number used to dial this phone."
 msgstr "その番号は、この電話にダイヤルする為に使用されています"
@@ -2129,39 +1240,8 @@ msgstr "この発信用ダイヤルパターン\"%s\"は無効です。%s"
 msgid "The passwords do not match."
 msgstr "パスワードが間違っています"
 
-msgid "The port range which RTP streams should use. (default:"
-msgstr "RTPで使用するポートの範囲を指定して下さい。(初期値: "
-
-msgid "The prefix used when dialing international numbers (usually 00)"
-msgstr ""
-
-msgid "The prefix used when dialing numbers within your city (i.e. 0711)"
-msgstr ""
-
-msgid "The prefix used when dialing numbers within your company (i.e. 07115678)"
-msgstr ""
-
-msgid "The prefix used when dialing numbers within your country (usually 0)"
-msgstr ""
-
-msgid "The provider will be contacted this often to check its availability."
-msgstr "稼働確認の為に、プロバイダーはここで設定した間隔に基づき、確認を行います"
-
-msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
-msgstr "このAskoziaPBXは、工場出荷時の状態に初期化され、只今再起動中です。しばらくお待ち下さい"
-
-msgid "The system is rebooting now. This may take a minute."
-msgstr "システムは再起動中です。これには数分かかります"
-
-#, php-format
-msgid "The uploaded image file is not for this platform (%s)."
-msgstr "アップロードされたイメージファイルは、このプラットフォーム (%s) 用ではありません"
-
 msgid "The username may only contain the characters a-z, A-Z and 0-9."
 msgstr "ユーザー名として使用可能な文字は、a-z,A-Z,そして0-9だけです"
-
-msgid "The username of \"admin\" is already used internally by the system."
-msgstr " \"admin\"と言うユーザー名は、AskoziaPBXのシステムが既に使用しています"
 
 msgid "The wildcard character \"!\" is not allowed before a prefix which is to be removed."
 msgstr "ワイルドカードである \"!\" は、プリフィックスの前に記述する事は出来ません"
@@ -2169,54 +1249,20 @@ msgstr "ワイルドカードである \"!\" は、プリフィックスの前�
 msgid "The wildcard character \".\" is not allowed before a prefix which is to be removed."
 msgstr "ワイルドカードである \".\" は、プリフィックスの前に記述する事は出来ません"
 
-msgid "There are currently no active channels."
-msgstr "現在、有効なチャンネルは有りません"
-
-msgid "There are currently no active conferences."
-msgstr "現在、有効な電話会議は有りません"
-
-msgid "There has been an error verifying the signature on this image."
-msgstr "このイメージに署名の検証エラーがありました"
-
-#, php-format
-msgid "There is an update for your version of TeeBX available: %s<br>Download it at <a target='_blank' href='http://www.teebx.org/software'>www.teebx.org/software</a>"
-msgstr ""
-
-msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
-msgstr "この外部番号は、発信者がヴォイスメールに到達した際に、復唱されます;デフォルトでは、ユーザー名が数字だった場合。もし違う場合には、この呼がルーティングされた内部内線番号が復唱されます"
-
-msgid "This PBX"
-msgstr "このPBX"
-
 msgid "This account's password."
 msgstr "このアカウントのパスワードを入力して下さい"
 
 msgid "This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank"
 msgstr "この項目は、ネットワークインターフェースのMACアドレスを (&quot;なりすまし&quot;) する事が出来ます。<br>MACアドレスを次の書式: xx:xx:xx:xx:xx:xx で入力するか、ブランク(空白)にしておいて下さい"
 
-msgid "This image is not digitally signed."
-msgstr "このイメージは、電子署名されていません"
-
 msgid "This information should be updated by:"
 msgstr "この情報は、次のシステムにより更新管理させます"
 
-msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
-msgstr "ここでは、もし電話がハングアップもしくは、ピックアップしたら、システムがどの様に判断するかを設定します。通常は \"Kewl Start\" がベストな選択です。しかし、いくつかのプロバイダーは、他のオプションの何れかを選択した方が、良い場合があります。もしコールが正しく開始しなかったり、終わらなかった場合には、この設定を調整して見て下さい"
+msgid "This partition will be mounted on the path set above."
+msgstr ""
 
-msgid "This key combination activates a blind transfer (default ##)."
-msgstr "このボタンの組み合わせで、強制転送を実行します(初期値 ##)"
-
-msgid "This key combination activates an attended transfer (default **)."
-msgstr "このボタンの組み合わせで、取り次ぎ転送を実行します(初期値 **)"
-
-msgid "This range of extensions is where parked calls reside (default 701-720)."
-msgstr "コールパーキング用に確保する内線番号の範囲を指定します(初期値 701-720)"
-
-msgid "This will be shown as voicemail service's sending address."
-msgstr "ここに設定したアドレスが、ボイスメールの送信者アドレスとして、表示されます"
-
-msgid "Time"
-msgstr "時間"
+msgid "This system"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr "時刻の同期"
@@ -2224,26 +1270,14 @@ msgstr "時刻の同期"
 msgid "Time zone"
 msgstr "タイムゾーン"
 
-msgid "Timeouts"
-msgstr "時間制限"
-
 msgid "Toggle auto-updates"
 msgstr "自動更新を有効にする"
-
-msgid "Tokyo, Japan"
-msgstr ""
-
-msgid "Tone Zones"
-msgstr "タイムゾーン"
 
 msgid "Topology"
 msgstr "接続形態"
 
-msgid "Transfer Key"
-msgstr "転送ボタンの操作"
-
-msgid "Transfers"
-msgstr "転送"
+msgid "Total"
+msgstr ""
 
 msgid "Turkish"
 msgstr "Turkish"
@@ -2251,20 +1285,14 @@ msgstr "Turkish"
 msgid "Turkish (formal)"
 msgstr "Turkish (formal)"
 
-msgid "Type"
-msgstr "Type"
-
-msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
-msgstr "あなたのEメールアドレスを入力し、&quot;私にEメールを送る&quot;をクリックして、SMTP設定に間違いが無いか、確認して下さい"
-
 msgid "USA & Canada"
 msgstr "USA & Canada"
 
-msgid "UTC"
-msgstr "UTC"
-
 msgid "Ulaanbaatar, Mongolia"
 msgstr "Ulaanbaatar, Mongolia"
+
+msgid "Unable to get data."
+msgstr ""
 
 msgid "United Arab Emirates"
 msgstr "United Arab Emirates"
@@ -2281,11 +1309,17 @@ msgstr "United States / North America"
 msgid "United States Circa 1950/ North America"
 msgstr "United States Circa 1950/ North America"
 
+msgid "Unknown brand/model"
+msgstr ""
+
+msgid "Unknown error in field: "
+msgstr ""
+
 msgid "Unmatched square bracket."
 msgstr "大括弧がマッチしません"
 
-msgid "Update"
-msgstr "アップデート"
+msgid "Unprivileged port required, value must be greather than "
+msgstr ""
 
 msgid "Update Interval"
 msgstr "更新の間隔"
@@ -2293,29 +1327,29 @@ msgstr "更新の間隔"
 msgid "Updates"
 msgstr ""
 
-msgid "Upgrade firmware"
-msgstr "ファームウェアのアップグレード"
-
-msgid "Upload"
-msgstr "アップロード"
-
-msgid "Upload:"
-msgstr "アップロード:"
-
 msgid "Uptime"
 msgstr "稼働時間"
 
-msgid "Use Jitterbuffer even when bridging two endpoints."
-msgstr "2 つのエンドポイントをブリッジする場合にも、ジッターバッファを使用します"
+msgid "Usage %"
+msgstr ""
 
 msgid "Use this number as your username."
 msgstr "あなたのユーザー名としてこの番号を使用します"
 
-msgid "User defined e-mail text"
-msgstr "Eメールの文面を直接指定する"
+msgid "Used"
+msgstr ""
 
 msgid "Username"
 msgstr "ユーザー名"
+
+msgid "V23, ETSI/Europe"
+msgstr ""
+
+msgid "V23, Japan V23 variant"
+msgstr ""
+
+msgid "Valid range"
+msgstr ""
 
 msgid "Venezuela / South America"
 msgstr "Venezuela / South America"
@@ -2323,26 +1357,11 @@ msgstr "Venezuela / South America"
 msgid "Version"
 msgstr "バージョン"
 
-msgid "Video"
-msgstr "Video"
-
-msgid "Voice Prompts"
-msgstr "音声プロンプト"
-
 msgid "Voicemail"
 msgstr "ボイスメール"
 
-msgid "Voicemail Greeting"
-msgstr ""
-
-msgid "Voicemail to E-Mail Presentation"
-msgstr "ヴォイスメールのEメール通知設定"
-
 msgid "Voicemail to e-mail enabled but the e-mail address is invalid or missing."
 msgstr "ヴォイスメールのEメール通知は有効に設定されていますが、Eメールアドレスが正しくないか、間違えています"
-
-msgid "Volume"
-msgstr "Volume"
 
 msgid "Wake-Up call manager. Call to set and cancel wake-up calls on the current extension."
 msgstr "モーニングコールマネージャー:この内線番号でのモーニングコールを設定もしくはキャンセルする"
@@ -2350,90 +1369,32 @@ msgstr "モーニングコールマネージャー:この内線番号でのモ�
 msgid "Warning"
 msgstr "警告"
 
-msgid "Warning:"
-msgstr "警告;"
+msgid "Website"
+msgstr ""
 
 msgid "Wellington"
 msgstr "Wellington"
 
-msgid "Write"
-msgstr "書き出し"
-
-#, php-format
-msgid "XML error: %s"
-msgstr "XMLエラー:%s"
+msgid "Wildcards"
+msgstr ""
 
 msgid "Yemen"
 msgstr "Yemen"
 
-msgid "Yes"
-msgstr "はい"
-
 msgid "Yes, alias \"*.hostname.domain\" to hostname specified above."
 msgstr "はい、上記で指定したエイリアス \"*.hostname.domain\"をホスト名にします"
-
-msgid "You are using the most recent <strong>beta</strong> of TeeBX."
-msgstr ""
-
-msgid "You are using the most recent version of TeeBX."
-msgstr ""
 
 msgid "You may enter a description here for your reference (not parsed)."
 msgstr "参考の為にメモを入れる事が出来ます"
 
-msgid "You must reboot the system before you can upgrade the firmware."
-msgstr "あなたがファームウェアをアップグレードする前に、システムを再起動する必要があります"
-
-msgid "Your Name &lt;number&gt;"
-msgstr "あなたの名前 &lt;number&gt;"
-
-msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
-msgstr "あなたのSMTP設定は、正しく動作しています。E-mailによるヴォイスメールや不在着信のお知らせを使用できます"
-
-msgid "access the webGUI with the new IP address"
-msgstr "新しいwebGUIのアドレスで、アクセスする"
-
-msgid "activate disk"
+msgid "access the web UI using the new IP address"
 msgstr ""
 
-msgid "active"
-msgstr "有効"
-
-msgid "add application mapping"
-msgstr "アプリケーションの関連付けの追加"
-
-msgid "add call group"
-msgstr "グループの追加"
-
-msgid "add conference room"
-msgstr "電話会議室の追加"
-
-msgid "add disk"
-msgstr "ディスクの追加"
-
-msgid "add gateway"
-msgstr "ゲートウェイの追加"
-
-msgid "add incoming extension mapping"
-msgstr "着信ダイヤルプランのマッピングを追加します"
-
-msgid "add manager user"
-msgstr "管理者権限付ユーザーの追加"
-
-msgid "add port group"
-msgstr "ポートグループの追加"
-
-msgid "add set"
-msgstr "セットの追加"
-
-msgid "address"
-msgstr "アドレス"
+msgid "access the web UI."
+msgstr ""
 
 msgid "after you click &quot;Save&quot;, all current calls will be dropped."
 msgstr "システムログの一覧"
-
-msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
-msgstr "&quot;保存&quot;をクリックすると、現在通話中の全ての通話が切断されます。また、再度このAskoziaPBXにアクセスする前に、下記の何れかもしくは複数の項目を行う必要が有ります"
 
 msgid "alias"
 msgstr "エイリアス"
@@ -2441,53 +1402,11 @@ msgstr "エイリアス"
 msgid "allow this number to be reachable over the Internet"
 msgstr "この番号が、インターネット越しに接続可能になる事を許可する"
 
-msgid "always send Caller ID above"
-msgstr ""
-
-msgid "always use NAT mode."
-msgstr "常にNATモードで使用"
-
-msgid "associated"
-msgstr "接続(稼働)中"
-
-msgid "assume NAT mode but don't send rport "
-msgstr "NATモードを前提としていますが、rportは送信しません"
-
-msgid "authenticate incoming calls with a public RSA key"
-msgstr "public RSAキーで、着信した呼を認証する"
-
-msgid "authenticate outgoing calls with a private RSA key"
-msgstr "プライベート RSAキーで、発信した呼を認証する"
-
 msgid "built on"
 msgstr "built on"
 
-msgid "caller id of person leaving the message"
-msgstr "メッセージを録音した人の発信者ID"
-
 msgid "change the IP address of your computer"
 msgstr "あなたのコンピュータのIPアドレスを変更する"
-
-msgid "click to disable fax"
-msgstr "クリックして、ファックスを無効にする"
-
-msgid "click to disable phone"
-msgstr "電話機を無効にします"
-
-msgid "click to disable provider"
-msgstr "接続回線を無効にする"
-
-msgid "click to enable fax"
-msgstr "クリックして、ファックスを有効にする"
-
-msgid "click to enable phone"
-msgstr "電話機を有効にします"
-
-msgid "click to enable provider"
-msgstr "接続回線を有効にする"
-
-msgid "clicking &quot;Save&quot; will drop all current calls."
-msgstr "clicking &quot;Save&quot; 全ての呼を切断します"
 
 msgid "configured manually"
 msgstr "手動による設定"
@@ -2498,110 +1417,20 @@ msgstr "DHCPクライアントにより設定"
 msgid "confirmation"
 msgstr "確認"
 
-msgid "connected"
-msgstr "接続完了"
-
-msgid "connected but lagged"
-msgstr "接続しましたが、遅延しています"
-
-msgid "default:"
-msgstr "初期値:"
-
-msgid "delete application"
-msgstr "アプリケーションの削除"
-
-msgid "delete application mapping"
-msgstr "アプリケーションの関連付けの削除"
-
-msgid "delete call group"
-msgstr "グループの削除"
-
-msgid "delete conference room"
-msgstr "電話会議室の削除"
-
-msgid "delete fax"
-msgstr "ファックスの削除"
-
-msgid "delete manager user"
-msgstr "管理権限付きユーザーの削除"
-
-msgid "delete phone"
-msgstr "電話機の削除"
-
-msgid "delete port group"
-msgstr "ポートグループの削除"
-
-msgid "delete provider"
-msgstr "接続回線の削除"
-
-msgid "disable certificate checking"
-msgstr "認証チェックを無効にする"
-
-msgid "disable echo cancellation"
-msgstr "エコーキャンセルを無効にする"
-
 msgid "disable time synchronization"
 msgstr "時刻同期を無効"
 
-msgid "disabled"
-msgstr "無効"
+msgid "domain"
+msgstr ""
 
-msgid "down"
-msgstr "下"
+msgid "done."
+msgstr ""
 
-msgid "downloading"
-msgstr "ダウンロード"
-
-msgid "drag-and-drop"
-msgstr "ドラッグアンドドロップ"
-
-msgid "duration of the message (i.e. 0:58)"
-msgstr "メッセージの録音時間(例; 0:58)"
+msgid "e.g."
+msgstr ""
 
 msgid "e.g. <em>pbx . mydomain.com"
 msgstr "例; <em>pbx.mydomain.co.jp"
-
-msgid "edit application"
-msgstr "アプリケーションの編集"
-
-msgid "edit application mapping"
-msgstr "アプリケーション関連付けの編集"
-
-msgid "edit call group"
-msgstr "グループの編集"
-
-msgid "edit conference room"
-msgstr "電話会議室の編集"
-
-msgid "edit disk"
-msgstr "ディスクの編集"
-
-msgid "edit fax"
-msgstr "ファックスを編集"
-
-msgid "edit gateway"
-msgstr "ゲートウェイの編集"
-
-msgid "edit manager room"
-msgstr "管理ルームの編集"
-
-msgid "edit phone"
-msgstr "電話機設定の編集"
-
-msgid "edit port"
-msgstr "ポートの編集"
-
-msgid "edit port group"
-msgstr "ポートグループの編集"
-
-msgid "edit provider"
-msgstr "接続回線の編集"
-
-msgid "enable voicemail to e-mail"
-msgstr "ボイスメールのEメール通知を有効にする"
-
-msgid "enter a command below..."
-msgstr "以下のコマンドを入力..."
 
 msgid "every 10 minutes"
 msgstr "10分毎"
@@ -2621,89 +1450,20 @@ msgstr "毎日"
 msgid "every hour"
 msgstr "1時間毎"
 
-msgid "extension number of voicemail box"
-msgstr "ボイスメールが届いている内線番号"
-
-msgid "extracting"
-msgstr "解凍"
-
-msgid "forget disk settings"
-msgstr "ディスク設定を忘れる"
-
-msgid "forget gateway settings"
-msgstr "ゲートウェイ設定を忘れる"
-
-msgid "forget port settings"
-msgstr "ポート設定を忘れる"
-
-msgid "full date / time (i.e. 2025-11-20 (15:45))"
-msgstr "日付と時間(例; 2025-11-20 (15:45))"
-
-msgid "generate password"
-msgstr "パスワード生成"
-
-msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
-msgstr "もしグラフが見えない場合には、 <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>をインストールして下さい"
-
-msgid "inactive"
-msgstr "無効"
-
 msgid "indefinitely"
 msgstr "indefinitely"
 
-msgid "installed sets"
-msgstr "インストール済パッケージ"
-
-msgid "installing"
-msgstr "インストール"
-
-msgid "kick conference member"
-msgstr "メンバーを会議から外す"
-
-msgid "max:"
-msgstr "最大:"
-
-msgid "md5"
-msgstr "md5"
-
-msgid "milliseconds"
-msgstr "ミリ秒"
-
-msgid "min:"
-msgstr "最小:"
+msgid "is based upon/includes various software packages, listed below. A big thanks to the authors for all of their hard work!"
+msgstr ""
 
 msgid "multipoint-to-point, network termination"
 msgstr "マルチポイントtoポイント,ネットワークターミネーション"
 
-msgid "name of voicemail recipient"
-msgstr "ボイスメールの受信者名"
-
-msgid "never attempt NAT mode or RFC3581 support"
-msgstr "NAT モードまたは RFC3581 サポートを試みることはありません"
-
-msgid "no faxes available."
-msgstr ""
-
-msgid "none"
-msgstr "無し"
-
-msgid "notify me of missed calls via e-mail"
-msgstr "不在着信をEメールで通知する"
-
-msgid "of"
-msgstr "の"
-
 msgid "on"
 msgstr "on"
 
-msgid "only use NAT mode according to RFC3581 (rport)"
-msgstr "RFC3581に従って、NATモードのみを使用 (rport)"
-
-msgid "optional"
-msgstr "オプション"
-
-msgid "plaintext"
-msgstr "プレーンテキスト"
+msgid "pbx . mydomain.com"
+msgstr ""
 
 msgid "point-to-multipoint, terminal equipment"
 msgstr "ポイントtoマルチポイント,ターミナル機器"
@@ -2714,80 +1474,38 @@ msgstr "ポイントtoポイント,ネットワークターミネーション"
 msgid "point-to-point, terminal equipment"
 msgstr "ポイントtoポイント,ターミナル機器"
 
-msgid "print"
-msgstr "印刷"
+msgid "restart system"
+msgstr ""
 
-msgid "read:"
-msgstr "読み出し:"
+msgid "show/hide details"
+msgstr ""
 
-msgid "receive"
-msgstr "受信"
+msgid "source revision"
+msgstr ""
 
-msgid "restart the PBX"
-msgstr "PBXの再起動"
+msgid "status"
+msgstr "状態"
 
-msgid "seconds"
-msgstr "秒"
-
-#, fuzzy
-msgid "send phone's Caller ID"
-msgstr "電話機のCaller IDを送信する"
-
-#, fuzzy
-msgid "send phone's Caller ID + prefix below"
-msgstr "電話機のCaller IDを送信する"
-
-#, php-format
-msgid "service already assigned to \"%s\""
-msgstr "サービスは、既に \"%s\" に割り当てられています"
-
-msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
-msgstr "'0.0.0.0 / 0.0.0.0' にセットすると、全て拒否となります"
-
-msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
-msgstr "'0.0.0.0 / 0.0.0.0' にセットすると、全て許可となります"
-
-msgid "show"
-msgstr "見る"
-
-msgid "span should be set as a loopback"
-msgstr "Spanはループバックとして設定する必要があります"
-
-msgid "span should use CRC4 checking"
-msgstr "SpanはCRC4のチェック用に使用する必要があります"
-
-msgid "status unknown"
-msgstr "状態不明"
+msgid "store Asterisk's call detail records on disk"
+msgstr ""
 
 msgid "store Asterisk's database on disk"
 msgstr "Asteriskのデータベースをディスク上に保管する"
 
+msgid "store system logs on disk"
+msgstr ""
+
 msgid "store voice prompts and music-on-hold on disk"
 msgstr "音声プロンプトとmusic on holdで使用している音楽をディスク上に保管する"
 
-msgid "transmit"
-msgstr "送信"
-
-msgid "unreachable"
-msgstr "到達不能"
-
-msgid "up"
-msgstr "上"
-
-msgid "use DHCP settings permanently"
-msgstr "DHCP設定を恒久的に使用する"
-
-msgid "use this password"
-msgstr "このパスワードを使用"
-
-msgid "view license"
-msgstr "ライセンスを表示する"
+msgid "view license information"
+msgstr ""
 
 msgid "warning"
 msgstr "警告"
 
-msgid "webGUI Configuration"
-msgstr "webGUI設定"
+msgid "web UI"
+msgstr ""
 
 msgid "webGUI language"
 msgstr "webGUIの言語"
@@ -2795,8 +1513,17 @@ msgstr "webGUIの言語"
 msgid "webGUI port"
 msgstr "webGUIで使用するポート"
 
-msgid "write:"
-msgstr "書き込み:"
+#~ msgid "%.0f KB"
+#~ msgstr "%.0f KB"
+
+#~ msgid "%.2f GB"
+#~ msgstr "%.2f GB"
+
+#~ msgid "%.2f MB"
+#~ msgstr "%.2f MB"
+
+#~ msgid "%d bytes"
+#~ msgstr "%d bytes"
 
 #~ msgid "%s days, "
 #~ msgstr "%s日"
@@ -2825,8 +1552,17 @@ msgstr "書き込み:"
 #~ msgid "10BASE-T half-duplex"
 #~ msgstr "10BASE-T half-duplex"
 
+#~ msgid "25%"
+#~ msgstr "25%"
+
 #~ msgid "40 (64) bit keys may be entered as 5 ASCII characters or 10 hex digits preceded by '0x'."
 #~ msgstr "40 (64) bitキーは、5文字のASCII文字または頭に'0x'を付けた10文字の16進数を入力する必要があります"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "75%"
+#~ msgstr "75%"
 
 #~ msgid "802.11a can only be selected if an 802.11a channel is selected too."
 #~ msgstr "802.11aチャネルが選択されている場合、802.11a だけ選択できます"
@@ -2834,8 +1570,14 @@ msgstr "書き込み:"
 #~ msgid "802.11a channels can only be selected if the standard is set to 802.11a too."
 #~ msgstr "標準が802.11a に設定されている場合、802.11aチャネルだけ選択できます"
 
+#~ msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
+#~ msgstr "<a href=\"notifications_email.php\">E-Mail 通知</a> 使用する前に正しい設定を行う必要があります"
+
 #~ msgid "<p>This status page includes the following information:\n"
 #~ msgstr "<p>このステータスページは、以下の情報を含んでいます:\n"
+
+#~ msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
+#~ msgstr "<strong>%s</strong><br>この意味は、これらは公式/もしくはサポート対象のバッケージではなく、予期しない動作やセキュリティー問題を引き起こすかも知れません。あなたが信頼しているパッケージのみインストールして下さい。そしてこれらが改ざんされていない事を確認してから行って下さい。<br><br>それでもあなたは、自己責任において、このイメージをインストールしますか？"
 
 #~ msgid "<strong>No compatible interfaces found!</strong><br><br> To configure this type of account, make sure an appropriately configured interface is present on the %s page"
 #~ msgstr "<strong>対応するインターフェースが見つかりません!</strong><br><br> この接続回線タイプのアカウントを設定するには、%s ページにある設定を、適切に完了させて下さい"
@@ -2852,11 +1594,20 @@ msgstr "書き込み:"
 #~ msgid "A phone with this extension already exists."
 #~ msgstr "この内線番号の電話は、既に存在しています"
 
+#~ msgid "A public IP address must be entered for this topology."
+#~ msgstr "パブリック IP アドレスをこのトポロジに入力する必要があります"
+
+#~ msgid "A public hostname must be entered for this topology."
+#~ msgstr "パブリックホストネームをこのトポロジに入力する必要があります"
+
 #~ msgid "A self-signed certificate and private key have been automatically generated."
 #~ msgstr "自己署名済みの証明書とプライベート鍵が自動作成されました"
 
 #~ msgid "A self-signed certificate could not be generated because the system's clock is not set."
 #~ msgstr "システムクロックが設定されていない為、自己署名の証明書が作成出来ません"
+
+#~ msgid "A username must be specified."
+#~ msgstr "ユーザー名は、必須です。"
 
 #~ msgid "A valid \"fromuser\" must be specified."
 #~ msgstr "有効な\"fromuser\"を指定する必要があります"
@@ -2864,14 +1615,62 @@ msgstr "書き込み:"
 #~ msgid "A valid Caller ID string must be specified."
 #~ msgstr "有効なCaller IDの文字列を指定する必要があります"
 
+#~ msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
+#~ msgstr "DNSサーバーの有効なIPアドレスを指定する必要があります"
+
+#~ msgid "A valid MAC address must be specified."
+#~ msgstr "有効なMACアドレスを指定する必要があります"
+
+#~ msgid "A valid attended transfer timeout must be specified."
+#~ msgstr "有効な取り次ぎ転送のタイムアウト時間を指定する必要があります"
+
 #~ msgid "A valid default number (MSN) must be specified."
 #~ msgstr "有効なデフォルトの電話番号(MSN)を指定する必要があります"
+
+#~ msgid "A valid e-mail address must be specified for the \"from address\"."
+#~ msgstr "\"from address\"に対して、有効なe-mailアドレスを指定する必要があります"
+
+#~ msgid "A valid e-mail address must be specified."
+#~ msgstr "有効なe-mailアドレスを指定する必要があります"
+
+#~ msgid "A valid extension digit timeout must be specified."
+#~ msgstr "有効な内線番号入力のタイムアウト時間を指定する必要があります"
+
+#~ msgid "A valid extension must be entered."
+#~ msgstr "有効な内線番号を入力する必要があります"
+
+#~ msgid "A valid gateway must be specified."
+#~ msgstr "有効なゲートウェイを指定する必要があります"
 
 #~ msgid "A valid international prefix must be specified."
 #~ msgstr "有効な国際プレフィックスを指定する必要があります"
 
+#~ msgid "A valid key timeout must be specified."
+#~ msgstr "有効なキー入力のタイムアウト時間を指定する必要があります"
+
+#~ msgid "A valid park time must be specified."
+#~ msgstr "有効なパーク保留時間を指定する必要があります"
+
+#~ msgid "A valid parking extension must be specified."
+#~ msgstr "有効なパーク保留の内線番号を指定する必要があります"
+
+#~ msgid "A valid parking start position must be specified."
+#~ msgstr "有効なパーク保留の開始位置を指定する必要があります"
+
+#~ msgid "A valid parking stop position must be specified."
+#~ msgstr "有効なパーク保留の終了位置を指定する必要があります"
+
+#~ msgid "A valid public IP address must be entered for this topology."
+#~ msgstr "有効なパブリックIPアドレスを入力する必要があります"
+
+#~ msgid "A valid public hostname must be entered for this topology."
+#~ msgstr "有効なパブリックホストネームをこのトポロジに入力する必要があります"
+
 #~ msgid "A valid secret must be specified."
 #~ msgstr "有効なパスワードを指定する必要があります"
+
+#~ msgid "A valid subnet bit count must be specified."
+#~ msgstr "有効なサブネットのビット数を指定する必要があります"
 
 #~ msgid "A valid username must be specified."
 #~ msgstr "有効なユーザー名を指定する必要があります"
@@ -2884,6 +1683,15 @@ msgstr "書き込み:"
 
 #~ msgid "A whole number of calls must be entered for the \"call limit.\""
 #~ msgstr "\"call limit.\"として、全体の秒数を入力する必要があります"
+
+#~ msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
+#~ msgstr "\"Default Registration Expiration\"として、全体の秒数を入力する必要があります"
+
+#~ msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
+#~ msgstr "\"Maximum Registration Expiration\"として、全体の秒数を入力する必要があります"
+
+#~ msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
+#~ msgstr "\"Minimum Registration Expiration\"として、全体の秒数を入力する必要があります"
 
 #~ msgid "A whole number of seconds must be entered for the \"qualify\" timeout."
 #~ msgstr "\"qualify\"のタイムアウト時間として、全体の秒数を入力する必要があります"
@@ -2903,15 +1711,36 @@ msgstr "書き込み:"
 #~ msgid "ARP table"
 #~ msgstr "ARPテーブル"
 
+#~ msgid "Access PIN"
+#~ msgstr "入室用パスワード"
+
 #~ msgid "Account uses TLS"
 #~ msgstr "TLSを使用する"
 
 #~ msgid "Active Calls"
 #~ msgstr "有効な通話"
 
+#~ msgid "Active Channels"
+#~ msgstr "有効なチャンネル"
+
+#~ msgid "Active Channels / Calls"
+#~ msgstr "有効なチャンネル/呼"
+
+#~ msgid "Adding"
+#~ msgstr "追加"
+
+#~ msgid "Advanced Options"
+#~ msgstr "拡張設定"
+
 #, fuzzy
 #~ msgid "Advanced SIP Options"
 #~ msgstr "拡張設定"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "拡張設定"
+
+#~ msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
+#~ msgstr "すべてのグループのメンバーが同時に呼ばれます。<strong>誰も呼び出しに答えられないと、一番目のメンバーのヴォイスメールアカウントが使用されます"
 
 #~ msgid "Always on"
 #~ msgstr "常にON"
@@ -2921,6 +1750,21 @@ msgstr "書き込み:"
 
 #~ msgid "An e-mail address. If entered, voicemail will be enabled on this extension. Incoming messages will be sent to the given address."
 #~ msgstr "上の欄にEメールアドレスを入力すると、このアカウントのボイスメールが有効になります。届いたメッセージは、上記で指定されたアドレスに送られます"
+
+#~ msgid "Analog Phones"
+#~ msgstr "アナログ電話機"
+
+#~ msgid "Application"
+#~ msgstr "アプリケーション"
+
+#~ msgid "Application Logic"
+#~ msgstr "アプリケーションのロジック"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "本当に初期化しますか？"
+
+#~ msgid "Are you sure you want to reboot the system?"
+#~ msgstr "本当にAskoziaPBXを再起動しますか？"
 
 #~ msgid "Askozia&reg;PBX &copy; 2007-2010 IKT. All rights reserved."
 #~ msgstr "Askozia&reg;PBX &copy; 2007-2010 IKT. All rights reserved."
@@ -2952,8 +1796,29 @@ msgstr "書き込み:"
 #~ msgid "Attempt to remove echoes from the line. (recommended)"
 #~ msgstr "この回線からエコーを除去します(推奨)"
 
+#~ msgid "Attended"
+#~ msgstr "取り次ぎ転送"
+
+#~ msgid "Attended Transfer Answer"
+#~ msgstr "取り次ぎ転送への応答"
+
+#~ msgid "Audio"
+#~ msgstr "オーディオ"
+
 #~ msgid "Audio Codecs"
 #~ msgstr "オーディオコーデック"
+
+#~ msgid "Audio Prompts"
+#~ msgstr "音声"
+
+#~ msgid "Authentication Method"
+#~ msgstr "認証方式"
+
+#~ msgid "Authentication Scheme"
+#~ msgstr "認証方式"
+
+#~ msgid "Authorization User"
+#~ msgstr "Authorization User"
 
 #~ msgid "Auto"
 #~ msgstr "自動"
@@ -2962,20 +1827,71 @@ msgstr "書き込み:"
 #~ msgid "Auto-Configuration"
 #~ msgstr "設定ファイルのリストア"
 
+#~ msgid "AutoScale"
+#~ msgstr "自動スケール"
+
 #~ msgid "BSSID"
 #~ msgstr "BSSID"
+
+#~ msgid "Backup configuration"
+#~ msgstr "設定ファイルのバックアップ"
+
+#~ msgid "Basic"
+#~ msgstr "基本"
+
+#~ msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
+#~ msgstr "下記は、現在定義されている電話と、これらを呼び出す為の基本的なDial()コマンドのリストです。このコマンドには、多くの追加オプションが用意されています。ぜひアプリケーションタブにあるリファレンスドキュメントをお読み下さい"
+
+#~ msgid "Binding Port"
+#~ msgstr "接続ポート"
+
+#~ msgid "Blind"
+#~ msgstr "強制転送"
+
+#~ msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
+#~ msgstr "強制転送先をこのコールパーキング用内線番号に指定すると、転送した後に、何番にコールパーキングされているかを、AskoziaPBXがお知らせします(初期値 700)"
+
+#~ msgid "Body"
+#~ msgstr "本文"
 
 #~ msgid "Busy Limit"
 #~ msgstr "話し中制限"
 
+#~ msgid "Call Groups"
+#~ msgstr "グループ"
+
 #~ msgid "Call Limit"
 #~ msgstr "通話制限"
+
+#~ msgid "Call Notifications & Voicemail"
+#~ msgstr "コール通知とヴォイスメール"
+
+#~ msgid "Call Parking"
+#~ msgstr "コールパーキング"
 
 #~ msgid "Call Records"
 #~ msgstr "通話録音"
 
+#~ msgid "Call Routing"
+#~ msgstr "コールルーティング"
+
+#~ msgid "Caller ID"
+#~ msgstr "発信者ID"
+
+#~ msgid "Caller ID / Name"
+#~ msgstr "Caller ID / Name"
+
+#~ msgid "Caller ID Options"
+#~ msgstr "発信者IDオプション"
+
+#~ msgid "Calls Processed"
+#~ msgstr "呼が完了しました"
+
 #~ msgid "Cancel"
 #~ msgstr "キャンセル"
+
+#~ msgid "Cannot get CPU load"
+#~ msgstr "CPUの負荷状況を取得出来ません"
 
 #~ msgid "Capabilities"
 #~ msgstr "能力"
@@ -2983,11 +1899,23 @@ msgstr "書き込み:"
 #~ msgid "Capacity"
 #~ msgstr "容量"
 
+#~ msgid "Card"
+#~ msgstr "カード"
+
 #~ msgid "Certificate"
 #~ msgstr "証明書"
 
 #~ msgid "Certificate and key must always be specified together."
 #~ msgstr "証明書と鍵は常に一緒である必要があります"
+
+#~ msgid "Changes to this option will take effect after a reboot."
+#~ msgstr "この変更は、再起動後に有効となります"
+
+#~ msgid "Channel"
+#~ msgstr "チャンネル"
+
+#~ msgid "Channels"
+#~ msgstr "チャンネル"
 
 #~ msgid "Checked interfaces will be bridged to the main interface."
 #~ msgstr "インターフェースをチェックすると、主たるインターフェースをブリッジさせる事が出来ます"
@@ -2998,8 +1926,14 @@ msgstr "書き込み:"
 #~ msgid "Checked providers will be accessible from this phone."
 #~ msgstr "この電話機が接続可能な回線にチェックを入れて下さい"
 
+#~ msgid "Choose the new firmware image file (%s-*.img) to be installed."
+#~ msgstr "インストールする新しいファームウェアのイメージファイル (pbx-%s-*.img) を選択して下さい"
+
 #~ msgid "Cipher"
 #~ msgstr "暗号化方式"
+
+#~ msgid "Clear"
+#~ msgstr "消去"
 
 #~ msgid "Clear Log"
 #~ msgstr "ログを消去する"
@@ -3010,21 +1944,75 @@ msgstr "書き込み:"
 #~ msgid "Click &quot;Enable firmware upload&quot; below."
 #~ msgstr "下記の &quot;Enable firmware upload&quot;をクリック"
 
+#~ msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
+#~ msgstr "&quot;ファームウェアのアップグレード&quot; をクリックし、アップグレードを開始して下さい"
+
 #~ msgid "Click the <img src=\"img/update.png\" border=\"0\"> icon below to select and install the updated packages."
 #~ msgstr "アップデートされたパッケージを選択し、インストールするには、<img src=\"img/update.png\" border=\"0\">アイコンをクリックして下さい"
+
+#~ msgid "Click this button to download the system configuration in XML format."
+#~ msgstr "このボタンをクリックして、AskoziaPBXの設定ファイル(XML形式)をダウンロードして下さい"
+
+#~ msgid "Codecs"
+#~ msgstr "コーデック"
+
+#~ msgid "Collecting initial data, please wait..."
+#~ msgstr "初期データの収集を行っています。暫くお待ち下さい"
 
 #~ msgid "Collisions"
 #~ msgstr "データの衝突"
 
+#~ msgid "Command"
+#~ msgstr "コマンド"
+
+#~ msgid "Command:"
+#~ msgstr "コマンド:"
+
+#~ msgid "Completely override the generated registration string with a manually defined one."
+#~ msgstr "手動で定義したレジストレーションコードで、完全に上書きされます"
+
+#~ msgid "Conference"
+#~ msgstr "電話会議"
+
+#~ msgid "Conference Rooms"
+#~ msgstr "電話会議室"
+
+#~ msgid "Conference number already exists."
+#~ msgstr "会議室番号は、既に存在しています"
+
+#~ msgid "Conference number matches an existing extension."
+#~ msgstr "会議室番号が既存の内線番号と一致します"
+
+#~ msgid "Conference pins must be numeric."
+#~ msgstr "電話会議室のピンコードは、数字である必要があります"
+
+#~ msgid "Conference room numbers must be numeric."
+#~ msgstr "電話会議室の番号は数字である必要があります"
+
 #~ msgid "Conference rooms with optional pin authentication can be configured here. The system's performance is the only limiting factor on the number of concurrent members. These rooms can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "ピンコード認証付の電話会議室は、ここで設定出来ます。会議室を同時利用できるメンバー数は、システムのパフォーマンスによって制限されます。これらの会議室は定義されたダイヤルプラン経由か、電話会社からの着信の宛先として、使用する事が出来ます"
+
+#~ msgid "Conferences"
+#~ msgstr "電話会議"
 
 #, fuzzy
 #~ msgid "Configured"
 #~ msgstr "未設定"
 
+#~ msgid "Connect"
+#~ msgstr "接続"
+
 #~ msgid "Connecting a provider line to an FXS port can damage your hardware! If you are unsure which ports are FXO or FXS on your card, configure and connect your phone accounts before connecting any provider lines."
 #~ msgstr "FXSポートに、電話会社の電話回線を接続すると、あなたのハードウェアに損傷を与えてしまいます。もしカードのポートがFXOかFXSのどちらか判らない場合、電話回線に接続する前に、そのポートに内線番号を割り当てた上で電話機を接続してみて、FXSなのかどうか、切り分けてから使用して下さい"
+
+#~ msgid "Connection Initialization"
+#~ msgstr "接続の初期化"
+
+#~ msgid "Connectivity"
+#~ msgstr "接続性"
+
+#~ msgid "Console menu"
+#~ msgstr "コンソールメニュー"
 
 #~ msgid "Contents"
 #~ msgstr "コンテンツ"
@@ -3035,6 +2023,18 @@ msgstr "書き込み:"
 #~ msgid "Count must be between 1 and %d"
 #~ msgstr "回数は、1から %dの間でなくてはなりません"
 
+#~ msgid "Custom Applications"
+#~ msgstr "カスタムアプリケーション"
+
+#~ msgid "DNS Service Records"
+#~ msgstr "DNSサービスレコード"
+
+#~ msgid "DO NOT abort the firmware upgrade once it has started."
+#~ msgstr "アップグレードが完了するまで、絶対に中断したりブラウザを閉じたりしないで下さい"
+
+#~ msgid "DTMF Mode"
+#~ msgstr "DTMFモード"
+
 #~ msgid "Debug"
 #~ msgstr "デバッグ"
 
@@ -3044,11 +2044,23 @@ msgstr "書き込み:"
 #~ msgid "Debugging"
 #~ msgstr "デバッグ"
 
+#~ msgid "Default values are 60, 3600 and 120 respectively."
+#~ msgstr "初期値は、60,3600,そして120が推奨値です"
+
+#~ msgid "Defaults to the e-mail address used in the %s setup."
+#~ msgstr "%s 設定で使用したEメールアドレスを標準として使用します"
+
+#~ msgid "Deny Network"
+#~ msgstr "拒否するネットワーク"
+
 #~ msgid "Descriptive name for this interface"
 #~ msgstr "このインターフェイスのわかりやすい名前"
 
 #~ msgid "Descriptive name for this phone."
 #~ msgstr "この電話の判り易い名前"
+
+#~ msgid "Descriptive name for this provider."
+#~ msgstr "このアカウントの名前"
 
 #~ msgid "Detected ports on this page must be edited and saved before the system can utilize them."
 #~ msgstr "システムで利用する前に、このページで検出されたポートを編集し、保存する必要があります"
@@ -3059,11 +2071,26 @@ msgstr "書き込み:"
 #~ msgid "Diagnostics"
 #~ msgstr "機器診断"
 
+#~ msgid "Dialing Pattern(s)"
+#~ msgstr "ダイヤルパターン"
+
+#~ msgid "Dialplan Element Library"
+#~ msgstr "ダイヤルプラン要素のライブラリー"
+
+#~ msgid "Dialstring"
+#~ msgstr "電話番号列"
+
 #~ msgid "Dialtone"
 #~ msgstr "ダイヤルトーン"
 
+#~ msgid "Disable DNS SRV lookups."
+#~ msgstr "DNS SRV lookupsを無効にする。"
+
 #~ msgid "Disable Power Save"
 #~ msgstr "省電力無効"
+
+#~ msgid "Disable console menu"
+#~ msgstr "コンソールメニュー無効"
 
 #~ msgid "Disable firmware upload"
 #~ msgstr "ファームウェアのアップロードを無効にする"
@@ -3071,30 +2098,126 @@ msgstr "書き込み:"
 #~ msgid "Disable firmware version check"
 #~ msgstr "ファームウェアのバージョン確認無効"
 
+#~ msgid "Disable overrides"
+#~ msgstr "上書き無効"
+
 #~ msgid "Disable package version checks"
 #~ msgstr "パッケージバージョン確認の無効"
 
 #~ msgid "Disable power save mode. (sometimes needed for older cards)"
 #~ msgstr "省電力モードを無効(古いタイプのカードでは、まれにこの設定が必要になります)"
 
+#~ msgid "Disabled"
+#~ msgstr "無効"
+
+#~ msgid "Do not register with this provider."
+#~ msgstr "この電話会社には登録しません"
+
+#~ msgid "Do you really want to delete this application mapping?"
+#~ msgstr "本当に、このアプリケーションの関連付けを削除しますか？"
+
+#~ msgid "Do you really want to delete this application?"
+#~ msgstr "本当に、このアプリケーションを削除しますか？"
+
+#~ msgid "Do you really want to delete this call group?"
+#~ msgstr "本当にこのグループを削除しますか？"
+
+#~ msgid "Do you really want to delete this conference room?"
+#~ msgstr "本当に、この電話会議室を削除しますか？"
+
+#~ msgid "Do you really want to delete this fax?"
+#~ msgstr "本当にこのファックスを削除しますか？"
+
+#~ msgid "Do you really want to delete this manager user?"
+#~ msgstr "本当に、この管理者ユーザーを削除しますか？"
+
+#~ msgid "Do you really want to delete this phone?"
+#~ msgstr "本当にこの電話機を削除しますか？"
+
+#~ msgid "Do you really want to delete this port group's settings?"
+#~ msgstr "本当に、このポートグループの設定を、削除しても宜しいですか？"
+
+#~ msgid "Do you really want to delete this provider?"
+#~ msgstr "本当にこの接続回線を無効にしますか？"
+
+#~ msgid "Do you really want to disable this fax?"
+#~ msgstr "本当に、このファックスを無効にしますか？"
+
 #~ msgid "Do you really want to disable this package?"
 #~ msgstr "本当に、このパッケージを無効にしますか？"
+
+#~ msgid "Do you really want to disable this phone?"
+#~ msgstr "本当にこの電話機を無効にしますか？"
+
+#~ msgid "Do you really want to disable this provider?"
+#~ msgstr "本当に接続回線を無効にしますか？"
 
 #, fuzzy
 #~ msgid "Do you really want to forget this disk's settings?"
 #~ msgstr "本当に、このインターフェース\\の設定を、忘れても宜しいですか？"
 
+#~ msgid "Do you really want to forget this disk?"
+#~ msgstr "本当にこのディスクを削除しますか？"
+
+#~ msgid "Do you really want to forget this gateway's settings?"
+#~ msgstr "本当に、このゲートウェイの設定を、忘れても宜しいですか？"
+
 #~ msgid "Do you really want to forget this interface\\'s settings?"
 #~ msgstr "本当に、このインターフェース\\の設定を、忘れても宜しいですか？"
+
+#~ msgid "Do you really want to forget this port\\'s settings?"
+#~ msgstr "本当に、このポート\\の設定を、忘れても宜しいですか？"
+
+#~ msgid "Do you really want to kick this member?"
+#~ msgstr "本当に、このメンバーを会議から外して良いですか？"
 
 #~ msgid "Do you really want to permanently delete this package\\'s configuration and data?"
 #~ msgstr "本当にこのパッケージ\\の設定とデータを、完全に削除しますか？"
 
+#~ msgid "Download"
+#~ msgstr "ダウンロード"
+
+#~ msgid "Download configuration"
+#~ msgstr "設定ファイルのダウンロード"
+
+#~ msgid "Download:"
+#~ msgstr "ダウンロード:"
+
 #~ msgid "Driver Type"
 #~ msgstr "ドライバータイプ"
 
+#~ msgid "E-Mail"
+#~ msgstr "E-Mail"
+
 #~ msgid "E-Mail Language"
 #~ msgstr "Eメール用言語"
+
+#~ msgid "E-mail Address"
+#~ msgstr "E-mailアドレス"
+
+#~ msgid "E-mail Me"
+#~ msgstr "私にメールを送る"
+
+#~ msgid "E-mail has been sent successfully."
+#~ msgstr "Eメールの送信が、完了しました"
+
+#~ msgid "E-mail notifications for new voicemail will be delivered in this language."
+#~ msgstr "新しいボイスメールのお知らせをEメールで送信する際の言語を指定して下さい"
+
+#~ msgid "E-mail was not sent, check your settings."
+#~ msgstr "Eメールは、送信されませんでした。あなたの設定をご確認下さい"
+
+#~ msgid "ERR Could not install configuration.\n"
+#~ msgstr "ERR 設定をインストール出来ませんでした\n"
+
+#~ msgid "ERR Could not save configuration.\n"
+#~ msgstr "ERR 設定を保存出来ませんでした\n"
+
+#~ msgid "ERR Invalid configuration received.\n"
+#~ msgstr "ERR 無効な設定を受信しました\n"
+
+#~ msgid "Echo Cancellation"
+#~ msgstr "エコーキャンセラー"
 
 #~ msgid "Echo Canceller"
 #~ msgstr "エコーキャンセラー"
@@ -3102,11 +2225,26 @@ msgstr "書き込み:"
 #~ msgid "Edit Analog"
 #~ msgstr "アナログの編集"
 
+#~ msgid "Edit Analog %s Port"
+#~ msgstr "アナログ %s ポートの編集"
+
 #~ msgid "Edit Analog Line"
 #~ msgstr "アナログの編集"
 
+#~ msgid "Edit Analog Phone"
+#~ msgstr "アナログ電話機の編集"
+
+#~ msgid "Edit Analog Provider"
+#~ msgstr "アナログプロバイダーの編集"
+
+#~ msgid "Edit Application"
+#~ msgstr "アプリケーションの編集"
+
 #~ msgid "Edit Disk"
 #~ msgstr "ディスクの編集"
+
+#~ msgid "Edit External Phone"
+#~ msgstr "外部にある電話機の編集"
 
 #, fuzzy
 #~ msgid "Edit Fax"
@@ -3115,17 +2253,59 @@ msgstr "書き込み:"
 #~ msgid "Edit IAX Account"
 #~ msgstr "IAXアカウントの編集"
 
+#~ msgid "Edit IAX Phone"
+#~ msgstr "IAX電話機の編集"
+
+#~ msgid "Edit IAX Provider"
+#~ msgstr "IAXプロバイダーの編集"
+
+#~ msgid "Edit ISDN %s Port"
+#~ msgstr "ISDN %s ポートの編集"
+
 #~ msgid "Edit ISDN Interface #%s"
 #~ msgstr "ISDNインターフェース#%sを編集"
 
 #~ msgid "Edit ISDN Line"
 #~ msgstr "ISDNの編集"
 
+#~ msgid "Edit ISDN Phone"
+#~ msgstr "ISDN電話機の編集"
+
+#~ msgid "Edit ISDN Provider"
+#~ msgstr "ISDNプロバイダーのの編集"
+
+#~ msgid "Edit Provider Group"
+#~ msgstr "プロバイダーグループの編集"
+
+#~ msgid "Edit Redfone Gateway"
+#~ msgstr "Redfoneゲートウェイを編集"
+
+#~ msgid "Edit Room"
+#~ msgstr "会議室の編集"
+
 #~ msgid "Edit SIP Account"
 #~ msgstr "SIPアカウントの設定"
 
+#~ msgid "Edit SIP Phone"
+#~ msgstr "SIP電話機の編集"
+
+#~ msgid "Edit SIP Provider"
+#~ msgstr "SIPプロバイダーの編集"
+
+#~ msgid "Edit Skinny Phone"
+#~ msgstr "Skinny電話機の編集"
+
+#~ msgid "Edit User"
+#~ msgstr "ユーザー情報の編集"
+
 #~ msgid "Edit Virtual Fax"
 #~ msgstr "バーチャルファックスの編集"
+
+#~ msgid "Enable"
+#~ msgstr "有効"
+
+#~ msgid "Enable Jitterbuffer on IAX connections terminated by the system."
+#~ msgstr "AskoziaPBXによるIAX接続上で、ジッターバッファを有効にする"
 
 #~ msgid "Enable Polling Mode"
 #~ msgstr "ポーリングモード有効"
@@ -3145,6 +2325,15 @@ msgstr "書き込み:"
 #~ msgid "Enable syslog'ing to remote syslog server"
 #~ msgstr "リモートのSyslogサーバーでのSyslog記録を有効にする"
 
+#~ msgid "Enabled"
+#~ msgstr "有効"
+
+#~ msgid "Encoding"
+#~ msgstr "エンコーディング"
+
+#~ msgid "Encryption Method"
+#~ msgstr "暗号化方式"
+
 #, fuzzy
 #~ msgid "Enter a NTP server to synchronize with. Remember to set up at least one DNS server if you enter a host name here!"
 #~ msgstr "複数のNTPサーバーを設定する場合は、スペースを空けて、入力して下さい(推奨は１ホストのみ)。又、NTPサーバーを利用する場合は[接続経路]->[ネットワーク]->[DNSサーバー]の設定を忘れずに行って下さい"
@@ -3152,14 +2341,103 @@ msgstr "書き込み:"
 #~ msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP, 443 for HTTPS)."
 #~ msgstr "標準のwebGUIポート(HTTPは80番,HTTPSは443番)以外を使用する場合には、上の欄にポート番号を入力して下さい"
 
+#~ msgid "Enter a descriptive name for this disk."
+#~ msgstr "このディスクの判り易い名前を入力して下さい"
+
 #~ msgid "Enter a descriptive name for this fax."
 #~ msgstr "このファックスに判り易い名前を入力して下さい"
+
+#~ msgid "Enter a descriptive name for this gateway."
+#~ msgstr "このゲートウェイに判り易い名前を入力して下さい"
+
+#~ msgid "Enter a descriptive name for this port."
+#~ msgstr "このポートに判り易い名前を入力して下さい"
+
+#~ msgid "Enter a descriptive name for this span."
+#~ msgstr "このSpanに判り易い名前を入力して下さい"
+
+#~ msgid ""
+#~ "Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - matches one or more characters</li>\n"
+#~ " \t<li><strong>!</strong> - matches zero or more characters</li>\n"
+#~ " </ul>\n"
+#~ msgstr ""
+#~ "パターンもしくは電話番号の入力、また宛先の内線番号の選択。複数の電話機を鳴らす場合には、同じパターンを用いて、シンプルに定義します。電話番号を入力した場合には、応答しなかった呼に\"external\" ナンバーとして使用されます。何も入力しなかた場合、全ての呼は直接宛先内線番号を呼び出します<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>+</strong> - 頭に番号を追加します(例:\"1+555\"と設定すると、\"555\"をダイヤルした時にマッチし、\"1555\"でこの電話会社に発信されます)</li>\n"
+#~ " \t<li><strong>|</strong> - 頭から番号を削除します(例:\"1|555\"と設定すると、\"1555\"をダイヤルした時にマッチし、\"555\"でこの電話会社に発信されます)</li>\n"
+#~ " \t<li><strong>X</strong> - 0-9のいずれかの数字とマッチ</li>\n"
+#~ " \t<li><strong>Z</strong> - 1-9のいずれかの数字とマッチ</li>\n"
+#~ " \t<li><strong>N</strong> - 2-9のいずれかの数字とマッチ</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - 数字または範囲を指定された数字とマッチ(この例では1と3から5のいずれかとマッチ)</li>\n"
+#~ " \t<li><strong>.</strong> - 一つもしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
+#~ " \t<li><strong>!</strong> - 0もしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
+#~ " </ul>\n"
+
+#~ msgid ""
+#~ "Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
+#~ " 2,Echo()\n"
+#~ " 3,Hangup()\n"
+#~ " </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
+#~ msgstr ""
+#~ "アプリケーションロジックの入力,1行1コマンド:<br> <pre> 1,Answer()\n"
+#~ " 2,Echo()\n"
+#~ " 3,Hangup()\n"
+#~ " </pre> <p>AskoziaPBXのアプリケーションプログラミングには、Asteriskダイヤルプランの知識が必要です。努力すればこの入力を検証する事ができますが、欠陥の有るアプリケーションロジックによって、AskoziaPBXが故障してしまう可能性は残ります。アプリケーション、機能、そして電話機のリファエンスが、<strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>にあります</p>"
+
+#~ msgid ""
+#~ "Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
+#~ " \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
+#~ " \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
+#~ " \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
+#~ " </ul>\n"
+#~ msgstr ""
+#~ "パターンの入力,1行につき1つ,この電話会社のルーティングを定義します。\"X!\"を設定すると、発信は全てこの電話会社を使用します。\"9\"を押した時だけ、この電話会社を使って発信したい時には、\"9|.\"を設定して下さい。もし何も入力しなかった場合、着信のみ許可します<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>+</strong> - 頭に番号を追加します(例:\"1+555\"と設定すると、\"555\"をダイヤルした時にマッチし、\"1555\"でこの電話会社に発信されます)</li>\n"
+#~ " \t<li><strong>|</strong> - 頭から番号を削除します(例:\"1|555\"と設定すると、\"1555\"をダイヤルした時にマッチし、\"555\"でこの電話会社に発信されます)</li>\n"
+#~ " \t<li><strong>X</strong> - 0-9のいずれかの数字とマッチ</li>\n"
+#~ " \t<li><strong>Z</strong> - 1-9のいずれかの数字とマッチ</li>\n"
+#~ " \t<li><strong>N</strong> - 2-9のいずれかの数字とマッチ</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - 数字または範囲を指定された数字とマッチ(この例では1と3から5のいずれかとマッチ)</li>\n"
+#~ " \t<li><strong>.</strong> - 一つもしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
+#~ " \t<li><strong>!</strong> - 0もしくは複数の数字とマッチ( | や +の前には置けません)</li>\n"
+#~ " </ul>\n"
+
+#~ msgid "Enter the full path where this device should be mounted."
+#~ msgstr "このデバイスをどこにマウントしなければならないかを、フルパスで入力して下さい"
 
 #~ msgid "Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."
 #~ msgstr "WPA-PSKモードで使用するパスワードを入力して下さい。8から63文字の間である必要があります"
 
+#~ msgid "Execute"
+#~ msgstr "実行"
+
 #~ msgid "Existing package not found, update failed."
 #~ msgstr "既存のパッケージが見つかりません。アップデートに失敗しました"
+
+#~ msgid "Extension"
+#~ msgstr "内線"
+
+#~ msgid "Extension Digit"
+#~ msgstr "内線番号の入力"
+
+#~ msgid "External"
+#~ msgstr "外部"
+
+#~ msgid "External Phones"
+#~ msgstr "外部の電話"
 
 #~ msgid "Extracted package not found, install failed."
 #~ msgstr "展開されたパッケージが見つかりません。インストールに失敗しました"
@@ -3174,6 +2452,9 @@ msgstr "書き込み:"
 
 #~ msgid "FXS interfaces connect to telephones and FXO interfaces connect to provider lines. FXS interfaces produce electricity to power the telephone and FXO interfaces accept the electricity generated by the provider."
 #~ msgstr "FXSインターフェイスは電話機に接続し、FXOインターフェイスは電話会社の電話回線に接続します。FXS インターフェイスは、電話機に電気を生成し、FXOインターフェイスは電話会社の電話回線(もしくは局)よって生成される電気を受け入れます"
+
+#~ msgid "Failover Provider"
+#~ msgstr "非常用プロバイダー(回線)"
 
 #~ msgid "Fax Accounts allow you to connect fax machines to your system as well as convert incoming faxes to e-mails. Click a fax type below to get started."
 #~ msgstr "ファックスのアカウントは、あなたのシステムにファックス機器の接続を許可する事だけでなく、受信したファックスをEメールに変換して送信する事を実現します。次の中からファックスのタイプを選択して、開始して下さい"
@@ -3200,8 +2481,20 @@ msgstr "書き込み:"
 #~ msgid "File contents (%s) saved."
 #~ msgstr "ファイルの内容 (%s) を保存しました"
 
+#~ msgid "Filename"
+#~ msgstr "ファイル名"
+
 #~ msgid "Firewall"
 #~ msgstr "ファイアウォール"
+
+#~ msgid "Firmware Version"
+#~ msgstr "ファームウェアバージョン"
+
+#~ msgid "Firmware image file:"
+#~ msgstr "ファームウェアのイメージファイル:"
+
+#~ msgid "Firmware uploading is not supported on this platform."
+#~ msgstr "このプラットフォームでは、ファームウェアのアップロードはサポートされていません"
 
 #~ msgid "Firmware version check"
 #~ msgstr "ファームウェアのバージョン確認"
@@ -3209,14 +2502,59 @@ msgstr "書き込み:"
 #~ msgid "Flags: A = authorized, E = Extended Rate (802.11g), P = Power save mode<br>Capabilities: E = ESS (infrastructure mode), I = IBSS (ad-hoc mode), P = privacy (WEP/TKIP/AES), S = Short preamble, s = Short slot time"
 #~ msgstr "フラグ: A = 認証済み, E = 拡張レート (802.11g), P = 省電力モード<br>能力: E = ESS (インフラストラクチャモード), I = IBSS (アドホックモード), P = プライバシー (WEP/TKIP/AES), S = Short preamble, s = Short slot time"
 
+#~ msgid "Force"
+#~ msgstr "効力"
+
+#~ msgid "Formatting failed! (returned "
+#~ msgstr "フォーマット失敗(戻る"
+
+#~ msgid "Formatting successful!"
+#~ msgstr "フォーマット完了"
+
+#~ msgid "Framing"
+#~ msgstr "フレーム"
+
 #~ msgid "French (France)"
 #~ msgstr "フランス語(フランス)"
+
+#~ msgid "From Address"
+#~ msgstr "送信者アドレス"
+
+#~ msgid "From Domain"
+#~ msgstr "From Domain"
+
+#~ msgid "From User"
+#~ msgstr "From User"
+
+#~ msgid "Functions"
+#~ msgstr "機能"
 
 #~ msgid "Gain (rx/tx)"
 #~ msgstr "Gain (rx/tx)"
 
+#~ msgid "Gateway Name"
+#~ msgstr "ゲートウェイ名"
+
+#~ msgid "Gateways"
+#~ msgstr "ゲートウェイ"
+
+#~ msgid "General"
+#~ msgstr "全般"
+
 #~ msgid "Generate self-signed certificate"
 #~ msgstr "自己署名証明書の作成"
+
+#~ msgid "Graph shows last"
+#~ msgstr "Graph shows last"
+
+#~ msgid "Ground Start"
+#~ msgstr "グランドスタート"
+
+#~ msgid "Group Members"
+#~ msgstr "グループメンバー"
+
+#~ msgid "Group name"
+#~ msgstr "グループ名"
 
 #~ msgid "Groups of extensions can be configured to ring concurrently. These groups can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "内線をグループ化する事で、同時呼び出しを設定できます。 これらのグループは、定義されたエクステンション経由でダイヤルしたり、プロバイダーからの着信呼び出しの送信先として使用することができます"
@@ -3237,6 +2575,9 @@ msgstr "書き込み:"
 #~ msgid "Hardware"
 #~ msgstr "ファームウェア"
 
+#~ msgid "Hardware Port"
+#~ msgstr "ハードウェアポート"
+
 #, fuzzy
 #~ msgid "Hardware Version"
 #~ msgstr "ファームウェア"
@@ -3244,20 +2585,44 @@ msgstr "書き込み:"
 #~ msgid "Help"
 #~ msgstr "ヘルプ"
 
+#~ msgid "Hide Analog related options"
+#~ msgstr "アナログ関連のオプションを隠す"
+
+#~ msgid "Hide IAX related options"
+#~ msgstr "IAX関連のオプションを隠す"
+
+#~ msgid "Hide ISDN related options"
+#~ msgstr "ISDN関連のオプションを隠す"
+
+#~ msgid "Hide SIP related options"
+#~ msgstr "SIP関連のオプションを隠す"
+
 #~ msgid "Hide SSID"
 #~ msgstr "SSIDを隠す"
+
+#~ msgid "Hot Keys"
+#~ msgstr "操作ボタン"
+
+#~ msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
+#~ msgstr "家庭用のISDN回線は、通常Point-to-Multipointで、オフィス用のISDN回線は、よりPoint-to-Pointに近いです"
+
+#~ msgid "IAX Phones"
+#~ msgstr "IAX電話機"
 
 #~ msgid "IAX proxy host URL or IP address and optional port."
 #~ msgstr "IAXプロキシーのURLもしくは、IPアドレスを設定して下さい。(ポート番号はオプション)"
 
-#~ msgid "IP address"
-#~ msgstr "IPアドレス"
+#~ msgid "IP"
+#~ msgstr "cSIP"
 
 #~ msgid "IP address of remote syslog server"
 #~ msgstr "リモートSyslogサーバーのIPアドレス"
 
 #~ msgid "ISDN Interface"
 #~ msgstr "ISDNインターフェース"
+
+#~ msgid "ISDN Phones"
+#~ msgstr "ISDN電話機"
 
 #~ msgid "If a compatible wireless card is present in the system, it can be configured to act as an Access Point. It will be bridged to the wired network that the PBX is connected to."
 #~ msgstr "互換性のあるワイヤレス カードがシステムに存在する場合、AskoziaPBXをアクセスポイントとして動作させる事ができます。それは、AskoziaPBX に接続されている有線ネットワークのブリッジとして動作します"
@@ -3268,6 +2633,12 @@ msgstr "書き込み:"
 #~ msgid "If an analog interface is present but was not detected, please send <a href=\"ajax.cgi?exec_shell=/usr/sbin/pciconf%20-lv;/bin/echo;/bin/dmesg\">this output</a> to <a href=\"mailto:michael@askozia.com\">michael@askozia.com</a>."
 #~ msgstr "もし、アナログインタフェースが存在しているにも関わらず、見つからないと表示された場合、 <a href=\"ajax.cgi?exec_shell=/usr/sbin/pciconf%20-lv;/bin/echo;/bin/dmesg\">この情報</a> を <a href=\"mailto:michael@askozia.com\">michael@askozia.com</a>にEメールで送って下さい"
 
+#~ msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
+#~ msgstr "もしこのプロバイダー宛に発信したコールが失敗したら、上に選択されている非常用ルートでの接続を試みます。その場合、ダイヤルパターンが一致している必要が有ります"
+
+#~ msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
+#~ msgstr "もしこのポートにコールが着信した場合に、音量がとても騒がしいか、とても小さい場合、ここで調整して下さい。受信及び送信のレベル(単位はデシベル)を個別に調節する事が出来ます"
+
 #~ msgid "If this is a USB ISDN device, send <a href=\"ajax.cgi?exec_shell=/sbin/udesc_dump\">this output</a> as well."
 #~ msgstr "もし、USBタイプのISDN機器を接続している場合には、<a href=\"ajax.cgi?exec_shell=/sbin/udesc_dump\">この情報</a> をEメールで送って下さい"
 
@@ -3277,6 +2648,16 @@ msgstr "書き込み:"
 #, fuzzy
 #~ msgid "If you click &quot;Yes&quot;, the PBX will "
 #~ msgstr "システムログの一覧"
+
+#, fuzzy
+#~ msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
+#~ msgstr "&quot;はい&quot;をクリックするとAskoziaPBXは直ぐに再起動され、工場出荷時の状態に戻ります。これにより、全ての設定は初期化されますので、再起動後はIPアドレス'192.168.1.2'となり、webGUI用のパスワードは'%s'となります"
+
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "イメージのアップロードに失敗しました(メモリー不足かも知れません)"
+
+#~ msgid "In"
+#~ msgstr "In"
 
 #~ msgid "In most cases, you should select &quot;WPA + WPA2&quot; here."
 #~ msgstr "ほとんどの場合、ここで&quot;WPA + WPA2&quot; を選択する必要があります"
@@ -3293,11 +2674,29 @@ msgstr "書き込み:"
 #~ msgid "In/Out Packets"
 #~ msgstr "In/Out パケット"
 
+#~ msgid "Inactive"
+#~ msgstr "無効"
+
 #~ msgid "Incoming Caller ID Overrides"
 #~ msgstr "着信時に発信者IDの上書きをする"
 
+#~ msgid "Incoming Extensions"
+#~ msgstr "内線番号(着信用)"
+
+#~ msgid "Incoming Modification"
+#~ msgstr "着信用した呼の発信者番号の変更"
+
 #~ msgid "Incoming faxes will be converted and sent to this e-mail address."
 #~ msgstr "着信したファックスを変換し、このEメールアドレスに送信します"
+
+#~ msgid "Individual Ports"
+#~ msgstr "個々のポート"
+
+#~ msgid "Initial connection failed!"
+#~ msgstr "初期接続失敗！"
+
+#~ msgid "Initial connection successful!"
+#~ msgstr "初期接続完了！"
 
 #~ msgid "Install"
 #~ msgstr "インストール"
@@ -3314,15 +2713,39 @@ msgstr "書き込み:"
 #~ msgid "Interfaces"
 #~ msgstr "インターフェース"
 
+#~ msgid "Internal Phones"
+#~ msgstr "内部の電話"
+
+#~ msgid "Internal extension used to reach this application."
+#~ msgstr "このアプリケーションに接続させる為に割り当てる内線番号"
+
+#~ msgid "Internal extension used to reach this call group."
+#~ msgstr "このコールグループに到達する為に、内部エクステンションを使用する"
+
 #~ msgid "Internal extension used to reach this phone."
 #~ msgstr "Internal extensionはこの電話に到達可能"
+
+#~ msgid "International Prefix"
+#~ msgstr "国際識別番号"
+
+#~ msgid "Is there a NATing device between the PBX and this account?"
+#~ msgstr "このアカウントと、PBXとの間にNATが存在していますか？"
 
 #, fuzzy
 #~ msgid "Is there a NATing device between the pbx and this account? Setting this to 'yes' will work in most cases. The options 'never' and 'route' are only rarely used for certain buggy SIP phones."
 #~ msgstr "このアカウントとAskoziaPBXとの間にNATしているデバイスはありますか？ほとんどの場合、'yes'の設定で動きます。'never'と'route'は、特定のバギーなSIP電話機でのみ、稀に使用されます"
 
+#~ msgid "Jitterbuffer"
+#~ msgstr "ジッタバッファー"
+
+#~ msgid "Keep advanced options in navigation expanded"
+#~ msgstr "展開されたナビゲーションで、詳細オプションを維持します"
+
 #~ msgid "Keep diagnostics in navigation expanded"
 #~ msgstr "展開されたナビゲーションで、診断を維持します"
+
+#~ msgid "Kewl Start"
+#~ msgstr "クールスタート"
 
 #~ msgid "Key"
 #~ msgstr "鍵"
@@ -3354,17 +2777,48 @@ msgstr "書き込み:"
 #~ msgid "Live"
 #~ msgstr "レポート"
 
+#~ msgid "Loaded"
+#~ msgstr "読み込み"
+
+#~ msgid "Local Area Network"
+#~ msgstr "LAN側ネットワーク"
+
+#~ msgid "Local Interface"
+#~ msgstr "ローカルインターフェース"
+
+#, fuzzy
+#~ msgid "Local Prefix"
+#~ msgstr "国番号"
+
+#~ msgid "Location"
+#~ msgstr "場所"
+
+#~ msgid "Logic"
+#~ msgstr "ロジック"
+
+#~ msgid "Loop Start"
+#~ msgstr "ループスタート"
+
 #~ msgid "MAC address"
 #~ msgstr "MACアドレス"
 
 #~ msgid "Main Number"
 #~ msgstr "主番号"
 
+#~ msgid "Manager Interface"
+#~ msgstr "管理者画面"
+
+#~ msgid "Manual Attributes"
+#~ msgstr "追加設定"
+
 #~ msgid "Manual Install"
 #~ msgstr "手動インストール"
 
 #~ msgid "Manual Update"
 #~ msgstr "手動アップデート"
+
+#~ msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
+#~ msgstr "手動で、キーと値のペアを、生成された設定に加え、入力出来ます。(例:<em>configoption=value</em>)。これらの設定は、このアイテムのAsterisk設定ファイルもしくはコンテクストに追加されます。特にこれに関する指定が無い限り、この項目には何もすべきではありません。不適切な値はシステムの機能を停止させ、更に/もしくはセキュリティーホールを空けてしまいます"
 
 #, fuzzy
 #~ msgid "Master"
@@ -3376,17 +2830,65 @@ msgstr "書き込み:"
 #~ msgid "Maximum number of hops must be between 1 and %d"
 #~ msgstr "最大ホップ数は、1から %dの間でなくてはなりません"
 
+#~ msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
+#~ msgstr "取り次ぎ転送時に無応答だった場合の呼び出し時間(秒)の上限(初期値 15)"
+
+#~ msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
+#~ msgstr "コールパーキング可能な最大時間(秒)。これを超えるとパーキングした電話機に通話が戻ります(初期値 30)"
+
+#~ msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
+#~ msgstr "取り次ぎ転送時に無応答だった場合の呼び出し時間(秒)の上限(初期設定 15)"
+
+#~ msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
+#~ msgstr "転送時に押される転送先電話番号のボタンを押す間隔(秒、初期値 3)"
+
+#~ msgid "Member"
+#~ msgstr "メンバー"
+
+#~ msgid "Member %s has been kicked from conference %s."
+#~ msgstr "メンバー %s は、電話会議 %sから、除外されました"
+
+#~ msgid "Members"
+#~ msgstr "メンバー"
+
 #~ msgid "Minutes between network time sync.; 300 recommended, or 0 to disable"
 #~ msgstr "時刻同期の間隔(分);(推奨 300,もしくは0[時刻同期無効])"
 
-#~ msgid "Mode"
-#~ msgstr "モード"
+#~ msgid "Miscellaneous"
+#~ msgstr "その他"
+
+#~ msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
+#~ msgstr "ほとんどの場合、'auto'で問題有りません。もし上手く動作しない場合には、あなたが使っているメールサーバーの認証方式を指定して下さい"
+
+#~ msgid "NAT"
+#~ msgstr "NAT"
+
+#~ msgid "National Prefix"
+#~ msgstr "国番号"
+
+#~ msgid "Navigation"
+#~ msgstr "ナビゲーション"
+
+#~ msgid "Network"
+#~ msgstr "ネットワーク"
+
+#~ msgid "No"
+#~ msgstr "いいえ"
+
+#~ msgid "No additional storage devices were detected."
+#~ msgstr "追加のストレージ機器が見つかりませんでした"
 
 #~ msgid "No compatible ISDN interfaces detected."
 #~ msgstr "対応しているISDNインタフェースが見つかりませんでした"
 
 #~ msgid "No compatible analog interfaces detected."
 #~ msgstr "対応するアナログインターフェースが見つかりませんでした。"
+
+#~ msgid "No compatible analog ports were detected."
+#~ msgstr "非対応のアナログポートが見つかりました"
+
+#~ msgid "No compatible isdn ports were detected."
+#~ msgstr "非対応のISDNポートが見つかりました"
 
 #~ msgid "No compatible wireless interfaces detected."
 #~ msgstr "互換性のあるワイヤレスインタフェースは検出されませんでした"
@@ -3397,11 +2899,20 @@ msgstr "書き込み:"
 #~ msgid "No new packages available."
 #~ msgstr "新しいパッケージは有りません"
 
+#~ msgid "No other Providers for failover."
+#~ msgstr "非常用の他プロバイダーが有りません"
+
 #~ msgid "No stations are associated at this time."
 #~ msgstr "この時点で、関連づけられたステーションはありません"
 
 #~ msgid "Noise"
 #~ msgstr "ノイズ"
+
+#~ msgid "Non-Members"
+#~ msgstr "非メンバー"
+
+#~ msgid "Note:"
+#~ msgstr "注釈"
 
 #~ msgid "Note: make sure to remove any sensitive information (passwords, maybe also IP addresses) before posting information from this page in public places (like mailing lists)!"
 #~ msgstr "注意:公共の場(メーリングリストやフォーラムのような)で、情報を掲載する前に、このページからあらゆる機密情報(パスワード、IPアドレスなど)を必ず取り除いてください!"
@@ -3412,17 +2923,47 @@ msgstr "書き込み:"
 #~ msgid "Number of log entries to show:"
 #~ msgstr "表示させるログの件数:"
 
+#~ msgid "Number or string to be dialed to reach this telephone."
+#~ msgstr "この電話機に到達する為に使用される発信用電話番号もしくは文字列"
+
 #~ msgid "Number or string to be dialed to reach this telephone. This will be dialed directly; outgoing pattern matching rules do not apply"
 #~ msgstr "この電話機に到達する事が出来る番号もしくは文字列。これは直接ダイヤル出来ます;外線発信パターンのルールは、適用されません"
 
+#~ msgid "OK\n"
+#~ msgstr "OK\n"
+
 #~ msgid "Open"
 #~ msgstr "開く"
+
+#~ msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
+#~ msgstr "ボタンをクリックして、保存してあるAskoziaPBXの設定ファイル(XML形式)を開き、設定をリストアします"
 
 #~ msgid "Operating Mode"
 #~ msgstr "操作モード"
 
 #~ msgid "Operating Modes"
 #~ msgstr "操作モード"
+
+#~ msgid "Optional PIN needed to access this conference room."
+#~ msgstr "この会議室に入室するのに必要なパスワード(オプション)"
+
+#~ msgid "Options"
+#~ msgstr "オプション"
+
+#~ msgid "Out"
+#~ msgstr "Out"
+
+#~ msgid "Outgoing Calls Only"
+#~ msgstr "発信のみ"
+
+#~ msgid "Outgoing Patterns"
+#~ msgstr "発信用ダイヤルパターン"
+
+#~ msgid "Outgoing Presentation"
+#~ msgstr "発信した呼の発信者番号表示"
+
+#~ msgid "Outgoing provider or protocol used to reach this telephone."
+#~ msgstr "この電話機に到達する為に使用される発信用プロバイダーもしくはプロトコル"
 
 #~ msgid "Output"
 #~ msgstr "出力"
@@ -3448,8 +2989,23 @@ msgstr "書き込み:"
 #~ msgid "Package version checks"
 #~ msgstr "パッケージバージョンの確認"
 
+#~ msgid "Packages"
+#~ msgstr "パッケージ"
+
 #~ msgid "Packages to expand system functionality can be installed and updated here. Start by clicking <img src=\"img/add.png\" border=\"0\"> to check for newly available packages. All packages are digitally signed before distribution and checked upon installation."
 #~ msgstr "ここで、システムの機能を拡張するパッケージをインストール、更新する事が出来ます。<img src=\"img/add.png\" border=\"0\">をクリックして、最新パッケージがあるかチェックを開始します。全てのパッケージは、配布前に電子署名が行われ、またインストール時には電子署名のチェックが行われます"
+
+#~ msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
+#~ msgstr "このアカウント(電話機)に対して、<i>n</i> 秒毎に、状態確認の為のパケットを送信します。<br>(初期値 '2'、'0'で無効となります)"
+
+#~ msgid "Park Extension"
+#~ msgstr "コールパーキング用内線番号"
+
+#~ msgid "Park Time"
+#~ msgstr "コールパーキング時間"
+
+#~ msgid "Parking Range"
+#~ msgstr "コールパーキング用に確保する内線番号"
 
 #~ msgid "Passwords in config.xml have been automatically removed."
 #~ msgstr "config.xmlでのパスワードは、自動的に削除されました"
@@ -3460,14 +3016,32 @@ msgstr "書き込み:"
 #~ msgid "Paste an RSA private key in PEM format here."
 #~ msgstr "PEMフォーマットのRSAプライベート鍵を、ここにペーストして下さい"
 
+#~ msgid "Pattern(s)"
+#~ msgstr "パターン"
+
+#~ msgid "Permissions"
+#~ msgstr "パーミッション"
+
+#~ msgid "Permit Network"
+#~ msgstr "許可するネットワーク"
+
 #~ msgid "Permit only 'n' concurrent calls (default: 2)"
 #~ msgstr "同時通話数を 'n' 通話に制限する(標準: 2)"
+
+#~ msgid "Phone"
+#~ msgstr "電話"
 
 #~ msgid "Phone Accounts allow you to configure internal extensions and their access to Provider Accounts. Click an account type below to get started."
 #~ msgstr "「電話機の設定」内線の設定と接続回線の設定を行います。種類を選択し、設定を開始して下さい。"
 
+#~ msgid "Phone Connectivity"
+#~ msgstr "電話の接続性"
+
 #~ msgid "Phone status will be switched to 'busy' with 'n' concurrent calls (default: 1)"
 #~ msgstr "'n' 回線同時通話になると、'話し中'の状態に切り替える(標準: 1)"
+
+#~ msgid "Pin"
+#~ msgstr "パスワード"
 
 #~ msgid "Ping output:"
 #~ msgstr "Ping出力:"
@@ -3481,17 +3055,48 @@ msgstr "書き込み:"
 #~ msgid "Please <a href=\"mailto:michael@askozia.com\">contact us</a> if you are able to provide a new translation."
 #~ msgstr "もしあなたが新たな翻訳をされた場合には、ぜひ<a href=\"mailto:michael@askozia.com\">私達</a> にご連絡を下さい"
 
+#~ msgid "Point-to-Multipoint (PTMP)"
+#~ msgstr "Point-to-Multipoint (PTMP)"
+
+#~ msgid "Point-to-Point (PTP)"
+#~ msgstr "Point-to-Point (PTP)"
+
+#~ msgid "Ports impedance"
+#~ msgstr "ポートインピーダンス"
+
 #~ msgid "Power Save"
 #~ msgstr "省電力"
 
 #~ msgid "Prepend with string"
 #~ msgstr "文字列を先頭に追加します"
 
+#~ msgid "Printable Dialplan"
+#~ msgstr "印刷可能なダイヤルプラン"
+
+#, fuzzy
+#~ msgid "Private Prefix"
+#~ msgstr "プライベートRSAキー"
+
+#~ msgid "Private RSA Key"
+#~ msgstr "プライベートRSAキー"
+
+#~ msgid "Provider"
+#~ msgstr "プロバイダー(もしくは電話会社)"
+
 #~ msgid "Provider Accounts allow you to configure routes to and from external sources (i.e. VoIP service providers or attached ISDN / Analog interface hardware). Click an account type below to get started."
 #~ msgstr "「接続回線設定」接続経路、及び着信させる外線の種類を設定します。種類を選択し、設定を開始して下さい。"
 
+#~ msgid "Provider Port Groups"
+#~ msgstr "プロバイダーポートグループ"
+
+#~ msgid "Provider host URL or IP address and optional port."
+#~ msgstr "プロバイダーののURL、もしくはIPアドレスを入力して下さい。(ポート番号はオプション)"
+
 #~ msgid "Public Direct Dial"
 #~ msgstr "公開用直通ダイヤル"
+
+#~ msgid "Public RSA Key"
+#~ msgstr "Public RSA Key"
 
 #~ msgid "Public name. Enter a string to map a friendly name to this extension."
 #~ msgstr "パブリック名。この内線にフレンドリーな名前をつける為の文字列を入力して下さい"
@@ -3499,14 +3104,48 @@ msgstr "書き込み:"
 #~ msgid "Puts the hard disk into standby mode when the selected amount of time after the last access has elapsed. <em>Do not set this for CF cards."
 #~ msgstr "ハードディスクへの最終アクセスから、指定した時間が経過した後、ハードディスクをスタンバイモードに移行します。<em>但し、CFカードを利用している場合には設定しないで下さい"
 
+#~ msgid "Qualify"
+#~ msgstr "クオリファイ"
+
+#~ msgid "RSA Keys"
+#~ msgstr "RSA Keys"
+
 #~ msgid "RSSI"
 #~ msgstr "RSSI"
+
+#~ msgid "RTP Port Range"
+#~ msgstr "RTPボート"
 
 #~ msgid "Rate"
 #~ msgstr "レート"
 
+#~ msgid "Read"
+#~ msgstr "読み込み"
+
+#~ msgid "Redfone"
+#~ msgstr "Redfone"
+
+#~ msgid "Registration"
+#~ msgstr "登録"
+
+#~ msgid "Registration Expiration Timeouts"
+#~ msgstr "登録が有効な時間"
+
+#~ msgid "Remote IP"
+#~ msgstr "リモートIP"
+
+#~ msgid "Remote Interface"
+#~ msgstr "リモートインターフェース"
+
+#~ msgid "Remote MAC"
+#~ msgstr "リモートMACアドレス"
+
 #~ msgid "Remote syslog server"
 #~ msgstr "リモートSyslogサーバー"
+
+#, fuzzy
+#~ msgid "Replace Caller ID name with Caller ID number"
+#~ msgstr "calling nameをcalling numberで入れ替えます"
 
 #~ msgid "Replace with string"
 #~ msgstr "文字列に置き換えます"
@@ -3520,14 +3159,32 @@ msgstr "書き込み:"
 #~ msgid "Restore"
 #~ msgstr "復旧"
 
+#~ msgid "Restore configuration"
+#~ msgstr "設定ファイルのリストア"
+
 #~ msgid "Restore from a Backup Archive"
 #~ msgstr "圧縮されたバックアップからのリストア"
+
+#~ msgid "Room Number"
+#~ msgstr "部屋番号"
+
+#~ msgid "Russia"
+#~ msgstr "ロシア"
+
+#~ msgid "SIP Phones"
+#~ msgstr "SIP電話機"
 
 #~ msgid "SIP proxy host URL or IP address and optional port."
 #~ msgstr "SIPプロキシーホストのURL、もしくはIPアドレスと、オプショナルのポート番号"
 
 #~ msgid "SMTP"
 #~ msgstr "SMTP"
+
+#~ msgid "SMTP Client Setup"
+#~ msgstr "SMTPクライアントの設定"
+
+#~ msgid "SMTP host URL or IP address and optional port."
+#~ msgstr "SMTPサーバーのURL、もしくはIPアドレスを入力して下さい。(ポート番号はオプション)"
 
 #, fuzzy
 #~ msgid "SNOM MAC Address"
@@ -3539,6 +3196,9 @@ msgstr "書き込み:"
 #~ msgid "SSID,Channel"
 #~ msgstr "SSID,チャンネル"
 
+#~ msgid "Secret"
+#~ msgstr "パスワード"
+
 #~ msgid "Select a .pbxpkg file from your computer to install."
 #~ msgstr "あなたのコンピュータからインストールしたい、.pbxpkgファイルを選択して下さい"
 
@@ -3547,6 +3207,21 @@ msgstr "書き込み:"
 
 #~ msgid "Select a backup .tgz archive and press 'Restore'"
 #~ msgstr "バックアップした .tgzファイルを選択し、'Restore'ボタンを押して下さい"
+
+#~ msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
+#~ msgstr "あなたのアナログ機器が対応している、全てのトーンゾーンを選んで下さい。<strong>初めに選択したトーンゾーンが、標準設定となります"
+
+#~ msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
+#~ msgstr "FXOポートのインピーダンスを、ご利用になる国、もしくはその国の規制に併せて選択して下さい; FXSポートも、同じ設定が反映されます"
+
+#~ msgid "Select which disk you would like to format."
+#~ msgstr "フォーマットしたいディスクの選択"
+
+#~ msgid "Select which ethernet port on the gateway this system is connected to."
+#~ msgstr "ゲートウェイ上のどちらのイーサネットポートに、このシステムを接続するか選択して下さい"
+
+#~ msgid "Select which ethernet port on this system the gateway is connected to."
+#~ msgstr "このシステム上のどちらのイーサネットポートに、ゲートウェイを接続するか選択して下さい"
 
 #~ msgid "Select which packages you would like to install."
 #~ msgstr "インストールしたいパッケージの選択"
@@ -3560,11 +3235,35 @@ msgstr "書き込み:"
 #~ msgid "Show log entries in reverse order (newest entries on top)"
 #~ msgstr "ログの記録を逆の順番で表示する(最新の記録が一番上に表示される)"
 
+#~ msgid "Signaling"
+#~ msgstr "シグナル"
+
+#~ msgid "Skinny"
+#~ msgstr "Skinny"
+
 #~ msgid "Some analog connections may need adjustment to achieve an acceptable audio level. Adjust the receive and transmit gain in decibels to amplify or quiet the line."
 #~ msgstr "幾つかのアナログ接続では、許容範囲内のオーディオレベルにする為に調整が必要になるかも知れません。回線のデシベルを増幅もしくは和らげる為に、受信及び送信ゲインを調整します"
 
+#~ msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
+#~ msgstr "いくつかの電話会社では、別の'from'ドメインが必要となります。<br>上記に入力したホストをデフォルトにします"
+
+#~ msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
+#~ msgstr "いくつかの電話会社では、別の'from'ユーザーが必要となります。<br>上記に入力したユーザー名をデフォルトにします"
+
+#~ msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
+#~ msgstr "いくつかの電話会社では、別の認証用ユーザー名が必要となります。<br>上記に入力したユーザー名をデフォルトにします"
+
 #~ msgid "Source Name &lt;number&gt;"
 #~ msgstr "発信元の名前 &lt;number&gt;"
+
+#~ msgid "Span"
+#~ msgstr "Span"
+
+#~ msgid "Span Count"
+#~ msgstr "スパン数"
+
+#~ msgid "Spans"
+#~ msgstr "Spans"
 
 #~ msgid "Standard"
 #~ msgstr "標準"
@@ -3572,11 +3271,35 @@ msgstr "書き込み:"
 #~ msgid "Start"
 #~ msgstr "開始"
 
+#~ msgid "Start Signaling"
+#~ msgstr "シグナリングスタート"
+
+#~ msgid "State"
+#~ msgstr "状態"
+
 #~ msgid "Stop"
 #~ msgstr "停止"
 
+#~ msgid "Storage Disk"
+#~ msgstr "Storage Disk"
+
+#~ msgid "Storage Services"
+#~ msgstr "ストレージサービス"
+
+#~ msgid "Subject"
+#~ msgstr "件名"
+
 #~ msgid "Subnet Mask"
 #~ msgstr "サブネットマスク"
+
+#~ msgid "Successfully installed %s formatted prompts for %s."
+#~ msgstr " %s のインストールが完了しました。%s でフォーマットされました "
+
+#~ msgid "Summary"
+#~ msgstr "概要"
+
+#~ msgid "Switch to bytes/s"
+#~ msgstr "Switch to bytes/s"
 
 #~ msgid "TKIP"
 #~ msgstr "TKIP"
@@ -3590,15 +3313,42 @@ msgstr "書き込み:"
 #~ msgid "TX key"
 #~ msgstr "TX key"
 
+#~ msgid "Telephone number assigned to this line."
+#~ msgstr "この回線に電話番号が割り当てられました"
+
+#~ msgid "Test E-mail"
+#~ msgstr "テスト用メール送信"
+
+#~ msgid "Text to be displayed for Caller ID."
+#~ msgstr "表示させる発信者IDを入力して下さい"
+
 #, fuzzy
 #~ msgid "The Fax's number, also the extension that this fax is reachable at."
 #~ msgstr "会議室番号は、内線番号と同様にダイヤルしてご利用になれます"
 
+#~ msgid "The IP address of the foneBRIDGE2 network interface."
+#~ msgstr "foneBRIDGE2のネットワークインターフェースのIPアドレス"
+
 #~ msgid "The PBX automatically allocates leftover space for permanent storage. Packages to extend the system's functionality can be installed in this space."
 #~ msgstr "AskoziaPBX はストレージに残ったスペースを自動的に割り当てます。 システムの機能を拡張するパッケージは、この領域にインストールできます"
 
+#~ msgid "The PBX will reboot after restoring the configuration."
+#~ msgstr "設定をリストアした後、システムは再起動されます"
+
 #~ msgid "The WPA PSK must be between 8 and 63 characters long."
 #~ msgstr "WPA PSKは、8から63文字の間である必要があります"
+
+#~ msgid "The conference room's number, also the extension that this conference is reachable at."
+#~ msgstr "会議室番号は、内線番号と同様にダイヤルしてご利用になれます"
+
+#~ msgid "The configuration could not be restored (file upload error)."
+#~ msgstr "この設定は、リストア出来ませんでした。(ファイルのアップロードエラー)"
+
+#~ msgid "The configuration could not be restored."
+#~ msgstr "この設定は、リストア出来ませんでした"
+
+#~ msgid "The configuration has been restored. The PBX is now rebooting."
+#~ msgstr "設定はリストアされました。このPBXは再起動中です"
 
 #~ msgid "The default telephone number (MSN) assigned to this line. Individual MSN mappings can be defined below."
 #~ msgstr "このデフォルトの電話番号(MSN)が、この回線に割り当てられました。個々のMSNマッピングは、下記で定義出来ます"
@@ -3606,8 +3356,14 @@ msgstr "書き込み:"
 #~ msgid "The dial-pattern \"%s\" is invalid. %s"
 #~ msgstr "このダイヤルパターン\"%s\"は無効です。%s"
 
+#~ msgid "The digital signature on this image is invalid."
+#~ msgstr "このイメージの電子署名は無効です"
+
 #~ msgid "The digital signature on this package is invalid."
 #~ msgstr "このパッケージのデジタル署名は無効です"
+
+#~ msgid "The dynamic DNS username contains invalid characters."
+#~ msgstr "ダイナミックDNSのユーザー名に、無効な文字が含まれています"
 
 #~ msgid "The e-mail address is invalid or missing."
 #~ msgstr "Eメールアドレスが無効か、誤っています"
@@ -3615,17 +3371,47 @@ msgstr "書き込み:"
 #~ msgid "The echo canceller 'tap' size. Larger sizes more effectively cancel echo but require more processing power."
 #~ msgstr "エコーキャンセラーの'tap'サイズ。タップ数の多いものは長いエコーに対しても消去可能になりますが、必要なハードウェアの処理能力も大きくなります。※tapとはエコーキャンセラの規模を表す1つの尺度"
 
+#~ msgid "The echo canceller window size. If your calls have echo, try increasing this window."
+#~ msgstr "エコーキャンセルの調整。もしエコーが発生したら、この設定値を増やしてみて下さい"
+
+#~ msgid "The end parking position must be larger than the start position."
+#~ msgstr "パーク保留の終了位置を、開始位置より大きな値にする必要があります"
+
 #~ msgid "The entire system configuration can be backed up and restored via this page."
 #~ msgstr "全体のシステム設定は、このページでバックアップ、及びリストアできます"
+
+#~ msgid "The firmware is now being installed. The PBX will reboot automatically."
+#~ msgstr "ファームウェアがインストールされています。システムは自動的に再起動します"
 
 #~ msgid "The following packages issued warnings while verifying their digital signature. This means that they are not official/supported packages and may lead to unexpected behavior or security compromises. Only install packages that come from sources that you trust, and make sure that they have not been tampered with.<br><br>Check the packages you wish to install despite this warning."
 #~ msgstr "下記のパッケージは、電子署名の検証中に警告を発生させました。これはつまり、これらは公式/もしくはサポート対象のバッケージではなく、予期しない動作やセキュリティー問題を引き起こすかも知れません。あなたが信頼しているパッケージのみインストールして下さい。そしてこれらが改ざんされていない事を確認してから行って下さい。<br><br>警告にも関わらずインストールしたいので有れば、パッケージにチャックを入れて下さい"
 
+#~ msgid "The following variables can be used in the e-mail notification"
+#~ msgstr "次の各変数が、Eメールの文面にご使用頂けます。"
+
+#~ msgid "The high RTP port must be greater than the low RTP port."
+#~ msgstr "RTPポート範囲の上限の値は、下限の値より大きい値を設定する必要が有ります"
+
+#~ msgid "The image file is corrupt."
+#~ msgstr "イメージファイルが壊れています"
+
 #~ msgid "The internal extension used to dial this phone."
 #~ msgstr "Internal extensionは、この電話にダイヤル可能"
 
+#~ msgid "The internal number used to dial this phone."
+#~ msgstr "その内線番号は、この電話にダイヤルする為に使用されています"
+
 #~ msgid "The main telephone number assigned to this line."
 #~ msgstr "この回線に主番号が割り当てられました"
+
+#~ msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
+#~ msgstr "着信、発信、登録、予約が有効な最小、最大、そしてデフォルトの秒数"
+
+#~ msgid "The number used to dial this application."
+#~ msgstr "その番号は、このアプリケーションにダイヤルする際に使用されています"
+
+#~ msgid "The number used to dial this fax."
+#~ msgstr "その番号は、このファックスにダイヤルする為に使われています"
 
 #~ msgid "The package is corrupt and has been deleted."
 #~ msgstr "このパッケージは破損し、削除されました"
@@ -3633,11 +3419,23 @@ msgstr "書き込み:"
 #~ msgid "The phone number assigned to this account. Also this account's username."
 #~ msgstr "このアカウントに割り当てる番号を指定します、一般的には内線番号を入力します。また、この番号がユーザー名となります"
 
+#~ msgid "The port range which RTP streams should use. (default:"
+#~ msgstr "RTPで使用するポートの範囲を指定して下さい。(初期値: "
+
+#~ msgid "The provider will be contacted this often to check its availability."
+#~ msgstr "稼働確認の為に、プロバイダーはここで設定した間隔に基づき、確認を行います"
+
 #~ msgid "The settings on this page are critical to ensuring connectivity to VoIP Providers. In particular, incorrect Topology settings can prevent incoming calls from connecting. If this system is behind a NAT, by default the system requires the following ports be forwarded to it: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
 #~ msgstr "このページの設定は、VoIPプロバイダーへの接続性を確実にするのに重要です。具体的には、誤ったトポロジー設定は、接続先からの着信を妨げてしまいます。もしこのシステムがNATの内側にいるのであれば、AskoziaPBXの標準設定では、下記のポートをフォワードさせる必要があります: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
 
 #~ msgid "The specified file (%s) does not exist."
 #~ msgstr "指定したファイル (%s) が存在しません"
+
+#~ msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
+#~ msgstr "このAskoziaPBXは、工場出荷時の状態に初期化され、只今再起動中です。しばらくお待ち下さい"
+
+#~ msgid "The system is rebooting now. This may take a minute."
+#~ msgstr "システムは再起動中です。これには数分かかります"
 
 #~ msgid "The system storage media is not large enough to install packages."
 #~ msgstr "このシステムのストレージメディアは、パッケージをインストールするには容量が足りません"
@@ -3645,8 +3443,20 @@ msgstr "書き込み:"
 #~ msgid "The time update interval must be either 0 (disabled) or between 6 and 1440."
 #~ msgstr "時間の更新間隔は、0(無効)もしくは、6から 1440の間で指定して下さい"
 
+#~ msgid "The uploaded image file is not for this platform (%s)."
+#~ msgstr "アップロードされたイメージファイルは、このプラットフォーム (%s) 用ではありません"
+
 #~ msgid "The uploaded package is not newer than the existing package, update failed."
 #~ msgstr "アップロードしたパッケージは、既存のパッケージよりも古いものです。アップデートに失敗しました"
+
+#~ msgid "The username of \"admin\" is already used internally by the system."
+#~ msgstr " \"admin\"と言うユーザー名は、AskoziaPBXのシステムが既に使用しています"
+
+#~ msgid "There are currently no active channels."
+#~ msgstr "現在、有効なチャンネルは有りません"
+
+#~ msgid "There are currently no active conferences."
+#~ msgstr "現在、有効な電話会議は有りません"
 
 #~ msgid "There are currently no phones defined."
 #~ msgstr "現在、電話は定義されていません"
@@ -3657,11 +3467,20 @@ msgstr "書き込み:"
 #~ msgid "There are updates available for packages on your system."
 #~ msgstr "あなたのシステムにある既存パッケージのアップデートがあります"
 
+#~ msgid "There has been an error verifying the signature on this image."
+#~ msgstr "このイメージに署名の検証エラーがありました"
+
 #~ msgid "There has been an error verifying the signature on this package."
 #~ msgstr "このパッケージの署名を検証した際、エラーがありました"
 
 #~ msgid "There is already another card present which provides the timing.<br><em>(Unless more than one inteface card is present in the system, this should not be changed."
 #~ msgstr "既にタイミングを提供する他のカードが有ります。<br><em>(他の一つ以上のカードが有る限り、変更は出来ません"
+
+#~ msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
+#~ msgstr "この外部番号は、発信者がヴォイスメールに到達した際に、復唱されます;デフォルトでは、ユーザー名が数字だった場合。もし違う場合には、この呼がルーティングされた内部内線番号が復唱されます"
+
+#~ msgid "This PBX"
+#~ msgstr "このPBX"
 
 #~ msgid "This account's password and authentication scheme."
 #~ msgstr "このアカウントのパスワード及び認証方式を設定して下さい"
@@ -3676,8 +3495,20 @@ msgstr "書き込み:"
 #~ msgid "This extension is reachable via SIP and IAX2 URIs (extension@%s) unless disabled here."
 #~ msgstr "このオプションを有効にすると、外部のネットワークからこの内線番号に対し、次の様なURIを宛先に指定する事で、SIP及びIAX2プロトコルでのダイヤル及び接続が可能となります (extension@%s)"
 
+#~ msgid "This image is not digitally signed."
+#~ msgstr "このイメージは、電子署名されていません"
+
 #~ msgid "This is the first page which needs configuring upon installing a new system. Most importantly, the default password should be changed. Then, ensure your host/domain name, time zone and country's indication tones are set correctly before continuing."
 #~ msgstr "このページは、新しいシステムをインストールした際に、最初に設定が必要なページです。最も重要なのは、デフォルトのパスワードを変更する事です。その後、あなたのホスト/ドメイン名、タイムゾーン、そして国別のトーン音を、正しく設定してください"
+
+#~ msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
+#~ msgstr "ここでは、もし電話がハングアップもしくは、ピックアップしたら、システムがどの様に判断するかを設定します。通常は \"Kewl Start\" がベストな選択です。しかし、いくつかのプロバイダーは、他のオプションの何れかを選択した方が、良い場合があります。もしコールが正しく開始しなかったり、終わらなかった場合には、この設定を調整して見て下さい"
+
+#~ msgid "This key combination activates a blind transfer (default ##)."
+#~ msgstr "このボタンの組み合わせで、強制転送を実行します(初期値 ##)"
+
+#~ msgid "This key combination activates an attended transfer (default **)."
+#~ msgstr "このボタンの組み合わせで、取り次ぎ転送を実行します(初期値 **)"
 
 #~ msgid "This key does not appear to be valid."
 #~ msgstr "この鍵は有効では無い様です"
@@ -3691,15 +3522,30 @@ msgstr "書き込み:"
 #~ msgid "This phone's number (MSN)."
 #~ msgstr "この電話機の番号(MSN)"
 
+#~ msgid "This range of extensions is where parked calls reside (default 701-720)."
+#~ msgstr "コールパーキング用に確保する内線番号の範囲を指定します(初期値 701-720)"
+
 #, fuzzy
 #~ msgid "This type of account can use this port."
 #~ msgstr "このアカウントのパスワードを入力して下さい"
+
+#~ msgid "This will be shown as voicemail service's sending address."
+#~ msgstr "ここに設定したアドレスが、ボイスメールの送信者アドレスとして、表示されます"
 
 #~ msgid "This will cause the system not to check for newer firmware versions when the <a href=\"system_firmware.php\">System: Firmware</a> page is viewed."
 #~ msgstr "<a href=\"system_firmware.php\">System: Firmware</a> ページを開く際に、AskoziaPBXは新しいファームウェアバージョンのチェックを行ないません"
 
 #~ msgid "This will cause the system not to check for package updates when the <a href=\"system_packages.php\">System: Packages</a> page is viewed."
 #~ msgstr "<a href=\"system_packages.php\">System: Packages</a> ページを開く際に、AskoziaPBXは新しいパッケージのチェックを行ないません"
+
+#~ msgid "Time"
+#~ msgstr "時間"
+
+#~ msgid "Timeouts"
+#~ msgstr "時間制限"
+
+#~ msgid "Tone Zones"
+#~ msgstr "タイムゾーン"
 
 #~ msgid "Traceroute"
 #~ msgstr "Traceroute"
@@ -3710,11 +3556,47 @@ msgstr "書き込み:"
 #~ msgid "Traceroute output:"
 #~ msgstr "Traceroute 出力:"
 
+#~ msgid "Transfer Key"
+#~ msgstr "転送ボタンの操作"
+
+#~ msgid "Transfers"
+#~ msgstr "転送"
+
+#~ msgid "Type"
+#~ msgstr "Type"
+
+#~ msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
+#~ msgstr "あなたのEメールアドレスを入力し、&quot;私にEメールを送る&quot;をクリックして、SMTP設定に間違いが無いか、確認して下さい"
+
+#~ msgid "UTC"
+#~ msgstr "UTC"
+
 #~ msgid "Unit"
 #~ msgstr "Unit"
 
+#~ msgid "Update"
+#~ msgstr "アップデート"
+
 #~ msgid "Update Installed Package"
 #~ msgstr "インストール済みパッケージを更新する"
+
+#~ msgid "Upgrade firmware"
+#~ msgstr "ファームウェアのアップグレード"
+
+#~ msgid "Upload"
+#~ msgstr "アップロード"
+
+#~ msgid "Upload:"
+#~ msgstr "アップロード:"
+
+#~ msgid "Use Jitterbuffer even when bridging two endpoints."
+#~ msgstr "2 つのエンドポイントをブリッジする場合にも、ジッターバッファを使用します"
+
+#~ msgid "User defined e-mail text"
+#~ msgstr "Eメールの文面を直接指定する"
+
+#~ msgid "Video"
+#~ msgstr "Video"
 
 #~ msgid "Video Codecs"
 #~ msgstr "ビデオコーデック"
@@ -3725,8 +3607,17 @@ msgstr "書き込み:"
 #~ msgid "Virtual Faxes"
 #~ msgstr "バーチャルファックス"
 
+#~ msgid "Voice Prompts"
+#~ msgstr "音声プロンプト"
+
 #~ msgid "Voicemail Services"
 #~ msgstr "ボイスメールサービスは"
+
+#~ msgid "Voicemail to E-Mail Presentation"
+#~ msgstr "ヴォイスメールのEメール通知設定"
+
+#~ msgid "Volume"
+#~ msgstr "Volume"
 
 #~ msgid "WEP"
 #~ msgstr "WEP"
@@ -3746,11 +3637,23 @@ msgstr "書き込み:"
 #~ msgid "WPA2 only"
 #~ msgstr "WPA2のみ"
 
+#~ msgid "Warning:"
+#~ msgstr "警告;"
+
 #~ msgid "Wireless"
 #~ msgstr "ワイヤレス"
 
 #~ msgid "With some knowledge of how the Asterisk dialplan works, some basic applications can be added to the system. These applications can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "Asteriskのdialplanについていくらかの知識があれば、いくつかの基本的なアプリケーションをシステムに追加する事ができます。 これらのアプリケーションは、定義されたエクステンション経由でダイヤルしたり、プロバイダーからの着信呼び出しの送信先として使用することができます"
+
+#~ msgid "Write"
+#~ msgstr "書き出し"
+
+#~ msgid "XML error: %s"
+#~ msgstr "XMLエラー:%s"
+
+#~ msgid "Yes"
+#~ msgstr "はい"
 
 #~ msgid "You are using the most recent <strong>beta</strong> of AskoziaPBX."
 #~ msgstr "あなたは、AskoziaPBXの最新ベータ版をご利用中です"
@@ -3758,15 +3661,78 @@ msgstr "書き込み:"
 #~ msgid "You are using the most recent version of AskoziaPBX."
 #~ msgstr "あなたは、AskoziaPBXの最新版をご利用中です"
 
+#~ msgid "You must reboot the system before you can upgrade the firmware."
+#~ msgstr "あなたがファームウェアをアップグレードする前に、システムを再起動する必要があります"
+
+#~ msgid "Your Name &lt;number&gt;"
+#~ msgstr "あなたの名前 &lt;number&gt;"
+
+#~ msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
+#~ msgstr "あなたのSMTP設定は、正しく動作しています。E-mailによるヴォイスメールや不在着信のお知らせを使用できます"
+
+#~ msgid "access the webGUI with the new IP address"
+#~ msgstr "新しいwebGUIのアドレスで、アクセスする"
+
+#~ msgid "active"
+#~ msgstr "有効"
+
 #~ msgid "add a new item"
 #~ msgstr "新しいアイテムを追加する"
+
+#~ msgid "add application mapping"
+#~ msgstr "アプリケーションの関連付けの追加"
+
+#~ msgid "add call group"
+#~ msgstr "グループの追加"
+
+#~ msgid "add conference room"
+#~ msgstr "電話会議室の追加"
+
+#~ msgid "add disk"
+#~ msgstr "ディスクの追加"
+
+#~ msgid "add gateway"
+#~ msgstr "ゲートウェイの追加"
+
+#~ msgid "add incoming extension mapping"
+#~ msgstr "着信ダイヤルプランのマッピングを追加します"
+
+#~ msgid "add manager user"
+#~ msgstr "管理者権限付ユーザーの追加"
+
+#~ msgid "add port group"
+#~ msgstr "ポートグループの追加"
+
+#~ msgid "add set"
+#~ msgstr "セットの追加"
+
+#~ msgid "address"
+#~ msgstr "アドレス"
+
+#~ msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+#~ msgstr "&quot;保存&quot;をクリックすると、現在通話中の全ての通話が切断されます。また、再度このAskoziaPBXにアクセスする前に、下記の何れかもしくは複数の項目を行う必要が有ります"
 
 #~ msgid "allow extension to be directly dialed over public networks"
 #~ msgstr "公開されたネットワークから、直接ダイヤルして接続する事を許可する"
 
+#~ msgid "always use NAT mode."
+#~ msgstr "常にNATモードで使用"
+
 #, fuzzy
 #~ msgid "and is now rebooting. This may take a minute."
 #~ msgstr "システムは再起動中です。これには数分かかります"
+
+#~ msgid "associated"
+#~ msgstr "接続(稼働)中"
+
+#~ msgid "assume NAT mode but don't send rport "
+#~ msgstr "NATモードを前提としていますが、rportは送信しません"
+
+#~ msgid "authenticate incoming calls with a public RSA key"
+#~ msgstr "public RSAキーで、着信した呼を認証する"
+
+#~ msgid "authenticate outgoing calls with a private RSA key"
+#~ msgstr "プライベート RSAキーで、発信した呼を認証する"
 
 #~ msgid "autoselect"
 #~ msgstr "自動選択"
@@ -3784,6 +3750,9 @@ msgstr "書き込み:"
 #~ msgid "call detail records"
 #~ msgstr "通話詳細の記録"
 
+#~ msgid "caller id of person leaving the message"
+#~ msgstr "メッセージを録音した人の発信者ID"
+
 #~ msgid "calls"
 #~ msgstr "通話"
 
@@ -3793,21 +3762,78 @@ msgstr "書き込み:"
 #~ msgid "check for package updates"
 #~ msgstr "パッケージの更新を確認する"
 
+#~ msgid "click to disable fax"
+#~ msgstr "クリックして、ファックスを無効にする"
+
 #~ msgid "click to disable package"
 #~ msgstr "クリックして、パッケージを無効にする"
 
+#~ msgid "click to disable phone"
+#~ msgstr "電話機を無効にします"
+
+#~ msgid "click to disable provider"
+#~ msgstr "接続回線を無効にする"
+
+#~ msgid "click to enable fax"
+#~ msgstr "クリックして、ファックスを有効にする"
+
 #~ msgid "click to enable package"
 #~ msgstr "クリックして、パッケージを有効にする"
+
+#~ msgid "click to enable phone"
+#~ msgstr "電話機を有効にします"
+
+#~ msgid "click to enable provider"
+#~ msgstr "接続回線を有効にする"
 
 #, fuzzy
 #~ msgid "click to mount disk"
 #~ msgstr "クリックして、パッケージを無効にする"
 
+#~ msgid "clicking &quot;Save&quot; will drop all current calls."
+#~ msgstr "clicking &quot;Save&quot; 全ての呼を切断します"
+
+#~ msgid "connected"
+#~ msgstr "接続完了"
+
+#~ msgid "connected but lagged"
+#~ msgstr "接続しましたが、遅延しています"
+
+#~ msgid "default:"
+#~ msgstr "初期値:"
+
+#~ msgid "delete application"
+#~ msgstr "アプリケーションの削除"
+
+#~ msgid "delete application mapping"
+#~ msgstr "アプリケーションの関連付けの削除"
+
 #~ msgid "delete arp entry"
 #~ msgstr "arpエントリーを削除"
 
+#~ msgid "delete call group"
+#~ msgstr "グループの削除"
+
+#~ msgid "delete conference room"
+#~ msgstr "電話会議室の削除"
+
+#~ msgid "delete fax"
+#~ msgstr "ファックスの削除"
+
+#~ msgid "delete manager user"
+#~ msgstr "管理権限付きユーザーの削除"
+
 #~ msgid "delete package configuration and data"
 #~ msgstr "パッケージ設定、及びデータを削除"
+
+#~ msgid "delete phone"
+#~ msgstr "電話機の削除"
+
+#~ msgid "delete port group"
+#~ msgstr "ポートグループの削除"
+
+#~ msgid "delete provider"
+#~ msgstr "接続回線の削除"
 
 #~ msgid "descr"
 #~ msgstr "descr"
@@ -3818,14 +3844,35 @@ msgstr "書き込み:"
 #~ msgid "direct outbound dialing via SIP uris"
 #~ msgstr "SIP URIでのダイヤル発信"
 
+#~ msgid "disable certificate checking"
+#~ msgstr "認証チェックを無効にする"
+
+#~ msgid "disable echo cancellation"
+#~ msgstr "エコーキャンセルを無効にする"
+
+#~ msgid "disabled"
+#~ msgstr "無効"
+
 #~ msgid "disposition"
 #~ msgstr "処理"
 
 #~ msgid "don't send to voicemail when busy"
 #~ msgstr "話し中の時には、ボイスメールは送らない"
 
+#~ msgid "down"
+#~ msgstr "下"
+
 #~ msgid "download a backup archive"
 #~ msgstr "圧縮されたバックアップをダウンロードする"
+
+#~ msgid "downloading"
+#~ msgstr "ダウンロード"
+
+#~ msgid "drag-and-drop"
+#~ msgstr "ドラッグアンドドロップ"
+
+#~ msgid "duration of the message (i.e. 0:58)"
+#~ msgstr "メッセージの録音時間(例; 0:58)"
 
 #~ msgid "e.g. <em>pbx"
 #~ msgstr "例;<em>pbx"
@@ -3843,18 +3890,93 @@ msgstr "書き込み:"
 #~ msgid "edit analog port"
 #~ msgstr "アナログ回線の編集"
 
+#~ msgid "edit application"
+#~ msgstr "アプリケーションの編集"
+
+#~ msgid "edit application mapping"
+#~ msgstr "アプリケーション関連付けの編集"
+
+#~ msgid "edit call group"
+#~ msgstr "グループの編集"
+
+#~ msgid "edit conference room"
+#~ msgstr "電話会議室の編集"
+
+#~ msgid "edit disk"
+#~ msgstr "ディスクの編集"
+
+#~ msgid "edit fax"
+#~ msgstr "ファックスを編集"
+
+#~ msgid "edit gateway"
+#~ msgstr "ゲートウェイの編集"
+
+#~ msgid "edit manager room"
+#~ msgstr "管理ルームの編集"
+
+#~ msgid "edit phone"
+#~ msgstr "電話機設定の編集"
+
+#~ msgid "edit port"
+#~ msgstr "ポートの編集"
+
+#~ msgid "edit port group"
+#~ msgstr "ポートグループの編集"
+
+#~ msgid "edit provider"
+#~ msgstr "接続回線の編集"
+
 #, fuzzy
 #~ msgid "email Receipient"
 #~ msgstr "ボイスメールの受信者名"
 
+#~ msgid "enable voicemail to e-mail"
+#~ msgstr "ボイスメールのEメール通知を有効にする"
+
+#~ msgid "enter a command below..."
+#~ msgstr "以下のコマンドを入力..."
+
+#~ msgid "extension number of voicemail box"
+#~ msgstr "ボイスメールが届いている内線番号"
+
+#~ msgid "extracting"
+#~ msgstr "解凍"
+
 #~ msgid "filter"
 #~ msgstr "フィルター"
+
+#~ msgid "forget disk settings"
+#~ msgstr "ディスク設定を忘れる"
+
+#~ msgid "forget gateway settings"
+#~ msgstr "ゲートウェイ設定を忘れる"
+
+#~ msgid "forget port settings"
+#~ msgstr "ポート設定を忘れる"
+
+#~ msgid "full date / time (i.e. 2025-11-20 (15:45))"
+#~ msgstr "日付と時間(例; 2025-11-20 (15:45))"
+
+#~ msgid "generate password"
+#~ msgstr "パスワード生成"
 
 #~ msgid "hidden"
 #~ msgstr "非公開"
 
+#~ msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+#~ msgstr "もしグラフが見えない場合には、 <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>をインストールして下さい"
+
+#~ msgid "inactive"
+#~ msgstr "無効"
+
 #~ msgid "install new package"
 #~ msgstr "新しいパッケージをインストールする"
+
+#~ msgid "installed sets"
+#~ msgstr "インストール済パッケージ"
+
+#~ msgid "installing"
+#~ msgstr "インストール"
 
 #~ msgid "item is disabled, click to enable"
 #~ msgstr "これは無効です。クリックすると有効になります"
@@ -3862,8 +3984,23 @@ msgstr "書き込み:"
 #~ msgid "item is enabled, click to disable"
 #~ msgstr "これは有効です。クリックすると無効になります"
 
+#~ msgid "kick conference member"
+#~ msgstr "メンバーを会議から外す"
+
 #~ msgid "last app"
 #~ msgstr "last app"
+
+#~ msgid "max:"
+#~ msgstr "最大:"
+
+#~ msgid "md5"
+#~ msgstr "md5"
+
+#~ msgid "milliseconds"
+#~ msgstr "ミリ秒"
+
+#~ msgid "min:"
+#~ msgstr "最小:"
 
 #~ msgid "minutes"
 #~ msgstr "分"
@@ -3877,11 +4014,35 @@ msgstr "書き込み:"
 #~ msgid "name of the pbx host, without domain part"
 #~ msgstr "AskoziaPBXの名前(ドメイン部分を除いた名前)"
 
+#~ msgid "name of voicemail recipient"
+#~ msgstr "ボイスメールの受信者名"
+
+#~ msgid "never attempt NAT mode or RFC3581 support"
+#~ msgstr "NAT モードまたは RFC3581 サポートを試みることはありません"
+
+#~ msgid "none"
+#~ msgstr "無し"
+
+#~ msgid "notify me of missed calls via e-mail"
+#~ msgstr "不在着信をEメールで通知する"
+
+#~ msgid "of"
+#~ msgstr "の"
+
+#~ msgid "only use NAT mode according to RFC3581 (rport)"
+#~ msgstr "RFC3581に従って、NATモードのみを使用 (rport)"
+
+#~ msgid "optional"
+#~ msgstr "オプション"
+
 #~ msgid "pbx events"
 #~ msgstr "PBXイベント"
 
 #~ msgid "permanently delete an item"
 #~ msgstr "アイテムを完全に削除します"
+
+#~ msgid "plaintext"
+#~ msgstr "プレーンテキスト"
 
 #~ msgid "point-to-multipoint, terminal equipment: this port accepts MSNs to route calls and is attached to the public ISDN network or another PBX system"
 #~ msgstr "ポイントtoマルチポイント,ターミナル機器:このポートはMSNのルート呼び出しを受け入れ、パブリックISDNネットワークもしくは他のPBXシステムへ接続されます"
@@ -3892,9 +4053,18 @@ msgstr "書き込み:"
 #~ msgid "point-to-point, terminal equipment: this port accepts DID to route calls and is connected directly to another PBX system"
 #~ msgstr "ポイントtoポイント,ターミナル機器:このポートは、DIDのルート呼び出しを受け入れ、他のPBXシステムにダイレクトに接続させます"
 
+#~ msgid "print"
+#~ msgstr "印刷"
+
 #, fuzzy
 #~ msgid "provider lines"
 #~ msgstr "接続回線"
+
+#~ msgid "read:"
+#~ msgstr "読み出し:"
+
+#~ msgid "receive"
+#~ msgstr "受信"
 
 #~ msgid "reload page"
 #~ msgstr "ページ再読み込み"
@@ -3905,6 +4075,9 @@ msgstr "書き込み:"
 #~ msgid "reset filter and reload firewall logs page"
 #~ msgstr "フィルターリセットと、ファイヤウォールログページの再読み込み"
 
+#~ msgid "restart the PBX"
+#~ msgstr "PBXの再起動"
+
 #~ msgid "restore a backup archive"
 #~ msgstr "圧縮されたバックアップをリストアする"
 
@@ -3914,8 +4087,37 @@ msgstr "書き込み:"
 #~ msgid "sec."
 #~ msgstr "秒"
 
+#~ msgid "seconds"
+#~ msgstr "秒"
+
 #~ msgid "send missed call notifications"
 #~ msgstr "不在着信のお知らせを送る"
+
+#, fuzzy
+#~ msgid "send phone's Caller ID"
+#~ msgstr "電話機のCaller IDを送信する"
+
+#, fuzzy
+#~ msgid "send phone's Caller ID + prefix below"
+#~ msgstr "電話機のCaller IDを送信する"
+
+#~ msgid "service already assigned to \"%s\""
+#~ msgstr "サービスは、既に \"%s\" に割り当てられています"
+
+#~ msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
+#~ msgstr "'0.0.0.0 / 0.0.0.0' にセットすると、全て拒否となります"
+
+#~ msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
+#~ msgstr "'0.0.0.0 / 0.0.0.0' にセットすると、全て許可となります"
+
+#~ msgid "show"
+#~ msgstr "見る"
+
+#~ msgid "span should be set as a loopback"
+#~ msgstr "Spanはループバックとして設定する必要があります"
+
+#~ msgid "span should use CRC4 checking"
+#~ msgstr "SpanはCRC4のチェック用に使用する必要があります"
 
 #~ msgid "src"
 #~ msgstr "発信元"
@@ -3929,8 +4131,8 @@ msgstr "書き込み:"
 #~ msgid "state"
 #~ msgstr "状態"
 
-#~ msgid "status"
-#~ msgstr "状態"
+#~ msgid "status unknown"
+#~ msgstr "状態不明"
 
 #~ msgid "store Asterisk's logs on disk"
 #~ msgstr "ディスク上に保存されたAsterisk(AskoziaPBX)ログ"
@@ -3945,17 +4147,41 @@ msgstr "書き込み:"
 #~ msgid "system storage partition"
 #~ msgstr "システム記憶領域"
 
+#~ msgid "transmit"
+#~ msgstr "送信"
+
 #~ msgid "u-law"
 #~ msgstr "u-law"
 
 #~ msgid "unconfigured"
 #~ msgstr "未設定"
 
+#~ msgid "unreachable"
+#~ msgstr "到達不能"
+
+#~ msgid "up"
+#~ msgstr "上"
+
 #~ msgid "update package to newer version"
 #~ msgstr "パッケージを最新版に更新する"
+
+#~ msgid "use DHCP settings permanently"
+#~ msgstr "DHCP設定を恒久的に使用する"
+
+#~ msgid "use this password"
+#~ msgstr "このパスワードを使用"
+
+#~ msgid "view license"
+#~ msgstr "ライセンスを表示する"
+
+#~ msgid "webGUI Configuration"
+#~ msgstr "webGUI設定"
 
 #~ msgid "webGUI SSL certificate/key"
 #~ msgstr "webGUI SSL 証明書/鍵"
 
 #~ msgid "webGUI protocol"
 #~ msgstr "webGUIで使用するプロトコル"
+
+#~ msgid "write:"
+#~ msgstr "書き込み:"

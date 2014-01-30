@@ -2,107 +2,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AskoziaPBX Russian Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-04 16:29+0200\n"
+"POT-Creation-Date: 2014-01-30 17:39+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alexcr <alexcr.telecom@gmail.com>\n"
 "Language-Team: ATS Design <request@pbxware.ru>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
-#, php-format
-msgid "%.0f KB"
-msgstr "%.0f KB"
-
-#, php-format
-msgid "%.2f GB"
-msgstr "%.2f GB"
-
-#, php-format
-msgid "%.2f MB"
-msgstr "%.2f MB"
-
-#, php-format
-msgid "%d bytes"
-msgstr "%d bytes"
-
-msgid "25%"
-msgstr "25%"
-
-msgid "50%"
-msgstr "50%"
-
-msgid "75%"
-msgstr "75%"
-
-msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
-msgstr "<a href=\"notifications_email.php\">E-Mail уведомления</a> должны быть корректно настроены для работы этой опции."
-
-#, php-format
-msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
-msgstr "<strong>%s</strong><br>Это значит, что загруженная прошивка в недопустимом формате, и может привести к непредсказуемой работе или нарушениям безопасности. Устанавливайте только образы, которым Вы доверяете, а также убедитесь, что образ не подменен. <br><br> Вы уверены, что хотите установить образ (на свой страх и риск)?"
+msgid "<b>Direct access not allowed!<b><br>"
+msgstr ""
 
 msgid "A NTP Time Server name may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "Имя сервера NTP может содержать только символы a-z, 0-9, '-' и '.'."
 
-msgid "A newer <strong>beta</strong> version of TeeBX is available!"
-msgstr ""
-
-msgid "A newer version of TeeBX is available!"
-msgstr ""
-
 msgid "A number must be specified to prepend to the incoming Caller ID number."
 msgstr "Добавить вышеуказанный номер к входящему номеру АОН."
-
-msgid "A public IP address must be entered for this topology."
-msgstr "Для этой топологии нужен публичный IP адрес."
-
-msgid "A public hostname must be entered for this topology."
-msgstr "Имя хоста должно быть введено для этой топологии."
 
 msgid "A text must be specified to prepend to the incoming Caller ID name."
 msgstr "Добавить вышеуказанный текст к входящему имени АОН."
 
-msgid "A username must be specified."
-msgstr "Имя пользователя должно быть указано."
-
-msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
-msgstr "Укажите правильный IP адрес для первого/второго/третьего сервера DNS."
-
 msgid "A valid IP address must be specified."
 msgstr "Укажите правильный IP адрес. "
-
-msgid "A valid MAC address must be specified."
-msgstr "Укажите правильный MAC адрес."
 
 msgid "A valid TCP/IP port must be specified for the webGUI port."
 msgstr "TCP / IP порт должен быть действителен для WEB интерфейса."
 
-msgid "A valid attended transfer timeout must be specified."
-msgstr "Правильный тайм-аут должен быть определен для условного перевода."
-
-msgid "A valid e-mail address must be specified for the \"from address\"."
-msgstr "Адрес электронной почты, должен быть указан для \"от кого\"."
-
-msgid "A valid e-mail address must be specified."
-msgstr "Действительный адрес электронной почты должен быть указан."
-
-msgid "A valid extension digit timeout must be specified."
-msgstr "Правильный тайм-аут ожидания ввода цифры должен быть определен."
-
-msgid "A valid extension must be entered."
-msgstr "Должен быть введен действительный номер."
-
-msgid "A valid gateway must be specified."
-msgstr "Укажите правильный шлюз."
-
 msgid "A valid incoming Caller ID override must be specified (e.g. John Smith <12345>)."
 msgstr "Укажите правильный АОН (пр. John Smith <12345>)"
-
-msgid "A valid key timeout must be specified."
-msgstr "Должен быть указан действительный номер тайм-аута."
 
 msgid "A valid outgoing Caller ID must be specified (e.g. John Smith <12345>)."
 msgstr "Укажите правильный АОН (пр. John Smith <12345>)"
@@ -110,62 +40,14 @@ msgstr "Укажите правильный АОН (пр. John Smith <12345>)"
 msgid "A valid outgoing Caller ID number prefix must be specified."
 msgstr "Укажите правильный префикс."
 
-msgid "A valid park time must be specified."
-msgstr "Укажите правильное время парковки. "
-
-msgid "A valid parking extension must be specified."
-msgstr "Укажите правильный номер парковки. "
-
-msgid "A valid parking start position must be specified."
-msgstr "Укажите стартовую позицию парковки."
-
-msgid "A valid parking stop position must be specified."
-msgstr "Укажите последнею позицию парковки."
-
 msgid "A valid port must be specified."
 msgstr "Укажите действительный порт."
-
-msgid "A valid public IP address must be entered for this topology."
-msgstr "Действительный публичный адрес IP должен быть введен для этой топологии."
-
-msgid "A valid public hostname must be entered for this topology."
-msgstr "Действительное имя хоста должно быть введено для этой топологии."
-
-msgid "A valid subnet bit count must be specified."
-msgstr "Укажите действительную маску подсети."
-
-msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
-msgstr "Количество секунд тайм-аута для \"Стандартный Срока регистрации\"."
-
-msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
-msgstr "Количество секунд тайм-аута для \"Максимального Срока регистрации\"."
-
-msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
-msgstr "Количество секунд тайм-аута для \"Минимального Срока регистрации\"."
-
-msgid "Access PIN"
-msgstr "ПИН-код доступа"
 
 msgid "Accounts"
 msgstr "Учетные записи"
 
-msgid "Activate custom Music-On-Hold"
-msgstr "Активировать пользовательскую Музыку на ожидание"
-
-msgid "Activate custom Voicemail greeting"
+msgid "Address"
 msgstr ""
-
-msgid "Active Channels"
-msgstr "Активные каналы"
-
-msgid "Active Channels / Calls"
-msgstr "Активные каналы / Звонки"
-
-msgid "Active Disks"
-msgstr "Активные диски"
-
-msgid "Adding"
-msgstr "добавление"
 
 msgid "Adelaide"
 msgstr "Аделаида"
@@ -173,11 +55,8 @@ msgstr "Аделаида"
 msgid "Advanced"
 msgstr "Расширенные"
 
-msgid "Advanced Options"
-msgstr "Дополнительно"
-
-msgid "Advanced Settings"
-msgstr "Дополнительные настройки"
+msgid "After you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+msgstr ""
 
 msgid "Alaska Time"
 msgstr "Alaska Time"
@@ -185,11 +64,14 @@ msgstr "Alaska Time"
 msgid "All Provider Ports"
 msgstr "Все порты Провайдера"
 
-msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
-msgstr "Всем членам группы будет сделан одновременный звонок. Если на звонок не будет ответа, будет использован голосовой  ящик первого пользователя в списке."
-
 msgid "All information on this disk will be lost after clicking \"Format\"!"
 msgstr "Вся информация на этом диске будет утеряна после нажатия кнопки \"Форматировать \"!"
+
+msgid "All rights reserved"
+msgstr ""
+
+msgid "All rights reserved under the terms of AGPLv3"
+msgstr ""
 
 msgid "Amsterdam, Netherlands"
 msgstr "Амстердам, Нидерланды"
@@ -203,29 +85,11 @@ msgstr "Неверный номер порта."
 msgid "Analog"
 msgstr "Аналоговые"
 
-msgid "Analog Faxes"
-msgstr ""
-
-msgid "Analog Phones"
-msgstr "Аналоговые телефоны"
-
 msgid "Appended prefixes may only contain digits, '*' and '#'."
 msgstr "Добавляемые префиксы могут содержать только цифры, '*' и '#'."
 
-msgid "Application"
-msgstr "Приложение"
-
-msgid "Application Logic"
-msgstr "Логика приложения"
-
 msgid "Applications"
 msgstr "Приложения"
-
-msgid "Are you sure you want to proceed?"
-msgstr "Вы уверены, что хотите продолжить?"
-
-msgid "Are you sure you want to reboot the system?"
-msgstr "Вы уверены, что хотите перегрузить Систему?"
 
 msgid "Argentina"
 msgstr "Аргентина"
@@ -236,26 +100,17 @@ msgstr "Азия"
 msgid "Asterisk hasn't started yet. Please wait for a few minutes. If it won't start you need to reboot TeeBX."
 msgstr ""
 
+msgid "Asterisk pbx log entries"
+msgstr ""
+
 msgid "Athens, Greece"
 msgstr "Афины, Греция"
 
 msgid "Atlantic Time"
 msgstr "Atlantic Time"
 
-msgid "Attended"
-msgstr "Условный"
-
-msgid "Attended Transfer Answer"
-msgstr " Условный  перевод"
-
 msgid "Auckland"
 msgstr "Окленд"
-
-msgid "Audio"
-msgstr "Аудио"
-
-msgid "Audio Prompts"
-msgstr "Звуковые файлы"
 
 msgid "Audio prompts will be played back in the selected language for this account."
 msgstr "Язык воспроизведения голосовых файлов."
@@ -266,21 +121,6 @@ msgstr "Австралия"
 msgid "Austria"
 msgstr "Австрия"
 
-msgid "Authentication Method"
-msgstr "Метод проверки подлинности"
-
-msgid "Authentication Scheme"
-msgstr "Схема проверки подлинности"
-
-msgid "Authorization User"
-msgstr "Имя для авторизации"
-
-msgid "AutoScale"
-msgstr "Автомасштаб"
-
-msgid "Backup configuration"
-msgstr "Сохранение конфигурации"
-
 msgid "Backup/Restore"
 msgstr "Архивация/Восстановление"
 
@@ -290,35 +130,23 @@ msgstr "Бахрейн"
 msgid "Barcelona, Spain"
 msgstr "Барселона, Испания"
 
-msgid "Basic"
-msgstr "Основной"
+msgid "Base Settings"
+msgstr ""
 
 msgid "Belgium"
 msgstr "Бельгия"
 
-msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
-msgstr "Внизу приведен список определенных в Системе номеров, набираемых по команде Dial. Эта команда принимает много дополнительных параметров, смотрите документация в разделе Приложения."
+msgid "Bell202, USA"
+msgstr ""
 
 msgid "Berlin, Germany"
 msgstr "Берлин, Германия"
-
-msgid "Binding Port"
-msgstr "Слушающий порт"
-
-msgid "Blind"
-msgstr "Безусловный"
-
-msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
-msgstr "Для парковки вызова переведите звонок на этот номер (по умолчанию 700). В ответ Система проговорит номер парковочного слота, куда был переведен звонок."
 
 msgid "Block Providers"
 msgstr "Заблокировать Провайдеров"
 
 msgid "Block access to the providers selected above."
 msgstr "Заблокировать доступ к определенным выше провайдерам."
-
-msgid "Body"
-msgstr "Содержимое"
 
 msgid "Brackets are not needed for less than 2 characters."
 msgstr "Скобки не нужны для менее 2 символов."
@@ -338,6 +166,9 @@ msgstr "Брюссель, Бельгия"
 msgid "Budapest, Hungary"
 msgstr "Будапешт, Венгрия"
 
+msgid "Buffer size"
+msgstr ""
+
 msgid "Bulgaria"
 msgstr "Болгария"
 
@@ -350,44 +181,23 @@ msgstr "Болгарский (официальный)"
 msgid "CPU Load"
 msgstr "Загрузка процессора"
 
-msgid "Call Groups"
-msgstr "Группы вызова"
+msgid "Call Report"
+msgstr ""
 
-msgid "Call Notifications & Voicemail"
-msgstr "Уведомления и голосовая почта"
+msgid "Call detail records"
+msgstr ""
 
-msgid "Call Parking"
-msgstr "Парковка звонка"
-
-msgid "Call Routing"
-msgstr "Маршрутизация вызовов"
-
-msgid "Caller ID"
-msgstr "АОН"
-
-msgid "Caller ID / Name"
-msgstr "АОН / Имя"
-
-msgid "Caller ID Options"
-msgstr "Настройки АОН"
+msgid "Caller Name"
+msgstr ""
 
 msgid "Calls"
 msgstr ""
-
-msgid "Calls Processed"
-msgstr "Обработано звонков"
 
 msgid "Canada"
 msgstr "Канада"
 
 msgid "Canberra"
 msgstr "Канберра"
-
-msgid "Cannot get CPU load"
-msgstr "Не удается получить данные о загрузке процессора"
-
-msgid "Card"
-msgstr "Плата"
 
 msgid "Central America"
 msgstr "Центральная Америка"
@@ -398,15 +208,6 @@ msgstr "Central Time"
 msgid "Central and South America"
 msgstr "Центральная и Южная Америка"
 
-msgid "Changes to this option will take effect after a reboot."
-msgstr "Изменение этого параметра вступит в силу после перезагрузки."
-
-msgid "Channel"
-msgstr "Канал"
-
-msgid "Channels"
-msgstr "Канал"
-
 msgid "Check automatically for new updates."
 msgstr ""
 
@@ -416,84 +217,41 @@ msgstr "Чили"
 msgid "China"
 msgstr "Китай"
 
-#, php-format
-msgid "Choose the new firmware image file (%s-*.img) to be installed."
-msgstr "Выберите новый файл образа прошивки (%s-*.img) для установки."
+msgid "Choose where log application writes the log messages it receives."
+msgstr ""
 
-msgid "Clear"
-msgstr "Очистить"
+msgid "Click here to"
+msgstr ""
 
-msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
-msgstr "Нажмите кнопку &quot;Обновить прошивку&quot;, чтобы начать процесс обновления."
+msgid "Click here to configure this disk"
+msgstr ""
 
-msgid "Click this button to download the system configuration in XML format."
-msgstr "Нажмите на эту кнопку, чтобы загрузить конфигурацию системы в формате XML."
-
-msgid "Codecs"
-msgstr "Кодеки"
-
-msgid "Collecting initial data, please wait..."
-msgstr "Сбор исходных данных, пожалуйста, подождите ..."
+msgid "Collecting initial data, please wait"
+msgstr ""
 
 msgid "Colombia"
 msgstr "Колумбия"
 
-msgid "Command"
-msgstr "Команда"
-
-msgid "Command:"
-msgstr "Команды:"
-
-msgid "Completely override the generated registration string with a manually defined one."
-msgstr "Переопределить сгенерированную строку регистрации.  "
-
-msgid "Conference"
-msgstr "Конференция"
-
-msgid "Conference Rooms"
-msgstr "Конференц-комнаты"
-
-msgid "Conference number already exists."
-msgstr "Номер конференции уже существует."
-
-msgid "Conference number matches an existing extension."
-msgstr "Номер конференции совпадает с существующим номером."
-
-msgid "Conference pins must be numeric."
-msgstr "ПИН-код конференции должен быть числовым."
-
-msgid "Conference room numbers must be numeric."
-msgstr "Номер Конференций должен быть числовым."
-
-msgid "Conferences"
-msgstr "Конференций"
+msgid "Comment"
+msgstr ""
 
 msgid "Conferencing"
 msgstr "Конференц-связь"
 
-msgid "Connect"
-msgstr "Подключить"
+msgid "Configured storage"
+msgstr ""
 
-msgid "Connection Initialization"
-msgstr "Установка соединения"
-
-msgid "Connectivity"
-msgstr "Соединения"
-
-msgid "Console menu"
-msgstr "Консоль меню"
+msgid "Coordinated Universal Time (UTC)"
+msgstr ""
 
 msgid "Copenhagen, Denmark"
 msgstr "Copenhagen, Denmark"
 
+msgid "Creating new partition"
+msgstr ""
+
 msgid "Croatia"
 msgstr "Хорватия"
-
-msgid "Custom Applications"
-msgstr "Пользовательские приложения"
-
-msgid "Custom Music-on-Hold"
-msgstr "Пользовательская Музыка на ожидание"
 
 msgid "Cyprus"
 msgstr "Кипр"
@@ -510,14 +268,8 @@ msgstr "Czech Republic"
 msgid "DNS Servers"
 msgstr "DNS Сервер"
 
-msgid "DNS Service Records"
-msgstr "Записи DNS сервера"
-
-msgid "DO NOT abort the firmware upgrade once it has started."
-msgstr "НЕ ПРЕРЫВАТЬ обновление прошивки, после того как она началась."
-
-msgid "DTMF Mode"
-msgstr "DTMF режим"
+msgid "DTMF, as used in Denmark, Sweden and Netherlands"
+msgstr ""
 
 msgid "Danish"
 msgstr "Danish"
@@ -528,114 +280,38 @@ msgstr "Датский (официальный)"
 msgid "Darwin"
 msgstr "Дарвин"
 
-msgid "Default values are 60, 3600 and 120 respectively."
-msgstr "Значения по умолчанию 60, 3600 и 120 соответственно."
-
-#, php-format
-msgid "Defaults to the e-mail address used in the %s setup."
-msgstr "Адрес электронной почты, используемый по умолчанию в %s установки."
+msgid "Default"
+msgstr ""
 
 msgid "Denmark"
 msgstr "Дания"
 
-msgid "Deny Network"
-msgstr "Deny Network"
-
 msgid "Description"
 msgstr "Описание"
-
-msgid "Descriptive name for this provider."
-msgstr "Описательное имя для этого провайдера."
 
 msgid "Device"
 msgstr "Устройство"
 
-msgid "Dialing Pattern(s)"
-msgstr "План набора(ов)"
+msgid "Device name"
+msgstr ""
 
 msgid "Dialplan"
 msgstr "План набора"
 
-msgid "Dialplan Element Library"
-msgstr "Справочник по плану набора"
-
-msgid "Dialstring"
-msgstr "Строка набора"
-
-msgid "Disable DNS SRV lookups."
-msgstr "Выключить DNS SRV запросы."
-
-msgid "Disable console menu"
-msgstr "Выключить консоль меню"
-
-msgid "Disable overrides"
-msgstr "Выключить переопределения"
-
-msgid "Disabled"
-msgstr "Выключено"
+msgid "Disk"
+msgstr ""
 
 msgid "Disk Device"
 msgstr "Дисковое устройство"
 
-msgid "Do not register with this provider."
-msgstr "Не регистрироваться у  провайдера."
+msgid "Disk Report"
+msgstr ""
 
-msgid "Do you really want to delete this application mapping?"
-msgstr "Вы действительно хотите удалить приложение?"
+msgid "Disk unique identifier"
+msgstr ""
 
-msgid "Do you really want to delete this application?"
-msgstr "Вы действительно хотите удалить это приложение?"
-
-msgid "Do you really want to delete this call group?"
-msgstr "Вы действительно хотите удалить эту группу?"
-
-msgid "Do you really want to delete this conference room?"
-msgstr "Вы действительно хотите удалить конференц-комнату?"
-
-msgid "Do you really want to delete this fax?"
-msgstr "Вы действительно хотите удалить этот факс?"
-
-msgid "Do you really want to delete this manager user?"
-msgstr "Вы действительно хотите удалить этого менеджера?"
-
-msgid "Do you really want to delete this phone?"
-msgstr "Вы действительно хотите удалить этот телефон?"
-
-msgid "Do you really want to delete this port group's settings?"
-msgstr "Вы действительно хотите удалить группу портов?"
-
-msgid "Do you really want to delete this provider?"
-msgstr "Do you really want to delete this provider?"
-
-msgid "Do you really want to disable this fax?"
-msgstr "Вы действительно хотите отключить этот факс?"
-
-msgid "Do you really want to disable this phone?"
-msgstr "Вы действительно хотите отключить телефон?"
-
-msgid "Do you really want to disable this provider?"
-msgstr "Вы действительно хотите отключить этого провайдера?"
-
-msgid "Do you really want to forget this disk?"
-msgstr "Вы действительно хотите удалить этот диск?"
-
-msgid "Do you really want to forget this gateway's settings?"
-msgstr "Вы действительно хотите удалить настройки шлюза?"
-
-msgid "Do you really want to forget this port\\'s settings?"
-msgstr "Вы действительно хотите удалить настройки порта\\'ов?"
-
-msgid "Do you really want to kick this member?"
-msgstr "Вы действительно хотите прогнать этого пользователя?"
-
-msgid "Download"
-msgstr "Скачать"
-
-msgid "Download configuration"
-msgstr "Загрузка конфигурации"
-
-msgid "Download:"
-msgstr "Скачать:"
+msgid "Dns"
+msgstr ""
 
 msgid "Dublin, Ireland"
 msgstr "Дублин, Ирландия"
@@ -646,38 +322,14 @@ msgstr "Голландский"
 msgid "Dutch (formal)"
 msgstr "Голландский (официальный)"
 
+msgid "Dynamic DNS"
+msgstr ""
+
 msgid "Dynamic DNS Client"
 msgstr "Динамический DNS-клиент"
 
-msgid "E-Mail"
-msgstr "E-Mail"
-
 msgid "E-Mail notifications enabled but the e-mail address is invalid or missing."
 msgstr "E-Mail уведомления включены, но адрес электронной почты недействителен или отсутствует."
-
-msgid "E-mail Address"
-msgstr "Адрес электронной почты"
-
-msgid "E-mail Me"
-msgstr "Послать e-mail"
-
-msgid "E-mail has been sent successfully."
-msgstr "E-mail был отправлена успешно."
-
-msgid "E-mail notifications for new voicemail will be delivered in this language."
-msgstr "Уведомление о новых голосовых сообщений на e-mail будут доставлены на этом языке."
-
-msgid "E-mail was not sent, check your settings."
-msgstr "E-mail не отправляется, проверьте настройки."
-
-msgid "ERR Could not install configuration.\n"
-msgstr "ERR  не могу установить настройки.\n"
-
-msgid "ERR Could not save configuration.\n"
-msgstr "ERR Не удалось сохранить настройки.\n"
-
-msgid "ERR Invalid configuration received.\n"
-msgstr "ERR получена неправильная конфигурация.\n"
 
 #, php-format
 msgid "ERROR: the changes could not be applied (error code %s)."
@@ -685,9 +337,6 @@ msgstr "ОШИБКА: изменения не могут быть примене
 
 msgid "Eastern Time"
 msgstr "Eastern Time"
-
-msgid "Echo Cancellation"
-msgstr "Эхо-подавление"
 
 msgid "Echos audio and video back to the caller as soon as it is received. Used to test connection delay."
 msgstr "Эхо тест аудио и видео вызова. Используется для проверки связи и задержки соединения."
@@ -698,64 +347,8 @@ msgstr "Эквадор"
 msgid "Edit"
 msgstr "Редактировать"
 
-#, php-format
-msgid "Edit Analog %s Port"
-msgstr "Изменить аналоговый %s порт"
-
-msgid "Edit Analog Fax"
-msgstr "Изменить Аналоговый факс"
-
-msgid "Edit Analog Phone"
-msgstr "Изменить аналоговый телефон"
-
-msgid "Edit Analog Provider"
-msgstr "Изменить аналогового провайдера"
-
-msgid "Edit Application"
-msgstr "Редактировать приложения"
-
-msgid "Edit External Phone"
-msgstr "Изменить внешний телефон"
-
-msgid "Edit IAX Phone"
-msgstr "Изменить IAX Телефон"
-
-msgid "Edit IAX Provider"
-msgstr "Изменить IAX провайдера"
-
-#, php-format
-msgid "Edit ISDN %s Port"
-msgstr "Изменить ISDN %s порт"
-
-msgid "Edit ISDN Phone"
-msgstr "Изменить ISDN Телефон"
-
-msgid "Edit ISDN Provider"
-msgstr "Изменить цифрового провайдера"
-
-msgid "Edit Provider Group"
-msgstr "Изменить группу Провайдеров"
-
-msgid "Edit Redfone Gateway"
-msgstr "Изменить Redfone Gateway"
-
-msgid "Edit Room"
-msgstr "Изменить комнату"
-
-msgid "Edit SIP Phone"
-msgstr "Изменить SIP Телефон"
-
-msgid "Edit SIP Provider"
-msgstr "Изменить SIP провайдера"
-
-msgid "Edit Skinny Phone"
-msgstr "Изменить Skinny Телефон"
-
 msgid "Edit Storage Disk"
 msgstr "Изменение дисков хранения данных"
-
-msgid "Edit User"
-msgstr "Редактировать пользователя"
 
 msgid "Egypt"
 msgstr "Египет"
@@ -763,20 +356,8 @@ msgstr "Египет"
 msgid "El Salvador"
 msgstr "Сальвадор"
 
-msgid "Enable"
-msgstr "Включить"
-
-msgid "Enable Jitterbuffer on IAX connections terminated by the system."
-msgstr "Включить аудио буфер на IAX устройствах системы. "
-
-msgid "Enabled"
-msgstr "Включено"
-
-msgid "Encoding"
-msgstr "Кодирование"
-
-msgid "Encryption Method"
-msgstr "Метод шифрования"
+msgid "Empty or missing partition label."
+msgstr ""
 
 msgid "English"
 msgstr "Английский"
@@ -793,80 +374,14 @@ msgstr "Английский (официальный)"
 msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP)."
 msgstr "Введите нестандартный номер порта для ВЕБ интерфейса выше, если вы хотите, чтобы изменить порт по умолчанию (80 для HTTP)."
 
-msgid "Enter a descriptive name for this disk."
-msgstr "Введите имя для этого диска."
-
-msgid "Enter a descriptive name for this gateway."
-msgstr "Введите описательное имя для этого шлюза."
-
-msgid "Enter a descriptive name for this port."
-msgstr "Введите описательное имя для данного порта."
-
-msgid "Enter a descriptive name for this span."
-msgstr "Введите описательное название для этой службы."
-
-msgid ""
-"Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
-" <ul>\n"
-" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
-" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
-" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - matches one or more characters</li>\n"
-" \t<li><strong>!</strong> - matches zero or more characters</li>\n"
-" </ul>\n"
+msgid "Enter a descriptive comment about this partition."
 msgstr ""
-"Введите шаблон или телефонный номер, и выберите назначение. Для группового вызова  просто определите их с одинаковым шаблоном. Если вводится телефонный номер, он будет использован как \"внешний\" номер при неотвеченном вызове. Если ничего не ввести, все звонки будут направлены по номеру назначения.<br>\n"
-" <ul>\n"
-" \t<li><strong>X</strong> - совпадает с цифрами 0-9</li>\n"
-" \t<li><strong>Z</strong> - совпадает с цифрами 1-9</li>\n"
-" \t<li><strong>N</strong> - совпадает с цифрами 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - совпадает с любой цифрой в квадратных скобках (в примере, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - совпадает с одним знаком или более</li>\n"
-" \t<li><strong>!</strong> - совпадает с любым знаком или без него (может отсутствовать)</li>\n"
-" </ul>\n"
 
 msgid "Enter a server to synchronize with."
 msgstr "NTP сервер для синхронизации."
 
-msgid ""
-"Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
-" 2,Echo()\n"
-" 3,Hangup()\n"
-" </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
+msgid "Enter the label for this disk partition."
 msgstr ""
-"Введите логику приложения, по одной команде на строку, как в примере: <br> <pre> 1,Answer()\n"
-" 2,Echo()\n"
-" 3,Hangup()\n"
-"</pre> <p>Программирование приложений требует знания плана набора Asterisk. При сохранении Система делает проверку на корректность введенных данных, однако, существует возможность нарушения работы всего плана набора из-за ошибки в логике приложения. Справочник приложений, функций, и каналов доступен в <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Справочнике</a></strong>.</p> "
-
-msgid ""
-"Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
-" <ul>\n"
-" \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
-" \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
-" \t<li><strong>X</strong> - matches digits 0-9</li>\n"
-" \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
-" \t<li><strong>N</strong> - matches digits 2-9</li>\n"
-" \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
-" \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
-" </ul>\n"
-msgstr ""
-"Для определения исходящей маршрутизации на  провайдера введите шаблоны, по одному в строке. Введите \"X!\" для использования этого провайдера для всех исходящих звонков. Для выхода на провайдера через 9-ку, введите \"9|.\". Оставьте поле пустым для использования провайдера только для входящих звонков. <br>\n"
-"<ul>\n"
-" \t<li><strong>+</strong> - добавить префикс (например, \"1+555\" совпадает с \"555\" и преобразуется в \"1555\"  при отправке на провайдера)</li>\n"
-" \t<li><strong>|</strong> - удаляет префикс (например, \"1|555\" совпадает с \"1555\" но отсылает \"555\" провайдеру)</li>\n"
-" \t<li><strong>X</strong> - совпадает с цифрами 0-9</li>\n"
-" \t<li><strong>Z</strong> - совпадает с цифрами</li>\n"
-" \t<li><strong>N</strong> - совпадает с цифрами</li>\n"
-" \t<li><strong>[13-5]</strong> - совпадает с любой цифрой в квадратных скобках (в примере, 1,3,4,5)</li>\n"
-" \t<li><strong>.</strong> - совпадает с одним или более знаков (не допускается впереди | или +)</li>\n"
-" \t<li><strong>!</strong> - совпадает с нулем или более знаков (не допускается впереди | или +)</li>\n"
-" </ul>\n"
-
-msgid "Enter the full path where this device should be mounted."
-msgstr "Введите полный путь, где это устройство должно быть смонтировано."
 
 msgid "Estonia"
 msgstr "Эстония"
@@ -874,32 +389,14 @@ msgstr "Эстония"
 msgid "Europe"
 msgstr "Европа"
 
-msgid "Execute"
-msgstr "Выполнить"
-
-msgid "Extension"
-msgstr "Номер"
-
-msgid "Extension Digit"
-msgstr "Пауза между цифрами"
-
-msgid "External"
-msgstr "Внешние"
-
-msgid "External Phones"
-msgstr "Внешние телефоны"
-
 msgid "Factory Defaults"
 msgstr "Заводские настройки"
-
-msgid "Failover Provider"
-msgstr "Резервный провайдер"
 
 msgid "Faxes"
 msgstr "Факсы"
 
-msgid "Filename"
-msgstr "Имя файла"
+msgid "Feature codes"
+msgstr ""
 
 msgid "Finland"
 msgstr "Финляндия"
@@ -913,35 +410,23 @@ msgstr "Финский (официальный)"
 msgid "Firmware"
 msgstr "Прошивка"
 
-msgid "Firmware Version"
-msgstr "Версия Прошивки"
-
-msgid "Firmware image file:"
-msgstr "Файл прошивки:"
-
-msgid "Firmware uploading is not supported on this platform."
-msgstr "Загруженная прошивка не поддерживается на этой платформе. "
-
-msgid "Force"
-msgstr "Принудительно"
-
 msgid "Format"
 msgstr "Форматировать"
 
 msgid "Format & Initialize"
 msgstr "Форматирование и инициализация"
 
-msgid "Formatting failed! (returned "
-msgstr "Форматирование не удалось!  (код ошибки"
-
-msgid "Formatting successful!"
-msgstr "Форматирование прошло успешно!"
-
-msgid "Framing"
-msgstr "Фрейминг"
+msgid "Formatting partition"
+msgstr ""
 
 msgid "France"
 msgstr "Франция"
+
+msgid "Free"
+msgstr ""
+
+msgid "Free disks"
+msgstr ""
 
 msgid "French"
 msgstr "Французский"
@@ -952,32 +437,11 @@ msgstr "Французский (Канада)"
 msgid "French (formal)"
 msgstr "Французский (официальный)"
 
-msgid "From Address"
-msgstr "Адрес отправителя"
-
-msgid "From Domain"
-msgstr "От домена"
-
-msgid "From User"
-msgstr "От имени"
-
-msgid "Functions"
-msgstr "Функции"
-
 msgid "GUI Options"
 msgstr "Функции GUI"
 
 msgid "Gateway"
 msgstr "Шлюз"
-
-msgid "Gateway Name"
-msgstr "Имя шлюза"
-
-msgid "Gateways"
-msgstr "Шлюзы"
-
-msgid "General"
-msgstr "Общий"
 
 msgid "General Settings"
 msgstr "Основные настройки"
@@ -1000,9 +464,6 @@ msgstr "Немецкий (официальный)"
 msgid "Germany"
 msgstr "Германия"
 
-msgid "Graph shows last"
-msgstr "График показывает последние"
-
 msgid "Greece"
 msgstr "Греция"
 
@@ -1012,41 +473,20 @@ msgstr "Греческий"
 msgid "Greek (formal)"
 msgstr "Греческий (официальный)"
 
-msgid "Ground Start"
-msgstr "Ground Start"
-
 msgid "Group"
 msgstr "Група"
 
-msgid "Group Members"
-msgstr "Члены группы"
-
-msgid "Group name"
-msgstr "Имя Группы"
+msgid "Groups"
+msgstr ""
 
 msgid "Guam"
 msgstr "Гуам"
-
-msgid "Hardware Port"
-msgstr "Аппаратный порт"
 
 msgid "Hawaii Time"
 msgstr "Hawaii Time"
 
 msgid "Helsinki, Finland"
 msgstr "Хельсинки, Финляндия"
-
-msgid "Hide Analog related options"
-msgstr "Скрыть дополнительные Аналоговые настройки"
-
-msgid "Hide IAX related options"
-msgstr "Скрыть дополнительные IAX настройки"
-
-msgid "Hide ISDN related options"
-msgstr "Скрыть дополнительные ISDN настройки"
-
-msgid "Hide SIP related options"
-msgstr "Скрыть дополнительные SIP настройки"
 
 msgid "Hobart"
 msgstr "Хобарт"
@@ -1060,17 +500,14 @@ msgstr "Хост"
 msgid "Hostname"
 msgstr "Доменное имя"
 
+msgid "Hostname of that system."
+msgstr ""
+
 msgid "Hostname of the PBX."
 msgstr "Доменное имя сервера."
 
 msgid "Hostname,Domain,Username"
 msgstr "Хост, Домен, Имя пользователя"
-
-msgid "Hot Keys"
-msgstr "Горячие клавиши"
-
-msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
-msgstr "Домашние ISDN линии обычно типа Point-to-Multipoint и офисные ISDN соединения обычно типа Point-to-Point."
 
 msgid "Hungary"
 msgstr "Венгрия"
@@ -1081,36 +518,23 @@ msgstr "Я знаю, спасибо за предупреждение."
 msgid "IAX"
 msgstr "IAX"
 
-msgid "IAX Phones"
-msgstr "IAX телефоны"
-
-msgid "IP"
-msgstr "IP"
-
 msgid "IP Address"
 msgstr "IP Адрес"
 
 msgid "IP Addresses"
 msgstr "IP адреса"
 
+msgid "IP address"
+msgstr ""
+
 msgid "ISDN"
 msgstr "Цифровые"
-
-msgid "ISDN Phones"
-msgstr "ISDN телефоны"
 
 msgid "Iceland"
 msgstr "Исландия"
 
-msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
-msgstr "Если исходящий звонок на резервного провайдера не удастся, попробовать вышеуказанную запись. Планы набора должны быть совместимы, дополнительных проверок на совпадения не осуществляется."
-
-msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
-msgstr "Настройки для регулировки громкости звонков, проходящих  через этот порт, (слишком тихо или громко).  Уровни приема и передачи (в децибелах) устанавливаются независимо."
-
-#, php-format
-msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
-msgstr "Если нажать кнопку &quot;Да&quot;, конфигурация сервера будет сброшена на заводские установки и сервер перегрузится. Вся конфигурация системы будет перезаписана. LAN IP адрес будет возвращен к 192.168.1.2 и пароль будет '%s'."
+msgid "If you want to change the password for accessing the web UI, enter it here twice."
+msgstr ""
 
 msgid "If you want to change the password for accessing the webGUI, enter it here twice."
 msgstr "Для смены пароля доступа к WEB интерфейсу введите его дважды."
@@ -1118,68 +542,44 @@ msgstr "Для смены пароля доступа к WEB интерфейс�
 msgid "If you want to change the username for accessing the webGUI, enter it here."
 msgstr "Имя пользователя для доступа к WEB интерфейсу."
 
-msgid "Image upload failed (out of memory?)"
-msgstr "Сбой при загрузке прошивки (out of memory?)"
-
-msgid "In"
-msgstr "Вход"
-
-msgid "Inactive"
-msgstr "Неактивный"
-
-msgid "Incoming Extensions"
-msgstr "Входящий номер"
-
-msgid "Incoming Faxes"
-msgstr "Входящий факс"
-
-msgid "Incoming Modification"
-msgstr "Обработка входящих"
-
 msgid "India"
 msgstr "Индия"
+
+msgid "India polarity reversal dtmf cid variant"
+msgstr ""
 
 msgid "Indication Tones"
 msgstr "Индикация Тонна"
 
-msgid "Individual Ports"
-msgstr "Отдельные порты"
-
 msgid "Indonesia"
 msgstr "Индонезия"
-
-msgid "Initial connection failed!"
-msgstr "Первоначальная связь не установлена!"
-
-msgid "Initial connection successful!"
-msgstr "Начальная связь установлена!"
 
 msgid "Interface"
 msgstr "Интерфейс"
 
-msgid "Internal Phones"
-msgstr "Внутренние телефоны"
-
-msgid "Internal extension used to reach this application."
-msgstr "Внутренний номер, по которому доступно приложение."
-
-msgid "Internal extension used to reach this call group."
-msgstr "Внутренний номер, используемый для вызова этой группы."
-
-msgid "International Prefix"
-msgstr "Интернациональный префикс."
-
 msgid "Invalid extension number. Use only numerals."
 msgstr "Неверный номер. Используйте только цифры."
+
+msgid "Invalid or missing disk informations."
+msgstr ""
+
+msgid "Invalid or missing mode."
+msgstr ""
+
+msgid "Invalid or missing task."
+msgstr ""
+
+msgid "Invalid partition number."
+msgstr ""
 
 msgid "Invalid public access alias."
 msgstr "Неверный псевдоним."
 
+msgid "Invalid token, access not allowed!"
+msgstr ""
+
 msgid "Ireland"
 msgstr "Ирландия"
-
-msgid "Is there a NATing device between the PBX and this account?"
-msgstr "Существует ли промежуточный NAT маршрутизатор между сервером IP АТС и редактируемым пиром?"
 
 msgid "Israel"
 msgstr "Израиль"
@@ -1217,23 +617,17 @@ msgstr ""
 msgid "Japanese (formal)"
 msgstr "Японский (официальный)"
 
-msgid "Jitterbuffer"
-msgstr "Аудио буфер"
-
 msgid "Jordan"
 msgstr "Иордания"
 
 msgid "Kazakhstan"
 msgstr "Казахстан"
 
-msgid "Keep advanced options in navigation expanded"
-msgstr "Сохранить расширенные возможности навигации открытыми"
-
 msgid "Kernel"
 msgstr ""
 
-msgid "Kewl Start"
-msgstr "Kewl Start"
+msgid "Kernel log entries"
+msgstr ""
 
 msgid "Kiev, Ukraine"
 msgstr "Киев, Украина"
@@ -1241,14 +635,14 @@ msgstr "Киев, Украина"
 msgid "Kuwait"
 msgstr "Кувейт"
 
+msgid "Label"
+msgstr ""
+
 msgid "Language"
 msgstr "Язык"
 
 msgid "Last Config Change"
 msgstr "Последнее изменение конфигурации"
-
-msgid "Last upload"
-msgstr ""
 
 msgid "Latvia"
 msgstr "Латвия"
@@ -1256,29 +650,23 @@ msgstr "Латвия"
 msgid "Lebanon"
 msgstr "Ливан"
 
+msgid "License"
+msgstr ""
+
 msgid "Lisbon, Portugal"
 msgstr "Лиссабон, Португалия"
 
 msgid "Lithuania"
 msgstr "Литва"
 
-msgid "Loaded"
-msgstr "Загружено"
+msgid "Local log"
+msgstr ""
 
-msgid "Local Area Network"
-msgstr "Локальная сеть"
+msgid "Local logs will still be updated regardless of this setting."
+msgstr ""
 
-msgid "Local Interface"
-msgstr "Локальный Интерфейс"
-
-msgid "Local Prefix"
-msgstr "Локальный префикс"
-
-msgid "Location"
-msgstr "Местоположение"
-
-msgid "Logic"
-msgstr "Логика"
+msgid "Log messages will also be sent to the host address/port above if set."
+msgstr ""
 
 msgid "Logs"
 msgstr "Логи"
@@ -1286,14 +674,14 @@ msgstr "Логи"
 msgid "London, Great Britain"
 msgstr "Лондон, Великобритания"
 
-msgid "Loop Start"
-msgstr "Loop Start"
-
 msgid "Luxembourg"
 msgstr "Люксембург"
 
 msgid "MAC Address"
 msgstr "MAC адрес"
+
+msgid "MOH"
+msgstr ""
 
 msgid "Macao"
 msgstr "Макао"
@@ -1301,39 +689,24 @@ msgstr "Макао"
 msgid "Madrid, Spain"
 msgstr "Мадрид, Испания"
 
+msgid "Maintenance"
+msgstr ""
+
 msgid "Malaysia"
 msgstr "Малайзия"
 
 msgid "Malta"
 msgstr "Мальта"
 
+msgid "Management"
+msgstr ""
+
 msgid "Manager"
 msgstr "Менеджер"
-
-msgid "Manager Interface"
-msgstr "Интерфейс менеджера "
 
 #, php-format
 msgid "Manual Attribute line number %s is invalid."
 msgstr "Строка параметров %s является недействительной."
-
-msgid "Manual Attributes"
-msgstr "Дополнительные параметры (параметр=значение)"
-
-msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
-msgstr "Дополнительно к автоматически генерируемой конфигурации допускается ввод расширенных параметров (в формате <em>опция=значение</em>). Эти параметры добавляются к данной секции. Дополнительные значения следует использовать только в случаях крайней необходимости, так как это может нарушить функциональность или привести к нарушениям безопасности."
-
-msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
-msgstr "Максимальное количество миллисекунд между нажатиями для перевода (по умолчанию 500)."
-
-msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
-msgstr "Максимальное число секунд, после которых звонок снимется с парковки и вернется парковщику (по умолчанию 30)."
-
-msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
-msgstr "Максимальное число секунд условного перевода, после которого звонок останется без ответа (по умолчанию 15). "
-
-msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
-msgstr "Максимальное число секунд ожидания между цифрами при переводе звонка (по умолчанию 3)."
 
 msgid "Media"
 msgstr "Голосовые файлы"
@@ -1341,27 +714,23 @@ msgstr "Голосовые файлы"
 msgid "Melbourne"
 msgstr "Мельбурн"
 
-msgid "Member"
-msgstr "Участник"
-
-#, php-format
-msgid "Member %s has been kicked from conference %s."
-msgstr "Участник %s изгнан из конференции %s."
-
-msgid "Members"
-msgstr "Члены"
-
 msgid "Memory Usage"
 msgstr "Использование памяти"
+
+msgid "Messages written to shared memory will not survive across reboots."
+msgstr ""
 
 msgid "Mexico"
 msgstr "Мексика"
 
-msgid "Miscellaneous"
-msgstr "Разное"
-
 msgid "Missing caller id."
 msgstr "Отсутствует АОН."
+
+msgid "Missing device name."
+msgstr ""
+
+msgid "Missing device."
+msgstr ""
 
 msgid "Missing dialstring."
 msgstr "Отсутствует правило набора."
@@ -1369,17 +738,32 @@ msgstr "Отсутствует правило набора."
 msgid "Missing extension number."
 msgstr "Отсутствует  номер."
 
+msgid "Missing parameters, process aborted!"
+msgstr ""
+
+msgid "Missing partition number."
+msgstr ""
+
+msgid "Missing partition start sector!"
+msgstr ""
+
 msgid "Missing password."
 msgstr "Отсутствует пароль."
+
+msgid "Missing post data!"
+msgstr ""
+
+msgid "Missing token, access not allowed!"
+msgstr ""
+
+msgid "Mode"
+msgstr "Метод"
 
 msgid "Morocco"
 msgstr "Марокко"
 
 msgid "Moscow, Russia"
 msgstr "Москва, Россия"
-
-msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
-msgstr "Большинство серверов будут работать, используя \"Авто\". Если это не удается, выберите подходящий метод проверки подлинности."
 
 msgid "Mount Point"
 msgstr "Смонтировано"
@@ -1390,14 +774,8 @@ msgstr "Mountain Time"
 msgid "Mountain Time (Arizona, no DST)"
 msgstr "Mountain Time (Arizona, no DST)"
 
-msgid "Music-on-Hold"
-msgstr "Музыка на ожидание"
-
 msgid "My Router"
 msgstr "Сетевым маршрутизатором"
-
-msgid "NAT"
-msgstr "NAT"
 
 msgid "NAT + Dynamic Public IP: this PBX is behind a NAT which has a dynamic public IP. A hostname, constantly updated to point to this network is required. Enter this information below."
 msgstr "NAT + динамический публичный IP: этот сервер позади NAT-маршрутизатора, имеющего динамический IP адрес. Требуется DNS имя, постоянно обновляющееся, указывающее на этот IP адрес. Введите это имя ниже."
@@ -1417,20 +795,11 @@ msgstr "NTP сервер"
 msgid "Name"
 msgstr "Имя"
 
-msgid "National Prefix"
-msgstr "Национальный префикс."
-
-msgid "Navigation"
-msgstr "Навигация"
-
 msgid "Nested square brackets are not allowed."
 msgstr "Квадратные скобки не допускаются."
 
 msgid "Netherlands"
 msgstr "Нидерланды"
-
-msgid "Network"
-msgstr "Сеть"
 
 msgid "Network Traffic"
 msgstr "Сетевой трафик"
@@ -1450,38 +819,23 @@ msgstr "Newfoundland Time"
 msgid "Nigeria"
 msgstr "Нигерия"
 
-msgid "No"
-msgstr "Нет"
+msgid "No additional storage configured."
+msgstr ""
 
-msgid "No additional storage devices were detected."
-msgstr "Никаких дополнительных устройств хранения данных не обнаружено."
-
-msgid "No compatible analog ports were detected."
-msgstr "Нет совместимых аналоговых портов."
-
-msgid "No compatible isdn ports were detected."
-msgstr "Не обнаружено совместимых портов ISDN."
-
-msgid "No last upload."
-msgstr "Нет новых загрузок"
-
-msgid "No other Providers for failover."
-msgstr "Нет больше резервных провайдеров"
+msgid "No free disk devices."
+msgstr ""
 
 msgid "No ports assigned."
 msgstr ""
 
-msgid "Non-Members"
-msgstr "Не-члены"
-
 msgid "Norway"
 msgstr "Норвегия"
 
-msgid "Note:"
-msgstr "Примечание:"
-
 msgid "Notes"
 msgstr "Примечания"
+
+msgid "Notice: this is the system disk. Unless you really know what you are doing please avoid using it for additional storage."
+msgstr ""
 
 msgid "Notifications"
 msgstr "Уведомления"
@@ -1489,41 +843,20 @@ msgstr "Уведомления"
 msgid "Number"
 msgstr "Номер"
 
-msgid "Number or string to be dialed to reach this telephone."
-msgstr "Номер или строка вызова."
-
-msgid "OK\n"
-msgstr "OK\n"
-
 msgid "Oman"
 msgstr "Oman"
 
-msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
-msgstr "Откройте XML-файл конфигурации сервера и нажмите на кнопку ниже, чтобы восстановить настройки."
-
-msgid "Optional PIN needed to access this conference room."
-msgstr "Для доступа к этой конференц-комнате нужен дополнительный PIN."
-
-msgid "Options"
-msgstr "Опции"
+msgid "Only letters A-z, numbers and underscore allowed."
+msgstr ""
 
 msgid "Oslo, Norway"
 msgstr "Осло, Норвегия"
 
-msgid "Out"
-msgstr "Выход"
+msgid "Outgoing calls restrictions"
+msgstr ""
 
-msgid "Outgoing Calls Only"
-msgstr "Только исходящие вызовы"
-
-msgid "Outgoing Patterns"
-msgstr "Исходящие шаблоны"
-
-msgid "Outgoing Presentation"
-msgstr "Исходящие"
-
-msgid "Outgoing provider or protocol used to reach this telephone."
-msgstr "Исходящий провайдер или протокол, используемый для этого телефона."
+msgid "Overwriting partitions not allowed on: "
+msgstr ""
 
 msgid "PHP parsing error"
 msgstr "Ошибка разбора PHP"
@@ -1546,41 +879,23 @@ msgstr "Пакет установлен успешно."
 msgid "Package restored successfully."
 msgstr "Пакет восстановлен успешно."
 
-msgid "Packages"
-msgstr "Пакеты"
-
-msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
-msgstr "Для проверки статуса пакеты будут отправляться на эту учетную запись каждые  <i>n</i> секунд.<BR>По-умолчанию установлено в '2'. Установить в '0' для выключения. "
-
 msgid "Pakistan"
 msgstr "Пакистан"
 
 msgid "Paris, France"
 msgstr "Париж, Франция"
 
-msgid "Park Extension"
-msgstr "Номер парковки"
-
-msgid "Park Time"
-msgstr "Время парковки"
-
-msgid "Parking Range"
-msgstr "Диапазон парковки"
+msgid "Partition label"
+msgstr ""
 
 msgid "Password"
 msgstr "Пароль"
 
-msgid "Pattern(s)"
-msgstr "Шаблон(ы)"
-
 msgid "Pbx"
 msgstr ""
 
-msgid "Permissions"
-msgstr "Разрешения"
-
-msgid "Permit Network"
-msgstr "Разрешить сети"
+msgid "Pbx will restart."
+msgstr ""
 
 msgid "Persistence"
 msgstr "Постоянное хранение"
@@ -1594,26 +909,17 @@ msgstr "Перу"
 msgid "Philippines"
 msgstr "Филиппины"
 
-msgid "Phone"
-msgstr "Телефон"
-
-msgid "Phone Connectivity"
-msgstr "Телефоная связь"
-
 msgid "Phones"
 msgstr "Телефоны"
 
-msgid "Pin"
-msgstr "ПИН-код"
-
-msgid "Point-to-Multipoint (PTMP)"
-msgstr "Точка-многоточка (PTMP)"
-
-msgid "Point-to-Point (PTP)"
-msgstr "Point-to-Point (PTP)"
+msgid "Please enter a valid ip address for"
+msgstr ""
 
 msgid "Poland"
 msgstr "Польша"
+
+msgid "Polarity reversal"
+msgstr ""
 
 msgid "Polish"
 msgstr "Польский"
@@ -1624,11 +930,14 @@ msgstr "Польский (официальный)"
 msgid "Port"
 msgstr "Порт"
 
+msgid "Port value must be a number"
+msgstr ""
+
+msgid "Port value must be lower than"
+msgstr ""
+
 msgid "Ports"
 msgstr "Порты"
-
-msgid "Ports impedance"
-msgstr "Импеданс портов"
 
 msgid "Portugal"
 msgstr "Португалия"
@@ -1644,34 +953,6 @@ msgstr "Португальский, Бразилия (официальный)"
 
 msgid "Prague, Czech Republic"
 msgstr "Прага, Чешская Республика"
-
-msgid "Prepend Caller ID name with text above"
-msgstr "Добавить вышеуказанное имя к АОН"
-
-msgid "Prepend Caller ID number with number above"
-msgstr "Добавить вышеуказанный номер к АОН"
-
-msgid "Previously Used Disks"
-msgstr "Ранее используемые диски"
-
-msgid "Printable Dialplan"
-msgstr "Печать плана набора"
-
-#, fuzzy
-msgid "Private Prefix"
-msgstr "Закрытый префикс"
-
-msgid "Private RSA Key"
-msgstr "Закрытый ключ RSA"
-
-msgid "Provider"
-msgstr "Провайдер"
-
-msgid "Provider Port Groups"
-msgstr "Группа портов Провайдера"
-
-msgid "Provider host URL or IP address and optional port."
-msgstr "URL или IP адрес провайдера и порт (опционально)."
 
 msgid "Providers"
 msgstr "Провайдеры"
@@ -1691,62 +972,35 @@ msgstr "Публичный IP-адрес"
 msgid "Public Number"
 msgstr "Внешний номер"
 
-msgid "Public RSA Key"
-msgstr "Общественный ключ RSA"
-
-msgid "Qualify"
-msgstr " Проверка доступности"
-
-msgid "RSA Keys"
-msgstr "Ключи RSA"
-
 msgid "RTP"
 msgstr "RTP"
-
-msgid "RTP Port Range"
-msgstr "Диапазон RTP портов"
-
-msgid "Read"
-msgstr "Чтение"
 
 msgid "Reboot"
 msgstr "Перезагрузка"
 
-msgid "Redfone"
-msgstr "Redfone"
+msgid "Reboot required"
+msgstr ""
 
 msgid "Regional Settings"
 msgstr "Региональные настройки"
 
-msgid "Registration"
-msgstr "Регистрация"
+msgid "Remote log"
+msgstr ""
 
-msgid "Registration Expiration Timeouts"
-msgstr "Периоды регистрации"
-
-msgid "Remote IP"
-msgstr "Удаленный IP"
-
-msgid "Remote Interface"
-msgstr "Удаленный интерфейс"
-
-msgid "Remote MAC"
-msgstr "Удаленный MAC"
-
-msgid "Replace Caller ID name with Caller ID number"
-msgstr "Заменить имя на номер телефона АОН."
-
-msgid "Replace Caller ID with text above"
-msgstr "Заменить АОН на выше указанный текст"
-
-msgid "Restore configuration"
-msgstr "Восстановление конфигурации"
+msgid "Rereading partition table failed, kernel still uses old table."
+msgstr ""
 
 msgid "Resuming updates"
 msgstr "Возобновляю обновление"
 
+msgid "Ring"
+msgstr ""
+
 msgid "Ring Length"
 msgstr "Длительность вызова"
+
+msgid "Ring groups"
+msgstr ""
 
 msgid "Romania"
 msgstr "Румыния"
@@ -1754,10 +1008,7 @@ msgstr "Румыния"
 msgid "Rome, Italy"
 msgstr "Рим, Италия"
 
-msgid "Room Number"
-msgstr "Номер конференц-комнаты"
-
-msgid "Russia"
+msgid "Routing"
 msgstr ""
 
 msgid "Russia / ex Soviet Union"
@@ -1775,29 +1026,14 @@ msgstr "Россия / бывший Советский Союз"
 msgid "SIP"
 msgstr "SIP"
 
-msgid "SIP Phones"
-msgstr "SIP телефоны"
-
-msgid "SMTP Client Setup"
-msgstr "Настройки SMTP клиента"
-
-msgid "SMTP host URL or IP address and optional port."
-msgstr "Адрес SMTP сервера или IP адрес и опционально, порт."
-
 msgid "Saudi Arabia"
 msgstr "Saudi Arabia"
 
 msgid "Save"
 msgstr "Сохранить"
 
-msgid "Secret"
-msgstr "Пароль"
-
 msgid "Security"
 msgstr "Безопасность"
-
-msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
-msgstr "Выберите все тоновые зоны для аналоговых, которые требуется поддерживать. <strong> первая тоновая зона  будет по-умолчанию."
 
 msgid "Select how often the time should be synchronized."
 msgstr "Интервал синхронизации."
@@ -1805,32 +1041,20 @@ msgstr "Интервал синхронизации."
 msgid "Select in which language you want the webGUI to be displayed."
 msgstr "Язык отображения WEB интерфейса."
 
-msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
-msgstr "Выберите импеданс FXO порта, который будет использоваться в соответствии со страной или регулирующим органом; FXS порты подчиняются этой же настройке."
-
 msgid "Select the location closest to you."
 msgstr "Выберите ближайший к вам сервер времени, или pool.ntp.org."
 
 msgid "Select which country's indication tones (the ringing, busy and error tones) to be used."
 msgstr "Тоновые настройки страны (тон звонка, занято и ошибок), которые будут использоваться."
 
-msgid "Select which disk you would like to format."
-msgstr "Выберите диск, который вы хотите отформатировать."
-
-msgid "Select which ethernet port on the gateway this system is connected to."
-msgstr "Выберите сетевой порт в системе, куда подключен шлюз."
-
-msgid "Select which ethernet port on this system the gateway is connected to."
-msgstr "Выберите сетевой порт в системе, куда подключен шлюз."
-
-msgid "Send all incoming faxes here."
-msgstr "Отправлять все входящие факсы сюда."
-
 msgid "Service"
 msgstr ""
 
 msgid "Service Type"
 msgstr "Тип обслуживания"
+
+msgid "Service mount point"
+msgstr ""
 
 msgid "Services"
 msgstr "Сервисы"
@@ -1841,8 +1065,8 @@ msgstr "Чтобы использовать словесный синоним (�
 msgid "Settings"
 msgstr "Настройки"
 
-msgid "Signaling"
-msgstr "Сигнализация"
+msgid "Shared memory circular buffer"
+msgstr ""
 
 msgid "Singapore"
 msgstr "Сингапур"
@@ -1850,23 +1074,11 @@ msgstr "Сингапур"
 msgid "Size"
 msgstr "Размер"
 
-msgid "Skinny"
-msgstr "Skinny"
-
 msgid "Slovakia"
 msgstr "Словакия"
 
 msgid "Slovenia"
 msgstr "Словения"
-
-msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
-msgstr "Некоторые провайдеры требуют отдельного 'fromdomain'.<br>По умолчанию, значение хоста, установленное выше."
-
-msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
-msgstr "Некоторые провайдеры требуют отдельного поля 'fromuser' .<br>По-умолчанию, введенное выше имя пользователя."
-
-msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
-msgstr "Некоторые провайдеры требуют отдельного имени пользователя для авторизации.<br>По умолчанию имя пользователя."
 
 msgid "South Africa"
 msgstr "ЮАР"
@@ -1877,29 +1089,20 @@ msgstr "Южная Корея"
 msgid "Spain"
 msgstr "Испания"
 
-msgid "Span"
-msgstr "СПАН"
-
-msgid "Span Count"
-msgstr "Число Спанов"
-
 msgid "Spanish (Spain)"
 msgstr "Испанский (Испания)"
 
 msgid "Spanish (formal)"
 msgstr "Испанский (официальный)"
 
-msgid "Spans"
-msgstr "СПАНЫ"
-
-msgid "Start Signaling"
-msgstr "Начало сигнализации"
-
-msgid "State"
-msgstr "Состояние"
+msgid "Spare disk space"
+msgstr ""
 
 msgid "Static Public IP"
 msgstr "Статический IP адрес"
+
+msgid "Static routes"
+msgstr ""
 
 msgid "Status"
 msgstr "Статус"
@@ -1913,23 +1116,7 @@ msgstr "Обновление остановлено"
 msgid "Storage"
 msgstr "Диски"
 
-msgid "Storage Disk"
-msgstr "Дисковый накопитель"
-
-msgid "Storage Services"
-msgstr "Сервисы хранения"
-
-msgid "Subject"
-msgstr "Тема"
-
-#, php-format
-msgid "Successfully installed %s formatted prompts for %s."
-msgstr "Успешно выполнил установку %s с форматированием %s."
-
-msgid "Summary"
-msgstr "Сводка"
-
-msgid "Supported file formats"
+msgid "Subnet"
 msgstr ""
 
 msgid "Sweden"
@@ -1937,9 +1124,6 @@ msgstr "Швеция"
 
 msgid "Swedish"
 msgstr "Шведский"
-
-msgid "Switch to bytes/s"
-msgstr "Переход к байт/с"
 
 msgid "Switzerland"
 msgstr "Швейцария"
@@ -1950,14 +1134,29 @@ msgstr "Сидней"
 msgid "Syria"
 msgstr "Сирия"
 
+msgid "Syslog server"
+msgstr ""
+
 msgid "System"
 msgstr "Система"
 
 msgid "System Information"
 msgstr "Информация о системе"
 
+msgid "System Time"
+msgstr ""
+
+msgid "System disk status"
+msgstr ""
+
 msgid "System log entries"
 msgstr "Системный лог"
+
+msgid "System logs"
+msgstr ""
+
+msgid "System will restart."
+msgstr ""
 
 msgid "Taiwan"
 msgstr "Тайвань"
@@ -1965,30 +1164,15 @@ msgstr "Тайвань"
 msgid "Tallinn, Estonia"
 msgstr "Таллинн, Эстония"
 
-msgid "TeeBX Test E-mail"
-msgstr ""
-
 #, php-format
 msgid "TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"
 msgstr ""
 
-msgid "TeeBX&reg; &copy; 2010-2011 Giovanni Vallesi. All rights reserved."
-msgstr ""
-
-msgid "TeeBX: execute command"
-msgstr ""
-
-msgid "Telephone number assigned to this line."
-msgstr "Номер телефона присвоен к этой линии."
-
 msgid "Telephony Ports"
 msgstr "Телефоные порты"
 
-msgid "Test E-mail"
-msgstr "Проверить e-mail"
-
-msgid "Text to be displayed for Caller ID."
-msgstr "Текст для отображения  Caller ID."
+msgid "Text to be displayed for Caller ID Name."
+msgstr ""
 
 msgid "Thailand"
 msgstr "Таиланд"
@@ -2001,59 +1185,17 @@ msgstr "Поле %s обязательно."
 msgid "The %s field must be numeric."
 msgstr "Поле %s должно быть числовым."
 
-msgid "The IP address of the foneBRIDGE2 network interface."
-msgstr " IP Адрес foneBRIDGE2 сетевого интерфейса."
-
 msgid "The MAC address of this phone."
 msgstr "MAC адрес телефона"
-
-msgid "The PBX will reboot after restoring the configuration."
-msgstr "Сервер будет перезагружен после восстановления конфигурации."
-
-msgid "The audio file could not be uploaded. (file upload error)."
-msgstr "Аудио файл не загружен. (ошибка загрузки)"
-
-msgid "The audio file could not be uploaded. (filetype error)"
-msgstr ""
 
 msgid "The changes have been applied successfully."
 msgstr "Внесены изменения в конфигурацию."
 
-msgid "The changes have been applied successfully. No upload file found but there was an old custom Music-on-Hold file."
-msgstr "Изменения были применены успешно. Новый файл не найден, используется файл по умолчанию для Музыки на ожидание."
-
-msgid "The changes have been applied successfully. No upload file found but there was an old custom voicemail greeting file."
-msgstr ""
-
 msgid "The changes have been saved. You must <a href=\"/system_reboot.php\">reboot</a> your pbx for the changes to take effect."
 msgstr "Изменения были сохранены. Вы должны <a href=\"/system_reboot.php\">перезагрузить</a> АТС для того чтобы изменения вступили в силу."
 
-msgid "The conference room's number, also the extension that this conference is reachable at."
-msgstr "Номер конференц-комнаты, также номер, по которому доступна конференция."
-
-msgid "The configuration could not be restored (file upload error)."
-msgstr "Конфигурация не может быть восстановлена (file upload error)."
-
-msgid "The configuration could not be restored."
-msgstr "Конфигурация не может быть восстановлена."
-
-msgid "The configuration has been restored. The PBX is now rebooting."
-msgstr "Конфигурация была восстановлена. Сервер в настоящее время перезагружается."
-
-msgid "The digital signature on this image is invalid."
-msgstr "Цифровая подпись на эту прошивку является недействительной."
-
 msgid "The domain may only contain the characters a-z, 0-9, '-' and '.'."
 msgstr "Домен может содержать только символы a-z, 0-9, '-' and '.'."
-
-msgid "The dynamic DNS username contains invalid characters."
-msgstr "Имя DNS сервера пользователя содержит недопустимые символы."
-
-msgid "The echo canceller window size. If your calls have echo, try increasing this window."
-msgstr "Размер окна эхо-компенсатора. Если у Вас проблемы с эхо, попробуйте увеличить это окно."
-
-msgid "The end parking position must be larger than the start position."
-msgstr "Последняя позиция парковки должна быть выше чем стартовая. "
 
 #, php-format
 msgid "The field '%s' contains invalid characters."
@@ -2063,48 +1205,21 @@ msgstr "Поле '%s' содержит недопустимые символы."
 msgid "The field '%s' is required."
 msgstr "Поле '%s' обязательно."
 
-msgid "The filetype could not be recognized (file upload error)."
-msgstr "Тип файла не распознан (ошибка загрузки)."
-
-msgid "The firmware is now being installed. The PBX will reboot automatically."
-msgstr "Прошивка в настоящее время устанавливается. Сервер автоматически перезагрузится."
-
 msgid "The following input errors were detected:"
 msgstr "Были обнаружены следующие ошибки ввода:"
-
-msgid "The following variables can be used in the e-mail notification"
-msgstr "Следующие переменные могут быть использованы в уведомлении по электронной почте"
 
 msgid "The hardware port this phone is connected to."
 msgstr "Аппаратный порт, к которому подключен телефон."
 
-msgid "The high RTP port must be greater than the low RTP port."
-msgstr "Верхний диапазон RTP порта должен быть больше, чем нижний."
-
 msgid "The hostname may only contain the characters a-z, 0-9 and '-'."
 msgstr "Доменное имя может содержать только символы a-z, 0-9 and '-'."
-
-msgid "The image file is corrupt."
-msgstr "Файл прошивки поврежден."
 
 #, php-format
 msgid "The incoming extension pattern \"%s\" is invalid. %s"
 msgstr "Входящий номер \"%s\" неверен. %s"
 
-msgid "The internal number used to dial this phone."
-msgstr "Внутренний номер, используемый для вызова данного телефона."
-
-msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
-msgstr "Минимальный, максимальный и стандартный интервал (в секундах), в течение которого активны входящие и исходящие регистрации и подписки."
-
 msgid "The number of seconds this phone will ring before giving up or going to voicemail."
 msgstr "Период (в секундах) вызова, по истечение которого звонок направляется на голосовую почту."
-
-msgid "The number used to dial this application."
-msgstr "Номер который используется для набора этого приложения."
-
-msgid "The number used to dial this fax."
-msgstr "Номер для набора факса."
 
 msgid "The number used to dial this phone."
 msgstr "Номер, используемый для набора этого телефона."
@@ -2116,39 +1231,8 @@ msgstr "Исходящий номер \"%s\" неверен. %s"
 msgid "The passwords do not match."
 msgstr "Пароли не совпадают."
 
-msgid "The port range which RTP streams should use. (default:"
-msgstr "Диапазон портов, которые RTP поток будет использовать. (По умолчанию:"
-
-msgid "The prefix used when dialing international numbers (usually 00)"
-msgstr "Префикс, используемый при наборе международных номеров (обычно 00)"
-
-msgid "The prefix used when dialing numbers within your city (i.e. 0711)"
-msgstr "Префикс, используемый при наборе номера в пределах вашего города (например, 8495)"
-
-msgid "The prefix used when dialing numbers within your company (i.e. 07115678)"
-msgstr "Префикс, используемый при наборе номера в вашей компании (например, 07115678)"
-
-msgid "The prefix used when dialing numbers within your country (usually 0)"
-msgstr "Префикс, используемый при наборе номера в пределах вашей страны (обычно 0)"
-
-msgid "The provider will be contacted this often to check its availability."
-msgstr "Доступность провайдера будет проверяться с заданным интервалом"
-
-msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
-msgstr "Система вернулась к заводским настройкам и в настоящее время перезагружается. Это может занять несколько минут."
-
-msgid "The system is rebooting now. This may take a minute."
-msgstr "Система перезагружается. Это может занять несколько минут."
-
-#, php-format
-msgid "The uploaded image file is not for this platform (%s)."
-msgstr "Загруженная прошивка  не для этой платформы (%s)."
-
 msgid "The username may only contain the characters a-z, A-Z and 0-9."
 msgstr "Имя пользователя может содержать только символы a-z, A-Z and 0-9."
-
-msgid "The username of \"admin\" is already used internally by the system."
-msgstr "Имя пользователя  \"admin\" используется в системных целях."
 
 msgid "The wildcard character \"!\" is not allowed before a prefix which is to be removed."
 msgstr "Знак \"!\" не допускается в префикс, должен быть удален."
@@ -2156,54 +1240,20 @@ msgstr "Знак \"!\" не допускается в префикс, долже
 msgid "The wildcard character \".\" is not allowed before a prefix which is to be removed."
 msgstr "Знак \".\" Не допускается в префикс, должен быть удален."
 
-msgid "There are currently no active channels."
-msgstr "В настоящее время нет активных каналов."
-
-msgid "There are currently no active conferences."
-msgstr "В настоящее время нет активных конференций."
-
-msgid "There has been an error verifying the signature on this image."
-msgstr "Произошла ошибка проверки подписи для этой прошивки."
-
-#, php-format
-msgid "There is an update for your version of TeeBX available: %s<br>Download it at <a target='_blank' href='http://www.teebx.org/software'>www.teebx.org/software</a>"
-msgstr ""
-
-msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
-msgstr "Данный  номер будет проговорен системой звонящему при попадании в голосовую почту. По-умолчанию равен имени пользователя, если оно в цифровом виде. Иначе, будет проговорен внутренний номер абонента."
-
-msgid "This PBX"
-msgstr "Этим сервером"
-
 msgid "This account's password."
 msgstr "Пароль учетной записи (SIP secret)."
 
 msgid "This field can be used to modify (&quot;spoof&quot;) the MAC address of the network interface<br>Enter a MAC address in the following format: xx:xx:xx:xx:xx:xx or leave blank"
 msgstr "Это поле может быть использовано для изменения  МАС-адрес сетевого интерфейса.<br>Введите MAC адрес в следующем формате: xx:xx:xx:xx:xx:xx или оставьте поле пустым"
 
-msgid "This image is not digitally signed."
-msgstr "Эта прошивка не имеет цифровой подписи."
-
 msgid "This information should be updated by:"
 msgstr "Имя хоста обновляется:"
 
-msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
-msgstr "Это определяет режим, по которому Система определяет завершение или перехват вызова. Обычно  \"Kewl Start\" является лучшим выбором, однако, некоторые провайдеры работают лучше с другими опциями. Если звонки не начинаются или не завершаются, попробуйте адаптировать эту опцию."
+msgid "This partition will be mounted on the path set above."
+msgstr ""
 
-msgid "This key combination activates a blind transfer (default ##)."
-msgstr "Эта комбинация клавиш активирует безусловный перевод  (по умолчанию ##)."
-
-msgid "This key combination activates an attended transfer (default **)."
-msgstr "Эта комбинация клавиш активирует условный перевод  (по умолчанию **)."
-
-msgid "This range of extensions is where parked calls reside (default 701-720)."
-msgstr "Диапазон номеров для припаркованных звонков (по умолчанию 701-720). "
-
-msgid "This will be shown as voicemail service's sending address."
-msgstr "Это будет показано, как адрес отправителя."
-
-msgid "Time"
-msgstr "Время"
+msgid "This system"
+msgstr ""
 
 msgid "Time Synchronization"
 msgstr "Синхронизация времени"
@@ -2211,26 +1261,14 @@ msgstr "Синхронизация времени"
 msgid "Time zone"
 msgstr "Часовой пояс"
 
-msgid "Timeouts"
-msgstr "Тайм-ауты"
-
 msgid "Toggle auto-updates"
 msgstr "Переключение автоматического обновления"
-
-msgid "Tokyo, Japan"
-msgstr ""
-
-msgid "Tone Zones"
-msgstr "Временные Зоны"
 
 msgid "Topology"
 msgstr "Топология"
 
-msgid "Transfer Key"
-msgstr "Кнопка перевода"
-
-msgid "Transfers"
-msgstr "Переводы"
+msgid "Total"
+msgstr ""
 
 msgid "Turkish"
 msgstr "Турецкий"
@@ -2238,20 +1276,14 @@ msgstr "Турецкий"
 msgid "Turkish (formal)"
 msgstr "Турецкий (официальный)"
 
-msgid "Type"
-msgstr "Тип"
-
-msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
-msgstr "Введите адрес электронной почты и нажмите кнопку &quot;Послать e-mail&quot; для тестирования SMTP настроек."
-
 msgid "USA & Canada"
 msgstr "США и Канада"
 
-msgid "UTC"
-msgstr "UTC"
-
 msgid "Ulaanbaatar, Mongolia"
 msgstr "Улан-Батор, Монголия"
+
+msgid "Unable to get data."
+msgstr ""
 
 msgid "United Arab Emirates"
 msgstr "United Arab Emirates"
@@ -2268,11 +1300,17 @@ msgstr "США / Северная Америка"
 msgid "United States Circa 1950/ North America"
 msgstr "Соединенные Штаты Около 1950 / Северная Америка"
 
+msgid "Unknown brand/model"
+msgstr ""
+
+msgid "Unknown error in field: "
+msgstr ""
+
 msgid "Unmatched square bracket."
 msgstr "Незакрытые квадратные скобки."
 
-msgid "Update"
-msgstr "Обновление"
+msgid "Unprivileged port required, value must be greather than "
+msgstr ""
 
 msgid "Update Interval"
 msgstr "Интервал обновления"
@@ -2280,29 +1318,29 @@ msgstr "Интервал обновления"
 msgid "Updates"
 msgstr ""
 
-msgid "Upgrade firmware"
-msgstr "Обновление прошивки"
-
-msgid "Upload"
-msgstr "Добавить"
-
-msgid "Upload:"
-msgstr "Добавить:"
-
 msgid "Uptime"
 msgstr "Время работы"
 
-msgid "Use Jitterbuffer even when bridging two endpoints."
-msgstr "Использовать аудио буфер даже тогда, когда соединены (bridging) две конечные точки. "
+msgid "Usage %"
+msgstr ""
 
 msgid "Use this number as your username."
 msgstr "Используйте этот номер в качестве имени пользователя (SIP ID)."
 
-msgid "User defined e-mail text"
-msgstr "Определенный текст письма"
+msgid "Used"
+msgstr ""
 
 msgid "Username"
 msgstr "Имя пользователя"
+
+msgid "V23, ETSI/Europe"
+msgstr ""
+
+msgid "V23, Japan V23 variant"
+msgstr ""
+
+msgid "Valid range"
+msgstr ""
 
 msgid "Venezuela / South America"
 msgstr "Венесуэла / Южная Америка"
@@ -2310,26 +1348,11 @@ msgstr "Венесуэла / Южная Америка"
 msgid "Version"
 msgstr "Версия"
 
-msgid "Video"
-msgstr "Видео"
-
-msgid "Voice Prompts"
-msgstr "Голосовые файлы"
-
 msgid "Voicemail"
 msgstr "Голосовая почта"
 
-msgid "Voicemail Greeting"
-msgstr ""
-
-msgid "Voicemail to E-Mail Presentation"
-msgstr "Презентация голосовой почта на e-mail"
-
 msgid "Voicemail to e-mail enabled but the e-mail address is invalid or missing."
 msgstr "Голосовая почта по электронной почте включена, но адрес электронной почты недействителен или отсутствует."
-
-msgid "Volume"
-msgstr "Громкость"
 
 msgid "Wake-Up call manager. Call to set and cancel wake-up calls on the current extension."
 msgstr "Будильник. Позвонить для установки и отмены для текущего номера."
@@ -2337,90 +1360,32 @@ msgstr "Будильник. Позвонить для установки и от
 msgid "Warning"
 msgstr "Предупреждение"
 
-msgid "Warning:"
-msgstr "Внимание:"
+msgid "Website"
+msgstr ""
 
 msgid "Wellington"
 msgstr "Веллингтон"
 
-msgid "Write"
-msgstr "Запись"
-
-#, php-format
-msgid "XML error: %s"
-msgstr "XML error: %s"
+msgid "Wildcards"
+msgstr ""
 
 msgid "Yemen"
 msgstr "Йемен"
 
-msgid "Yes"
-msgstr "Да"
-
 msgid "Yes, alias \"*.hostname.domain\" to hostname specified above."
 msgstr "Да, оно же \"*.hostname.domain\" для хоста, указанного выше."
-
-msgid "You are using the most recent <strong>beta</strong> of TeeBX."
-msgstr ""
-
-msgid "You are using the most recent version of TeeBX."
-msgstr ""
 
 msgid "You may enter a description here for your reference (not parsed)."
 msgstr "Комментарий (для справки, в настройки не попадает)"
 
-msgid "You must reboot the system before you can upgrade the firmware."
-msgstr "Вы должны перезагрузить систему перед обновлением прошивки."
+msgid "access the web UI using the new IP address"
+msgstr ""
 
-msgid "Your Name &lt;number&gt;"
-msgstr "имя &lt;номер&gt;"
-
-msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
-msgstr "Ваши настройки SMTP работают правильно.Теперь можно использовать уведомления о голосовой почте и пропущенных вызовов на e-mail. "
-
-msgid "access the webGUI with the new IP address"
-msgstr "подключиться к WEB-интерфейсу с нового  IP адреса"
-
-msgid "activate disk"
-msgstr "активировать диск"
-
-msgid "active"
-msgstr "активный"
-
-msgid "add application mapping"
-msgstr "добавить приложение"
-
-msgid "add call group"
-msgstr "добавить группу вызовов"
-
-msgid "add conference room"
-msgstr "добавить конференц-комнату"
-
-msgid "add disk"
-msgstr "добавить диск"
-
-msgid "add gateway"
-msgstr "добавить шлюз"
-
-msgid "add incoming extension mapping"
-msgstr "добавить сопоставление входящих номеров"
-
-msgid "add manager user"
-msgstr "добавить менеджера"
-
-msgid "add port group"
-msgstr "добавить группу портов"
-
-msgid "add set"
-msgstr "добавить набор"
-
-msgid "address"
-msgstr "адрес"
+msgid "access the web UI."
+msgstr ""
 
 msgid "after you click &quot;Save&quot;, all current calls will be dropped."
 msgstr "после нажатия кнопки &quot;Сохранить&quot;, все активные вызовы будут принудительно завершены."
-
-msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
-msgstr "после нажатия кнопки &quot;Сохранить&quot;, все активные разговоры будут принудительно завершены. Может потребоваться один или несколько следующих шаговдля восстановления доступа к серверу:"
 
 msgid "alias"
 msgstr "псевдоним"
@@ -2428,53 +1393,11 @@ msgstr "псевдоним"
 msgid "allow this number to be reachable over the Internet"
 msgstr "позволяет набирать этот номер по сети  Интернет"
 
-msgid "always send Caller ID above"
-msgstr "всегда использовать этот АОН"
-
-msgid "always use NAT mode."
-msgstr "всегда использовать NAT"
-
-msgid "associated"
-msgstr "ассоциированный"
-
-msgid "assume NAT mode but don't send rport "
-msgstr "предполагаемый NAT режим без посылки rport"
-
-msgid "authenticate incoming calls with a public RSA key"
-msgstr "аутентификация входящих звонков с открытым ключом RSA"
-
-msgid "authenticate outgoing calls with a private RSA key"
-msgstr "аутентификация исходящих звонков с открытым ключом RSA"
-
 msgid "built on"
 msgstr "построенный на"
 
-msgid "caller id of person leaving the message"
-msgstr "Caller ID лица, оставившего сообщение"
-
 msgid "change the IP address of your computer"
 msgstr "изменить адрес IP вашего компьютера"
-
-msgid "click to disable fax"
-msgstr "выключить факс"
-
-msgid "click to disable phone"
-msgstr "нажмите, чтобы отключить телефон"
-
-msgid "click to disable provider"
-msgstr "нажмите, чтобы отключить провайдера"
-
-msgid "click to enable fax"
-msgstr "включить факс"
-
-msgid "click to enable phone"
-msgstr "нажмите, чтобы включить телефон"
-
-msgid "click to enable provider"
-msgstr "нажмите, чтобы отключить провайдера"
-
-msgid "clicking &quot;Save&quot; will drop all current calls."
-msgstr "нажав кнопку &quot;Сохранить&quot; все звонки сорвутся."
 
 msgid "configured manually"
 msgstr "настроить вручную"
@@ -2485,110 +1408,20 @@ msgstr "настроить через DHCP клиент"
 msgid "confirmation"
 msgstr "подтверждение"
 
-msgid "connected"
-msgstr "подключен"
-
-msgid "connected but lagged"
-msgstr "подключен, но есть задержки"
-
-msgid "default:"
-msgstr "по-умолчанию:"
-
-msgid "delete application"
-msgstr "удалить приложение"
-
-msgid "delete application mapping"
-msgstr "удалить приложение"
-
-msgid "delete call group"
-msgstr "удалить группу вызовов"
-
-msgid "delete conference room"
-msgstr "удалить конференц-комнату"
-
-msgid "delete fax"
-msgstr "удалить факс"
-
-msgid "delete manager user"
-msgstr "удалить менеджера"
-
-msgid "delete phone"
-msgstr "удалить телефон"
-
-msgid "delete port group"
-msgstr "удалить группу портов"
-
-msgid "delete provider"
-msgstr "удалить провайдера"
-
-msgid "disable certificate checking"
-msgstr "отключить проверку сертификатов"
-
-msgid "disable echo cancellation"
-msgstr "Выключить ЗХО-дав"
-
 msgid "disable time synchronization"
 msgstr "отключить синхронизацию времени"
 
-msgid "disabled"
-msgstr "выключен"
+msgid "domain"
+msgstr ""
 
-msgid "down"
-msgstr "вниз"
+msgid "done."
+msgstr ""
 
-msgid "downloading"
-msgstr "загрузка"
-
-msgid "drag-and-drop"
-msgstr "перетащить"
-
-msgid "duration of the message (i.e. 0:58)"
-msgstr "продолжительность сообщения (пример 0:58)"
+msgid "e.g."
+msgstr ""
 
 msgid "e.g. <em>pbx . mydomain.com"
 msgstr "Пример: <em>pbx.company.com"
-
-msgid "edit application"
-msgstr "редактировать приложение"
-
-msgid "edit application mapping"
-msgstr "редактировать приложения"
-
-msgid "edit call group"
-msgstr "править группу вызовов"
-
-msgid "edit conference room"
-msgstr "Изменить конференц-комнату"
-
-msgid "edit disk"
-msgstr "править диск"
-
-msgid "edit fax"
-msgstr "изменить факс"
-
-msgid "edit gateway"
-msgstr "править шлюз"
-
-msgid "edit manager room"
-msgstr "редактировать менеджера"
-
-msgid "edit phone"
-msgstr "редактировать телефон"
-
-msgid "edit port"
-msgstr "править порт"
-
-msgid "edit port group"
-msgstr "изменить группу портов"
-
-msgid "edit provider"
-msgstr "редактировать провайдера"
-
-msgid "enable voicemail to e-mail"
-msgstr "Включить отправку голосовой  почты на e-mail"
-
-msgid "enter a command below..."
-msgstr "введите команду ниже..."
 
 msgid "every 10 minutes"
 msgstr "каждые 10 минут"
@@ -2608,89 +1441,20 @@ msgstr "каждый день"
 msgid "every hour"
 msgstr "каждый час"
 
-msgid "extension number of voicemail box"
-msgstr "номер голосовой почты"
-
-msgid "extracting"
-msgstr "извлечение"
-
-msgid "forget disk settings"
-msgstr "удалить настройки диска"
-
-msgid "forget gateway settings"
-msgstr "удалить настройки шлюза"
-
-msgid "forget port settings"
-msgstr "стереть настройки порта"
-
-msgid "full date / time (i.e. 2025-11-20 (15:45))"
-msgstr "полная дата / время (пример 2025-11-20 (15:45))"
-
-msgid "generate password"
-msgstr "сгенерировать пароль"
-
-msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
-msgstr "Если у вас не отображаются графики, вам нужно установить <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
-
-msgid "inactive"
-msgstr "неактивный"
-
 msgid "indefinitely"
 msgstr "# неопределенно"
 
-msgid "installed sets"
-msgstr "установленный набор"
-
-msgid "installing"
-msgstr "установка"
-
-msgid "kick conference member"
-msgstr "прогнать участника конференции"
-
-msgid "max:"
-msgstr "макс:"
-
-msgid "md5"
-msgstr "md5"
-
-msgid "milliseconds"
-msgstr "миллисекунды"
-
-msgid "min:"
-msgstr "мин:"
+msgid "is based upon/includes various software packages, listed below. A big thanks to the authors for all of their hard work!"
+msgstr ""
 
 msgid "multipoint-to-point, network termination"
 msgstr "многоточка-точка, оконечное устройство"
 
-msgid "name of voicemail recipient"
-msgstr "получатель голосовой почты"
-
-msgid "never attempt NAT mode or RFC3581 support"
-msgstr "никогда не включать режим NAT или поддержку RFC3581"
-
-msgid "no faxes available."
-msgstr "нет доступных факсов."
-
-msgid "none"
-msgstr "нет"
-
-msgid "notify me of missed calls via e-mail"
-msgstr "Сообщать о пропущенных звонках на e-mail"
-
-msgid "of"
-msgstr "из"
-
 msgid "on"
 msgstr "на"
 
-msgid "only use NAT mode according to RFC3581 (rport)"
-msgstr "использовать только режим NAT согласно RFC3581 (rport)"
-
-msgid "optional"
-msgstr "необязательный"
-
-msgid "plaintext"
-msgstr "текст"
+msgid "pbx . mydomain.com"
+msgstr ""
 
 msgid "point-to-multipoint, terminal equipment"
 msgstr "точка-многоточка, оконечное оборудование"
@@ -2701,78 +1465,38 @@ msgstr "точка-точка, оконечное оборудование"
 msgid "point-to-point, terminal equipment"
 msgstr "точка-точка, оконечное оборудование"
 
-msgid "print"
-msgstr "печать"
+msgid "restart system"
+msgstr ""
 
-msgid "read:"
-msgstr "чтение:"
+msgid "show/hide details"
+msgstr ""
 
-msgid "receive"
-msgstr "прием"
+msgid "source revision"
+msgstr ""
 
-msgid "restart the PBX"
-msgstr "перезагрузить сервер"
+msgid "status"
+msgstr ""
 
-msgid "seconds"
-msgstr "секунды"
-
-msgid "send phone's Caller ID"
-msgstr "Отправлять АОН телефона"
-
-msgid "send phone's Caller ID + prefix below"
-msgstr "Отправлять АОН телефона + префикс"
-
-#, php-format
-msgid "service already assigned to \"%s\""
-msgstr "услуга уже назначена в \"%s\""
-
-msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
-msgstr "прописать '0.0.0.0 / 0.0.0.0' чтобы запретить всем"
-
-msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
-msgstr "прописать '0.0.0.0 / 0.0.0.0' чтобы разрешить всем"
-
-msgid "show"
-msgstr "показать"
-
-msgid "span should be set as a loopback"
-msgstr "SPAN должен быть установлен как замкнутый"
-
-msgid "span should use CRC4 checking"
-msgstr "SPAN должны использовать проверку CRC4"
-
-msgid "status unknown"
-msgstr "статус неизвестен"
+msgid "store Asterisk's call detail records on disk"
+msgstr ""
 
 msgid "store Asterisk's database on disk"
 msgstr "хранить базу данных Asterisk на диске"
 
+msgid "store system logs on disk"
+msgstr ""
+
 msgid "store voice prompts and music-on-hold on disk"
 msgstr "хранить голосовые подсказки и музыку на ожидании на диске"
 
-msgid "transmit"
-msgstr "передача"
-
-msgid "unreachable"
-msgstr "не подключен"
-
-msgid "up"
-msgstr "наверх"
-
-msgid "use DHCP settings permanently"
-msgstr "использовать текущие DHCP настройки постоянно"
-
-msgid "use this password"
-msgstr "использовать этот пароль"
-
-msgid "view license"
-msgstr "показать лицензию"
+msgid "view license information"
+msgstr ""
 
 msgid "warning"
 msgstr "предупреждение"
 
-msgid "webGUI Configuration"
-msgstr "Конфигурация WEB интерфейса"
+msgid "web UI"
+msgstr ""
 
 msgid "webGUI language"
 msgstr "Язык WEB интерфейса"
@@ -2780,8 +1504,17 @@ msgstr "Язык WEB интерфейса"
 msgid "webGUI port"
 msgstr "Порт WEB интерфейса"
 
-msgid "write:"
-msgstr "запись:"
+#~ msgid "%.0f KB"
+#~ msgstr "%.0f KB"
+
+#~ msgid "%.2f GB"
+#~ msgstr "%.2f GB"
+
+#~ msgid "%.2f MB"
+#~ msgstr "%.2f MB"
+
+#~ msgid "%d bytes"
+#~ msgstr "%d bytes"
 
 #~ msgid ",WPA PSK"
 #~ msgstr ",WPA PSK"
@@ -2792,8 +1525,17 @@ msgstr "запись:"
 #~ msgid "104 (128) bit keys may be entered as 13 ASCII characters or 26 hex digits preceded by '0x'."
 #~ msgstr "104 (128) разрядных ключей может быть заключен до 13 символов ASCII или 26 шестнадцатеричных цифр, перед которыми '0х'."
 
+#~ msgid "25%"
+#~ msgstr "25%"
+
 #~ msgid "40 (64) bit keys may be entered as 5 ASCII characters or 10 hex digits preceded by '0x'."
 #~ msgstr "40 (64) разрядных ключей может быть введен в качестве символов ASCII 5 или 10 шестнадцатеричных цифр, перед которыми '0х'."
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "75%"
+#~ msgstr "75%"
 
 #~ msgid "802.11a can only be selected if an 802.11a channel is selected too."
 #~ msgstr "802.11a можно выбрать только если выбран канал 802.11a."
@@ -2801,8 +1543,14 @@ msgstr "запись:"
 #~ msgid "802.11a channels can only be selected if the standard is set to 802.11a too."
 #~ msgstr "Каналы 802.11a можно выбрать только в случае, если стандарт установлен тоже на 802.11a."
 
+#~ msgid "<a href=\"notifications_email.php\">E-Mail Notifications</a> must be configured correctly before this will work."
+#~ msgstr "<a href=\"notifications_email.php\">E-Mail уведомления</a> должны быть корректно настроены для работы этой опции."
+
 #~ msgid "<p>This status page includes the following information:\n"
 #~ msgstr "<p>Страница состояния содержит следующую информацию:\n"
+
+#~ msgid "<strong>%s</strong><br>This means that the image you uploaded is not an official/supported image and may lead to unexpected behavior or security compromises. Only install images that come from sources that you trust, and make sure that the image has not been tampered with.<br><br> Do you want to install this image anyway (at your own risk)?"
+#~ msgstr "<strong>%s</strong><br>Это значит, что загруженная прошивка в недопустимом формате, и может привести к непредсказуемой работе или нарушениям безопасности. Устанавливайте только образы, которым Вы доверяете, а также убедитесь, что образ не подменен. <br><br> Вы уверены, что хотите установить образ (на свой страх и риск)?"
 
 #~ msgid "A minimum of %sMB is required. In the future, external media will be able to be used, but currently packages must be stored on the internal system media."
 #~ msgstr "Требуется минимум  %sMB. В будущем могут быть использованы внешние диски, но в настоящее время пакеты должны храниться на внутреннем диске  системы."
@@ -2813,17 +1561,83 @@ msgstr "запись:"
 #~ msgid "A newer version of AskoziaPBX is available!"
 #~ msgstr "Вышла новая версия AskoziaPBX!"
 
+#~ msgid "A public IP address must be entered for this topology."
+#~ msgstr "Для этой топологии нужен публичный IP адрес."
+
+#~ msgid "A public hostname must be entered for this topology."
+#~ msgstr "Имя хоста должно быть введено для этой топологии."
+
 #~ msgid "A self-signed certificate and private key have been automatically generated."
 #~ msgstr "Самоподписанный сертификат и закрытый ключ были созданы автоматически."
 
 #~ msgid "A self-signed certificate could not be generated because the system's clock is not set."
 #~ msgstr "Самоподписанный сертификат не может быть сгенерирован, поскольку время системы не установлено."
 
+#~ msgid "A username must be specified."
+#~ msgstr "Имя пользователя должно быть указано."
+
+#~ msgid "A valid IP address must be specified for the primary/secondary/tertiary DNS server."
+#~ msgstr "Укажите правильный IP адрес для первого/второго/третьего сервера DNS."
+
+#~ msgid "A valid MAC address must be specified."
+#~ msgstr "Укажите правильный MAC адрес."
+
+#~ msgid "A valid attended transfer timeout must be specified."
+#~ msgstr "Правильный тайм-аут должен быть определен для условного перевода."
+
+#~ msgid "A valid e-mail address must be specified for the \"from address\"."
+#~ msgstr "Адрес электронной почты, должен быть указан для \"от кого\"."
+
+#~ msgid "A valid e-mail address must be specified."
+#~ msgstr "Действительный адрес электронной почты должен быть указан."
+
+#~ msgid "A valid extension digit timeout must be specified."
+#~ msgstr "Правильный тайм-аут ожидания ввода цифры должен быть определен."
+
+#~ msgid "A valid extension must be entered."
+#~ msgstr "Должен быть введен действительный номер."
+
+#~ msgid "A valid gateway must be specified."
+#~ msgstr "Укажите правильный шлюз."
+
 #~ msgid "A valid international prefix must be specified."
 #~ msgstr "Укажите действительный интернациональный префикс."
 
+#~ msgid "A valid key timeout must be specified."
+#~ msgstr "Должен быть указан действительный номер тайм-аута."
+
+#~ msgid "A valid park time must be specified."
+#~ msgstr "Укажите правильное время парковки. "
+
+#~ msgid "A valid parking extension must be specified."
+#~ msgstr "Укажите правильный номер парковки. "
+
+#~ msgid "A valid parking start position must be specified."
+#~ msgstr "Укажите стартовую позицию парковки."
+
+#~ msgid "A valid parking stop position must be specified."
+#~ msgstr "Укажите последнею позицию парковки."
+
+#~ msgid "A valid public IP address must be entered for this topology."
+#~ msgstr "Действительный публичный адрес IP должен быть введен для этой топологии."
+
+#~ msgid "A valid public hostname must be entered for this topology."
+#~ msgstr "Действительное имя хоста должно быть введено для этой топологии."
+
+#~ msgid "A valid subnet bit count must be specified."
+#~ msgstr "Укажите действительную маску подсети."
+
 #~ msgid "A variety of settings are here which define how call transfers and call parking are handled. The defaults should work in most situations."
 #~ msgstr "Различные параметры, определяющие настройки перевода и парковки вызовов. По-умолчанию, должны работать в большинстве ситуаций."
+
+#~ msgid "A whole number of seconds must be entered for the \"Default Registration Expiration\" timeout."
+#~ msgstr "Количество секунд тайм-аута для \"Стандартный Срока регистрации\"."
+
+#~ msgid "A whole number of seconds must be entered for the \"Maximum Registration Expiration\" timeout."
+#~ msgstr "Количество секунд тайм-аута для \"Максимального Срока регистрации\"."
+
+#~ msgid "A whole number of seconds must be entered for the \"Minimum Registration Expiration\" timeout."
+#~ msgstr "Количество секунд тайм-аута для \"Минимального Срока регистрации\"."
 
 #~ msgid "A-law"
 #~ msgstr "a-law"
@@ -2837,8 +1651,50 @@ msgstr "запись:"
 #~ msgid "API Key"
 #~ msgstr "API ключ"
 
+#~ msgid "Access PIN"
+#~ msgstr "ПИН-код доступа"
+
+#~ msgid "Activate custom Music-On-Hold"
+#~ msgstr "Активировать пользовательскую Музыку на ожидание"
+
+#~ msgid "Active Channels"
+#~ msgstr "Активные каналы"
+
+#~ msgid "Active Channels / Calls"
+#~ msgstr "Активные каналы / Звонки"
+
+#~ msgid "Active Disks"
+#~ msgstr "Активные диски"
+
+#~ msgid "Adding"
+#~ msgstr "добавление"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Дополнительно"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Дополнительные настройки"
+
+#~ msgid "All group members will be called at the same time. <strong>The voicemail account associated with the first member will be used if the call is not answered."
+#~ msgstr "Всем членам группы будет сделан одновременный звонок. Если на звонок не будет ответа, будет использован голосовой  ящик первого пользователя в списке."
+
 #~ msgid "Always on"
 #~ msgstr "Всегда"
+
+#~ msgid "Analog Phones"
+#~ msgstr "Аналоговые телефоны"
+
+#~ msgid "Application"
+#~ msgstr "Приложение"
+
+#~ msgid "Application Logic"
+#~ msgstr "Логика приложения"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "Вы уверены, что хотите продолжить?"
+
+#~ msgid "Are you sure you want to reboot the system?"
+#~ msgstr "Вы уверены, что хотите перегрузить Систему?"
 
 #~ msgid "Askozia&reg;PBX &copy; 2007-2010 IKT. All rights reserved."
 #~ msgstr "Askozia&reg;PBX &copy; 2007-2010 IKT. All rights reserved."
@@ -2855,11 +1711,86 @@ msgstr "запись:"
 #~ msgid "AskoziaPBX: execute command"
 #~ msgstr "AskoziaPBX: выполнить команду"
 
+#~ msgid "Attended"
+#~ msgstr "Условный"
+
+#~ msgid "Attended Transfer Answer"
+#~ msgstr " Условный  перевод"
+
+#~ msgid "Audio"
+#~ msgstr "Аудио"
+
+#~ msgid "Audio Prompts"
+#~ msgstr "Звуковые файлы"
+
+#~ msgid "Authentication Method"
+#~ msgstr "Метод проверки подлинности"
+
+#~ msgid "Authentication Scheme"
+#~ msgstr "Схема проверки подлинности"
+
+#~ msgid "Authorization User"
+#~ msgstr "Имя для авторизации"
+
 #~ msgid "Auto"
 #~ msgstr "Автоматический"
 
+#~ msgid "AutoScale"
+#~ msgstr "Автомасштаб"
+
+#~ msgid "Backup configuration"
+#~ msgstr "Сохранение конфигурации"
+
+#~ msgid "Basic"
+#~ msgstr "Основной"
+
+#~ msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
+#~ msgstr "Внизу приведен список определенных в Системе номеров, набираемых по команде Dial. Эта команда принимает много дополнительных параметров, смотрите документация в разделе Приложения."
+
+#~ msgid "Binding Port"
+#~ msgstr "Слушающий порт"
+
+#~ msgid "Blind"
+#~ msgstr "Безусловный"
+
+#~ msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
+#~ msgstr "Для парковки вызова переведите звонок на этот номер (по умолчанию 700). В ответ Система проговорит номер парковочного слота, куда был переведен звонок."
+
+#~ msgid "Body"
+#~ msgstr "Содержимое"
+
+#~ msgid "Call Groups"
+#~ msgstr "Группы вызова"
+
+#~ msgid "Call Notifications & Voicemail"
+#~ msgstr "Уведомления и голосовая почта"
+
+#~ msgid "Call Parking"
+#~ msgstr "Парковка звонка"
+
+#~ msgid "Call Routing"
+#~ msgstr "Маршрутизация вызовов"
+
+#~ msgid "Caller ID"
+#~ msgstr "АОН"
+
+#~ msgid "Caller ID / Name"
+#~ msgstr "АОН / Имя"
+
+#~ msgid "Caller ID Options"
+#~ msgstr "Настройки АОН"
+
+#~ msgid "Calls Processed"
+#~ msgstr "Обработано звонков"
+
+#~ msgid "Cannot get CPU load"
+#~ msgstr "Не удается получить данные о загрузке процессора"
+
 #~ msgid "Capacity"
 #~ msgstr "Объем"
+
+#~ msgid "Card"
+#~ msgstr "Плата"
 
 #~ msgid "Certificate"
 #~ msgstr "Сертификат"
@@ -2867,35 +1798,302 @@ msgstr "запись:"
 #~ msgid "Certificate and key must always be specified together."
 #~ msgstr "Сертификат и ключ всегда должен быть указаны вместе."
 
+#~ msgid "Changes to this option will take effect after a reboot."
+#~ msgstr "Изменение этого параметра вступит в силу после перезагрузки."
+
+#~ msgid "Channel"
+#~ msgstr "Канал"
+
+#~ msgid "Channels"
+#~ msgstr "Канал"
+
+#~ msgid "Choose the new firmware image file (%s-*.img) to be installed."
+#~ msgstr "Выберите новый файл образа прошивки (%s-*.img) для установки."
+
 #~ msgid "Cipher"
 #~ msgstr "Шифр"
+
+#~ msgid "Clear"
+#~ msgstr "Очистить"
+
+#~ msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
+#~ msgstr "Нажмите кнопку &quot;Обновить прошивку&quot;, чтобы начать процесс обновления."
 
 #~ msgid "Click the <img src=\"img/update.png\" border=\"0\"> icon below to select and install the updated packages."
 #~ msgstr "Нажмите на значок <img src=\"img/update.png\" border=\"0\"> , чтобы выбрать и установить пакеты обновленний."
 
+#~ msgid "Click this button to download the system configuration in XML format."
+#~ msgstr "Нажмите на эту кнопку, чтобы загрузить конфигурацию системы в формате XML."
+
+#~ msgid "Codecs"
+#~ msgstr "Кодеки"
+
+#~ msgid "Collecting initial data, please wait..."
+#~ msgstr "Сбор исходных данных, пожалуйста, подождите ..."
+
+#~ msgid "Command"
+#~ msgstr "Команда"
+
+#~ msgid "Command:"
+#~ msgstr "Команды:"
+
+#~ msgid "Completely override the generated registration string with a manually defined one."
+#~ msgstr "Переопределить сгенерированную строку регистрации.  "
+
+#~ msgid "Conference"
+#~ msgstr "Конференция"
+
+#~ msgid "Conference Rooms"
+#~ msgstr "Конференц-комнаты"
+
+#~ msgid "Conference number already exists."
+#~ msgstr "Номер конференции уже существует."
+
+#~ msgid "Conference number matches an existing extension."
+#~ msgstr "Номер конференции совпадает с существующим номером."
+
+#~ msgid "Conference pins must be numeric."
+#~ msgstr "ПИН-код конференции должен быть числовым."
+
+#~ msgid "Conference room numbers must be numeric."
+#~ msgstr "Номер Конференций должен быть числовым."
+
 #~ msgid "Conference rooms with optional pin authentication can be configured here. The system's performance is the only limiting factor on the number of concurrent members. These rooms can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "В данном разделе настраиваются конференц-комнаты с возможностью аутентификации по пин-коду. Производительность системы является единственным фактором, ограничивающим количество одновременных участников. Комнаты могут быть набраны через свои определенные номера или использоваться в качестве назначения для входящих звонков от провайдеров."
+
+#~ msgid "Conferences"
+#~ msgstr "Конференций"
+
+#~ msgid "Connect"
+#~ msgstr "Подключить"
+
+#~ msgid "Connection Initialization"
+#~ msgstr "Установка соединения"
+
+#~ msgid "Connectivity"
+#~ msgstr "Соединения"
+
+#~ msgid "Console menu"
+#~ msgstr "Консоль меню"
 
 #~ msgid "Continue"
 #~ msgstr "Продолжать"
 
+#~ msgid "Custom Applications"
+#~ msgstr "Пользовательские приложения"
+
+#~ msgid "Custom Music-on-Hold"
+#~ msgstr "Пользовательская Музыка на ожидание"
+
+#~ msgid "DNS Service Records"
+#~ msgstr "Записи DNS сервера"
+
+#~ msgid "DO NOT abort the firmware upgrade once it has started."
+#~ msgstr "НЕ ПРЕРЫВАТЬ обновление прошивки, после того как она началась."
+
+#~ msgid "DTMF Mode"
+#~ msgstr "DTMF режим"
+
+#~ msgid "Default values are 60, 3600 and 120 respectively."
+#~ msgstr "Значения по умолчанию 60, 3600 и 120 соответственно."
+
+#~ msgid "Defaults to the e-mail address used in the %s setup."
+#~ msgstr "Адрес электронной почты, используемый по умолчанию в %s установки."
+
+#~ msgid "Deny Network"
+#~ msgstr "Deny Network"
+
+#~ msgid "Descriptive name for this provider."
+#~ msgstr "Описательное имя для этого провайдера."
+
+#~ msgid "Dialing Pattern(s)"
+#~ msgstr "План набора(ов)"
+
+#~ msgid "Dialplan Element Library"
+#~ msgstr "Справочник по плану набора"
+
+#~ msgid "Dialstring"
+#~ msgstr "Строка набора"
+
+#~ msgid "Disable DNS SRV lookups."
+#~ msgstr "Выключить DNS SRV запросы."
+
+#~ msgid "Disable console menu"
+#~ msgstr "Выключить консоль меню"
+
 #~ msgid "Disable firmware version check"
 #~ msgstr "Отключение проверки версии прошивки"
+
+#~ msgid "Disable overrides"
+#~ msgstr "Выключить переопределения"
 
 #~ msgid "Disable package version checks"
 #~ msgstr "Выключить проверку версии пакетов"
 
+#~ msgid "Disabled"
+#~ msgstr "Выключено"
+
+#~ msgid "Do not register with this provider."
+#~ msgstr "Не регистрироваться у  провайдера."
+
+#~ msgid "Do you really want to delete this application mapping?"
+#~ msgstr "Вы действительно хотите удалить приложение?"
+
+#~ msgid "Do you really want to delete this application?"
+#~ msgstr "Вы действительно хотите удалить это приложение?"
+
+#~ msgid "Do you really want to delete this call group?"
+#~ msgstr "Вы действительно хотите удалить эту группу?"
+
+#~ msgid "Do you really want to delete this conference room?"
+#~ msgstr "Вы действительно хотите удалить конференц-комнату?"
+
+#~ msgid "Do you really want to delete this fax?"
+#~ msgstr "Вы действительно хотите удалить этот факс?"
+
+#~ msgid "Do you really want to delete this manager user?"
+#~ msgstr "Вы действительно хотите удалить этого менеджера?"
+
+#~ msgid "Do you really want to delete this phone?"
+#~ msgstr "Вы действительно хотите удалить этот телефон?"
+
+#~ msgid "Do you really want to delete this port group's settings?"
+#~ msgstr "Вы действительно хотите удалить группу портов?"
+
+#~ msgid "Do you really want to delete this provider?"
+#~ msgstr "Do you really want to delete this provider?"
+
+#~ msgid "Do you really want to disable this fax?"
+#~ msgstr "Вы действительно хотите отключить этот факс?"
+
 #~ msgid "Do you really want to disable this package?"
 #~ msgstr "Вы действительно хотите отключить этот пакет?"
+
+#~ msgid "Do you really want to disable this phone?"
+#~ msgstr "Вы действительно хотите отключить телефон?"
+
+#~ msgid "Do you really want to disable this provider?"
+#~ msgstr "Вы действительно хотите отключить этого провайдера?"
+
+#~ msgid "Do you really want to forget this disk?"
+#~ msgstr "Вы действительно хотите удалить этот диск?"
+
+#~ msgid "Do you really want to forget this gateway's settings?"
+#~ msgstr "Вы действительно хотите удалить настройки шлюза?"
+
+#~ msgid "Do you really want to forget this port\\'s settings?"
+#~ msgstr "Вы действительно хотите удалить настройки порта\\'ов?"
+
+#~ msgid "Do you really want to kick this member?"
+#~ msgstr "Вы действительно хотите прогнать этого пользователя?"
 
 #~ msgid "Do you really want to permanently delete this package\\'s configuration and data?"
 #~ msgstr "Вы действительно хотите удалить пакет\\ы конфигураций данных?"
 
+#~ msgid "Download"
+#~ msgstr "Скачать"
+
+#~ msgid "Download configuration"
+#~ msgstr "Загрузка конфигурации"
+
+#~ msgid "Download:"
+#~ msgstr "Скачать:"
+
+#~ msgid "E-Mail"
+#~ msgstr "E-Mail"
+
+#~ msgid "E-mail Address"
+#~ msgstr "Адрес электронной почты"
+
+#~ msgid "E-mail Me"
+#~ msgstr "Послать e-mail"
+
+#~ msgid "E-mail has been sent successfully."
+#~ msgstr "E-mail был отправлена успешно."
+
+#~ msgid "E-mail notifications for new voicemail will be delivered in this language."
+#~ msgstr "Уведомление о новых голосовых сообщений на e-mail будут доставлены на этом языке."
+
+#~ msgid "E-mail was not sent, check your settings."
+#~ msgstr "E-mail не отправляется, проверьте настройки."
+
+#~ msgid "ERR Could not install configuration.\n"
+#~ msgstr "ERR  не могу установить настройки.\n"
+
+#~ msgid "ERR Could not save configuration.\n"
+#~ msgstr "ERR Не удалось сохранить настройки.\n"
+
+#~ msgid "ERR Invalid configuration received.\n"
+#~ msgstr "ERR получена неправильная конфигурация.\n"
+
+#~ msgid "Echo Cancellation"
+#~ msgstr "Эхо-подавление"
+
+#~ msgid "Edit Analog %s Port"
+#~ msgstr "Изменить аналоговый %s порт"
+
+#~ msgid "Edit Analog Fax"
+#~ msgstr "Изменить Аналоговый факс"
+
+#~ msgid "Edit Analog Phone"
+#~ msgstr "Изменить аналоговый телефон"
+
+#~ msgid "Edit Analog Provider"
+#~ msgstr "Изменить аналогового провайдера"
+
+#~ msgid "Edit Application"
+#~ msgstr "Редактировать приложения"
+
 #~ msgid "Edit Disk"
 #~ msgstr "Редактировать место хранения"
 
+#~ msgid "Edit External Phone"
+#~ msgstr "Изменить внешний телефон"
+
+#~ msgid "Edit IAX Phone"
+#~ msgstr "Изменить IAX Телефон"
+
+#~ msgid "Edit IAX Provider"
+#~ msgstr "Изменить IAX провайдера"
+
+#~ msgid "Edit ISDN %s Port"
+#~ msgstr "Изменить ISDN %s порт"
+
+#~ msgid "Edit ISDN Phone"
+#~ msgstr "Изменить ISDN Телефон"
+
+#~ msgid "Edit ISDN Provider"
+#~ msgstr "Изменить цифрового провайдера"
+
+#~ msgid "Edit Provider Group"
+#~ msgstr "Изменить группу Провайдеров"
+
+#~ msgid "Edit Redfone Gateway"
+#~ msgstr "Изменить Redfone Gateway"
+
+#~ msgid "Edit Room"
+#~ msgstr "Изменить комнату"
+
+#~ msgid "Edit SIP Phone"
+#~ msgstr "Изменить SIP Телефон"
+
+#~ msgid "Edit SIP Provider"
+#~ msgstr "Изменить SIP провайдера"
+
+#~ msgid "Edit Skinny Phone"
+#~ msgstr "Изменить Skinny Телефон"
+
+#~ msgid "Edit User"
+#~ msgstr "Редактировать пользователя"
+
+#~ msgid "Enable"
+#~ msgstr "Включить"
+
 #~ msgid "Enable Humbug"
 #~ msgstr "Включить Humbug"
+
+#~ msgid "Enable Jitterbuffer on IAX connections terminated by the system."
+#~ msgstr "Включить аудио буфер на IAX устройствах системы. "
 
 #~ msgid "Enable WEP"
 #~ msgstr "Включить WEP"
@@ -2903,26 +2101,182 @@ msgstr "запись:"
 #~ msgid "Enable Wireless Interface"
 #~ msgstr "Включить Беспроводной Интерфейс"
 
+#~ msgid "Enabled"
+#~ msgstr "Включено"
+
+#~ msgid "Encoding"
+#~ msgstr "Кодирование"
+
 #~ msgid "Encryption Key"
 #~ msgstr "Шифрованный ключ"
+
+#~ msgid "Encryption Method"
+#~ msgstr "Метод шифрования"
 
 #~ msgid "Enter a custom port number for the webGUI above if you want to override the default (80 for HTTP, 443 for HTTPS)."
 #~ msgstr "Для переопределения порта WEB интерфейса введите номер порта в этом поле. Значения по-умолчанию: 80 - для HTTP, 443 - для HTTPS."
 
+#~ msgid "Enter a descriptive name for this disk."
+#~ msgstr "Введите имя для этого диска."
+
+#~ msgid "Enter a descriptive name for this gateway."
+#~ msgstr "Введите описательное имя для этого шлюза."
+
+#~ msgid "Enter a descriptive name for this port."
+#~ msgstr "Введите описательное имя для данного порта."
+
+#~ msgid "Enter a descriptive name for this span."
+#~ msgstr "Введите описательное название для этой службы."
+
+#~ msgid ""
+#~ "Enter a pattern or a phone number and select a destination extension. To ring multiple phones, simply define them with the same pattern. If a phone number is entered, it will used as the \"external\" number on unanswered calls. If nothing is entered, all calls will be directed to the destination extension.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - matches one or more characters</li>\n"
+#~ " \t<li><strong>!</strong> - matches zero or more characters</li>\n"
+#~ " </ul>\n"
+#~ msgstr ""
+#~ "Введите шаблон или телефонный номер, и выберите назначение. Для группового вызова  просто определите их с одинаковым шаблоном. Если вводится телефонный номер, он будет использован как \"внешний\" номер при неотвеченном вызове. Если ничего не ввести, все звонки будут направлены по номеру назначения.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>X</strong> - совпадает с цифрами 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - совпадает с цифрами 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - совпадает с цифрами 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - совпадает с любой цифрой в квадратных скобках (в примере, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - совпадает с одним знаком или более</li>\n"
+#~ " \t<li><strong>!</strong> - совпадает с любым знаком или без него (может отсутствовать)</li>\n"
+#~ " </ul>\n"
+
+#~ msgid ""
+#~ "Enter application logic, one command per line as shown: <br> <pre> 1,Answer()\n"
+#~ " 2,Echo()\n"
+#~ " 3,Hangup()\n"
+#~ " </pre> <p>Programming applications for the PBX requires knowledge of the Asterisk dialplan. An effort is made to verify this input but the possibility remains that an install may be rendered useless by faulty application logic. A reference of applications, functions and phones is available in the <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Element Library</a></strong>.</p>"
+#~ msgstr ""
+#~ "Введите логику приложения, по одной команде на строку, как в примере: <br> <pre> 1,Answer()\n"
+#~ " 2,Echo()\n"
+#~ " 3,Hangup()\n"
+#~ "</pre> <p>Программирование приложений требует знания плана набора Asterisk. При сохранении Система делает проверку на корректность введенных данных, однако, существует возможность нарушения работы всего плана набора из-за ошибки в логике приложения. Справочник приложений, функций, и каналов доступен в <strong><a href=\"popup_dialplan_element_library.php\" target=\"_blank\">Справочнике</a></strong>.</p> "
+
+#~ msgid ""
+#~ "Enter patterns, one per line, to define this provider's outgoing routing. Enter \"X!\" to use this provider for all outgoing calls. To access this provider by using a \"9\" prefix, enter \"9|.\". If no patterns are entered, only incoming calls will be accepted.<br>\n"
+#~ " <ul>\n"
+#~ " \t<li><strong>+</strong> - adds a prefix (i.e. \"1+555\" matches \"555\" and passes \"1555\" to the provider)</li>\n"
+#~ " \t<li><strong>|</strong> - removes a prefix (i.e. \"1|555\" matches \"1555\" but only passes \"555\" to the provider)</li>\n"
+#~ " \t<li><strong>X</strong> - matches digits 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - matches digits 1-9</li>\n"
+#~ " \t<li><strong>N</strong> - matches digits 2-9</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - matches any digit in the brackets (here, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - matches one or more characters (not allowed before | or +)</li>\n"
+#~ " \t<li><strong>!</strong> - matches zero or more characters (not allowed before | or +)</li>\n"
+#~ " </ul>\n"
+#~ msgstr ""
+#~ "Для определения исходящей маршрутизации на  провайдера введите шаблоны, по одному в строке. Введите \"X!\" для использования этого провайдера для всех исходящих звонков. Для выхода на провайдера через 9-ку, введите \"9|.\". Оставьте поле пустым для использования провайдера только для входящих звонков. <br>\n"
+#~ "<ul>\n"
+#~ " \t<li><strong>+</strong> - добавить префикс (например, \"1+555\" совпадает с \"555\" и преобразуется в \"1555\"  при отправке на провайдера)</li>\n"
+#~ " \t<li><strong>|</strong> - удаляет префикс (например, \"1|555\" совпадает с \"1555\" но отсылает \"555\" провайдеру)</li>\n"
+#~ " \t<li><strong>X</strong> - совпадает с цифрами 0-9</li>\n"
+#~ " \t<li><strong>Z</strong> - совпадает с цифрами</li>\n"
+#~ " \t<li><strong>N</strong> - совпадает с цифрами</li>\n"
+#~ " \t<li><strong>[13-5]</strong> - совпадает с любой цифрой в квадратных скобках (в примере, 1,3,4,5)</li>\n"
+#~ " \t<li><strong>.</strong> - совпадает с одним или более знаков (не допускается впереди | или +)</li>\n"
+#~ " \t<li><strong>!</strong> - совпадает с нулем или более знаков (не допускается впереди | или +)</li>\n"
+#~ " </ul>\n"
+
+#~ msgid "Enter the full path where this device should be mounted."
+#~ msgstr "Введите полный путь, где это устройство должно быть смонтировано."
+
 #~ msgid "Enter the passphrase that will be used in WPA-PSK mode. This must be between 8 and 63 characters long."
 #~ msgstr "Введите пароль, который будет использоваться в WPA-PSK режиме. Это должно быть от 8 до 63 символов."
+
+#~ msgid "Execute"
+#~ msgstr "Выполнить"
 
 #~ msgid "Existing package not found, update failed."
 #~ msgstr "Пакет не найден, сбой обновления."
 
+#~ msgid "Extension"
+#~ msgstr "Номер"
+
+#~ msgid "Extension Digit"
+#~ msgstr "Пауза между цифрами"
+
+#~ msgid "External"
+#~ msgstr "Внешние"
+
+#~ msgid "External Phones"
+#~ msgstr "Внешние телефоны"
+
 #~ msgid "Extracted package not found, install failed."
 #~ msgstr "Извлеченный пакет не найден, установить не удалось."
+
+#~ msgid "Failover Provider"
+#~ msgstr "Резервный провайдер"
+
+#~ msgid "Filename"
+#~ msgstr "Имя файла"
+
+#~ msgid "Firmware Version"
+#~ msgstr "Версия Прошивки"
+
+#~ msgid "Firmware image file:"
+#~ msgstr "Файл прошивки:"
+
+#~ msgid "Firmware uploading is not supported on this platform."
+#~ msgstr "Загруженная прошивка не поддерживается на этой платформе. "
 
 #~ msgid "Firmware version check"
 #~ msgstr "Проверить версию прошивки"
 
+#~ msgid "Force"
+#~ msgstr "Принудительно"
+
+#~ msgid "Formatting failed! (returned "
+#~ msgstr "Форматирование не удалось!  (код ошибки"
+
+#~ msgid "Formatting successful!"
+#~ msgstr "Форматирование прошло успешно!"
+
+#~ msgid "Framing"
+#~ msgstr "Фрейминг"
+
+#~ msgid "From Address"
+#~ msgstr "Адрес отправителя"
+
+#~ msgid "From Domain"
+#~ msgstr "От домена"
+
+#~ msgid "From User"
+#~ msgstr "От имени"
+
+#~ msgid "Functions"
+#~ msgstr "Функции"
+
+#~ msgid "Gateway Name"
+#~ msgstr "Имя шлюза"
+
+#~ msgid "Gateways"
+#~ msgstr "Шлюзы"
+
+#~ msgid "General"
+#~ msgstr "Общий"
+
 #~ msgid "Generate self-signed certificate"
 #~ msgstr "Создание самоподписанного сертификата"
+
+#~ msgid "Graph shows last"
+#~ msgstr "График показывает последние"
+
+#~ msgid "Ground Start"
+#~ msgstr "Ground Start"
+
+#~ msgid "Group Members"
+#~ msgstr "Члены группы"
+
+#~ msgid "Group name"
+#~ msgstr "Имя Группы"
 
 #~ msgid "Groups of extensions can be configured to ring concurrently. These groups can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "Могут быть настроены групповые вызовы (вызов одновременно всем номерам в группе). Эти группы могут быть набраны через свои определенные номера, или использоваться в качестве назначения для входящих звонков от провайдеров."
@@ -2933,11 +2287,32 @@ msgstr "запись:"
 #~ msgid "Hard disk standby time"
 #~ msgstr "Время stand-by жесткого диска"
 
+#~ msgid "Hardware Port"
+#~ msgstr "Аппаратный порт"
+
 #~ msgid "Help"
 #~ msgstr "Помощь"
 
+#~ msgid "Hide Analog related options"
+#~ msgstr "Скрыть дополнительные Аналоговые настройки"
+
+#~ msgid "Hide IAX related options"
+#~ msgstr "Скрыть дополнительные IAX настройки"
+
+#~ msgid "Hide ISDN related options"
+#~ msgstr "Скрыть дополнительные ISDN настройки"
+
+#~ msgid "Hide SIP related options"
+#~ msgstr "Скрыть дополнительные SIP настройки"
+
 #~ msgid "Hide SSID"
 #~ msgstr "Спрятать SSID"
+
+#~ msgid "Hot Keys"
+#~ msgstr "Горячие клавиши"
+
+#~ msgid "Household ISDN lines are usually Point-to-Multipoint and office ISDN connections are more likely Point-to-Point."
+#~ msgstr "Домашние ISDN линии обычно типа Point-to-Multipoint и офисные ISDN соединения обычно типа Point-to-Point."
 
 #~ msgid "Humbug Analytics"
 #~ msgstr "Статистика Humbug"
@@ -2945,17 +2320,62 @@ msgstr "запись:"
 #~ msgid "Humbug Call Analytics"
 #~ msgstr "Статистика звонков Humbug"
 
+#~ msgid "IAX Phones"
+#~ msgstr "IAX телефоны"
+
+#~ msgid "IP"
+#~ msgstr "IP"
+
+#~ msgid "ISDN Phones"
+#~ msgstr "ISDN телефоны"
+
 #~ msgid "If a compatible wireless card is present in the system, it can be configured to act as an Access Point. It will be bridged to the wired network that the PBX is connected to."
 #~ msgstr "Если в системе присутствует совместимая беспроводная сетевая плата, ее можно использовать в качестве точки доступа. Беспроводная сеть будет отображена в режиме моста на локальную сеть, подключенную к Ethernet порту сервера."
 
+#~ msgid "If an outgoing call to this Provider fails, try routing it over the account selected above. Dialpatterns must be compatible, no extra care is yet taken to match them."
+#~ msgstr "Если исходящий звонок на резервного провайдера не удастся, попробовать вышеуказанную запись. Планы набора должны быть совместимы, дополнительных проверок на совпадения не осуществляется."
+
+#~ msgid "If calls coming through this port are too loud or too quiet, make adjustments here. Receive and transmit levels (in decibels) can be adjusted independently."
+#~ msgstr "Настройки для регулировки громкости звонков, проходящих  через этот порт, (слишком тихо или громко).  Уровни приема и передачи (в децибелах) устанавливаются независимо."
+
 #~ msgid "If this option is selected, the SSID will not be broadcast in hostap mode, and onlyclients that know the exact SSID will be able to connect. Note that this option should never be used as a substitute for proper security/encryption settings."
 #~ msgstr "Если выбрана эта опция, SSID не будет транслироваться ,только те клиенты, которые знают точный SSID смогут подключиться. Обратите внимание, что этот вариант не должен использоваться в качестве замены шифрования."
+
+#~ msgid "If you click &quot;Yes&quot;, the PBX will be reset to factory defaults and will reboot immediately. The entire system configuration will be overwritten. The LAN IP address will be reset to use DHCP and the password will be set to '%s'."
+#~ msgstr "Если нажать кнопку &quot;Да&quot;, конфигурация сервера будет сброшена на заводские установки и сервер перегрузится. Вся конфигурация системы будет перезаписана. LAN IP адрес будет возвращен к 192.168.1.2 и пароль будет '%s'."
+
+#~ msgid "Image upload failed (out of memory?)"
+#~ msgstr "Сбой при загрузке прошивки (out of memory?)"
+
+#~ msgid "In"
+#~ msgstr "Вход"
 
 #~ msgid "In most cases, you should select &quot;WPA + WPA2&quot; here."
 #~ msgstr "В большинстве случаев вы должны выбрать &quot;WPA + WPA2&quot; здесь."
 
 #~ msgid "In order to send missed call notifications and recorded voicemail messages via e-mail, a mail server must be correctly configured here."
 #~ msgstr "Для того, чтобы направить уведомления о пропущенных звонках и записанные голосовые сообщения по электронной почте, почтовый сервер должен быть правильно настроен здесь."
+
+#~ msgid "Inactive"
+#~ msgstr "Неактивный"
+
+#~ msgid "Incoming Extensions"
+#~ msgstr "Входящий номер"
+
+#~ msgid "Incoming Faxes"
+#~ msgstr "Входящий факс"
+
+#~ msgid "Incoming Modification"
+#~ msgstr "Обработка входящих"
+
+#~ msgid "Individual Ports"
+#~ msgstr "Отдельные порты"
+
+#~ msgid "Initial connection failed!"
+#~ msgstr "Первоначальная связь не установлена!"
+
+#~ msgid "Initial connection successful!"
+#~ msgstr "Начальная связь установлена!"
 
 #~ msgid "Install"
 #~ msgstr "Установить"
@@ -2968,6 +2388,30 @@ msgstr "запись:"
 
 #~ msgid "Interfaces"
 #~ msgstr "Интерфейсы"
+
+#~ msgid "Internal Phones"
+#~ msgstr "Внутренние телефоны"
+
+#~ msgid "Internal extension used to reach this application."
+#~ msgstr "Внутренний номер, по которому доступно приложение."
+
+#~ msgid "Internal extension used to reach this call group."
+#~ msgstr "Внутренний номер, используемый для вызова этой группы."
+
+#~ msgid "International Prefix"
+#~ msgstr "Интернациональный префикс."
+
+#~ msgid "Is there a NATing device between the PBX and this account?"
+#~ msgstr "Существует ли промежуточный NAT маршрутизатор между сервером IP АТС и редактируемым пиром?"
+
+#~ msgid "Jitterbuffer"
+#~ msgstr "Аудио буфер"
+
+#~ msgid "Keep advanced options in navigation expanded"
+#~ msgstr "Сохранить расширенные возможности навигации открытыми"
+
+#~ msgid "Kewl Start"
+#~ msgstr "Kewl Start"
 
 #~ msgid "Key"
 #~ msgstr "Ключ"
@@ -2984,8 +2428,35 @@ msgstr "запись:"
 #~ msgid "Key 4:"
 #~ msgstr "Key 4:"
 
+#~ msgid "Loaded"
+#~ msgstr "Загружено"
+
+#~ msgid "Local Area Network"
+#~ msgstr "Локальная сеть"
+
+#~ msgid "Local Interface"
+#~ msgstr "Локальный Интерфейс"
+
+#~ msgid "Local Prefix"
+#~ msgstr "Локальный префикс"
+
+#~ msgid "Location"
+#~ msgstr "Местоположение"
+
+#~ msgid "Logic"
+#~ msgstr "Логика"
+
+#~ msgid "Loop Start"
+#~ msgstr "Loop Start"
+
 #~ msgid "Main Number"
 #~ msgstr "Главный номер"
+
+#~ msgid "Manager Interface"
+#~ msgstr "Интерфейс менеджера "
+
+#~ msgid "Manual Attributes"
+#~ msgstr "Дополнительные параметры (параметр=значение)"
 
 #~ msgid "Manual Install"
 #~ msgstr "Ручная установка"
@@ -2993,17 +2464,113 @@ msgstr "запись:"
 #~ msgid "Manual Update"
 #~ msgstr "Ручное обновление"
 
-#~ msgid "Mode"
-#~ msgstr "Метод"
+#~ msgid "Manual key-value pairs can be entered in addition to the generated configuration (i.e. <em>configoption=value</em>). These settings will be appended to this item's Asterisk configuration file or context. Unless you have a very specific need to do this, nothing should be entered in this field. Improperly formed values can break system functionality and/or open security holes."
+#~ msgstr "Дополнительно к автоматически генерируемой конфигурации допускается ввод расширенных параметров (в формате <em>опция=значение</em>). Эти параметры добавляются к данной секции. Дополнительные значения следует использовать только в случаях крайней необходимости, так как это может нарушить функциональность или привести к нарушениям безопасности."
+
+#~ msgid "Maximum number of milliseconds between key presses for transfer activation (default 500)."
+#~ msgstr "Максимальное количество миллисекунд между нажатиями для перевода (по умолчанию 500)."
+
+#~ msgid "Maximum number of seconds a call can be parked before it is transfered back to the parker (default 30)."
+#~ msgstr "Максимальное число секунд, после которых звонок снимется с парковки и вернется парковщику (по умолчанию 30)."
+
+#~ msgid "Maximum number of seconds an attended transfer can go unanswered (default 15)."
+#~ msgstr "Максимальное число секунд условного перевода, после которого звонок останется без ответа (по умолчанию 15). "
+
+#~ msgid "Maximum number of seconds to wait between digits when transferring a call (default 3)."
+#~ msgstr "Максимальное число секунд ожидания между цифрами при переводе звонка (по умолчанию 3)."
+
+#~ msgid "Member"
+#~ msgstr "Участник"
+
+#~ msgid "Member %s has been kicked from conference %s."
+#~ msgstr "Участник %s изгнан из конференции %s."
+
+#~ msgid "Members"
+#~ msgstr "Члены"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Разное"
+
+#~ msgid "Most accounts will work using 'auto'. If this fails, select an authentication method appropriate for your server."
+#~ msgstr "Большинство серверов будут работать, используя \"Авто\". Если это не удается, выберите подходящий метод проверки подлинности."
+
+#~ msgid "Music-on-Hold"
+#~ msgstr "Музыка на ожидание"
+
+#~ msgid "NAT"
+#~ msgstr "NAT"
+
+#~ msgid "National Prefix"
+#~ msgstr "Национальный префикс."
+
+#~ msgid "Navigation"
+#~ msgstr "Навигация"
+
+#~ msgid "Network"
+#~ msgstr "Сеть"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "No additional storage devices were detected."
+#~ msgstr "Никаких дополнительных устройств хранения данных не обнаружено."
+
+#~ msgid "No compatible analog ports were detected."
+#~ msgstr "Нет совместимых аналоговых портов."
+
+#~ msgid "No compatible isdn ports were detected."
+#~ msgstr "Не обнаружено совместимых портов ISDN."
 
 #~ msgid "No compatible wireless interfaces detected."
 #~ msgstr "Нет совместимых беспроводных интерфейсов."
 
+#~ msgid "No last upload."
+#~ msgstr "Нет новых загрузок"
+
 #~ msgid "No new packages available."
 #~ msgstr "Нет новых пакетов."
 
+#~ msgid "No other Providers for failover."
+#~ msgstr "Нет больше резервных провайдеров"
+
+#~ msgid "Non-Members"
+#~ msgstr "Не-члены"
+
+#~ msgid "Note:"
+#~ msgstr "Примечание:"
+
 #~ msgid "Note: make sure to remove any sensitive information (passwords, maybe also IP addresses) before posting information from this page in public places (like mailing lists)!"
 #~ msgstr "Примечание: не забудьте удалить конфиденциальную информацию (пароли, IP-адреса), прежде чем отправлять информацию с этой страницы в открытые источники (например, списки рассылки)!"
+
+#~ msgid "Number or string to be dialed to reach this telephone."
+#~ msgstr "Номер или строка вызова."
+
+#~ msgid "OK\n"
+#~ msgstr "OK\n"
+
+#~ msgid "Open a PBX configuration XML file and click the button below to restore the configuration."
+#~ msgstr "Откройте XML-файл конфигурации сервера и нажмите на кнопку ниже, чтобы восстановить настройки."
+
+#~ msgid "Optional PIN needed to access this conference room."
+#~ msgstr "Для доступа к этой конференц-комнате нужен дополнительный PIN."
+
+#~ msgid "Options"
+#~ msgstr "Опции"
+
+#~ msgid "Out"
+#~ msgstr "Выход"
+
+#~ msgid "Outgoing Calls Only"
+#~ msgstr "Только исходящие вызовы"
+
+#~ msgid "Outgoing Patterns"
+#~ msgstr "Исходящие шаблоны"
+
+#~ msgid "Outgoing Presentation"
+#~ msgstr "Исходящие"
+
+#~ msgid "Outgoing provider or protocol used to reach this telephone."
+#~ msgstr "Исходящий провайдер или протокол, используемый для этого телефона."
 
 #~ msgid "PSK"
 #~ msgstr "PSK"
@@ -3017,8 +2584,23 @@ msgstr "запись:"
 #~ msgid "Package version checks"
 #~ msgstr "Проверка версии пакетов"
 
+#~ msgid "Packages"
+#~ msgstr "Пакеты"
+
 #~ msgid "Packages to expand system functionality can be installed and updated here. Start by clicking <img src=\"img/add.png\" border=\"0\"> to check for newly available packages. All packages are digitally signed before distribution and checked upon installation."
 #~ msgstr "В этом разделе устанавливаются пакеты, расширяющие системный функционал. Начните с <img src=\"img/add.png\" border=\"0\"> проверки доступных для установки пакетов. Все пакеты подписаны цифровой подписью и проверяются при установке."
+
+#~ msgid "Packets will be sent to this account every <i>n</i> seconds to check its status.<br>Defaults to '2'. Set to '0' to disable."
+#~ msgstr "Для проверки статуса пакеты будут отправляться на эту учетную запись каждые  <i>n</i> секунд.<BR>По-умолчанию установлено в '2'. Установить в '0' для выключения. "
+
+#~ msgid "Park Extension"
+#~ msgstr "Номер парковки"
+
+#~ msgid "Park Time"
+#~ msgstr "Время парковки"
+
+#~ msgid "Parking Range"
+#~ msgstr "Диапазон парковки"
 
 #~ msgid "Passwords in config.xml have been automatically removed."
 #~ msgstr "Пароли из config.xml были автоматически удалены."
@@ -3029,17 +2611,111 @@ msgstr "запись:"
 #~ msgid "Paste an RSA private key in PEM format here."
 #~ msgstr "RSA ключ в формате X.509  PEM."
 
+#~ msgid "Pattern(s)"
+#~ msgstr "Шаблон(ы)"
+
+#~ msgid "Permissions"
+#~ msgstr "Разрешения"
+
+#~ msgid "Permit Network"
+#~ msgstr "Разрешить сети"
+
+#~ msgid "Phone"
+#~ msgstr "Телефон"
+
 #~ msgid "Phone Accounts allow you to configure internal extensions and their access to Provider Accounts. Click an account type below to get started."
 #~ msgstr "Учетные записи телефонов позволяют настроить внутренние номера и их доступ к линиям провайдера. Выберите тип учетной записи ниже, чтобы начать работу."
+
+#~ msgid "Phone Connectivity"
+#~ msgstr "Телефоная связь"
+
+#~ msgid "Pin"
+#~ msgstr "ПИН-код"
+
+#~ msgid "Point-to-Multipoint (PTMP)"
+#~ msgstr "Точка-многоточка (PTMP)"
+
+#~ msgid "Point-to-Point (PTP)"
+#~ msgstr "Point-to-Point (PTP)"
+
+#~ msgid "Ports impedance"
+#~ msgstr "Импеданс портов"
+
+#~ msgid "Prepend Caller ID name with text above"
+#~ msgstr "Добавить вышеуказанное имя к АОН"
+
+#~ msgid "Prepend Caller ID number with number above"
+#~ msgstr "Добавить вышеуказанный номер к АОН"
 
 #~ msgid "Prepend with string"
 #~ msgstr "Строка-префикс"
 
+#~ msgid "Previously Used Disks"
+#~ msgstr "Ранее используемые диски"
+
+#~ msgid "Printable Dialplan"
+#~ msgstr "Печать плана набора"
+
+#, fuzzy
+#~ msgid "Private Prefix"
+#~ msgstr "Закрытый префикс"
+
+#~ msgid "Private RSA Key"
+#~ msgstr "Закрытый ключ RSA"
+
+#~ msgid "Provider"
+#~ msgstr "Провайдер"
+
 #~ msgid "Provider Accounts allow you to configure routes to and from external sources (i.e. VoIP service providers or attached ISDN / Analog interface hardware). Click an account type below to get started."
 #~ msgstr "Учетные записи Провайдеров позволяют настраивать маршруты от и к внешним источникам (например, услуги VoIP-провайдеров или ISDN/Analog интерфейсы). Выберите тип учетной записи ниже, чтобы начать работу."
 
+#~ msgid "Provider Port Groups"
+#~ msgstr "Группа портов Провайдера"
+
+#~ msgid "Provider host URL or IP address and optional port."
+#~ msgstr "URL или IP адрес провайдера и порт (опционально)."
+
+#~ msgid "Public RSA Key"
+#~ msgstr "Общественный ключ RSA"
+
 #~ msgid "Puts the hard disk into standby mode when the selected amount of time after the last access has elapsed. <em>Do not set this for CF cards."
 #~ msgstr "Устанавливает жесткий диск в режим ожидания, когда выбранный промежуток времени после последнего доступа истек. <em>Не устанавливайте для карт CF."
+
+#~ msgid "Qualify"
+#~ msgstr " Проверка доступности"
+
+#~ msgid "RSA Keys"
+#~ msgstr "Ключи RSA"
+
+#~ msgid "RTP Port Range"
+#~ msgstr "Диапазон RTP портов"
+
+#~ msgid "Read"
+#~ msgstr "Чтение"
+
+#~ msgid "Redfone"
+#~ msgstr "Redfone"
+
+#~ msgid "Registration"
+#~ msgstr "Регистрация"
+
+#~ msgid "Registration Expiration Timeouts"
+#~ msgstr "Периоды регистрации"
+
+#~ msgid "Remote IP"
+#~ msgstr "Удаленный IP"
+
+#~ msgid "Remote Interface"
+#~ msgstr "Удаленный интерфейс"
+
+#~ msgid "Remote MAC"
+#~ msgstr "Удаленный MAC"
+
+#~ msgid "Replace Caller ID name with Caller ID number"
+#~ msgstr "Заменить имя на номер телефона АОН."
+
+#~ msgid "Replace Caller ID with text above"
+#~ msgstr "Заменить АОН на выше указанный текст"
 
 #~ msgid "Replace with string"
 #~ msgstr "Заменить строку"
@@ -3047,14 +2723,32 @@ msgstr "запись:"
 #~ msgid "Restore"
 #~ msgstr "Восстановление"
 
+#~ msgid "Restore configuration"
+#~ msgstr "Восстановление конфигурации"
+
 #~ msgid "Restore from a Backup Archive"
 #~ msgstr "Восстановить из архива"
+
+#~ msgid "Room Number"
+#~ msgstr "Номер конференц-комнаты"
+
+#~ msgid "SIP Phones"
+#~ msgstr "SIP телефоны"
+
+#~ msgid "SMTP Client Setup"
+#~ msgstr "Настройки SMTP клиента"
+
+#~ msgid "SMTP host URL or IP address and optional port."
+#~ msgstr "Адрес SMTP сервера или IP адрес и опционально, порт."
 
 #~ msgid "SSID"
 #~ msgstr "SSID"
 
 #~ msgid "SSID,Channel"
 #~ msgstr "SSID,Канал"
+
+#~ msgid "Secret"
+#~ msgstr "Пароль"
 
 #~ msgid "Select a .pbxpkg file from your computer to install."
 #~ msgstr "Выберите .pbxpkg файл со своего компьютера для установки."
@@ -3065,20 +2759,86 @@ msgstr "запись:"
 #~ msgid "Select a backup .tgz archive and press 'Restore'"
 #~ msgstr "Выберите резервную копию backup.tgz архив и нажмите кнопку 'Восстановить'"
 
+#~ msgid "Select all indication tone zones the analog hardware should support. <strong>The first tone zone will be the default tonezone."
+#~ msgstr "Выберите все тоновые зоны для аналоговых, которые требуется поддерживать. <strong> первая тоновая зона  будет по-умолчанию."
+
+#~ msgid "Select the FXO port impedance to be used according to your country or regulatory body; FXS ports will follow the same settings."
+#~ msgstr "Выберите импеданс FXO порта, который будет использоваться в соответствии со страной или регулирующим органом; FXS порты подчиняются этой же настройке."
+
+#~ msgid "Select which disk you would like to format."
+#~ msgstr "Выберите диск, который вы хотите отформатировать."
+
+#~ msgid "Select which ethernet port on the gateway this system is connected to."
+#~ msgstr "Выберите сетевой порт в системе, куда подключен шлюз."
+
+#~ msgid "Select which ethernet port on this system the gateway is connected to."
+#~ msgstr "Выберите сетевой порт в системе, куда подключен шлюз."
+
 #~ msgid "Select which packages you would like to install."
 #~ msgstr "Выберите пакеты, которые вы хотите установить."
 
 #~ msgid "Select which packages you would like to update, existing package data will be preserved."
 #~ msgstr "Выберите пакеты, которые вы хотели бы обновить, имеющиеся пакеты, будут сохранены."
 
+#~ msgid "Send all incoming faxes here."
+#~ msgstr "Отправлять все входящие факсы сюда."
+
 #~ msgid "Send string defined above&nbsp;"
 #~ msgstr "Послать строку, указанную выше&nbsp;"
+
+#~ msgid "Signaling"
+#~ msgstr "Сигнализация"
+
+#~ msgid "Skinny"
+#~ msgstr "Skinny"
+
+#~ msgid "Some providers require a seperate 'from' domain. <br>Defaults to host entered above."
+#~ msgstr "Некоторые провайдеры требуют отдельного 'fromdomain'.<br>По умолчанию, значение хоста, установленное выше."
+
+#~ msgid "Some providers require a seperate 'from' user.<br>Defaults to username entered above."
+#~ msgstr "Некоторые провайдеры требуют отдельного поля 'fromuser' .<br>По-умолчанию, введенное выше имя пользователя."
+
+#~ msgid "Some providers require a seperate username for authorization.<br>Defaults to username entered above."
+#~ msgstr "Некоторые провайдеры требуют отдельного имени пользователя для авторизации.<br>По умолчанию имя пользователя."
 
 #~ msgid "Source Name &lt;number&gt;"
 #~ msgstr "Источник &lt;номер&gt;"
 
+#~ msgid "Span"
+#~ msgstr "СПАН"
+
+#~ msgid "Span Count"
+#~ msgstr "Число Спанов"
+
+#~ msgid "Spans"
+#~ msgstr "СПАНЫ"
+
 #~ msgid "Standard"
 #~ msgstr "Стандарт"
+
+#~ msgid "Start Signaling"
+#~ msgstr "Начало сигнализации"
+
+#~ msgid "State"
+#~ msgstr "Состояние"
+
+#~ msgid "Storage Disk"
+#~ msgstr "Дисковый накопитель"
+
+#~ msgid "Storage Services"
+#~ msgstr "Сервисы хранения"
+
+#~ msgid "Subject"
+#~ msgstr "Тема"
+
+#~ msgid "Successfully installed %s formatted prompts for %s."
+#~ msgstr "Успешно выполнил установку %s с форматированием %s."
+
+#~ msgid "Summary"
+#~ msgstr "Сводка"
+
+#~ msgid "Switch to bytes/s"
+#~ msgstr "Переход к байт/с"
 
 #~ msgid "TKIP"
 #~ msgstr "TKIP"
@@ -3089,38 +2849,149 @@ msgstr "запись:"
 #~ msgid "TX key"
 #~ msgstr "TX key"
 
+#~ msgid "Telephone number assigned to this line."
+#~ msgstr "Номер телефона присвоен к этой линии."
+
+#~ msgid "Test E-mail"
+#~ msgstr "Проверить e-mail"
+
+#~ msgid "Text to be displayed for Caller ID."
+#~ msgstr "Текст для отображения  Caller ID."
+
+#~ msgid "The IP address of the foneBRIDGE2 network interface."
+#~ msgstr " IP Адрес foneBRIDGE2 сетевого интерфейса."
+
 #~ msgid "The PBX automatically allocates leftover space for permanent storage. Packages to extend the system's functionality can be installed in this space."
 #~ msgstr "Система автоматически распределяет оставшееся место для постоянного хранения. Пакеты, которые расширяют функциональность системы могут быть установлены в этом пространстве."
+
+#~ msgid "The PBX will reboot after restoring the configuration."
+#~ msgstr "Сервер будет перезагружен после восстановления конфигурации."
 
 #~ msgid "The WPA PSK must be between 8 and 63 characters long."
 #~ msgstr "WPA PSK должно быть от 8 до 63 символов."
 
+#~ msgid "The audio file could not be uploaded. (file upload error)."
+#~ msgstr "Аудио файл не загружен. (ошибка загрузки)"
+
+#~ msgid "The changes have been applied successfully. No upload file found but there was an old custom Music-on-Hold file."
+#~ msgstr "Изменения были применены успешно. Новый файл не найден, используется файл по умолчанию для Музыки на ожидание."
+
+#~ msgid "The conference room's number, also the extension that this conference is reachable at."
+#~ msgstr "Номер конференц-комнаты, также номер, по которому доступна конференция."
+
+#~ msgid "The configuration could not be restored (file upload error)."
+#~ msgstr "Конфигурация не может быть восстановлена (file upload error)."
+
+#~ msgid "The configuration could not be restored."
+#~ msgstr "Конфигурация не может быть восстановлена."
+
+#~ msgid "The configuration has been restored. The PBX is now rebooting."
+#~ msgstr "Конфигурация была восстановлена. Сервер в настоящее время перезагружается."
+
+#~ msgid "The digital signature on this image is invalid."
+#~ msgstr "Цифровая подпись на эту прошивку является недействительной."
+
 #~ msgid "The digital signature on this package is invalid."
 #~ msgstr "Цифровая подпись на этот пакет является недействительной."
+
+#~ msgid "The dynamic DNS username contains invalid characters."
+#~ msgstr "Имя DNS сервера пользователя содержит недопустимые символы."
+
+#~ msgid "The echo canceller window size. If your calls have echo, try increasing this window."
+#~ msgstr "Размер окна эхо-компенсатора. Если у Вас проблемы с эхо, попробуйте увеличить это окно."
+
+#~ msgid "The end parking position must be larger than the start position."
+#~ msgstr "Последняя позиция парковки должна быть выше чем стартовая. "
 
 #~ msgid "The entire system configuration can be backed up and restored via this page."
 #~ msgstr "Вся конфигурация системы может быть сохранена и восстановлена с помощью этой страницы."
 
+#~ msgid "The filetype could not be recognized (file upload error)."
+#~ msgstr "Тип файла не распознан (ошибка загрузки)."
+
+#~ msgid "The firmware is now being installed. The PBX will reboot automatically."
+#~ msgstr "Прошивка в настоящее время устанавливается. Сервер автоматически перезагрузится."
+
 #~ msgid "The following packages issued warnings while verifying their digital signature. This means that they are not official/supported packages and may lead to unexpected behavior or security compromises. Only install packages that come from sources that you trust, and make sure that they have not been tampered with.<br><br>Check the packages you wish to install despite this warning."
 #~ msgstr "Следующие пакеты выдали предупреждение при проверке их цифровой подписи. Это означает, что они не являются официальными / поддерживаемыми пакетами и может привести к неожиданному поведению в вопросах безопасности. Только установив пакеты из доверяных источников, которым вы уверены.<br><br>Проверить пакеты, которые вы хотите установить, несмотря на это предупреждение."
+
+#~ msgid "The following variables can be used in the e-mail notification"
+#~ msgstr "Следующие переменные могут быть использованы в уведомлении по электронной почте"
+
+#~ msgid "The high RTP port must be greater than the low RTP port."
+#~ msgstr "Верхний диапазон RTP порта должен быть больше, чем нижний."
+
+#~ msgid "The image file is corrupt."
+#~ msgstr "Файл прошивки поврежден."
+
+#~ msgid "The internal number used to dial this phone."
+#~ msgstr "Внутренний номер, используемый для вызова данного телефона."
 
 #~ msgid "The main telephone number assigned to this line."
 #~ msgstr "Основной номер телефона присвоен к этой линии."
 
+#~ msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
+#~ msgstr "Минимальный, максимальный и стандартный интервал (в секундах), в течение которого активны входящие и исходящие регистрации и подписки."
+
+#~ msgid "The number used to dial this application."
+#~ msgstr "Номер который используется для набора этого приложения."
+
+#~ msgid "The number used to dial this fax."
+#~ msgstr "Номер для набора факса."
+
 #~ msgid "The package is corrupt and has been deleted."
 #~ msgstr "Пакет поврежден и был удален."
+
+#~ msgid "The port range which RTP streams should use. (default:"
+#~ msgstr "Диапазон портов, которые RTP поток будет использовать. (По умолчанию:"
+
+#~ msgid "The prefix used when dialing international numbers (usually 00)"
+#~ msgstr "Префикс, используемый при наборе международных номеров (обычно 00)"
+
+#~ msgid "The prefix used when dialing numbers within your city (i.e. 0711)"
+#~ msgstr "Префикс, используемый при наборе номера в пределах вашего города (например, 8495)"
+
+#~ msgid "The prefix used when dialing numbers within your company (i.e. 07115678)"
+#~ msgstr "Префикс, используемый при наборе номера в вашей компании (например, 07115678)"
+
+#~ msgid "The prefix used when dialing numbers within your country (usually 0)"
+#~ msgstr "Префикс, используемый при наборе номера в пределах вашей страны (обычно 0)"
+
+#~ msgid "The provider will be contacted this often to check its availability."
+#~ msgstr "Доступность провайдера будет проверяться с заданным интервалом"
 
 #~ msgid "The settings on this page are critical to ensuring connectivity to VoIP Providers. In particular, incorrect Topology settings can prevent incoming calls from connecting. If this system is behind a NAT, by default the system requires the following ports be forwarded to it: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
 #~ msgstr "Настройки на этой странице, решающее значение для обеспечения соединения с VoIP-провайдерами. В частности, неправильные настройки топологии могут предотвращать входящие звонки. Если эта система находится за NAT-ом, по умолчанию система требует перенаправить следующие порты : UDP 5060 (SIP), 4569 UDP (IAX) и 10000-10200 UDP (RTP Audio)"
 
+#~ msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
+#~ msgstr "Система вернулась к заводским настройкам и в настоящее время перезагружается. Это может занять несколько минут."
+
+#~ msgid "The system is rebooting now. This may take a minute."
+#~ msgstr "Система перезагружается. Это может занять несколько минут."
+
 #~ msgid "The system storage media is not large enough to install packages."
 #~ msgstr "Для хранения пакетов недостаточно свободного места."
+
+#~ msgid "The uploaded image file is not for this platform (%s)."
+#~ msgstr "Загруженная прошивка  не для этой платформы (%s)."
 
 #~ msgid "The uploaded package is not newer than the existing package, update failed."
 #~ msgstr "Этот пакет старее, чем существующий пакет, обновление не удалось."
 
+#~ msgid "The username of \"admin\" is already used internally by the system."
+#~ msgstr "Имя пользователя  \"admin\" используется в системных целях."
+
+#~ msgid "There are currently no active channels."
+#~ msgstr "В настоящее время нет активных каналов."
+
+#~ msgid "There are currently no active conferences."
+#~ msgstr "В настоящее время нет активных конференций."
+
 #~ msgid "There are updates available for packages on your system."
 #~ msgstr "Есть обновления для пакетов на Вашей системе."
+
+#~ msgid "There has been an error verifying the signature on this image."
+#~ msgstr "Произошла ошибка проверки подписи для этой прошивки."
 
 #~ msgid "There has been an error verifying the signature on this package."
 #~ msgstr "Ошибка проверки подписи на этот пакет."
@@ -3128,11 +2999,29 @@ msgstr "запись:"
 #~ msgid "Third Party"
 #~ msgstr "третья сторона"
 
+#~ msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
+#~ msgstr "Данный  номер будет проговорен системой звонящему при попадании в голосовую почту. По-умолчанию равен имени пользователя, если оно в цифровом виде. Иначе, будет проговорен внутренний номер абонента."
+
+#~ msgid "This PBX"
+#~ msgstr "Этим сервером"
+
 #~ msgid "This certificate does not appear to be valid."
 #~ msgstr "Этот сертификат недействителен."
 
+#~ msgid "This image is not digitally signed."
+#~ msgstr "Эта прошивка не имеет цифровой подписи."
+
 #~ msgid "This is the first page which needs configuring upon installing a new system. Most importantly, the default password should be changed. Then, ensure your host/domain name, time zone and country's indication tones are set correctly before continuing."
 #~ msgstr "Это первая страница, на которой нужно настроить новую систему. Самое главное, вы должны изменить пароль по умолчанию. Затем, настроить ваш хост / имя домена, часовой пояс и страну (для правильной установки тоновой зоны), прежде чем продолжить."
+
+#~ msgid "This is the how your system determines if a phone has been hung-up or picked-up. Usually \"Kewl Start\" is the best choice but some providers work better with one of the other options. If your calls are not starting or ending reliably, try adjusting this setting."
+#~ msgstr "Это определяет режим, по которому Система определяет завершение или перехват вызова. Обычно  \"Kewl Start\" является лучшим выбором, однако, некоторые провайдеры работают лучше с другими опциями. Если звонки не начинаются или не завершаются, попробуйте адаптировать эту опцию."
+
+#~ msgid "This key combination activates a blind transfer (default ##)."
+#~ msgstr "Эта комбинация клавиш активирует безусловный перевод  (по умолчанию ##)."
+
+#~ msgid "This key combination activates an attended transfer (default **)."
+#~ msgstr "Эта комбинация клавиш активирует условный перевод  (по умолчанию **)."
 
 #~ msgid "This key does not appear to be valid."
 #~ msgstr "Этот ключ недействителен."
@@ -3140,14 +3029,74 @@ msgstr "запись:"
 #~ msgid "This package is not digitally signed."
 #~ msgstr "Этот пакет не имеет цифровой подписи."
 
+#~ msgid "This range of extensions is where parked calls reside (default 701-720)."
+#~ msgstr "Диапазон номеров для припаркованных звонков (по умолчанию 701-720). "
+
+#~ msgid "This will be shown as voicemail service's sending address."
+#~ msgstr "Это будет показано, как адрес отправителя."
+
 #~ msgid "This will cause the system not to check for newer firmware versions when the <a href=\"system_firmware.php\">System: Firmware</a> page is viewed."
 #~ msgstr "Это приведет к тому, что система не будет проверять наличие новой версии прошивки, <a href=\"system_firmware.php\">System: Прошивка</a> просмотр страницы."
 
 #~ msgid "This will cause the system not to check for package updates when the <a href=\"system_packages.php\">System: Packages</a> page is viewed."
 #~ msgstr "Это приведет к тому, что система не будет проверять обновления пакетов <a href=\"system_packages.php\">System: Пакеты</a> просмотр страницы."
 
+#~ msgid "Time"
+#~ msgstr "Время"
+
+#~ msgid "Timeouts"
+#~ msgstr "Тайм-ауты"
+
+#~ msgid "Tone Zones"
+#~ msgstr "Временные Зоны"
+
+#~ msgid "Transfer Key"
+#~ msgstr "Кнопка перевода"
+
+#~ msgid "Transfers"
+#~ msgstr "Переводы"
+
+#~ msgid "Type"
+#~ msgstr "Тип"
+
+#~ msgid "Type in an e-mail address and click &quot;E-mail Me&quot; to test your SMTP settings."
+#~ msgstr "Введите адрес электронной почты и нажмите кнопку &quot;Послать e-mail&quot; для тестирования SMTP настроек."
+
+#~ msgid "UTC"
+#~ msgstr "UTC"
+
+#~ msgid "Update"
+#~ msgstr "Обновление"
+
 #~ msgid "Update Installed Package"
 #~ msgstr "Обновление установленного пакета"
+
+#~ msgid "Upgrade firmware"
+#~ msgstr "Обновление прошивки"
+
+#~ msgid "Upload"
+#~ msgstr "Добавить"
+
+#~ msgid "Upload:"
+#~ msgstr "Добавить:"
+
+#~ msgid "Use Jitterbuffer even when bridging two endpoints."
+#~ msgstr "Использовать аудио буфер даже тогда, когда соединены (bridging) две конечные точки. "
+
+#~ msgid "User defined e-mail text"
+#~ msgstr "Определенный текст письма"
+
+#~ msgid "Video"
+#~ msgstr "Видео"
+
+#~ msgid "Voice Prompts"
+#~ msgstr "Голосовые файлы"
+
+#~ msgid "Voicemail to E-Mail Presentation"
+#~ msgstr "Презентация голосовой почта на e-mail"
+
+#~ msgid "Volume"
+#~ msgstr "Громкость"
 
 #~ msgid "WEP"
 #~ msgstr "WEP"
@@ -3167,11 +3116,23 @@ msgstr "запись:"
 #~ msgid "WPA2 only"
 #~ msgstr "WPA2 только"
 
+#~ msgid "Warning:"
+#~ msgstr "Внимание:"
+
 #~ msgid "Wireless"
 #~ msgstr "Беспроводной"
 
 #~ msgid "With some knowledge of how the Asterisk dialplan works, some basic applications can be added to the system. These applications can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "Для работы с приложениями требуются знания плана набора Asterisk. После добавления приложения могут вызываться по своему номеру, или использованы в качестве назначения для входящих звонков от Провайдеров."
+
+#~ msgid "Write"
+#~ msgstr "Запись"
+
+#~ msgid "XML error: %s"
+#~ msgstr "XML error: %s"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
 
 #~ msgid "You are using the most recent <strong>beta</strong> of AskoziaPBX."
 #~ msgstr "Вы используете самую последнюю <strong>бета</strong> версию AskoziaPBX."
@@ -3179,23 +3140,152 @@ msgstr "запись:"
 #~ msgid "You are using the most recent version of AskoziaPBX."
 #~ msgstr "Вы используете самую последнюю версию AskoziaPBX."
 
+#~ msgid "You must reboot the system before you can upgrade the firmware."
+#~ msgstr "Вы должны перезагрузить систему перед обновлением прошивки."
+
+#~ msgid "Your Name &lt;number&gt;"
+#~ msgstr "имя &lt;номер&gt;"
+
+#~ msgid "Your SMTP settings are working correctly. Voicemail to E-mail and missed-call notifications can now be used."
+#~ msgstr "Ваши настройки SMTP работают правильно.Теперь можно использовать уведомления о голосовой почте и пропущенных вызовов на e-mail. "
+
+#~ msgid "access the webGUI with the new IP address"
+#~ msgstr "подключиться к WEB-интерфейсу с нового  IP адреса"
+
+#~ msgid "activate disk"
+#~ msgstr "активировать диск"
+
+#~ msgid "active"
+#~ msgstr "активный"
+
 #~ msgid "add a new item"
 #~ msgstr "добавить новый элемент"
+
+#~ msgid "add application mapping"
+#~ msgstr "добавить приложение"
+
+#~ msgid "add call group"
+#~ msgstr "добавить группу вызовов"
+
+#~ msgid "add conference room"
+#~ msgstr "добавить конференц-комнату"
+
+#~ msgid "add disk"
+#~ msgstr "добавить диск"
+
+#~ msgid "add gateway"
+#~ msgstr "добавить шлюз"
+
+#~ msgid "add incoming extension mapping"
+#~ msgstr "добавить сопоставление входящих номеров"
+
+#~ msgid "add manager user"
+#~ msgstr "добавить менеджера"
+
+#~ msgid "add port group"
+#~ msgstr "добавить группу портов"
+
+#~ msgid "add set"
+#~ msgstr "добавить набор"
+
+#~ msgid "address"
+#~ msgstr "адрес"
+
+#~ msgid "after you click &quot;Save&quot;, all current calls will be dropped. You may also have to do one or more of the following steps before you can access your PBX again:"
+#~ msgstr "после нажатия кнопки &quot;Сохранить&quot;, все активные разговоры будут принудительно завершены. Может потребоваться один или несколько следующих шаговдля восстановления доступа к серверу:"
+
+#~ msgid "always send Caller ID above"
+#~ msgstr "всегда использовать этот АОН"
+
+#~ msgid "always use NAT mode."
+#~ msgstr "всегда использовать NAT"
+
+#~ msgid "associated"
+#~ msgstr "ассоциированный"
+
+#~ msgid "assume NAT mode but don't send rport "
+#~ msgstr "предполагаемый NAT режим без посылки rport"
+
+#~ msgid "authenticate incoming calls with a public RSA key"
+#~ msgstr "аутентификация входящих звонков с открытым ключом RSA"
+
+#~ msgid "authenticate outgoing calls with a private RSA key"
+#~ msgstr "аутентификация исходящих звонков с открытым ключом RSA"
 
 #~ msgid "backup package data"
 #~ msgstr "резервное копирование данных пакетов"
 
+#~ msgid "caller id of person leaving the message"
+#~ msgstr "Caller ID лица, оставившего сообщение"
+
 #~ msgid "check for package updates"
 #~ msgstr "проверить обновления пакетов"
+
+#~ msgid "click to disable fax"
+#~ msgstr "выключить факс"
 
 #~ msgid "click to disable package"
 #~ msgstr "нажмите, чтобы отключить пакет"
 
+#~ msgid "click to disable phone"
+#~ msgstr "нажмите, чтобы отключить телефон"
+
+#~ msgid "click to disable provider"
+#~ msgstr "нажмите, чтобы отключить провайдера"
+
+#~ msgid "click to enable fax"
+#~ msgstr "включить факс"
+
 #~ msgid "click to enable package"
 #~ msgstr "нажмите, чтобы включить пакет"
 
+#~ msgid "click to enable phone"
+#~ msgstr "нажмите, чтобы включить телефон"
+
+#~ msgid "click to enable provider"
+#~ msgstr "нажмите, чтобы отключить провайдера"
+
+#~ msgid "clicking &quot;Save&quot; will drop all current calls."
+#~ msgstr "нажав кнопку &quot;Сохранить&quot; все звонки сорвутся."
+
+#~ msgid "connected"
+#~ msgstr "подключен"
+
+#~ msgid "connected but lagged"
+#~ msgstr "подключен, но есть задержки"
+
+#~ msgid "default:"
+#~ msgstr "по-умолчанию:"
+
+#~ msgid "delete application"
+#~ msgstr "удалить приложение"
+
+#~ msgid "delete application mapping"
+#~ msgstr "удалить приложение"
+
+#~ msgid "delete call group"
+#~ msgstr "удалить группу вызовов"
+
+#~ msgid "delete conference room"
+#~ msgstr "удалить конференц-комнату"
+
+#~ msgid "delete fax"
+#~ msgstr "удалить факс"
+
+#~ msgid "delete manager user"
+#~ msgstr "удалить менеджера"
+
 #~ msgid "delete package configuration and data"
 #~ msgstr "удаление пакета конфигураций  и данных"
+
+#~ msgid "delete phone"
+#~ msgstr "удалить телефон"
+
+#~ msgid "delete port group"
+#~ msgstr "удалить группу портов"
+
+#~ msgid "delete provider"
+#~ msgstr "удалить провайдера"
 
 #~ msgid "descr"
 #~ msgstr "опис."
@@ -3203,14 +3293,110 @@ msgstr "запись:"
 #~ msgid "descriptive name"
 #~ msgstr "имя"
 
+#~ msgid "disable certificate checking"
+#~ msgstr "отключить проверку сертификатов"
+
+#~ msgid "disable echo cancellation"
+#~ msgstr "Выключить ЗХО-дав"
+
+#~ msgid "disabled"
+#~ msgstr "выключен"
+
+#~ msgid "down"
+#~ msgstr "вниз"
+
 #~ msgid "download a backup archive"
 #~ msgstr "скачать архив"
+
+#~ msgid "downloading"
+#~ msgstr "загрузка"
+
+#~ msgid "drag-and-drop"
+#~ msgstr "перетащить"
+
+#~ msgid "duration of the message (i.e. 0:58)"
+#~ msgstr "продолжительность сообщения (пример 0:58)"
 
 #~ msgid "edit an item"
 #~ msgstr "редактировать элемент"
 
+#~ msgid "edit application"
+#~ msgstr "редактировать приложение"
+
+#~ msgid "edit application mapping"
+#~ msgstr "редактировать приложения"
+
+#~ msgid "edit call group"
+#~ msgstr "править группу вызовов"
+
+#~ msgid "edit conference room"
+#~ msgstr "Изменить конференц-комнату"
+
+#~ msgid "edit disk"
+#~ msgstr "править диск"
+
+#~ msgid "edit fax"
+#~ msgstr "изменить факс"
+
+#~ msgid "edit gateway"
+#~ msgstr "править шлюз"
+
+#~ msgid "edit manager room"
+#~ msgstr "редактировать менеджера"
+
+#~ msgid "edit phone"
+#~ msgstr "редактировать телефон"
+
+#~ msgid "edit port"
+#~ msgstr "править порт"
+
+#~ msgid "edit port group"
+#~ msgstr "изменить группу портов"
+
+#~ msgid "edit provider"
+#~ msgstr "редактировать провайдера"
+
+#~ msgid "enable voicemail to e-mail"
+#~ msgstr "Включить отправку голосовой  почты на e-mail"
+
+#~ msgid "enter a command below..."
+#~ msgstr "введите команду ниже..."
+
+#~ msgid "extension number of voicemail box"
+#~ msgstr "номер голосовой почты"
+
+#~ msgid "extracting"
+#~ msgstr "извлечение"
+
+#~ msgid "forget disk settings"
+#~ msgstr "удалить настройки диска"
+
+#~ msgid "forget gateway settings"
+#~ msgstr "удалить настройки шлюза"
+
+#~ msgid "forget port settings"
+#~ msgstr "стереть настройки порта"
+
+#~ msgid "full date / time (i.e. 2025-11-20 (15:45))"
+#~ msgstr "полная дата / время (пример 2025-11-20 (15:45))"
+
+#~ msgid "generate password"
+#~ msgstr "сгенерировать пароль"
+
+#~ msgid "if you can't see the graph, you may have to install the <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+#~ msgstr "Если у вас не отображаются графики, вам нужно установить <a href=\"http://www.adobe.com/svg/viewer/install/\" target=\"_blank\">Adobe SVG viewer</a>."
+
+#~ msgid "inactive"
+#~ msgstr "неактивный"
+
 #~ msgid "install new package"
 #~ msgstr "установить новый пакет"
+
+#~ msgid "installed sets"
+#~ msgstr "установленный набор"
+
+#~ msgid "installing"
+#~ msgstr "установка"
 
 #~ msgid "item is disabled, click to enable"
 #~ msgstr "элемент отключен, нажмите чтобы включить"
@@ -3218,11 +3404,65 @@ msgstr "запись:"
 #~ msgid "item is enabled, click to disable"
 #~ msgstr "элемент включен, нажмите чтобы отключить"
 
+#~ msgid "kick conference member"
+#~ msgstr "прогнать участника конференции"
+
+#~ msgid "max:"
+#~ msgstr "макс:"
+
+#~ msgid "md5"
+#~ msgstr "md5"
+
+#~ msgid "milliseconds"
+#~ msgstr "миллисекунды"
+
+#~ msgid "min:"
+#~ msgstr "мин:"
+
 #~ msgid "minutes"
 #~ msgstr "минуты"
 
+#~ msgid "name of voicemail recipient"
+#~ msgstr "получатель голосовой почты"
+
+#~ msgid "never attempt NAT mode or RFC3581 support"
+#~ msgstr "никогда не включать режим NAT или поддержку RFC3581"
+
+#~ msgid "no faxes available."
+#~ msgstr "нет доступных факсов."
+
+#~ msgid "none"
+#~ msgstr "нет"
+
+#~ msgid "notify me of missed calls via e-mail"
+#~ msgstr "Сообщать о пропущенных звонках на e-mail"
+
+#~ msgid "of"
+#~ msgstr "из"
+
+#~ msgid "only use NAT mode according to RFC3581 (rport)"
+#~ msgstr "использовать только режим NAT согласно RFC3581 (rport)"
+
+#~ msgid "optional"
+#~ msgstr "необязательный"
+
 #~ msgid "permanently delete an item"
 #~ msgstr "удалить элемент"
+
+#~ msgid "plaintext"
+#~ msgstr "текст"
+
+#~ msgid "print"
+#~ msgstr "печать"
+
+#~ msgid "read:"
+#~ msgstr "чтение:"
+
+#~ msgid "receive"
+#~ msgstr "прием"
+
+#~ msgid "restart the PBX"
+#~ msgstr "перезагрузить сервер"
 
 #~ msgid "restore a backup archive"
 #~ msgstr "восстановить конфигурацию из архива"
@@ -3230,17 +3470,71 @@ msgstr "запись:"
 #~ msgid "restore package data"
 #~ msgstr "восстановление данных пакета"
 
+#~ msgid "seconds"
+#~ msgstr "секунды"
+
+#~ msgid "send phone's Caller ID"
+#~ msgstr "Отправлять АОН телефона"
+
+#~ msgid "send phone's Caller ID + prefix below"
+#~ msgstr "Отправлять АОН телефона + префикс"
+
+#~ msgid "service already assigned to \"%s\""
+#~ msgstr "услуга уже назначена в \"%s\""
+
+#~ msgid "set to '0.0.0.0 / 0.0.0.0' to deny everything"
+#~ msgstr "прописать '0.0.0.0 / 0.0.0.0' чтобы запретить всем"
+
+#~ msgid "set to '0.0.0.0 / 0.0.0.0' to permit everything"
+#~ msgstr "прописать '0.0.0.0 / 0.0.0.0' чтобы разрешить всем"
+
+#~ msgid "show"
+#~ msgstr "показать"
+
+#~ msgid "span should be set as a loopback"
+#~ msgstr "SPAN должен быть установлен как замкнутый"
+
+#~ msgid "span should use CRC4 checking"
+#~ msgstr "SPAN должны использовать проверку CRC4"
+
 #~ msgid "state"
 #~ msgstr "состояние"
+
+#~ msgid "status unknown"
+#~ msgstr "статус неизвестен"
 
 #~ msgid "system storage partition"
 #~ msgstr "раздел носителя хранения"
 
+#~ msgid "transmit"
+#~ msgstr "передача"
+
 #~ msgid "u-law"
 #~ msgstr "u-law"
+
+#~ msgid "unreachable"
+#~ msgstr "не подключен"
+
+#~ msgid "up"
+#~ msgstr "наверх"
 
 #~ msgid "update package to newer version"
 #~ msgstr "Обновить пакет на новую версию"
 
+#~ msgid "use DHCP settings permanently"
+#~ msgstr "использовать текущие DHCP настройки постоянно"
+
+#~ msgid "use this password"
+#~ msgstr "использовать этот пароль"
+
+#~ msgid "view license"
+#~ msgstr "показать лицензию"
+
+#~ msgid "webGUI Configuration"
+#~ msgstr "Конфигурация WEB интерфейса"
+
 #~ msgid "webGUI SSL certificate/key"
 #~ msgstr "SSL сертификат/ключ для WEB интерфейса"
+
+#~ msgid "write:"
+#~ msgstr "запись:"
