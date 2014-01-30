@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: TeeBX traslation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-30 17:39+0000\n"
-"PO-Revision-Date: 2014-01-30 10:15+0100\n"
+"PO-Revision-Date: 2014-01-30 18:46+0100\n"
 "Last-Translator: Giovanni Vallesi <giovanni.v@teebx.com>\n"
 "Language-Team: Italian <giovanni.v@teebx.com>\n"
 "Language: it\n"
@@ -72,10 +72,10 @@ msgid "All information on this disk will be lost after clicking \"Format\"!"
 msgstr "Tutti i dati presenti su questo disco verranno cancellati dopo aver cliccato \"Formatta\"!"
 
 msgid "All rights reserved"
-msgstr ""
+msgstr "Tutti i diritti riservati"
 
 msgid "All rights reserved under the terms of AGPLv3"
-msgstr ""
+msgstr "Tutti i diritti sono riservati secondo i termini di licenza AGPLv3."
 
 msgid "Amsterdam, Netherlands"
 msgstr "Amsterdam, Olanda"
@@ -135,7 +135,7 @@ msgid "Barcelona, Spain"
 msgstr "Barcellona, Spagna"
 
 msgid "Base Settings"
-msgstr ""
+msgstr "Impostazioni base"
 
 msgid "Belgium"
 msgstr "Belgio"
@@ -171,7 +171,7 @@ msgid "Budapest, Hungary"
 msgstr "Budapest, Ungheria"
 
 msgid "Buffer size"
-msgstr ""
+msgstr "Dimensione della mem. transitoria"
 
 msgid "Bulgaria"
 msgstr "Bulgaria"
@@ -1449,7 +1449,7 @@ msgid "indefinitely"
 msgstr "indefinito"
 
 msgid "is based upon/includes various software packages, listed below. A big thanks to the authors for all of their hard work!"
-msgstr ""
+msgstr "è basato su e/o include diversi pacchetti software elencati qui sotto. Dobbiamo grande gratitudine agli autori di questi software per il loro duro lavoro."
 
 msgid "multipoint-to-point, network termination"
 msgstr "punto-multipunto, terminazione di rete (NT, PMP)"
@@ -1473,7 +1473,7 @@ msgid "restart system"
 msgstr "riavvia il sistema"
 
 msgid "show/hide details"
-msgstr ""
+msgstr "mostrare/nascondere i dettagli"
 
 msgid "source revision"
 msgstr "rev. sorgente"
@@ -1495,7 +1495,7 @@ msgid "store voice prompts and music-on-hold on disk"
 msgstr "memorizza i file di guida vocale e le musiche di attesa sul disco"
 
 msgid "view license information"
-msgstr ""
+msgstr "vai alle informazioni di licenza"
 
 msgid "warning"
 msgstr "attenzione"
@@ -1818,181 +1818,122 @@ msgstr "Porta dell'interfaccia WEB"
 # Nome della chiave di configurazione intenzionalmente lasciato in lingua originale.
 #~ msgid "Authorization User"
 #~ msgstr "Campo<br>[Authorization User]"
-
 #~ msgid "Auto"
 #~ msgstr "Automatico"
-
 #~ msgid "Auto-Configuration"
 #~ msgstr "Configurazione Automatica"
-
 #~ msgid "AutoScale"
 #~ msgstr "Auto scala"
-
 #~ msgid "BSSID"
 #~ msgstr "BSSID"
-
 #~ msgid "Backup configuration"
 #~ msgstr "Salva la configurazione"
-
 #~ msgid "Basic"
 #~ msgstr "Base"
-
 #~ msgid "Below is a list of the currently defined phones along with a basic Dial() command to call them. Many additional options are available for this command, please read its reference documentation in the Applications tab."
 #~ msgstr "Di seguito è riportato un elenco dei telefoni attualmente definiti insieme a una base di comandi Dial() per chiamarli. Molte altre opzioni sono disponibili per il comando, si prega di leggere la documentazione di riferimento nella scheda Applicazioni."
-
 #~ msgid "Binding Port"
 #~ msgstr "Porta associata"
-
 #~ msgid "Blind"
 #~ msgstr "Diretta"
-
 #~ msgid "Blind transfer to this extension to park a call (default 700). The number read back to you after transfering is the extension where the call was parked."
 #~ msgstr "Questo numero può essere utilizzato per parcheggiare direttamente una chiamata (predefinito 700). Dopo la manovra vi verrà letto il numero effettivo dove la chiamata è stata parcheggiata."
-
 #~ msgid "Body"
 #~ msgstr "Contenuto"
-
 #~ msgid "Busy Limit"
 #~ msgstr "Limite occupato"
-
 #~ msgid "Call Groups"
 #~ msgstr "Gruppi di chiamata"
-
 #~ msgid "Call Limit"
 #~ msgstr "Limite di chiamata"
-
 #~ msgid "Call Notifications & Voicemail"
 #~ msgstr "Notifiche di Chiamata & casella Vocale"
-
 #~ msgid "Call Parking"
 #~ msgstr "Parcheggio chiamata"
-
 #~ msgid "Call Records"
 #~ msgstr " Registro Chiamate"
-
 #~ msgid "Call Routing"
 #~ msgstr "Instradamento chiamata"
-
 #~ msgid "Caller ID"
 #~ msgstr "Numero Identificativo del chiamante"
-
 #~ msgid "Caller ID / Name"
 #~ msgstr "Numero identificativo / Nome"
-
 #~ msgid "Caller ID Options"
 #~ msgstr "Opzioni Identificativo del chiamante"
-
 #~ msgid "Calls Processed"
 #~ msgstr "Chiamate Processate"
-
 #~ msgid "Cancel"
 #~ msgstr "Annulla"
-
 #~ msgid "Cannot get CPU load"
 #~ msgstr "Non posso ottenere il carico della CPU"
-
 #~ msgid "Capabilities"
 #~ msgstr "Capacità"
-
 #~ msgid "Capacity"
 #~ msgstr "Capacità"
-
 #~ msgid "Card"
 #~ msgstr "Scheda"
-
 #~ msgid "Certificate"
 #~ msgstr "Certificato"
-
 #~ msgid "Certificate and key must always be specified together."
 #~ msgstr "Certificato e chiave devono essere sempre specificati insieme."
-
 #~ msgid "Changes to this option will take effect after a reboot."
 #~ msgstr "Le modifiche a questa opzione avranno effetto dopo il riavvio."
-
 #~ msgid "Channel"
 #~ msgstr "Canale"
-
 #~ msgid "Channels"
 #~ msgstr "Canali"
-
 #~ msgid "Checked interfaces will be bridged to the main interface."
 #~ msgstr "L'interfaccia selezionata verrà collegata all'interfaccia principale."
-
 #~ msgid "Checked phones will have access to this provider."
 #~ msgstr "I telefoni contrassegnati avranno accesso a questo operatore telefonico."
-
 #~ msgid "Checked providers will be accessible from this phone."
 #~ msgstr "I provider contrassegnati saranno accessibili da questo telefono."
-
 #~ msgid "Choose the new firmware image file (%s-*.img) to be installed."
 #~ msgstr "Scegli il file immagine del firmware (%s-*.img) da installare."
-
 #~ msgid "Cipher"
 #~ msgstr "Codice"
-
 #~ msgid "Clear"
 #~ msgstr "Pulisci"
-
 #~ msgid "Clear Log"
 #~ msgstr "Pulisci registro"
-
 #~ msgid "Clear log"
 #~ msgstr "Pulisci registro"
-
 #~ msgid "Click &quot;Enable firmware upload&quot; below."
 #~ msgstr "Clicca \"Abilita caricamento firmware\" qui sotto."
-
 #~ msgid "Click &quot;Upgrade firmware&quot; to start the upgrade process."
 #~ msgstr "Clicca &quot;Aggiorna firmware&quot; per iniziare il processo di aggiornamento."
-
 #~ msgid "Click the <img src=\"img/update.png\" border=\"0\"> icon below to select and install the updated packages."
 #~ msgstr "Clicca sull'icona <img src=\"img/update.png\" border=\"0\"> qui sotto per installare gli aggiornamenti dei pacchetti."
-
 #~ msgid "Click this button to download the system configuration in XML format."
 #~ msgstr "Premi questo pulsante per scaricare una copia della configurazione di sistema in formato XML."
-
 #~ msgid "Codecs"
 #~ msgstr "Codec Audio"
-
 #~ msgid "Collecting initial data, please wait..."
 #~ msgstr "Sto raccogliendo i dati iniziali, attendere prego..."
-
 #~ msgid "Collisions"
 #~ msgstr "Collisioni"
-
 #~ msgid "Command"
 #~ msgstr "Comando"
-
 #~ msgid "Command:"
 #~ msgstr "Comando:"
-
 #~ msgid "Completely override the generated registration string with a manually defined one."
 #~ msgstr "Sovrascrive completamente la stringa di registrazione con una definita manualmente."
-
 #~ msgid "Conference"
 #~ msgstr "Conferenza"
-
 #~ msgid "Conference Rooms"
 #~ msgstr "Sale Conferenze"
-
 #~ msgid "Conference number already exists."
 #~ msgstr "Questo numero di sala conferenza esiste già."
-
 #~ msgid "Conference number matches an existing extension."
 #~ msgstr "Il numero scelto per questo sevizio conferenza corrisponde a quello di un derivato esistente."
-
 #~ msgid "Conference pins must be numeric."
 #~ msgstr "Il PIN deve essere numerico."
-
 #~ msgid "Conference room numbers must be numeric."
 #~ msgstr "Il numero di una sala conferenze deve contenere solo cifre."
-
 #~ msgid "Conference rooms with optional pin authentication can be configured here. The system's performance is the only limiting factor on the number of concurrent members. These rooms can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "Qui potete configurare delle \"sale di conferenza\" virtuali con accesso con codice personale (PIN) opzionale. Non vi sono limiti al numero di partecipanti in una conferenza se non quelli imposti dalle prestazioni del sistema. L'accesso alle sale conferenza avviene tramite il numero assegnato a ciascuna di esse ed è possibile anche dall'esterno."
-
 #~ msgid "Conferences"
 #~ msgstr "Conferenze"
-
 #, fuzzy
 #~ msgid "Configured"
 #~ msgstr "non configurato"
@@ -2481,56 +2422,39 @@ msgstr "Porta dell'interfaccia WEB"
 # Nome della chiave di configurazione intenzionalmente lasciato in lingua originale.
 #~ msgid "From Domain"
 #~ msgstr "Campo<br>[From Domain]"
-
 # Nome della chiave di configurazione intenzionalmente lasciato in lingua originale.
 #~ msgid "From User"
 #~ msgstr "Campo<br>[From User]"
-
 #~ msgid "Functions"
 #~ msgstr "Funzioni"
-
 #~ msgid "Gain (rx/tx)"
 #~ msgstr "Guadagno (rx/tx)"
-
 #~ msgid "Gateway Name"
 #~ msgstr "Nome del Gateway"
-
 #~ msgid "Gateways"
 #~ msgstr "Gateways"
-
 #~ msgid "General"
 #~ msgstr "Generale"
-
 #~ msgid "Generate self-signed certificate"
 #~ msgstr "Genera un certificato proprio (self-signed)."
-
 #~ msgid "Graph shows last"
 #~ msgstr "Il grafico mostra gli ultimi"
-
 #~ msgid "Ground Start"
 #~ msgstr "Impulso di terra (Ground start)"
-
 #~ msgid "Group Members"
 #~ msgstr "Membri del Gruppo"
-
 #~ msgid "Group name"
 #~ msgstr "Nome del gruppo"
-
 #~ msgid "Groups of extensions can be configured to ring concurrently. These groups can then be dialed via their defined extensions or used as a destination for incoming calls from Providers."
 #~ msgstr "I gruppi di derivati posono esere configurati per squillare contemporaneamente. Questi gruppi potranno essere chiamati direttamente con il numero loro attribuito o utilizzati come destinazione per le chiamate entranti."
-
 #~ msgid "HIDE"
 #~ msgstr "NASCONDI"
-
 #~ msgid "HTTP"
 #~ msgstr "HTTP"
-
 #~ msgid "HTTPS"
 #~ msgstr "HTTPS"
-
 #~ msgid "Hard disk standby time"
 #~ msgstr "Tempo atteso prima dello stand-by del disco rigido"
-
 #, fuzzy
 #~ msgid "Hardware"
 #~ msgstr "Firmware"
@@ -3366,85 +3290,58 @@ msgstr "Porta dell'interfaccia WEB"
 # Omessi ingresso ed in uscita... ridondandi rispetto a registrazione e sottoscrizione che già indicano da o verso cosa.
 #~ msgid "The minimum, maximum and default number of seconds that incoming and outgoing registrations and subscriptions remain valid."
 #~ msgstr "Il minimo, massimo ed il numero predefinito di secondi durante i quali le registrazioni e le sottoscrizioni verranno considerate valide."
-
 #~ msgid "The number used to dial this application."
 #~ msgstr "Numero usato per chiamare questa applicazione."
-
 #~ msgid "The package is corrupt and has been deleted."
 #~ msgstr "Il pacchetto è stato eliminato in quanto corrotto."
-
 #~ msgid "The phone number assigned to this account. Also this account's username."
 #~ msgstr "Numero telefonico assegnato a questo profilo. Esso è anche il nome utente del profilo stesso."
-
 #~ msgid "The port range which RTP streams should use. (default:"
 #~ msgstr "Intervallo di porte utilizzato per i flussi RTP. (predefinito: "
-
 #~ msgid "The provider will be contacted this often to check its availability."
 #~ msgstr "L'operatore verrà contattato con questa cadenza per vrificarne la disponibilità."
-
 #~ msgid "The settings on this page are critical to ensuring connectivity to VoIP Providers. In particular, incorrect Topology settings can prevent incoming calls from connecting. If this system is behind a NAT, by default the system requires the following ports be forwarded to it: 5060 UDP (SIP), 4569 UDP (IAX) and 10000-10200 UDP (RTP Audio)"
 #~ msgstr "Queste impostazioni sono particolarmente importanti per il corretto funzionamento degli operatori VoIP. In particolare l'erronea configurazione della tipologia di rete potrebbe impedire la ricezione di chiamate entranti. Riferendosi alle impostazioni predefinite, se il sistema è dietro un dispositivo NAT/Firewall, è richiesto che le seguenti porte vengano inoltrate verso il PBX: 5060 UDP (SIP), 4569 UDP (IAX) e 10000-10200 UDP (flussi RTP Audio)."
-
 #~ msgid "The specified file (%s) does not exist."
 #~ msgstr "Il file specificato (%s) non esiste."
-
 #~ msgid "The system has been reset to factory defaults and is now rebooting. This may take a minute."
 #~ msgstr "Il sistema è stato ripristinato con le impostazioni predefinite e si sta riavviando. Questa operazione potrebbe richiedere qualche istante."
-
 #~ msgid "The system is rebooting now. This may take a minute."
 #~ msgstr "Il sistema ora si riavvierà. Questa operazione potrebbe richiedere alcuni minuti."
-
 #~ msgid "The system storage media is not large enough to install packages."
 #~ msgstr "Il supporto di memorizzazione dei dati non è sufficientemente ampio per installare i pacchetti."
-
 #~ msgid "The time update interval must be either 0 (disabled) or between 6 and 1440."
 #~ msgstr "L'intervallo di aggiornamento dell'ora deve essere o 0 (disabilitato) oppure tra 6 e 1440."
-
 #~ msgid "The uploaded image file is not for this platform (%s)."
 #~ msgstr "L'immagine caricata non è per questa piattaforma (%s)."
-
 #~ msgid "The uploaded package is not newer than the existing package, update failed."
 #~ msgstr "Il pacchetto caricato non è più recente del pacchetto esistente, aggiornamento non è riuscito."
-
 #~ msgid "The username of \"admin\" is already used internally by the system."
 #~ msgstr "Il nome utente \"admin\" è utilizzato internamente dal sistema"
-
 #~ msgid "There are currently no active channels."
 #~ msgstr "Al momento non ci sono canali attivi."
-
 #~ msgid "There are currently no active conferences."
 #~ msgstr "Al momento non ci sono conferenze attive."
-
 #~ msgid "There are currently no phones defined."
 #~ msgstr "Al momento non ci sono telefoni definiti."
-
 #~ msgid "There are currently no providers defined."
 #~ msgstr "Al momento non ci sono provider predefiniti."
-
 #~ msgid "There are updates available for packages on your system."
 #~ msgstr "Sono disponibili aggiornamenti dei pacchetti installati nel sistema."
-
 #~ msgid "There has been an error verifying the signature on this image."
 #~ msgstr "C'è stato un errore durante la verifica della firma su questa immagine."
-
 #~ msgid "There has been an error verifying the signature on this package."
 #~ msgstr "C'è stato un errore durante la verifica della firma su questo pacchetto."
-
 #~ msgid "There is already another card present which provides the timing.<br><em>(Unless more than one inteface card is present in the system, this should not be changed."
 #~ msgstr "Esiste un altra interfaccia che provvede a fornire il timing. <br><em>(Se più di un interfaccia è presente nel sistema, questa impostazione non dovrebbe essere modificata."
-
 #~ msgid "This 'external' number will be read back to the caller when reaching voicemail; defaults to account's username if it is numeric. If it is not, the internal extension this call was routed to will be read back."
 #~ msgstr "Questo numero 'esterno' verrà letto al chiamante quando raggiungerà la casella vocale. Il valore predefinito corrisponde al nome utente se questo è numerico, diversamente sarà usato il numero del derivato al quale è inoltrata la chiamata entrante."
-
 #~ msgid "This PBX"
 #~ msgstr "Questo centralino"
-
 #~ msgid "This account's password and authentication scheme."
 #~ msgstr "La password del account e lo schema di autenticazione."
-
 #~ msgid "This certificate does not appear to be valid."
 #~ msgstr "Questo certificato sembra non essere valido."
-
 #, fuzzy
 #~ msgid "This extension is reachable via SIP and IAX2 URIs (extension@%s) unless disabled here."
 #~ msgstr "L'attivazione di questa opzione consente a questo interno di essere accessibile tramite SIP e IAX2 URI (extension@%s)"
@@ -3908,88 +3805,60 @@ msgstr "Porta dell'interfaccia WEB"
 # Set sembra essere un inglesismo accettato tanto da essere nel dizionario Italiano... il plurale sets non sembra esserlo altrettanto ma alla fine ho deciso di lasciarli così invece che tradurli come gruppi o insiemi.
 #~ msgid "installed sets"
 #~ msgstr "Sets installati"
-
 #~ msgid "installing"
 #~ msgstr "installazione"
-
 #~ msgid "item is disabled, click to enable"
 #~ msgstr "questa voce è disabilitata, clicca per abilitarla"
-
 #~ msgid "item is enabled, click to disable"
 #~ msgstr "questa voce è abilitata, clicca per disabilitarla"
-
 #~ msgid "kick conference member"
 #~ msgstr "escludi un numero dalla conferenza"
-
 #~ msgid "last app"
 #~ msgstr "Ultima app."
-
 #~ msgid "max:"
 #~ msgstr "max:"
-
 #~ msgid "md5"
 #~ msgstr "md5"
-
 #~ msgid "milliseconds"
 #~ msgstr "millisecondi"
-
 #~ msgid "min:"
 #~ msgstr "min:"
-
 #~ msgid "minutes"
 #~ msgstr "minuti"
-
 #~ msgid "multipoint-to-point, network termination: this port provides MSNs to route calls and is attached to one or more telephones"
 #~ msgstr "punto-multipunto (PMP), terminazione di rete (NT): questa porta fornisce numeri MSN (numeri multipli) per instradare le chiamate ed è collegata ad uno o più telefoni"
-
 #~ msgid "must be configured</a> before this feature will work."
 #~ msgstr "deve essere configurato prima che questa servizio sia attivabile."
-
 #~ msgid "name of the pbx host, without domain part"
 #~ msgstr "nome del centralino senza la parte dominio"
-
 #~ msgid "name of voicemail recipient"
 #~ msgstr "Nome del destinatario della casella vocale"
-
 #~ msgid "never attempt NAT mode or RFC3581 support"
 #~ msgstr "non tentare mai la modalità NAT o il supporto RFC3581"
-
 #~ msgid "none"
 #~ msgstr "nessuno"
-
 #~ msgid "notify me of missed calls via e-mail"
 #~ msgstr "notificami le chiamate perse via e-mail"
-
 #~ msgid "of"
 #~ msgstr "di"
-
 #~ msgid "only use NAT mode according to RFC3581 (rport)"
 #~ msgstr "usa solo il modo NAT secondo la RFC3581 (rport)"
-
 #~ msgid "optional"
 #~ msgstr "opzionale"
-
 #~ msgid "pbx events"
 #~ msgstr "eventi del centralino"
-
 #~ msgid "permanently delete an item"
 #~ msgstr "elimina definitivamente una voce"
-
 #~ msgid "plaintext"
 #~ msgstr "testo in chiaro"
-
 #~ msgid "point-to-multipoint, terminal equipment: this port accepts MSNs to route calls and is attached to the public ISDN network or another PBX system"
 #~ msgstr "punto-multipunto (PMP), dispositivo terminale (TE): questa porta accetta MSN (numeri multipli) per instradare le chiamate ed è collegata alla rete pubblica o ad un altro centralino"
-
 #~ msgid "point-to-point, network termination: this port provides DID to route calls and is connected directly to another PBX system"
 #~ msgstr "punto-punto (PTP), terminazione di rete (NT): questa porta fornisce DID per instradare le chiamate ed è collegata direttamente ad un altro centralino"
-
 #~ msgid "point-to-point, terminal equipment: this port accepts DID to route calls and is connected directly to another PBX system"
 #~ msgstr "punto-punto (PTP), dispositivo terminale (TE): questa porta accetta DID per instradare le chiamate ed è collegato direttamente a un altro sistema PBX"
-
 #~ msgid "print"
 #~ msgstr "stampa"
-
 #, fuzzy
 #~ msgid "provider lines"
 #~ msgstr "Operatori telefonici"
