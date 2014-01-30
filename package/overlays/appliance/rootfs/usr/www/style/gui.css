@@ -210,12 +210,16 @@ a.link_color_black {
 	max-width: 200px;
 }
 
-.link_table_bg {
-	background-color: #9D9D9D;
+.imgfloatrgt
+{
+	vertical-align:top;
+	float: right;
 }
 
-.webgui_bg {
-	background-color: #336699;
+.clickhere
+{
+	cursor: pointer;
+	background-color: #DDDDDD;
 }
 
 #link_cell{
@@ -229,33 +233,6 @@ a.link_color_black {
 .print_entry {
 	cursor: help;
 	border-bottom: 1px dashed #000000;
-}
-
-.platform_information_text {
-	font-size: 19px;
-	color: #336699;
-	border-top: 1px solid #999999;
-	border-right: 1px solid #999999;
-	padding-top:10px;
-	padding-bottom:10px;
-}
-
-.platform_information_image {
-	border-top: 1px solid #999999;
-	border-left: 1px solid #999999;
-	padding-top:10px;
-	padding-bottom:10px;
-}
-
-.pkg_updates_img {
-	background-color: #687BA4;
-	text-align: center;
-	vertical-align: top;
-}
-
-.pkg_updates_msg {
-	background-color: #D9DEE8;
-	padding-left: 8px;
 }
 
 .logentry {
@@ -283,31 +260,6 @@ a.link_color_black {
 .logentry_err {
 	border-left: 3px solid rgba(153, 0, 0, 1);
 	background-color: rgba(153, 0, 0, 0.3);
-}
-
-.d_header {
-	border-bottom: 1px solid #999999;
-	color: #336699;
-	font-size: 16px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 6px;
-	padding-right: 16px;
-}
-
-.d_header_nounderline {
-	color: #336699;
-	font-size: 16px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 6px;
-	padding-right: 16px;
-}
-
-.d_header_link {
-	color: #336699;
-	font-size: 16px;
-	text-decoration: none;
 }
 
 .CodeMirror-line-numbers {
