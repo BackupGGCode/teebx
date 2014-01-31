@@ -2,7 +2,7 @@
 /*
   $Id$
 part of BoneOS build platform (http://www.teebx.com/)
-Copyright(C) 2010 - 2013 Giovanni Vallesi (http://www.teebx.com).
+Copyright(C) 2010 - 2014 Giovanni Vallesi (http://www.teebx.com).
 All rights reserved.
 
   This program is free software: you can redistribute it and/or modify

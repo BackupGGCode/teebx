@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -167,10 +167,10 @@ include('fbegin.inc');
 </script>
 <?php
 	// prepare logical groups to show tabs
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=kernel', 'label' => _('Kernel'));
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=syslog', 'label' => _('System'));
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=asterisk', 'label' => _('Pbx'));
-	$arrTabs[] = array('url' => '/maint_status_logs.php?show=cdr', 'label' => _('Calls'));
+	$arrTabs[] = array('url' => '/status_logs.php?show=kernel', 'label' => _('Kernel'));
+	$arrTabs[] = array('url' => '/status_logs.php?show=syslog', 'label' => _('System'));
+	$arrTabs[] = array('url' => '/status_logs.php?show=asterisk', 'label' => _('Pbx'));
+	$arrTabs[] = array('url' => '/status_logs.php?show=cdr', 'label' => _('Calls'));
 	getTabs($arrTabs, true);
 ?>
 <div style="clear: both;"></div>
