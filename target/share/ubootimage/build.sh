@@ -131,9 +131,9 @@ echo "Copy system core files into staging directories..."
 # using fat16 8.3 naming convention for destination files
 # for larger fs portability.
 echo "  -> Initramfs."
-cp $build_toolchain/initramfs.uImage $imagelocation/$root_top_dir/iramfs.ubi
+cp $build_toolchain/initramfs.uImage $imagelocation/$root_top_dir/boot/iramfs.ubi
 echo "  -> Linux kernel."
-cp $build_root/boot/uImage $imagelocation/$root_top_dir/kernel.ubi
+cp $build_root/boot/uImage $imagelocation/$root_top_dir/boot/kernel.ubi
 echo "  -> Kernel modules."
 cp -Rp $build_root/lib/modules/* $imagelocation/$rootfs_top_dir/kernel-modules/
 echo "  ->U-boot initialization script."
