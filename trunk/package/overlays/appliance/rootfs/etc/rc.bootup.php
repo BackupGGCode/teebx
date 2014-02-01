@@ -42,8 +42,7 @@
 	/* parse the configuration and include all functions used below */
 	require_once 'config.inc';
 	require_once 'functions.inc';
-	require_once 'fileutils.lib.php';
-	require_once 'smtpconf.lib.php';
+	require_once 'utils.lib.php';
 	require_once 'initsvc.storage.php';
 	require_once 'applianceboot.lib.php';
 	require_once 'appliance.lib.php';

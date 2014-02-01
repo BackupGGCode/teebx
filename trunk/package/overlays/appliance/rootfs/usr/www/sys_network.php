@@ -29,7 +29,7 @@ All rights reserved.
 
 //ini_set(session.gc_maxlifetime, 100);
 require('guiconfig.inc');
-require('fileutils.lib.php');
+require_once('utils.lib.php');
 require('ddns.def.inc');
 require('include/network.def.inc');
 require('libs-php/cfgform.class.php');
