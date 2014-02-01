@@ -24,7 +24,7 @@ All rights reserved.
 session_start();
 require('guiconfig.inc');
 require_once('tzdata.lib.php');
-require('fileutils.lib.php');
+require_once('utils.lib.php');
 require('include/ui.langdef.inc');
 require('libs-php/cfgform.class.php');
 // define some constants needed in fbegin.inc to conditionally load some js utilities and style sheets

@@ -124,4 +124,151 @@ function getVersionInfo()
 	}
 	return $info;
 }
+
+// file utilities
+
+function cfgFileWrite($fileName, &$fileLines, $keySep = ' ', $chgMode = '0600')
+{
+	// open the target file in write mode
+	$fHandle = fopen($fileName, 'w');
+	if (!$fHandle)
+	{
+		return 10;
+	}
+	/* if $fileLines is an array, assume that each element is a line
+		 of key ($keySep) value.
+	*/
+	if (is_array($fileLines))
+	{
+		foreach (array_keys($fileLines) as $cfgKey)
+		{
+			fwrite($fHandle, $cfgKey . $keySep . $fileLines[$cfgKey] . PHP_EOL);
+		}
+	}
+	else
+	{
+		fwrite($fHandle, $fileLines);
+	}
+	//
+	fclose($fHandle);
+	chmod($fileName, $chgMode);
+	return 0;
+}
+
+function cfgFileRead($fileName, $keySep = ' ', $trimTokens = false)
+{
+	if(!file_exists($fileName))
+	{
+		return false;
+	}
+	//
+	$result = array();
+	$fileLines = file($fileName, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+	if (is_array($fileLines))
+	{
+		foreach (array_keys($fileLines) as $lineNum)
+		{
+			$tokens = explode($keySep, $fileLines[$lineNum]);
+			if(count($tokens) == 2)
+			{
+				if ($trimTokens)
+				{
+					$tokens[0] = trim($tokens[0]);
+					$tokens[1] = trim($tokens[1]);
+				}
+				$result[$tokens[0]] = $tokens[1];
+			}
+		}
+	}
+	return $result;
+}
+
+function getSmtpConf(&$cfgPointer)
+{
+	return $cfgPointer['config']['notifications']['email'];
+}
+
+function saveSysSmtpConf($newCfg, &$cfgPointer)
+{
+	$cfgPointer['config']['notifications']['email'] = $newCfg;
+	write_config();
+}
+
+function writeSmtpConf(&$cfgPointer)
+{
+	$retval = 1;
+	$smtpConf = getSmtpConf($cfgPointer);
+	// just to be sure not to corrupt an existing configuration if we get a null or empty set
+	if (is_array($smtpConf))
+	{
+		if(!empty($smtpConf))
+		{
+			$newConfig = array();
+			//
+			$newConfig['account'] = 'default';
+			$newConfig['host'] = $smtpConf['host'];
+			//
+			if (isset($smtpConf['username']))
+			{
+				if (!empty($smtpConf['username']))
+				{
+					if (isset($smtpConf['authtype']))
+					{
+						$newConfig['auth'] = $smtpConf['authtype'];
+					}
+					$newConfig['user'] = $smtpConf['username'];
+					$newConfig['password'] = $smtpConf['password'];
+				}
+			}
+			//
+			if (isset($smtpConf['enctype']))
+			{
+				switch ($smtpConf['enctype'])
+				{
+					case 'tls':
+					{
+						$newConfig['tls'] = 'on';
+						$newConfig['tls_starttls'] = 'on';
+						break;
+					}
+					case 'smtps':
+					{
+						$newConfig['tls'] = 'on';
+						$newConfig['tls_starttls'] = 'off';
+						break;
+					}
+				}
+				if (isset($newConfig['tls']))
+				{
+					if (isset($smtpConf['disablecertcheck']))
+					{
+						$newConfig['tls_certcheck'] = 'off';
+					}
+					else
+					{
+						$newConfig['tls_certcheck'] = 'on';
+						$newConfig['tls_trust_file'] = '/etc/ssl/certs/ca-certificates.crt';
+					}
+				}
+			}
+			//
+			$newConfig['from'] = $smtpConf['address'];
+			$addressParts = explode('@', $smtpConf['address']);
+			$newConfig['maildomain'] = $addressParts[1];
+			//
+			if (isset($smtpConf['port']))
+			{
+				if (!empty($smtpConf['port']))
+				{
+					$newConfig['port'] = $smtpConf['port'];
+				}
+			}
+			//
+			$newConfig['syslog'] = 'LOG_LOCAL0';
+		}
+		// write setting to /etc/msmtp.conf
+		$retval = cfgFileWrite('/etc/msmtp.conf', $newConfig);
+	}
+	return $retval;
+}
 ?>
