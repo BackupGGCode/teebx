@@ -33,7 +33,7 @@
 */
 
 // until our own utils library will be complete, wrap it from this one
-require '/etc/inc/utils.lib.inc';
+require_once '/etc/inc/utils.lib.php';
 /**
 * Kills a process by pid file
 */

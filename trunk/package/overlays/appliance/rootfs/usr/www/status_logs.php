@@ -33,7 +33,7 @@
 
 require 'guiconfig.inc';
 require_once 'services.lib.php';
-require_once 'libs-php/utils.lib.php';
+require_once 'libs-php/uiutils.lib.php';
 define('INCLUDE_TABSFILES', true);
 
 $pgtitle = array(_('Status'), _('Logs'));

@@ -22,8 +22,8 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-require('quickform.class.php');
-require('utils.lib.php');
+require 'quickform.class.php';
+require 'uiutils.lib.php';
 
 class cfgForm extends quickForm implements Serializable
 {

@@ -2,7 +2,7 @@
 /*
   $Id$
 part of BoneOS build platform (http://www.teebx.com/)
-Copyright(C) 2010 - 2013 Giovanni Vallesi (http://www.teebx.com).
+Copyright(C) 2010 - 2014 Giovanni Vallesi (http://www.teebx.com).
 All rights reserved.
 
   This program is free software: you can redistribute it and/or modify
@@ -23,13 +23,13 @@ All rights reserved.
 */
 
 session_start();
-require('guiconfig.inc');
-require('blockdevices.lib.php');
-require('libs-php/cfgform.class.php');
-require_once('libs-php/utils.lib.php');
-require_once('initsvc.storage.php');
-require_once('applianceboot.lib.php');
-require_once('appliance.lib.php');
+require 'guiconfig.inc';
+require '/etc/inc/blockdevices.lib.php';
+require 'libs-php/cfgform.class.php';
+require_once 'libs-php/uiutils.lib.php';
+require_once '/etc/inc/initsvc.storage.php';
+require_once '/etc/inc/applianceboot.lib.php';
+require_once '/etc/inc/appliance.lib.php';
 
 // define some constants referenced in fbegin.inc
 define('INCLUDE_FORMSTYLE', true);

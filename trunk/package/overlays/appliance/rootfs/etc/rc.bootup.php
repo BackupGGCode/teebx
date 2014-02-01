@@ -40,12 +40,12 @@
 	touch("{$g['varrun_path']}/booting");
 
 	/* parse the configuration and include all functions used below */
-	require_once 'config.inc';
-	require_once 'functions.inc';
-	require_once 'utils.lib.php';
-	require_once 'initsvc.storage.php';
-	require_once 'applianceboot.lib.php';
-	require_once 'appliance.lib.php';
+	require_once '/etc/inc/config.inc';
+	require_once '/etc/inc/functions.inc';
+	require_once '/etc/inc/utils.lib.php';
+	require_once '/etc/inc/initsvc.storage.php';
+	require_once '/etc/inc/applianceboot.lib.php';
+	require_once '/etc/inc/appliance.lib.php';
 
 	/* check whether config reset is desired (via hardware button on wrap and alix23x) */
 	echo " - Checking reset button... ";
