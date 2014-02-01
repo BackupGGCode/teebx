@@ -34,7 +34,7 @@ $left_items = array
 			array
 			(
 				'label' => _('Notifications'),
-				'url' => 'notifications_email.php'
+				'url' => 'sys_notification.php'
 			),
 			array
 			(
@@ -69,6 +69,11 @@ $left_items = array
 			(
 				'label' => _('Landlines'),
 				'url' => 'tk_landline.php'
+			),
+			array
+			(
+				'label' => _('Trunk groups'),
+				'url' => 'tk_groups.php'
 			)
 		)
 	),

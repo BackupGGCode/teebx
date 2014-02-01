@@ -2,7 +2,7 @@
 /*
   $Id$
 part of BoneOS build platform (http://www.teebx.com/)
-Copyright(C) 2010 - 2012 Giovanni Vallesi (http://www.teebx.com).
+Copyright(C) 2010 - 2014 Giovanni Vallesi (http://www.teebx.com).
 All rights reserved.
 
   This program is free software: you can redistribute it and/or modify
@@ -22,11 +22,11 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 session_start();
-require('guiconfig.inc');
-require_once('tzdata.lib.php');
-require_once('utils.lib.php');
-require('include/ui.langdef.inc');
-require('libs-php/cfgform.class.php');
+require 'guiconfig.inc';
+require_once '/etc/inc/tzdata.lib.php';
+require_once '/etc/inc/utils.lib.php';
+require 'include/ui.langdef.inc';
+require 'libs-php/cfgform.class.php';
 // define some constants needed in fbegin.inc to conditionally load some js utilities and style sheets
 define('INCLUDE_FORMSTYLE', true);
 // page title
