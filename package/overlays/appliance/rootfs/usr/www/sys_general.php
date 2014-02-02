@@ -29,8 +29,6 @@ require 'include/ui.langdef.inc';
 require 'libs-php/cfgform.class.php';
 // define some constants needed in fbegin.inc to conditionally load some js utilities and style sheets
 define('INCLUDE_FORMSTYLE', true);
-// page title
-$pgtitle = array(_('System'), _('General Setup'));
 // instantiate the config form object
 $form = new cfgForm('sys_general.php', 'method=post|name=iform|id=iform');
 // set session name

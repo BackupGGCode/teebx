@@ -26,7 +26,6 @@ require('guiconfig.inc');
 
 // define some variables referenced in fbegin.inc
 define('INCLUDE_JSCRIPTS', 'flot/jquery.flot.js|flot/excanvas.js|flot/jquery.flot.time.js|flot/jquery.flot.axislabels.js|charts.libutil.js');
-$pgtitle = array(_('Status'), _('CPU Load'));;
 
 include('fbegin.inc');
 ?>

@@ -55,8 +55,6 @@ define('INCLUDE_TBLSTYLE', true);
 define('INCLUDE_JSCRIPTS', 'dashboard.js');
 
 $prodInfo = getVersionInfo();
-$pgtitle = array($prodInfo['prod'] . ' ' . _('web UI'));
-
 //check_update();
 
 // check if some important applications running
