@@ -37,8 +37,6 @@ require 'libs-php/cfgform.class.php';
 define('INCLUDE_FORMSTYLE', true);
 define('INCLUDE_TABSFILES', 'jshelper');
 define('INCLUDE_JSCRIPTS', 'sys_network.conditionalfields.js');
-// page title
-$pgtitle = array(_('System'), _('Networking'));
 // set pointers to the actual configuration variables
 // interface options
 $cfgPtr['if'] = &$config['interfaces']['lan']['if'];

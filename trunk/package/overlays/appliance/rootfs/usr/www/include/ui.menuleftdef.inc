@@ -139,7 +139,7 @@ $left_items = array
 			array
 			(
 				'label' => _('Logs'),
-				'url' => 'status_logs.php?show=kernel'
+				'url' => 'status_logs.php'
 			),
 			array
 			(

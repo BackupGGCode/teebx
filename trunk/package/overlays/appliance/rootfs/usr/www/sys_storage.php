@@ -31,8 +31,6 @@ require_once('blockdevices.lib.php');
 require_once('libs-php/htmltable.class.php');
 // define some constants referenced in fbegin.inc
 define('INCLUDE_TBLSTYLE', true);
-// page title
-$pgtitle = array(_('System'), _('Storage'));
 // actual configuration reference
 $cfgPtr = &$config['system']['storage'];
 // retrieve informations about system block devices

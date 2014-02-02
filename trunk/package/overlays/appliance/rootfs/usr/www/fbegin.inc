@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of BoneOS build platform (http://www.teebx.com/)
-	Copyright(C) 2011 - 2013 Giovanni Vallesi.
+	Copyright(C) 2011 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -38,14 +38,16 @@
 	ini_set('log_errors', 1);
 	ini_set('error_log', '/tmp/php_error.log');
 
-	require_once('include/ui.menuleftdef.inc');
-	require_once('libs-php/menu.lib.php');
+	require 'libs-php/navigation.class.php';
+
+	$hostLabel = $config['system']['hostname'] . '.' . $config['system']['domain'];
+	$nav = new navigation('include/ui.menuleftdef.inc', $hostLabel, _('Dashboard'));
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-	<title><?=getPageTitle($pgtitle, $config);?></title>
+	<title><?php echo $nav->title; ?></title>
 	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script src="libs-js/jqueryui/js/jquery.js" type="text/javascript"></script>
@@ -126,15 +128,15 @@
 						<a href="index.php"><img src="img/logo.png" width="182" height="68" border="0" alt="<?php echo _("System Information"); ?>"></a>
 					</div>
 					<div id="ui_header_right">
-						<div class="ui_header_info">[admin@<?=$config['system']['hostname'] . '.' . $config['system']['domain'];?>]</div>
-						<div class="page_info"><?=getNavInfo($pgtitle); ?></div>
+						<div class="ui_header_info">[admin@<?php echo $hostLabel;?>]</div>
+						<div class="page_info"><?php echo $nav->breadcrumbs; ?></div>
 					</div>
 				<div style="clear:both;"></div>
 				</div>
 				<div id="ui_body_left" class="ui_menu_left">
 					<div id="setup_links">
 					<?php
-						echo getMenu($left_items);
+						echo $nav->menu;
 					?>
 					</div>
 				</div>

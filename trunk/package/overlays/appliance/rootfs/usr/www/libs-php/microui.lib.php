@@ -22,16 +22,6 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-function getNavInfo($title, $separator = ' &rsaquo;&rsaquo; ')
-{
-	return join($separator, $title);
-}
-
-function getPageTitle($title, &$config)
-{
-	return $config['system']['hostname'] . "." . $config['system']['domain'] . " - " . getNavInfo($title);
-}
-
 function showMsgBlock($msg, $persist=null)
 {
 	if (is_null($persist))

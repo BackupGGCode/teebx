@@ -36,7 +36,6 @@ require_once 'services.lib.php';
 require_once 'libs-php/uiutils.lib.php';
 define('INCLUDE_TABSFILES', true);
 
-$pgtitle = array(_('Status'), _('Logs'));
 $log_get_cmd = 'dmesg';
 $logHeader = _('Kernel log entries');
 if (isset($_GET) && !empty($_GET['show']))

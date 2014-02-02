@@ -28,8 +28,7 @@ require 'applianceboot.lib.php';
 require 'libs-php/cfgform.class.php';
 
 define('INCLUDE_FORMSTYLE', true);
-// page title
-$pgtitle = array(_('System'), _('Logs'));
+
 $form = new cfgForm('sys_logs.php', 'method=post|name=iform|id=iform');
 // set a pointer to the actual configuration variables
 $cfgPtr = &$config['system']['syslog'];
