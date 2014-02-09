@@ -28,7 +28,7 @@ require '/etc/inc/blockdevices.lib.php';
 require 'libs-php/cfgform.class.php';
 require_once 'libs-php/uiutils.lib.php';
 require_once '/etc/inc/initsvc.storage.php';
-require_once '/etc/inc/applianceboot.lib.php';
+require_once '/etc/inc/appliancebone.lib.php';
 require_once '/etc/inc/appliance.lib.php';
 
 // define some constants referenced in fbegin.inc
@@ -82,13 +82,6 @@ if (isset($_SESSION['diskedit']['token']))
 if(!$accessAllowed)
 {
 	//redirect to an error page
-	define('REDIRECT_REQ', "http://{$_SERVER['HTTP_HOST']}/");
-	define('REDIRECT_DLY', 3000);
-	define('CONTENT_TOP', '<a href="' . REDIRECT_REQ . '">' .
-		_('<b>Direct access not allowed!<b><br>') .
-		_('Click here to') .' ' .
-		_('access the web UI.') .
-		'</a>');
 	include('include/blankpagetpl.php');
 	exit();
 }
