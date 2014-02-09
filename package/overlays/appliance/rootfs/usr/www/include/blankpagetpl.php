@@ -29,9 +29,22 @@ All rights reserved.
 	<title></title>
 	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 	<?php
+		if (!defined('REDIRECT_REQ'))
+		{
+			define('REDIRECT_REQ', "http://{$_SERVER['HTTP_HOST']}/");
+		}
+		if (!defined('REDIRECT_DLY'))
+		{
+			define('REDIRECT_DLY', 3000);
+		}
 		if (!defined('CONTENT_TOP'))
 		{
-			define('CONTENT_TOP', '');
+			define('CONTENT_TOP', '<a href="' . REDIRECT_REQ . '">' .
+				'<b>' . _('Direct access not allowed!') . '<b><br>' .
+				_('Click here to') .' ' .
+				_('access the web UI.') .
+				'</a>'
+			);
 		}
 		if (!defined('CONTENT_MIDDLE'))
 		{
@@ -42,16 +55,8 @@ All rights reserved.
 			define('CONTENT_BOTTOM', '');
 		}
 		//
-		$redirOpt = '';
-		$redirDly = 0;
-		if (defined('REDIRECT_REQ'))
-		{
-			if (defined('REDIRECT_DLY'))
-			{
-				$redirDly = REDIRECT_DLY;
-			}
-			$redirOpt = " onLoad=\"setTimeout('dlyRedir()', $redirDly)\"";
-		//
+		$redirDly = REDIRECT_DLY;
+		$redirOpt = " onLoad=\"setTimeout('dlyRedir()', $redirDly)\"";
 	?>
 	<script type="text/javascript">
 	function dlyRedir()
@@ -59,9 +64,6 @@ All rights reserved.
 		window.location = "<?php echo REDIRECT_REQ;?>"
 	}
 	</script>
-	<?php
-	}
-	?>
 	</head>
 	<body<?php echo $redirOpt;?>>
 		<div>

@@ -24,7 +24,7 @@ All rights reserved.
 
 session_start();
 require 'guiconfig.inc';
-require 'applianceboot.lib.php';
+require 'appliancebone.lib.php';
 require 'libs-php/cfgform.class.php';
 
 define('INCLUDE_FORMSTYLE', true);

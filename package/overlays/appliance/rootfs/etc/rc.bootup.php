@@ -44,7 +44,7 @@
 	require_once '/etc/inc/functions.inc';
 	require_once '/etc/inc/utils.lib.php';
 	require_once '/etc/inc/initsvc.storage.php';
-	require_once '/etc/inc/applianceboot.lib.php';
+	require_once '/etc/inc/appliancebone.lib.php';
 	require_once '/etc/inc/appliance.lib.php';
 
 	/* check whether config reset is desired (via hardware button on wrap and alix23x) */
