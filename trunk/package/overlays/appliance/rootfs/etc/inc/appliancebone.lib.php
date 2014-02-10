@@ -45,7 +45,7 @@ function configSyslog(&$arrCfg)
 			}
 			elseif ($arrCfg['system']['syslog']['mode'] == 'disk' && ($logPath = getSvcState($arrCfg, 'systemlog')) ==! false)
 			{
-				$args = "-S -O $logPath/messages";
+				$args = "-S -s 1024 -b 5 -O $logPath/messages";
 			}
 		}
 		// configure remote logging
@@ -86,7 +86,7 @@ function stopSyslog($saveOld = false)
 		// copy current memory log buffer to a temporary location
 		exec("/sbin/logread > /tmp/messages.old", $discard, $result);
 	}
-	$result |= sigkillbyname('syslogd', 'TERM');
+	$result = sigkillbyname('syslogd', 'TERM');
 	return $result;
 }
 
