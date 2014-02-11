@@ -14,9 +14,10 @@ function updateClock(step)
 	var newTimeStamp = pageVars.oldTimestamp + (step/1000);
 	pageVars.oldTimestamp = newTimeStamp;
 
-	var currHours = Math.floor(newTimeStamp / 3600);
-	var currMins = Math.floor(newTimeStamp % 3600 / 60);
-	var currSecs = Math.floor(newTimeStamp % 3600 % 60);
+	var currDate = new Date(newTimeStamp);
+	var currHours = currDate.getHours();;
+	var currMins = currDate.getMinutes();
+	var currSecs = currDate.getSeconds();;
 	// Pad minutes and seconds with leading zeros, if needed
 	currMins = (currMins < 10 ? '0' : '') + currMins;
 	currSecs = (currSecs < 10 ? '0' : '') + currSecs;
