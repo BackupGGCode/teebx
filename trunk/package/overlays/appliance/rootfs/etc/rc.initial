@@ -1,7 +1,7 @@
 #!/bin/sh
 # $Id$
 # part of BoneOS build platform (http://www.teebx.com/)
-# Copyright(C) 2011 - 2013 Giovanni Vallesi.
+# Copyright(C) 2011 - 2014 Giovanni Vallesi.
 # All rights reserved.
 #
 # originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -38,7 +38,7 @@ else
 		echo "2) Set up LAN IP address"
 		echo "3) Reset system password"
 		echo "4) Reset to factory defaults"
-		echo "5) Reboot system"
+		echo "5) Reboot/Shutdown system"
 		echo "6) Ping host"
 		echo "7) Asterisk Console"
 		echo "8) Shell"

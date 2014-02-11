@@ -127,7 +127,7 @@ function getVersionInfo()
 
 // file utilities
 
-function cfgFileWrite($fileName, &$fileLines, $keySep = ' ', $chgMode = '0600')
+function cfgFileWrite($fileName, &$fileLines, $keySep = ' ', $chgMode = 0664)
 {
 	// open the target file in write mode
 	$fHandle = fopen($fileName, 'w');
@@ -181,6 +181,31 @@ function cfgFileRead($fileName, $keySep = ' ', $trimTokens = false)
 		}
 	}
 	return $result;
+}
+
+function fileWrite($fileName, &$fileLines, $mode = 'w', $chgMode = 0664)
+{
+	// open the target file
+	$fHandle = fopen($fileName, $mode);
+	if (!$fHandle)
+	{
+		return 10;
+	}
+	if (is_array($fileLines))
+	{
+		foreach (array_keys($fileLines) as $lineKey)
+		{
+			fwrite($fHandle, $fileLines[$lineKey] . PHP_EOL);
+		}
+	}
+	else
+	{
+		fwrite($fHandle, $fileLines);
+	}
+	//
+	fclose($fHandle);
+	chmod($fileName, $chgMode);
+	return 0;
 }
 
 function getSmtpConf(&$cfgPointer)
@@ -269,6 +294,133 @@ function writeSmtpConf(&$cfgPointer)
 		// write setting to /etc/msmtp.conf
 		$retval = cfgFileWrite('/etc/msmtp.conf', $newConfig);
 	}
+	return $retval;
+}
+
+function getActualMounts($rwonly = false)
+{
+	$retval = array();
+	$ereg = '^(\/dev\/(?:nand|mmcblk\d|[a-z]{3})(?:p{1}[\d]+|[\d]+|[a-z]{1}))\son\s([\/\w\-\_]+)';
+	if ($rwonly)
+		$ereg .= '\stype\s\w+\s\(rw,';
+	//
+	exec('/bin/mount', $out);
+	foreach (array_keys($out) as $idx)
+	{
+		// not a block device partition?
+		if (strpos($out[$idx], '/dev/') !== 0)
+			continue;
+		//
+		if (preg_match("/$ereg/", $out[$idx], $regs))
+		{
+			$retval[$regs[2]] = $regs[1];
+		}
+	}
+	return $retval;
+}
+
+function whichAppsOwnsFilesOnMounts($rwMounts)
+{
+	$retval = array();
+	foreach (array_keys($rwMounts) as $kMount)
+	{
+		unset($out);
+		exec("/bin/lsof {$kMount}", $out);
+		// shift the header off
+		array_shift($out);
+		foreach (array_keys($out) as $rowIdx)
+		{
+			$app = preg_split('/\s+/', $out[$rowIdx], 3);
+			$retval[$app[0]] = $app[1];
+		}
+	}
+	return $retval;
+}
+
+function stopProcess($process, $signal = 'TERM', $goNull = true, $stdInEqStdOut = true)
+{
+	$cmd = 'busybox kill';
+	if (!is_integer($process))
+	{
+		$cmd = 'busybox killall';
+		$process = escapeshellarg($process);
+	}
+	$nullRedir = ' > /dev/null';
+	if (!$goNull)
+	{
+		$nullRedir = '';
+	}
+	$inoutEq = ' 2>&1';
+	if (!$stdInEqStdOut)
+	{
+		$inoutEq = '';
+	}
+
+	exec("$cmd -{$signal} {$process}{$nullRedir}{$inoutEq}", $discard, $retval);
+	return $retval;
+}
+
+function getHaltCmds($arrApps, $signal = 'TERM', $filter = array())
+{
+	$cmds = array();
+	// never kill the shell executing it
+	$filter[] = 'sh';
+	$arrApps = array_diff_key($arrApps, array_flip($filter));
+	foreach (array_keys($arrApps) as $app)
+	{
+		$pid = escapeshellarg($arrApps[$app]);
+		$cmds[] = "busybox kill -{$signal} $pid";
+	}
+	return $cmds;
+}
+
+function getUmountCmds($arrUnmount)
+{
+	function lencmp($a, $b)
+	{
+		return strlen($b) - strlen($a);
+	}
+
+	// deeper mount points first
+	uksort($arrUnmount, 'lencmp');
+	$cmds = array();
+	$cmds[] = 'sync';
+	foreach (array_keys($arrUnmount) as $mp)
+	{
+		$cmds[] = "umount $mp";
+	}
+
+	return $cmds;
+}
+
+function queueFinalShutdown($mode = 'reboot')
+{
+	$cmds = array('#!/bin/sh',
+		'PATH=/sbin:/bin',
+		'export PATH',
+		'source /etc/functions.sh',
+		'',
+		'sleep 1'
+	);
+
+	$rwMounts = getActualMounts(true);
+	foreach (array_keys($rwMounts) as $mp)
+	{
+		$cmds[] = "killByMount \"TERM\" \"$mp\"";
+		$cmds[] = 'sleep 0.1';
+	}
+	$cmds = array_merge($cmds, getUmountCmds($rwMounts));
+
+	$cmds[] = 'sleep 0.5';
+	$do = '/sbin/reboot';
+	if ($mode == 'poweroff')
+	{
+		$do = '/sbin/poweroff';
+	}
+	$cmds[] = $do;
+	$retval = fileWrite('/tmp/cleanshutdown.sh', $cmds, 'w', 0754);
+	exec('sync');
+	exec('nohup /tmp/cleanshutdown.sh > /dev/null 2>&1 &');
 	return $retval;
 }
 ?>
