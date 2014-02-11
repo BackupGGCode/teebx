@@ -34,15 +34,16 @@ function startIpbx()
 
 function stopIpbx()
 {
-	exec('/usr/sbin/asterisk -rx \'core stop now\'', $discard, $result);
+	exec('/usr/sbin/asterisk -rx \'core stop now\' > /dev/null 2>&1', $discard, $result);
 	sleep(1);
 	return $result;
 }
 
 function stopAppliance()
 {
-	stopIpbx();
+	$result = stopIpbx();
 	// ...
+	return $result;
 }
 
 function configAsterisk()

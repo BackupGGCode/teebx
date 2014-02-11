@@ -185,27 +185,28 @@ function cfgFileRead($fileName, $keySep = ' ', $trimTokens = false)
 
 function fileWrite($fileName, &$fileLines, $mode = 'w', $chgMode = 0664)
 {
+	$bytes = false;
 	// open the target file
 	$fHandle = fopen($fileName, $mode);
 	if (!$fHandle)
 	{
-		return 10;
+		return false;
 	}
 	if (is_array($fileLines))
 	{
 		foreach (array_keys($fileLines) as $lineKey)
 		{
-			fwrite($fHandle, $fileLines[$lineKey] . PHP_EOL);
+			$bytes = fwrite($fHandle, $fileLines[$lineKey] . PHP_EOL);
 		}
 	}
 	else
 	{
-		fwrite($fHandle, $fileLines);
+		$bytes = fwrite($fHandle, $fileLines);
 	}
 	//
 	fclose($fHandle);
 	chmod($fileName, $chgMode);
-	return 0;
+	return (bool) $bytes;
 }
 
 function getSmtpConf(&$cfgPointer)
@@ -421,6 +422,9 @@ function queueFinalShutdown($mode = 'reboot')
 	$retval = fileWrite('/tmp/cleanshutdown.sh', $cmds, 'w', 0754);
 	exec('sync');
 	exec('nohup /tmp/cleanshutdown.sh > /dev/null 2>&1 &');
-	return $retval;
+	if ($retval === false)
+		return 1;
+	//
+	return 0;
 }
 ?>
