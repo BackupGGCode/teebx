@@ -165,6 +165,7 @@ function storageupd_startSyslog()
 
 function doSystemStop($mode = 'reboot')
 {
+	$result = 0;
 	include_once 'appliance.lib.php';
 	/*
 	appliance.lib.php should have a function called stopAppliaace to stop properly
@@ -172,7 +173,7 @@ function doSystemStop($mode = 'reboot')
 	*/
 	if (is_callable('stopAppliance'))
 	{
-		stopAppliance();
+		$result |= stopAppliance();
 	}
 
 	/*
@@ -184,7 +185,7 @@ function doSystemStop($mode = 'reboot')
 	sleep(1);
 
 	// properly stop any system application that may be affected by or prevent filesystem unmount
-	stopSyslog(false);
+	$result |= stopSyslog(false);
 	// finally stop all
-	queueFinalShutdown($mode);
+	$result |= queueFinalShutdown($mode);
 }
