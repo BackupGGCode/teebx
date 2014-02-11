@@ -23,7 +23,7 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-	require_once 'utils.lib.php';
+	require_once '/etc/inc/utils.lib.php';
 	require_once '/etc/inc/appliancebone.lib.php';
 
 	$in = fopen('php://stdin', 'r');
@@ -38,7 +38,7 @@ All rights reserved.
 		$mode = 'reboot';
 		fwrite($out, $msgProgress . '...' .PHP_EOL);
 	}
-	elseif(strcmp($opt, 'S') === 0)
+	elseif (strcmp($opt, 'S') === 0)
 	{
 		$msg = 'The system is shutting down and will be powered off if your platform support it. Please wait.';
 		$mode = 'poweroff';
