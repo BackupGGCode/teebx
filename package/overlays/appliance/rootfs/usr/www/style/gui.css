@@ -510,3 +510,31 @@ a.doedit > img
 {
 	display: none;
 }
+
+.btnbox
+{
+	text-align: center;
+}
+
+button
+{
+	border: 1px solid #333;
+}
+
+button[type="button"]
+{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	margin-top: 0.5em;
+	margin-bottom: 0.2em;
+	margin-left: auto;
+	margin-right: auto;
+	/*width: 6em;*/
+}
+
+button[type="button"]:hover
+{
+	cursor: pointer;
+}

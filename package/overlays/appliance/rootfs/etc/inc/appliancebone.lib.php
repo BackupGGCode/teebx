@@ -22,8 +22,8 @@ All rights reserved.
 - look at TeeBX website [http://www.teebx.com] to get details about license.
 */
 
-require_once 'util.inc';
-require_once 'services.lib.php';
+require_once '/etc/inc/utils.lib.php';
+require_once '/etc/inc/services.lib.php';
 
 function configSyslog(&$arrCfg)
 {
@@ -62,7 +62,7 @@ function configSyslog(&$arrCfg)
 	}
 
 	$saveOld = false;
-	$oldArgs = getProcessCmdline('syslogd');
+	getProcessCmdline('syslogd');
 	if ($oldArgs !== false)
 	{
 		if ($oldArgs === $args)
@@ -86,7 +86,7 @@ function stopSyslog($saveOld = false)
 		// copy current memory log buffer to a temporary location
 		exec("/sbin/logread > /tmp/messages.old", $discard, $result);
 	}
-	$result = sigkillbyname('syslogd', 'TERM');
+	$result = stopProcess('syslogd', 'TERM');
 	return $result;
 }
 
@@ -161,4 +161,30 @@ function storageupd_startSyslog()
 		$_SESSION['cfgqueue_syslog']['params']['logPath']
 	);
 	unset($_SESSION['cfgqueue_syslog']);
+}
+
+function doSystemStop($mode = 'reboot')
+{
+	include_once 'appliance.lib.php';
+	/*
+	appliance.lib.php should have a function called stopAppliaace to stop properly
+	all specific applications, else will be forcibly stopped later.
+	*/
+	if (is_callable('stopAppliance'))
+	{
+		stopAppliance();
+	}
+
+	/*
+	temporary dirty workaround until /offload is mounted rw for testing purposes,
+	remount ro else killing http will block reboot/shutdown even using nohup
+	*/
+	exec('cat /etc/fstab|awk \'/\/offload/ && ! /\/offload\// { print $1 " " $2}\'', $mnt);
+	exec("mount -r -o remount {$mnt[0]}");
+	sleep(1);
+
+	// properly stop any system application that may be affected by or prevent filesystem unmount
+	stopSyslog(false);
+	// finally stop all
+	queueFinalShutdown($mode);
 }

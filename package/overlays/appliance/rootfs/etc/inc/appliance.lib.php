@@ -24,7 +24,7 @@ All rights reserved.
 
 // this will replace pbx.inc but at this time mostly is a bridge to it
 
-require_once 'pbx.inc';
+require_once '/etc/inc/pbx.inc';
 
 function startIpbx()
 {
@@ -37,6 +37,12 @@ function stopIpbx()
 	exec('/usr/sbin/asterisk -rx \'core stop now\'', $discard, $result);
 	sleep(1);
 	return $result;
+}
+
+function stopAppliance()
+{
+	stopIpbx();
+	// ...
 }
 
 function configAsterisk()

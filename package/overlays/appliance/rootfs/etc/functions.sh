@@ -1,5 +1,6 @@
 # $Id$
 # part of BoneOS build platform (http://www.teebx.com/)
+# released under the terms of the GNU Affero General Public License ver. 3.
 # Copyright(C) 2013 - 2014 Giovanni Vallesi.
 # More information can be found in the files COPYING and README.
 
