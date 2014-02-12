@@ -101,7 +101,6 @@
 	{ ?>
 	<script src="libs-js/codemirror/js/codemirror.js" type="text/javascript"></script>
 	<? } ?>
-	<script src="libs-js/gui_head.js" type="text/javascript"></script>
 	<link href="style/gui.css" rel="stylesheet" type="text/css">
 	<link href="style/devpan.css" rel="stylesheet" type="text/css">
 	<link href="style/instruments.css" rel="stylesheet" type="text/css">
