@@ -501,6 +501,30 @@ div.scrollvlist
 	color:red;
 }
 
+.progress_box
+{
+}
+
+.state_msg
+{
+	font-weight: bold;
+}
+
+.state_wait:before
+{
+	content: url('/img/ajax_busy_round.gif') "\0000a0";
+}
+
+.state_done:before
+{
+	content: url('/img/ok_job.png') "\0000a0";
+}
+
+.state_warning:before
+{
+	content: url('/img/warning_job.png') "\0000a0";
+}
+
 a.doedit > img
 {
 	padding-right: 6px;
@@ -514,6 +538,20 @@ a.doedit > img
 .btnbox
 {
 	text-align: center;
+}
+
+.optbox
+{
+}
+
+.optrow
+{
+	background-color: #CDDFEF;
+}
+
+.optrow:last-child
+{
+	margin-bottom: 1em;
 }
 
 button

@@ -180,7 +180,7 @@ $left_items = array
 			),
 			array
 			(
-				'label' => _('Reboot'),
+				'label' => _('Reboot/Shutdown'),
 				'url' => 'maint_reboot.php'
 			)
 		)

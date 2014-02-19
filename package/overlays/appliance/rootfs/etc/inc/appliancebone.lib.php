@@ -163,29 +163,45 @@ function storageupd_startSyslog()
 	unset($_SESSION['cfgqueue_syslog']);
 }
 
-function doSystemStop($mode = 'reboot')
+function doSystemStop($mode = 'reboot', $flags = 7)
 {
+	$_stop_appliance = 1;
+	$_stop_syslog = 2;
+	$_stop_finalshutdown = 4;
 	$result = 0;
-	include_once 'appliance.lib.php';
-	/*
-	appliance.lib.php should have a function called stopAppliaace to stop properly
-	all specific applications, else will be forcibly stopped later.
-	*/
-	if (is_callable('stopAppliance'))
+
+	if ($_stop_appliance & $flags)
 	{
-		$result |= stopAppliance();
+		include_once 'appliance.lib.php';
+		/*
+		appliance.lib.php should have a function called stopAppliaace to stop properly
+		all specific applications, else will be forcibly stopped later.
+		*/
+		if (is_callable('stopAppliance'))
+		{
+			$result |= stopAppliance();
+		}
 	}
 
-	/*
-	temporary dirty workaround until /offload is mounted rw for testing purposes,
-	remount ro else killing http will block reboot/shutdown even using nohup
-	*/
-	exec('cat /etc/fstab|awk \'/\/offload/ && ! /\/offload\// { print $1 " " $2}\'', $mnt);
-	exec("mount -r -o remount {$mnt[0]}");
-	sleep(1);
+	if ($_stop_syslog & $flags)
+	{
+		/*
+		temporary dirty workaround until /offload is mounted rw for testing purposes,
+		remount ro else killing http will block reboot/shutdown even using nohup
+		*/
+		exec('cat /etc/fstab|awk \'/\/offload/ && ! /\/offload\// { print $1 " " $2}\'', $mnt);
+		exec("mount -r -o remount {$mnt[0]}");
+		sleep(1);
 
-	// properly stop any system application that may be affected by or prevent filesystem unmount
-	$result |= stopSyslog(false);
-	// finally stop all
-	$result |= queueFinalShutdown($mode);
+		// properly stop any system application that may be affected by or prevent filesystem unmount
+		$result |= stopSyslog(false);
+	}
+
+	if ($_stop_finalshutdown & $flags)
+	{
+		// finally stop all remaining processes
+		$result |= queueFinalShutdown($mode);
+	}
+
+	return $result;
 }

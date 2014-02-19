@@ -39,13 +39,6 @@ function stopIpbx()
 	return $result;
 }
 
-function stopAppliance()
-{
-	$result = stopIpbx();
-	// ...
-	return $result;
-}
-
 function configAsterisk()
 {
 	asterisk_conf_generate();
@@ -59,5 +52,74 @@ function configCdr()
 function reloadCdr()
 {
 
+}
+
+function pbxGetStatusChannels()
+{
+	$result = array('exitstatus' => 1);
+	exec('/usr/sbin/asterisk -rx \'core show channels\' > 2>&1', $out, $exitstatus);
+	if ($exitstatus == 0)
+	{
+		foreach (array_keys($out) as $kRow)
+		{
+			$row = explode(' ', $out[$kRow]);
+			$result[$row[2]] = $row[0];
+		}
+	}
+}
+
+function pbxGetActiveCalls()
+{
+	$result = 0;
+	$status = pbxGetStatusChannels();
+	if ($status['exitstatus'] == 0 && isset($status['calls']))
+	{
+		$result = $status['calls'];
+	}
+	return $result;
+	/* quick testing only stub
+	$out = file_get_contents('/tmp/calls');
+	return (int) $out;
+	*/
+}
+
+function pbxPreventCalls()
+{
+	// stub function waiting for proper dialplan implementation
+	return 0;
+}
+
+function getStopApplianceOptions()
+{
+	$stopOptions = array();
+
+	$stopOptions['__app_stop_option_preventcalls'] = array(
+		'ftype' => 'checkbox',
+		'label' => _('Prevent pbx to accept new calls.'),
+		'feedback_wait' => _('Locking pbx application...'),
+		'feedback_done' => _('Pbx application locked, no new calls will be possible between now and next start.'),
+		'mode' => 'exec',
+		'function' => 'pbxPreventCalls',
+		'expect' => 0
+	);
+
+	$stopOptions['__app_stop_option_nocalls'] = array(
+		'ftype' => 'checkbox',
+		'label' => _('Check for active calls and wait until the pbx will be free.'),
+		'feedback_wait' => _('active calls, updating every 5 seconds. Please wait...'),
+		'feedback_done' => _('No pending calls.'),
+		'mode' => 'poll',
+		'function' => 'pbxGetActiveCalls',
+		'expect' => 0
+	);
+
+	return $stopOptions;
+}
+
+function stopAppliance()
+{
+	$result = stopIpbx();
+	// ...
+	return $result;
 }
 
