@@ -50,28 +50,28 @@
 	<title><?php echo $nav->title; ?></title>
 	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script src="libs-js/jqueryui/js/jquery.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/js/ui.core.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/js/ui.widget.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/js/ui.mouse.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/jquery.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/ui.core.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/ui.widget.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/ui.mouse.js" type="text/javascript"></script>
 	<?php
 		if (defined('INCLUDE_DDROPFILES'))
 		{
 	?>
-	<script src="libs-js/jqueryui/js/ui.draggable.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/js/ui.sortable.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/contribs/jquery.bsmselect.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/contribs/jquery.bsmselect.sortable.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/contribs/jquery.bsmselect.compatibility.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/ui.draggable.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/ui.sortable.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/contribs/jquery.bsmselect.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/contribs/jquery.bsmselect.sortable.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/contribs/jquery.bsmselect.compatibility.js" type="text/javascript"></script>
 	<link href="style/jquery.bsmselect.css" rel="stylesheet" type="text/css">
 	<script src="libs-js/mediacoder.sorter.js" type="text/javascript"></script>
 	<?php
 		}
 	?>
-	<script src="libs-js/jqueryui/js/ui.tabs.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/contribs/jquery.selectboxes.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/contribs/jquery.preloadImage.js" type="text/javascript"></script>
-	<script src="libs-js/jqueryui/contribs/jquery.progressbar.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/js/ui.tabs.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/contribs/jquery.selectboxes.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/contribs/jquery.preloadImage.js" type="text/javascript"></script>
+	<script src="libs-js/jquery/contribs/jquery.progressbar.js" type="text/javascript"></script>
 	<?php
 		if (defined('INCLUDE_TABSFILES'))
 		{
@@ -117,7 +117,7 @@
 	<!--[if gt IE 5]>
 		<script src="libs-js/ie_cssfix.js" type="text/javascript"></script>
 	<![endif]-->
-	<link href="libs-js/jqueryui/css/ui.css" rel="stylesheet" type="text/css">
+	<link href="libs-js/jquery/css/ui.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div id="allbody">
