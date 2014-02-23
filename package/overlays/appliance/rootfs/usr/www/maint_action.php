@@ -58,7 +58,7 @@ if ($data['action'] === 'reboot' || $data['action'] === 'poweroff')
 		$data['msg'] = _('The system is shutting down and will be powered off if your platform support it. Please wait.');
 	}
 	sleep(1);
-	doSystemStop($data['action']);
+	$data['retval'] = doSystemStop($data['action']);
 }
 elseif ($data['action'] === 'prepare')
 {
