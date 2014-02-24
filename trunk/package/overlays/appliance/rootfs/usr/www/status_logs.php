@@ -132,7 +132,7 @@ include('fbegin.inc');
 					newMarker = '<a class="mark_warn" href="#LE' + i + '">|</a>';
 					displayMarkers = true;
 				}
-				else if (last_line.search(/FAIL/i) != -1)
+				else if (last_line.search(/(FAIL)|(BAD PASSWORD)/i) != -1)
 				{
 					rowStyle = rowStyle + ' logentry_fail';
 					newMarker = '<a class="mark_fail" href="#LE' + i + '">|</a>';
