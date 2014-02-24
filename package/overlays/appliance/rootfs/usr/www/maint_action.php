@@ -28,13 +28,24 @@ require_once '/etc/inc/utils.lib.php';
 require_once '/etc/inc/appliancebone.lib.php';
 require_once 'libs-php/uiutils.lib.php';
 
+$data = array();
+$data['retval'] = null;
+$data['action'] = null;
+$data['msg'] = _('Invalid task or general error.');
+
 if (!isset($_SESSION['maint-halt']['token']) || !isset($_POST['stk'])
 	|| $_SESSION['maint-halt']['token'] != $_POST['stk'] || !isset($_POST['action']))
 {
-	include('include/blankpagetpl.php');
-	exit();
+	// testing on HTTP_ACCEPT substring because $_SERVER['X-Requested-With'] => 'XMLHttpRequest' not populated by busybox httpd
+	if (stripos($_SERVER['HTTP_ACCEPT'], 'application/json') === false)
+	{
+		include('include/blankpagetpl.php');
+		exit();
+	}
+	exit(json_encode($data));
 }
 
+$data['action'] = $_POST['action'];
 $stopOpts = array();
 if (file_exists('/etc/inc/appliance.lib.php'))
 {
@@ -44,11 +55,6 @@ if (file_exists('/etc/inc/appliance.lib.php'))
 		$stopOpts = getStopApplianceOptions();
 	}
 }
-
-$data = array();
-$data['retval'] = null;
-$data['msg'] = _('Invalid task or general error.');
-$data['action'] = $_POST['action'];
 
 if ($data['action'] === 'reboot' || $data['action'] === 'poweroff')
 {

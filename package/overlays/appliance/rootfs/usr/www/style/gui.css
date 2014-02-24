@@ -525,6 +525,11 @@ div.scrollvlist
 	content: url('/img/warning_job.png') "\0000a0";
 }
 
+.state_error:before
+{
+	content: url('/img/error_job.png') "\0000a0";
+}
+
 a.doedit > img
 {
 	padding-right: 6px;
