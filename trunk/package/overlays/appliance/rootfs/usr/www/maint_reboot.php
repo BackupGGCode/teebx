@@ -33,8 +33,8 @@ session_start();
 $_SESSION['maint-halt']['token'] = uniqid(md5(microtime()), true);
 $msgConfirmShutdown = escapeStr(_('To confirm please type')) . '\n  Shutdown\n' .escapeStr(_('exactly as suggested above, then press OK to proceed') . '.');
 $msgConfirmReboot = escapeStr(_('Click OK to confirm, else cancel') . '.');
-$msgProgress = escapeStr(_('Stopping running applications and Unmounting File Systems') . '... ');
-$msgDone = escapeStr(_('Done') . '.');
+$msgProgress = _('Stopping running applications and Unmounting File Systems') . '... ';
+$msgDone = _('Done') . '.';
 
 $optionsMarkup = '';
 $stopOpts = array();
@@ -181,6 +181,11 @@ function doExec(url, paramsQuery, evGlobal, expectValue, targetContainer, poll, 
 			{
 				jQuery(newId).removeClass('state_wait');
 				jQuery(newId).addClass('state_done');
+			}
+			else if (ret == null)
+			{
+				jQuery(newId).removeClass('state_wait');
+				jQuery(newId).addClass('state_error');
 			}
 		},
 		complete: function(data)
