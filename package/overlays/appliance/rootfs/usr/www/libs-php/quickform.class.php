@@ -1378,6 +1378,7 @@ class quickForm
 				case 'button':
 				case 'reset':
 				case 'image':
+				case 'file':
 					$field = $this->htmlInput($id, $this->tagsPool[$id]['elemtype'], $htmlBreak);
 					$htmlBreak = '';
 					break;
@@ -1399,7 +1400,7 @@ class quickForm
 				case 'fieldset':
 					return $this->htmlFieldset($id);
 				default:
-					return "<b>Error: unrecognized tag (Type: {$this->tagsPool[$id]['elemtype']} Id: $id</b>";
+					return "<b>Error: unrecognized tag (Type: {$this->tagsPool[$id]['elemtype']} Id: $id)</b>";
 			}
 			//
 			return $field . $htmlBreak;

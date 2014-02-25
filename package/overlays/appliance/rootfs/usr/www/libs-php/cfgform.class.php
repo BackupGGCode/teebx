@@ -123,6 +123,7 @@ class cfgForm extends quickForm implements Serializable
 					case 'text':
 					case 'hidden':
 					case 'password':
+					case 'file':
 						$this->tagsPool[$pKey]['attrlist']['value'] = $value;
 						break;
 					case 'textarea':
