@@ -22,7 +22,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||8||2||F||Trunk groups implementation for VoIP providers||
 ||8||1||F||Replace curent failover mechanism, use trunk groups routing instead||
 ||8||0||F||IVR||
-||0||0||F||System phonebook with private and public records||
+||8||0||F||System phonebook with private and public records||
 ||8||0||F||DDI call handling with operator and unassigned numbers failover||
 ||8||0||F||Call forward||
 ||8||0||F||COS||
