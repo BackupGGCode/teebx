@@ -8,7 +8,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||9||9||S||Remove platforms we don't want to support (CP3000, etc...)||
 ||9||9||S||Update Php interpreter to version 5+||
 ||9||9||S||Brand new web UI (build and use dedicated mini-framework classes to render/check forms, menus and tables)||
-||9||8||S||ARM architectures support to target most interesting common boards||
+||9||8||S||[http://code.google.com/p/teebx/wiki/PortToARM ARM] architectures support to target most interesting common boards||
 ||9||9||S||SQLite PHP support||
 ||9||9||S||Let the user to choose where the system log daemon should write: memory, disk, network||
 ||9||8||S||Backup/Restore  sets: distinct backups for system, pbx, media and so on...||
