@@ -21,13 +21,15 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||8||3||S||Replace xml configuration with an embedded sql engine (SQLite 3), use xml only as a backup/restore format||
 ||8||2||F||Trunk groups implementation for VoIP providers||
 ||8||1||F||Replace curent failover mechanism, use trunk groups routing instead||
+||8||0||F||IVR||
+||0||0||F||System phonebook with private and public records||
 ||8||0||F||DDI call handling with operator and unassigned numbers failover||
 ||8||0||F||Call forward||
 ||8||0||F||COS||
 ||8||0||F||Pickup groups||
 ||8||2||F||Sequential and round-robin ring groups||
 ||8||0||F||Ring time dial modifiers. E.g. dialling 200*9 rings extension 200 for 90 seconds.||
-||8||9||F||System shutdown both from webUI and console||
+||8||9||F||System shutdown both from webUI and console. Option to wait for current calls to end||
 ||8||2||F||Country settings (numbering plan, isdn, flash timers, cli...)||
 ||8||6||F||Real time Call logs (CDR)||
 ||7||9||S||Better system logs GUI||
@@ -43,9 +45,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||4||0||H||Support Sangoma hardware||
 ||4||0||S||Phones auto provisioning||
 ||4||0||F||Personal VM greetings, use system greeting if a user doesn't record the personal one||
-||0||0||H||Support mISDN as alternative ISDN driver/stack||
-||0||0||F||IVR||
-||0||0||F||System phonebook with private and public records||
+||3||0||H||Support ~~mISDN/~~CAPI as alternative ISDN driver/stack||
 ||0||0||F||User portal||
 ||0||0||F||DB based Admin access and logout||
 ||0||0||F||Loadable XML config snippets (providers, gateways, applications, etc...)||
