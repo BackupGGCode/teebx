@@ -5,16 +5,18 @@
 _Note that a higher priority doesn't mean that particular job will be done first_.
 
 ||PRIority<br/>(0=None, 9=Top)||STAtus<br/>(0=None, 9=Done)||CATegory<br/>(Feature, Software, Hardware support)||ToDo||
-||9||8||S||Remove platforms we don't want to support (CP3000, etc...)||
+||9||9||S||Remove platforms we don't want to support (CP3000, etc...)||
 ||9||9||S||Update Php interpreter to version 5+||
-||9||8||S||Brand new web UI (build and use dedicated mini-framework classes to render/check forms, menus and tables)||
+||9||9||S||Brand new web UI (build and use dedicated mini-framework classes to render/check forms, menus and tables)||
 ||9||8||S||ARM architectures support to target most interesting common boards||
 ||9||9||S||SQLite PHP support||
-||9||8||H||Support to use spare disk space on system disk as r/w media storage partition||
+||9||9||S||Let the user to choose where the system log daemon should write: memory, disk, network||
+||9||8||S||Backup/Restore  sets: distinct backups for system, pbx, media and so on...||
+||9||9||H||Support to use spare disk space on system disk as r/w media storage partition||
 ||9||0||S||SIP over TCP configuration options||
 ||9||5||S||Selective include needed php libs instead of polluting memory and namespace.||
 ||9||0||S||Properly handle busy level and call waiting using also DEVICE_STATE(device) in dialplan||
-||8||7||S||Using GUID for context naming must be abandoned replacing it with something unique but better readable by humans||
+||8||7||S||Using GUID for context naming must be abandoned replacing it with something unique but also manageable by humans||
 ||8||0||S||Reload ast configuration after editing files via dev panel||
 ||8||3||S||Replace xml configuration with an embedded sql engine (SQLite 3), use xml only as a backup/restore format||
 ||8||2||F||Trunk groups implementation for VoIP providers||
@@ -25,12 +27,12 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||8||0||F||Pickup groups||
 ||8||2||F||Sequential and round-robin ring groups||
 ||8||0||F||Ring time dial modifiers. E.g. dialling 200*9 rings extension 200 for 90 seconds.||
-||8||0||F||System shutdown both from webUI and console||
+||8||9||F||System shutdown both from webUI and console||
 ||8||2||F||Country settings (numbering plan, isdn, flash timers, cli...)||
 ||8||6||F||Real time Call logs (CDR)||
-||7||6||S||Better system logs GUI||
+||7||9||S||Better system logs GUI||
 ||7||0||S||Auto banning source ips via login failures monitoring (VoIP, webUI, ssh)||
-||7||7||S||Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)||
+||7||9||S||Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)||
 ||6||1||S||System performance collection (candidate app.: ~~collectd~~ sysstat), monitoring and GUI.||
 ||6||0||F||Alerts about connettivity and providers registrations failures||
 ||5||9||S||Centered widened web UI||
