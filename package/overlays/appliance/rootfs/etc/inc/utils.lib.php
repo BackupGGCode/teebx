@@ -227,9 +227,10 @@ function fileDownloadRequest($srcFile, $outFilename = null, $immediate = true, $
 		if ($chunk > 0)
 		{
 			$fh = fopen($srcFile, 'rb');
-			while (($buf = fread($fh, 4096)) !== false)
+			while (!feof($fh))
 			{
-				echo $buf;
+				echo fread($fh, $chunk);
+				flush();
 			}
 			fclose($fh);
 		}
