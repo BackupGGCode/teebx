@@ -751,11 +751,19 @@ class quickForm
 					$elemValue = $this->constraints[$grpId]['default'];
 				}
 			}
-			if (!isset($this->tagsPool[$grpId]['attrlist']['items'][$elemValue]))
+
+			if (!is_array($elemValue))
 			{
-				return 30;
+				$elemValue = array($elemValue);
 			}
-			$this->tagsPool[$grpId]['attrlist']['items'][$elemValue]['checked'] = $state;
+			foreach (array_keys($elemValue) as $index)
+			{
+				if (!isset($this->tagsPool[$grpId]['attrlist']['items'][$elemValue[$index]]))
+				{
+					continue;
+				}
+				$this->tagsPool[$grpId]['attrlist']['items'][$elemValue[$index]]['checked'] = $state;
+			}
 			return 0;
 		}
 		else
