@@ -105,6 +105,14 @@ input[type="text"]
 	margin-top: 2px;
 }
 
+input[type="file"]
+{
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.2em;
+	padding-right: 1em;
+}
+
 input[type="submit"]
 {
 	font-size: 1.2em;

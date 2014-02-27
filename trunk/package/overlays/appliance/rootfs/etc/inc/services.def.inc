@@ -7,8 +7,8 @@
 	$services = array(
 		'systemlog' => array(
 			'form_field' => '',
-			'fld_label' => _('System logs'),
-			'fld_desc' => _("store system logs on disk"),
+			'fld_label_se' => _('System logs'),
+			'fld_desc_se' => _('store system logs on disk'),
 			'application' => 'syslogd',
 			'dirtree' => 'log',
 			'ignorecoldstart' => false,
@@ -16,12 +16,15 @@
 			'rules' => array(
 				'stop' => 'storageupd_stopSyslog',
 				'start' => 'storageupd_startSyslog'
-			)
+			),
+			'fld_label_bck' => _('Logs'),
+			'fld_desc_bck' => _('System logs'),
+			'includedon_bck' => 0
 		),
 		'astmedia' => array(
 			'form_field' => '',
-			'fld_label' => _('Media'),
-			'fld_desc' => _('store voice prompts and music-on-hold on disk'),
+			'fld_label_se' => _('Media'),
+			'fld_desc_se' => _('store pbx voice prompts and music-on-hold on disk'),
 			'application' => 'asterisk',
 			'dirtree' => 'asterisk',
 			'ignorecoldstart' => true,
@@ -30,12 +33,15 @@
 				'reconf' => 'configAsterisk',
 				'stop' => 'stopIpbx',
 				'start' => 'startIpbx',
-			)
+			),
+			'fld_label_bck' => _('Media'),
+			'fld_desc_bck' => _('Pbx voice prompts and music-on-hold'),
+			'includedon_bck' => 1
 		),
 		'astdb' => array(
 			'form_field' => '',
-			'fld_label' => _('Persistence'),
-			'fld_desc' => _("store Asterisk's database on disk"),
+			'fld_label_se' => _('Persistence'),
+			'fld_desc_se' => _("store Asterisk's database on disk"),
 			'application' => 'asterisk',
 			'dirtree' => 'asterisk/db',
 			'ignorecoldstart' => true,
@@ -44,12 +50,15 @@
 				'reconf' => 'configAsterisk',
 				'stop' => 'stopIpbx',
 				'start' => 'startIpbx',
-			)
+			),
+			'fld_label_bck' => _('Persistence'),
+			'fld_desc_bck' => _("Asterisk's database"),
+			'includedon_bck' => 0
 		),
 		'astcdr' => array(
 			'form_field' => '',
-			'fld_label' => _('Call Report'),
-			'fld_desc' => _("store Asterisk's call detail records on disk"),
+			'fld_label_se' => _('Call Report'),
+			'fld_desc_se' => _('store pbx call detail records on disk'),
 			'application' => 'asterisk',
 			'dirtree' => 'log/asterisk/cdr',
 			'ignorecoldstart' => true,
@@ -57,7 +66,10 @@
 			'rules' => array(
 				'reconf' => 'configCdr',
 				'reload' => 'reloadCdr'
-			)
+			),
+			'fld_label_bck' => _('Call Report'),
+			'fld_desc_bck' => _('Pbx call detail records'),
+			'includedon_bck' => 1
 		)
 	);
 ?>
