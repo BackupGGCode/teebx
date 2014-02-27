@@ -158,7 +158,7 @@ $confForm->startFieldset('fset_conf', _('General Settings'), 'disabled=disabled'
 	foreach (array_keys($svcAvail) as $svc)
 	{
 		$confForm->startBlock("rw_{$svc}");
-			$confForm->setLabel(null, $svcAvail[$svc]['fld_label'], null, 'class=labelcol');
+			$confForm->setLabel(null, $svcAvail[$svc]['fld_label_se'], null, 'class=labelcol');
 			$confForm->startBlock("rw_{$svc}", 'right');
 
 			$svcAttrib = null;
@@ -180,7 +180,7 @@ $confForm->startFieldset('fset_conf', _('General Settings'), 'disabled=disabled'
 
 			$confForm->setField($svc, 'checkbox', $svcAttrib);
 			$confForm->setCbItems($svc,
-				"yes={$svcAvail[$svc]['fld_desc']}",
+				"yes={$svcAvail[$svc]['fld_desc_se']}",
 				true);
 			$confForm->setCbState($svc, 'yes', $cbState);
 

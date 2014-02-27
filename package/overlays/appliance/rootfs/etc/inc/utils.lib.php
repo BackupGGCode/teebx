@@ -209,6 +209,43 @@ function fileWrite($fileName, &$fileLines, $mode = 'w', $chgMode = 0664)
 	return (bool) $bytes;
 }
 
+function fileDownloadRequest($srcFile, $outFilename = null, $immediate = true, $chunk = 0)
+{
+	$fileSize = false;
+	if ($outFilename === null)
+	{
+		$outFilename = basename($outFilename);
+	}
+
+	if (file_exists($srcFile))
+	{
+		$fileSize = filesize($srcFile);
+		header('Content-Type: application/octet-stream');
+		header("Content-Disposition: attachment; filename=\"$outFilename\"");
+		header("Content-Length: $fileSize");
+
+		if ($chunk > 0)
+		{
+			$fh = fopen($srcFile, 'rb');
+			while (($buf = fread($fh, 4096)) !== false)
+			{
+				echo $buf;
+			}
+			fclose($fh);
+		}
+		else
+		{
+			readfile($srcFile);
+		}
+
+		if ($immediate)
+		{
+			exit;
+		}
+	}
+	return $fileSize;
+}
+
 function getSmtpConf(&$cfgPointer)
 {
 	return $cfgPointer['config']['notifications']['email'];
@@ -427,4 +464,5 @@ function queueFinalShutdown($mode = 'reboot')
 	//
 	return 0;
 }
+
 ?>
