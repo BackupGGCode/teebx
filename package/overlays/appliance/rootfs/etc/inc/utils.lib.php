@@ -214,7 +214,7 @@ function fileDownloadRequest($srcFile, $outFilename = null, $immediate = true, $
 	$fileSize = false;
 	if ($outFilename === null)
 	{
-		$outFilename = basename($outFilename);
+		$outFilename = basename($srcFile);
 	}
 
 	if (file_exists($srcFile))
@@ -245,6 +245,26 @@ function fileDownloadRequest($srcFile, $outFilename = null, $immediate = true, $
 		}
 	}
 	return $fileSize;
+}
+
+/**
+* Compress a file or directory and output directly to the browser
+*
+* @param mixed $srcFiles       string or array of source files/direcories
+* @param mixed $outFilename    output file name suggested to the browser
+*/
+function archiveDownload($srcFiles, $outFilename)
+{
+	$srcFile = $srcFiles;
+	if (is_array($srcFiles))
+	{
+		$srcFile = implode(' ', $srcFiles);
+	}
+
+	header("Content-Type: application/octet-stream");
+	header("Content-Disposition: attachment; filename=\"$outFilename.tar.gz\"");
+	passthru("tar czf - $srcFile", $statuscode);
+	exit($statuscode);
 }
 
 function getSmtpConf(&$cfgPointer)
