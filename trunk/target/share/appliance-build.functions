@@ -128,13 +128,14 @@ appliance_copyDefaultConf()
 		echo "  -> Default appliance configuration file not found, exiting!"
 		exit 1
 	else
-		if [ ! -d "$1/conf.default" ]; then
-			mkdir "$1/conf.default"
+		if [ ! -d "$initramfs_loc/conf.default" ]; then
+			mkdir "$initramfs_loc/conf.default"
+		fi
 		if [ ! -d "$1/conf" ]; then
 			mkdir "$1/conf"
 		fi
 		echo "  -> Storing a default appliance configuration file in initramfs..."
-		cp $confSrcFile $1/conf.default/
+		cp $confSrcFile $initramfs_loc/conf.default/
 		cp $confSrcFile $1/conf/
 	fi
 }

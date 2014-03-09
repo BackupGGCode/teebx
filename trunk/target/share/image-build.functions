@@ -145,7 +145,7 @@ setupCfgDefault()
 {
 	# $1: initramfs preparation directory
 
-	echo "Looking for a default syatem configuration file..."
+	echo "Looking for a default system configuration file..."
 	if [ -f "$base/target/$target/config.xml" ]; then
 		echo "  -> Copying system target specific configuration file."
 		cp $base/target/$target/config.xml $1/conf/config.xml
