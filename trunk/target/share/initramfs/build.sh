@@ -75,7 +75,7 @@ echo "Preparing initramfs image from target defined files ..."
 copy_from_source $base/target/$target/rootfs .
 copy_from_source $base/target/share/initramfs/rootfs .
 
-echo "Storing a default appliance configuration file in initramfs..."
+echo "Storing a default system configuration file in initramfs..."
 mkdir conf.default
 if [ -f "$base/target/$target/config.xml" ]; then
 	echo "  -> Copying target specific configuration file."
@@ -85,7 +85,7 @@ else
 		echo "  -> Copying shared target configuration file."
 		cp $base/target/share/config.xml conf.default/
 	else
-		echo "  -> Default configuration file not found, exiting!"
+		echo "  -> Default system configuration file not found, exiting!"
 		exit 1
 	fi
 fi

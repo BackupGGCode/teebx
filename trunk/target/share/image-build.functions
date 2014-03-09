@@ -144,19 +144,22 @@ prepareImgDirs()
 setupCfgDefault()
 {
 	# $1: initramfs preparation directory
-	echo "Looking for a default appliance configuration file..."
+
+	echo "Looking for a default syatem configuration file..."
 	if [ -f "$base/target/$target/config.xml" ]; then
-		echo "  -> Copying target specific configuration file."
+		echo "  -> Copying system target specific configuration file."
 		cp $base/target/$target/config.xml $1/conf/config.xml
 	else
 		if [ -f "$base/target/share/config.xml" ]; then
-			echo "  -> Copying shared target configuration file."
+			echo "  -> Copying system shared target configuration file."
 			cp $base/target/share/config.xml $1/conf/config.xml
 		else
-			echo "  -> Default configuration file not found, exiting!"
+			echo "  -> Default system configuration file not found, exiting!"
 			exit 1
 		fi
 	fi
+	# copy the default appliance configuration
+	appliance_copyDefaultConf $1
 }
 
 packageBuildInfo()
