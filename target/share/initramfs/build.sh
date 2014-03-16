@@ -77,18 +77,7 @@ copy_from_source $base/target/share/initramfs/rootfs .
 
 echo "Storing a default system configuration file in initramfs..."
 mkdir conf.default
-if [ -f "$base/target/$target/config.xml" ]; then
-	echo "  -> Copying target specific configuration file."
-	cp $base/target/$target/config.xml conf.default/
-else
-	if [ -f "$base/target/share/config.xml" ]; then
-		echo "  -> Copying shared target configuration file."
-		cp $base/target/share/config.xml conf.default/
-	else
-		echo "  -> Default system configuration file not found, exiting!"
-		exit 1
-	fi
-fi
+setupCfgDefault "conf.default"
 
 echo "Setup some symlinks ..."
 ln -s /offload/kernel-modules lib/modules
