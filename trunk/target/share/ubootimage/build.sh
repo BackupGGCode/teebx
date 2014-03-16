@@ -125,7 +125,7 @@ if [ $res -eq 0 ]; then
 fi
 
 # copy default config file into the target tree
-setupCfgDefault $root_top_dir
+setupCfgDefault $root_top_dir/conf
 
 echo "Copy system core files into staging directories..."
 # using fat16 8.3 naming convention for destination files
