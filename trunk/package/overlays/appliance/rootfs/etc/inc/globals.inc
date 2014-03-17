@@ -70,6 +70,14 @@ $g = array(
 	'booting' => false
 	);
 
+$cfgAppliance = array(
+	'pbx' => array(
+		'config' => 'config.sdb',
+		'fld_label_bck' => _('Pbx'),
+		'fld_desc_bck' => _('Pbx configuration'),
+	)
+);
+
 $defaults = array();
 
 $defaults['dahdi']['echo-taps'] = 128;
