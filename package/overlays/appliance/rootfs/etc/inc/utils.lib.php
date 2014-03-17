@@ -209,7 +209,7 @@ function fileWrite($fileName, &$fileLines, $mode = 'w', $chgMode = 0664)
 	return (bool) $bytes;
 }
 
-function fileDownloadRequest($srcFile, $outFilename = null, $immediate = true, $chunk = 0)
+function fileDownloadRequest($srcFile, $outFilename = null, $chunk = 0)
 {
 	$fileSize = false;
 	if ($outFilename === null)
@@ -238,20 +238,40 @@ function fileDownloadRequest($srcFile, $outFilename = null, $immediate = true, $
 		{
 			readfile($srcFile);
 		}
-
-		if ($immediate)
-		{
-			exit;
-		}
 	}
 	return $fileSize;
 }
 
 /**
+* Compress a file or directory list
+*
+* @param mixed $srcFiles          string or array of source files/direcories
+* @param string $outFilename      output file name suggested to the browser
+* @param string $tmpDir           temporary directory where will be written archive to
+* @return mixed                   full path to temporary archive or false if error
+*/
+function archivePrepare($srcFiles, $outFilename, $tmpDir = '/tmp')
+{
+	$result = false;
+	$srcFile = $srcFiles;
+	if (is_array($srcFiles))
+	{
+		$srcFile = implode(' ', $srcFiles);
+	}
+
+	exec("tar czf $tmpDir/$outFilename $srcFile", $discard, $retval);
+	if ($retval == 0)
+	{
+		$result = "$tmpDir/$outFilename";
+	}
+	return $result;
+}
+
+/**
 * Compress a file or directory and output directly to the browser
 *
-* @param mixed $srcFiles       string or array of source files/direcories
-* @param mixed $outFilename    output file name suggested to the browser
+* @param mixed $srcFiles          string or array of source files/direcories
+* @param string $outFilename       output file name suggested to the browser
 */
 function archiveDownload($srcFiles, $outFilename)
 {
