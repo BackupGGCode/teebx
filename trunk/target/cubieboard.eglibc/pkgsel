@@ -58,10 +58,6 @@ X libtiff
 # text2speech
 X flite
 
-# dahdi + deps
-X dahdi-tools
-X dahdi-linux
-
 # prompt sets
 X da-dk-gsm-base
 X en-us-ulaw-base
