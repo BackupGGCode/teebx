@@ -526,6 +526,12 @@ function system_load_kernel_modules()
 {
 	global $g, $config;
 
+	// since dahdi was removed from all arm builds, until will become useful...
+	if (strpos(exec('uname -m'), 'armv') !== false)
+	{
+		return 0;
+	}
+
 	mwexec("/sbin/modprobe -q dahdi");
 	mwexec("/sbin/modprobe -q dahdi_transcode");
 	mwexec("/sbin/modprobe -q echo");
