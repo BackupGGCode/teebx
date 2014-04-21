@@ -17,7 +17,7 @@
 [T] The "U-Boot" Universal Bootloader project provides firmware for many CPU
 [T] architectures and boards with full source code under
 
-[U] http://sourceforge.net/projects/u-boot
+[U] http://linux-sunxi.org
 
 [A] Wolfgang Denk <wd@denx.de>
 [M] Rene Rebe <rene@exactcode.de>
@@ -26,10 +26,10 @@
 [F] CROSS
 [R] + avr32 arm blackfin m68k mips mips64 powerpc x86 superh
 
-[V] 2013.07
+[V] 2014.04
 [S] Stable
 [L] GPL
 
 [P] O -1-------- 100.000
 
-[D] 3790565451 u-boot-2013.07.tar.bz2 ftp://ftp.denx.de/pub/u-boot/
+[D] 0 u-boot-2014.04.tar.bz2 ftp://ftp.denx.de/pub/u-boot/
