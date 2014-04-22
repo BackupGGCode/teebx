@@ -1,5 +1,5 @@
---- dahdi-linux-2.3.0.1/drivers/dahdi/wcb4xxp/wcb4xxp.h.orig	2010-08-12 11:17:41.000000000 +0200
-+++ dahdi-linux-2.3.0.1/drivers/dahdi/wcb4xxp/wcb4xxp.h	2010-08-12 11:28:26.000000000 +0200
+--- dahdi-linux-2.9.1/drivers/dahdi/wcb4xxp/wcb4xxp.h.dist	2014-03-28 21:18:36.000000000 +0000
++++ dahdi-linux-2.9.1/drivers/dahdi/wcb4xxp/wcb4xxp.h	2014-04-22 18:15:26.991660961 +0000
 @@ -426,7 +426,11 @@
  	BN4S0,		/* Beronet BN4S0			*/
  	BN8S0,		/* BeroNet BN8S0			*/
@@ -13,9 +13,9 @@
  	};
  
  /* This structure exists one per card */
---- dahdi-linux-2.3.0.1/drivers/dahdi/wcb4xxp/base.c.orig	2010-08-12 11:05:39.000000000 +0200
-+++ dahdi-linux-2.3.0.1/drivers/dahdi/wcb4xxp/base.c	2010-08-12 11:25:17.000000000 +0200
-@@ -139,6 +139,21 @@
+--- dahdi-linux-2.9.1/drivers/dahdi/wcb4xxp/base.c.dist	2014-03-28 21:18:36.000000000 +0000
++++ dahdi-linux-2.9.1/drivers/dahdi/wcb4xxp/base.c	2014-04-22 18:15:26.995064951 +0000
+@@ -140,6 +140,21 @@
  static struct devtype hfc4s_SW = {"Swyx 4xS0 SX2 QuadBri", .ports = 4, .card_type = BSWYX_SX2 };
  static struct devtype hfc4s_EV = {"CCD HFC-4S Eval. Board", .ports = 4,
  					.card_type = QUADBRI_EVAL };
@@ -34,10 +34,10 @@
 +static struct devtype GENERIC_HFC8S_2 =     {"HFC-8S IOB8ST", .ports = 8, .card_type = GENERIC8 };
 +static struct devtype GENERIC_HFC8S_3 =     {"HFC-8S", .ports = 8, .card_type = GENERIC8 };
 +static struct devtype GENERIC_HFC8S_4 =     {"HFC-8S", .ports = 8, .card_type = GENERIC8 };
-  
+ 
  #define CARD_HAS_EC(card) ((card)->card_type == B410P)
  
-@@ -428,6 +443,7 @@
+@@ -441,6 +456,7 @@
  	mb();
  
  	switch (b4->card_type) {
@@ -45,7 +45,7 @@
  	case OCTOBRI:  /* fall through */
  	case B800P_OV: /* fall through */
  	case BN8S0:
-@@ -1047,6 +1063,7 @@
+@@ -1081,6 +1097,7 @@
  	unsigned long irq_flags;
  
  	switch (b4->card_type) {
@@ -53,7 +53,7 @@
  	case B800P_OV: /* fall through */
  	case OCTOBRI: /* fall through */
  	case BN8S0:
-@@ -2900,6 +2917,16 @@
+@@ -3099,6 +3116,16 @@
  	{ 0x1397, 0x16b8, 0x1397, 0xb56b, 0, 0, (unsigned long)&hfc8s_BN },
  	{ 0x1397, 0x08b4, 0x1397, 0xb540, 0, 0, (unsigned long)&hfc4s_SW },
  	{ 0x1397, 0x08b4, 0x1397, 0x08b4, 0, 0, (unsigned long)&hfc4s_EV },
@@ -70,4 +70,3 @@
  	{0, }
  
  };
-

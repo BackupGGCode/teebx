@@ -673,7 +673,10 @@ static int hfc_zap_initialize(struct dahdi_hfc *hfccard)
 			hfctmp->cardnum,
 			hfctmp->nt_mode ? "NT" : "TE");
  //      hfccard->span.owner = THIS_MODULE;
-	hfccard->span.spantype = hfctmp->nt_mode ? "NT" : "TE";
+ 	if(hfctmp->nt_mode)
+	hfccard->span.spantype = SPANTYPE_DIGITAL_BRI_NT;
+	else
+	hfccard->span.spantype = SPANTYPE_DIGITAL_BRI_TE;
 //	hfccard->span.manufacturer = "Cologne Chips";
 	hfccard->card->ddev->manufacturer = "Cologne Chips";
 	hfccard->span.ops = &hfccard_span_ops;
