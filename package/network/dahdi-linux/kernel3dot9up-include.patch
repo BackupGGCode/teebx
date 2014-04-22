@@ -1,0 +1,10 @@
+--- dahdi-linux-2.6.1/include/dahdi/kernel.h.dist	2014-04-20 19:10:54.927696538 +0000
++++ dahdi-linux-2.6.1/include/dahdi/kernel.h	2014-04-20 19:11:54.463646368 +0000
+@@ -45,6 +45,7 @@
+ #include <linux/device.h>
+ #include <linux/module.h>
+ #include <linux/ioctl.h>
++#include <linux/slab.h>
+ 
+ #ifdef CONFIG_DAHDI_NET	
+ #include <linux/hdlc.h>
