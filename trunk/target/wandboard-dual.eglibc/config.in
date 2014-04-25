@@ -29,6 +29,10 @@ SDECFGSET_ARM_BOARDDEF='wandboard_dl'
 SDECFGSET_ARM_THUMB=0
 SDECFGSET_SOFTFLOAT=0
 
+# u-boot board configuration option
+# leave blank/unset will default to SDECFGSET_ARM_BOARDDEF
+SDECFGSET_PKG_UBOOT_TARGETBOARD=''
+
 # firmware type
 SDECFGSET_IMAGE='ubootimage'
 
