@@ -1,0 +1,27 @@
+--- ./configure.vanilla	Thu Mar 17 09:55:56 2011
++++ ./configure	Thu May 03 18:28:27 2012
+@@ -1,5 +1,6 @@
+ #! /bin/sh
+ 
++force_ascrossbuild='yes';
+ 
+ 
+ 
+@@ -21609,7 +21610,7 @@
+   LIBS="
+           $LIBXML_SHARED_LIBADD
+          $LIBS"
+-  if test "$cross_compiling" = yes; then
++  if test "$force_ascrossbuild" = 'yes'; then
+   
+     LIBS=$old_LIBS
+   
+@@ -97747,7 +97748,7 @@
+   LIBS="
+           $XML_SHARED_LIBADD
+          $LIBS"
+-  if test "$cross_compiling" = yes; then
++  if test "$force_ascrossbuild" = 'yes'; then
+   
+     LIBS=$old_LIBS
+   
