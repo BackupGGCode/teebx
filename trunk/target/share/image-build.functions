@@ -60,10 +60,10 @@ isPositiveInteger()
 {
 	local ereg='^[0-9]+$'
 
-	if ! [[ $1 =~ $ereg ]] ; then
-		exit 1
+	if [[ $1 =~ $ereg ]] ; then
+		return 0
 	fi
-	exit 0
+	return 1
 }
 
 getImageSize()
@@ -401,26 +401,47 @@ writePrgLoaders()
 	if [ -f $base/target/$target/image.conf ]; then
 		echo "Checking for target ipl and spl..."
 		if [ -f $ipl_file ]; then
-			echo "Writing target initial program loader..."
-			echo "  -> offset: $ipl_offset"
-			echo "  -> initial program loader: $(basename $ipl_file)"
-			dd if=$ipl_file \
-				of=$imagelocation/firmware.img \
-				bs=$sect_size \
-				seek=$ipl_offset
-			echo "  -> Done."
+			if [ -n $ipl_location ]; then
+				echo "Writing target initial program loader..."
+				if isPositiveInteger $ipl_location; then
+					writeFileRaw $ipl_file $imagelocation/firmware.img $sect_size $ipl_location
+				else
+					cp $ipl_file $ipl_location
+					echo "  -> Done."
+				fi
+			fi
 		fi
 		if [ -f $spl_file ]; then
-			echo "Writing target second program loader..."
-			echo "  -> offset: $spl_offset"
-			echo "  -> second program loader: $(basename $spl_file)"
-			dd if=$spl_file \
-				of=$imagelocation/firmware.img \
-				bs=$sect_size \
-				seek=$spl_offset
-			echo "  -> Done."
+			if [ -n $spl_location ]; then
+				echo "Writing target second program loader..."
+				if isPositiveInteger $spl_location; then
+					writeFileRaw $spl_file $imagelocation/firmware.img $sect_size $spl_location
+				else
+					cp $spl_file $spl_location
+					echo "  -> Done."
+				fi
+			fi
 		fi
 	fi
+}
+
+writeFileRaw()
+{
+	#$1: source file
+	#$2: target location
+	#$3: block size
+	#$4: write start offset
+
+	local ofBytes
+	ofBytes=$(($3*$4)) 
+
+	echo "Raw writing $(basename $1)..."
+	echo "  -> offset: $ofBytes bytes"
+	dd if=$1 \
+		of=$2 \
+		bs=$3 \
+		seek=$4
+	echo "  -> Done."
 }
 
 setupGrub()
