@@ -16,5 +16,7 @@
 if pkgcheck u-boot X ; then
 	menu_begin MENU_PKG_UBOOT 'U-Boot Package Options'
 		text 'Target board' SDECFG_PKG_UBOOT_TARGETBOARD ''
+		text 'IPL binary name' SDECFG_PKG_UBOOT_IPLBIN ''
+		text 'SPL binary name' SDECFG_PKG_UBOOT_SPLBIN ''
 	menu_end
 fi
