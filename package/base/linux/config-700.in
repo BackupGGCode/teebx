@@ -15,6 +15,27 @@
 
 menu_begin MENU_PKG_LINUX 'Linux Kernel Options'
 
+	comment 'Kernel image format:'
+	block_begin 3
+	choice SDECFG_PKG_LINUX_IMG_FORMAT none \
+		none 'Use cpu architecture default' \
+		bzImage 'bzImage compressed kernel (x86 default)' \
+		vmImage 'vmImage (Blackfin default)' \
+		uImage 'uImage U-Boot wrapped zImage (ARM default)' \
+		Image 'Image uncompressed kernel' \
+		image 'image uncompressed kernel (Sparc default)' \
+		vmlinux.ecoff 'vmlinux.ecoff (MIPS default)' \
+		zImage 'zImage compressed kernel (PPC default)'
+	block_end
+
+	if ! [[ "$SDECFG_PKG_LINUX_IMG_FORMAT" == 'none' || -z "$SDECFG_PKG_LINUX_IMG_FORMAT" ]] ; then
+		comment 'Kernel image destination filename:'
+		text 'Filename' SDECFG_PKG_LINUX_IMG_NAME ''
+	fi
+
+	comment 'Flattened Device Tree options:'
+	text 'DTB name' SDECFG_PKG_LINUX_DTBS ''
+
 	if [ "$SDECFG_PKG_LINUX_CONFIG_STYLE" = none ] ; then
 		SDECFGSET_PKG_LINUX_CUSTCONFIG=1
 	fi
@@ -46,9 +67,9 @@ menu_begin MENU_PKG_LINUX 'Linux Kernel Options'
 
 	if pkgcheck uml_utilities X ; then 
 		choice SDECFG_PKG_LINUX_UML_STYLE modules \
-	                none 'Do not perform any automatic UML related optimization' \
-       			skas3 'Build UML Host kernel with SKAS3 support' \
-                	guest 'Build UML Guest kernel (Not implemented yet!)'
+			none 'Do not perform any automatic UML related optimization' \
+			skas3 'Build UML Host kernel with SKAS3 support' \
+			guest 'Build UML Guest kernel (Not implemented yet!)'
 	fi
 
 	if [[ $arch = x86* ]]; then # ia64, likewise?
