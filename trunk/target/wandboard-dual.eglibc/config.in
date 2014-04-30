@@ -38,7 +38,7 @@ SDECFGSET_PKG_UBOOT_TARGETBOARD=''
 # IPL binary name
 SDECFGSET_PKG_UBOOT_IPLBIN=''
 # SPL binary name
-#SDECFGSET_PKG_UBOOT_SPLBIN='u-boot.imx'
+SDECFGSET_PKG_UBOOT_SPLBIN='u-boot.imx'
 
 # kernel options
 SDECFGSET_PKG_LINUX_DTBS='imx6dl-wandboard.dtb'
