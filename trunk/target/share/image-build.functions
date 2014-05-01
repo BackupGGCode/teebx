@@ -398,10 +398,10 @@ writePrgLoaders()
 {
 	# write target ipl and spl, if any
 
-	if [ -f $base/target/$target/image.conf ]; then
+	if [ -f "$base/target/$target/image.conf" ]; then
 		echo "Checking for target ipl and spl..."
-		if [ -f $ipl_file ]; then
-			if [ -n $ipl_location ]; then
+		if [[ ( -n "$SDECFG_PKG_UBOOT_IPLBIN" ) && ( -f "$ipl_file" ) ]]; then
+			if [ -n "$ipl_location" ]; then
 				echo "Writing target initial program loader..."
 				if isPositiveInteger $ipl_location; then
 					writeFileRaw $ipl_file $imagelocation/firmware.img $sect_size $ipl_location
@@ -411,8 +411,8 @@ writePrgLoaders()
 				fi
 			fi
 		fi
-		if [ -f $spl_file ]; then
-			if [ -n $spl_location ]; then
+		if [[ ( -n "$SDECFG_PKG_UBOOT_SPLBIN" ) && ( -f "$spl_file" ) ]]; then
+			if [ -n "$spl_location" ]; then
 				echo "Writing target second program loader..."
 				if isPositiveInteger $spl_location; then
 					writeFileRaw $spl_file $imagelocation/firmware.img $sect_size $spl_location

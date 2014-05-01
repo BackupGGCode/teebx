@@ -130,13 +130,22 @@ setupCfgDefault $root_top_dir/conf
 echo "Copy system core files into staging directories..."
 # using fat16 8.3 naming convention for destination files
 # for larger fs portability.
+# these things must be taken into account
+# writing the u-boot initialization script
 echo "  -> Initramfs."
 cp $build_toolchain/initramfs.uImage $imagelocation/$root_top_dir/boot/iramfs.ubi
+
 echo "  -> Linux kernel."
-cp $build_root/boot/uImage $imagelocation/$root_top_dir/boot/kernel.ubi
+kernelImage='uImage'
+if [ -n "$SDECFG_PKG_LINUX_IMG_FORMAT" ]; then
+	kernelImage=$SDECFG_PKG_LINUX_IMG_FORMAT
+fi
+cp $build_root/boot/$kernelImage $imagelocation/$root_top_dir/boot/kernel.ubi
+
 echo "  -> Kernel modules."
 cp -Rp $build_root/lib/modules/* $imagelocation/$rootfs_top_dir/kernel-modules/
-echo "  ->U-boot initialization script."
+
+echo "  -> U-boot initialization script."
 cp $build_toolchain/boot.scr $imagelocation/$root_top_dir/boot.scr
 
 # prepare target offload
