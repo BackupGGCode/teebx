@@ -1,0 +1,2 @@
+bootscript=boot.scr
+uenvcmd=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${bootscript}; source ${loadaddr}

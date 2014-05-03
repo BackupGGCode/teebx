@@ -142,6 +142,12 @@ if [ -n "$SDECFG_PKG_LINUX_IMG_FORMAT" ]; then
 fi
 cp $build_root/boot/$kernelImage $imagelocation/$root_top_dir/boot/kernel.ubi
 
+if [ -n "$SDECFG_PKG_LINUX_DTBS" ]; then
+	echo "  -> Kernel device tree blobs."
+	mkdir $imagelocation/$root_top_dir/boot/dtbs
+	cp $build_root/boot/dtbs/$SDECFG_PKG_LINUX_DTBS $imagelocation/$root_top_dir/boot/dtbs/target.dtb
+fi
+
 echo "  -> Kernel modules."
 cp -Rp $build_root/lib/modules/* $imagelocation/$rootfs_top_dir/kernel-modules/
 
