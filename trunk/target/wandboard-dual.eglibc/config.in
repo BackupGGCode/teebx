@@ -33,7 +33,7 @@ SDECFGSET_SOFTFLOAT=0
 SDECFGSET_IMAGE='ubootimage'
 # U-Boot board configuration options
 #
-# Leaving _UBOOT_TARGETBOARD blank/unset u-boot build will default to SDECFGSET_ARM_BOARDDEF
+# Leaving _UBOOT_TARGETBOARD unset u-boot build will default to SDECFGSET_ARM_BOARDDEF
 SDECFGSET_PKG_UBOOT_TARGETBOARD=''
 # IPL binary name
 SDECFGSET_PKG_UBOOT_IPLBIN=''
