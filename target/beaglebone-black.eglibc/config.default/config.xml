@@ -31,11 +31,6 @@
 			<subnet>24</subnet>
 			<gateway>192.168.1.1</gateway>
 		</lan>
-		<tdm>
-			<dahdi>
-				<enable>1</enable>
-			</dahdi>
-		</tdm>
 		<gpio/>
 	</interfaces>
 	<dialplan/>
