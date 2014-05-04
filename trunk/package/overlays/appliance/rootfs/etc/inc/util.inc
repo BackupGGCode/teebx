@@ -251,7 +251,7 @@ function util_file_write($fullpath, $contents)
 	$fd = fopen($fullpath, "w");
 	if (!$fd)
 	{
-		printf("Error: cannot open " . $fullpath . "for writing!\n");
+		printf("Error: cannot open " . $fullpath . " for writing!\n");
 		return 1;
 	}
 	// should this file be appended or overridden with any manual input?

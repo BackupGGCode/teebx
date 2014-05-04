@@ -156,23 +156,11 @@
 	system_do_shell_commands();
 	echo 'done', PHP_EOL;
 
-	/* run platform specific applications*/
-	echo ' - Auto configuring DAHDI ports... ';
-	dahdi_autoconfigure_ports();
-	echo 'done', PHP_EOL;
-
-	echo ' - Auto configuring Analog phones... ';
-	analog_autoconfigure_phones();
-	echo 'done', PHP_EOL;
-
-	echo ' - Auto configuring ISDN phones... ';
-	isdn_autoconfigure_phones();
-	echo 'done', PHP_EOL;
-
-	/* start up Asterisk */
-	echo ' - Starting Asterisk... ', PHP_EOL;
-	pbx_configure();
-	echo 'done', PHP_EOL;
+	/* configure/run platform specific applications */
+	if (is_callable('startApplianceBundle'))
+	{
+		startApplianceBundle($config);
+	}
 
 	echo ' - Configuring cron services... ';
 	system_cron_configure();

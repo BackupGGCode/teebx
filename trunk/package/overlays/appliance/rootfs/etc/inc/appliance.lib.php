@@ -26,6 +26,51 @@ All rights reserved.
 
 require_once '/etc/inc/pbx.inc';
 
+function startApplianceBundle(&$config)
+{
+	if (isset($config['cfgstatic']) && $config['cfgstatic'] != '')
+	{
+		// extract static configuration, usually from /cf mounted partition
+
+	}
+	else
+	{
+		/* configure platform specific applications*/
+		configAppliance($config);
+	}
+
+	echo '   |- executing Asterisk...', PHP_EOL;;
+	startIpbx();
+	echo 'done', PHP_EOL;
+}
+
+function loadAppKernelModules(&$config)
+{
+}
+
+function configAppliance(&$config)
+{
+	if (isset($config['interfaces']['tdm']['dahdi']['enable']) && $config['interfaces']['tdm']['dahdi']['enable'] == 1)
+	{
+		echo ' - Auto configuring DAHDI ports... ';
+		dahdi_autoconfigure_ports();
+		echo 'done', PHP_EOL;
+
+		echo ' - Auto configuring Analog phones... ';
+		analog_autoconfigure_phones();
+		echo 'done', PHP_EOL;
+
+		echo ' - Auto configuring ISDN phones... ';
+		isdn_autoconfigure_phones();
+		echo 'done', PHP_EOL;
+	}
+
+	/* start up Asterisk */
+	echo ' - Configuring Asterisk... ', PHP_EOL;
+	pbx_configure();
+	echo 'done', PHP_EOL;
+}
+
 function startIpbx()
 {
 	exec('/usr/sbin/asterisk', $discard, $result);

@@ -526,8 +526,11 @@ function system_load_kernel_modules()
 {
 	global $g, $config;
 
-	// since dahdi was removed from all arm builds, until will become useful...
-	if (strpos(exec('uname -m'), 'armv') !== false)
+	if (!isset($config['interfaces']['tdm']['dahdi']))
+	{
+		return 0;
+	}
+	elseif (!isset($config['interfaces']['tdm']['dahdi']['enable']) || $config['interfaces']['tdm']['dahdi']['enable'] != 1)
 	{
 		return 0;
 	}
