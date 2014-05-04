@@ -31,7 +31,7 @@
 */
 
 /* include all configuration functions */
-require_once('functions.inc');
+require_once 'functions.inc';
 require_once 'services.lib.php';
 
 /**
@@ -53,7 +53,7 @@ function pbx_configure()
 	if ($g['booting']) echo "done\n";
 
 	if ($g['booting']) echo "   |- generating modules configuration...";
-	$res |= modules_conf_generate();
+	$res |= modules_conf_generate($config['interfaces']['tdm'], false);
 	if ($g['booting']) echo "done\n";
 
 	if ($g['booting']) echo "   |- generating PHP AGI configuration...";
@@ -102,16 +102,15 @@ function pbx_configure()
 	$res |= notifications_msmtp_conf_generate();
 	if ($g['booting']) echo "done\n";
 
-	if ($g['booting']) echo "   |- generating DAHDI configuration...";
-	$res |= dahdi_configure();
-	if ($g['booting']) echo "done\n";
+	if (isset($config['interfaces']['tdm']['dahdi']['enable']) && $config['interfaces']['tdm']['dahdi']['enable'] == 1)
+	{
+		if ($g['booting']) echo "   |- generating DAHDI configuration...";
+		$res |= dahdi_configure();
+		if ($g['booting']) echo "done\n";
+	}
 
 	if ($g['booting']) echo "   |- generating manual configuration...";
 	$res |= unmanaged_cfgfiles_generate($unmanaged_ast_cfgfiles);
-	if ($g['booting']) echo "done\n";
-
-	if ($g['booting']) echo "   |- executing Asterisk...";
-	$res |= pbx_start();
 	if ($g['booting']) echo "done\n";
 
 	return $res;
@@ -1221,7 +1220,7 @@ function unmanaged_cfgfiles_generate(&$unmanagedFiles)
 	return $retval;
 }
 
-function modules_conf_generate($return = false)
+function modules_conf_generate($tdmConfig, $return = false)
 {
 	require('astbasemod.def.inc');
 	$conf = $heading . PHP_EOL;
@@ -1229,6 +1228,14 @@ function modules_conf_generate($return = false)
 	foreach (array_keys($base_ast_modules) as $key)
 	{
 		$conf .= "load => {$base_ast_modules[$key]}" . PHP_EOL;
+	}
+
+	if (isset($tdmConfig['dahdi']) && $tdmConfig['dahdi'] == 1)
+	{
+		foreach (array_keys($tdm_ast_modules) as $key)
+		{
+			$conf .= "load => {$tdm_ast_modules[$key]}" . PHP_EOL;
+		}
 	}
 
 	$ver = getAsteriskVersion(false);

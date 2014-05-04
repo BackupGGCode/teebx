@@ -9,7 +9,6 @@
 		'app_echo.so',
 		'app_exec.so',
 		'app_macro.so',
-		'app_meetme.so',
 		'app_milliwatt.so',
 		'app_playback.so',
 		'app_setcallerid.so',
@@ -18,7 +17,6 @@
 		'app_verbose.so',
 		'app_voicemail.so',
 		'app_while.so',
-		'chan_dahdi.so',
 		'chan_iax2.so',
 		'chan_local.so',
 		'chan_sip.so',
@@ -26,7 +24,6 @@
 		'codec_a_mu.so',
 		'codec_adpcm.so',
 		'codec_alaw.so',
-		'codec_dahdi.so',
 		'codec_g722.so',
 		'codec_gsm.so',
 		'codec_ulaw.so',
@@ -54,6 +51,14 @@
 		'res_musiconhold.so',
 		'res_smdi.so',
 		'res_timing_timerfd.so'
+	);
+
+	// modules that depends on dahdi TDM drivers
+	$tdm_ast_modules = array(
+		'app_meetme.so',
+		'chan_dahdi.so',
+		'codec_dahdi.so',
+		'res_timing_dahdi.so'
 	);
 
 	$extra_modules_v11 = array(

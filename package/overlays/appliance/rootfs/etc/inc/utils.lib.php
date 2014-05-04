@@ -246,24 +246,112 @@ function fileDownloadRequest($srcFile, $outFilename = null, $chunk = 0)
 * Compress a file or directory list
 *
 * @param mixed $srcFiles          string or array of source files/direcories
-* @param string $outFilename      output file name suggested to the browser
+* @param string $outFilename      output file name
 * @param string $tmpDir           temporary directory where will be written archive to
-* @return mixed                   full path to temporary archive or false if error
+* @return array                   error list and full path to temporary archive or false if error
 */
 function archivePrepare($srcFiles, $outFilename, $tmpDir = '/tmp')
 {
-	$result = false;
-	$srcFile = $srcFiles;
-	if (is_array($srcFiles))
+	$result = array('errors' => array(), 'retval' => false);
+	$gzFile = "$tmpDir/$outFilename";
+
+	if (is_file($gzFile)) unlink($gzFile);
+
+	if (class_exists('PharData'))
 	{
-		$srcFile = implode(' ', $srcFiles);
+		$ext = pathinfo($outFilename, PATHINFO_EXTENSION);
+		$tarFile = '$tmpDir/' . pathinfo($outFilename, PATHINFO_FILENAME) . '.tar';
+
+		if (!is_array($srcFiles))
+		{
+			$srcFiles = array($srcFiles);
+		}
+		try
+		{
+			if (is_file($tarFile)) unlink($tarFile);
+			$archive = new PharData($tarFile);
+			foreach (array_keys($srcFiles) as $idx)
+			{
+				if (is_dir($srcFile[$idx]))
+				{
+					$archive->buildFromDirectory($srcFile[$idx]);
+				}
+				elseif (is_file($srcFile[$idx]) || is_link($srcFile[$idx]))
+				{
+					$archive->addFile($srcFile[$idx]);
+				}
+				else
+				{
+					$result['errors'][] = _('Missing file') . ': ' . $srcFile[$idx];
+				}
+			}
+			$archive->compress(Phar::GZ, $ext);
+		}
+		catch (Exception $err)
+		{
+			$result['errors'][] = $err;
+			if (is_file($gzFile)) unlink($gzFile);
+		}
+		unset($archive);
+		if (is_file($tarFile)) unlink($tarFile);
+	}
+	else
+	{
+		if (is_array($srcFiles))
+		{
+			$srcFiles = implode(' ', $srcFiles);
+		}
+		exec("tar czf $gzFile $srcFile", $discard, $retval);
+		if ($retval != 0)
+		{
+			$result['errors'][] = $discard;
+		}
 	}
 
-	exec("tar czf $tmpDir/$outFilename $srcFile", $discard, $retval);
-	if ($retval == 0)
+	if (count($result['errors']) === 0)
 	{
-		$result = "$tmpDir/$outFilename";
+		$result['retval'] = $gzFile;
 	}
+	return $result;
+}
+
+function archiveExtract($srcFile, $files = null, $destDir = null, $overwrite = true)
+{
+	$result = array();
+
+	try
+	{
+		$archive = new PharData($srcFile);
+		if ($archive->isFileFormat(Phar::GZ))
+		{
+			$archive->decompress('tar');
+			$srcFile = pathinfo($srcFile, PATHINFO_DIRNAME) . '/' . pathinfo($srcFile, PATHINFO_FILENAME) . '.tar';
+		}
+		else
+		{
+			$result[] = _('Unsupported archive format');
+		}
+	}
+	catch (Exception $err)
+	{
+		$result[] = $err;
+	}
+	unset($archive);
+
+	if (count($result) != 0)
+	{
+		return $result;
+	}
+
+	try
+	{
+		$archive = new PharData($srcFile);
+	}
+	catch (Exception $err)
+	{
+		$result[] = $err;
+	}
+
 	return $result;
 }
 
