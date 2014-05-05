@@ -17,7 +17,7 @@
 [T] The "U-Boot" Universal Bootloader project provides firmware for many CPU
 [T] architectures and boards with full source code under
 
-[U] http://linux-sunxi.org
+[U] http://www.denx.de/wiki/U-Boot/WebHome
 
 [A] Wolfgang Denk <wd@denx.de>
 [M] Rene Rebe <rene@exactcode.de>
