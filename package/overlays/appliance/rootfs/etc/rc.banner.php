@@ -39,7 +39,7 @@
 
 	$prodInfo = getVersionInfo();
 	$buildtime = strftime('%c', $prodInfo['timestamp']);
-	$copyright_info = "{$prodInfo['prod']} is Copyright (C) 2010-2013 Giovanni Vallesi. All rights reserved.\n" .
+	$copyright_info = "{$prodInfo['prod']} is Copyright (C) 2010-2014 Giovanni Vallesi. All rights reserved.\n" .
 		"    AskoziaPBX base Copyright (C) 2007-2011 IKT. All rights reserved.\n" .
 		"    m0n0wall base Copyright (C) 2002-2007 Manuel Kasper. All rights reserved.\n";
 
