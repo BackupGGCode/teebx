@@ -189,9 +189,12 @@ function doSystemStop($mode = 'reboot', $flags = 7)
 		temporary dirty workaround until /offload is mounted rw for testing purposes,
 		remount ro else killing http will block reboot/shutdown even using nohup
 		*/
-		exec('cat /etc/fstab|awk \'/\/offload/ && ! /\/offload\// { print $1 " " $2}\'', $mnt);
-		exec("mount -r -o remount {$mnt[0]}");
-		sleep(1);
+		if (is_file('/etc/fstab'))
+		{
+			exec('cat /etc/fstab|awk \'/\/offload/ && ! /\/offload\// { print $1 " " $2}\'', $mnt);
+			exec("mount -r -o remount {$mnt[0]}");
+			sleep(1);
+		}
 
 		// properly stop any system application that may be affected by or prevent filesystem unmount
 		$result |= stopSyslog(false);

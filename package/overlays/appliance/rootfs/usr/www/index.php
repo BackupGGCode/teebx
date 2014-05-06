@@ -32,21 +32,23 @@
 	POSSIBILITY OF SUCH DAMAGE.
 */
 
-if (is_file("/offload/livecd"))
+require('guiconfig.inc');
+$prodInfo = getVersionInfo();
+
+if (is_file('/offload/livecd'))
 {
-	$local_version = trim(file_get_contents("/etc/version"));
+	//$local_version = trim(file_get_contents("/etc/version"));
 	$livecd_version = trim(file_get_contents("/offload/livecd"));
 
 	if (strlen($livecd_version) > 0)
 	{
-		if ($local_version != $livecd_version)
+		if ($prodInfo['buid'] != $livecd_version)
 		{
-			die(sprintf(_("TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"), $local_version, $livecd_version));
+			die(sprintf(_("TeeBX is in update mode. You either have to remove the Live CD or install the newer version of TeeBX. (Installed is %s, Live CD version is %s)"), $prodInfo['buid'], $livecd_version));
 		}
 	}
 }
 
-require('guiconfig.inc');
 require_once('libs-php/htmltable.class.php');
 require_once('blockdevices.lib.php');
 
@@ -54,7 +56,6 @@ require_once('blockdevices.lib.php');
 define('INCLUDE_TBLSTYLE', true);
 define('INCLUDE_JSCRIPTS', 'dashboard.js');
 
-$prodInfo = getVersionInfo();
 //check_update();
 
 // check if some important applications running
