@@ -1,0 +1,58 @@
+This patch adds cpufreq dts for i.mx6dl to support cpufreq driver.
+
+Signed-off-by: Anson Huang <b20788 at freescale.com>
+---
+ arch/arm/boot/dts/imx6dl.dtsi |   20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+diff --git a/arch/arm/boot/dts/imx6dl.dtsi b/arch/arm/boot/dts/imx6dl.dtsi
+index b2f2699..e2ec0fb 100644
+--- a/arch/arm/boot/dts/imx6dl.dtsi
++++ b/arch/arm/boot/dts/imx6dl.dtsi
+@@ -23,6 +23,26 @@
+ 			device_type = "cpu";
+ 			reg = <0>;
+ 			next-level-cache = <&L2>;
++			operating-points = <
++				/* kHz    uV */
++				996000  1275000
++				792000  1175000
++				396000  1075000
++			>;
++			fsl,soc-operating-points = <
++				/* ARM kHz  SOC-PU uV */
++				996000	1175000
++				792000	1175000
++				396000	1175000
++			>;
++			clock-latency = <61036>; /* two CLK32 periods */
++			clocks = <&clks 104>, <&clks 6>, <&clks 16>,
++				 <&clks 17>, <&clks 170>;
++			clock-names = "arm", "pll2_pfd2_396m", "step",
++				      "pll1_sw", "pll1_sys";
++			arm-supply = <&reg_arm>;
++			pu-supply = <&reg_pu>;
++			soc-supply = <&reg_soc>;
+ 		};
+ 
+ 		cpu at 1 {
+-- 
+1.7.9.5
+
+Backported from: from Shawn Guo patch
+
+The imx6q-cpufreq driver nowadays is not only running on imx6q but also
+other i.MX6 series SoCs like imx6dl and imx6sl.  Update Kconfig prompt
+and help text to make it clear to users.
+
+--- linux-3.10.17-wandboard-4a8ad4e1/drivers/cpufreq/Kconfig.arm.orig	2014-05-07 14:08:45.732753720 +0000
++++ linux-3.10.17-wandboard-4a8ad4e1/drivers/cpufreq/Kconfig.arm	2014-05-07 14:09:56.677357017 +0000
+@@ -69,7 +69,7 @@
+ 
+ config ARM_IMX6_CPUFREQ
+ 	tristate "Freescale i.MX6 cpufreq support"
+-	depends on SOC_IMX6Q || SOC_IMX6SL
++	depends on ARCH_MXC
+ 	depends on REGULATOR_ANATOP
+ 	help
+ 	  This adds cpufreq driver support for Freescale i.MX6 series SOC.
