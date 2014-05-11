@@ -23,6 +23,17 @@ source $base/target/share/image-build.functions
 
 set -e
 
+unset OVERRIDE_DISABLE_SHARED
+echo "Checking if the gcc runtime library already built..."
+if [ -f $base/build/$SDECFG_ID/lib/libgcc_s.so.1 ]; then
+	echo "  -> Found."
+else
+	echo "  -> Gcc runtime not found, enabling shared then starting a new build."
+	export OVERRIDE_DISABLE_SHARED='Y'
+	eval "$base/scripts/Build-Target -cfg $config -job 0-gcc"
+fi
+export OVERRIDE_DISABLE_SHARED=
+
 echo "Preparing initramfs image from build result ..."
 
 rm -rf $initramfs_loc{,.igz}
