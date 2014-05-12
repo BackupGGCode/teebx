@@ -49,6 +49,7 @@ X sqlite
 
 # asterisk + deps
 X asterisk11
+X libsrtp
 X spandsp
 X libtiff
 
