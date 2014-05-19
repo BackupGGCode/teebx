@@ -1,7 +1,11 @@
 prompts_extract() {
 	echo "Extracting $1 ($taropt) ... "
 	mkdir $pkg-$ver
-	tar -v $taropt $1 --exclude="*asterisk-core*$ver*" --exclude="core-sounds*.txt" -C $pkg-$ver | sed 's,^,$pkg-$ver/,' > untar.txt
+	tar -v $taropt $1 \
+		--exclude="*asterisk-core*$ver*" \
+		--exclude="core-sounds*.txt" \
+		-C $pkg-$ver \
+		| sed 's,^,$pkg-$ver/,' > untar.txt
 }
 
 prompts_main() {
