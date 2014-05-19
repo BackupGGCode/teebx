@@ -106,6 +106,8 @@ chmod 755 init
 chmod 755 bin/*
 chmod 755 sbin/*
 chmod 755 etc/rc*
+chmod 755 etc/scripts/*
+
 if [ -f etc/pubkey.pem ];
 then
 	chmod 644 etc/pubkey.pem
