@@ -50,5 +50,5 @@ Notes:
 ||||||||||||||||||||http://teebx.googlecode.com/svn/wiki/radxa_w360_00.jpg||
 || *Raspberry Pi* (B) ||Broadcom BCM2835||ARM1176JZF-S||1||700 MHz||256/512 MB||N/A||Supported||Friend||
 ||||||||||||||||||||http://teebx.googlecode.com/svn/wiki/raspberrypi_w360_00.jpg||
-|| *Wandboard dual* ||Freescale i.MX6 Dual Lite||Cortex-A9||2||1 GHz||1GB||N/A||WIP||Own founds||
+|| *Wandboard dual* ||Freescale i.MX6 Dual Lite||Cortex-A9||2||1 GHz||1GB||N/A||Supported||Own founds||
 ||||||||||||||||||||http://teebx.googlecode.com/svn/wiki/wandboard_dual_w360_00.jpg||
