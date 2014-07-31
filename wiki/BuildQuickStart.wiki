@@ -109,7 +109,7 @@ Now it's time to take a break,  it will take some time to complete the build (ab
 When the build will end look into the build subdirectory, you will find a directory whose name consists of _teebx-targetname-architecture-optimization-clibrary-configurationname_. Here into a subdirectory called _TOOLCHAIN_ you will find the just built images: a .img file or a .iso file, or both depending on the target configuration.
 
 Now You have a complete build, which also mean You also got a working toolchain for this specific configuration.
-To update/rebuild a single package you don't need to start from scrath again but You simply need to run the Build-Target script appending the -job option, e.g. to rebuild the asterik package:
+To update/rebuild a single package you don't need to start from scratch again but You simply need to run the Build-Target script appending the -job option, e.g. to rebuild the asterisk package:
 {{{
 boneos-dev# ./scripts/Build-Target trunk -job 1-asterisk11
 }}}
