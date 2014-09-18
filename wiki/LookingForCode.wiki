@@ -19,7 +19,7 @@ http://teebx.googlecode.com/svn/wiki/TeeBX-ip-exten-config-priv_svn156.png
 http://teebx.googlecode.com/svn/wiki/TeeBX-form-proof-priv_svn103.png
 ====Splitted logs.====
 http://teebx.googlecode.com/svn/wiki/TeeBX-preview-priv_svn94.png
-====Events marker cursor: find important enets easily====
+====Events marker cursor: find important events easily====
 http://teebx.googlecode.com/svn/wiki/log_markers_svn363.png
 ====New graphs: cpu, multicore ready====
 http://teebx.googlecode.com/svn/wiki/cpuload_svn363.png
