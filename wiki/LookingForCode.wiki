@@ -25,3 +25,5 @@ http://teebx.googlecode.com/svn/wiki/log_markers_svn363.png
 http://teebx.googlecode.com/svn/wiki/cpuload_svn363.png
 ====New graphs: network interface(s)====
 http://teebx.googlecode.com/svn/wiki/networkload_svn363.png
+====Restart/Shutdown... gracefully====
+http://teebx.googlecode.com/svn/wiki/shutdown_svn363.png
