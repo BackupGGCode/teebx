@@ -9,9 +9,19 @@ The base build environment was committed some time ago but the configuration UI 
 
 Stay tuned! Meanwhile settle for a couple of screen captures.
 
-====Brand new tabbed VoIP extension configuration (preview).====
+====New dashboard, work in progress...====
+http://teebx.googlecode.com/svn/wiki/dashboard_svn363.png
+====New storage management interface, work in progress...====
+http://teebx.googlecode.com/svn/wiki/storage_svn363.png
+====Brand new tabbed VoIP extension configuration (preview, code not published).====
 http://teebx.googlecode.com/svn/wiki/TeeBX-ip-exten-config-priv_svn156.png
 ====Brand new table-less forms proof of concept.====
 http://teebx.googlecode.com/svn/wiki/TeeBX-form-proof-priv_svn103.png
 ====Splitted logs.====
 http://teebx.googlecode.com/svn/wiki/TeeBX-preview-priv_svn94.png
+====Events marker cursor: find important enets easily====
+http://teebx.googlecode.com/svn/wiki/log_markers_svn363.png
+====New graphs: cpu, multicore ready====
+http://teebx.googlecode.com/svn/wiki/cpuload_svn363.png
+====New graphs: network interface(s)====
+http://teebx.googlecode.com/svn/wiki/networkload_svn363.png
