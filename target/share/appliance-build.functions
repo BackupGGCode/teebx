@@ -1,6 +1,6 @@
 # $Id$
 # part of BoneOS build platform (http://www.teebx.com/)
-# Copyright(C) 2013 Giovanni Vallesi.
+# Copyright(C) 2014 Giovanni Vallesi.
 # More information can be found in the files COPYING and README.
 
 appliance_prepareAstMedia()
@@ -75,9 +75,14 @@ appliance_prepareRootfs()
 	rm -rf ${2}/rootfs/usr/sbin/dahdi_hardware
 	rm -rf ${2}/rootfs/usr/sbin/dahdi_registration
 
-	# usr/share
+	# usr/share stuff
+	# dahdi
 	if [ -d "${1}/usr/share/dahdi" ] ; then
 		cp -Rp ${1}/usr/share/dahdi ${2}/rootfs/usr/share/
+	fi
+	# lua libraries
+	if [ -d "${1}/usr/share/lua" ] ; then
+		cp -Rp ${1}/usr/share/lua ${2}/rootfs/usr/share/
 	fi
 
 	# call other rootfs appliance specific function defined in this script
