@@ -1,0 +1,12 @@
+--- luadbi.0.5/Makefile.vanilla	2014-09-26 16:56:52.834313860 +0000
++++ luadbi.0.5/Makefile	2014-09-26 16:59:31.955142146 +0000
+@@ -90,3 +90,9 @@
+ build:
+ 	$(MKDIR) ${BUILDDIR}
+ 
++install:
++	mkdir -p $(INSTALL_TOP_SHARE)
++	cp *.lua $(INSTALL_TOP_SHARE)/
++	mkdir -p $(INSTALL_TOP_LIB)
++	cp *.so $(INSTALL_TOP_LIB)/
++
