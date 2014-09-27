@@ -40,6 +40,8 @@ X bzip2
 X zlib
 X openssl
 X libxml2
+X expat
+X iksemel
 
 # bootloader
 X grub
@@ -49,6 +51,7 @@ X sqlite
 
 # asterisk + deps
 X asterisk11
+X libsrtp
 X spandsp
 X libtiff
 
@@ -78,6 +81,13 @@ X readline
 X lua
 X php
 
+# lua libraries
+X luadbi
+X luaexpat
+X luafilesystem
+X lua-posix
+X luasec
+X luasocket
 # webgui
 X sslwrap
 X ajaxcgi
