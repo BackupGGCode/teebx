@@ -1,8 +1,9 @@
 
-[TIMESTAMP] 1134282617 Sun Dec 11 07:30:17 2005
-[BUILDTIME] 45 (9)
-[SIZE] 2.58 MB, 74 files
+[TIMESTAMP] 1280292339 Wed Jul 28 04:45:39 2010
+[BUILDTIME] 25 (5)
+[SIZE] 1.92 MB, 57 files
 
+[DEP] 00-dirtree
 [DEP] autoconf
 [DEP] automake
 [DEP] bash
@@ -10,6 +11,7 @@
 [DEP] bzip2
 [DEP] coreutils
 [DEP] diffutils
+[DEP] dpkg
 [DEP] findutils
 [DEP] gawk
 [DEP] gcc
@@ -23,8 +25,8 @@
 [DEP] net-tools
 [DEP] patch
 [DEP] perl
+[DEP] perl-gettext
 [DEP] sed
 [DEP] sysfiles
 [DEP] tar
 [DEP] texinfo
-[DEP] util-linux
