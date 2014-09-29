@@ -16,6 +16,7 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||9||0||S||SIP over TCP configuration options||
 ||9||5||S||Selective include needed php libs instead of polluting memory and namespace.||
 ||9||0||S||Properly handle busy level and call waiting using also DEVICE_STATE(device) in dialplan||
+||9||4||S||Ring back on unattented transfer, configurable timeout||
 ||8||7||S||Using GUID for context naming must be abandoned replacing it with something unique but also manageable by humans||
 ||8||0||S||Reload ast configuration after editing files via dev panel||
 ||8||3||S||Replace xml configuration with an embedded sql engine (SQLite 3), use xml only as a backup/restore format||
@@ -36,9 +37,13 @@ _Note that a higher priority doesn't mean that particular job will be done first
 ||7||0||S||Auto banning source ips via login failures monitoring (VoIP, webUI, ssh)||
 ||7||9||S||Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)||
 ||6||1||S||System performance collection (candidate app.: ~~collectd~~ sysstat), monitoring and GUI.||
-||6||0||F||Alerts about connettivity and providers registrations failures||
+||6||0||F||Alerts about connectivity and providers registrations failures||
 ||5||9||S||Centered widened web UI||
-||4||0||F||Inter-pbx trunking/networking||
+||4||5||F||Intranet instant messaging service (using XMPP)||
+||4||0||F||Inter-pbx trunking/networking, via SIP and IAX2 trunking||
+||4||0||F||Distributed device states (wan capable, via XMPP PubSub)||
+||4||0||S||Configuration option to allow disabling ssh access||
+||4||0||F||One touch Park and Paging||
 ||4||0||F||Setup wizard for first time configuration||
 ||4||0||F||Extensions batch wizard||
 ||4||0||S||ISDN PRI support||
