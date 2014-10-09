@@ -58,6 +58,10 @@ X libsrtp
 X spandsp
 X libtiff
 
+# xmpp server + deps
+X prosody
+X libidn
+
 # text2speech
 X flite
 

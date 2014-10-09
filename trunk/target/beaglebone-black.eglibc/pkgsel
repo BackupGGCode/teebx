@@ -37,8 +37,6 @@ X termcap
 # common deps
 X bzip2
 X zlib
-
-
 X openssl
 X libxml2
 X expat
@@ -57,6 +55,10 @@ X asterisk11
 X libsrtp
 X spandsp
 X libtiff
+
+# xmpp server + deps
+X prosody
+X libidn
 
 # text2speech
 X flite
