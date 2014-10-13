@@ -2,7 +2,7 @@
 /*
 	$Id$
 	part of TeeBX VoIP Communication platform (http://www.teebx.com/)
-	Copyright(C) 2010 - 2013 Giovanni Vallesi.
+	Copyright(C) 2010 - 2014 Giovanni Vallesi.
 	All rights reserved.
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
@@ -46,9 +46,9 @@ if (!isset($g['booting']))
 $livecd = false;
 $g['platform'] = "unknown";
 $product_name = "TeeBX";
-$cfgdevice = false;
-$disks = array();
-$disk = '';
+$sysDev = false;
+$sysPart = false;
+$partName = false;
 
 /* read platform */
 if (file_exists("{$g['etc_path']}/platform"))
@@ -77,62 +77,52 @@ if ($g['booting'])
 		else
 		{
 			/* iterate through the disks fdisk finds until one contains a config.xml */
-			$attempts = 3;
-			$machine = 'generic';
-			if (strpos(exec('uname -m'), 'armv') !== false)
-			{
-				$machine = 'ARM';
-			}
+			$attempts = 6;
+
 			while ($attempts--)
 			{
-				if ($machine == 'ARM')
+				exec("findfs LABEL=system 2>/dev/null", $devp, $retval);
+				if ($retval == 0 && !empty($devp))
 				{
-					// most arm boards, else if needed in the future will check the $g['platform'] variable
-					$disks[] = 'mmcblk0';
-				}
-				else
-				{
-					exec('fdisk -l | grep "^/dev/" | cut -c 6-8 | uniq', $disks);
-				}
-				echo "[      config] Found disks: " . implode(", ", $disks) . "\n";
-				foreach ($disks as $disk)
-				{
-					if (strpos($disk, "mmcblk") !== false)
+        	$sysPart = $devp[0];
+					echo "[      config] Found system partition on $sysPart. Mounting ...", PHP_EOL;
+					if (mwexec("/bin/mount -r {$sysPart} {$g['cf_path']}") == 0)
 					{
-						$part = 'p1';
-					}
-					else
-					{
-						$part = '1';
-					}
-					echo "[      config] Looking for configuration on: $disk partition $part...\n";
-					if (mwexec("/bin/mount -r /dev/{$disk}{$part} {$g['cf_path']}") == 0)
-					{
+						echo "[      config] Looking for configuration on $sysPart ...", PHP_EOL;
 						if (file_exists("{$g['cf_conf_path']}/config.xml"))
 						{
-							$cfgdevice = $disk;
-							$cfgpartition = $cfgdevice . $part;
-							echo "[      config] Found configuration on $cfgdevice partition $part.\n";
-							// leave partition mounted then exit both the nested loops
-							break 2;
+            	$partName = end(explode('/',$sysPart));
+            	exec("find  /sys/devices/ -type d -name '$partName'", $dev);
+            	if (!empty($dev))
+            	{
+								$devPath = explode('/', $dev[0]);
+								$sysDev = $devPath[count($devPath) - 2];
+            	}
+							echo "[      config] Found configuration on $sysDev: $partName.", PHP_EOL;
+							// leave partition mounted then exit the while loop
+							break;
 						}
 						mwexec("/bin/umount -f {$g['cf_path']}");
 					}
 				}
+				$sysPart = false;
+				$partName = false;
+				$sysDev = false;
+
 				if ($attempts > 0)
 				{
-					echo "[      config] Configuration not found.\n";
-					echo "[      config] Waiting for devices to settle and attempting again.\n";
-					sleep(2);
+					echo "[      config] Configuration not found.", PHP_EOL;
+					echo "[      config] Waiting for devices to settle and attempting again ...", PHP_EOL;
+					sleep(1);
 				}
 			}
 		}
 
-		if (!$cfgdevice && !$livecd)
+		if (!$sysPart && !$livecd)
 		{
 			/* no device found, print an error and die */
 			getBanner($msg_cfg_missing, 'FATAL ERROR', $product_name);
-			mwexec('/sbin/halt');
+			mwexec('/bin/sh');
 			exit;
 		}
 
@@ -140,22 +130,20 @@ if ($g['booting'])
 		{
 			/* write device name to a file for rc.firmware */
 			$fd = fopen("{$g['varetc_path']}/cfdevice", 'w');
-			fwrite($fd, $cfgdevice . "\n");
+			fwrite($fd, $sysDev . PHP_EOL);
 			fclose($fd);
 
 			/* write out an fstab */
 			$fd = fopen('/etc/fstab', 'w');
 
-			$fstab = "/dev/{$cfgpartition} {$g['cf_path']} vfat ro 1 1\n";
-			if (strpos($disk, 'mmcblk') !== false)
+			$fstab = "{$sysPart} {$g['cf_path']} vfat ro 1 1\n";
+
+			$part = '2';
+			if (strpos($sysDev, 'mmcblk') !== false)
 			{
 				$part = 'p2';
 			}
-			else
-			{
-				$part = '2';
-			}
-			$fstab .= "/dev/{$cfgdevice}{$part} /offload ext2 ro 0 0\n";
+			$fstab .= "/dev/{$sysDev}{$part} /offload ext2 ro 0 0\n";
 
 			fwrite($fd, $fstab);
 			fclose($fd);
