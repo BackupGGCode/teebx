@@ -1,47 +1,94 @@
 #!/bin/sh
 # $Id$
 # part of BoneOS build platform (http://www.teebx.com/)
-# Copyright(C) 2012 - 2013 Giovanni Vallesi.
+# Copyright(C) 2014 Giovanni Vallesi (http://www.teebx.com).
 # All rights reserved.
 # 
-# originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
-# Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+
+mountByLabel()
+{
+	# $1: mount options
+	# $2: fs identifier
+	# $3: target mount point
+	# $4: test file/directory
+	# $5: max attempts to find file system device
+
+	local retryCount
+	local retryMax
+	local device
+	retryCount=1
+	retryMax=20
+
+	if [ ! -z "$5" ]; then
+		retryMax=$5
+	fi
+
+	until [ $retryCount -gt $retryMax ]
+	do
+		device=$(findfs LABEL=$2 2>/dev/null)
+		if [ $? -eq 0 ]; then
+			mount ${1} ${device} ${3}
+			if [ $? -eq 0 ]; then
+				if [ ! -z "$4" ]; then
+					if [ -e "$4" ]; then
+						return 0
+					fi
+					# test file existence failed
+					return 3
+				fi
+				return 0
+			fi
+			# mount failed
+			return 2
+		fi
+		# wait...
+		echo "[mountoffload] Attempt #$retryCount/$retryMax, waiting for disk to settle and trying again..."
+		retryCount=$(( retryCount+1 ))
+		sleep 1
+	done
+	# time out
+	return 1
+}
+
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 export PATH
 
 #temp hack for debugging
-#was mntmode="-r";
-mntmode="-w -o noatime";
+#was mntMode='-r'
+mntMode='-w -o noatime'
 echo "[mountoffload] Warning: Debug mode, /offload partition will be mounted RW!"
 
-retry_count=1
-until [ $retry_count -gt 5 ]
-do
-	echo "[mountoffload] Trying to find /offload partition, attempt #$retry_count ..."
-	disks=$(/bin/busybox cat /proc/partitions|/bin/busybox awk '/[a-z]+[2]|[a-z]+[0][a-z][2]/ {print $4}')
-	for disk in $disks
-	do
-		echo "[mountoffload] Trying ${disk}"
-		mount ${mntmode} /dev/${disk} /offload
-		echo "[mountoffload] Result from mount command: $?"
-		if [ -d /offload/rootfs ]; then
-			echo "[mountoffload] Found rootfs!"
-			exit 0
-		fi
-	done
-	echo "[mountoffload] Waiting for disks to settle and trying again..."
-	retry_count=$(( retry_count+1 ))
-	sleep 1
-done
+mountByLabel "$mntMode" 'offload' '/offload' '/offload/rootfs' 20
+retVal=$?
+if [ $retVal -eq 0 ]; then
+	echo "[mountoffload] Disk partition labelled offload mounted on /offload"
+	exit 0
+elif [ $retVal -eq 1 ] ; then
+	msg="Time out finding disk partition labelled offload"
+elif [ $retVal -eq 2 ] ; then
+	msg="Failure mounting disk partition labelled offload on /offload"
+elif [ $retVal -eq 3 ] ; then
+	msg="Failure checking for /offload/rootfs on /offload"
+else
+	msg="Unexpected error while mounting disk partition labelled offload"
+fi
 
-# someting went wrong, output a failure message
-echo "[mountoffload] Failed to find rootfs!"
-echo "[mountoffload] The system was unable to find the /offload partition!"
-echo "[mountoffload] Send in the output of (ls /dev), (fdisk -l) and"
-echo "[mountoffload] (cat /proc/partitions) to the development team to get help."
-echo "[mountoffload] Thanks...and sorry this is not already working better!"
-echo "[mountoffload] Here's a prompt, see what you can see..."
+# something went wrong, print out a failure message
+cat << EOF
+[mountoffload] Error code: $retVal
+[mountoffload] $msg
+[mountoffload] The system was unable to find the /offload partition!
+[mountoffload] Send in the output of (ls /dev), (fdisk -l) and
+[mountoffload] (cat /proc/partitions) to the development team to get help.
+[mountoffload] Thanks... and sorry this is not already working better!
+[mountoffload] Here's a prompt, see what you can see...
+EOF
+
 exec /bin/sh
-
 exit 1
