@@ -32,6 +32,5 @@ ln -s /cf/conf /conf
 # move usr/* and /opt out of the initramfs and into /offload
 ln -s /offload/rootfs/usr /usr
 ln -s /offload/rootfs/opt /opt
-/etc/rc.mountoffload
 
 exec /sbin/init $*

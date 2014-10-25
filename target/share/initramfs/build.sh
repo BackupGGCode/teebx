@@ -135,15 +135,15 @@ echo "  -> Done."
 echo "The image is located at $build_toolchain/initramfs.igz"
 
 if [ "$image_type" == "livecd" ] ; then
-	mv etc/rc.mountoffload etc/rc.mountoffload.save
-	mv etc/rc.livecd.mountoffload etc/rc.mountoffload
+	mv etc/rc.mount etc/rc.mount.save
+	mv etc/rc.livecd.mount etc/rc.mount
 
 	echo "Creating live CD initramfs image..."
 	find . | cpio -H newc -o | gzip > "$build_toolchain/initramfs.livecd.igz"
 	echo "  -> Done."
 
-	mv etc/rc.mountoffload etc/rc.livecd.mountoffload
-	mv etc/rc.mountoffload.save etc/rc.mountoffload
+	mv etc/rc.mount etc/rc.livecd.mount
+	mv etc/rc.mount.save etc/rc.mount
 fi
 
 popd

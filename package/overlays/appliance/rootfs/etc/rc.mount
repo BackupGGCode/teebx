@@ -1,0 +1,156 @@
+#!/bin/sh
+# $Id$
+# part of BoneOS build platform (http://www.teebx.com/)
+# Copyright(C) 2014 Giovanni Vallesi (http://www.teebx.com).
+# All rights reserved.
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+
+mountByLabel()
+{
+	# $1: mount options
+	# $2: fs device identifier
+	# $3: target mount point
+	# $4: test file/directory
+
+	local mntOut
+
+	mntOut=$(mount ${1} ${2} ${3} 2>&1)
+	if [ $? -eq 0 ]; then
+		if [ ! -z "$4" ]; then
+			if [ -e "$4" ]; then
+				return 0
+			fi
+			# test file existence failed
+			return 2
+		fi
+		return 0
+	fi
+	# mount failed
+	echo "$mntOut"
+	return 1
+
+}
+
+failExit()
+{
+	# something went wrong, print out a failure message
+	# $1: error code
+	# $2: message text
+
+	cat << EOF
+[mountoffload] Error code: $1
+[mountoffload] $2
+[mountoffload]
+[mountoffload] The system was unable to find the required partition!
+[mountoffload] Send in the output of (ls /dev), (fdisk -l) and
+[mountoffload] (cat /proc/partitions) to the development team to get help.
+[mountoffload] Thanks... and sorry this is not already working better!
+[mountoffload] Here's a prompt, see what you can see...
+EOF
+
+	exec /bin/sh
+	exit 1
+}
+
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+export PATH
+
+disk=''
+systemDevErr=1
+offloadDevErr=1
+retryCount=1
+retryMax=20
+#temp hack for debugging
+#was mntMode='-r'
+mntMode='-w -o noatime'
+echo "[mountoffload] Warning: Debug mode, /offload partition will be mounted RW!"
+
+# waiting for disk to settle, usb devices may take longer time
+until [ $retryCount -gt $retryMax ]
+do
+	sysDevFs=$(findfs LABEL=system 2>/dev/null)
+	if [ $? -eq 0 ]; then
+		systemDevErr=0
+		break
+	fi
+	# wait...
+	echo "[mountoffload] Attempt #$retryCount/$retryMax, waiting for disk to settle and trying again..."
+	retryCount=$(( retryCount+1 ))
+	sleep 1
+done
+
+if [ $systemDevErr -gt 0 ]; then
+	failExit 10 "Time out finding the system partition."
+fi
+
+# get disk device that system device partition belongs to
+devTree=$(/bin/busybox find /sys/devices/ -type d -name "$(echo $sysDevFs | /bin/busybox awk -F '/' '{print $(NF)}')")
+sysDisk=$(echo $devTree | /bin/busybox awk -F '/' '{print $(NF-1)}')
+if [ -z "$sysDisk" ]; then
+	failExit 20 "Failure retrieving the system partition device."
+fi
+
+# find the offload partition filesystem device
+offloadDevFs=$(findfs LABEL=offload 2>/dev/null)
+if [ $? -gt 0 ]; then
+	failExit 30 "Failed finding the offload partition."
+fi
+
+# get disk device that offload device partition belongs to
+devTree=$(/bin/busybox find /sys/devices/ -type d -name "$(echo $offloadDevFs | /bin/busybox awk -F '/' '{print $(NF)}')")
+offloadDisk=$(echo $devTree | /bin/busybox awk -F '/' '{print $(NF-1)}')
+if [ -z "$offloadDisk" ]; then
+	failExit 40 "Failure retrieving the disk device that offload partition belongs to."
+fi
+
+# ensure that both partitions are on the same disk, that's the way images are built.
+if [ "$offloadDisk" != "$sysDisk" ]; then
+	failExit 41 "Both the system and offload partitions must be on the same disk."
+fi
+
+# all check passed, mount partitions
+# - system -
+currPart=$sysDevFs
+currMnt='/cf'
+mntOut=$(mountByLabel '-r' "$sysDevFs" '/cf' '/cf/conf/config.xml')
+retVal=$?
+if [ $retVal -eq 0 ]; then
+	echo "[mountoffload] Disk partition ($sysDevFs) labelled system mounted on /cf"
+	# - offload -
+	currPart=$offloadDevFs
+	currMnt='/offload'
+	mntOut=$(mountByLabel "$mntMode" "$offloadDevFs" '/offload' '/offload/rootfs')
+	retVal=$?
+	if [ $retVal -eq 0 ]; then
+		echo "[mountoffload] Disk partition ($offloadDevFs)labelled offload mounted on /offload"
+	fi
+fi
+# common exit point on mount failures
+if [ $retVal -gt 0 ]; then
+	if [ $retVal -eq 1 ] ; then
+		msg="$mntOut."
+	elif [ $retVal -eq 2 ] ; then
+		msg="File check failure on $currMnt"
+	else
+		msg="Unexpected error while mounting disk partition $currPart on $currMnt."
+	fi
+	failExit $(( 50 + $retVal )) "$msg"
+fi
+
+# write fstab
+cat > /etc/fstab <<EOF
+$sysDevFs /cf vfat ro 1 1
+$offloadDevFs /offload ext2 ro 0 0
+EOF
+
+# reference copy
+cp /etc/fstab /etc/fstab.boot
+
+# done
+exit 0
