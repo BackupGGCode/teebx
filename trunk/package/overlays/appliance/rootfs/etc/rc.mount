@@ -43,14 +43,14 @@ failExit()
 	# $2: message text
 
 	cat << EOF
-[mountoffload] Error code: $1
-[mountoffload] $2
-[mountoffload]
-[mountoffload] The system was unable to find the required partition!
-[mountoffload] Send in the output of (ls /dev), (fdisk -l) and
-[mountoffload] (cat /proc/partitions) to the development team to get help.
-[mountoffload] Thanks... and sorry this is not already working better!
-[mountoffload] Here's a prompt, see what you can see...
+[    rc.mount] Error code: $1
+[    rc.mount] $2
+[    rc.mount]
+[    rc.mount] The system was unable to find the required partition!
+[    rc.mount] Send in the output of (ls /dev), (fdisk -l) and
+[    rc.mount] (cat /proc/partitions) to the development team to get help.
+[    rc.mount] Thanks... and sorry this is not already working better!
+[    rc.mount] Here's a prompt, see what you can see...
 EOF
 
 	exec /bin/sh
@@ -69,7 +69,7 @@ retryMax=20
 #temp hack for debugging
 #was mntMode='-r'
 mntMode='-w -o noatime'
-echo "[mountoffload] Warning: Debug mode, /offload partition will be mounted RW!"
+echo "[    rc.mount] Warning: Debug mode, /offload partition will be mounted RW!"
 
 # waiting for disk to settle, usb devices may take longer time
 until [ $retryCount -gt $retryMax ]
@@ -80,7 +80,7 @@ do
 		break
 	fi
 	# wait...
-	echo "[mountoffload] Attempt #$retryCount/$retryMax, waiting for disk to settle and trying again..."
+	echo "[    rc.mount] Attempt #$retryCount/$retryMax, waiting for disk to settle and trying again..."
 	retryCount=$(( retryCount+1 ))
 	sleep 1
 done
@@ -121,14 +121,14 @@ currMnt='/cf'
 mntOut=$(mountByLabel '-r' "$sysDevFs" '/cf' '/cf/conf/config.xml')
 retVal=$?
 if [ $retVal -eq 0 ]; then
-	echo "[mountoffload] Disk partition ($sysDevFs) labelled system mounted on /cf"
+	echo "[    rc.mount] Disk partition ($sysDevFs) labelled system mounted on /cf"
 	# - offload -
 	currPart=$offloadDevFs
 	currMnt='/offload'
 	mntOut=$(mountByLabel "$mntMode" "$offloadDevFs" '/offload' '/offload/rootfs')
 	retVal=$?
 	if [ $retVal -eq 0 ]; then
-		echo "[mountoffload] Disk partition ($offloadDevFs)labelled offload mounted on /offload"
+		echo "[    rc.mount] Disk partition ($offloadDevFs)labelled offload mounted on /offload"
 	fi
 fi
 # common exit point on mount failures
