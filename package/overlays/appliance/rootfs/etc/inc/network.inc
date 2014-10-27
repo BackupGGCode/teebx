@@ -139,6 +139,11 @@ function network_lan_configure($linkWaitCount = 40)
 function network_get_current_public_ip_address()
 {
 	global $config, $g;
+	/* some third party services that could be also used
+		http://ipv4.icanhazip.com/ (return ip address only as plain text)
+		http://checkip.dyndns.com/ (return simple parseable text/html)
+		http://ip4.me/ (return text/html)
+	*/
 
 	$lancfg = $config['interfaces']['lan'];
 
@@ -152,7 +157,7 @@ function network_get_current_public_ip_address()
 	}
 	else
 	{
-		return exec("/usr/bin/wget -q -O - http://www.teebx.org/serviceapplet?do=ipdiscovery");
+		return exec("/usr/bin/wget -q -O - http://www.teebx.org/serviceapplet/?do=ipdiscovery");
 	}
 }
 
