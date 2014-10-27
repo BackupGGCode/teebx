@@ -116,4 +116,25 @@ $defaults['system']['timeupdateinterval'] = '4-hours';
 // regional settings defaults
 $defaults['system']['regional']['analog']['fxo']['daa'] = 'FCC';
 
+class sysPreset
+{
+	const PATH_VARRUN = '/var/run';
+	const PATH_VARETC = '/var/etc';
+	const PATH_VARDB = '/var/db';
+	const PATH_VARLOG = '/var/log';
+	const PATH_ETC = '/etc';
+	const PATH_TMP = '/tmp';
+	const PATH_CONF = '/conf';
+	const PATH_CONF_DEFAULT = '/conf.default';
+	const PATH_CF = '/cf';
+	const PATH_CF_CONF = '/cf/conf';
+	const PATH_WWW = '/usr/www';
+	const XML_ROOTOBJ = 'teebx';
+	const LATEST_CONFIG = '0.1';
+	const PACKAGE_SYSTEM = '1.0';
+
+	public static $debug = false;
+	public static $booting = false;
+}
+
 ?>

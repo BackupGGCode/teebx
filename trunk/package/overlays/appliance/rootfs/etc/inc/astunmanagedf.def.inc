@@ -19,6 +19,7 @@
 		'/etc/asterisk/cdr_pgsql.conf',
 		'/etc/asterisk/cdr_sqlite3_custom.conf',
 		'/etc/asterisk/cdr_tds.conf',
+		'/etc/asterisk/cel.conf',
 		'/etc/asterisk/chan_ooh323.conf',
 		'/etc/asterisk/cli.conf',
 		'/etc/asterisk/cli_aliases.conf',
