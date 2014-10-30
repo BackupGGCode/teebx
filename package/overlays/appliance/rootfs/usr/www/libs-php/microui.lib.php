@@ -48,7 +48,13 @@ function showErrBlock(&$errMsg)
 	{
 		foreach(array_keys($errMsg) as $msgKey)
 		{
-			$msg .= sprintf('<li>%s</li>', htmlspecialchars($errMsg[$msgKey]));
+			$item = $errMsg[$msgKey];
+			// if $errMsg is multidimentional array make the inner node printable
+			if (is_array($item))
+			{
+				$msg .= sprintf('<li>%s:<br><pre>%s</pre></li>', _('Unexpected'), print_r($item, true));
+			}
+			else $msg .= sprintf('<li>%s</li>', htmlspecialchars($item));
 		}
 	}
 	else
