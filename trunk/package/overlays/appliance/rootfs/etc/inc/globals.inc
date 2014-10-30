@@ -135,6 +135,23 @@ class sysPreset
 
 	public static $debug = false;
 	public static $booting = false;
+
+	public static $cfgAppliance = null;
+	public static function cfgAppliance()
+	{
+		if (self::$cfgAppliance === null)
+		{
+			self::$cfgAppliance = array(
+			'pbx' => array(
+				'config' => self::PATH_CF_CONF . '/config.sdb',
+				'fld_label_bck' => _('Pbx'),
+				'fld_desc_bck' => _('Pbx configuration'),
+				)
+			);
+		}
+		return self::$cfgAppliance;
+	}
+
 }
 
 ?>

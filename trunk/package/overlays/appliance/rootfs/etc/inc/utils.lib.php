@@ -69,6 +69,18 @@ function getProcessCmdline($name)
 	return $result;
 }
 
+function flatArr($arr)
+{
+	if (!is_array($arr)) return array($arr);
+
+	$result = array();
+	foreach ($arr as $current)
+	{
+		$result = array_merge($result, flatArr($current));
+	}
+	return $result;
+}
+
 function formatBytes($bytes, $precision = 1, $siUnits = false)
 {
 	// default to use IEC units
@@ -254,58 +266,17 @@ function archivePrepare($srcFiles, $outFilename, $tmpDir = '/tmp')
 {
 	$result = array('errors' => array(), 'retval' => false);
 	$gzFile = "$tmpDir/$outFilename";
-
 	if (is_file($gzFile)) unlink($gzFile);
-
-	if (class_exists('PharData'))
+	if (is_array($srcFiles))
 	{
-		$ext = pathinfo($outFilename, PATHINFO_EXTENSION);
-		$tarFile = '$tmpDir/' . pathinfo($outFilename, PATHINFO_FILENAME) . '.tar';
-
-		if (!is_array($srcFiles))
-		{
-			$srcFiles = array($srcFiles);
-		}
-		try
-		{
-			if (is_file($tarFile)) unlink($tarFile);
-			$archive = new PharData($tarFile);
-			foreach (array_keys($srcFiles) as $idx)
-			{
-				if (is_dir($srcFile[$idx]))
-				{
-					$archive->buildFromDirectory($srcFile[$idx]);
-				}
-				elseif (is_file($srcFile[$idx]) || is_link($srcFile[$idx]))
-				{
-					$archive->addFile($srcFile[$idx]);
-				}
-				else
-				{
-					$result['errors'][] = _('Missing file') . ': ' . $srcFile[$idx];
-				}
-			}
-			$archive->compress(Phar::GZ, $ext);
-		}
-		catch (Exception $err)
-		{
-			$result['errors'][] = $err;
-			if (is_file($gzFile)) unlink($gzFile);
-		}
-		unset($archive);
-		if (is_file($tarFile)) unlink($tarFile);
+		$flat = flatArr($srcFiles);
+		$srcFiles = implode(' ', $flat);
 	}
-	else
+
+	exec("tar czf $gzFile $srcFiles", $discard, $retval);
+	if ($retval != 0)
 	{
-		if (is_array($srcFiles))
-		{
-			$srcFiles = implode(' ', $srcFiles);
-		}
-		exec("tar czf $gzFile $srcFile", $discard, $retval);
-		if ($retval != 0)
-		{
-			$result['errors'][] = $discard;
-		}
+		$result['errors'][] = $discard;
 	}
 
 	if (count($result['errors']) === 0)
@@ -315,7 +286,7 @@ function archivePrepare($srcFiles, $outFilename, $tmpDir = '/tmp')
 	return $result;
 }
 
-function archiveExtract($srcFile, $files = null, $destDir = null, $overwrite = true)
+function archiveExtract($srcFile, $destDir, $files = null, $overwrite = true)
 {
 	$result = array();
 
@@ -326,6 +297,10 @@ function archiveExtract($srcFile, $files = null, $destDir = null, $overwrite = t
 		{
 			$archive->decompress('tar');
 			$srcFile = pathinfo($srcFile, PATHINFO_DIRNAME) . '/' . pathinfo($srcFile, PATHINFO_FILENAME) . '.tar';
+			unset($archive);
+
+			$archive = new PharData($srcFile);
+			$archive->extractTo($destDir, $files, $overwrite);
 		}
 		else
 		{
@@ -336,20 +311,11 @@ function archiveExtract($srcFile, $files = null, $destDir = null, $overwrite = t
 	{
 		$result[] = $err;
 	}
-	unset($archive);
 
-	if (count($result) != 0)
+	//remove temporary uncompressed tar archive
+	if (pathinfo($srcFile, PATHINFO_EXTENSION) == 'tar' && is_file($srcFile))
 	{
-		return $result;
-	}
-
-	try
-	{
-		$archive = new PharData($srcFile);
-	}
-	catch (Exception $err)
-	{
-		$result[] = $err;
+		unlink($srcFile);
 	}
 
 	return $result;
@@ -373,6 +339,14 @@ function archiveDownload($srcFiles, $outFilename)
 	header("Content-Disposition: attachment; filename=\"$outFilename.tar.gz\"");
 	passthru("tar czf - $srcFile", $statuscode);
 	exit($statuscode);
+}
+
+function staticConfRestore($cnfArchive)
+{
+	if (!is_file($cnfArchive)) return false;
+
+	$res = archiveExtract($cnfArchive, '/');
+	return $res;
 }
 
 function getSmtpConf(&$cfgPointer)

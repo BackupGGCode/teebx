@@ -108,9 +108,11 @@ input[type="text"]
 input[type="file"]
 {
 	font-weight: bold;
-	display: block;
+	/*display: block;*/
 	margin-bottom: 0.2em;
 	padding-right: 1em;
+	margin-right: 1em;
+	width: 80%;
 }
 
 input[type="submit"]
