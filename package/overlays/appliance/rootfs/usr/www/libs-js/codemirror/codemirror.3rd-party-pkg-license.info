@@ -3,7 +3,7 @@
 # this file contains information about included third party code/libraries
 #
 Package Name: codemirror
-Version: 3.20
+Version: 4.7
 Description: JavaScript component that provides a code editor in the browser
 Size:
 Source Checksum:
