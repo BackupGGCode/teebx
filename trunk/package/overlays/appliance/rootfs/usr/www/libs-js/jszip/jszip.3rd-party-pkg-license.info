@@ -1,0 +1,19 @@
+# $Id: $
+# part of BoneOS build platform (http://www.teebx.com/)
+# this file contains information about included third party code/libraries
+#
+Package Name: jszip
+Version: bf7ec8c8
+Description: A Javascript class for generating and reading zip files
+Size:
+Source Checksum:
+Architecture:
+Prefix:
+Status: Stable
+License: MIT
+License URL: https://raw.github.com/Stuk/jszip/master/LICENSE.markdown.
+Original Author(s): Stuart Knightley <stuart [at] stuartk.com>
+Maintainer(s):
+Project URL: http://stuartk.com/jszip
+Download URL(s):
+
