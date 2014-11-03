@@ -84,15 +84,8 @@ if (!empty($_POST) && isset($_POST['task']))
 			exit;
 		}
 
-		$meta = serialize($jobSet);
-		fileWrite('/tmp/metadata.set', $meta);
-		$jobSet[] = array('files' => '/tmp/metadata.set');
-
 		config_lock();
-		$dlFileName = $baseFileName . '.tgz';
-		$files = array_map(function($col){return $col['files'];}, $jobSet);
-		$archiverResult = archivePrepare($files, $dlFileName);
-		unlink('/tmp/metadata.set');
+		$archiverResult = backupPrepare($jobSet, $baseFileName);
 		config_unlock();
 		if ($archiverResult['retval'] !== false)
 		{
@@ -109,7 +102,25 @@ if (!empty($_POST) && isset($_POST['task']))
 	}
 	else if ($task === 'restore')
 	{
-
+		if (is_uploaded_file($_FILES['conffile']['tmp_name']))
+		{
+			if (config_install($_FILES['conffile']['tmp_name']) == 0)
+			{
+				system_reboot();
+				$keepmsg = _('The configuration has been restored. The PBX is now rebooting.');
+			}
+			else
+			{
+				$errstr = _('The configuration could not be restored.');
+				if ($xmlerr)
+					$errstr .= " (" . sprintf(_("XML error: %s") . ")", $xmlerr);
+				$input_errors[] = $errstr;
+			}
+		}
+		else
+		{
+			$input_errors[] = _('The configuration could not be restored (file upload error).');
+		}
 	}
 }
 
@@ -238,7 +249,7 @@ jQuery(document).ready(function()
 	jQuery('#doload').click(function()
 	{
 		// ajax upload the backup file then wait results to select proper restore options
-
+		alert("Button clicked!");
 	});
 });
 </script>

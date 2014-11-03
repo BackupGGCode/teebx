@@ -262,18 +262,18 @@ function fileDownloadRequest($srcFile, $outFilename = null, $chunk = 0)
 * @param string $tmpDir           temporary directory where will be written archive to
 * @return array                   error list and full path to temporary archive or false if error
 */
-function archivePrepare($srcFiles, $outFilename, $tmpDir = '/tmp')
+function archivePrepare($srcFiles, $outFilename, $tarOpt = 'cf', $tmpDir = '/tmp')
 {
 	$result = array('errors' => array(), 'retval' => false);
-	$gzFile = "$tmpDir/$outFilename";
-	if (is_file($gzFile)) unlink($gzFile);
+	$arFile = "$tmpDir/$outFilename";
+	if (is_file($arFile)) unlink($arFile);
 	if (is_array($srcFiles))
 	{
 		$flat = flatArr($srcFiles);
 		$srcFiles = implode(' ', $flat);
 	}
 
-	exec("tar czf $gzFile $srcFiles", $discard, $retval);
+	exec("tar $tarOpt $arFile $srcFiles", $discard, $retval);
 	if ($retval != 0)
 	{
 		$result['errors'][] = $discard;
@@ -281,8 +281,60 @@ function archivePrepare($srcFiles, $outFilename, $tmpDir = '/tmp')
 
 	if (count($result['errors']) === 0)
 	{
-		$result['retval'] = $gzFile;
+		$result['retval'] = $arFile;
 	}
+	return $result;
+}
+
+/**
+* put your comment there...
+*
+* @param array $meta
+* @param string $fileName
+*/
+function backupPrepare($meta, $fileName)
+{
+	$result = array('errors' => array(), 'retval' => false);
+
+	if (is_null($meta))
+		$result['errors'][] = _('Missing backup metadata.');
+	if (!is_array($meta) || count($meta) < 1)
+		$result['errors'][] = _('Invalid backup metadata.');
+	if (count($result['errors']) > 0)
+		return $result;
+
+	$srcFiles = array_map(function($col){return $col['files'];}, $meta);
+	$tRes = archivePrepare($srcFiles, "$fileName.tar");
+	if (count($tRes['errors']) > 0)
+	{
+		$result['errors'] = $tRes['errors'];
+		return $result;
+	}
+
+	$tarFile = $tRes['retval'];
+	$srcInfo = pathinfo($tarFile);
+	$bckName = "{$srcInfo['dirname']}/{$srcInfo['filename']}.zip";
+	try
+	{
+		$zip = new ZipArchive();
+		$zRes = $zip->open($bckName, ZipArchive::CREATE||ZipArchive::OVERWRITE);
+		if ($zRes !== false)
+		{
+			$zip->addFromString('metadata', json_encode($meta));
+			$zip->addFile($tarFile, 'archive.tar');
+			$zip->close();
+			$result['retval'] = $bckName;
+		}
+		else
+		{
+			$result['errors'][] = _('Error creating backup file.');
+		}
+	}
+	catch (Exception $err)
+	{
+		$result[] = $err;
+	}
+
 	return $result;
 }
 
