@@ -2,7 +2,7 @@
 /*
   $Id$
 	The TeeBX(R) communication platform.
-	Copyright(C) 2010 - 2013 Giovanni Vallesi (TeeBX.com)
+	Copyright(C) 2010 - 2014 Giovanni Vallesi (TeeBX.com)
 
 	originally part of AskoziaPBX svn trunk revision 1514 (http://askozia.com/pbx)
 	Copyright (C) 2007-2009 tecema (a.k.a IKT) <http://www.tecema.de>. All rights reserved.

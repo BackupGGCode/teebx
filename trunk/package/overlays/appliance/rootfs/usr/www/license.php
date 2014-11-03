@@ -1,6 +1,6 @@
 <?php
 /*
-  $Id: .$
+  $Id$
 part of BoneOS build platform (http://www.teebx.com/)
 Copyright(C) 2014 Giovanni Vallesi (http://www.teebx.com).
 All rights reserved.
