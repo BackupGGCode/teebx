@@ -218,6 +218,30 @@ span.cli-error
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-top: 0.2em;
-	padding-bottom: 0.2em;;
+	padding-bottom: 0.2em;
+}
 
+div.hint-msg
+{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	border-radius: 4px 4px 4px 4px;
+	margin: 4px 4px 4px 0px;
+	padding: 1em;
+}
+
+div.ko
+{
+	background-color: #990000;
+}
+
+div.ok
+{
+	background-color: #009900;
+}
+
+div.warn
+{
+	background-color: #FF9900;
 }
