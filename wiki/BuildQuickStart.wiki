@@ -102,7 +102,7 @@ If there are no problems you can switch to compile your image, else you need to 
 To actually build the image you need to run the T2 SDE Build-Target script passing the configuration name to it:
 
 {{{
-boneos-dev# ./scripts/Build-Target trunk
+boneos-dev# ./scripts/Build-Target -cfg trunk
 }}}
 Now it's time to take a break,  it will take some time to complete the build (about 1 our on my machine to give you a vague idea).
 
