@@ -14,19 +14,19 @@
 
 [I] Core Asterisk sounds direct from Digium
 
-[T] Full set of audio prompts distributed for use in Asterisk
+[T] Full set of muLaw format audio prompts distributed for use in Asterisk
 
 [U] http://www.asterisk.org
 
 [A] Mark Spencer / Digium dba Linux Support Services, Inc.
-[M] Michael Iedema <michael@askozia.com>
+[M] Giovanni Vallesi <giovanni.v@teebx.com>
 
 [F] CROSS
 [C] extra/network
 
 [L] OpenSource
 [S] Stable
-[V] 1.4.16
+[V] 1.4.26
 [P] X -----5---9 600.000
 
-[D] 0 asterisk-core-sounds-en-ulaw-1.4.16.tar.gz http://downloads.asterisk.org/pub/telephony/sounds/releases/
+[D] 0 asterisk-core-sounds-en-ulaw-1.4.26.tar.gz http://downloads.asterisk.org/pub/telephony/sounds/releases/

@@ -14,19 +14,19 @@
 
 [I] Core Asterisk sounds
 
-[T] Full set of audio prompts distributed for use in Asterisk
+[T] Subset of GSM format audio prompts distributed for use in Asterisk
 
-[U] http://mirror.tomato.it/
+[U] http://www.segreterietelefoniche.it
 
-[A] Tomato.it
-[M] Michael Iedema <michael@askozia.com>
+[A] Carlo Flora
+[M] Giovanni Vallesi <giovanni.v@teebx.com>
 
 [F] CROSS
 [C] extra/network
 
 [L] OpenSource
 [S] Stable
-[V] 20060510
+[V] 1.4.26
 [P] X -----5---9 600.000
 
-[D] 0 it_mm_sounds_20060510.tar.gz http://mirror.tomato.it/ftp/pub/asterisk/suoni_ita/
+[D] 0 asterisk-core-sounds-it-gsm-1.4.26.tar.gz http://downloads.asterisk.org/pub/telephony/sounds/releases/
