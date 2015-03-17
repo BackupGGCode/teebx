@@ -790,7 +790,9 @@ class cfgForm extends quickForm implements Serializable
 					$r_name = $route['name'];
 					$this->setField($r_uid, 'checkbox');
 					$this->setCbItems($r_uid, 'yes=' . $r_name, true);
-					$this->setCbStateByIsset($r_uid, 'yes', $cfgPtr['provider']);
+					unset($currTrk);
+					if (isset($cfgPtr['provider']) && in_array($r_uid, $cfgPtr['provider'])) $currTrk = true;
+					$this->setCbStateByIsset($r_uid, 'yes', $currTrk);
 				}
 				//
 				$this->setBlockHint('hint-ogroute', _('Block access to the providers selected above.'));
