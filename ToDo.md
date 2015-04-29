@@ -1,0 +1,57 @@
+### This is the To Do list for TeeBX project ###
+_Note that a higher priority doesn't mean that particular job will be done first_.
+
+|PRIority<br />(0=None, 9=Top)|STAtus<br />(0=None, 9=Done)|CATegory<br />(Feature, Software, Hardware support)|ToDo|
+|:----------------------------|:---------------------------|:--------------------------------------------------|:---|
+|9 |9 |S |Remove platforms we don't want to support (CP3000, etc...)|
+|9 |9 |S |Update Php interpreter to version 5+|
+|9 |9 |S |Brand new web UI (build and use dedicated mini-framework classes to render/check forms, menus and tables)|
+|9 |8 |S |[ARM](http://code.google.com/p/teebx/wiki/PortToARM) architectures support to target most interesting common boards|
+|9 |9 |S |SQLite PHP support|
+|9 |9 |S |Let the user to choose where the system log daemon should write: memory, disk, network|
+|9 |8 |S |Backup/Restore  sets: distinct backups for system, pbx, media and so on...|
+|9 |9 |H |Support to use spare disk space on system disk as r/w media storage partition|
+|9 |0 |S |SIP over TCP configuration options|
+|9 |5 |S |Selective include needed php libs instead of polluting memory and namespace.|
+|9 |0 |S |Properly handle busy level and call waiting using also DEVICE\_STATE(device) in dialplan|
+|9 |4 |S |Ring back on unattented transfer, configurable timeout|
+|8 |7 |S |Using GUID for context naming must be abandoned replacing it with something unique but also manageable by humans|
+|8 |0 |S |Reload ast configuration after editing files via dev panel|
+|8 |3 |S |Replace xml configuration with an embedded sql engine (SQLite 3), use xml only as a backup/restore format|
+|8 |2 |F |Trunk groups implementation for VoIP providers|
+|8 |1 |F |Replace curent failover mechanism, use trunk groups routing instead|
+|8 |0 |F |IVR|
+|8 |0 |F |System phonebook with private and public records|
+|8 |0 |F |DDI call handling with operator and unassigned numbers failover|
+|8 |0 |F |Call forward|
+|8 |0 |F |COS|
+|8 |0 |F |Pickup groups|
+|8 |2 |F |Sequential and round-robin ring groups|
+|8 |0 |F |Ring time dial modifiers. E.g. dialling 200\*9 rings extension 200 for 90 seconds.|
+|8 |9 |F |System shutdown both from webUI and console. Option to wait for current calls to end|
+|8 |2 |F |Country settings (numbering plan, isdn, flash timers, cli...)|
+|8 |6 |F |Real time Call logs (CDR)|
+|7 |9 |S |Better system logs GUI|
+|7 |0 |S |Auto banning source ips via login failures monitoring (VoIP, webUI, ssh)|
+|7 |9 |S |Remove unuseful tables from webUI anywhere they have no semantic meaning (like positioning form fields and formatting)|
+|6 |1 |S |System performance collection (candidate app.: ~~collectd~~ sysstat), monitoring and GUI.|
+|6 |0 |F |Alerts about connectivity and providers registrations failures|
+|5 |9 |S |Centered widened web UI|
+|4 |5 |F |Intranet instant messaging service (using XMPP)|
+|4 |0 |F |Inter-pbx trunking/networking, via SIP and IAX2 trunking|
+|4 |0 |F |Distributed device states (wan capable, via XMPP PubSub)|
+|4 |0 |S |Configuration option to allow disabling ssh access|
+|4 |0 |F |One touch Park and Paging|
+|4 |0 |F |Setup wizard for first time configuration|
+|4 |0 |F |Extensions batch wizard|
+|4 |0 |S |ISDN PRI support|
+|4 |0 |H |Support Sangoma hardware|
+|4 |0 |S |Phones auto provisioning|
+|4 |0 |F |Personal VM greetings, use system greeting if a user doesn't record the personal one|
+|3 |0 |H |Support ~~mISDN/~~CAPI as alternative ISDN driver/stack|
+|0 |0 |F |User portal|
+|0 |0 |F |DB based Admin access and logout|
+|0 |0 |F |Loadable XML config snippets (providers, gateways, applications, etc...)|
+|0 |0 |S |Move hidden developer panel inside a proper menu item, this also avoid loading every time a lot of js code.|
+|0 |0 |S |Standalone installable webUI|
+|0 |0 |S |~~Encrypt sensitive configuration options~~ |
